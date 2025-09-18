@@ -48,5 +48,41 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         #pragma warning disable CS1591
         Shopify,
         #pragma warning restore CS1591
+        [EnumMember(Value = "subscription_view")]
+        #pragma warning disable CS1591
+        Subscription_view,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "store_upsell")]
+        #pragma warning disable CS1591
+        Store_upsell,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "woocommerce")]
+        #pragma warning disable CS1591
+        Woocommerce,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "service")]
+        #pragma warning disable CS1591
+        Service,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "meeting")]
+        #pragma warning disable CS1591
+        Meeting,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "imported_csv")]
+        #pragma warning disable CS1591
+        Imported_csv,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "qr_code")]
+        #pragma warning disable CS1591
+        Qr_code,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "saas_one_time")]
+        #pragma warning disable CS1591
+        Saas_one_time,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "saas_subscription")]
+        #pragma warning disable CS1591
+        Saas_subscription,
+        #pragma warning restore CS1591
     }
 }

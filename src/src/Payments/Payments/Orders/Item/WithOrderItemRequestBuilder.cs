@@ -5,6 +5,8 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.HighLevel.OpenApiClient.Models;
 using Soenneker.HighLevel.OpenApiClient.Payments.Payments.Orders.Item.Fulfillments;
+using Soenneker.HighLevel.OpenApiClient.Payments.Payments.Orders.Item.Notes;
+using Soenneker.HighLevel.OpenApiClient.Payments.Payments.Orders.Item.RecordPayment;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -23,12 +25,22 @@ namespace Soenneker.HighLevel.OpenApiClient.Payments.Payments.Orders.Item
         {
             get => new global::Soenneker.HighLevel.OpenApiClient.Payments.Payments.Orders.Item.Fulfillments.FulfillmentsRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The notes property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Payments.Payments.Orders.Item.Notes.NotesRequestBuilder Notes
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Payments.Payments.Orders.Item.Notes.NotesRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The recordPayment property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Payments.Payments.Orders.Item.RecordPayment.RecordPaymentRequestBuilder RecordPayment
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Payments.Payments.Orders.Item.RecordPayment.RecordPaymentRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Payments.Payments.Orders.Item.WithOrderItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithOrderItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/payments/payments/orders/{orderId}?altId={altId}&altType={altType}{&locationId*}", pathParameters)
+        public WithOrderItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/payments/payments/orders/{orderId}?altId={altId}{&locationId*}", pathParameters)
         {
         }
         /// <summary>
@@ -36,7 +48,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Payments.Payments.Orders.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithOrderItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/payments/payments/orders/{orderId}?altId={altId}&altType={altType}{&locationId*}", rawUrl)
+        public WithOrderItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/payments/payments/orders/{orderId}?altId={altId}{&locationId*}", rawUrl)
         {
         }
         /// <summary>
@@ -109,16 +121,6 @@ namespace Soenneker.HighLevel.OpenApiClient.Payments.Payments.Orders.Item
 #else
             [QueryParameter("altId")]
             public string AltId { get; set; }
-#endif
-            /// <summary>AltType is the type of identifier.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            [QueryParameter("altType")]
-            public string? AltType { get; set; }
-#nullable restore
-#else
-            [QueryParameter("altType")]
-            public string AltType { get; set; }
 #endif
             /// <summary>LocationId is the id of the sub-account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

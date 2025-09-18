@@ -21797,16 +21797,6 @@
               "type": "string"
             },
             "example": "3SwdhCu3svxI8AKsPJt6"
-          },
-          {
-            "name": "altType",
-            "in": "query",
-            "description": "AltType is the type of identifier.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            },
-            "example": "location"
           }
         ],
         "responses": {
@@ -21856,6 +21846,172 @@
             "Location-Access": [
               "payments/orders.readonly"
             ]
+          }
+        ]
+      }
+    },
+    "/payments/payments/orders/{orderId}/record-payment": {
+      "post": {
+        "tags": [
+          "Orders"
+        ],
+        "summary": "Record Order Payment",
+        "description": "The \"Record Order Payment\" API allows to record a payment for an order. Use this endpoint to record payment for an order and update the order status to \"Paid\".",
+        "operationId": "record-order-payment",
+        "parameters": [
+          {
+            "name": "Version",
+            "in": "header",
+            "description": "API Version",
+            "required": true,
+            "schema": {
+              "enum": [
+                "2021-07-28"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "orderId",
+            "in": "path",
+            "description": "MongoDB Order ID",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "5e2d4c8e0e8b4e001c1c4f5d"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PostRecordOrderPaymentBody"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostRecordOrderPaymentResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Order not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../common/common-schemas.json#/components/schemas/BadRequestDTO"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../common/common-schemas.json#/components/schemas/UnauthorizedDTO"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../common/common-schemas.json#/components/schemas/UnprocessableDTO"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "Location-Access": [
+              "payments/orders.collectPayment"
+            ]
+          }
+        ]
+      }
+    },
+    "/payments/payments/orders/migrate-order-ps": {
+      "post": {
+        "tags": [
+          "Orders"
+        ],
+        "summary": "migration Endpoint for Order Payment Status",
+        "description": "Process to migrate all the older orders and based on the statuses introduce the payment statuses as well",
+        "operationId": "post-migrate-order-payment-status",
+        "parameters": [
+          {
+            "name": "Version",
+            "in": "header",
+            "description": "API Version",
+            "required": true,
+            "schema": {
+              "enum": [
+                "2021-07-28"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "locationId",
+            "in": "query",
+            "description": "LocationId is the id of the sub-account.",
+            "schema": {
+              "type": "string",
+              "example": "3SwdhCu3svxI8AKsPJt6"
+            }
+          },
+          {
+            "name": "altId",
+            "in": "query",
+            "description": "AltId is the unique identifier e.g: location id.",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "3SwdhCu3svxI8AKsPJt6"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": ""
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../common/common-schemas.json#/components/schemas/BadRequestDTO"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../common/common-schemas.json#/components/schemas/UnauthorizedDTO"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "Location-Access": [ ]
           }
         ]
       }
@@ -22051,6 +22207,101 @@
             "Location-Access": [
               "payments/orders.readonly"
             ]
+          }
+        ]
+      }
+    },
+    "/payments/payments/orders/{orderId}/notes": {
+      "get": {
+        "tags": [
+          "Order Notes"
+        ],
+        "summary": "List Order Notes",
+        "description": "List all notes of an order",
+        "operationId": "list-order-notes",
+        "parameters": [
+          {
+            "name": "Version",
+            "in": "header",
+            "description": "API Version",
+            "required": true,
+            "schema": {
+              "enum": [
+                "2021-07-28"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "altId",
+            "in": "query",
+            "description": "Location Id or Agency Id",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "6578278e879ad2646715ba9c"
+            }
+          },
+          {
+            "name": "altType",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "enum": [
+                "location"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "orderId",
+            "in": "path",
+            "description": "ID of the order that needs to be returned",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "653f5e0cde5a1314e62a837c"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../common/common-schemas.json#/components/schemas/BadRequestDTO"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../common/common-schemas.json#/components/schemas/UnauthorizedDTO"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../common/common-schemas.json#/components/schemas/UnprocessableDTO"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "Location-Access": [ ]
           }
         ]
       }
@@ -23465,6 +23716,89 @@
           },
           "400": {
             "description": "No such config exists for given locationId and marketplaceAppId",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../common/common-schemas.json#/components/schemas/BadRequestDTO"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../common/common-schemas.json#/components/schemas/UnauthorizedDTO"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../common/common-schemas.json#/components/schemas/UnprocessableDTO"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "Location-Access": [
+              "payments/custom-provider.write"
+            ]
+          }
+        ]
+      }
+    },
+    "/payments/payments/custom-provider/capabilities": {
+      "put": {
+        "tags": [
+          "Custom Provider"
+        ],
+        "summary": "Custom-provider marketplace app update capabilities",
+        "description": "Toggle capabilities for the marketplace app tied to the OAuth client",
+        "operationId": "custom-provider-marketplace-app-update-capabilities",
+        "parameters": [
+          {
+            "name": "Version",
+            "in": "header",
+            "description": "API Version",
+            "required": true,
+            "schema": {
+              "enum": [
+                "2021-07-28"
+              ],
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCustomProviderCapabilitiesDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateCustomProviderCapabilitiesResponseSchema"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
             "content": {
               "application/json": {
                 "schema": {
@@ -59434,7 +59768,16 @@
               "contact_view",
               "email_campaign",
               "payments_dashboard",
-              "shopify"
+              "shopify",
+              "subscription_view",
+              "store_upsell",
+              "woocommerce",
+              "service",
+              "meeting",
+              "imported_csv",
+              "qr_code",
+              "saas_one_time",
+              "saas_subscription"
             ],
             "type": "string"
           },
@@ -59577,6 +59920,134 @@
             "type": "string",
             "description": "Trace id of the order.",
             "example": "d3b16a92-a8ed-4e6b-8467-844750f78ed5"
+          },
+          "automaticTaxesCalculated": {
+            "type": "boolean",
+            "description": "Automatic taxes applied for the Order",
+            "example": true
+          },
+          "taxCalculationProvider": {
+            "type": "object",
+            "description": "Provider name for automatic tax calculation",
+            "example": "taxjar"
+          }
+        }
+      },
+      "CardDto": {
+        "required": [
+          "type",
+          "last4"
+        ],
+        "type": "object",
+        "properties": {
+          "type": {
+            "enum": [
+              "visa",
+              "mastercard",
+              "other"
+            ],
+            "type": "string",
+            "example": "mastercard"
+          },
+          "last4": {
+            "type": "string",
+            "description": "Last 4 digit of the card",
+            "example": "1234"
+          }
+        }
+      },
+      "ChequeDto": {
+        "required": [
+          "number"
+        ],
+        "type": "object",
+        "properties": {
+          "number": {
+            "type": "string",
+            "description": "check number",
+            "example": "129-129-129-912"
+          }
+        }
+      },
+      "PostRecordOrderPaymentBody": {
+        "required": [
+          "altId",
+          "altType",
+          "mode"
+        ],
+        "type": "object",
+        "properties": {
+          "altId": {
+            "type": "string",
+            "description": "location Id / company Id based on altType",
+            "example": "6578278e879ad2646715ba9c"
+          },
+          "altType": {
+            "enum": [
+              "location"
+            ],
+            "type": "string",
+            "description": "Alt Type",
+            "example": "location"
+          },
+          "mode": {
+            "enum": [
+              "cash",
+              "card",
+              "cheque",
+              "bank_transfer",
+              "other"
+            ],
+            "type": "string",
+            "description": "manual payment method",
+            "example": "card"
+          },
+          "card": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CardDto"
+              }
+            ],
+            "description": "Details of Card if used for payment"
+          },
+          "cheque": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ChequeDto"
+              }
+            ],
+            "description": "Details of the Cheque if used for payment"
+          },
+          "notes": {
+            "type": "string",
+            "description": "Any note to be recorded with the transaction",
+            "example": "This was a direct payment"
+          },
+          "amount": {
+            "type": "number",
+            "description": "Amount to be paid against the invoice.",
+            "example": 100
+          },
+          "meta": {
+            "type": "object",
+            "description": "Meta data to be recorded with the transaction"
+          },
+          "isPartialPayment": {
+            "type": "boolean",
+            "description": "Indicates if the order is intended to be a partial payment."
+          }
+        }
+      },
+      "PostRecordOrderPaymentResponse": {
+        "required": [
+          "success"
+        ],
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "description": "Success status of the request",
+            "example": true
           }
         }
       },
@@ -59887,7 +60358,7 @@
           },
           "isTaxesEnabled": {
             "type": "boolean",
-            "description": "Is automatic attachment of taxes enabled for the product",
+            "description": "The field indicates whether taxes are enabled for the product or not.",
             "default": false,
             "example": true
           },
@@ -59900,6 +60371,11 @@
             "example": [
               "654492a4e6bef380114de15a"
             ]
+          },
+          "automaticTaxCategoryId": {
+            "type": "string",
+            "description": "Tax category ID for Automatic taxes calculation.",
+            "example": "65d71377c326ea78e1c47df5"
           },
           "isLabelEnabled": {
             "type": "boolean",
@@ -60241,7 +60717,8 @@
           "status",
           "entitySourceType",
           "createdAt",
-          "updatedAt"
+          "updatedAt",
+          "fulfilledAt"
         ],
         "type": "object",
         "properties": {
@@ -60263,6 +60740,11 @@
           "contactId": {
             "type": "string",
             "description": "Contact id corresponding to the transaction.",
+            "example": "XPLSw2SVagl12LMDeTmQ"
+          },
+          "mergedFromContactId": {
+            "type": "string",
+            "description": "ID of the contact that was merged from.",
             "example": "XPLSw2SVagl12LMDeTmQ"
           },
           "contactName": {
@@ -60381,6 +60863,12 @@
             "type": "object",
             "description": "Transaction payment method details.",
             "example": "{ card: { \"brand\": \"discover\", \"last4\": \"0012\" } }"
+          },
+          "fulfilledAt": {
+            "type": "string",
+            "description": "The charged timestamp of the transaction.",
+            "format": "date-time",
+            "example": "2023-11-20T10:27:36.515Z"
           }
         }
       },
@@ -60559,6 +61047,11 @@
             "type": "string",
             "description": "Trace id of the transaction.",
             "example": "d3b16a92-a8ed-4e6b-8467-844750f78ed5"
+          },
+          "mergedFromContactId": {
+            "type": "string",
+            "description": "ID of the contact that was merged from.",
+            "example": "XPLSw2SVagl12LMDeTmQ"
           }
         }
       },
@@ -61014,8 +61507,6 @@
         "required": [
           "_id",
           "usageCount",
-          "hasAffiliateCoupon",
-          "deleted",
           "limitPerCustomer",
           "altId",
           "altType",
@@ -61042,16 +61533,6 @@
             "description": "Number of times the coupon has been used",
             "example": 12
           },
-          "hasAffiliateCoupon": {
-            "type": "boolean",
-            "description": "Indicates if this is an affiliate coupon",
-            "example": false
-          },
-          "deleted": {
-            "type": "boolean",
-            "description": "Indicates if the coupon has been deleted",
-            "example": false
-          },
           "limitPerCustomer": {
             "type": "number",
             "description": "Maximum number of times a customer can use this coupon (0 for unlimited)",
@@ -61059,12 +61540,12 @@
           },
           "altId": {
             "type": "string",
-            "description": "Location or company ID",
+            "description": "Location Id",
             "example": "79t07PzK8Tvf73d12312"
           },
           "altType": {
             "type": "string",
-            "description": "Type of entity (location or company)",
+            "description": "Type of entity",
             "example": "location"
           },
           "name": {
@@ -61602,7 +62083,8 @@
           "description",
           "paymentsUrl",
           "queryUrl",
-          "imageUrl"
+          "imageUrl",
+          "supportsSubscriptionSchedule"
         ],
         "type": "object",
         "properties": {
@@ -61630,6 +62112,11 @@
             "type": "string",
             "description": "Public image url for logo of the payment gateway displayed on the payments integrations page.",
             "example": "https://testsubscription.paypal.com"
+          },
+          "supportsSubscriptionSchedule": {
+            "type": "boolean",
+            "description": "Whether the config supports subscription schedule or not. true represents config supports subscription schedule",
+            "example": true
           }
         }
       },
@@ -61967,6 +62454,42 @@
           "success": {
             "type": "boolean",
             "description": "Whether the custom provider config is disconnect or not. true represents config is disconnect",
+            "example": "true"
+          }
+        }
+      },
+      "UpdateCustomProviderCapabilitiesDto": {
+        "required": [
+          "supportsSubscriptionSchedules"
+        ],
+        "type": "object",
+        "properties": {
+          "supportsSubscriptionSchedules": {
+            "type": "boolean",
+            "description": "Whether the marketplace app supports subscription schedules or not",
+            "example": true
+          },
+          "companyId": {
+            "type": "string",
+            "description": "Company id. Mandatory if locationId is not provided",
+            "example": "Yjnwuduw83e8x30sm0"
+          },
+          "locationId": {
+            "type": "string",
+            "description": "Location / Sub-account id. Mandatory if companyId is not provided",
+            "example": "Yjnwuduw83e8x30sm0"
+          }
+        }
+      },
+      "UpdateCustomProviderCapabilitiesResponseSchema": {
+        "required": [
+          "success"
+        ],
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "description": "Whether the custom provider capabilities are updated or not. true represents capabilities are updated",
             "example": "true"
           }
         }
@@ -75313,7 +75836,7 @@
           }
         }
       },
-      "CardDto": {
+      "invoices_CardDto": {
         "required": [
           "brand",
           "last4"
@@ -77867,7 +78390,7 @@
           }
         }
       },
-      "ChequeDto": {
+      "invoices_ChequeDto": {
         "required": [
           "number"
         ],
@@ -81256,19 +81779,31 @@
       },
       "payments_bearer": {
         "type": "http",
-        "description": "Use the Access Token generated with user type as Location",
+        "description": "Use the Access Token generated with user type as Sub-Account (OR) Private Integration Token of Sub-Account.",
         "scheme": "bearer",
         "bearerFormat": "JWT"
       },
       "payments_Location-Access": {
         "type": "http",
-        "description": "Use the Access Token generated with user type as Location",
+        "description": "Use the Access Token generated with user type as Sub-Account (OR) Private Integration Token of Sub-Account.",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      },
+      "payments_Location-Access-Only": {
+        "type": "http",
+        "description": "Use the Access Token generated with user type as Sub-Account.",
         "scheme": "bearer",
         "bearerFormat": "JWT"
       },
       "payments_Agency-Access": {
         "type": "http",
-        "description": "Use the Access Token generated with user type as Company",
+        "description": "Use the Access Token generated with user type as Agency (OR) Private Integration Token of Agency.",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      },
+      "payments_Agency-Access-Only": {
+        "type": "http",
+        "description": "Use the Access Token generated with user type as Agency.",
         "scheme": "bearer",
         "bearerFormat": "JWT"
       },

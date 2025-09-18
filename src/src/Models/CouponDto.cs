@@ -14,7 +14,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Location or company ID</summary>
+        /// <summary>Location Id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AltId { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string AltId { get; set; }
 #endif
-        /// <summary>Type of entity (location or company)</summary>
+        /// <summary>Type of entity</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AltType { get; set; }
@@ -56,8 +56,6 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string CreatedAt { get; set; }
 #endif
-        /// <summary>Indicates if the coupon has been deleted</summary>
-        public bool? Deleted { get; set; }
         /// <summary>Type of discount (percentage or amount)</summary>
         public global::Soenneker.HighLevel.OpenApiClient.Models.CouponDto_discountType? DiscountType { get; set; }
         /// <summary>Value of the discount (percentage or fixed amount)</summary>
@@ -70,8 +68,6 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string EndDate { get; set; }
 #endif
-        /// <summary>Indicates if this is an affiliate coupon</summary>
-        public bool? HasAffiliateCoupon { get; set; }
         /// <summary>Unique MongoDB identifier for the coupon</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -149,11 +145,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "applyToFuturePaymentsConfig", n => { ApplyToFuturePaymentsConfig = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CouponDto_applyToFuturePaymentsConfig>(global::Soenneker.HighLevel.OpenApiClient.Models.CouponDto_applyToFuturePaymentsConfig.CreateFromDiscriminatorValue); } },
                 { "code", n => { Code = n.GetStringValue(); } },
                 { "createdAt", n => { CreatedAt = n.GetStringValue(); } },
-                { "deleted", n => { Deleted = n.GetBoolValue(); } },
                 { "discountType", n => { DiscountType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CouponDto_discountType>(); } },
                 { "discountValue", n => { DiscountValue = n.GetDoubleValue(); } },
                 { "endDate", n => { EndDate = n.GetStringValue(); } },
-                { "hasAffiliateCoupon", n => { HasAffiliateCoupon = n.GetBoolValue(); } },
                 { "_id", n => { Id = n.GetStringValue(); } },
                 { "limitPerCustomer", n => { LimitPerCustomer = n.GetDoubleValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
@@ -177,11 +171,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CouponDto_applyToFuturePaymentsConfig>("applyToFuturePaymentsConfig", ApplyToFuturePaymentsConfig);
             writer.WriteStringValue("code", Code);
             writer.WriteStringValue("createdAt", CreatedAt);
-            writer.WriteBoolValue("deleted", Deleted);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CouponDto_discountType>("discountType", DiscountType);
             writer.WriteDoubleValue("discountValue", DiscountValue);
             writer.WriteStringValue("endDate", EndDate);
-            writer.WriteBoolValue("hasAffiliateCoupon", HasAffiliateCoupon);
             writer.WriteStringValue("_id", Id);
             writer.WriteDoubleValue("limitPerCustomer", LimitPerCustomer);
             writer.WriteStringValue("name", Name);

@@ -2,6 +2,7 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.HighLevel.OpenApiClient.Payments.Payments.CustomProvider.Capabilities;
 using Soenneker.HighLevel.OpenApiClient.Payments.Payments.CustomProvider.Connect;
 using Soenneker.HighLevel.OpenApiClient.Payments.Payments.CustomProvider.Disconnect;
 using Soenneker.HighLevel.OpenApiClient.Payments.Payments.CustomProvider.Provider;
@@ -17,6 +18,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Payments.Payments.CustomProvider
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CustomProviderRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The capabilities property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Payments.Payments.CustomProvider.Capabilities.CapabilitiesRequestBuilder Capabilities
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Payments.Payments.CustomProvider.Capabilities.CapabilitiesRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The connect property</summary>
         public global::Soenneker.HighLevel.OpenApiClient.Payments.Payments.CustomProvider.Connect.ConnectRequestBuilder Connect
         {

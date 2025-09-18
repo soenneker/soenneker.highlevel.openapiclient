@@ -5,6 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.HighLevel.OpenApiClient.Models;
 using Soenneker.HighLevel.OpenApiClient.Payments.Payments.Orders.Item;
+using Soenneker.HighLevel.OpenApiClient.Payments.Payments.Orders.MigrateOrderPs;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -18,6 +19,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Payments.Payments.Orders
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class OrdersRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The migrateOrderPs property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Payments.Payments.Orders.MigrateOrderPs.MigrateOrderPsRequestBuilder MigrateOrderPs
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Payments.Payments.Orders.MigrateOrderPs.MigrateOrderPsRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>Gets an item from the Soenneker.HighLevel.OpenApiClient.payments.payments.orders.item collection</summary>
         /// <param name="position">ID of the order that needs to be returned</param>
         /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Payments.Payments.Orders.Item.WithOrderItemRequestBuilder"/></returns>

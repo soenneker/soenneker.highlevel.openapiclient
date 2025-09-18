@@ -54,6 +54,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string QueryUrl { get; set; }
 #endif
+        /// <summary>Whether the config supports subscription schedule or not. true represents config supports subscription schedule</summary>
+        public bool? SupportsSubscriptionSchedule { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CreateCustomProvidersDto"/> and sets the default values.
         /// </summary>
@@ -84,6 +86,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "paymentsUrl", n => { PaymentsUrl = n.GetStringValue(); } },
                 { "queryUrl", n => { QueryUrl = n.GetStringValue(); } },
+                { "supportsSubscriptionSchedule", n => { SupportsSubscriptionSchedule = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -98,6 +101,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("paymentsUrl", PaymentsUrl);
             writer.WriteStringValue("queryUrl", QueryUrl);
+            writer.WriteBoolValue("supportsSubscriptionSchedule", SupportsSubscriptionSchedule);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

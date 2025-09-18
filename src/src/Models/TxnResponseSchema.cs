@@ -140,6 +140,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string EntityType { get; set; }
 #endif
+        /// <summary>The charged timestamp of the transaction.</summary>
+        public DateTimeOffset? FulfilledAt { get; set; }
         /// <summary>The unique identifier for the transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -158,6 +160,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #endif
         /// <summary>Transaction is in live / test mode.</summary>
         public bool? LiveMode { get; set; }
+        /// <summary>ID of the contact that was merged from.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? MergedFromContactId { get; set; }
+#nullable restore
+#else
+        public string MergedFromContactId { get; set; }
+#endif
         /// <summary>Transaction payment method details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -243,9 +253,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "entitySourceSubType", n => { EntitySourceSubType = n.GetStringValue(); } },
                 { "entitySourceType", n => { EntitySourceType = n.GetStringValue(); } },
                 { "entityType", n => { EntityType = n.GetStringValue(); } },
+                { "fulfilledAt", n => { FulfilledAt = n.GetDateTimeOffsetValue(); } },
                 { "_id", n => { Id = n.GetStringValue(); } },
                 { "ipAddress", n => { IpAddress = n.GetStringValue(); } },
                 { "liveMode", n => { LiveMode = n.GetBoolValue(); } },
+                { "mergedFromContactId", n => { MergedFromContactId = n.GetStringValue(); } },
                 { "paymentMethod", n => { PaymentMethod = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.TxnResponseSchema_paymentMethod>(global::Soenneker.HighLevel.OpenApiClient.Models.TxnResponseSchema_paymentMethod.CreateFromDiscriminatorValue); } },
                 { "paymentProviderConnectedAccount", n => { PaymentProviderConnectedAccount = n.GetStringValue(); } },
                 { "paymentProviderType", n => { PaymentProviderType = n.GetStringValue(); } },
@@ -279,9 +291,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("entitySourceSubType", EntitySourceSubType);
             writer.WriteStringValue("entitySourceType", EntitySourceType);
             writer.WriteStringValue("entityType", EntityType);
+            writer.WriteDateTimeOffsetValue("fulfilledAt", FulfilledAt);
             writer.WriteStringValue("_id", Id);
             writer.WriteStringValue("ipAddress", IpAddress);
             writer.WriteBoolValue("liveMode", LiveMode);
+            writer.WriteStringValue("mergedFromContactId", MergedFromContactId);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.TxnResponseSchema_paymentMethod>("paymentMethod", PaymentMethod);
             writer.WriteStringValue("paymentProviderConnectedAccount", PaymentProviderConnectedAccount);
             writer.WriteStringValue("paymentProviderType", PaymentProviderType);

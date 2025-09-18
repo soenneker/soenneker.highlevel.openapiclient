@@ -130,6 +130,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public bool? LiveMode { get; set; }
         /// <summary>Is test transaction.</summary>
         public bool? MarkAsTest { get; set; }
+        /// <summary>ID of the contact that was merged from.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? MergedFromContactId { get; set; }
+#nullable restore
+#else
+        public string MergedFromContactId { get; set; }
+#endif
         /// <summary>Meta details of the transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -234,6 +242,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "isParent", n => { IsParent = n.GetBoolValue(); } },
                 { "liveMode", n => { LiveMode = n.GetBoolValue(); } },
                 { "markAsTest", n => { MarkAsTest = n.GetBoolValue(); } },
+                { "mergedFromContactId", n => { MergedFromContactId = n.GetStringValue(); } },
                 { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetTxnResponseSchema_meta>(global::Soenneker.HighLevel.OpenApiClient.Models.GetTxnResponseSchema_meta.CreateFromDiscriminatorValue); } },
                 { "paymentProvider", n => { PaymentProvider = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetTxnResponseSchema_paymentProvider>(global::Soenneker.HighLevel.OpenApiClient.Models.GetTxnResponseSchema_paymentProvider.CreateFromDiscriminatorValue); } },
                 { "qboResponse", n => { QboResponse = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetTxnResponseSchema_qboResponse>(global::Soenneker.HighLevel.OpenApiClient.Models.GetTxnResponseSchema_qboResponse.CreateFromDiscriminatorValue); } },
@@ -271,6 +280,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteBoolValue("isParent", IsParent);
             writer.WriteBoolValue("liveMode", LiveMode);
             writer.WriteBoolValue("markAsTest", MarkAsTest);
+            writer.WriteStringValue("mergedFromContactId", MergedFromContactId);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetTxnResponseSchema_meta>("meta", Meta);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetTxnResponseSchema_paymentProvider>("paymentProvider", PaymentProvider);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetTxnResponseSchema_qboResponse>("qboResponse", QboResponse);
