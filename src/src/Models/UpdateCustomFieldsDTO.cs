@@ -12,29 +12,23 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     public partial class UpdateCustomFieldsDTO : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>Allowed file formats for uploads. Options include: .pdf, .docx, .doc, .jpg, .jpeg, .png, .gif, .csv, .xlsx, .xls, all</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomFieldsDTO_acceptedFormats? AcceptedFormats { get; set; }
+        /// <summary>The acceptedFormat property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? AcceptedFormat { get; set; }
+#nullable restore
+#else
+        public List<string> AcceptedFormat { get; set; }
+#endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Description of the field</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Description { get; set; }
-#nullable restore
-#else
-        public string Description { get; set; }
-#endif
-        /// <summary>Location Id</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? LocationId { get; set; }
-#nullable restore
-#else
-        public string LocationId { get; set; }
-#endif
-        /// <summary>Maximum file limit for uploads. Applicable only for fields with a data type of FILE_UPLOAD.</summary>
-        public double? MaxFileLimit { get; set; }
-        /// <summary>Field name</summary>
+        /// <summary>The isMultipleFile property</summary>
+        public bool? IsMultipleFile { get; set; }
+        /// <summary>The maxNumberOfFiles property</summary>
+        public double? MaxNumberOfFiles { get; set; }
+        /// <summary>Model of the custom field you want to update</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomFieldsDTO_model? Model { get; set; }
+        /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -42,15 +36,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>Options for the field. Important: Providing options will completely replace the existing options array. You must include all existing options alongside any new options you wish to add. Removal of options is not supported through this update. Applicable only for SINGLE_OPTIONS, MULTIPLE_OPTIONS, RADIO, CHECKBOX, TEXTBOX_LIST types.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.OptionDTO>? Options { get; set; }
-#nullable restore
-#else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.OptionDTO> Options { get; set; }
-#endif
-        /// <summary>Placeholder text for the field</summary>
+        /// <summary>The placeholder property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Placeholder { get; set; }
@@ -58,8 +44,16 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string Placeholder { get; set; }
 #endif
-        /// <summary>Whether the field should be shown in forms</summary>
-        public bool? ShowInForms { get; set; }
+        /// <summary>The position property</summary>
+        public double? Position { get; set; }
+        /// <summary>The textBoxListOptions property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomFieldsDTO.UpdateCustomFieldsDTO_textBoxListOptions>? TextBoxListOptions { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomFieldsDTO.UpdateCustomFieldsDTO_textBoxListOptions> TextBoxListOptions { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomFieldsDTO"/> and sets the default values.
         /// </summary>
@@ -85,14 +79,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "acceptedFormats", n => { AcceptedFormats = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomFieldsDTO_acceptedFormats>(); } },
-                { "description", n => { Description = n.GetStringValue(); } },
-                { "locationId", n => { LocationId = n.GetStringValue(); } },
-                { "maxFileLimit", n => { MaxFileLimit = n.GetDoubleValue(); } },
+                { "acceptedFormat", n => { AcceptedFormat = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "isMultipleFile", n => { IsMultipleFile = n.GetBoolValue(); } },
+                { "maxNumberOfFiles", n => { MaxNumberOfFiles = n.GetDoubleValue(); } },
+                { "model", n => { Model = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomFieldsDTO_model>(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.OptionDTO>(global::Soenneker.HighLevel.OpenApiClient.Models.OptionDTO.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "placeholder", n => { Placeholder = n.GetStringValue(); } },
-                { "showInForms", n => { ShowInForms = n.GetBoolValue(); } },
+                { "position", n => { Position = n.GetDoubleValue(); } },
+                { "textBoxListOptions", n => { TextBoxListOptions = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomFieldsDTO.UpdateCustomFieldsDTO_textBoxListOptions>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomFieldsDTO.UpdateCustomFieldsDTO_textBoxListOptions.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -102,15 +96,63 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomFieldsDTO_acceptedFormats>("acceptedFormats", AcceptedFormats);
-            writer.WriteStringValue("description", Description);
-            writer.WriteStringValue("locationId", LocationId);
-            writer.WriteDoubleValue("maxFileLimit", MaxFileLimit);
+            writer.WriteCollectionOfPrimitiveValues<string>("acceptedFormat", AcceptedFormat);
+            writer.WriteBoolValue("isMultipleFile", IsMultipleFile);
+            writer.WriteDoubleValue("maxNumberOfFiles", MaxNumberOfFiles);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomFieldsDTO_model>("model", Model);
             writer.WriteStringValue("name", Name);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.OptionDTO>("options", Options);
             writer.WriteStringValue("placeholder", Placeholder);
-            writer.WriteBoolValue("showInForms", ShowInForms);
+            writer.WriteDoubleValue("position", Position);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomFieldsDTO.UpdateCustomFieldsDTO_textBoxListOptions>("textBoxListOptions", TextBoxListOptions);
             writer.WriteAdditionalData(AdditionalData);
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.TextBoxListOptionsSchema"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class UpdateCustomFieldsDTO_textBoxListOptions : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.TextBoxListOptionsSchema"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HighLevel.OpenApiClient.Models.TextBoxListOptionsSchema? TextBoxListOptionsSchema { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HighLevel.OpenApiClient.Models.TextBoxListOptionsSchema TextBoxListOptionsSchema { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomFieldsDTO.UpdateCustomFieldsDTO_textBoxListOptions"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomFieldsDTO.UpdateCustomFieldsDTO_textBoxListOptions CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomFieldsDTO.UpdateCustomFieldsDTO_textBoxListOptions();
+                result.TextBoxListOptionsSchema = new global::Soenneker.HighLevel.OpenApiClient.Models.TextBoxListOptionsSchema();
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                if(TextBoxListOptionsSchema != null)
+                {
+                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(TextBoxListOptionsSchema);
+                }
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.TextBoxListOptionsSchema>(null, TextBoxListOptionsSchema);
+            }
         }
     }
 }

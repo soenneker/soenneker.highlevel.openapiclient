@@ -3,17 +3,17 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HighLevel.OpenApiClient.Models
 {
-    /// <summary>Discount type</summary>
+    /// <summary>Model of the custom field you want to update</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum DiscountDto_type
+    public enum UpdateCustomFieldsDTO_model
     {
-        [EnumMember(Value = "percentage")]
+        [EnumMember(Value = "contact")]
         #pragma warning disable CS1591
-        Percentage,
+        Contact,
         #pragma warning restore CS1591
-        [EnumMember(Value = "fixed")]
+        [EnumMember(Value = "opportunity")]
         #pragma warning disable CS1591
-        Fixed,
+        Opportunity,
         #pragma warning restore CS1591
     }
 }

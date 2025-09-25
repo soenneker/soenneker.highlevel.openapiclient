@@ -3,22 +3,17 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HighLevel.OpenApiClient.Models
 {
+    /// <summary>Model of the custom field you want to create</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public enum CardDto_type
-    #pragma warning restore CS1591
+    public enum CreateCustomFieldsDTO_model
     {
-        [EnumMember(Value = "visa")]
+        [EnumMember(Value = "contact")]
         #pragma warning disable CS1591
-        Visa,
+        Contact,
         #pragma warning restore CS1591
-        [EnumMember(Value = "mastercard")]
+        [EnumMember(Value = "opportunity")]
         #pragma warning disable CS1591
-        Mastercard,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "other")]
-        #pragma warning disable CS1591
-        Other,
+        Opportunity,
         #pragma warning restore CS1591
     }
 }

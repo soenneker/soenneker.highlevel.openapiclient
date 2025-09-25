@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HighLevel.OpenApiClient.Models
 {
+    /// <summary>Source of order</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum OrderSource_type
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "funnel")]
         #pragma warning disable CS1591
