@@ -7,30 +7,47 @@ using System.IO;
 using System;
 namespace Soenneker.HighLevel.OpenApiClient.Models
 {
-    /// <summary>
-    /// Association Type can be USER_DEFINED or SYSTEM_DEFINED
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class GetPostSuccessfulResponseDto_associationType : IAdditionalDataHolder, IParsable
+    #pragma warning disable CS1591
+    public partial class UploadFileResponseSchema : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The fileName property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? FileName { get; set; }
+#nullable restore
+#else
+        public string FileName { get; set; }
+#endif
+        /// <summary>The filePath property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? FilePath { get; set; }
+#nullable restore
+#else
+        public string FilePath { get; set; }
+#endif
+        /// <summary>The rowsCount property</summary>
+        public double? RowsCount { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDto_associationType"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UploadFileResponseSchema"/> and sets the default values.
         /// </summary>
-        public GetPostSuccessfulResponseDto_associationType()
+        public UploadFileResponseSchema()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDto_associationType"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UploadFileResponseSchema"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDto_associationType CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.HighLevel.OpenApiClient.Models.UploadFileResponseSchema CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDto_associationType();
+            return new global::Soenneker.HighLevel.OpenApiClient.Models.UploadFileResponseSchema();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -40,6 +57,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "fileName", n => { FileName = n.GetStringValue(); } },
+                { "filePath", n => { FilePath = n.GetStringValue(); } },
+                { "rowsCount", n => { RowsCount = n.GetDoubleValue(); } },
             };
         }
         /// <summary>
@@ -49,6 +69,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            writer.WriteStringValue("fileName", FileName);
+            writer.WriteStringValue("filePath", FilePath);
+            writer.WriteDoubleValue("rowsCount", RowsCount);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

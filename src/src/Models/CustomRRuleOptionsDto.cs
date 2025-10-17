@@ -38,14 +38,6 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string EndTime { get; set; }
 #endif
-        /// <summary>End type like after, by, count</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? EndType { get; set; }
-#nullable restore
-#else
-        public string EndType { get; set; }
-#endif
         /// <summary>The interval property</summary>
         public double? Interval { get; set; }
         /// <summary>The intervalType property</summary>
@@ -70,8 +62,6 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string StartTime { get; set; }
 #endif
-        /// <summary>Start as primary user accepted date</summary>
-        public bool? UseStartAsPrimaryUserAccepted { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomRRuleOptionsDto"/> and sets the default values.
         /// </summary>
@@ -103,14 +93,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "daysBefore", n => { DaysBefore = n.GetDoubleValue(); } },
                 { "endDate", n => { EndDate = n.GetStringValue(); } },
                 { "endTime", n => { EndTime = n.GetStringValue(); } },
-                { "endType", n => { EndType = n.GetStringValue(); } },
                 { "interval", n => { Interval = n.GetDoubleValue(); } },
                 { "intervalType", n => { IntervalType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomRRuleOptionsDto_intervalType>(); } },
                 { "monthOfYear", n => { MonthOfYear = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomRRuleOptionsDto_monthOfYear>(); } },
                 { "numOfWeek", n => { NumOfWeek = n.GetDoubleValue(); } },
                 { "startDate", n => { StartDate = n.GetStringValue(); } },
                 { "startTime", n => { StartTime = n.GetStringValue(); } },
-                { "useStartAsPrimaryUserAccepted", n => { UseStartAsPrimaryUserAccepted = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -126,14 +114,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteDoubleValue("daysBefore", DaysBefore);
             writer.WriteStringValue("endDate", EndDate);
             writer.WriteStringValue("endTime", EndTime);
-            writer.WriteStringValue("endType", EndType);
             writer.WriteDoubleValue("interval", Interval);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomRRuleOptionsDto_intervalType>("intervalType", IntervalType);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomRRuleOptionsDto_monthOfYear>("monthOfYear", MonthOfYear);
             writer.WriteDoubleValue("numOfWeek", NumOfWeek);
             writer.WriteStringValue("startDate", StartDate);
             writer.WriteStringValue("startTime", StartTime);
-            writer.WriteBoolValue("useStartAsPrimaryUserAccepted", UseStartAsPrimaryUserAccepted);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -14,15 +14,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The brand property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Brand { get; set; }
-#nullable restore
-#else
-        public string Brand { get; set; }
-#endif
-        /// <summary>The last4 property</summary>
+        /// <summary>Last 4 digit of the card</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Last4 { get; set; }
@@ -30,6 +22,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string Last4 { get; set; }
 #endif
+        /// <summary>The type property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CardDto_type? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CardDto"/> and sets the default values.
         /// </summary>
@@ -55,8 +49,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "brand", n => { Brand = n.GetStringValue(); } },
                 { "last4", n => { Last4 = n.GetStringValue(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CardDto_type>(); } },
             };
         }
         /// <summary>
@@ -66,8 +60,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("brand", Brand);
             writer.WriteStringValue("last4", Last4);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CardDto_type>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -37,7 +37,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Associations.Associations.ObjectKey.
         /// Get association by object keys like contacts, custom objects and opportunities. Documentation Link - https://doc.clickup.com/8631005/d/h/87cpx-293776/cd0f4122abc04d3
         /// Click here for more information <see href="https://doc.clickup.com/8631005/d/h/87cpx-293776/cd0f4122abc04d3" />
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDto"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDTO"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.BadRequestDTO">When receiving a 400 status code</exception>
@@ -45,11 +45,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Associations.Associations.ObjectKey.
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.UnprocessableDTO">When receiving a 422 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDto?> GetAsync(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Associations.Associations.ObjectKey.Item.WithObjectKeyItemRequestBuilder.WithObjectKeyItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDTO?> GetAsync(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Associations.Associations.ObjectKey.Item.WithObjectKeyItemRequestBuilder.WithObjectKeyItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDto> GetAsync(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Associations.Associations.ObjectKey.Item.WithObjectKeyItemRequestBuilder.WithObjectKeyItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDTO> GetAsync(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Associations.Associations.ObjectKey.Item.WithObjectKeyItemRequestBuilder.WithObjectKeyItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -59,7 +59,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Associations.Associations.ObjectKey.
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.UnauthorizedDTO.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.UnprocessableDTO.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDTO>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDTO.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get association by object keys like contacts, custom objects and opportunities. Documentation Link - https://doc.clickup.com/8631005/d/h/87cpx-293776/cd0f4122abc04d3
