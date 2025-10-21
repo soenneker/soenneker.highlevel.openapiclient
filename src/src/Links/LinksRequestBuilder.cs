@@ -2,6 +2,9 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.HighLevel.OpenApiClient.Links.Id;
+using Soenneker.HighLevel.OpenApiClient.Links.Item;
+using Soenneker.HighLevel.OpenApiClient.Links.Search;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -14,10 +17,32 @@ namespace Soenneker.HighLevel.OpenApiClient.Links
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class LinksRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The links property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Links.Links.LinksRequestBuilder Links
+        /// <summary>The EmptyPathSegment property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Links.EmptyPathSegmentRequestBuilder EmptyPathSegment
         {
-            get => new global::Soenneker.HighLevel.OpenApiClient.Links.Links.LinksRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.HighLevel.OpenApiClient.Links.EmptyPathSegmentRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The id property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Links.Id.IdRequestBuilder Id
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Links.Id.IdRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The search property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Links.Search.SearchRequestBuilder Search
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Links.Search.SearchRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>Gets an item from the Soenneker.HighLevel.OpenApiClient.links.item collection</summary>
+        /// <param name="position">Link Id</param>
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Links.Item.WithLinkItemRequestBuilder"/></returns>
+        public global::Soenneker.HighLevel.OpenApiClient.Links.Item.WithLinkItemRequestBuilder this[string position]
+        {
+            get
+            {
+                var urlTplParams = new Dictionary<string, object>(PathParameters);
+                urlTplParams.Add("linkId", position);
+                return new global::Soenneker.HighLevel.OpenApiClient.Links.Item.WithLinkItemRequestBuilder(urlTplParams, RequestAdapter);
+            }
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Links.LinksRequestBuilder"/> and sets the default values.

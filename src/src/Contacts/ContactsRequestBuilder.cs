@@ -2,6 +2,11 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.HighLevel.OpenApiClient.Contacts.Bulk;
+using Soenneker.HighLevel.OpenApiClient.Contacts.Business;
+using Soenneker.HighLevel.OpenApiClient.Contacts.Item;
+using Soenneker.HighLevel.OpenApiClient.Contacts.Search;
+using Soenneker.HighLevel.OpenApiClient.Contacts.Upsert;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -14,10 +19,42 @@ namespace Soenneker.HighLevel.OpenApiClient.Contacts
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ContactsRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The contacts property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Contacts.Contacts.ContactsRequestBuilder Contacts
+        /// <summary>The bulk property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Contacts.Bulk.BulkRequestBuilder Bulk
         {
-            get => new global::Soenneker.HighLevel.OpenApiClient.Contacts.Contacts.ContactsRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.HighLevel.OpenApiClient.Contacts.Bulk.BulkRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The business property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Contacts.Business.BusinessRequestBuilder Business
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Contacts.Business.BusinessRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The EmptyPathSegment property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Contacts.EmptyPathSegmentRequestBuilder EmptyPathSegment
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Contacts.EmptyPathSegmentRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The search property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Contacts.Search.SearchRequestBuilder Search
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Contacts.Search.SearchRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The upsert property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Contacts.Upsert.UpsertRequestBuilder Upsert
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Contacts.Upsert.UpsertRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>Gets an item from the Soenneker.HighLevel.OpenApiClient.contacts.item collection</summary>
+        /// <param name="position">Contact Id</param>
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Contacts.Item.WithContactItemRequestBuilder"/></returns>
+        public global::Soenneker.HighLevel.OpenApiClient.Contacts.Item.WithContactItemRequestBuilder this[string position]
+        {
+            get
+            {
+                var urlTplParams = new Dictionary<string, object>(PathParameters);
+                urlTplParams.Add("contactId", position);
+                return new global::Soenneker.HighLevel.OpenApiClient.Contacts.Item.WithContactItemRequestBuilder(urlTplParams, RequestAdapter);
+            }
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Contacts.ContactsRequestBuilder"/> and sets the default values.

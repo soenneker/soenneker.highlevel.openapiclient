@@ -2,6 +2,9 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.HighLevel.OpenApiClient.CustomFields.Folder;
+using Soenneker.HighLevel.OpenApiClient.CustomFields.Item;
+using Soenneker.HighLevel.OpenApiClient.CustomFields.ObjectKey;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -14,10 +17,32 @@ namespace Soenneker.HighLevel.OpenApiClient.CustomFields
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CustomFieldsRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The customFields property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.CustomFields.CustomFields.CustomFieldsRequestBuilder CustomFields
+        /// <summary>The EmptyPathSegment property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.CustomFields.EmptyPathSegmentRequestBuilder EmptyPathSegment
         {
-            get => new global::Soenneker.HighLevel.OpenApiClient.CustomFields.CustomFields.CustomFieldsRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.HighLevel.OpenApiClient.CustomFields.EmptyPathSegmentRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The folder property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.CustomFields.Folder.FolderRequestBuilder Folder
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.CustomFields.Folder.FolderRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The objectKey property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.CustomFields.ObjectKey.ObjectKeyRequestBuilder ObjectKey
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.CustomFields.ObjectKey.ObjectKeyRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>Gets an item from the Soenneker.HighLevel.OpenApiClient.customFields.item collection</summary>
+        /// <param name="position">Unique identifier of the item</param>
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.CustomFields.Item.CustomFieldsItemRequestBuilder"/></returns>
+        public global::Soenneker.HighLevel.OpenApiClient.CustomFields.Item.CustomFieldsItemRequestBuilder this[string position]
+        {
+            get
+            {
+                var urlTplParams = new Dictionary<string, object>(PathParameters);
+                urlTplParams.Add("id", position);
+                return new global::Soenneker.HighLevel.OpenApiClient.CustomFields.Item.CustomFieldsItemRequestBuilder(urlTplParams, RequestAdapter);
+            }
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.CustomFields.CustomFieldsRequestBuilder"/> and sets the default values.

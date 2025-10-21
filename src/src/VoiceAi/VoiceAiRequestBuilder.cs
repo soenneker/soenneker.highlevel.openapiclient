@@ -2,6 +2,9 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.HighLevel.OpenApiClient.VoiceAi.Actions;
+using Soenneker.HighLevel.OpenApiClient.VoiceAi.Agents;
+using Soenneker.HighLevel.OpenApiClient.VoiceAi.Dashboard;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -14,10 +17,20 @@ namespace Soenneker.HighLevel.OpenApiClient.VoiceAi
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class VoiceAiRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The voiceAi property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.VoiceAi.VoiceAi.VoiceAiRequestBuilder VoiceAi
+        /// <summary>The actions property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.VoiceAi.Actions.ActionsRequestBuilder Actions
         {
-            get => new global::Soenneker.HighLevel.OpenApiClient.VoiceAi.VoiceAi.VoiceAiRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.HighLevel.OpenApiClient.VoiceAi.Actions.ActionsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The agents property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.VoiceAi.Agents.AgentsRequestBuilder Agents
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.VoiceAi.Agents.AgentsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The dashboard property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.VoiceAi.Dashboard.DashboardRequestBuilder Dashboard
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.VoiceAi.Dashboard.DashboardRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.VoiceAi.VoiceAiRequestBuilder"/> and sets the default values.

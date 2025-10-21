@@ -2,6 +2,7 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.HighLevel.OpenApiClient.Objects.Item;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -14,10 +15,22 @@ namespace Soenneker.HighLevel.OpenApiClient.Objects
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ObjectsRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The objects property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Objects.Objects.ObjectsRequestBuilder Objects
+        /// <summary>The EmptyPathSegment property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Objects.EmptyPathSegmentRequestBuilder EmptyPathSegment
         {
-            get => new global::Soenneker.HighLevel.OpenApiClient.Objects.Objects.ObjectsRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.HighLevel.OpenApiClient.Objects.EmptyPathSegmentRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>Gets an item from the Soenneker.HighLevel.OpenApiClient.objects.item collection</summary>
+        /// <param name="position">key of the custom or standard object. For custom objects, the key must include the prefix “custom_objects.”. This key can be found on the Object Details page under Settings in the UI.</param>
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Objects.Item.KeyItemRequestBuilder"/></returns>
+        public global::Soenneker.HighLevel.OpenApiClient.Objects.Item.KeyItemRequestBuilder this[string position]
+        {
+            get
+            {
+                var urlTplParams = new Dictionary<string, object>(PathParameters);
+                urlTplParams.Add("key%2Did", position);
+                return new global::Soenneker.HighLevel.OpenApiClient.Objects.Item.KeyItemRequestBuilder(urlTplParams, RequestAdapter);
+            }
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Objects.ObjectsRequestBuilder"/> and sets the default values.

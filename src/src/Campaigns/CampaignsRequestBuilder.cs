@@ -14,10 +14,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Campaigns
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CampaignsRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The campaigns property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Campaigns.Campaigns.CampaignsRequestBuilder Campaigns
+        /// <summary>The EmptyPathSegment property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Campaigns.EmptyPathSegmentRequestBuilder EmptyPathSegment
         {
-            get => new global::Soenneker.HighLevel.OpenApiClient.Campaigns.Campaigns.CampaignsRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.HighLevel.OpenApiClient.Campaigns.EmptyPathSegmentRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Campaigns.CampaignsRequestBuilder"/> and sets the default values.

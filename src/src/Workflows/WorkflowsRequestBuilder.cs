@@ -14,10 +14,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Workflows
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WorkflowsRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The workflows property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Workflows.Workflows.WorkflowsRequestBuilder Workflows
+        /// <summary>The EmptyPathSegment property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Workflows.EmptyPathSegmentRequestBuilder EmptyPathSegment
         {
-            get => new global::Soenneker.HighLevel.OpenApiClient.Workflows.Workflows.WorkflowsRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.HighLevel.OpenApiClient.Workflows.EmptyPathSegmentRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Workflows.WorkflowsRequestBuilder"/> and sets the default values.

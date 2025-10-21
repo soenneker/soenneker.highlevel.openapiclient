@@ -2,6 +2,8 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.HighLevel.OpenApiClient.PhoneSystem.NumberPools;
+using Soenneker.HighLevel.OpenApiClient.PhoneSystem.Numbers;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -14,10 +16,15 @@ namespace Soenneker.HighLevel.OpenApiClient.PhoneSystem
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PhoneSystemRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The phoneSystem property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.PhoneSystem.PhoneSystem.PhoneSystemRequestBuilder PhoneSystem
+        /// <summary>The numberPools property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.PhoneSystem.NumberPools.NumberPoolsRequestBuilder NumberPools
         {
-            get => new global::Soenneker.HighLevel.OpenApiClient.PhoneSystem.PhoneSystem.PhoneSystemRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.HighLevel.OpenApiClient.PhoneSystem.NumberPools.NumberPoolsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The numbers property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.PhoneSystem.Numbers.NumbersRequestBuilder Numbers
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.PhoneSystem.Numbers.NumbersRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.PhoneSystem.PhoneSystemRequestBuilder"/> and sets the default values.

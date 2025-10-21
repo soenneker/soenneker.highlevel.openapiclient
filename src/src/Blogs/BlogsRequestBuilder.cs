@@ -2,6 +2,10 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.HighLevel.OpenApiClient.Blogs.Authors;
+using Soenneker.HighLevel.OpenApiClient.Blogs.Categories;
+using Soenneker.HighLevel.OpenApiClient.Blogs.Posts;
+using Soenneker.HighLevel.OpenApiClient.Blogs.Site;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -14,10 +18,25 @@ namespace Soenneker.HighLevel.OpenApiClient.Blogs
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BlogsRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The blogs property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Blogs.Blogs.BlogsRequestBuilder Blogs
+        /// <summary>The authors property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Blogs.Authors.AuthorsRequestBuilder Authors
         {
-            get => new global::Soenneker.HighLevel.OpenApiClient.Blogs.Blogs.BlogsRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.HighLevel.OpenApiClient.Blogs.Authors.AuthorsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The categories property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Blogs.Categories.CategoriesRequestBuilder Categories
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Blogs.Categories.CategoriesRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The posts property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Blogs.Posts.PostsRequestBuilder Posts
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Blogs.Posts.PostsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The site property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Blogs.Site.SiteRequestBuilder Site
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Blogs.Site.SiteRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Blogs.BlogsRequestBuilder"/> and sets the default values.

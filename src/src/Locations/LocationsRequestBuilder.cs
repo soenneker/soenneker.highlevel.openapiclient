@@ -2,6 +2,8 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.HighLevel.OpenApiClient.Locations.Item;
+using Soenneker.HighLevel.OpenApiClient.Locations.Search;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -14,10 +16,27 @@ namespace Soenneker.HighLevel.OpenApiClient.Locations
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class LocationsRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The locations property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Locations.Locations.LocationsRequestBuilder Locations
+        /// <summary>The EmptyPathSegment property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Locations.EmptyPathSegmentRequestBuilder EmptyPathSegment
         {
-            get => new global::Soenneker.HighLevel.OpenApiClient.Locations.Locations.LocationsRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.HighLevel.OpenApiClient.Locations.EmptyPathSegmentRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The search property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Locations.Search.SearchRequestBuilder Search
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Locations.Search.SearchRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>Gets an item from the Soenneker.HighLevel.OpenApiClient.locations.item collection</summary>
+        /// <param name="position">Location Id</param>
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Locations.Item.WithLocationItemRequestBuilder"/></returns>
+        public global::Soenneker.HighLevel.OpenApiClient.Locations.Item.WithLocationItemRequestBuilder this[string position]
+        {
+            get
+            {
+                var urlTplParams = new Dictionary<string, object>(PathParameters);
+                urlTplParams.Add("locationId", position);
+                return new global::Soenneker.HighLevel.OpenApiClient.Locations.Item.WithLocationItemRequestBuilder(urlTplParams, RequestAdapter);
+            }
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Locations.LocationsRequestBuilder"/> and sets the default values.

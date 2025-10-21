@@ -14,6 +14,22 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The dataType property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? DataType { get; set; }
+#nullable restore
+#else
+        public string DataType { get; set; }
+#endif
+        /// <summary>The fieldKey property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? FieldKey { get; set; }
+#nullable restore
+#else
+        public string FieldKey { get; set; }
+#endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -22,14 +38,56 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>The value property</summary>
+        /// <summary>The isAllowedCustomOption property</summary>
+        public bool? IsAllowedCustomOption { get; set; }
+        /// <summary>The isMultiFileAllowed property</summary>
+        public bool? IsMultiFileAllowed { get; set; }
+        /// <summary>The locationId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Value { get; set; }
+        public string? LocationId { get; set; }
 #nullable restore
 #else
-        public string Value { get; set; }
+        public string LocationId { get; set; }
 #endif
+        /// <summary>The maxFileLimit property</summary>
+        public double? MaxFileLimit { get; set; }
+        /// <summary>Model of the custom field</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldSchema_model? Model { get; set; }
+        /// <summary>The name property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Name { get; set; }
+#nullable restore
+#else
+        public string Name { get; set; }
+#endif
+        /// <summary>The picklistImageOptions property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? PicklistImageOptions { get; set; }
+#nullable restore
+#else
+        public List<string> PicklistImageOptions { get; set; }
+#endif
+        /// <summary>The picklistOptions property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? PicklistOptions { get; set; }
+#nullable restore
+#else
+        public List<string> PicklistOptions { get; set; }
+#endif
+        /// <summary>The placeholder property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Placeholder { get; set; }
+#nullable restore
+#else
+        public string Placeholder { get; set; }
+#endif
+        /// <summary>The position property</summary>
+        public double? Position { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldSchema"/> and sets the default values.
         /// </summary>
@@ -55,8 +113,19 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "dataType", n => { DataType = n.GetStringValue(); } },
+                { "fieldKey", n => { FieldKey = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "value", n => { Value = n.GetStringValue(); } },
+                { "isAllowedCustomOption", n => { IsAllowedCustomOption = n.GetBoolValue(); } },
+                { "isMultiFileAllowed", n => { IsMultiFileAllowed = n.GetBoolValue(); } },
+                { "locationId", n => { LocationId = n.GetStringValue(); } },
+                { "maxFileLimit", n => { MaxFileLimit = n.GetDoubleValue(); } },
+                { "model", n => { Model = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldSchema_model>(); } },
+                { "name", n => { Name = n.GetStringValue(); } },
+                { "picklistImageOptions", n => { PicklistImageOptions = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "picklistOptions", n => { PicklistOptions = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "placeholder", n => { Placeholder = n.GetStringValue(); } },
+                { "position", n => { Position = n.GetDoubleValue(); } },
             };
         }
         /// <summary>
@@ -66,8 +135,19 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            writer.WriteStringValue("dataType", DataType);
+            writer.WriteStringValue("fieldKey", FieldKey);
             writer.WriteStringValue("id", Id);
-            writer.WriteStringValue("value", Value);
+            writer.WriteBoolValue("isAllowedCustomOption", IsAllowedCustomOption);
+            writer.WriteBoolValue("isMultiFileAllowed", IsMultiFileAllowed);
+            writer.WriteStringValue("locationId", LocationId);
+            writer.WriteDoubleValue("maxFileLimit", MaxFileLimit);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldSchema_model>("model", Model);
+            writer.WriteStringValue("name", Name);
+            writer.WriteCollectionOfPrimitiveValues<string>("picklistImageOptions", PicklistImageOptions);
+            writer.WriteCollectionOfPrimitiveValues<string>("picklistOptions", PicklistOptions);
+            writer.WriteStringValue("placeholder", Placeholder);
+            writer.WriteDoubleValue("position", Position);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

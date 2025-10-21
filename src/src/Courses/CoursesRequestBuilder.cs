@@ -2,6 +2,7 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.HighLevel.OpenApiClient.Courses.CoursesExporter;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -14,10 +15,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Courses
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CoursesRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The courses property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Courses.Courses.CoursesRequestBuilder Courses
+        /// <summary>The coursesExporter property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Courses.CoursesExporter.CoursesExporterRequestBuilder CoursesExporter
         {
-            get => new global::Soenneker.HighLevel.OpenApiClient.Courses.Courses.CoursesRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.HighLevel.OpenApiClient.Courses.CoursesExporter.CoursesExporterRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Courses.CoursesRequestBuilder"/> and sets the default values.

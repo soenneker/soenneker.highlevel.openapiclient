@@ -2,6 +2,8 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.HighLevel.OpenApiClient.Users.Item;
+using Soenneker.HighLevel.OpenApiClient.Users.Search;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -14,10 +16,27 @@ namespace Soenneker.HighLevel.OpenApiClient.Users
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UsersRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The users property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Users.Users.UsersRequestBuilder Users
+        /// <summary>The EmptyPathSegment property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Users.EmptyPathSegmentRequestBuilder EmptyPathSegment
         {
-            get => new global::Soenneker.HighLevel.OpenApiClient.Users.Users.UsersRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.HighLevel.OpenApiClient.Users.EmptyPathSegmentRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The search property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Users.Search.SearchRequestBuilder Search
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Users.Search.SearchRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>Gets an item from the Soenneker.HighLevel.OpenApiClient.users.item collection</summary>
+        /// <param name="position">User Id</param>
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Users.Item.WithUserItemRequestBuilder"/></returns>
+        public global::Soenneker.HighLevel.OpenApiClient.Users.Item.WithUserItemRequestBuilder this[string position]
+        {
+            get
+            {
+                var urlTplParams = new Dictionary<string, object>(PathParameters);
+                urlTplParams.Add("userId", position);
+                return new global::Soenneker.HighLevel.OpenApiClient.Users.Item.WithUserItemRequestBuilder(urlTplParams, RequestAdapter);
+            }
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Users.UsersRequestBuilder"/> and sets the default values.

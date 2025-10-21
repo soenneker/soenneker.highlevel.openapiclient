@@ -2,6 +2,9 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Item;
+using Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Oauth;
+using Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Statistics;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -14,10 +17,27 @@ namespace Soenneker.HighLevel.OpenApiClient.SocialMediaPosting
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SocialMediaPostingRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The socialMediaPosting property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.SocialMediaPosting.SocialMediaPostingRequestBuilder SocialMediaPosting
+        /// <summary>The oauth property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Oauth.OauthRequestBuilder Oauth
         {
-            get => new global::Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.SocialMediaPosting.SocialMediaPostingRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Oauth.OauthRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The statistics property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Statistics.StatisticsRequestBuilder Statistics
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Statistics.StatisticsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>Gets an item from the Soenneker.HighLevel.OpenApiClient.socialMediaPosting.item collection</summary>
+        /// <param name="position">Location Id</param>
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Item.WithLocationItemRequestBuilder"/></returns>
+        public global::Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Item.WithLocationItemRequestBuilder this[string position]
+        {
+            get
+            {
+                var urlTplParams = new Dictionary<string, object>(PathParameters);
+                urlTplParams.Add("locationId", position);
+                return new global::Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Item.WithLocationItemRequestBuilder(urlTplParams, RequestAdapter);
+            }
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.SocialMediaPostingRequestBuilder"/> and sets the default values.

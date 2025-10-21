@@ -2,6 +2,10 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.HighLevel.OpenApiClient.Associations.Item;
+using Soenneker.HighLevel.OpenApiClient.Associations.Key;
+using Soenneker.HighLevel.OpenApiClient.Associations.ObjectKey;
+using Soenneker.HighLevel.OpenApiClient.Associations.Relations;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -14,10 +18,37 @@ namespace Soenneker.HighLevel.OpenApiClient.Associations
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AssociationsRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The associations property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Associations.Associations.AssociationsRequestBuilder Associations
+        /// <summary>The EmptyPathSegment property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Associations.EmptyPathSegmentRequestBuilder EmptyPathSegment
         {
-            get => new global::Soenneker.HighLevel.OpenApiClient.Associations.Associations.AssociationsRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.HighLevel.OpenApiClient.Associations.EmptyPathSegmentRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The key property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Associations.Key.KeyRequestBuilder Key
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Associations.Key.KeyRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The objectKey property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Associations.ObjectKey.ObjectKeyRequestBuilder ObjectKey
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Associations.ObjectKey.ObjectKeyRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The relations property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Associations.Relations.RelationsRequestBuilder Relations
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Associations.Relations.RelationsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>Gets an item from the Soenneker.HighLevel.OpenApiClient.associations.item collection</summary>
+        /// <param name="position">Unique identifier of the item</param>
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Associations.Item.WithAssociationItemRequestBuilder"/></returns>
+        public global::Soenneker.HighLevel.OpenApiClient.Associations.Item.WithAssociationItemRequestBuilder this[string position]
+        {
+            get
+            {
+                var urlTplParams = new Dictionary<string, object>(PathParameters);
+                urlTplParams.Add("associationId", position);
+                return new global::Soenneker.HighLevel.OpenApiClient.Associations.Item.WithAssociationItemRequestBuilder(urlTplParams, RequestAdapter);
+            }
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Associations.AssociationsRequestBuilder"/> and sets the default values.

@@ -14,26 +14,22 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Message</summary>
+        /// <summary>ID of the uploaded file</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Message { get; set; }
+        public string? FileId { get; set; }
 #nullable restore
 #else
-        public string Message { get; set; }
+        public string FileId { get; set; }
 #endif
-        /// <summary>Requested Results</summary>
+        /// <summary>Google Cloud Storage URL of the uploaded file</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UploadFileResponseDTO_results? Results { get; set; }
+        public string? Url { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UploadFileResponseDTO_results Results { get; set; }
+        public string Url { get; set; }
 #endif
-        /// <summary>Status Code</summary>
-        public double? StatusCode { get; set; }
-        /// <summary>Success or Failure</summary>
-        public bool? Success { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UploadFileResponseDTO"/> and sets the default values.
         /// </summary>
@@ -59,10 +55,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "message", n => { Message = n.GetStringValue(); } },
-                { "results", n => { Results = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UploadFileResponseDTO_results>(global::Soenneker.HighLevel.OpenApiClient.Models.UploadFileResponseDTO_results.CreateFromDiscriminatorValue); } },
-                { "statusCode", n => { StatusCode = n.GetDoubleValue(); } },
-                { "success", n => { Success = n.GetBoolValue(); } },
+                { "fileId", n => { FileId = n.GetStringValue(); } },
+                { "url", n => { Url = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -72,10 +66,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("message", Message);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UploadFileResponseDTO_results>("results", Results);
-            writer.WriteDoubleValue("statusCode", StatusCode);
-            writer.WriteBoolValue("success", Success);
+            writer.WriteStringValue("fileId", FileId);
+            writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

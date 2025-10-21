@@ -2,6 +2,11 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.HighLevel.OpenApiClient.Conversations.Item;
+using Soenneker.HighLevel.OpenApiClient.Conversations.Locations;
+using Soenneker.HighLevel.OpenApiClient.Conversations.Messages;
+using Soenneker.HighLevel.OpenApiClient.Conversations.Providers;
+using Soenneker.HighLevel.OpenApiClient.Conversations.Search;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -14,10 +19,42 @@ namespace Soenneker.HighLevel.OpenApiClient.Conversations
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ConversationsRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The conversations property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Conversations.Conversations.ConversationsRequestBuilder Conversations
+        /// <summary>The EmptyPathSegment property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Conversations.EmptyPathSegmentRequestBuilder EmptyPathSegment
         {
-            get => new global::Soenneker.HighLevel.OpenApiClient.Conversations.Conversations.ConversationsRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.HighLevel.OpenApiClient.Conversations.EmptyPathSegmentRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The locations property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Conversations.Locations.LocationsRequestBuilder Locations
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Conversations.Locations.LocationsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The messages property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.MessagesRequestBuilder Messages
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.MessagesRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The providers property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Conversations.Providers.ProvidersRequestBuilder Providers
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Conversations.Providers.ProvidersRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The search property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Conversations.Search.SearchRequestBuilder Search
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Conversations.Search.SearchRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>Gets an item from the Soenneker.HighLevel.OpenApiClient.conversations.item collection</summary>
+        /// <param name="position">Conversation ID as string</param>
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Conversations.Item.WithConversationItemRequestBuilder"/></returns>
+        public global::Soenneker.HighLevel.OpenApiClient.Conversations.Item.WithConversationItemRequestBuilder this[string position]
+        {
+            get
+            {
+                var urlTplParams = new Dictionary<string, object>(PathParameters);
+                urlTplParams.Add("conversationId", position);
+                return new global::Soenneker.HighLevel.OpenApiClient.Conversations.Item.WithConversationItemRequestBuilder(urlTplParams, RequestAdapter);
+            }
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Conversations.ConversationsRequestBuilder"/> and sets the default values.

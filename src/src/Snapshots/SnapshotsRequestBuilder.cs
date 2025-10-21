@@ -2,6 +2,8 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.HighLevel.OpenApiClient.Snapshots.Share;
+using Soenneker.HighLevel.OpenApiClient.Snapshots.SnapshotStatus;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -14,10 +16,20 @@ namespace Soenneker.HighLevel.OpenApiClient.Snapshots
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SnapshotsRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The snapshots property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Snapshots.Snapshots.SnapshotsRequestBuilder Snapshots
+        /// <summary>The EmptyPathSegment property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Snapshots.EmptyPathSegmentRequestBuilder EmptyPathSegment
         {
-            get => new global::Soenneker.HighLevel.OpenApiClient.Snapshots.Snapshots.SnapshotsRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.HighLevel.OpenApiClient.Snapshots.EmptyPathSegmentRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The share property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Snapshots.Share.ShareRequestBuilder Share
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Snapshots.Share.ShareRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The snapshotStatus property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Snapshots.SnapshotStatus.SnapshotStatusRequestBuilder SnapshotStatus
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Snapshots.SnapshotStatus.SnapshotStatusRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Snapshots.SnapshotsRequestBuilder"/> and sets the default values.

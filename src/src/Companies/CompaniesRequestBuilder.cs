@@ -2,6 +2,7 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.HighLevel.OpenApiClient.Companies.Item;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -14,10 +15,17 @@ namespace Soenneker.HighLevel.OpenApiClient.Companies
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CompaniesRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The companies property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Companies.Companies.CompaniesRequestBuilder Companies
+        /// <summary>Gets an item from the Soenneker.HighLevel.OpenApiClient.companies.item collection</summary>
+        /// <param name="position">Unique identifier of the item</param>
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Companies.Item.WithCompanyItemRequestBuilder"/></returns>
+        public global::Soenneker.HighLevel.OpenApiClient.Companies.Item.WithCompanyItemRequestBuilder this[string position]
         {
-            get => new global::Soenneker.HighLevel.OpenApiClient.Companies.Companies.CompaniesRequestBuilder(PathParameters, RequestAdapter);
+            get
+            {
+                var urlTplParams = new Dictionary<string, object>(PathParameters);
+                urlTplParams.Add("companyId", position);
+                return new global::Soenneker.HighLevel.OpenApiClient.Companies.Item.WithCompanyItemRequestBuilder(urlTplParams, RequestAdapter);
+            }
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Companies.CompaniesRequestBuilder"/> and sets the default values.

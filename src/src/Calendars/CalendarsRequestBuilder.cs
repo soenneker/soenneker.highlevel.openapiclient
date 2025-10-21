@@ -2,6 +2,12 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.HighLevel.OpenApiClient.Calendars.Appointments;
+using Soenneker.HighLevel.OpenApiClient.Calendars.BlockedSlots;
+using Soenneker.HighLevel.OpenApiClient.Calendars.Events;
+using Soenneker.HighLevel.OpenApiClient.Calendars.Groups;
+using Soenneker.HighLevel.OpenApiClient.Calendars.Item;
+using Soenneker.HighLevel.OpenApiClient.Calendars.Resources;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -14,10 +20,47 @@ namespace Soenneker.HighLevel.OpenApiClient.Calendars
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CalendarsRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The calendars property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Calendars.Calendars.CalendarsRequestBuilder Calendars
+        /// <summary>The appointments property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Calendars.Appointments.AppointmentsRequestBuilder Appointments
         {
-            get => new global::Soenneker.HighLevel.OpenApiClient.Calendars.Calendars.CalendarsRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.HighLevel.OpenApiClient.Calendars.Appointments.AppointmentsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The blockedSlots property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Calendars.BlockedSlots.BlockedSlotsRequestBuilder BlockedSlots
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Calendars.BlockedSlots.BlockedSlotsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The EmptyPathSegment property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Calendars.EmptyPathSegmentRequestBuilder EmptyPathSegment
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Calendars.EmptyPathSegmentRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The events property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Calendars.Events.EventsRequestBuilder Events
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Calendars.Events.EventsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The groups property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Calendars.Groups.GroupsRequestBuilder Groups
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Calendars.Groups.GroupsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The resources property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Calendars.Resources.ResourcesRequestBuilder Resources
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Calendars.Resources.ResourcesRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>Gets an item from the Soenneker.HighLevel.OpenApiClient.calendars.item collection</summary>
+        /// <param name="position">Calendar Id</param>
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Calendars.Item.WithCalendarItemRequestBuilder"/></returns>
+        public global::Soenneker.HighLevel.OpenApiClient.Calendars.Item.WithCalendarItemRequestBuilder this[string position]
+        {
+            get
+            {
+                var urlTplParams = new Dictionary<string, object>(PathParameters);
+                urlTplParams.Add("calendarId", position);
+                return new global::Soenneker.HighLevel.OpenApiClient.Calendars.Item.WithCalendarItemRequestBuilder(urlTplParams, RequestAdapter);
+            }
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Calendars.CalendarsRequestBuilder"/> and sets the default values.

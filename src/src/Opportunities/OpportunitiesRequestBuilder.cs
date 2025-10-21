@@ -2,6 +2,10 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.HighLevel.OpenApiClient.Opportunities.Item;
+using Soenneker.HighLevel.OpenApiClient.Opportunities.Pipelines;
+using Soenneker.HighLevel.OpenApiClient.Opportunities.Search;
+using Soenneker.HighLevel.OpenApiClient.Opportunities.Upsert;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -14,10 +18,37 @@ namespace Soenneker.HighLevel.OpenApiClient.Opportunities
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class OpportunitiesRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The opportunities property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Opportunities.Opportunities.OpportunitiesRequestBuilder Opportunities
+        /// <summary>The EmptyPathSegment property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Opportunities.EmptyPathSegmentRequestBuilder EmptyPathSegment
         {
-            get => new global::Soenneker.HighLevel.OpenApiClient.Opportunities.Opportunities.OpportunitiesRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.HighLevel.OpenApiClient.Opportunities.EmptyPathSegmentRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The pipelines property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Opportunities.Pipelines.PipelinesRequestBuilder Pipelines
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Opportunities.Pipelines.PipelinesRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The search property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Opportunities.Search.SearchRequestBuilder Search
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Opportunities.Search.SearchRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The upsert property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Opportunities.Upsert.UpsertRequestBuilder Upsert
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Opportunities.Upsert.UpsertRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>Gets an item from the Soenneker.HighLevel.OpenApiClient.opportunities.item collection</summary>
+        /// <param name="position">Opportunity Id</param>
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Opportunities.Item.OpportunitiesItemRequestBuilder"/></returns>
+        public global::Soenneker.HighLevel.OpenApiClient.Opportunities.Item.OpportunitiesItemRequestBuilder this[string position]
+        {
+            get
+            {
+                var urlTplParams = new Dictionary<string, object>(PathParameters);
+                urlTplParams.Add("id", position);
+                return new global::Soenneker.HighLevel.OpenApiClient.Opportunities.Item.OpportunitiesItemRequestBuilder(urlTplParams, RequestAdapter);
+            }
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Opportunities.OpportunitiesRequestBuilder"/> and sets the default values.

@@ -2,6 +2,12 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.HighLevel.OpenApiClient.Payments.Coupon;
+using Soenneker.HighLevel.OpenApiClient.Payments.CustomProvider;
+using Soenneker.HighLevel.OpenApiClient.Payments.Integrations;
+using Soenneker.HighLevel.OpenApiClient.Payments.Orders;
+using Soenneker.HighLevel.OpenApiClient.Payments.Subscriptions;
+using Soenneker.HighLevel.OpenApiClient.Payments.Transactions;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -14,10 +20,35 @@ namespace Soenneker.HighLevel.OpenApiClient.Payments
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PaymentsRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The payments property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Payments.Payments.PaymentsRequestBuilder Payments
+        /// <summary>The coupon property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Payments.Coupon.CouponRequestBuilder Coupon
         {
-            get => new global::Soenneker.HighLevel.OpenApiClient.Payments.Payments.PaymentsRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.HighLevel.OpenApiClient.Payments.Coupon.CouponRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The customProvider property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Payments.CustomProvider.CustomProviderRequestBuilder CustomProvider
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Payments.CustomProvider.CustomProviderRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The integrations property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Payments.Integrations.IntegrationsRequestBuilder Integrations
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Payments.Integrations.IntegrationsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The orders property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Payments.Orders.OrdersRequestBuilder Orders
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Payments.Orders.OrdersRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The subscriptions property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Payments.Subscriptions.SubscriptionsRequestBuilder Subscriptions
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Payments.Subscriptions.SubscriptionsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The transactions property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Payments.Transactions.TransactionsRequestBuilder Transactions
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Payments.Transactions.TransactionsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Payments.PaymentsRequestBuilder"/> and sets the default values.

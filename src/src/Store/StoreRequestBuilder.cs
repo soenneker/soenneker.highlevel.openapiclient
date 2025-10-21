@@ -2,6 +2,9 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.HighLevel.OpenApiClient.Store.ShippingCarrier;
+using Soenneker.HighLevel.OpenApiClient.Store.ShippingZone;
+using Soenneker.HighLevel.OpenApiClient.Store.StoreSetting;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -14,10 +17,20 @@ namespace Soenneker.HighLevel.OpenApiClient.Store
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class StoreRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The store property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Store.Store.StoreRequestBuilder Store
+        /// <summary>The shippingCarrier property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Store.ShippingCarrier.ShippingCarrierRequestBuilder ShippingCarrier
         {
-            get => new global::Soenneker.HighLevel.OpenApiClient.Store.Store.StoreRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.HighLevel.OpenApiClient.Store.ShippingCarrier.ShippingCarrierRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The shippingZone property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Store.ShippingZone.ShippingZoneRequestBuilder ShippingZone
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Store.ShippingZone.ShippingZoneRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The storeSetting property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Store.StoreSetting.StoreSettingRequestBuilder StoreSetting
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Store.StoreSetting.StoreSettingRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Store.StoreRequestBuilder"/> and sets the default values.

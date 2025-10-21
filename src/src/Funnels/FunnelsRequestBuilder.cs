@@ -2,6 +2,9 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.HighLevel.OpenApiClient.Funnels.Funnel;
+using Soenneker.HighLevel.OpenApiClient.Funnels.Lookup;
+using Soenneker.HighLevel.OpenApiClient.Funnels.Page;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -14,10 +17,20 @@ namespace Soenneker.HighLevel.OpenApiClient.Funnels
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FunnelsRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The funnels property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Funnels.Funnels.FunnelsRequestBuilder Funnels
+        /// <summary>The funnel property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Funnels.Funnel.FunnelRequestBuilder Funnel
         {
-            get => new global::Soenneker.HighLevel.OpenApiClient.Funnels.Funnels.FunnelsRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.HighLevel.OpenApiClient.Funnels.Funnel.FunnelRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The lookup property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Funnels.Lookup.LookupRequestBuilder Lookup
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Funnels.Lookup.LookupRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The page property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Funnels.Page.PageRequestBuilder Page
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Funnels.Page.PageRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Funnels.FunnelsRequestBuilder"/> and sets the default values.

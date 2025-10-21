@@ -2,6 +2,9 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.HighLevel.OpenApiClient.Oauth.InstalledLocations;
+using Soenneker.HighLevel.OpenApiClient.Oauth.LocationToken;
+using Soenneker.HighLevel.OpenApiClient.Oauth.Token;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -14,10 +17,20 @@ namespace Soenneker.HighLevel.OpenApiClient.Oauth
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class OauthRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The oauth property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Oauth.Oauth.OauthRequestBuilder Oauth
+        /// <summary>The installedLocations property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Oauth.InstalledLocations.InstalledLocationsRequestBuilder InstalledLocations
         {
-            get => new global::Soenneker.HighLevel.OpenApiClient.Oauth.Oauth.OauthRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.HighLevel.OpenApiClient.Oauth.InstalledLocations.InstalledLocationsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The locationToken property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Oauth.LocationToken.LocationTokenRequestBuilder LocationToken
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Oauth.LocationToken.LocationTokenRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The token property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Oauth.Token.TokenRequestBuilder Token
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Oauth.Token.TokenRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Oauth.OauthRequestBuilder"/> and sets the default values.

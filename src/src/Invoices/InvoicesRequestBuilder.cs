@@ -2,6 +2,13 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.HighLevel.OpenApiClient.Invoices.Estimate;
+using Soenneker.HighLevel.OpenApiClient.Invoices.GenerateInvoiceNumber;
+using Soenneker.HighLevel.OpenApiClient.Invoices.Item;
+using Soenneker.HighLevel.OpenApiClient.Invoices.Schedule;
+using Soenneker.HighLevel.OpenApiClient.Invoices.Stats;
+using Soenneker.HighLevel.OpenApiClient.Invoices.Template;
+using Soenneker.HighLevel.OpenApiClient.Invoices.Text2pay;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -14,10 +21,52 @@ namespace Soenneker.HighLevel.OpenApiClient.Invoices
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class InvoicesRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The invoices property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Invoices.Invoices.InvoicesRequestBuilder Invoices
+        /// <summary>The EmptyPathSegment property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Invoices.EmptyPathSegmentRequestBuilder EmptyPathSegment
         {
-            get => new global::Soenneker.HighLevel.OpenApiClient.Invoices.Invoices.InvoicesRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.HighLevel.OpenApiClient.Invoices.EmptyPathSegmentRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The estimate property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Invoices.Estimate.EstimateRequestBuilder Estimate
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Invoices.Estimate.EstimateRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The generateInvoiceNumber property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Invoices.GenerateInvoiceNumber.GenerateInvoiceNumberRequestBuilder GenerateInvoiceNumber
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Invoices.GenerateInvoiceNumber.GenerateInvoiceNumberRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The schedule property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Invoices.Schedule.ScheduleRequestBuilder Schedule
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Invoices.Schedule.ScheduleRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The stats property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Invoices.Stats.StatsRequestBuilder Stats
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Invoices.Stats.StatsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The template property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Invoices.Template.TemplateRequestBuilder Template
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Invoices.Template.TemplateRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The text2pay property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Invoices.Text2pay.Text2payRequestBuilder Text2pay
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Invoices.Text2pay.Text2payRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>Gets an item from the Soenneker.HighLevel.OpenApiClient.invoices.item collection</summary>
+        /// <param name="position">Invoice Id</param>
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Invoices.Item.WithInvoiceItemRequestBuilder"/></returns>
+        public global::Soenneker.HighLevel.OpenApiClient.Invoices.Item.WithInvoiceItemRequestBuilder this[string position]
+        {
+            get
+            {
+                var urlTplParams = new Dictionary<string, object>(PathParameters);
+                urlTplParams.Add("invoiceId", position);
+                return new global::Soenneker.HighLevel.OpenApiClient.Invoices.Item.WithInvoiceItemRequestBuilder(urlTplParams, RequestAdapter);
+            }
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Invoices.InvoicesRequestBuilder"/> and sets the default values.

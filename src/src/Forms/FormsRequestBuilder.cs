@@ -2,6 +2,8 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.HighLevel.OpenApiClient.Forms.Submissions;
+using Soenneker.HighLevel.OpenApiClient.Forms.UploadCustomFiles;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -14,10 +16,20 @@ namespace Soenneker.HighLevel.OpenApiClient.Forms
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FormsRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The forms property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Forms.Forms.FormsRequestBuilder Forms
+        /// <summary>The EmptyPathSegment property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Forms.EmptyPathSegmentRequestBuilder EmptyPathSegment
         {
-            get => new global::Soenneker.HighLevel.OpenApiClient.Forms.Forms.FormsRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.HighLevel.OpenApiClient.Forms.EmptyPathSegmentRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The submissions property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Forms.Submissions.SubmissionsRequestBuilder Submissions
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Forms.Submissions.SubmissionsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The uploadCustomFiles property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Forms.UploadCustomFiles.UploadCustomFilesRequestBuilder UploadCustomFiles
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Forms.UploadCustomFiles.UploadCustomFilesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Forms.FormsRequestBuilder"/> and sets the default values.

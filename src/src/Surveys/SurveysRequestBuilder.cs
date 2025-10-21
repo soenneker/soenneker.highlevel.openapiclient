@@ -2,6 +2,7 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.HighLevel.OpenApiClient.Surveys.Submissions;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -14,10 +15,15 @@ namespace Soenneker.HighLevel.OpenApiClient.Surveys
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SurveysRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The surveys property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Surveys.Surveys.SurveysRequestBuilder Surveys
+        /// <summary>The EmptyPathSegment property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Surveys.EmptyPathSegmentRequestBuilder EmptyPathSegment
         {
-            get => new global::Soenneker.HighLevel.OpenApiClient.Surveys.Surveys.SurveysRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.HighLevel.OpenApiClient.Surveys.EmptyPathSegmentRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The submissions property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Surveys.Submissions.SubmissionsRequestBuilder Submissions
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Surveys.Submissions.SubmissionsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Surveys.SurveysRequestBuilder"/> and sets the default values.

@@ -2,6 +2,8 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.HighLevel.OpenApiClient.Proposals.Document;
+using Soenneker.HighLevel.OpenApiClient.Proposals.Templates;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -14,10 +16,15 @@ namespace Soenneker.HighLevel.OpenApiClient.Proposals
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ProposalsRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The proposals property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Proposals.Proposals.ProposalsRequestBuilder Proposals
+        /// <summary>The document property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Proposals.Document.DocumentRequestBuilder Document
         {
-            get => new global::Soenneker.HighLevel.OpenApiClient.Proposals.Proposals.ProposalsRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.HighLevel.OpenApiClient.Proposals.Document.DocumentRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The templates property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Proposals.Templates.TemplatesRequestBuilder Templates
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Proposals.Templates.TemplatesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Proposals.ProposalsRequestBuilder"/> and sets the default values.

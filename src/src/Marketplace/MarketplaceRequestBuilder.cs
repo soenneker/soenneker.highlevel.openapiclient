@@ -2,6 +2,8 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.HighLevel.OpenApiClient.Marketplace.App;
+using Soenneker.HighLevel.OpenApiClient.Marketplace.Billing;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -14,10 +16,15 @@ namespace Soenneker.HighLevel.OpenApiClient.Marketplace
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class MarketplaceRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The marketplace property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Marketplace.Marketplace.MarketplaceRequestBuilder Marketplace
+        /// <summary>The app property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Marketplace.App.AppRequestBuilder App
         {
-            get => new global::Soenneker.HighLevel.OpenApiClient.Marketplace.Marketplace.MarketplaceRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.HighLevel.OpenApiClient.Marketplace.App.AppRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The billing property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Marketplace.Billing.BillingRequestBuilder Billing
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Marketplace.Billing.BillingRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Marketplace.MarketplaceRequestBuilder"/> and sets the default values.

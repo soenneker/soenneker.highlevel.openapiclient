@@ -2,6 +2,12 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.HighLevel.OpenApiClient.Medias.DeleteFiles;
+using Soenneker.HighLevel.OpenApiClient.Medias.Files;
+using Soenneker.HighLevel.OpenApiClient.Medias.Folder;
+using Soenneker.HighLevel.OpenApiClient.Medias.Item;
+using Soenneker.HighLevel.OpenApiClient.Medias.UpdateFiles;
+using Soenneker.HighLevel.OpenApiClient.Medias.UploadFile;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -14,10 +20,42 @@ namespace Soenneker.HighLevel.OpenApiClient.Medias
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class MediasRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The medias property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Medias.Medias.MediasRequestBuilder Medias
+        /// <summary>The deleteFiles property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Medias.DeleteFiles.DeleteFilesRequestBuilder DeleteFiles
         {
-            get => new global::Soenneker.HighLevel.OpenApiClient.Medias.Medias.MediasRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.HighLevel.OpenApiClient.Medias.DeleteFiles.DeleteFilesRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The files property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Medias.Files.FilesRequestBuilder Files
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Medias.Files.FilesRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The folder property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Medias.Folder.FolderRequestBuilder Folder
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Medias.Folder.FolderRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The updateFiles property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Medias.UpdateFiles.UpdateFilesRequestBuilder UpdateFiles
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Medias.UpdateFiles.UpdateFilesRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The uploadFile property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Medias.UploadFile.UploadFileRequestBuilder UploadFile
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Medias.UploadFile.UploadFileRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>Gets an item from the Soenneker.HighLevel.OpenApiClient.medias.item collection</summary>
+        /// <param name="position">Unique identifier of the item</param>
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Medias.Item.MediasItemRequestBuilder"/></returns>
+        public global::Soenneker.HighLevel.OpenApiClient.Medias.Item.MediasItemRequestBuilder this[string position]
+        {
+            get
+            {
+                var urlTplParams = new Dictionary<string, object>(PathParameters);
+                urlTplParams.Add("id", position);
+                return new global::Soenneker.HighLevel.OpenApiClient.Medias.Item.MediasItemRequestBuilder(urlTplParams, RequestAdapter);
+            }
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Medias.MediasRequestBuilder"/> and sets the default values.

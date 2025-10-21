@@ -2,6 +2,8 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.HighLevel.OpenApiClient.Emails.Builder;
+using Soenneker.HighLevel.OpenApiClient.Emails.Schedule;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -14,10 +16,15 @@ namespace Soenneker.HighLevel.OpenApiClient.Emails
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class EmailsRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The emails property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Emails.Emails.EmailsRequestBuilder Emails
+        /// <summary>The builder property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Emails.Builder.BuilderRequestBuilder Builder
         {
-            get => new global::Soenneker.HighLevel.OpenApiClient.Emails.Emails.EmailsRequestBuilder(PathParameters, RequestAdapter);
+            get => new global::Soenneker.HighLevel.OpenApiClient.Emails.Builder.BuilderRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The schedule property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Emails.Schedule.ScheduleRequestBuilder Schedule
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Emails.Schedule.ScheduleRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Emails.EmailsRequestBuilder"/> and sets the default values.
