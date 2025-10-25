@@ -54,7 +54,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
         public static global::Soenneker.HighLevel.OpenApiClient.Models.CreateSnapshotShareLinkRequestDTO CreateFromDiscriminatorValue(IParseNode parseNode)
         {
-            _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+            if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.HighLevel.OpenApiClient.Models.CreateSnapshotShareLinkRequestDTO();
         }
         /// <summary>
@@ -77,7 +77,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
-            _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("relationship_number", RelationshipNumber);
             writer.WriteStringValue("share_location_id", ShareLocationId);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateSnapshotShareLinkRequestDTO_share_type>("share_type", ShareType);

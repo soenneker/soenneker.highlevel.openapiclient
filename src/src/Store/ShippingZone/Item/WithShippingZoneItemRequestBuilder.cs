@@ -112,7 +112,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Store.ShippingZone.Item
         public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateShippingZoneResponseDto> PutAsync(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateShippingZoneDto body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
@@ -175,7 +175,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Store.ShippingZone.Item
         public RequestInformation ToPutRequestInformation(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateShippingZoneDto body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.PUT, "{+baseurl}/store/shipping-zone/{shippingZoneId}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");

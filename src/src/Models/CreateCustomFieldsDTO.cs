@@ -76,7 +76,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
         public static global::Soenneker.HighLevel.OpenApiClient.Models.CreateCustomFieldsDTO CreateFromDiscriminatorValue(IParseNode parseNode)
         {
-            _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+            if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.HighLevel.OpenApiClient.Models.CreateCustomFieldsDTO();
         }
         /// <summary>
@@ -104,7 +104,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
-            _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("acceptedFormat", AcceptedFormat);
             writer.WriteStringValue("dataType", DataType);
             writer.WriteBoolValue("isMultipleFile", IsMultipleFile);
@@ -137,7 +137,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.HighLevel.OpenApiClient.Models.CreateCustomFieldsDTO.CreateCustomFieldsDTO_textBoxListOptions CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.HighLevel.OpenApiClient.Models.CreateCustomFieldsDTO.CreateCustomFieldsDTO_textBoxListOptions();
                 result.TextBoxListOptionsSchema = new global::Soenneker.HighLevel.OpenApiClient.Models.TextBoxListOptionsSchema();
                 return result;
@@ -160,7 +160,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.TextBoxListOptionsSchema>(null, TextBoxListOptionsSchema);
             }
         }

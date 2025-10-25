@@ -52,7 +52,7 @@ namespace Soenneker.HighLevel.OpenApiClient.EmailIsv.Email.Verify
         public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.Verify_email_201> PostAsync(global::Soenneker.HighLevel.OpenApiClient.Models.VerificationBodyDto body, Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.EmailIsv.Email.Verify.VerifyRequestBuilder.VerifyRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
@@ -77,7 +77,7 @@ namespace Soenneker.HighLevel.OpenApiClient.EmailIsv.Email.Verify
         public RequestInformation ToPostRequestInformation(global::Soenneker.HighLevel.OpenApiClient.Models.VerificationBodyDto body, Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.EmailIsv.Email.Verify.VerifyRequestBuilder.VerifyRequestBuilderPostQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");

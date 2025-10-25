@@ -148,7 +148,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Contacts.Item
         public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateContactsSuccessfulResponseDto> PutAsync(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateContactDto body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
@@ -211,7 +211,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Contacts.Item
         public RequestInformation ToPutRequestInformation(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateContactDto body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.PUT, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");

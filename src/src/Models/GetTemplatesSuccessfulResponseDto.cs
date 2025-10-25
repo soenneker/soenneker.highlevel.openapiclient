@@ -38,7 +38,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
         public static global::Soenneker.HighLevel.OpenApiClient.Models.GetTemplatesSuccessfulResponseDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
-            _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+            if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.HighLevel.OpenApiClient.Models.GetTemplatesSuccessfulResponseDto();
         }
         /// <summary>
@@ -59,7 +59,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
-            _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.GetTemplatesSuccessfulResponseDto.GetTemplatesSuccessfulResponseDto_templates>("templates", Templates);
             writer.WriteDoubleValue("totalCount", TotalCount);
             writer.WriteAdditionalData(AdditionalData);
@@ -93,7 +93,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.HighLevel.OpenApiClient.Models.GetTemplatesSuccessfulResponseDto.GetTemplatesSuccessfulResponseDto_templates CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
                 var result = new global::Soenneker.HighLevel.OpenApiClient.Models.GetTemplatesSuccessfulResponseDto.GetTemplatesSuccessfulResponseDto_templates();
                 if("GetEmailTemplateResponseSchema".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
@@ -128,7 +128,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(GetEmailTemplateResponseSchema != null)
                 {
                     writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetEmailTemplateResponseSchema>(null, GetEmailTemplateResponseSchema);

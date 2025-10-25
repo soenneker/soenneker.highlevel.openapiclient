@@ -52,7 +52,7 @@ namespace Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Statistics
         public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.Get_social_media_statistics_201> PostAsync(global::Soenneker.HighLevel.OpenApiClient.Models.Get_social_media_statistics body, Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Statistics.StatisticsRequestBuilder.StatisticsRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
@@ -77,7 +77,7 @@ namespace Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Statistics
         public RequestInformation ToPostRequestInformation(global::Soenneker.HighLevel.OpenApiClient.Models.Get_social_media_statistics body, Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Statistics.StatisticsRequestBuilder.StatisticsRequestBuilderPostQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");

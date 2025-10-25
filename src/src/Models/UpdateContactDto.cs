@@ -174,7 +174,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
         public static global::Soenneker.HighLevel.OpenApiClient.Models.UpdateContactDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
-            _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+            if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.HighLevel.OpenApiClient.Models.UpdateContactDto();
         }
         /// <summary>
@@ -212,7 +212,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
-            _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("address1", Address1);
             writer.WriteStringValue("assignedTo", AssignedTo);
             writer.WriteStringValue("city", City);
@@ -319,7 +319,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.HighLevel.OpenApiClient.Models.UpdateContactDto.UpdateContactDto_customFields CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.HighLevel.OpenApiClient.Models.UpdateContactDto.UpdateContactDto_customFields();
                 result.CheckboxField = new global::Soenneker.HighLevel.OpenApiClient.Models.CheckboxField();
                 result.FileField = new global::Soenneker.HighLevel.OpenApiClient.Models.FileField();
@@ -350,7 +350,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CheckboxField>(null, CheckboxField, FileField, LargeTextField, MonetoryField, MultiSelectField, NumericField, RadioField, SingleSelectField, TextField);
             }
         }

@@ -38739,11 +38739,13 @@
           },
           "nextPage": {
             "type": "number",
-            "nullable": true
+            "nullable": true,
+            "example": null
           },
           "prevPage": {
             "type": "number",
-            "nullable": true
+            "nullable": true,
+            "example": null
           }
         }
       },
@@ -38933,11 +38935,13 @@
           },
           "nextPage": {
             "type": "number",
-            "nullable": true
+            "nullable": true,
+            "example": null
           },
           "prevPage": {
             "type": "number",
-            "nullable": true
+            "nullable": true,
+            "example": null
           }
         }
       },
@@ -57008,7 +57012,8 @@
           },
           "trackInventory": {
             "type": "boolean",
-            "description": "Indicates whether inventory tracking is enabled."
+            "description": "Indicates whether inventory tracking is enabled.",
+            "example": null
           },
           "availableQuantity": {
             "type": "number",
@@ -57119,7 +57124,8 @@
           },
           "trackInventory": {
             "type": "boolean",
-            "description": "Indicates whether inventory tracking is enabled."
+            "description": "Indicates whether inventory tracking is enabled.",
+            "example": null
           },
           "availableQuantity": {
             "type": "number",
@@ -57402,7 +57408,8 @@
           },
           "trackInventory": {
             "type": "boolean",
-            "description": "Indicates whether inventory tracking is enabled."
+            "description": "Indicates whether inventory tracking is enabled.",
+            "example": null
           },
           "availableQuantity": {
             "type": "number",
@@ -57657,7 +57664,8 @@
           },
           "trackInventory": {
             "type": "boolean",
-            "description": "Indicates whether inventory tracking is enabled."
+            "description": "Indicates whether inventory tracking is enabled.",
+            "example": null
           },
           "availableQuantity": {
             "type": "number",
@@ -61028,7 +61036,8 @@
           },
           "trackInventory": {
             "type": "boolean",
-            "description": "Indicates whether inventory tracking is enabled."
+            "description": "Indicates whether inventory tracking is enabled.",
+            "example": null
           },
           "availableQuantity": {
             "type": "number",

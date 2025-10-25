@@ -72,7 +72,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
         public static global::Soenneker.HighLevel.OpenApiClient.Models.UpdateOpportunityDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
-            _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+            if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.HighLevel.OpenApiClient.Models.UpdateOpportunityDto();
         }
         /// <summary>
@@ -98,7 +98,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
-            _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("assignedTo", AssignedTo);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateOpportunityDto.UpdateOpportunityDto_customFields>("customFields", CustomFields);
             writer.WriteDoubleValue("monetaryValue", MonetaryValue);
@@ -145,7 +145,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.HighLevel.OpenApiClient.Models.UpdateOpportunityDto.UpdateOpportunityDto_customFields CreateFromDiscriminatorValue(IParseNode parseNode)
             {
-                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.HighLevel.OpenApiClient.Models.UpdateOpportunityDto.UpdateOpportunityDto_customFields();
                 result.CustomFieldsInputArraySchema = new global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputArraySchema();
                 result.CustomFieldsInputObjectSchema = new global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputObjectSchema();
@@ -170,7 +170,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
-                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputArraySchema>(null, CustomFieldsInputArraySchema, CustomFieldsInputObjectSchema, CustomFieldsInputStringSchema);
             }
         }

@@ -49,7 +49,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Medias.DeleteFiles
         public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.Bulk_delete_media_objects_200> PutAsync(global::Soenneker.HighLevel.OpenApiClient.Models.DeleteMediaObjectsBodyParams body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.Bulk_delete_media_objects_200>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.Bulk_delete_media_objects_200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
@@ -68,7 +68,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Medias.DeleteFiles
         public RequestInformation ToPutRequestInformation(global::Soenneker.HighLevel.OpenApiClient.Models.DeleteMediaObjectsBodyParams body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.PUT, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");

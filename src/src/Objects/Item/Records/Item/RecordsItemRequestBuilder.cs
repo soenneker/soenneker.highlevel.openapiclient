@@ -102,7 +102,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Objects.Item.Records.Item
         public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.RecordByIdResponseDTO> PutAsync(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomObjectRecordDto body, Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Objects.Item.Records.Item.RecordsItemRequestBuilder.RecordsItemRequestBuilderPutQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
@@ -164,7 +164,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Objects.Item.Records.Item
         public RequestInformation ToPutRequestInformation(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomObjectRecordDto body, Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Objects.Item.Records.Item.RecordsItemRequestBuilder.RecordsItemRequestBuilderPutQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.PUT, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");

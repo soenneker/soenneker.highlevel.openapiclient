@@ -79,7 +79,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Payments.Orders.Item.Fulfillments
         public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.CreateFulfillmentResponseDto> PostAsync(global::Soenneker.HighLevel.OpenApiClient.Models.CreateFulfillmentDto body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
@@ -123,7 +123,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Payments.Orders.Item.Fulfillments
         public RequestInformation ToPostRequestInformation(global::Soenneker.HighLevel.OpenApiClient.Models.CreateFulfillmentDto body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.POST, "{+baseurl}/payments/orders/{orderId}/fulfillments", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");

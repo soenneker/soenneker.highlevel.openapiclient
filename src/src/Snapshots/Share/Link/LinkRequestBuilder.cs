@@ -51,7 +51,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Snapshots.Share.Link
         public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.CreateSnapshotShareLinkSuccessfulResponseDTO> PostAsync(global::Soenneker.HighLevel.OpenApiClient.Models.CreateSnapshotShareLinkRequestDTO body, Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Snapshots.Share.Link.LinkRequestBuilder.LinkRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
@@ -75,7 +75,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Snapshots.Share.Link
         public RequestInformation ToPostRequestInformation(global::Soenneker.HighLevel.OpenApiClient.Models.CreateSnapshotShareLinkRequestDTO body, Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Snapshots.Share.Link.LinkRequestBuilder.LinkRequestBuilderPostQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");

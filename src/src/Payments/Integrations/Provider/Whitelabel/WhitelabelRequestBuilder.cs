@@ -79,7 +79,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Payments.Integrations.Provider.White
         public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.CreateWhitelabelIntegrationResponseDto> PostAsync(global::Soenneker.HighLevel.OpenApiClient.Models.CreateWhiteLabelIntegrationProviderDto body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
@@ -123,7 +123,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Payments.Integrations.Provider.White
         public RequestInformation ToPostRequestInformation(global::Soenneker.HighLevel.OpenApiClient.Models.CreateWhiteLabelIntegrationProviderDto body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.POST, "{+baseurl}/payments/integrations/provider/whitelabel", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");

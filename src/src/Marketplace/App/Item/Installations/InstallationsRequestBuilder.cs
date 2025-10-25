@@ -52,7 +52,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Marketplace.App.Item.Installations
         public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteIntegrationResponse> DeleteAsync(global::Soenneker.HighLevel.OpenApiClient.Models.DeleteIntegrationBodyDto body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToDeleteRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
@@ -95,7 +95,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Marketplace.App.Item.Installations
         public RequestInformation ToDeleteRequestInformation(global::Soenneker.HighLevel.OpenApiClient.Models.DeleteIntegrationBodyDto body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");

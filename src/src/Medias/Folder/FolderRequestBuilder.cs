@@ -49,7 +49,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Medias.Folder
         public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.FolderDTO> PostAsync(global::Soenneker.HighLevel.OpenApiClient.Models.CreateFolderParams body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.FolderDTO>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.FolderDTO.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
@@ -68,7 +68,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Medias.Folder
         public RequestInformation ToPostRequestInformation(global::Soenneker.HighLevel.OpenApiClient.Models.CreateFolderParams body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");

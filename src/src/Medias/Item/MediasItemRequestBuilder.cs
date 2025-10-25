@@ -66,7 +66,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Medias.Item
         public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.Update_media_object_200> PostAsync(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateObject body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.Update_media_object_200>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.Update_media_object_200.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
@@ -104,7 +104,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Medias.Item
         public RequestInformation ToPostRequestInformation(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateObject body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
-            _ = body ?? throw new ArgumentNullException(nameof(body));
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.POST, "{+baseurl}/medias/{id}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
