@@ -40,6 +40,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string CalendarId { get; set; }
 #endif
+        /// <summary>Appointment Description</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Description { get; set; }
+#nullable restore
+#else
+        public string Description { get; set; }
+#endif
         /// <summary>End Time</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -120,6 +128,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "appointmentStatus", n => { AppointmentStatus = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentEditSchema_appointmentStatus>(); } },
                 { "assignedUserId", n => { AssignedUserId = n.GetStringValue(); } },
                 { "calendarId", n => { CalendarId = n.GetStringValue(); } },
+                { "description", n => { Description = n.GetStringValue(); } },
                 { "endTime", n => { EndTime = n.GetStringValue(); } },
                 { "ignoreDateRange", n => { IgnoreDateRange = n.GetBoolValue(); } },
                 { "ignoreFreeSlotValidation", n => { IgnoreFreeSlotValidation = n.GetBoolValue(); } },
@@ -143,6 +152,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentEditSchema_appointmentStatus>("appointmentStatus", AppointmentStatus);
             writer.WriteStringValue("assignedUserId", AssignedUserId);
             writer.WriteStringValue("calendarId", CalendarId);
+            writer.WriteStringValue("description", Description);
             writer.WriteStringValue("endTime", EndTime);
             writer.WriteBoolValue("ignoreDateRange", IgnoreDateRange);
             writer.WriteBoolValue("ignoreFreeSlotValidation", IgnoreFreeSlotValidation);

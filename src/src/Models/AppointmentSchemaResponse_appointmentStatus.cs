@@ -32,5 +32,13 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         #pragma warning disable CS1591
         Invalid,
         #pragma warning restore CS1591
+        [EnumMember(Value = "active")]
+        #pragma warning disable CS1591
+        Active,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "completed")]
+        #pragma warning disable CS1591
+        Completed,
+        #pragma warning restore CS1591
     }
 }

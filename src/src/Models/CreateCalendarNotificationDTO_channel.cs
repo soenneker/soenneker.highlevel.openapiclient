@@ -15,5 +15,13 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         #pragma warning disable CS1591
         InApp,
         #pragma warning restore CS1591
+        [EnumMember(Value = "sms")]
+        #pragma warning disable CS1591
+        Sms,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "whatsapp")]
+        #pragma warning disable CS1591
+        Whatsapp,
+        #pragma warning restore CS1591
     }
 }

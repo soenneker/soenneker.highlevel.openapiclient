@@ -22,6 +22,22 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public List<string> AdditionalEmailIds { get; set; }
 #endif
+        /// <summary>The additionalPhoneNumbers property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? AdditionalPhoneNumbers { get; set; }
+#nullable restore
+#else
+        public List<string> AdditionalPhoneNumbers { get; set; }
+#endif
+        /// <summary>The additionalWhatsappNumbers property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? AdditionalWhatsappNumbers { get; set; }
+#nullable restore
+#else
+        public List<string> AdditionalWhatsappNumbers { get; set; }
+#endif
         /// <summary>The afterTime property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -114,6 +130,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "additionalEmailIds", n => { AdditionalEmailIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "additionalPhoneNumbers", n => { AdditionalPhoneNumbers = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "additionalWhatsappNumbers", n => { AdditionalWhatsappNumbers = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "afterTime", n => { AfterTime = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.SchedulesDTO>(global::Soenneker.HighLevel.OpenApiClient.Models.SchedulesDTO.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "beforeTime", n => { BeforeTime = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.SchedulesDTO>(global::Soenneker.HighLevel.OpenApiClient.Models.SchedulesDTO.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "body", n => { Body = n.GetStringValue(); } },
@@ -136,6 +154,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("additionalEmailIds", AdditionalEmailIds);
+            writer.WriteCollectionOfPrimitiveValues<string>("additionalPhoneNumbers", AdditionalPhoneNumbers);
+            writer.WriteCollectionOfPrimitiveValues<string>("additionalWhatsappNumbers", AdditionalWhatsappNumbers);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.SchedulesDTO>("afterTime", AfterTime);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.SchedulesDTO>("beforeTime", BeforeTime);
             writer.WriteStringValue("body", Body);

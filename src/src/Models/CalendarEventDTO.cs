@@ -86,6 +86,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDTO_dateUpdated DateUpdated { get; set; }
 #endif
+        /// <summary>Description</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Description { get; set; }
+#nullable restore
+#else
+        public string Description { get; set; }
+#endif
         /// <summary>End Time</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -202,6 +210,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "createdBy", n => { CreatedBy = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDTO_createdBy>(global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDTO_createdBy.CreateFromDiscriminatorValue); } },
                 { "dateAdded", n => { DateAdded = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDTO_dateAdded>(global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDTO_dateAdded.CreateFromDiscriminatorValue); } },
                 { "dateUpdated", n => { DateUpdated = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDTO_dateUpdated>(global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDTO_dateUpdated.CreateFromDiscriminatorValue); } },
+                { "description", n => { Description = n.GetStringValue(); } },
                 { "endTime", n => { EndTime = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDTO_endTime>(global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDTO_endTime.CreateFromDiscriminatorValue); } },
                 { "groupId", n => { GroupId = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
@@ -231,6 +240,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDTO_createdBy>("createdBy", CreatedBy);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDTO_dateAdded>("dateAdded", DateAdded);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDTO_dateUpdated>("dateUpdated", DateUpdated);
+            writer.WriteStringValue("description", Description);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDTO_endTime>("endTime", EndTime);
             writer.WriteStringValue("groupId", GroupId);
             writer.WriteStringValue("id", Id);

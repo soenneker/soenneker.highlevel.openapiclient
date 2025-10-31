@@ -22,6 +22,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public List<string> AdditionalEmailIds { get; set; }
 #endif
+        /// <summary>Additional phone numbers to receive notifications.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? AdditionalPhoneNumbers { get; set; }
+#nullable restore
+#else
+        public List<string> AdditionalPhoneNumbers { get; set; }
+#endif
         /// <summary>Specifies the time after which the follow-up notification should be sent. This is not required for other notification types.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -56,13 +64,21 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string FromAddress { get; set; }
 #endif
-        /// <summary>from name for email notification</summary>
+        /// <summary>from name for email/sms notification</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? FromName { get; set; }
 #nullable restore
 #else
         public string FromName { get; set; }
+#endif
+        /// <summary>from number for sms notification</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? FromNumber { get; set; }
+#nullable restore
+#else
+        public string FromNumber { get; set; }
 #endif
         /// <summary>Is the notification active</summary>
         public bool? IsActive { get; set; }
@@ -120,12 +136,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "additionalEmailIds", n => { AdditionalEmailIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "additionalPhoneNumbers", n => { AdditionalPhoneNumbers = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "afterTime", n => { AfterTime = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.SchedulesDTO>(global::Soenneker.HighLevel.OpenApiClient.Models.SchedulesDTO.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "beforeTime", n => { BeforeTime = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.SchedulesDTO>(global::Soenneker.HighLevel.OpenApiClient.Models.SchedulesDTO.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "body", n => { Body = n.GetStringValue(); } },
                 { "channel", n => { Channel = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateCalendarNotificationDTO_channel>(); } },
                 { "fromAddress", n => { FromAddress = n.GetStringValue(); } },
                 { "fromName", n => { FromName = n.GetStringValue(); } },
+                { "fromNumber", n => { FromNumber = n.GetStringValue(); } },
                 { "isActive", n => { IsActive = n.GetBoolValue(); } },
                 { "notificationType", n => { NotificationType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateCalendarNotificationDTO_notificationType>(); } },
                 { "receiverType", n => { ReceiverType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateCalendarNotificationDTO_receiverType>(); } },
@@ -142,12 +160,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("additionalEmailIds", AdditionalEmailIds);
+            writer.WriteCollectionOfPrimitiveValues<string>("additionalPhoneNumbers", AdditionalPhoneNumbers);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.SchedulesDTO>("afterTime", AfterTime);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.SchedulesDTO>("beforeTime", BeforeTime);
             writer.WriteStringValue("body", Body);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateCalendarNotificationDTO_channel>("channel", Channel);
             writer.WriteStringValue("fromAddress", FromAddress);
             writer.WriteStringValue("fromName", FromName);
+            writer.WriteStringValue("fromNumber", FromNumber);
             writer.WriteBoolValue("isActive", IsActive);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateCalendarNotificationDTO_notificationType>("notificationType", NotificationType);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateCalendarNotificationDTO_receiverType>("receiverType", ReceiverType);

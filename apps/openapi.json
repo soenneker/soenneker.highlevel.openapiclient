@@ -23970,11 +23970,28 @@
         ],
         "responses": {
           "200": {
-            "description": "Successful response",
+            "description": "Availability map keyed by date (YYYY-MM-DD)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetSlotsSuccessfulResponseDto"
+                  "type": "object",
+                  "additionalProperties": {
+                    "$ref": "#/components/schemas/SlotsSchema"
+                  },
+                  "example": {
+                    "2024-10-28": {
+                      "slots": [
+                        "2024-10-28T10:00:00-05:00",
+                        "2024-10-28T11:00:00-05:00"
+                      ]
+                    },
+                    "2024-10-29": {
+                      "slots": [
+                        "2024-10-29T10:00:00-05:00",
+                        "2024-10-29T14:30:00-05:00"
+                      ]
+                    }
+                  }
                 }
               }
             }
@@ -24575,7 +24592,9 @@
         },
         "security": [
           {
-            "bearer": [ ]
+            "bearer": [
+              "calendars/events.write"
+            ]
           }
         ]
       },
@@ -24643,7 +24662,9 @@
         },
         "security": [
           {
-            "bearer": [ ]
+            "bearer": [
+              "calendars/events.write"
+            ]
           }
         ]
       }
@@ -24726,7 +24747,9 @@
         },
         "security": [
           {
-            "Location-Access": [ ]
+            "Location-Access": [
+              "calendars/resources.readonly"
+            ]
           }
         ]
       },
@@ -24817,7 +24840,9 @@
         },
         "security": [
           {
-            "Location-Access": [ ]
+            "Location-Access": [
+              "calendars/resources.write"
+            ]
           }
         ]
       },
@@ -24898,7 +24923,9 @@
         },
         "security": [
           {
-            "Location-Access": [ ]
+            "Location-Access": [
+              "calendars/resources.write"
+            ]
           }
         ]
       }
@@ -25353,7 +25380,9 @@
         },
         "security": [
           {
-            "bearer": [ ]
+            "bearer": [
+              "calendars/events.readonly"
+            ]
           }
         ]
       },
@@ -25438,7 +25467,9 @@
         },
         "security": [
           {
-            "bearer": [ ]
+            "bearer": [
+              "calendars/events.write"
+            ]
           }
         ]
       },
@@ -25513,7 +25544,9 @@
         },
         "security": [
           {
-            "bearer": [ ]
+            "bearer": [
+              "calendars/events.write"
+            ]
           }
         ]
       }
@@ -67702,6 +67735,11 @@
             "description": "Assigned User Id",
             "example": "0007BWpSzSwfiuSl0tR2"
           },
+          "description": {
+            "type": "string",
+            "description": "Appointment Description",
+            "example": "Booking a call to discuss the project"
+          },
           "address": {
             "type": "string",
             "description": "Appointment Address",
@@ -67805,7 +67843,9 @@
               "cancelled",
               "showed",
               "noshow",
-              "invalid"
+              "invalid",
+              "active",
+              "completed"
             ],
             "type": "string",
             "example": "confirmed"
@@ -67885,6 +67925,11 @@
             "type": "string",
             "description": "Assigned User Id",
             "example": "0007BWpSzSwfiuSl0tR2"
+          },
+          "description": {
+            "type": "string",
+            "description": "Appointment Description",
+            "example": "Booking a call to discuss the project"
           },
           "address": {
             "type": "string",
@@ -68020,6 +68065,11 @@
             "type": "string",
             "description": "Notes",
             "example": "Some dummy note"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description",
+            "example": "Some dummy description"
           },
           "isRecurring": {
             "type": "boolean",
@@ -68218,18 +68268,11 @@
             "type": "array",
             "items": {
               "type": "string"
-            }
-          }
-        }
-      },
-      "GetSlotsSuccessfulResponseDto": {
-        "required": [
-          "_dates_"
-        ],
-        "type": "object",
-        "properties": {
-          "_dates_": {
-            "$ref": "#/components/schemas/SlotsSchema"
+            },
+            "example": [
+              "2024-10-28T10:00:00-05:00",
+              "2024-10-28T11:00:00-05:00"
+            ]
           }
         }
       },
@@ -69838,7 +69881,8 @@
               "contact",
               "guest",
               "assignedUser",
-              "emails"
+              "emails",
+              "phoneNumbers"
             ],
             "type": "string",
             "example": "contact"
@@ -69853,10 +69897,22 @@
               "example2@email.com"
             ]
           },
+          "additionalPhoneNumbers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "example": [
+              "+919876744444",
+              "+919876744445"
+            ]
+          },
           "channel": {
             "enum": [
               "email",
-              "inApp"
+              "inApp",
+              "sms",
+              "whatsapp"
             ],
             "type": "string",
             "example": "email"
@@ -69876,6 +69932,16 @@
           "isActive": {
             "type": "boolean",
             "example": true
+          },
+          "additionalWhatsappNumbers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "example": [
+              "+919876744444",
+              "+919876744445"
+            ]
           },
           "templateId": {
             "type": "string",
@@ -69942,7 +70008,8 @@
               "contact",
               "guest",
               "assignedUser",
-              "emails"
+              "emails",
+              "phoneNumbers"
             ],
             "type": "string",
             "description": "notification recipient type"
@@ -69950,7 +70017,9 @@
           "channel": {
             "enum": [
               "email",
-              "inApp"
+              "inApp",
+              "sms",
+              "whatsapp"
             ],
             "type": "string",
             "description": "Notification channel"
@@ -70021,6 +70090,17 @@
               "example2@email.com"
             ]
           },
+          "additionalPhoneNumbers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Additional phone numbers to receive notifications.",
+            "example": [
+              "+919876744444",
+              "+919876744445"
+            ]
+          },
           "selectedUsers": {
             "type": "array",
             "items": {
@@ -70034,7 +70114,11 @@
           },
           "fromName": {
             "type": "string",
-            "description": "from name for email notification"
+            "description": "from name for email/sms notification"
+          },
+          "fromNumber": {
+            "type": "string",
+            "description": "from number for sms notification"
           }
         }
       },
@@ -70046,7 +70130,8 @@
               "contact",
               "guest",
               "assignedUser",
-              "emails"
+              "emails",
+              "phoneNumbers"
             ],
             "type": "string",
             "description": "Notification recipient type"
@@ -70062,6 +70147,17 @@
               "example2@email.com"
             ]
           },
+          "additionalPhoneNumbers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Additional phone numbers to receive notifications.",
+            "example": [
+              "+919876744444",
+              "+919876744445"
+            ]
+          },
           "selectedUsers": {
             "type": "array",
             "items": {
@@ -70072,7 +70168,9 @@
           "channel": {
             "enum": [
               "email",
-              "inApp"
+              "inApp",
+              "sms",
+              "whatsapp"
             ],
             "type": "string",
             "description": "Notification channel"
@@ -70141,9 +70239,13 @@
             "type": "string",
             "description": "From address for email notification"
           },
+          "fromNumber": {
+            "type": "string",
+            "description": "from number for sms notification"
+          },
           "fromName": {
             "type": "string",
-            "description": "From name for email notification"
+            "description": "From name for email/sms notification"
           }
         }
       },
@@ -81899,6 +82001,12 @@
       "calendars_Agency-Access": {
         "type": "http",
         "description": "Use the Access Token generated with user type as Agency (OR) Private Integration Token of Agency.",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      },
+      "calendars_Agency-Access-Only": {
+        "type": "http",
+        "description": "Use the Access Token generated with user type as Agency.",
         "scheme": "bearer",
         "bearerFormat": "JWT"
       },
