@@ -9,7 +9,6 @@ using Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Oauth.Item;
 using Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Oauth.Linkedin;
 using Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Oauth.Tiktok;
 using Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Oauth.TiktokBusiness;
-using Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Oauth.Twitter;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -51,11 +50,6 @@ namespace Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Oauth
         public global::Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Oauth.TiktokBusiness.TiktokBusinessRequestBuilder TiktokBusiness
         {
             get => new global::Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Oauth.TiktokBusiness.TiktokBusinessRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The twitter property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Oauth.Twitter.TwitterRequestBuilder Twitter
-        {
-            get => new global::Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Oauth.Twitter.TwitterRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.HighLevel.OpenApiClient.socialMediaPosting.oauth.item collection</summary>
         /// <param name="position">Account Location Id</param>

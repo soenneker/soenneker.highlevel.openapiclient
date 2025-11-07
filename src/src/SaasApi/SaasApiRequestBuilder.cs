@@ -2,7 +2,6 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
-using Soenneker.HighLevel.OpenApiClient.SaasApi.PublicApi;
 using Soenneker.HighLevel.OpenApiClient.SaasApi.Saas;
 using System.Collections.Generic;
 using System.IO;
@@ -16,11 +15,6 @@ namespace Soenneker.HighLevel.OpenApiClient.SaasApi
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SaasApiRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The publicApi property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.SaasApi.PublicApi.PublicApiRequestBuilder PublicApi
-        {
-            get => new global::Soenneker.HighLevel.OpenApiClient.SaasApi.PublicApi.PublicApiRequestBuilder(PathParameters, RequestAdapter);
-        }
         /// <summary>The saas property</summary>
         public global::Soenneker.HighLevel.OpenApiClient.SaasApi.Saas.SaasRequestBuilder Saas
         {
