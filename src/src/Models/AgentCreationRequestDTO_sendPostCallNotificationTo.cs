@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.HighLevel.OpenApiClient.Models
 {
     /// <summary>
-    /// Configuration for post-call email notifications to various recipients. Default: []
+    /// &quot;Configuration for post-call email notifications to various recipients. Default: []&quot;
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AgentCreationRequestDTO_sendPostCallNotificationTo : global::Soenneker.HighLevel.OpenApiClient.Models.SendPostCallNotificationDTO, IParsable

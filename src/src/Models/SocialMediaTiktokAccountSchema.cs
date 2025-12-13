@@ -92,7 +92,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaTiktokAccountSchema_platform Platform { get; set; }
 #endif
-        /// <summary>type must be one of the following values: profile, business</summary>
+        /// <summary>&quot;type must be one of the following values: profile, business&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaTiktokAccountSchema_type? Type { get; set; }

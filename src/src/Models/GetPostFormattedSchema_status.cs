@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.HighLevel.OpenApiClient.Models
 {
     /// <summary>
-    /// Status must be one of the following values: in_progress, draft, failed, published, scheduled, in_review, notification_sent, deleted
+    /// &quot;Status must be one of the following values: in_progress, draft, failed, published, scheduled, in_review, notification_sent, deleted&quot;
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GetPostFormattedSchema_status : IAdditionalDataHolder, IParsable

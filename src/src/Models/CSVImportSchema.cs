@@ -82,7 +82,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string OriginId { get; set; }
 #endif
-        /// <summary>status must be one of the following values: pending, in_progress, completed, failed, in_review, importing, deleted</summary>
+        /// <summary>&quot;status must be one of the following values: pending, in_progress, completed, failed, in_review, importing, deleted&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Status { get; set; }

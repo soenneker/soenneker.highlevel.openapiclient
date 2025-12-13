@@ -60,7 +60,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public global::Soenneker.HighLevel.OpenApiClient.Models.GetAvailableShippingRates_source Source { get; set; }
 #endif
-        /// <summary>The amount of the price. ( min: 0.01 )</summary>
+        /// <summary>&quot;The amount of the price. ( min: 0.01 )&quot;</summary>
         public double? TotalOrderAmount { get; set; }
         /// <summary>Estimated weight of the order calculated from the order creation side in kg(s)</summary>
         public double? TotalOrderWeight { get; set; }

@@ -48,7 +48,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public List<global::Soenneker.HighLevel.OpenApiClient.Models.Availability> Availabilities { get; set; }
 #endif
-        /// <summary>Determines which availability type to consider:- **1**: Only custom availabilities will be used.- **0**: Only open hours will be used.- **null**: Both custom availabilities and open hours will be considered.</summary>
+        /// <summary>&quot;Determines which availability type to consider:- **1**: Only custom availabilities will be used.- **0**: Only open hours will be used.- **null**: Both custom availabilities and open hours will be considered.&quot;</summary>
         public double? AvailabilityType { get; set; }
         /// <summary>The calendarCoverImage property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -252,7 +252,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #endif
         /// <summary>The stickyContact property</summary>
         public bool? StickyContact { get; set; }
-        /// <summary>Team members are required for calendars of type: Round Robin, Collective, Class, Service. Personal calendar must have exactly one team member.</summary>
+        /// <summary>&quot;Team members are required for calendars of type: Round Robin, Collective, Class, Service. Personal calendar must have exactly one team member.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HighLevel.OpenApiClient.Models.TeamMember>? TeamMembers { get; set; }

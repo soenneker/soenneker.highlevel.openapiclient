@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.HighLevel.OpenApiClient.Models
 {
     /// <summary>
-    /// status must be one of the following values: pending, in_progress, completed, failed, in_review, importing, deleted
+    /// &quot;status must be one of the following values: pending, in_progress, completed, failed, in_review, importing, deleted&quot;
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CsvResponse_status : IAdditionalDataHolder, IParsable

@@ -88,7 +88,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #endif
         /// <summary>if schedule datetime is updated</summary>
         public bool? ScheduleTimeUpdated { get; set; }
-        /// <summary>Status must be one of the following values: in_progress, draft, failed, published, scheduled, in_review, notification_sent, deleted</summary>
+        /// <summary>&quot;Status must be one of the following values: in_progress, draft, failed, published, scheduled, in_review, notification_sent, deleted&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequest_status? Status { get; set; }
@@ -120,7 +120,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequest_tiktokPostDetails TiktokPostDetails { get; set; }
 #endif
-        /// <summary>Post Type must be one of the following values: - post, story, reel</summary>
+        /// <summary>&quot;Post Type must be one of the following values: - post, story, reel&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequest_type? Type { get; set; }

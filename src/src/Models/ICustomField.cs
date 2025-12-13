@@ -12,7 +12,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     public partial class ICustomField : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>Allowed file formats for uploads. Options include: .pdf, .docx, .doc, .jpg, .jpeg, .png, .gif, .csv, .xlsx, .xls, all</summary>
+        /// <summary>&quot;Allowed file formats for uploads. Options include: .pdf, .docx, .doc, .jpg, .jpeg, .png, .gif, .csv, .xlsx, .xls, all&quot;</summary>
         public global::Soenneker.HighLevel.OpenApiClient.Models.ICustomField_acceptedFormats? AcceptedFormats { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -32,7 +32,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>Field key. For Custom Object it&apos;s formatted as &quot;custom_object.{objectKey}.{fieldKey}&quot;. &quot;custom_object&quot; is a fixed prefix, &quot;{objectKey}&quot; is your custom object&apos;s identifier, and &quot;{fieldName}&quot; is the unique field name within that object. Example: &quot;custom_object.pet.name&quot; for a &quot;name&quot; field in a &quot;pet&quot; custom object.</summary>
+        /// <summary>&quot;Field key. For Custom Object it&apos;s formatted as \&quot;custom_object.{objectKey}.{fieldKey}\&quot;. \&quot;custom_object\&quot; is a fixed prefix, \&quot;{objectKey}\&quot; is your custom object&apos;s identifier, and \&quot;{fieldName}\&quot; is the unique field name within that object. Example: \&quot;custom_object.pet.name\&quot; for a \&quot;name\&quot; field in a \&quot;pet\&quot; custom object.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? FieldKey { get; set; }
@@ -66,7 +66,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>The key for your custom / standard object. This key uniquely identifies the custom object. Example: &quot;custom_object.pet&quot; for a custom object related to pets.</summary>
+        /// <summary>&quot;The key for your custom / standard object. This key uniquely identifies the custom object. Example: \&quot;custom_object.pet\&quot; for a custom object related to pets.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ObjectKey { get; set; }

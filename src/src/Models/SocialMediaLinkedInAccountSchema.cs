@@ -92,7 +92,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaLinkedInAccountSchema_platform Platform { get; set; }
 #endif
-        /// <summary>type must be one of the following values: page, profile</summary>
+        /// <summary>&quot;type must be one of the following values: page, profile&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaLinkedInAccountSchema_type? Type { get; set; }

@@ -38,7 +38,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string LocationId { get; set; }
 #endif
-        /// <summary>Searchable Fields: Provide the field key of your object that you want to search on, using the format (custom_object.&lt;object_name&gt;.&lt;field_key&gt;).</summary>
+        /// <summary>&quot;Searchable Fields: Provide the field key of your object that you want to search on, using the format (custom_object.&lt;object_name&gt;.&lt;field_key&gt;).&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? SearchableProperties { get; set; }

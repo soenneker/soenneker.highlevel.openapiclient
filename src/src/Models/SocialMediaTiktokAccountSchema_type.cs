@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.HighLevel.OpenApiClient.Models
 {
     /// <summary>
-    /// type must be one of the following values: profile, business
+    /// &quot;type must be one of the following values: profile, business&quot;
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SocialMediaTiktokAccountSchema_type : IAdditionalDataHolder, IParsable

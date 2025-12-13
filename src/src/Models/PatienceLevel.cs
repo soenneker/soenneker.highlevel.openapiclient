@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HighLevel.OpenApiClient.Models
 {
-    /// <summary>Tolerance level for caller response delays. Default: &quot;high&quot;</summary>
+    /// <summary>&quot;Tolerance level for caller response delays. Default: \&quot;high\&quot;&quot;</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PatienceLevel
     {

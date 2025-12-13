@@ -16,7 +16,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Continue selling when out of stock</summary>
         public bool? AllowOutOfStockPurchases { get; set; }
-        /// <summary>The amount of the price. ( min: 0 )</summary>
+        /// <summary>&quot;The amount of the price. ( min: 0 )&quot;</summary>
         public double? Amount { get; set; }
         /// <summary>Available inventory stock quantity</summary>
         public double? AvailableQuantity { get; set; }
@@ -106,7 +106,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string Sku { get; set; }
 #endif
-        /// <summary>The total number of billing cycles for the price. ( min: 1 )</summary>
+        /// <summary>&quot;The total number of billing cycles for the price. ( min: 1 )&quot;</summary>
         public double? TotalCycles { get; set; }
         /// <summary>Need to track inventory stock quantity</summary>
         public bool? TrackInventory { get; set; }

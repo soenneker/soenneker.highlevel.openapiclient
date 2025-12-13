@@ -107,7 +107,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Payments.Subscriptions
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class SubscriptionsRequestBuilderGetQueryParameters 
         {
-            /// <summary>AltId is the unique identifier e.g: location id.</summary>
+            /// <summary>&quot;AltId is the unique identifier e.g: location id.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("altId")]

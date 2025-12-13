@@ -14,7 +14,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>AltId is the unique identifier eg: location id.</summary>
+        /// <summary>&quot;AltId is the unique identifier eg: location id.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AltId { get; set; }
@@ -130,7 +130,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string SourceSubType { get; set; }
 #endif
-        /// <summary>Source type of order (eg: funnel).</summary>
+        /// <summary>&quot;Source type of order (eg: funnel).&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SourceType { get; set; }

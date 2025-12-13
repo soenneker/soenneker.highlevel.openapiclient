@@ -24,7 +24,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #endif
         /// <summary>The altType property</summary>
         public global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditRequestDto_altType? AltType { get; set; }
-        /// <summary>Array of products to update. Note: The total count includes all prices within each product.</summary>
+        /// <summary>&quot;Array of products to update. Note: The total count includes all prices within each product.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditProductDto>? Products { get; set; }

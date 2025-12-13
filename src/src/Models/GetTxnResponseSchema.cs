@@ -14,7 +14,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>AltId is the unique identifier eg: location id.</summary>
+        /// <summary>&quot;AltId is the unique identifier eg: location id.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AltId { get; set; }
@@ -76,7 +76,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string Currency { get; set; }
 #endif
-        /// <summary>Entity id for the transaction. e.g: order id</summary>
+        /// <summary>&quot;Entity id for the transaction. e.g: order id&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EntityId { get; set; }
@@ -92,7 +92,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public global::Soenneker.HighLevel.OpenApiClient.Models.GetTxnResponseSchema_entitySource EntitySource { get; set; }
 #endif
-        /// <summary>Entity type of transaction (eg: order).</summary>
+        /// <summary>&quot;Entity type of transaction (eg: order).&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EntityType { get; set; }

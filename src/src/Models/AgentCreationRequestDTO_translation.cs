@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.HighLevel.OpenApiClient.Models
 {
     /// <summary>
-    /// Language translation settings including enablement flag and target language code. Rules: (1) translation.enabled can only be true if the agent&apos;s language is not en-US; (2) when enabled, translation.language must be either the agent&apos;s language or en-US; (3) when enabled, translation.language is required.
+    /// &quot;Language translation settings including enablement flag and target language code. Rules: (1) translation.enabled can only be true if the agent&apos;s language is not en-US; (2) when enabled, translation.language must be either the agent&apos;s language or en-US; (3) when enabled, translation.language is required.&quot;
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AgentCreationRequestDTO_translation : global::Soenneker.HighLevel.OpenApiClient.Models.TranslationDTO, IParsable

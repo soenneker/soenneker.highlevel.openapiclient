@@ -44,7 +44,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string Error { get; set; }
 #endif
-        /// <summary>Facebook media error. It can be one of the following errors: imageSize, imageType, videoDuration, videoSize</summary>
+        /// <summary>&quot;Facebook media error. It can be one of the following errors: imageSize, imageType, videoDuration, videoSize&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? FacebookError { get; set; }
@@ -70,7 +70,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public List<string> Frames { get; set; }
 #endif
-        /// <summary>GMB media error. It can be one of the following errors: imageSize, imageDimension, imageType</summary>
+        /// <summary>&quot;GMB media error. It can be one of the following errors: imageSize, imageDimension, imageType&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? GmbError { get; set; }
@@ -80,7 +80,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #endif
         /// <summary>Media Height</summary>
         public double? Height { get; set; }
-        /// <summary>Instagram media error. It can we one of the following errors: imageSize, imageType, imageAspectRatio, videoType, videoDuration, videoSize, videoAspectRatio, videoWidthHeight, audioCodec, audioCodecChannels, videoCodec, videoFrameRate</summary>
+        /// <summary>&quot;Instagram media error. It can we one of the following errors: imageSize, imageType, imageAspectRatio, videoType, videoDuration, videoSize, videoAspectRatio, videoWidthHeight, audioCodec, audioCodecChannels, videoCodec, videoFrameRate&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? InstagramError { get; set; }
@@ -88,7 +88,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string InstagramError { get; set; }
 #endif
-        /// <summary>Media error. It can be one of the following values: imageSize, imageWidth</summary>
+        /// <summary>&quot;Media error. It can be one of the following values: imageSize, imageWidth&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? InvalidError { get; set; }
@@ -96,7 +96,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string InvalidError { get; set; }
 #endif
-        /// <summary>LinkedIn media error. It can be one of the following errors: imageSize, imageType, videoType, videoDuration, videoSize</summary>
+        /// <summary>&quot;LinkedIn media error. It can be one of the following errors: imageSize, imageType, videoType, videoDuration, videoSize&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? LinkedinError { get; set; }
@@ -108,7 +108,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public double? SelectedPoster { get; set; }
         /// <summary>Media Size</summary>
         public double? Size { get; set; }
-        /// <summary>Tikok Business media error. It can be one of the following errors: videoType, videoDuration, videoSize, videoWidthHeight, videoCodec, videoFrameRate</summary>
+        /// <summary>&quot;Tikok Business media error. It can be one of the following errors: videoType, videoDuration, videoSize, videoWidthHeight, videoCodec, videoFrameRate&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TiktokBusinessError { get; set; }
@@ -116,7 +116,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string TiktokBusinessError { get; set; }
 #endif
-        /// <summary>Tiktok media error. It can be one of the following errors: videoType, videoDuration, videoSize, videoWidthHeight, videoCodec, videoFrameRate</summary>
+        /// <summary>&quot;Tiktok media error. It can be one of the following errors: videoType, videoDuration, videoSize, videoWidthHeight, videoCodec, videoFrameRate&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TiktokError { get; set; }
@@ -124,7 +124,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string TiktokError { get; set; }
 #endif
-        /// <summary>Twitter media error. It can be one of the following errors: imageSize, videoType, videoDuration, videoSize</summary>
+        /// <summary>&quot;Twitter media error. It can be one of the following errors: imageSize, videoType, videoDuration, videoSize&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TwitterError { get; set; }

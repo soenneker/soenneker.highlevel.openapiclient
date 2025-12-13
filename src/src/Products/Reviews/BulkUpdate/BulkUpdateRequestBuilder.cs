@@ -34,7 +34,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Products.Reviews.BulkUpdate
         {
         }
         /// <summary>
-        /// Update one or multiple product reviews: status, reply, etc.
+        /// &quot;Update one or multiple product reviews: status, reply, etc.&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductReviewsResponseDto"/></returns>
         /// <param name="body">The request body</param>
@@ -63,7 +63,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Products.Reviews.BulkUpdate
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductReviewsResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductReviewsResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Update one or multiple product reviews: status, reply, etc.
+        /// &quot;Update one or multiple product reviews: status, reply, etc.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

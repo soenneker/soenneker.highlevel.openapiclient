@@ -14,13 +14,13 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Enables post-call notifications to all admin users in the location. Default: true</summary>
+        /// <summary>&quot;Enables post-call notifications to all admin users in the location. Default: true&quot;</summary>
         public bool? Admins { get; set; }
-        /// <summary>Enables post-call notifications to all users in the location. Default: false</summary>
+        /// <summary>&quot;Enables post-call notifications to all users in the location. Default: false&quot;</summary>
         public bool? AllUsers { get; set; }
-        /// <summary>Enables post-call notifications to the user assigned to the contact. Default: false</summary>
+        /// <summary>&quot;Enables post-call notifications to the user assigned to the contact. Default: false&quot;</summary>
         public bool? ContactAssignedUser { get; set; }
-        /// <summary>Array of custom email addresses to receive post-call notifications. Default: []</summary>
+        /// <summary>&quot;Array of custom email addresses to receive post-call notifications. Default: []&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? CustomEmails { get; set; }
@@ -28,7 +28,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public List<string> CustomEmails { get; set; }
 #endif
-        /// <summary>Array of specific user IDs to receive post-call notifications. Default: []</summary>
+        /// <summary>&quot;Array of specific user IDs to receive post-call notifications. Default: []&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? SpecificUsers { get; set; }

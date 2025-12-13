@@ -52,7 +52,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #endif
         /// <summary>Flag indicating if this conversation has been marked as important/starred by the user</summary>
         public bool? Starred { get; set; }
-        /// <summary>Communication channel type for this conversation: 1 (Phone), 2 (Email), 3 (Facebook Messenger), 4 (Review), 5 (Group SMS), 6 (Internal Chat - coming soon)</summary>
+        /// <summary>&quot;Communication channel type for this conversation: 1 (Phone), 2 (Email), 3 (Facebook Messenger), 4 (Review), 5 (Group SMS), 6 (Internal Chat - coming soon)&quot;</summary>
         public double? Type { get; set; }
         /// <summary>Number of messages in this conversation that have not been read by the user</summary>
         public double? UnreadCount { get; set; }

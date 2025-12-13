@@ -40,7 +40,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>Tiktok Account Type must be one of the following values: business, profile</summary>
+        /// <summary>&quot;Tiktok Account Type must be one of the following values: business, profile&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HighLevel.OpenApiClient.Models.TiktokProfileSchema_type? Type { get; set; }

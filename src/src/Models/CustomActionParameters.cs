@@ -22,7 +22,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParameters_apiDetails ApiDetails { get; set; }
 #endif
-        /// <summary>Selected response paths to extract from API response. Required: at least 1 value if the method is GET. Should be empty if the method is POST.</summary>
+        /// <summary>&quot;Selected response paths to extract from API response. Required: at least 1 value if the method is GET. Should be empty if the method is POST.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? SelectedPaths { get; set; }

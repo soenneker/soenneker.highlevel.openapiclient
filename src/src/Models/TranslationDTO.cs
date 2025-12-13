@@ -14,7 +14,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Enables language translation for agent conversations. Default: false</summary>
+        /// <summary>&quot;Enables language translation for agent conversations. Default: false&quot;</summary>
         public bool? Enabled { get; set; }
         /// <summary>Target language code for translation (e.g., &quot;es&quot; for Spanish, &quot;fr&quot; for French).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

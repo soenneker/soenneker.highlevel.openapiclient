@@ -56,7 +56,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string OauthId { get; set; }
 #endif
-        /// <summary>platform must be one of the following values: google, facebook, instagram, linkedin, twitter, tiktok</summary>
+        /// <summary>&quot;platform must be one of the following values: google, facebook, instagram, linkedin, twitter, tiktok&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Platform { get; set; }

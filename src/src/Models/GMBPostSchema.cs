@@ -12,7 +12,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     public partial class GMBPostSchema : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>Action Type must be one of the following values: none, order, book, shop, learn_more, call, sign_up</summary>
+        /// <summary>&quot;Action Type must be one of the following values: none, order, book, shop, learn_more, call, sign_up&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HighLevel.OpenApiClient.Models.GMBPostSchema_actionType? ActionType { get; set; }
@@ -38,7 +38,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public global::Soenneker.HighLevel.OpenApiClient.Models.GMBPostSchema_endDate EndDate { get; set; }
 #endif
-        /// <summary>gmbEventType must be one of the following values: STANDARD, EVENT, OFFER</summary>
+        /// <summary>&quot;gmbEventType must be one of the following values: STANDARD, EVENT, OFFER&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? GmbEventType { get; set; }

@@ -34,7 +34,7 @@ namespace Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Item.Posts.BulkDe
         {
         }
         /// <summary>
-        /// Deletes multiple posts based on the provided list of post IDs.                   This operation is useful for clearing up large numbers of posts efficiently.                   Note:                   1.The maximum number of posts that can be deleted in a single request is &apos;50&apos;.                  2.However, It will only get deleted in Highlevel database but still                   it is recommended to be cautious of this operation.
+        /// &quot;Deletes multiple posts based on the provided list of post IDs.                   This operation is useful for clearing up large numbers of posts efficiently.                   Note:                   1.The maximum number of posts that can be deleted in a single request is &apos;50&apos;.                  2.However, It will only get deleted in Highlevel database but still                   it is recommended to be cautious of this operation.&quot;
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.BulkDeleteResponseDto"/></returns>
         /// <param name="body">The request body</param>
@@ -63,7 +63,7 @@ namespace Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Item.Posts.BulkDe
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.BulkDeleteResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.BulkDeleteResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Deletes multiple posts based on the provided list of post IDs.                   This operation is useful for clearing up large numbers of posts efficiently.                   Note:                   1.The maximum number of posts that can be deleted in a single request is &apos;50&apos;.                  2.However, It will only get deleted in Highlevel database but still                   it is recommended to be cautious of this operation.
+        /// &quot;Deletes multiple posts based on the provided list of post IDs.                   This operation is useful for clearing up large numbers of posts efficiently.                   Note:                   1.The maximum number of posts that can be deleted in a single request is &apos;50&apos;.                  2.However, It will only get deleted in Highlevel database but still                   it is recommended to be cautious of this operation.&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
