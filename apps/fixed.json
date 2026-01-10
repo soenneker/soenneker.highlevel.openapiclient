@@ -39194,9 +39194,6 @@
               "anyOf": [
                 {
                   "$ref": "#/components/schemas/textBoxListOptionsSchema"
-                },
-                {
-                  "$ref": "#/components/schemas/textBoxListOptionsSchema"
                 }
               ]
             }
@@ -39251,9 +39248,6 @@
             "items": {
               "type": "object",
               "anyOf": [
-                {
-                  "$ref": "#/components/schemas/textBoxListOptionsSchema"
-                },
                 {
                   "$ref": "#/components/schemas/textBoxListOptionsSchema"
                 }
@@ -66840,12 +66834,6 @@
               },
               {
                 "type": "object"
-              },
-              {
-                "$ref": "#/components/schemas/UnionBranch"
-              },
-              {
-                "$ref": "#/components/schemas/UnionBranch"
               }
             ],
             "description": "The value of the custom field"

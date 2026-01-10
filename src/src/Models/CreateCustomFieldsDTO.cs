@@ -57,10 +57,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The textBoxListOptions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CreateCustomFieldsDTO.CreateCustomFieldsDTO_textBoxListOptions>? TextBoxListOptions { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CreateCustomFieldsDTO_textBoxListOptions>? TextBoxListOptions { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CreateCustomFieldsDTO.CreateCustomFieldsDTO_textBoxListOptions> TextBoxListOptions { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CreateCustomFieldsDTO_textBoxListOptions> TextBoxListOptions { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CreateCustomFieldsDTO"/> and sets the default values.
@@ -95,7 +95,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "placeholder", n => { Placeholder = n.GetStringValue(); } },
                 { "position", n => { Position = n.GetDoubleValue(); } },
-                { "textBoxListOptions", n => { TextBoxListOptions = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CreateCustomFieldsDTO.CreateCustomFieldsDTO_textBoxListOptions>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateCustomFieldsDTO.CreateCustomFieldsDTO_textBoxListOptions.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "textBoxListOptions", n => { TextBoxListOptions = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CreateCustomFieldsDTO_textBoxListOptions>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateCustomFieldsDTO_textBoxListOptions.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -113,56 +113,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("placeholder", Placeholder);
             writer.WriteDoubleValue("position", Position);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CreateCustomFieldsDTO.CreateCustomFieldsDTO_textBoxListOptions>("textBoxListOptions", TextBoxListOptions);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CreateCustomFieldsDTO_textBoxListOptions>("textBoxListOptions", TextBoxListOptions);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.TextBoxListOptionsSchema"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class CreateCustomFieldsDTO_textBoxListOptions : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.TextBoxListOptionsSchema"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HighLevel.OpenApiClient.Models.TextBoxListOptionsSchema? TextBoxListOptionsSchema { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HighLevel.OpenApiClient.Models.TextBoxListOptionsSchema TextBoxListOptionsSchema { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CreateCustomFieldsDTO.CreateCustomFieldsDTO_textBoxListOptions"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.HighLevel.OpenApiClient.Models.CreateCustomFieldsDTO.CreateCustomFieldsDTO_textBoxListOptions CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.HighLevel.OpenApiClient.Models.CreateCustomFieldsDTO.CreateCustomFieldsDTO_textBoxListOptions();
-                result.TextBoxListOptionsSchema = new global::Soenneker.HighLevel.OpenApiClient.Models.TextBoxListOptionsSchema();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(TextBoxListOptionsSchema != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(TextBoxListOptionsSchema);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.TextBoxListOptionsSchema>(null, TextBoxListOptionsSchema);
-            }
         }
     }
 }
