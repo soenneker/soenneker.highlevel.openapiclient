@@ -28,7 +28,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public DateTimeOffset? CreatedAt { get; set; }
         /// <summary>The deleted property</summary>
         public bool? Deleted { get; set; }
-        /// <summary>The _id property</summary>
+        /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }

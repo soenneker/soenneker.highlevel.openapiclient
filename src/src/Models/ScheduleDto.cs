@@ -12,14 +12,6 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     public partial class ScheduleDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The _id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? _id { get; set; }
-#nullable restore
-#else
-        public string _id { get; set; }
-#endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The archived property</summary>
@@ -126,6 +118,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string RepeatAfter { get; set; }
 #endif
+        /// <summary>The id property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ScheduleDtoId { get; set; }
+#nullable restore
+#else
+        public string ScheduleDtoId { get; set; }
+#endif
         /// <summary>The sendDays property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -174,7 +174,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string UpdatedAt { get; set; }
 #endif
-        /// <summary>The __v property</summary>
+        /// <summary>The v property</summary>
         public double? V { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleDto"/> and sets the default values.
@@ -220,6 +220,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "parentId", n => { ParentId = n.GetStringValue(); } },
                 { "repeatAfter", n => { RepeatAfter = n.GetStringValue(); } },
+                { "_id", n => { ScheduleDtoId = n.GetStringValue(); } },
                 { "sendDays", n => { SendDays = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
                 { "templateDataDownloadUrl", n => { TemplateDataDownloadUrl = n.GetStringValue(); } },
@@ -227,7 +228,6 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "templateType", n => { TemplateType = n.GetStringValue(); } },
                 { "updatedAt", n => { UpdatedAt = n.GetStringValue(); } },
                 { "__v", n => { V = n.GetDoubleValue(); } },
-                { "_id", n => { _id = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -237,7 +237,6 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("_id", _id);
             writer.WriteBoolValue("archived", Archived);
             writer.WriteStringValue("bulkActionVersion", BulkActionVersion);
             writer.WriteStringValue("campaignType", CampaignType);
@@ -257,6 +256,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("parentId", ParentId);
             writer.WriteStringValue("repeatAfter", RepeatAfter);
+            writer.WriteStringValue("_id", ScheduleDtoId);
             writer.WriteCollectionOfPrimitiveValues<string>("sendDays", SendDays);
             writer.WriteStringValue("status", Status);
             writer.WriteStringValue("templateDataDownloadUrl", TemplateDataDownloadUrl);

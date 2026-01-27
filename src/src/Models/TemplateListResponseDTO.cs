@@ -12,14 +12,6 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     public partial class TemplateListResponseDTO : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>Template ID</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? _id { get; set; }
-#nullable restore
-#else
-        public string _id { get; set; }
-#endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Template creation date</summary>
@@ -42,7 +34,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #endif
         /// <summary>Document count (only present when isPublicDocument is true)</summary>
         public double? DocumentCount { get; set; }
-        /// <summary>Template ID (alias for _id)</summary>
+        /// <summary>Template ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }
@@ -67,6 +59,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #nullable restore
 #else
         public string Name { get; set; }
+#endif
+        /// <summary>Template ID (alias for _id)</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? TemplateListResponseDTOId { get; set; }
+#nullable restore
+#else
+        public string TemplateListResponseDTOId { get; set; }
 #endif
         /// <summary>Template type</summary>
         public global::Soenneker.HighLevel.OpenApiClient.Models.TemplateListResponseDTO_type? Type { get; set; }
@@ -117,15 +117,15 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "deleted", n => { Deleted = n.GetBoolValue(); } },
                 { "docFormUrl", n => { DocFormUrl = n.GetStringValue(); } },
                 { "documentCount", n => { DocumentCount = n.GetDoubleValue(); } },
-                { "id", n => { Id = n.GetStringValue(); } },
+                { "_id", n => { Id = n.GetStringValue(); } },
                 { "isPublicDocument", n => { IsPublicDocument = n.GetBoolValue(); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
+                { "id", n => { TemplateListResponseDTOId = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.TemplateListResponseDTO_type>(); } },
                 { "updatedAt", n => { UpdatedAt = n.GetStringValue(); } },
                 { "updatedBy", n => { UpdatedBy = n.GetStringValue(); } },
                 { "version", n => { Version = n.GetDoubleValue(); } },
-                { "_id", n => { _id = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -135,15 +135,15 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("_id", _id);
             writer.WriteStringValue("createdAt", CreatedAt);
             writer.WriteBoolValue("deleted", Deleted);
             writer.WriteStringValue("docFormUrl", DocFormUrl);
             writer.WriteDoubleValue("documentCount", DocumentCount);
-            writer.WriteStringValue("id", Id);
+            writer.WriteStringValue("_id", Id);
             writer.WriteBoolValue("isPublicDocument", IsPublicDocument);
             writer.WriteStringValue("locationId", LocationId);
             writer.WriteStringValue("name", Name);
+            writer.WriteStringValue("id", TemplateListResponseDTOId);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.TemplateListResponseDTO_type>("type", Type);
             writer.WriteStringValue("updatedAt", UpdatedAt);
             writer.WriteStringValue("updatedBy", UpdatedBy);

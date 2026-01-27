@@ -24,7 +24,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>The _id property</summary>
+        /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }
