@@ -17,7 +17,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The primary error message.</summary>
         public override string Message { get => MessageEscaped ?? string.Empty; }
-        /// <summary>The message property</summary>
+        /// <summary>Error message</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? MessageEscaped { get; set; }
@@ -25,7 +25,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string MessageEscaped { get; set; }
 #endif
-        /// <summary>The statusCode property</summary>
+        /// <summary>Status code</summary>
         public double? StatusCode { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.BadRequestDTO"/> and sets the default values.
