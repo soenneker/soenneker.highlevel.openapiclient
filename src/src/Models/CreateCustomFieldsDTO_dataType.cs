@@ -3,70 +3,61 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HighLevel.OpenApiClient.Models
 {
+    /// <summary>Type of field that you are trying to create</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public enum OrderSource_type
-    #pragma warning restore CS1591
+    public enum CreateCustomFieldsDTO_dataType
     {
-        [EnumMember(Value = "funnel")]
+        [EnumMember(Value = "TEXT")]
         #pragma warning disable CS1591
-        Funnel,
+        TEXT,
         #pragma warning restore CS1591
-        [EnumMember(Value = "website")]
+        [EnumMember(Value = "LARGE_TEXT")]
         #pragma warning disable CS1591
-        Website,
+        LARGE_TEXT,
         #pragma warning restore CS1591
-        [EnumMember(Value = "invoice")]
+        [EnumMember(Value = "NUMERICAL")]
         #pragma warning disable CS1591
-        Invoice,
+        NUMERICAL,
         #pragma warning restore CS1591
-        [EnumMember(Value = "calendar")]
+        [EnumMember(Value = "PHONE")]
         #pragma warning disable CS1591
-        Calendar,
+        PHONE,
         #pragma warning restore CS1591
-        [EnumMember(Value = "text2Pay")]
+        [EnumMember(Value = "MONETORY")]
         #pragma warning disable CS1591
-        Text2Pay,
+        MONETORY,
         #pragma warning restore CS1591
-        [EnumMember(Value = "document_contracts")]
+        [EnumMember(Value = "CHECKBOX")]
         #pragma warning disable CS1591
-        Document_contracts,
+        CHECKBOX,
         #pragma warning restore CS1591
-        [EnumMember(Value = "membership")]
+        [EnumMember(Value = "SINGLE_OPTIONS")]
         #pragma warning disable CS1591
-        Membership,
+        SINGLE_OPTIONS,
         #pragma warning restore CS1591
-        [EnumMember(Value = "mobile_app")]
+        [EnumMember(Value = "MULTIPLE_OPTIONS")]
         #pragma warning disable CS1591
-        Mobile_app,
+        MULTIPLE_OPTIONS,
         #pragma warning restore CS1591
-        [EnumMember(Value = "communities")]
+        [EnumMember(Value = "DATE")]
         #pragma warning disable CS1591
-        Communities,
+        DATE,
         #pragma warning restore CS1591
-        [EnumMember(Value = "point_of_sale")]
+        [EnumMember(Value = "TEXTBOX_LIST")]
         #pragma warning disable CS1591
-        Point_of_sale,
+        TEXTBOX_LIST,
         #pragma warning restore CS1591
-        [EnumMember(Value = "manual")]
+        [EnumMember(Value = "FILE_UPLOAD")]
         #pragma warning disable CS1591
-        Manual,
+        FILE_UPLOAD,
         #pragma warning restore CS1591
-        [EnumMember(Value = "form")]
+        [EnumMember(Value = "RADIO")]
         #pragma warning disable CS1591
-        Form,
+        RADIO,
         #pragma warning restore CS1591
-        [EnumMember(Value = "survey")]
+        [EnumMember(Value = "EMAIL")]
         #pragma warning disable CS1591
-        Survey,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "payment_link")]
-        #pragma warning disable CS1591
-        Payment_link,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "external")]
-        #pragma warning disable CS1591
-        External,
+        EMAIL,
         #pragma warning restore CS1591
     }
 }
