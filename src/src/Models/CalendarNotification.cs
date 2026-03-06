@@ -38,7 +38,6 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public CalendarNotification()
         {
             AdditionalData = new Dictionary<string, object>();
-            Type = global::Soenneker.HighLevel.OpenApiClient.Models.CalendarNotification_type.Email;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

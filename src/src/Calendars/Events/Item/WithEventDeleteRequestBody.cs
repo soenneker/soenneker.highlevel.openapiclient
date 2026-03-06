@@ -5,31 +5,31 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace Soenneker.HighLevel.OpenApiClient.Models
+namespace Soenneker.HighLevel.OpenApiClient.Calendars.Events.Item
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class SearchBodyV2DTO : IAdditionalDataHolder, IParsable
+    public partial class WithEventDeleteRequestBody : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.SearchBodyV2DTO"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Calendars.Events.Item.WithEventDeleteRequestBody"/> and sets the default values.
         /// </summary>
-        public SearchBodyV2DTO()
+        public WithEventDeleteRequestBody()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.SearchBodyV2DTO"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Calendars.Events.Item.WithEventDeleteRequestBody"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.HighLevel.OpenApiClient.Models.SearchBodyV2DTO CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.HighLevel.OpenApiClient.Calendars.Events.Item.WithEventDeleteRequestBody CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.SearchBodyV2DTO();
+            return new global::Soenneker.HighLevel.OpenApiClient.Calendars.Events.Item.WithEventDeleteRequestBody();
         }
         /// <summary>
         /// The deserialization information for the current model

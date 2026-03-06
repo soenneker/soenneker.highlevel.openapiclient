@@ -10391,7 +10391,10 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/get_slots_200"
+                  "type": "object",
+                  "additionalProperties": {
+                    "$ref": "#/components/schemas/SlotsSchema"
+                  }
                 }
               }
             }
@@ -10699,7 +10702,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/DeleteAppointmentSchema"
+                "type": "object"
               }
             }
           }
@@ -12792,7 +12795,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/update_media_object_200"
+                  "type": "object"
                 }
               }
             }
@@ -12894,7 +12897,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/bulk_update_media_objects_200"
+                  "type": "object"
                 }
               }
             }
@@ -12945,7 +12948,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/bulk_delete_media_objects_200"
+                  "type": "object"
                 }
               }
             }
@@ -29922,7 +29925,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/UpdateCustomObjectRecordDto"
+                "type": "object"
               }
             }
           }
@@ -30087,7 +30090,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateCustomObjectRecordDto"
+                "type": "object"
               }
             }
           }
@@ -30913,7 +30916,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/SearchBodyV2DTO"
+                "type": "object"
               }
             }
           }
@@ -33103,7 +33106,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/AddContactToCampaignDto"
+                "type": "object"
               }
             }
           }
@@ -38819,7 +38822,6 @@
             "type": "string",
             "additionalProperties": false,
             "description": "Discount type",
-            "default": "percentage",
             "example": "percentage"
           },
           "validOnProductIds": {
@@ -42403,7 +42405,7 @@
             "type": "object",
             "allOf": [
               {
-                "$ref": "#/components/schemas/ReminderExecutionDetailsList"
+                "type": "object"
               }
             ],
             "description": "List of reminders"
@@ -43984,7 +43986,7 @@
             "type": "object",
             "allOf": [
               {
-                "$ref": "#/components/schemas/BusinessDetails"
+                "type": "object"
               }
             ],
             "description": "Business details associated with the estimate",
@@ -44093,7 +44095,7 @@
             "type": "object",
             "allOf": [
               {
-                "$ref": "#/components/schemas/ContactDetails"
+                "type": "object"
               }
             ],
             "description": "Contact details for the estimate",
@@ -44147,7 +44149,7 @@
             "type": "object",
             "allOf": [
               {
-                "$ref": "#/components/schemas/SentTo"
+                "type": "object"
               }
             ],
             "description": "Recipient details for the estimate",
@@ -44184,7 +44186,7 @@
             "type": "object",
             "allOf": [
               {
-                "$ref": "#/components/schemas/AutoInvoice"
+                "type": "object"
               }
             ],
             "description": "Auto-invoice settings for the estimate",
@@ -44728,7 +44730,7 @@
             "type": "object",
             "allOf": [
               {
-                "$ref": "#/components/schemas/BusinessDetails"
+                "type": "object"
               }
             ],
             "description": "Business details associated with the estimate",
@@ -48765,7 +48767,6 @@
             "type": "string",
             "additionalProperties": false,
             "description": "Calendar Notification",
-            "default": "email",
             "example": "email"
           },
           "shouldSendToContact": {
@@ -56217,7 +56218,7 @@
             "type": "object"
           },
           "templateSettings": {
-            "$ref": "#/components/schemas/TemplateSettings"
+            "type": "object"
           }
         }
       },
@@ -65219,7 +65220,7 @@
             "type": "object",
             "allOf": [
               {
-                "$ref": "#/components/schemas/ExtractedDataSchema"
+                "type": "object"
               }
             ],
             "description": "Dynamic data extracted from the call based on agent configuration",
@@ -65707,7 +65708,7 @@
             "type": "object",
             "allOf": [
               {
-                "$ref": "#/components/schemas/BusinessCreatedByOrUpdatedBy"
+                "type": "object"
               }
             ],
             "description": "updated By"
@@ -65720,7 +65721,7 @@
             "type": "object",
             "allOf": [
               {
-                "$ref": "#/components/schemas/BusinessCreatedByOrUpdatedBy"
+                "type": "object"
               }
             ],
             "description": "Created By"
@@ -67569,7 +67570,7 @@
             "type": "object",
             "allOf": [
               {
-                "$ref": "#/components/schemas/ProductCategories"
+                "type": "object"
               }
             ],
             "description": "Collection Data"

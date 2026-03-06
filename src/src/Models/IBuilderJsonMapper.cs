@@ -33,10 +33,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The templateSettings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.TemplateSettings? TemplateSettings { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.IBuilderJsonMapper_templateSettings? TemplateSettings { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.TemplateSettings TemplateSettings { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.IBuilderJsonMapper_templateSettings TemplateSettings { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.IBuilderJsonMapper"/> and sets the default values.
@@ -65,7 +65,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             {
                 { "attrs", n => { Attrs = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.IBuilderJsonMapper_attrs>(global::Soenneker.HighLevel.OpenApiClient.Models.IBuilderJsonMapper_attrs.CreateFromDiscriminatorValue); } },
                 { "elements", n => { Elements = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "templateSettings", n => { TemplateSettings = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.TemplateSettings>(global::Soenneker.HighLevel.OpenApiClient.Models.TemplateSettings.CreateFromDiscriminatorValue); } },
+                { "templateSettings", n => { TemplateSettings = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.IBuilderJsonMapper_templateSettings>(global::Soenneker.HighLevel.OpenApiClient.Models.IBuilderJsonMapper_templateSettings.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -77,7 +77,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.IBuilderJsonMapper_attrs>("attrs", Attrs);
             writer.WriteCollectionOfPrimitiveValues<string>("elements", Elements);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.TemplateSettings>("templateSettings", TemplateSettings);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.IBuilderJsonMapper_templateSettings>("templateSettings", TemplateSettings);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

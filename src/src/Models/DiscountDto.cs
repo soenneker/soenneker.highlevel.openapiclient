@@ -32,7 +32,6 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public DiscountDto()
         {
             AdditionalData = new Dictionary<string, object>();
-            Type = global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto_type.Percentage;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
