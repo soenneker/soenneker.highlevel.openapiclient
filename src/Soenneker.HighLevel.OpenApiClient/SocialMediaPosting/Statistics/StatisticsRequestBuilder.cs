@@ -36,7 +36,7 @@ namespace Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Statistics
         /// <summary>
         /// Retrieve analytics data for multiple social media accounts. Provides metrics for the last 7 days with comparison to the previous 7 days. Supports filtering by platforms and specific connected accounts.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.Get_social_media_statistics_201"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.Social_media_posting_get_social_media_statistics_201"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -45,11 +45,11 @@ namespace Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Statistics
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.UnprocessableDTO">When receiving a 422 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.Get_social_media_statistics_201?> PostAsync(global::Soenneker.HighLevel.OpenApiClient.Models.Get_social_media_statistics body, Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Statistics.StatisticsRequestBuilder.StatisticsRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.Social_media_posting_get_social_media_statistics_201?> PostAsync(global::Soenneker.HighLevel.OpenApiClient.Models.Social_media_posting_get_social_media_statistics body, Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Statistics.StatisticsRequestBuilder.StatisticsRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.Get_social_media_statistics_201> PostAsync(global::Soenneker.HighLevel.OpenApiClient.Models.Get_social_media_statistics body, Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Statistics.StatisticsRequestBuilder.StatisticsRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.Social_media_posting_get_social_media_statistics_201> PostAsync(global::Soenneker.HighLevel.OpenApiClient.Models.Social_media_posting_get_social_media_statistics body, Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Statistics.StatisticsRequestBuilder.StatisticsRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -60,7 +60,7 @@ namespace Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Statistics
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.Common_schemas_UnauthorizedDTO.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.UnprocessableDTO.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.Get_social_media_statistics_201>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.Get_social_media_statistics_201.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.Social_media_posting_get_social_media_statistics_201>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.Social_media_posting_get_social_media_statistics_201.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve analytics data for multiple social media accounts. Provides metrics for the last 7 days with comparison to the previous 7 days. Supports filtering by platforms and specific connected accounts.
@@ -70,11 +70,11 @@ namespace Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Statistics
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HighLevel.OpenApiClient.Models.Get_social_media_statistics body, Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Statistics.StatisticsRequestBuilder.StatisticsRequestBuilderPostQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HighLevel.OpenApiClient.Models.Social_media_posting_get_social_media_statistics body, Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Statistics.StatisticsRequestBuilder.StatisticsRequestBuilderPostQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HighLevel.OpenApiClient.Models.Get_social_media_statistics body, Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Statistics.StatisticsRequestBuilder.StatisticsRequestBuilderPostQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HighLevel.OpenApiClient.Models.Social_media_posting_get_social_media_statistics body, Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Statistics.StatisticsRequestBuilder.StatisticsRequestBuilderPostQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
