@@ -27,10 +27,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Array of products with their display priorities</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<UntypedNode>? Products { get; set; }
+        public UntypedNode? Products { get; set; }
 #nullable restore
 #else
-        public List<UntypedNode> Products { get; set; }
+        public UntypedNode Products { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpdateDisplayPriorityBodyDto"/> and sets the default values.
@@ -59,7 +59,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             {
                 { "altId", n => { AltId = n.GetStringValue(); } },
                 { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateDisplayPriorityBodyDto_altType>(); } },
-                { "products", n => { Products = n.GetCollectionOfPrimitiveValues<UntypedNode>()?.AsList(); } },
+                { "products", n => { Products = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -71,7 +71,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("altId", AltId);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateDisplayPriorityBodyDto_altType>("altType", AltType);
-            writer.WriteCollectionOfPrimitiveValues<UntypedNode>("products", Products);
+            writer.WriteObjectValue<UntypedNode>("products", Products);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

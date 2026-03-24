@@ -17,10 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The tasks property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<UntypedNode>? Tasks { get; set; }
+        public UntypedNode? Tasks { get; set; }
 #nullable restore
 #else
-        public List<UntypedNode> Tasks { get; set; }
+        public UntypedNode Tasks { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.LocationTaskListSuccessfulResponseDto"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "tasks", n => { Tasks = n.GetCollectionOfPrimitiveValues<UntypedNode>()?.AsList(); } },
+                { "tasks", n => { Tasks = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfPrimitiveValues<UntypedNode>("tasks", Tasks);
+            writer.WriteObjectValue<UntypedNode>("tasks", Tasks);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

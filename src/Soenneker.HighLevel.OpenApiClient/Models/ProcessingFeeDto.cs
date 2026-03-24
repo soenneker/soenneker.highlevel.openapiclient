@@ -17,10 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>charges for the processing fee</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<UntypedNode>? Charges { get; set; }
+        public UntypedNode? Charges { get; set; }
 #nullable restore
 #else
-        public List<UntypedNode> Charges { get; set; }
+        public UntypedNode Charges { get; set; }
 #endif
         /// <summary>collected miscellaneous charges</summary>
         public double? CollectedMiscellaneousCharges { get; set; }
@@ -57,7 +57,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "charges", n => { Charges = n.GetCollectionOfPrimitiveValues<UntypedNode>()?.AsList(); } },
+                { "charges", n => { Charges = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "collectedMiscellaneousCharges", n => { CollectedMiscellaneousCharges = n.GetDoubleValue(); } },
                 { "paidCharges", n => { PaidCharges = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ProcessingFeePaidChargeDto>(global::Soenneker.HighLevel.OpenApiClient.Models.ProcessingFeePaidChargeDto.CreateFromDiscriminatorValue)?.AsList(); } },
             };
@@ -69,7 +69,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfPrimitiveValues<UntypedNode>("charges", Charges);
+            writer.WriteObjectValue<UntypedNode>("charges", Charges);
             writer.WriteDoubleValue("collectedMiscellaneousCharges", CollectedMiscellaneousCharges);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ProcessingFeePaidChargeDto>("paidCharges", PaidCharges);
             writer.WriteAdditionalData(AdditionalData);

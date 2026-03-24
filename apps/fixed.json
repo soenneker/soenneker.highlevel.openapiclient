@@ -37497,7 +37497,11 @@
           "charges": {
             "type": "array",
             "items": {
-              "type": "array"
+              "type": "array",
+              "items": {
+                "type": "object",
+                "description": "Fallback array item schema"
+              }
             },
             "description": "charges for the processing fee"
           },
@@ -42157,7 +42161,11 @@
           "schedules": {
             "type": "array",
             "items": {
-              "type": "array"
+              "type": "array",
+              "items": {
+                "type": "object",
+                "description": "Fallback array item schema"
+              }
             },
             "description": "Payment Schedule Items"
           }
@@ -42457,7 +42465,11 @@
           "items": {
             "type": "array",
             "items": {
-              "type": "array"
+              "type": "array",
+              "items": {
+                "type": "object",
+                "description": "Fallback array item schema"
+              }
             },
             "description": "An array of items"
           },
@@ -43042,7 +43054,11 @@
           "items": {
             "type": "array",
             "items": {
-              "type": "array"
+              "type": "array",
+              "items": {
+                "type": "object",
+                "description": "Fallback array item schema"
+              }
             },
             "description": "An array of items for the estimate."
           },
@@ -43201,7 +43217,11 @@
           "items": {
             "type": "array",
             "items": {
-              "type": "array"
+              "type": "array",
+              "items": {
+                "type": "object",
+                "description": "Fallback array item schema"
+              }
             },
             "description": "An array of items"
           },
@@ -44163,7 +44183,11 @@
           "priceIds": {
             "type": "array",
             "items": {
-              "type": "array"
+              "type": "array",
+              "items": {
+                "type": "object",
+                "description": "Fallback array item schema"
+              }
             },
             "description": "Mongo ObjectIds of the prices for which the media is assigned",
             "example": "6578278e879ad2646715ba9c"
@@ -56963,7 +56987,11 @@
           "tasks": {
             "type": "array",
             "items": {
-              "type": "array"
+              "type": "array",
+              "items": {
+                "type": "object",
+                "description": "Fallback array item schema"
+              }
             }
           }
         }
@@ -57307,7 +57335,11 @@
           "attachments": {
             "type": "array",
             "items": {
-              "type": "array"
+              "type": "array",
+              "items": {
+                "type": "object",
+                "description": "Fallback array item schema"
+              }
             },
             "example": [ ]
           }
@@ -57358,7 +57390,11 @@
           "attachments": {
             "type": "array",
             "items": {
-              "type": "array"
+              "type": "array",
+              "items": {
+                "type": "object",
+                "description": "Fallback array item schema"
+              }
             },
             "example": [ ]
           },
@@ -57868,7 +57904,11 @@
           "followers": {
             "type": "array",
             "items": {
-              "type": "array"
+              "type": "array",
+              "items": {
+                "type": "object",
+                "description": "Fallback array item schema"
+              }
             }
           }
         }
@@ -57937,7 +57977,11 @@
           "stages": {
             "type": "array",
             "items": {
-              "type": "array"
+              "type": "array",
+              "items": {
+                "type": "object",
+                "description": "Fallback array item schema"
+              }
             }
           },
           "showInFunnel": {
@@ -65972,7 +66016,11 @@
           "products": {
             "type": "array",
             "items": {
-              "type": "array"
+              "type": "array",
+              "items": {
+                "type": "object",
+                "description": "Fallback array item schema"
+              }
             },
             "description": "Array of products with their display priorities"
           }
@@ -65988,7 +66036,11 @@
           "data": {
             "type": "array",
             "items": {
-              "type": "array"
+              "type": "array",
+              "items": {
+                "type": "object",
+                "description": "Fallback array item schema"
+              }
             },
             "description": "Array of Collections"
           },
@@ -66256,7 +66308,11 @@
           "data": {
             "type": "array",
             "items": {
-              "type": "array"
+              "type": "array",
+              "items": {
+                "type": "object",
+                "description": "Fallback array item schema"
+              }
             },
             "description": "Array of Collections"
           },
@@ -66275,7 +66331,11 @@
           "data": {
             "type": "array",
             "items": {
-              "type": "array"
+              "type": "array",
+              "items": {
+                "type": "object",
+                "description": "Fallback array item schema"
+              }
             },
             "description": "Array of review status counts"
           }
@@ -66730,7 +66790,11 @@
           "priceIds": {
             "type": "array",
             "items": {
-              "type": "array"
+              "type": "array",
+              "items": {
+                "type": "object",
+                "description": "Fallback array item schema"
+              }
             },
             "description": "Mongo ObjectIds of the prices for which the media is assigned",
             "example": "6578278e879ad2646715ba9c"

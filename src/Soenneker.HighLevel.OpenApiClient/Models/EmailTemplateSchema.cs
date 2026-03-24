@@ -17,10 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The attachments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<UntypedNode>? Attachments { get; set; }
+        public UntypedNode? Attachments { get; set; }
 #nullable restore
 #else
-        public List<UntypedNode> Attachments { get; set; }
+        public UntypedNode Attachments { get; set; }
 #endif
         /// <summary>The html property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -63,7 +63,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "attachments", n => { Attachments = n.GetCollectionOfPrimitiveValues<UntypedNode>()?.AsList(); } },
+                { "attachments", n => { Attachments = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "html", n => { Html = n.GetStringValue(); } },
                 { "subject", n => { Subject = n.GetStringValue(); } },
             };
@@ -75,7 +75,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfPrimitiveValues<UntypedNode>("attachments", Attachments);
+            writer.WriteObjectValue<UntypedNode>("attachments", Attachments);
             writer.WriteStringValue("html", Html);
             writer.WriteStringValue("subject", Subject);
             writer.WriteAdditionalData(AdditionalData);

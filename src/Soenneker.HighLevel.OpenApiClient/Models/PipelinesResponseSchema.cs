@@ -45,10 +45,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The stages property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<UntypedNode>? Stages { get; set; }
+        public UntypedNode? Stages { get; set; }
 #nullable restore
 #else
-        public List<UntypedNode> Stages { get; set; }
+        public UntypedNode Stages { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.PipelinesResponseSchema"/> and sets the default values.
@@ -80,7 +80,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "showInFunnel", n => { ShowInFunnel = n.GetBoolValue(); } },
                 { "showInPieChart", n => { ShowInPieChart = n.GetBoolValue(); } },
-                { "stages", n => { Stages = n.GetCollectionOfPrimitiveValues<UntypedNode>()?.AsList(); } },
+                { "stages", n => { Stages = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -95,7 +95,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteBoolValue("showInFunnel", ShowInFunnel);
             writer.WriteBoolValue("showInPieChart", ShowInPieChart);
-            writer.WriteCollectionOfPrimitiveValues<UntypedNode>("stages", Stages);
+            writer.WriteObjectValue<UntypedNode>("stages", Stages);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

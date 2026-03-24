@@ -65,10 +65,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The followers property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<UntypedNode>? Followers { get; set; }
+        public UntypedNode? Followers { get; set; }
 #nullable restore
 #else
-        public List<UntypedNode> Followers { get; set; }
+        public UntypedNode Followers { get; set; }
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -215,7 +215,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "contactId", n => { ContactId = n.GetStringValue(); } },
                 { "createdAt", n => { CreatedAt = n.GetStringValue(); } },
                 { "customFields", n => { CustomFields = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchema>(global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchema.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "followers", n => { Followers = n.GetCollectionOfPrimitiveValues<UntypedNode>()?.AsList(); } },
+                { "followers", n => { Followers = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "indexVersion", n => { IndexVersion = n.GetStringValue(); } },
                 { "lastActionDate", n => { LastActionDate = n.GetStringValue(); } },
@@ -246,7 +246,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("contactId", ContactId);
             writer.WriteStringValue("createdAt", CreatedAt);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchema>("customFields", CustomFields);
-            writer.WriteCollectionOfPrimitiveValues<UntypedNode>("followers", Followers);
+            writer.WriteObjectValue<UntypedNode>("followers", Followers);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("indexVersion", IndexVersion);
             writer.WriteStringValue("lastActionDate", LastActionDate);
