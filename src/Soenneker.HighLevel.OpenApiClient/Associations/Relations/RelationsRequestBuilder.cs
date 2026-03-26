@@ -20,14 +20,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Associations.Relations
     {
         /// <summary>Gets an item from the Soenneker.HighLevel.OpenApiClient.associations.relations.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Associations.Relations.Item.RecordItemRequestBuilder"/></returns>
-        public global::Soenneker.HighLevel.OpenApiClient.Associations.Relations.Item.RecordItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Associations.Relations.Item.WithRecordItemRequestBuilder"/></returns>
+        public global::Soenneker.HighLevel.OpenApiClient.Associations.Relations.Item.WithRecordItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("record%2Did", position);
-                return new global::Soenneker.HighLevel.OpenApiClient.Associations.Relations.Item.RecordItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("recordId", position);
+                return new global::Soenneker.HighLevel.OpenApiClient.Associations.Relations.Item.WithRecordItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
