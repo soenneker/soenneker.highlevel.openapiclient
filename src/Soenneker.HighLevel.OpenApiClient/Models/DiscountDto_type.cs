@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HighLevel.OpenApiClient.Models
 {
-    /// <summary>Type of discount</summary>
+    /// <summary>Discount type</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum DiscountDto_type
     {
@@ -11,9 +11,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         #pragma warning disable CS1591
         Percentage,
         #pragma warning restore CS1591
-        [EnumMember(Value = "custom_amount")]
+        [EnumMember(Value = "fixed")]
         #pragma warning disable CS1591
-        Custom_amount,
+        Fixed,
         #pragma warning restore CS1591
     }
 }

@@ -14,17 +14,17 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Unique identifier for the discount</summary>
+        /// <summary>Discount type</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto_type? Type { get; set; }
+        /// <summary>Product Ids on which discount is applicable</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public List<string>? ValidOnProductIds { get; set; }
 #nullable restore
 #else
-        public string Id { get; set; }
+        public List<string> ValidOnProductIds { get; set; }
 #endif
-        /// <summary>Type of discount</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto_type? Type { get; set; }
-        /// <summary>Discount value (either a percentage or custom amount)</summary>
+        /// <summary>Discount Value</summary>
         public double? Value { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto"/> and sets the default values.
@@ -51,8 +51,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "id", n => { Id = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto_type>(); } },
+                { "validOnProductIds", n => { ValidOnProductIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "value", n => { Value = n.GetDoubleValue(); } },
             };
         }
@@ -63,8 +63,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("id", Id);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto_type>("type", Type);
+            writer.WriteCollectionOfPrimitiveValues<string>("validOnProductIds", ValidOnProductIds);
             writer.WriteDoubleValue("value", Value);
             writer.WriteAdditionalData(AdditionalData);
         }
