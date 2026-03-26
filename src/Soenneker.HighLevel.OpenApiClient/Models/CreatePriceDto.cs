@@ -59,10 +59,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>An array of membership offers associated with the price.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.Products_MembershipOfferDto>? MembershipOffers { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.MembershipOfferDto>? MembershipOffers { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.Products_MembershipOfferDto> MembershipOffers { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.MembershipOfferDto> MembershipOffers { get; set; }
 #endif
         /// <summary>Additional metadata associated with the price.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -164,7 +164,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "digitalDelivery", n => { DigitalDelivery = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "isDigitalProduct", n => { IsDigitalProduct = n.GetBoolValue(); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
-                { "membershipOffers", n => { MembershipOffers = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.Products_MembershipOfferDto>(global::Soenneker.HighLevel.OpenApiClient.Models.Products_MembershipOfferDto.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "membershipOffers", n => { MembershipOffers = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.MembershipOfferDto>(global::Soenneker.HighLevel.OpenApiClient.Models.MembershipOfferDto.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePriceDto_meta>(global::Soenneker.HighLevel.OpenApiClient.Models.CreatePriceDto_meta.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "recurring", n => { Recurring = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePriceDto_recurring>(global::Soenneker.HighLevel.OpenApiClient.Models.CreatePriceDto_recurring.CreateFromDiscriminatorValue); } },
@@ -195,7 +195,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("digitalDelivery", DigitalDelivery);
             writer.WriteBoolValue("isDigitalProduct", IsDigitalProduct);
             writer.WriteStringValue("locationId", LocationId);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.Products_MembershipOfferDto>("membershipOffers", MembershipOffers);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.MembershipOfferDto>("membershipOffers", MembershipOffers);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePriceDto_meta>("meta", Meta);
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePriceDto_recurring>("recurring", Recurring);
