@@ -11,7 +11,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// Entity source details for the transaction.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class GetTxnResponseSchema_entitySource : global::Soenneker.HighLevel.OpenApiClient.Models.Payments_OrderSource, IParsable
+    public partial class GetTxnResponseSchema_entitySource : global::Soenneker.HighLevel.OpenApiClient.Models.OrderSource, IParsable
     {
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

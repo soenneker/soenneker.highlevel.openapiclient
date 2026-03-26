@@ -65,10 +65,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The others property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.OthersSchema? Others { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.Forms_othersSchema? Others { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.OthersSchema Others { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.Forms_othersSchema Others { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.FormsSubmissionsSubmissionsSchema"/> and sets the default values.
@@ -101,7 +101,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "formId", n => { FormId = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "others", n => { Others = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.OthersSchema>(global::Soenneker.HighLevel.OpenApiClient.Models.OthersSchema.CreateFromDiscriminatorValue); } },
+                { "others", n => { Others = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.Forms_othersSchema>(global::Soenneker.HighLevel.OpenApiClient.Models.Forms_othersSchema.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -117,7 +117,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("formId", FormId);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.OthersSchema>("others", Others);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.Forms_othersSchema>("others", Others);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

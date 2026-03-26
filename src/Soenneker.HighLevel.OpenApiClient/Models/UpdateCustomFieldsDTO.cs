@@ -12,23 +12,29 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     public partial class UpdateCustomFieldsDTO : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The acceptedFormat property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public List<string>? AcceptedFormat { get; set; }
-#nullable restore
-#else
-        public List<string> AcceptedFormat { get; set; }
-#endif
+        /// <summary>&quot;Allowed file formats for uploads. Options include: .pdf, .docx, .doc, .jpg, .jpeg, .png, .gif, .csv, .xlsx, .xls, all&quot;</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomFieldsDTO_acceptedFormats? AcceptedFormats { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The isMultipleFile property</summary>
-        public bool? IsMultipleFile { get; set; }
-        /// <summary>The maxNumberOfFiles property</summary>
-        public double? MaxNumberOfFiles { get; set; }
-        /// <summary>Model of the custom field you want to update</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomFieldsDTO_model? Model { get; set; }
-        /// <summary>The name property</summary>
+        /// <summary>Description of the field</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Description { get; set; }
+#nullable restore
+#else
+        public string Description { get; set; }
+#endif
+        /// <summary>Location Id</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? LocationId { get; set; }
+#nullable restore
+#else
+        public string LocationId { get; set; }
+#endif
+        /// <summary>Maximum file limit for uploads. Applicable only for fields with a data type of FILE_UPLOAD.</summary>
+        public double? MaxFileLimit { get; set; }
+        /// <summary>Field name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -36,7 +42,15 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>The placeholder property</summary>
+        /// <summary>&quot;Options for the field. Important: Providing options will completely replace the existing options array. You must include all existing options alongside any new options you wish to add. Removal of options is not supported through this update. Applicable only for SINGLE_OPTIONS, MULTIPLE_OPTIONS, RADIO, CHECKBOX, TEXTBOX_LIST types.&quot;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.OptionDTO>? Options { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.OptionDTO> Options { get; set; }
+#endif
+        /// <summary>Placeholder text for the field</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Placeholder { get; set; }
@@ -44,16 +58,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string Placeholder { get; set; }
 #endif
-        /// <summary>The position property</summary>
-        public double? Position { get; set; }
-        /// <summary>The textBoxListOptions property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomFieldsDTO_textBoxListOptions>? TextBoxListOptions { get; set; }
-#nullable restore
-#else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomFieldsDTO_textBoxListOptions> TextBoxListOptions { get; set; }
-#endif
+        /// <summary>Whether the field should be shown in forms</summary>
+        public bool? ShowInForms { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomFieldsDTO"/> and sets the default values.
         /// </summary>
@@ -79,14 +85,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "acceptedFormat", n => { AcceptedFormat = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "isMultipleFile", n => { IsMultipleFile = n.GetBoolValue(); } },
-                { "maxNumberOfFiles", n => { MaxNumberOfFiles = n.GetDoubleValue(); } },
-                { "model", n => { Model = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomFieldsDTO_model>(); } },
+                { "acceptedFormats", n => { AcceptedFormats = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomFieldsDTO_acceptedFormats>(); } },
+                { "description", n => { Description = n.GetStringValue(); } },
+                { "locationId", n => { LocationId = n.GetStringValue(); } },
+                { "maxFileLimit", n => { MaxFileLimit = n.GetDoubleValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
+                { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.OptionDTO>(global::Soenneker.HighLevel.OpenApiClient.Models.OptionDTO.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "placeholder", n => { Placeholder = n.GetStringValue(); } },
-                { "position", n => { Position = n.GetDoubleValue(); } },
-                { "textBoxListOptions", n => { TextBoxListOptions = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomFieldsDTO_textBoxListOptions>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomFieldsDTO_textBoxListOptions.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "showInForms", n => { ShowInForms = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -96,14 +102,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfPrimitiveValues<string>("acceptedFormat", AcceptedFormat);
-            writer.WriteBoolValue("isMultipleFile", IsMultipleFile);
-            writer.WriteDoubleValue("maxNumberOfFiles", MaxNumberOfFiles);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomFieldsDTO_model>("model", Model);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomFieldsDTO_acceptedFormats>("acceptedFormats", AcceptedFormats);
+            writer.WriteStringValue("description", Description);
+            writer.WriteStringValue("locationId", LocationId);
+            writer.WriteDoubleValue("maxFileLimit", MaxFileLimit);
             writer.WriteStringValue("name", Name);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.OptionDTO>("options", Options);
             writer.WriteStringValue("placeholder", Placeholder);
-            writer.WriteDoubleValue("position", Position);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomFieldsDTO_textBoxListOptions>("textBoxListOptions", TextBoxListOptions);
+            writer.WriteBoolValue("showInForms", ShowInForms);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

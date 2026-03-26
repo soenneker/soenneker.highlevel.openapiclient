@@ -58,6 +58,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string Image { get; set; }
 #endif
+        /// <summary>A boolean representing whether a product label is enabled or not</summary>
+        public bool? IsLabelEnabled { get; set; }
         /// <summary>The field indicates whether taxes are enabled for the product or not.</summary>
         public bool? IsTaxesEnabled { get; set; }
         /// <summary>The Product label details</summary>
@@ -76,6 +78,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string LocationId { get; set; }
 #endif
+        /// <summary>An array of medias for the product.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ProductMediaDto>? Medias { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ProductMediaDto> Medias { get; set; }
+#endif
         /// <summary>The name of the product.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -91,6 +101,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #nullable restore
 #else
         public string ProductType { get; set; }
+#endif
+        /// <summary>The SEO information for the product requested</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DefaultProductResponseDto_seo? Seo { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DefaultProductResponseDto_seo Seo { get; set; }
 #endif
         /// <summary>The slug of the product by which the product will be navigated</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -118,6 +136,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #endif
         /// <summary>The last update timestamp of the product.</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
+        /// <summary>The unique identifier for the user who created the product.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? UserId { get; set; }
+#nullable restore
+#else
+        public string UserId { get; set; }
+#endif
         /// <summary>An array of variants for the product.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -158,15 +184,19 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "_id", n => { Id = n.GetStringValue(); } },
                 { "image", n => { Image = n.GetStringValue(); } },
+                { "isLabelEnabled", n => { IsLabelEnabled = n.GetBoolValue(); } },
                 { "isTaxesEnabled", n => { IsTaxesEnabled = n.GetBoolValue(); } },
                 { "label", n => { Label = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DefaultProductResponseDto_label>(global::Soenneker.HighLevel.OpenApiClient.Models.DefaultProductResponseDto_label.CreateFromDiscriminatorValue); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
+                { "medias", n => { Medias = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ProductMediaDto>(global::Soenneker.HighLevel.OpenApiClient.Models.ProductMediaDto.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "productType", n => { ProductType = n.GetStringValue(); } },
+                { "seo", n => { Seo = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DefaultProductResponseDto_seo>(global::Soenneker.HighLevel.OpenApiClient.Models.DefaultProductResponseDto_seo.CreateFromDiscriminatorValue); } },
                 { "slug", n => { Slug = n.GetStringValue(); } },
                 { "statementDescriptor", n => { StatementDescriptor = n.GetStringValue(); } },
                 { "taxes", n => { Taxes = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
+                { "userId", n => { UserId = n.GetStringValue(); } },
                 { "variants", n => { Variants = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ProductVariantDto>(global::Soenneker.HighLevel.OpenApiClient.Models.ProductVariantDto.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -184,15 +214,19 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("_id", Id);
             writer.WriteStringValue("image", Image);
+            writer.WriteBoolValue("isLabelEnabled", IsLabelEnabled);
             writer.WriteBoolValue("isTaxesEnabled", IsTaxesEnabled);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DefaultProductResponseDto_label>("label", Label);
             writer.WriteStringValue("locationId", LocationId);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ProductMediaDto>("medias", Medias);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("productType", ProductType);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DefaultProductResponseDto_seo>("seo", Seo);
             writer.WriteStringValue("slug", Slug);
             writer.WriteStringValue("statementDescriptor", StatementDescriptor);
             writer.WriteCollectionOfPrimitiveValues<string>("taxes", Taxes);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
+            writer.WriteStringValue("userId", UserId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ProductVariantDto>("variants", Variants);
             writer.WriteAdditionalData(AdditionalData);
         }

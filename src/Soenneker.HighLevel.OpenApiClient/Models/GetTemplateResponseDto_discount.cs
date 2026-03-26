@@ -11,7 +11,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// Discount
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class GetTemplateResponseDto_discount : global::Soenneker.HighLevel.OpenApiClient.Models.Invoices_DiscountDto, IParsable
+    public partial class GetTemplateResponseDto_discount : global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto, IParsable
     {
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
