@@ -11,7 +11,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// Details for Product Label
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class CreateProductDto_label : global::Soenneker.HighLevel.OpenApiClient.Models.ProductLabelDto, IParsable
+    public partial class CreateProductDto_label : global::Soenneker.HighLevel.OpenApiClient.Models.Products_ProductLabelDto, IParsable
     {
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

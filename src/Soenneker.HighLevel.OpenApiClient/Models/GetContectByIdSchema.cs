@@ -81,10 +81,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The customFields property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldSchema>? CustomFields { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.Contacts_CustomFieldSchema>? CustomFields { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldSchema> CustomFields { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.Contacts_CustomFieldSchema> CustomFields { get; set; }
 #endif
         /// <summary>The dateAdded property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -337,7 +337,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "city", n => { City = n.GetStringValue(); } },
                 { "companyName", n => { CompanyName = n.GetStringValue(); } },
                 { "country", n => { Country = n.GetStringValue(); } },
-                { "customFields", n => { CustomFields = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldSchema>(global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldSchema.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "customFields", n => { CustomFields = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.Contacts_CustomFieldSchema>(global::Soenneker.HighLevel.OpenApiClient.Models.Contacts_CustomFieldSchema.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "dateAdded", n => { DateAdded = n.GetStringValue(); } },
                 { "dateOfBirth", n => { DateOfBirth = n.GetStringValue(); } },
                 { "dateUpdated", n => { DateUpdated = n.GetStringValue(); } },
@@ -383,7 +383,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("city", City);
             writer.WriteStringValue("companyName", CompanyName);
             writer.WriteStringValue("country", Country);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldSchema>("customFields", CustomFields);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.Contacts_CustomFieldSchema>("customFields", CustomFields);
             writer.WriteStringValue("dateAdded", DateAdded);
             writer.WriteStringValue("dateOfBirth", DateOfBirth);
             writer.WriteStringValue("dateUpdated", DateUpdated);
