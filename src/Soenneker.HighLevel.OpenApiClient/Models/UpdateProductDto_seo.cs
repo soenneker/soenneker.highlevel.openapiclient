@@ -11,7 +11,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// SEO data for the product that will be displayed in the preview
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class UpdateProductDto_seo : global::Soenneker.HighLevel.OpenApiClient.Models.Products_ProductSEODto, IParsable
+    public partial class UpdateProductDto_seo : global::Soenneker.HighLevel.OpenApiClient.Models.ProductSEODto, IParsable
     {
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

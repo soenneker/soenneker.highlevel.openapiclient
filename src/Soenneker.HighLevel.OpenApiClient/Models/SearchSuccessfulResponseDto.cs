@@ -14,13 +14,29 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The locations property</summary>
+        /// <summary>The aggregations property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationSchema>? Locations { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SearchSuccessfulResponseDto_aggregations? Aggregations { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationSchema> Locations { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SearchSuccessfulResponseDto_aggregations Aggregations { get; set; }
+#endif
+        /// <summary>The meta property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SearchMetaResponseSchema? Meta { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SearchMetaResponseSchema Meta { get; set; }
+#endif
+        /// <summary>The opportunities property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.SearchOpportunitiesResponseSchema>? Opportunities { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.SearchOpportunitiesResponseSchema> Opportunities { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.SearchSuccessfulResponseDto"/> and sets the default values.
@@ -47,7 +63,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "locations", n => { Locations = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationSchema>(global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationSchema.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "aggregations", n => { Aggregations = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SearchSuccessfulResponseDto_aggregations>(global::Soenneker.HighLevel.OpenApiClient.Models.SearchSuccessfulResponseDto_aggregations.CreateFromDiscriminatorValue); } },
+                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SearchMetaResponseSchema>(global::Soenneker.HighLevel.OpenApiClient.Models.SearchMetaResponseSchema.CreateFromDiscriminatorValue); } },
+                { "opportunities", n => { Opportunities = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.SearchOpportunitiesResponseSchema>(global::Soenneker.HighLevel.OpenApiClient.Models.SearchOpportunitiesResponseSchema.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -57,7 +75,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationSchema>("locations", Locations);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SearchSuccessfulResponseDto_aggregations>("aggregations", Aggregations);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SearchMetaResponseSchema>("meta", Meta);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.SearchOpportunitiesResponseSchema>("opportunities", Opportunities);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

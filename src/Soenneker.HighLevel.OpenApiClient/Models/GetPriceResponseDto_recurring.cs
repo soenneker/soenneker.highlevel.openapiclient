@@ -11,7 +11,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// The recurring details of the price (if type is recurring).
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class GetPriceResponseDto_recurring : global::Soenneker.HighLevel.OpenApiClient.Models.Products_RecurringDto, IParsable
+    public partial class GetPriceResponseDto_recurring : global::Soenneker.HighLevel.OpenApiClient.Models.RecurringDto, IParsable
     {
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
