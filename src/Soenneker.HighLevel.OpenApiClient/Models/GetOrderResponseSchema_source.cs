@@ -11,7 +11,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// Source details of the order.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class GetOrderResponseSchema_source : global::Soenneker.HighLevel.OpenApiClient.Models.OrderSource, IParsable
+    public partial class GetOrderResponseSchema_source : global::Soenneker.HighLevel.OpenApiClient.Models.Payments_OrderSource, IParsable
     {
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

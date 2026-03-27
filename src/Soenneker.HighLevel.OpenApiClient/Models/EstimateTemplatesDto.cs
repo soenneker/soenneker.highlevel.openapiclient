@@ -53,10 +53,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The discount property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto? Discount { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.Invoices_DiscountDto? Discount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto Discount { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.Invoices_DiscountDto Discount { get; set; }
 #endif
         /// <summary>Prefix for the estimate number</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -156,7 +156,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "automaticTaxesEnabled", n => { AutomaticTaxesEnabled = n.GetBoolValue(); } },
                 { "businessDetails", n => { BusinessDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BusinessDetailsDto>(global::Soenneker.HighLevel.OpenApiClient.Models.BusinessDetailsDto.CreateFromDiscriminatorValue); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
-                { "discount", n => { Discount = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto>(global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto.CreateFromDiscriminatorValue); } },
+                { "discount", n => { Discount = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.Invoices_DiscountDto>(global::Soenneker.HighLevel.OpenApiClient.Models.Invoices_DiscountDto.CreateFromDiscriminatorValue); } },
                 { "estimateNumberPrefix", n => { EstimateNumberPrefix = n.GetStringValue(); } },
                 { "items", n => { Items = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "liveMode", n => { LiveMode = n.GetBoolValue(); } },
@@ -181,7 +181,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteBoolValue("automaticTaxesEnabled", AutomaticTaxesEnabled);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BusinessDetailsDto>("businessDetails", BusinessDetails);
             writer.WriteStringValue("currency", Currency);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto>("discount", Discount);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.Invoices_DiscountDto>("discount", Discount);
             writer.WriteStringValue("estimateNumberPrefix", EstimateNumberPrefix);
             writer.WriteObjectValue<UntypedNode>("items", Items);
             writer.WriteBoolValue("liveMode", LiveMode);

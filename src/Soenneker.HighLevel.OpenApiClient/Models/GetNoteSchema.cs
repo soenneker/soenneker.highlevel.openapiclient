@@ -30,14 +30,6 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string ContactId { get; set; }
 #endif
-        /// <summary>The createdBy property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.NoteCreatedBySchema? CreatedBy { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.NoteCreatedBySchema CreatedBy { get; set; }
-#endif
         /// <summary>The dateAdded property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -89,7 +81,6 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             {
                 { "body", n => { Body = n.GetStringValue(); } },
                 { "contactId", n => { ContactId = n.GetStringValue(); } },
-                { "createdBy", n => { CreatedBy = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.NoteCreatedBySchema>(global::Soenneker.HighLevel.OpenApiClient.Models.NoteCreatedBySchema.CreateFromDiscriminatorValue); } },
                 { "dateAdded", n => { DateAdded = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "userId", n => { UserId = n.GetStringValue(); } },
@@ -104,7 +95,6 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("body", Body);
             writer.WriteStringValue("contactId", ContactId);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.NoteCreatedBySchema>("createdBy", CreatedBy);
             writer.WriteStringValue("dateAdded", DateAdded);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("userId", UserId);
