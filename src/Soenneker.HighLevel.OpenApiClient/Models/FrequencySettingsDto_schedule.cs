@@ -11,7 +11,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// schedule setting for the estimate
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class FrequencySettingsDto_schedule : global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleOptionsDto, IParsable
+    public partial class FrequencySettingsDto_schedule : global::Soenneker.HighLevel.OpenApiClient.Models.Invoices_ScheduleOptionsDto, IParsable
     {
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

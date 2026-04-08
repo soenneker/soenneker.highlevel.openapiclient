@@ -14,9 +14,33 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Source subtype of order</summary>
+        /// <summary>The id property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Id { get; set; }
+#nullable restore
+#else
+        public string Id { get; set; }
+#endif
+        /// <summary>The meta property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.HighLevel.OpenApiClient.Models.OrderSource_meta? Meta { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.HighLevel.OpenApiClient.Models.OrderSource_meta Meta { get; set; }
+#endif
+        /// <summary>The name property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Name { get; set; }
+#nullable restore
+#else
+        public string Name { get; set; }
+#endif
+        /// <summary>The subType property</summary>
         public global::Soenneker.HighLevel.OpenApiClient.Models.OrderSource_subType? SubType { get; set; }
-        /// <summary>Source of order</summary>
+        /// <summary>The type property</summary>
         public global::Soenneker.HighLevel.OpenApiClient.Models.OrderSource_type? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.OrderSource"/> and sets the default values.
@@ -43,6 +67,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "id", n => { Id = n.GetStringValue(); } },
+                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.OrderSource_meta>(global::Soenneker.HighLevel.OpenApiClient.Models.OrderSource_meta.CreateFromDiscriminatorValue); } },
+                { "name", n => { Name = n.GetStringValue(); } },
                 { "subType", n => { SubType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.OrderSource_subType>(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.OrderSource_type>(); } },
             };
@@ -54,6 +81,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteStringValue("id", Id);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.OrderSource_meta>("meta", Meta);
+            writer.WriteStringValue("name", Name);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.OrderSource_subType>("subType", SubType);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.OrderSource_type>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
