@@ -11,7 +11,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// Details of the Cheque if used for payment
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class PostRecordOrderPaymentBody_cheque : global::Soenneker.HighLevel.OpenApiClient.Models.ChequeDto, IParsable
+    public partial class PostRecordOrderPaymentBody_cheque : global::Soenneker.HighLevel.OpenApiClient.Models.Payments_ChequeDto, IParsable
     {
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

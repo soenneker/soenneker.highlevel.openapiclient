@@ -40,7 +40,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Proposals.Templates.Send
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.Proposals_BadRequestDTO">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.BadRequestDTO">When receiving a 400 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.SendTemplateResponseDto?> PostAsync(global::Soenneker.HighLevel.OpenApiClient.Models.SendDocumentFromPublicApiBodyDto body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -54,7 +54,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Proposals.Templates.Send
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.HighLevel.OpenApiClient.Models.Proposals_BadRequestDTO.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.HighLevel.OpenApiClient.Models.BadRequestDTO.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.SendTemplateResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.SendTemplateResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

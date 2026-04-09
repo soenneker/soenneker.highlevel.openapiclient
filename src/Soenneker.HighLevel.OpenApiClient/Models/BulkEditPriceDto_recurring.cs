@@ -11,7 +11,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// Recurring details
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class BulkEditPriceDto_recurring : global::Soenneker.HighLevel.OpenApiClient.Models.Products_RecurringDto, IParsable
+    public partial class BulkEditPriceDto_recurring : global::Soenneker.HighLevel.OpenApiClient.Models.RecurringDto, IParsable
     {
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

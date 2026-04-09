@@ -69,10 +69,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The discount property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto? Discount { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.Invoices_DiscountDto? Discount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto Discount { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.Invoices_DiscountDto Discount { get; set; }
 #endif
         /// <summary>Estimate Number, if not specified will take in the next valid estimate number</summary>
         public double? EstimateNumber { get; set; }
@@ -224,7 +224,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "businessDetails", n => { BusinessDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BusinessDetailsDto>(global::Soenneker.HighLevel.OpenApiClient.Models.BusinessDetailsDto.CreateFromDiscriminatorValue); } },
                 { "contactDetails", n => { ContactDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateEstimatesDto_contactDetails>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateEstimatesDto_contactDetails.CreateFromDiscriminatorValue); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
-                { "discount", n => { Discount = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto>(global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto.CreateFromDiscriminatorValue); } },
+                { "discount", n => { Discount = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.Invoices_DiscountDto>(global::Soenneker.HighLevel.OpenApiClient.Models.Invoices_DiscountDto.CreateFromDiscriminatorValue); } },
                 { "estimateNumber", n => { EstimateNumber = n.GetDoubleValue(); } },
                 { "estimateNumberPrefix", n => { EstimateNumberPrefix = n.GetStringValue(); } },
                 { "expiryDate", n => { ExpiryDate = n.GetStringValue(); } },
@@ -258,7 +258,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BusinessDetailsDto>("businessDetails", BusinessDetails);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateEstimatesDto_contactDetails>("contactDetails", ContactDetails);
             writer.WriteStringValue("currency", Currency);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto>("discount", Discount);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.Invoices_DiscountDto>("discount", Discount);
             writer.WriteDoubleValue("estimateNumber", EstimateNumber);
             writer.WriteStringValue("estimateNumberPrefix", EstimateNumberPrefix);
             writer.WriteStringValue("expiryDate", ExpiryDate);
