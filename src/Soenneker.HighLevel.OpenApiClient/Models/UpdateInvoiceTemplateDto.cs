@@ -43,10 +43,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The discount property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.Invoices_DiscountDto? Discount { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto? Discount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.Invoices_DiscountDto Discount { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto Discount { get; set; }
 #endif
         /// <summary>The internal property</summary>
         public bool? Internal { get; set; }
@@ -119,7 +119,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceTemplateDto_altType>(); } },
                 { "businessDetails", n => { BusinessDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BusinessDetailsDto>(global::Soenneker.HighLevel.OpenApiClient.Models.BusinessDetailsDto.CreateFromDiscriminatorValue); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
-                { "discount", n => { Discount = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.Invoices_DiscountDto>(global::Soenneker.HighLevel.OpenApiClient.Models.Invoices_DiscountDto.CreateFromDiscriminatorValue); } },
+                { "discount", n => { Discount = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto>(global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto.CreateFromDiscriminatorValue); } },
                 { "internal", n => { Internal = n.GetBoolValue(); } },
                 { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.InvoiceItemDto>(global::Soenneker.HighLevel.OpenApiClient.Models.InvoiceItemDto.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "miscellaneousCharges", n => { MiscellaneousCharges = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceTemplateDto_miscellaneousCharges>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceTemplateDto_miscellaneousCharges.CreateFromDiscriminatorValue); } },
@@ -139,7 +139,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceTemplateDto_altType>("altType", AltType);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BusinessDetailsDto>("businessDetails", BusinessDetails);
             writer.WriteStringValue("currency", Currency);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.Invoices_DiscountDto>("discount", Discount);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto>("discount", Discount);
             writer.WriteBoolValue("internal", Internal);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.InvoiceItemDto>("items", Items);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceTemplateDto_miscellaneousCharges>("miscellaneousCharges", MiscellaneousCharges);

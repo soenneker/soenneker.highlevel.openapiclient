@@ -11,7 +11,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// Product details
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class FulfilledItem_product : global::Soenneker.HighLevel.OpenApiClient.Models.Payments_DefaultProductResponseDto, IParsable
+    public partial class FulfilledItem_product : global::Soenneker.HighLevel.OpenApiClient.Models.DefaultProductResponseDto, IParsable
     {
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

@@ -71,10 +71,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>An array of medias for the product.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ProductMediaDto>? Medias { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.Products_ProductMediaDto>? Medias { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ProductMediaDto> Medias { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.Products_ProductMediaDto> Medias { get; set; }
 #endif
         /// <summary>The name of the product.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -123,10 +123,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>An array of variants for the product.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ProductVariantDto>? Variants { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.Products_ProductVariantDto>? Variants { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ProductVariantDto> Variants { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.Products_ProductVariantDto> Variants { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CreateProductDto"/> and sets the default values.
@@ -162,7 +162,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "isTaxesEnabled", n => { IsTaxesEnabled = n.GetBoolValue(); } },
                 { "label", n => { Label = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateProductDto_label>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateProductDto_label.CreateFromDiscriminatorValue); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
-                { "medias", n => { Medias = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ProductMediaDto>(global::Soenneker.HighLevel.OpenApiClient.Models.ProductMediaDto.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "medias", n => { Medias = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.Products_ProductMediaDto>(global::Soenneker.HighLevel.OpenApiClient.Models.Products_ProductMediaDto.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "productType", n => { ProductType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateProductDto_productType>(); } },
                 { "seo", n => { Seo = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateProductDto_seo>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateProductDto_seo.CreateFromDiscriminatorValue); } },
@@ -170,7 +170,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "statementDescriptor", n => { StatementDescriptor = n.GetStringValue(); } },
                 { "taxInclusive", n => { TaxInclusive = n.GetBoolValue(); } },
                 { "taxes", n => { Taxes = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "variants", n => { Variants = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ProductVariantDto>(global::Soenneker.HighLevel.OpenApiClient.Models.ProductVariantDto.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "variants", n => { Variants = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.Products_ProductVariantDto>(global::Soenneker.HighLevel.OpenApiClient.Models.Products_ProductVariantDto.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -189,7 +189,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteBoolValue("isTaxesEnabled", IsTaxesEnabled);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateProductDto_label>("label", Label);
             writer.WriteStringValue("locationId", LocationId);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ProductMediaDto>("medias", Medias);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.Products_ProductMediaDto>("medias", Medias);
             writer.WriteStringValue("name", Name);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateProductDto_productType>("productType", ProductType);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateProductDto_seo>("seo", Seo);
@@ -197,7 +197,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("statementDescriptor", StatementDescriptor);
             writer.WriteCollectionOfPrimitiveValues<string>("taxes", Taxes);
             writer.WriteBoolValue("taxInclusive", TaxInclusive);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ProductVariantDto>("variants", Variants);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.Products_ProductVariantDto>("variants", Variants);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

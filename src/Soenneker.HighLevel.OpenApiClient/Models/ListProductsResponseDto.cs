@@ -17,10 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>An array of products</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.DefaultProductResponseDto>? Products { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.Products_DefaultProductResponseDto>? Products { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.DefaultProductResponseDto> Products { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.Products_DefaultProductResponseDto> Products { get; set; }
 #endif
         /// <summary>list products status</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,7 +55,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "products", n => { Products = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.DefaultProductResponseDto>(global::Soenneker.HighLevel.OpenApiClient.Models.DefaultProductResponseDto.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "products", n => { Products = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.Products_DefaultProductResponseDto>(global::Soenneker.HighLevel.OpenApiClient.Models.Products_DefaultProductResponseDto.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "total", n => { Total = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ListProductsStats>(global::Soenneker.HighLevel.OpenApiClient.Models.ListProductsStats.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -66,7 +66,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.DefaultProductResponseDto>("products", Products);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.Products_DefaultProductResponseDto>("products", Products);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ListProductsStats>("total", Total);
             writer.WriteAdditionalData(AdditionalData);
         }

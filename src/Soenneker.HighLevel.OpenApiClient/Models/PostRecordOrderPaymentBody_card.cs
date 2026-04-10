@@ -11,7 +11,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// Details of Card if used for payment
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class PostRecordOrderPaymentBody_card : global::Soenneker.HighLevel.OpenApiClient.Models.Payments_CardDto, IParsable
+    public partial class PostRecordOrderPaymentBody_card : global::Soenneker.HighLevel.OpenApiClient.Models.CardDto, IParsable
     {
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
