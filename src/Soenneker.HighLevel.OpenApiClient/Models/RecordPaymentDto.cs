@@ -29,18 +29,18 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The card property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.Invoices_CardDto? Card { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCardDto? Card { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.Invoices_CardDto Card { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCardDto Card { get; set; }
 #endif
         /// <summary>The cheque property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.Invoices_ChequeDto? Cheque { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesChequeDto? Cheque { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.Invoices_ChequeDto Cheque { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesChequeDto Cheque { get; set; }
 #endif
         /// <summary>Updated At to be recorded against the invoice.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -104,8 +104,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "altId", n => { AltId = n.GetStringValue(); } },
                 { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.RecordPaymentDto_altType>(); } },
                 { "amount", n => { Amount = n.GetDoubleValue(); } },
-                { "card", n => { Card = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.Invoices_CardDto>(global::Soenneker.HighLevel.OpenApiClient.Models.Invoices_CardDto.CreateFromDiscriminatorValue); } },
-                { "cheque", n => { Cheque = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.Invoices_ChequeDto>(global::Soenneker.HighLevel.OpenApiClient.Models.Invoices_ChequeDto.CreateFromDiscriminatorValue); } },
+                { "card", n => { Card = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCardDto>(global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCardDto.CreateFromDiscriminatorValue); } },
+                { "cheque", n => { Cheque = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesChequeDto>(global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesChequeDto.CreateFromDiscriminatorValue); } },
                 { "fulfilledAt", n => { FulfilledAt = n.GetStringValue(); } },
                 { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.RecordPaymentDto_meta>(global::Soenneker.HighLevel.OpenApiClient.Models.RecordPaymentDto_meta.CreateFromDiscriminatorValue); } },
                 { "mode", n => { Mode = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.RecordPaymentDto_mode>(); } },
@@ -123,8 +123,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("altId", AltId);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.RecordPaymentDto_altType>("altType", AltType);
             writer.WriteDoubleValue("amount", Amount);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.Invoices_CardDto>("card", Card);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.Invoices_ChequeDto>("cheque", Cheque);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCardDto>("card", Card);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesChequeDto>("cheque", Cheque);
             writer.WriteStringValue("fulfilledAt", FulfilledAt);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.RecordPaymentDto_meta>("meta", Meta);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.RecordPaymentDto_mode>("mode", Mode);

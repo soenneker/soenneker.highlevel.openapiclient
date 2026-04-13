@@ -39,8 +39,8 @@ namespace Soenneker.HighLevel.OpenApiClient.CustomFields.Folder.Item
         /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomFolderDeleteResponseDto"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.Common_schemas_BadRequestDTO">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.Common_schemas_UnauthorizedDTO">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasBadRequestDTO">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDTO">When receiving a 401 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFolderDeleteResponseDto?> DeleteAsync(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.CustomFields.Folder.Item.FolderItemRequestBuilder.FolderItemRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -53,8 +53,8 @@ namespace Soenneker.HighLevel.OpenApiClient.CustomFields.Folder.Item
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.HighLevel.OpenApiClient.Models.Common_schemas_BadRequestDTO.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.HighLevel.OpenApiClient.Models.Common_schemas_UnauthorizedDTO.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasBadRequestDTO.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDTO.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFolderDeleteResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.CustomFolderDeleteResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -65,8 +65,8 @@ namespace Soenneker.HighLevel.OpenApiClient.CustomFields.Folder.Item
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.Common_schemas_BadRequestDTO">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.Common_schemas_UnauthorizedDTO">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasBadRequestDTO">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDTO">When receiving a 401 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.ICustomFieldFolder?> PutAsync(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateFolder body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -80,8 +80,8 @@ namespace Soenneker.HighLevel.OpenApiClient.CustomFields.Folder.Item
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.HighLevel.OpenApiClient.Models.Common_schemas_BadRequestDTO.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.HighLevel.OpenApiClient.Models.Common_schemas_UnauthorizedDTO.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasBadRequestDTO.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDTO.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.ICustomFieldFolder>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.ICustomFieldFolder.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

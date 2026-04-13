@@ -17,10 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The meta property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.Surveys_metaSchema? Meta { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SurveysMetaSchema? Meta { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.Surveys_metaSchema Meta { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SurveysMetaSchema Meta { get; set; }
 #endif
         /// <summary>The submissions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,7 +55,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.Surveys_metaSchema>(global::Soenneker.HighLevel.OpenApiClient.Models.Surveys_metaSchema.CreateFromDiscriminatorValue); } },
+                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SurveysMetaSchema>(global::Soenneker.HighLevel.OpenApiClient.Models.SurveysMetaSchema.CreateFromDiscriminatorValue); } },
                 { "submissions", n => { Submissions = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.SubmissionSchema>(global::Soenneker.HighLevel.OpenApiClient.Models.SubmissionSchema.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -66,7 +66,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.Surveys_metaSchema>("meta", Meta);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SurveysMetaSchema>("meta", Meta);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.SubmissionSchema>("submissions", Submissions);
             writer.WriteAdditionalData(AdditionalData);
         }

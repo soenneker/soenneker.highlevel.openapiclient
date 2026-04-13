@@ -63,8 +63,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Invoices.Schedule.Item
         /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoiceScheduleResponseDto"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.Common_schemas_BadRequestDTO">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.Common_schemas_UnauthorizedDTO">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasBadRequestDTO">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDTO">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.UnprocessableDTO">When receiving a 422 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -78,8 +78,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Invoices.Schedule.Item
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.HighLevel.OpenApiClient.Models.Common_schemas_BadRequestDTO.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.HighLevel.OpenApiClient.Models.Common_schemas_UnauthorizedDTO.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasBadRequestDTO.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDTO.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.UnprocessableDTO.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoiceScheduleResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoiceScheduleResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
@@ -90,8 +90,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Invoices.Schedule.Item
         /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GetScheduleResponseDto"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.Common_schemas_BadRequestDTO">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.Common_schemas_UnauthorizedDTO">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasBadRequestDTO">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDTO">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.UnprocessableDTO">When receiving a 422 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -105,8 +105,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Invoices.Schedule.Item
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.HighLevel.OpenApiClient.Models.Common_schemas_BadRequestDTO.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.HighLevel.OpenApiClient.Models.Common_schemas_UnauthorizedDTO.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasBadRequestDTO.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDTO.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.UnprocessableDTO.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.GetScheduleResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.GetScheduleResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
@@ -118,8 +118,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Invoices.Schedule.Item
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.Common_schemas_BadRequestDTO">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.Common_schemas_UnauthorizedDTO">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasBadRequestDTO">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDTO">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.UnprocessableDTO">When receiving a 422 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -134,8 +134,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Invoices.Schedule.Item
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.HighLevel.OpenApiClient.Models.Common_schemas_BadRequestDTO.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.HighLevel.OpenApiClient.Models.Common_schemas_UnauthorizedDTO.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasBadRequestDTO.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDTO.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.UnprocessableDTO.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceScheduleResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceScheduleResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);

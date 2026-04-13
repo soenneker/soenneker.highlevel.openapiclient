@@ -45,7 +45,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string Recipient { get; set; }
 #endif
         /// <summary>Element type</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ELEMENTS_LOOKUP? Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ELEMENTSLOOKUP? Type { get; set; }
         /// <summary>Value of the field</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -85,7 +85,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "isRequired", n => { IsRequired = n.GetBoolValue(); } },
                 { "recipient", n => { Recipient = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ELEMENTS_LOOKUP>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ELEMENTSLOOKUP>(); } },
                 { "value", n => { Value = n.GetStringValue(); } },
             };
         }
@@ -102,7 +102,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("isRequired", IsRequired);
             writer.WriteStringValue("recipient", Recipient);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ELEMENTS_LOOKUP>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ELEMENTSLOOKUP>("type", Type);
             writer.WriteStringValue("value", Value);
             writer.WriteAdditionalData(AdditionalData);
         }

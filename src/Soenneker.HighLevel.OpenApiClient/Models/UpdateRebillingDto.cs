@@ -17,10 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Configuration for rebilling settings</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateRebillingDto_config? Config { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateRebillingDtoConfig? Config { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateRebillingDto_config Config { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateRebillingDtoConfig Config { get; set; }
 #endif
         /// <summary>Array of location IDs to update rebilling for</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -57,7 +57,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "config", n => { Config = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateRebillingDto_config>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateRebillingDto_config.CreateFromDiscriminatorValue); } },
+                { "config", n => { Config = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateRebillingDtoConfig>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateRebillingDtoConfig.CreateFromDiscriminatorValue); } },
                 { "locationIds", n => { LocationIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "product", n => { Product = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateRebillingDto_product>(); } },
             };
@@ -69,7 +69,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateRebillingDto_config>("config", Config);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateRebillingDtoConfig>("config", Config);
             writer.WriteCollectionOfPrimitiveValues<string>("locationIds", LocationIds);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateRebillingDto_product>("product", Product);
             writer.WriteAdditionalData(AdditionalData);

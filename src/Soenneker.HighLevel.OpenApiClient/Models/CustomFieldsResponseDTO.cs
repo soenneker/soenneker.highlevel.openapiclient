@@ -17,18 +17,18 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Custom Fields for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.Custom_fields_ICustomField>? Fields { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsICustomField>? Fields { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.Custom_fields_ICustomField> Fields { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsICustomField> Fields { get; set; }
 #endif
         /// <summary>Custom Fields folder for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.Custom_fields_ICustomField>? Folders { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsICustomField>? Folders { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.Custom_fields_ICustomField> Folders { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsICustomField> Folders { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsResponseDTO"/> and sets the default values.
@@ -55,8 +55,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "fields", n => { Fields = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.Custom_fields_ICustomField>(global::Soenneker.HighLevel.OpenApiClient.Models.Custom_fields_ICustomField.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "folders", n => { Folders = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.Custom_fields_ICustomField>(global::Soenneker.HighLevel.OpenApiClient.Models.Custom_fields_ICustomField.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "fields", n => { Fields = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsICustomField>(global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsICustomField.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "folders", n => { Folders = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsICustomField>(global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsICustomField.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -66,8 +66,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.Custom_fields_ICustomField>("fields", Fields);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.Custom_fields_ICustomField>("folders", Folders);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsICustomField>("fields", Fields);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsICustomField>("folders", Folders);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

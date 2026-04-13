@@ -17,10 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The messages property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetMessagesByConversationResponseDto_messages? Messages { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetMessagesByConversationResponseDtoMessages? Messages { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetMessagesByConversationResponseDto_messages Messages { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetMessagesByConversationResponseDtoMessages Messages { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GetMessagesByConversationResponseDto"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "messages", n => { Messages = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetMessagesByConversationResponseDto_messages>(global::Soenneker.HighLevel.OpenApiClient.Models.GetMessagesByConversationResponseDto_messages.CreateFromDiscriminatorValue); } },
+                { "messages", n => { Messages = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetMessagesByConversationResponseDtoMessages>(global::Soenneker.HighLevel.OpenApiClient.Models.GetMessagesByConversationResponseDtoMessages.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetMessagesByConversationResponseDto_messages>("messages", Messages);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetMessagesByConversationResponseDtoMessages>("messages", Messages);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

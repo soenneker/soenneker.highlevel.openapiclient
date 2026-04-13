@@ -39,8 +39,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Emails.Schedule
         /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleFetchSuccessfulDTO"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.Common_schemas_BadRequestDTO">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.Common_schemas_UnauthorizedDTO">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasBadRequestDTO">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDTO">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.InvalidLocationDTO">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.NotFoundDTO">When receiving a 404 status code</exception>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.UnprocessableDTO">When receiving a 422 status code</exception>
@@ -56,8 +56,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Emails.Schedule
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.HighLevel.OpenApiClient.Models.Common_schemas_BadRequestDTO.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.HighLevel.OpenApiClient.Models.Common_schemas_UnauthorizedDTO.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasBadRequestDTO.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDTO.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.HighLevel.OpenApiClient.Models.InvalidLocationDTO.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.HighLevel.OpenApiClient.Models.NotFoundDTO.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.UnprocessableDTO.CreateFromDiscriminatorValue },

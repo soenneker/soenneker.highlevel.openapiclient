@@ -17,10 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>An array of prices</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.Products_DefaultPriceResponseDto>? Prices { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ProductsDefaultPriceResponseDto>? Prices { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.Products_DefaultPriceResponseDto> Prices { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ProductsDefaultPriceResponseDto> Prices { get; set; }
 #endif
         /// <summary>The total property</summary>
         public double? Total { get; set; }
@@ -49,7 +49,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "prices", n => { Prices = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.Products_DefaultPriceResponseDto>(global::Soenneker.HighLevel.OpenApiClient.Models.Products_DefaultPriceResponseDto.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "prices", n => { Prices = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ProductsDefaultPriceResponseDto>(global::Soenneker.HighLevel.OpenApiClient.Models.ProductsDefaultPriceResponseDto.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "total", n => { Total = n.GetDoubleValue(); } },
             };
         }
@@ -60,7 +60,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.Products_DefaultPriceResponseDto>("prices", Prices);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ProductsDefaultPriceResponseDto>("prices", Prices);
             writer.WriteDoubleValue("total", Total);
             writer.WriteAdditionalData(AdditionalData);
         }

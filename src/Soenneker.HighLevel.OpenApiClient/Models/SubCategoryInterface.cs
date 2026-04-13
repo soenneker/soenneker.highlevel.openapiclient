@@ -39,7 +39,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string Title { get; set; }
 #endif
         /// <summary>The visibility property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.Visibility? Visibility { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.Visibility_1? Visibility { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.SubCategoryInterface"/> and sets the default values.
         /// </summary>
@@ -68,7 +68,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "posts", n => { Posts = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.PostInterface>(global::Soenneker.HighLevel.OpenApiClient.Models.PostInterface.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "thumbnailUrl", n => { ThumbnailUrl = n.GetStringValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
-                { "visibility", n => { Visibility = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.Visibility>(); } },
+                { "visibility", n => { Visibility = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.Visibility_1>(); } },
             };
         }
         /// <summary>
@@ -81,7 +81,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.PostInterface>("posts", Posts);
             writer.WriteStringValue("thumbnailUrl", ThumbnailUrl);
             writer.WriteStringValue("title", Title);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.Visibility>("visibility", Visibility);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.Visibility_1>("visibility", Visibility);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

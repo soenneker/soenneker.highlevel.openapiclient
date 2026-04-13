@@ -36,25 +36,25 @@ namespace Soenneker.HighLevel.OpenApiClient.PhoneSystem.NumberPools
         /// <summary>
         /// Get list of number pools
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.Phone_system_getNumberPoolList_200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.PhoneSystem.NumberPools.NumberPoolsGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.Phone_system_getNumberPoolList_400">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.PhoneSystemGetNumberPoolList400">When receiving a 400 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.Phone_system_getNumberPoolList_200?> GetAsync(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.PhoneSystem.NumberPools.NumberPoolsRequestBuilder.NumberPoolsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HighLevel.OpenApiClient.PhoneSystem.NumberPools.NumberPoolsGetResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.PhoneSystem.NumberPools.NumberPoolsRequestBuilder.NumberPoolsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.Phone_system_getNumberPoolList_200> GetAsync(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.PhoneSystem.NumberPools.NumberPoolsRequestBuilder.NumberPoolsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HighLevel.OpenApiClient.PhoneSystem.NumberPools.NumberPoolsGetResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.PhoneSystem.NumberPools.NumberPoolsRequestBuilder.NumberPoolsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.HighLevel.OpenApiClient.Models.Phone_system_getNumberPoolList_400.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.HighLevel.OpenApiClient.Models.PhoneSystemGetNumberPoolList400.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.Phone_system_getNumberPoolList_200>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.Phone_system_getNumberPoolList_200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.PhoneSystem.NumberPools.NumberPoolsGetResponse>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.PhoneSystem.NumberPools.NumberPoolsGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get list of number pools

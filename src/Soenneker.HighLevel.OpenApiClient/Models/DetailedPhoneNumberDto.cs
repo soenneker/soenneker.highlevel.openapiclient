@@ -33,10 +33,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Communication capabilities supported by this number</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDto_capabilities? Capabilities { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDtoCapabilities? Capabilities { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDto_capabilities Capabilities { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDtoCapabilities Capabilities { get; set; }
 #endif
         /// <summary>ISO 3166-1 alpha-2 country code</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -141,7 +141,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             {
                 { "addressSid", n => { AddressSid = n.GetStringValue(); } },
                 { "bundleSid", n => { BundleSid = n.GetStringValue(); } },
-                { "capabilities", n => { Capabilities = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDto_capabilities>(global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDto_capabilities.CreateFromDiscriminatorValue); } },
+                { "capabilities", n => { Capabilities = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDtoCapabilities>(global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDtoCapabilities.CreateFromDiscriminatorValue); } },
                 { "countryCode", n => { CountryCode = n.GetStringValue(); } },
                 { "dateAdded", n => { DateAdded = n.GetDateTimeOffsetValue(); } },
                 { "dateUpdated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
@@ -167,7 +167,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("addressSid", AddressSid);
             writer.WriteStringValue("bundleSid", BundleSid);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDto_capabilities>("capabilities", Capabilities);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDtoCapabilities>("capabilities", Capabilities);
             writer.WriteStringValue("countryCode", CountryCode);
             writer.WriteDateTimeOffsetValue("dateAdded", DateAdded);
             writer.WriteDateTimeOffsetValue("dateUpdated", DateUpdated);
