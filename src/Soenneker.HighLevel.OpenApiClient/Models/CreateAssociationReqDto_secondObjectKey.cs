@@ -11,26 +11,26 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// Second Objects Key
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class CreateAssociationReqDto_1_secondObjectKey : IAdditionalDataHolder, IParsable
+    public partial class CreateAssociationReqDto_secondObjectKey : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDto_1_secondObjectKey"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDto_secondObjectKey"/> and sets the default values.
         /// </summary>
-        public CreateAssociationReqDto_1_secondObjectKey()
+        public CreateAssociationReqDto_secondObjectKey()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDto_1_secondObjectKey"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDto_secondObjectKey"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDto_1_secondObjectKey CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDto_secondObjectKey CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDto_1_secondObjectKey();
+            return new global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDto_secondObjectKey();
         }
         /// <summary>
         /// The deserialization information for the current model

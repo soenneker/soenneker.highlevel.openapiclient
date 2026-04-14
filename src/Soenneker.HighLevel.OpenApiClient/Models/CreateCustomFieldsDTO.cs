@@ -57,10 +57,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The textBoxListOptions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.TextBoxListOptionsSchema_1>? TextBoxListOptions { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.TextBoxListOptionsSchema>? TextBoxListOptions { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.TextBoxListOptionsSchema_1> TextBoxListOptions { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.TextBoxListOptionsSchema> TextBoxListOptions { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CreateCustomFieldsDTO"/> and sets the default values.
@@ -95,7 +95,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "placeholder", n => { Placeholder = n.GetStringValue(); } },
                 { "position", n => { Position = n.GetDoubleValue(); } },
-                { "textBoxListOptions", n => { TextBoxListOptions = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.TextBoxListOptionsSchema_1>(global::Soenneker.HighLevel.OpenApiClient.Models.TextBoxListOptionsSchema_1.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "textBoxListOptions", n => { TextBoxListOptions = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.TextBoxListOptionsSchema>(global::Soenneker.HighLevel.OpenApiClient.Models.TextBoxListOptionsSchema.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -113,7 +113,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("placeholder", Placeholder);
             writer.WriteDoubleValue("position", Position);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.TextBoxListOptionsSchema_1>("textBoxListOptions", TextBoxListOptions);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.TextBoxListOptionsSchema>("textBoxListOptions", TextBoxListOptions);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

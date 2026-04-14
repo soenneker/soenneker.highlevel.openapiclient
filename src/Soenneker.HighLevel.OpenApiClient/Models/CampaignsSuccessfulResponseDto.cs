@@ -17,10 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The campaigns property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CampaignsSchema_1>? Campaigns { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CampaignsSchema>? Campaigns { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CampaignsSchema_1> Campaigns { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CampaignsSchema> Campaigns { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CampaignsSuccessfulResponseDto"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "campaigns", n => { Campaigns = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CampaignsSchema_1>(global::Soenneker.HighLevel.OpenApiClient.Models.CampaignsSchema_1.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "campaigns", n => { Campaigns = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CampaignsSchema>(global::Soenneker.HighLevel.OpenApiClient.Models.CampaignsSchema.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CampaignsSchema_1>("campaigns", Campaigns);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CampaignsSchema>("campaigns", Campaigns);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -9,11 +9,19 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class CampaignsSchema_1 : IAdditionalDataHolder, IParsable
+    public partial class CustomFieldsInputObjectSchema : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The field_value property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputObjectSchema_field_value? FieldValue { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputObjectSchema_field_value FieldValue { get; set; }
+#endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -22,46 +30,30 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>The locationId property</summary>
+        /// <summary>The key property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LocationId { get; set; }
+        public string? Key { get; set; }
 #nullable restore
 #else
-        public string LocationId { get; set; }
-#endif
-        /// <summary>The name property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Name { get; set; }
-#nullable restore
-#else
-        public string Name { get; set; }
-#endif
-        /// <summary>The status property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Status { get; set; }
-#nullable restore
-#else
-        public string Status { get; set; }
+        public string Key { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CampaignsSchema_1"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputObjectSchema"/> and sets the default values.
         /// </summary>
-        public CampaignsSchema_1()
+        public CustomFieldsInputObjectSchema()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CampaignsSchema_1"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputObjectSchema"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.HighLevel.OpenApiClient.Models.CampaignsSchema_1 CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputObjectSchema CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.CampaignsSchema_1();
+            return new global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputObjectSchema();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -71,10 +63,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "field_value", n => { FieldValue = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputObjectSchema_field_value>(global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputObjectSchema_field_value.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "locationId", n => { LocationId = n.GetStringValue(); } },
-                { "name", n => { Name = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetStringValue(); } },
+                { "key", n => { Key = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -84,10 +75,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputObjectSchema_field_value>("field_value", FieldValue);
             writer.WriteStringValue("id", Id);
-            writer.WriteStringValue("locationId", LocationId);
-            writer.WriteStringValue("name", Name);
-            writer.WriteStringValue("status", Status);
+            writer.WriteStringValue("key", Key);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

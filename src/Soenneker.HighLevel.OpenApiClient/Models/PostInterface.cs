@@ -23,7 +23,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string BucketVideoUrl { get; set; }
 #endif
         /// <summary>The contentType property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ContentType_1? ContentType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ContentType? ContentType { get; set; }
         /// <summary>The description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -57,7 +57,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string Title { get; set; }
 #endif
         /// <summary>The visibility property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.Visibility_1? Visibility { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.Visibility? Visibility { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.PostInterface"/> and sets the default values.
         /// </summary>
@@ -84,12 +84,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "bucketVideoUrl", n => { BucketVideoUrl = n.GetStringValue(); } },
-                { "contentType", n => { ContentType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ContentType_1>(); } },
+                { "contentType", n => { ContentType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ContentType>(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "postMaterials", n => { PostMaterials = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.PostMaterialInterface>(global::Soenneker.HighLevel.OpenApiClient.Models.PostMaterialInterface.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "thumbnailUrl", n => { ThumbnailUrl = n.GetStringValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
-                { "visibility", n => { Visibility = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.Visibility_1>(); } },
+                { "visibility", n => { Visibility = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.Visibility>(); } },
             };
         }
         /// <summary>
@@ -100,12 +100,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("bucketVideoUrl", BucketVideoUrl);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ContentType_1>("contentType", ContentType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ContentType>("contentType", ContentType);
             writer.WriteStringValue("description", Description);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.PostMaterialInterface>("postMaterials", PostMaterials);
             writer.WriteStringValue("thumbnailUrl", ThumbnailUrl);
             writer.WriteStringValue("title", Title);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.Visibility_1>("visibility", Visibility);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.Visibility>("visibility", Visibility);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -3985,7 +3985,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/TagBody_1"
+                "$ref": "#/components/schemas/TagBody"
               }
             }
           }
@@ -4178,7 +4178,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/TagBody_1"
+                "$ref": "#/components/schemas/TagBody"
               }
             }
           }
@@ -5425,7 +5425,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CustomValuesDTO_1"
+                "$ref": "#/components/schemas/CustomValuesDTO"
               }
             }
           }
@@ -5618,7 +5618,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CustomValuesDTO_1"
+                "$ref": "#/components/schemas/CustomValuesDTO"
               }
             }
           }
@@ -9763,7 +9763,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateRelationReqDto_1"
+                "$ref": "#/components/schemas/CreateRelationReqDto"
               }
             }
           }
@@ -10500,7 +10500,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateAssociationReqDto_1"
+                "$ref": "#/components/schemas/CreateAssociationReqDto"
               }
             }
           }
@@ -37373,7 +37373,7 @@
           }
         }
       },
-      "CustomFieldsInputArraySchema_1": {
+      "CustomFieldsInputArraySchema": {
         "required": [
           "id"
         ],
@@ -37395,7 +37395,7 @@
           }
         }
       },
-      "CustomFieldsInputObjectSchema_1": {
+      "CustomFieldsInputObjectSchema": {
         "required": [
           "id"
         ],
@@ -37414,7 +37414,7 @@
           }
         }
       },
-      "CustomFieldsInputStringSchema_1": {
+      "CustomFieldsInputStringSchema": {
         "type": "object",
         "properties": {
           "id": {
@@ -37489,13 +37489,13 @@
               "type": "object",
               "anyOf": [
                 {
-                  "$ref": "#/components/schemas/CustomFieldsInputStringSchema_1"
+                  "$ref": "#/components/schemas/CustomFieldsInputStringSchema"
                 },
                 {
-                  "$ref": "#/components/schemas/CustomFieldsInputArraySchema_1"
+                  "$ref": "#/components/schemas/CustomFieldsInputArraySchema"
                 },
                 {
-                  "$ref": "#/components/schemas/CustomFieldsInputObjectSchema_1"
+                  "$ref": "#/components/schemas/CustomFieldsInputObjectSchema"
                 }
               ]
             },
@@ -37544,13 +37544,13 @@
               "type": "object",
               "anyOf": [
                 {
-                  "$ref": "#/components/schemas/CustomFieldsInputStringSchema_1"
+                  "$ref": "#/components/schemas/CustomFieldsInputStringSchema"
                 },
                 {
-                  "$ref": "#/components/schemas/CustomFieldsInputArraySchema_1"
+                  "$ref": "#/components/schemas/CustomFieldsInputArraySchema"
                 },
                 {
-                  "$ref": "#/components/schemas/CustomFieldsInputObjectSchema_1"
+                  "$ref": "#/components/schemas/CustomFieldsInputObjectSchema"
                 }
               ]
             },
@@ -41384,7 +41384,7 @@
           }
         }
       },
-      "TagBody_1": {
+      "TagBody": {
         "required": [
           "name"
         ],
@@ -41554,7 +41554,7 @@
           }
         }
       },
-      "TextBoxListOptionsSchema_1": {
+      "TextBoxListOptionsSchema": {
         "type": "object",
         "properties": {
           "label": {
@@ -41605,7 +41605,7 @@
               "type": "object",
               "anyOf": [
                 {
-                  "$ref": "#/components/schemas/TextBoxListOptionsSchema_1"
+                  "$ref": "#/components/schemas/TextBoxListOptionsSchema"
                 }
               ]
             }
@@ -41661,7 +41661,7 @@
               "type": "object",
               "anyOf": [
                 {
-                  "$ref": "#/components/schemas/TextBoxListOptionsSchema_1"
+                  "$ref": "#/components/schemas/TextBoxListOptionsSchema"
                 }
               ]
             }
@@ -41770,7 +41770,7 @@
           }
         }
       },
-      "CustomValuesDTO_1": {
+      "CustomValuesDTO": {
         "required": [
           "name",
           "value"
@@ -43133,7 +43133,7 @@
           }
         }
       },
-      "Visibility_1": {
+      "Visibility": {
         "enum": [
           "published",
           "draft"
@@ -43141,7 +43141,7 @@
         "type": "string",
         "additionalProperties": false
       },
-      "ContentType_1": {
+      "ContentType": {
         "enum": [
           "video",
           "assignment",
@@ -43150,7 +43150,7 @@
         "type": "string",
         "additionalProperties": false
       },
-      "Type_1": {
+      "Type": {
         "enum": [
           "pdf",
           "image",
@@ -43221,7 +43221,7 @@
             "type": "string"
           },
           "type": {
-            "$ref": "#/components/schemas/Type_1"
+            "$ref": "#/components/schemas/Type"
           },
           "url": {
             "type": "string"
@@ -43241,13 +43241,13 @@
             "type": "string"
           },
           "visibility": {
-            "$ref": "#/components/schemas/Visibility_1"
+            "$ref": "#/components/schemas/Visibility"
           },
           "thumbnailUrl": {
             "type": "string"
           },
           "contentType": {
-            "$ref": "#/components/schemas/ContentType_1"
+            "$ref": "#/components/schemas/ContentType"
           },
           "description": {
             "type": "string"
@@ -43274,7 +43274,7 @@
             "type": "string"
           },
           "visibility": {
-            "$ref": "#/components/schemas/Visibility_1"
+            "$ref": "#/components/schemas/Visibility"
           },
           "thumbnailUrl": {
             "type": "string"
@@ -43298,7 +43298,7 @@
             "type": "string"
           },
           "visibility": {
-            "$ref": "#/components/schemas/Visibility_1"
+            "$ref": "#/components/schemas/Visibility"
           },
           "thumbnailUrl": {
             "type": "string"
@@ -45544,7 +45544,7 @@
           }
         }
       },
-      "CampaignsSchema_1": {
+      "CampaignsSchema": {
         "type": "object",
         "properties": {
           "id": {
@@ -45571,7 +45571,7 @@
           "campaigns": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CampaignsSchema_1"
+              "$ref": "#/components/schemas/CampaignsSchema"
             }
           }
         }
@@ -45681,7 +45681,7 @@
           }
         }
       },
-      "OthersSchema_1": {
+      "OthersSchema": {
         "type": "object",
         "properties": {
           "__submissions_other_field__": {
@@ -45731,11 +45731,11 @@
             "example": "test@test.com"
           },
           "others": {
-            "$ref": "#/components/schemas/OthersSchema_1"
+            "$ref": "#/components/schemas/OthersSchema"
           }
         }
       },
-      "MetaSchema_1": {
+      "MetaSchema": {
         "type": "object",
         "properties": {
           "total": {
@@ -45768,7 +45768,7 @@
             }
           },
           "meta": {
-            "$ref": "#/components/schemas/MetaSchema_1"
+            "$ref": "#/components/schemas/MetaSchema"
           }
         }
       },
@@ -46246,7 +46246,7 @@
           }
         }
       },
-      "CreateRelationReqDto_1": {
+      "CreateRelationReqDto": {
         "required": [
           "locationId",
           "associationId",
@@ -46330,7 +46330,7 @@
           }
         }
       },
-      "CreateAssociationReqDto_1": {
+      "CreateAssociationReqDto": {
         "required": [
           "locationId",
           "key",

@@ -83,11 +83,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Locations.Item.CustomValues
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.UnprocessableDTO">When receiving a 422 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.CustomValueIdSuccessfulResponseDto?> PostAsync(global::Soenneker.HighLevel.OpenApiClient.Models.CustomValuesDTO_1 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.CustomValueIdSuccessfulResponseDto?> PostAsync(global::Soenneker.HighLevel.OpenApiClient.Models.CustomValuesDTO body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.CustomValueIdSuccessfulResponseDto> PostAsync(global::Soenneker.HighLevel.OpenApiClient.Models.CustomValuesDTO_1 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.CustomValueIdSuccessfulResponseDto> PostAsync(global::Soenneker.HighLevel.OpenApiClient.Models.CustomValuesDTO body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -127,11 +127,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Locations.Item.CustomValues
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HighLevel.OpenApiClient.Models.CustomValuesDTO_1 body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HighLevel.OpenApiClient.Models.CustomValuesDTO body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HighLevel.OpenApiClient.Models.CustomValuesDTO_1 body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HighLevel.OpenApiClient.Models.CustomValuesDTO body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

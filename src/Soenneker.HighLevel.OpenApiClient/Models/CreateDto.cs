@@ -129,34 +129,34 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputArraySchema_1"/>, <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputObjectSchema_1"/>, <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputStringSchema_1"/>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputArraySchema"/>, <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputObjectSchema"/>, <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputStringSchema"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class CreateDto_customFields : IComposedTypeWrapper, IParsable
         {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputArraySchema_1"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputArraySchema"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputArraySchema_1? CustomFieldsInputArraySchema1 { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputArraySchema? CustomFieldsInputArraySchema { get; set; }
 #nullable restore
 #else
-            public global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputArraySchema_1 CustomFieldsInputArraySchema1 { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputArraySchema CustomFieldsInputArraySchema { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputObjectSchema_1"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputObjectSchema"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputObjectSchema_1? CustomFieldsInputObjectSchema1 { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputObjectSchema? CustomFieldsInputObjectSchema { get; set; }
 #nullable restore
 #else
-            public global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputObjectSchema_1 CustomFieldsInputObjectSchema1 { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputObjectSchema CustomFieldsInputObjectSchema { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputStringSchema_1"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputStringSchema"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputStringSchema_1? CustomFieldsInputStringSchema1 { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputStringSchema? CustomFieldsInputStringSchema { get; set; }
 #nullable restore
 #else
-            public global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputStringSchema_1 CustomFieldsInputStringSchema1 { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputStringSchema CustomFieldsInputStringSchema { get; set; }
 #endif
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
@@ -167,9 +167,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             {
                 if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.HighLevel.OpenApiClient.Models.CreateDto.CreateDto_customFields();
-                result.CustomFieldsInputArraySchema1 = new global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputArraySchema_1();
-                result.CustomFieldsInputObjectSchema1 = new global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputObjectSchema_1();
-                result.CustomFieldsInputStringSchema1 = new global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputStringSchema_1();
+                result.CustomFieldsInputArraySchema = new global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputArraySchema();
+                result.CustomFieldsInputObjectSchema = new global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputObjectSchema();
+                result.CustomFieldsInputStringSchema = new global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputStringSchema();
                 return result;
             }
             /// <summary>
@@ -178,9 +178,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
             public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
             {
-                if(CustomFieldsInputArraySchema1 != null || CustomFieldsInputObjectSchema1 != null || CustomFieldsInputStringSchema1 != null)
+                if(CustomFieldsInputArraySchema != null || CustomFieldsInputObjectSchema != null || CustomFieldsInputStringSchema != null)
                 {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(CustomFieldsInputArraySchema1, CustomFieldsInputObjectSchema1, CustomFieldsInputStringSchema1);
+                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(CustomFieldsInputArraySchema, CustomFieldsInputObjectSchema, CustomFieldsInputStringSchema);
                 }
                 return new Dictionary<string, Action<IParseNode>>();
             }
@@ -191,7 +191,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             public virtual void Serialize(ISerializationWriter writer)
             {
                 if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputArraySchema_1>(null, CustomFieldsInputArraySchema1, CustomFieldsInputObjectSchema1, CustomFieldsInputStringSchema1);
+                writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputArraySchema>(null, CustomFieldsInputArraySchema, CustomFieldsInputObjectSchema, CustomFieldsInputStringSchema);
             }
         }
     }

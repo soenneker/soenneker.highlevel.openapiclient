@@ -9,59 +9,59 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class OthersSchema_1 : IAdditionalDataHolder, IParsable
+    public partial class CreateRelationReqDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The custom_field_id__ property</summary>
+        /// <summary>Association&apos;s Id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomFieldId { get; set; }
+        public string? AssociationId { get; set; }
 #nullable restore
 #else
-        public string CustomFieldId { get; set; }
+        public string AssociationId { get; set; }
 #endif
-        /// <summary>The eventData property</summary>
+        /// <summary>First Record&apos;s Id. For instance, if you have an association between a contact and a custom object, and you specify the contact as the first object while creating the association, then your firstRecordId would be the contactId </summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.EventDataSchema? EventData { get; set; }
+        public string? FirstRecordId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.EventDataSchema EventData { get; set; }
+        public string FirstRecordId { get; set; }
 #endif
-        /// <summary>The fieldsOriSequance property</summary>
+        /// <summary>Your Sub Account&apos;s ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? FieldsOriSequance { get; set; }
+        public string? LocationId { get; set; }
 #nullable restore
 #else
-        public List<string> FieldsOriSequance { get; set; }
+        public string LocationId { get; set; }
 #endif
-        /// <summary>The submissions_other_field__ property</summary>
+        /// <summary>Second Record&apos;s Id.For instance, if you have an association between a contact and a custom object, and you specify the custom object as the second entity while creating the association, then your secondRecordId would be the customObject record Id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SubmissionsOtherField { get; set; }
+        public string? SecondRecordId { get; set; }
 #nullable restore
 #else
-        public string SubmissionsOtherField { get; set; }
+        public string SecondRecordId { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.OthersSchema_1"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CreateRelationReqDto"/> and sets the default values.
         /// </summary>
-        public OthersSchema_1()
+        public CreateRelationReqDto()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.OthersSchema_1"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CreateRelationReqDto"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.HighLevel.OpenApiClient.Models.OthersSchema_1 CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.HighLevel.OpenApiClient.Models.CreateRelationReqDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.OthersSchema_1();
+            return new global::Soenneker.HighLevel.OpenApiClient.Models.CreateRelationReqDto();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -71,10 +71,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "__custom_field_id__", n => { CustomFieldId = n.GetStringValue(); } },
-                { "eventData", n => { EventData = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EventDataSchema>(global::Soenneker.HighLevel.OpenApiClient.Models.EventDataSchema.CreateFromDiscriminatorValue); } },
-                { "fieldsOriSequance", n => { FieldsOriSequance = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "__submissions_other_field__", n => { SubmissionsOtherField = n.GetStringValue(); } },
+                { "associationId", n => { AssociationId = n.GetStringValue(); } },
+                { "firstRecordId", n => { FirstRecordId = n.GetStringValue(); } },
+                { "locationId", n => { LocationId = n.GetStringValue(); } },
+                { "secondRecordId", n => { SecondRecordId = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -84,10 +84,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("__custom_field_id__", CustomFieldId);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EventDataSchema>("eventData", EventData);
-            writer.WriteCollectionOfPrimitiveValues<string>("fieldsOriSequance", FieldsOriSequance);
-            writer.WriteStringValue("__submissions_other_field__", SubmissionsOtherField);
+            writer.WriteStringValue("associationId", AssociationId);
+            writer.WriteStringValue("firstRecordId", FirstRecordId);
+            writer.WriteStringValue("locationId", LocationId);
+            writer.WriteStringValue("secondRecordId", SecondRecordId);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
