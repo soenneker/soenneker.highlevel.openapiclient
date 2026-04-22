@@ -1,31 +1,30 @@
-﻿using System;
+using System;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Kiota.Abstractions.Authentication;
 using Microsoft.Kiota.Http.HttpClientLibrary;
-using Soenneker.Facts.Local;
+using Soenneker.Tests.Attributes.Local;
 using Soenneker.HighLevel.OpenApiClient.Models;
-using Soenneker.Tests.FixturedUnit;
-using Xunit;
+using Soenneker.Tests.HostedUnit;
 
 namespace Soenneker.HighLevel.OpenApiClient.Tests;
 
-[Collection("Collection")]
-public sealed class HighLevelOpenApiClientTests : FixturedUnitTest
+[ClassDataSource<Host>(Shared = SharedType.PerTestSession)]
+public sealed class HighLevelOpenApiClientTests : HostedUnitTest
 {
     private readonly IConfiguration _config;
 
-    public HighLevelOpenApiClientTests(Fixture fixture, ITestOutputHelper output) : base(fixture, output)
+    public HighLevelOpenApiClientTests(Host host) : base(host)
     {
         _config = Resolve<IConfiguration>();
     }
 
-    [Fact]
+    [Test]
     public void Default()
     {
     }
 
-    [LocalFact]
+    [LocalOnly]
     public async Task UpsertContact_WithRequiredFields_ShouldSucceed()
     {
         // Arrange
