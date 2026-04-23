@@ -9,7 +9,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class FormsEventDataSchema : IAdditionalDataHolder, IParsable
+    public partial class SurveysEventDataSchema : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,10 +25,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The contactSessionIds property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.FormsContactSessionIds? ContactSessionIds { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SurveysContactSessionIds? ContactSessionIds { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.FormsContactSessionIds ContactSessionIds { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SurveysContactSessionIds ContactSessionIds { get; set; }
 #endif
         /// <summary>The domain property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -89,10 +89,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The page property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.FormsPageDetailsSchema? Page { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SurveysPageDetailsSchema? Page { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.FormsPageDetailsSchema Page { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SurveysPageDetailsSchema Page { get; set; }
 #endif
         /// <summary>The pageVisitType property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -153,21 +153,21 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string Version { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.FormsEventDataSchema"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.SurveysEventDataSchema"/> and sets the default values.
         /// </summary>
-        public FormsEventDataSchema()
+        public SurveysEventDataSchema()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.FormsEventDataSchema"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.SurveysEventDataSchema"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.HighLevel.OpenApiClient.Models.FormsEventDataSchema CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.HighLevel.OpenApiClient.Models.SurveysEventDataSchema CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.FormsEventDataSchema();
+            return new global::Soenneker.HighLevel.OpenApiClient.Models.SurveysEventDataSchema();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -178,7 +178,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "adSource", n => { AdSource = n.GetStringValue(); } },
-                { "contactSessionIds", n => { ContactSessionIds = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.FormsContactSessionIds>(global::Soenneker.HighLevel.OpenApiClient.Models.FormsContactSessionIds.CreateFromDiscriminatorValue); } },
+                { "contactSessionIds", n => { ContactSessionIds = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SurveysContactSessionIds>(global::Soenneker.HighLevel.OpenApiClient.Models.SurveysContactSessionIds.CreateFromDiscriminatorValue); } },
                 { "domain", n => { Domain = n.GetStringValue(); } },
                 { "fbEventId", n => { FbEventId = n.GetStringValue(); } },
                 { "fbc", n => { Fbc = n.GetStringValue(); } },
@@ -186,7 +186,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "fingerprint", n => { Fingerprint = n.GetStringValue(); } },
                 { "medium", n => { Medium = n.GetStringValue(); } },
                 { "mediumId", n => { MediumId = n.GetStringValue(); } },
-                { "page", n => { Page = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.FormsPageDetailsSchema>(global::Soenneker.HighLevel.OpenApiClient.Models.FormsPageDetailsSchema.CreateFromDiscriminatorValue); } },
+                { "page", n => { Page = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SurveysPageDetailsSchema>(global::Soenneker.HighLevel.OpenApiClient.Models.SurveysPageDetailsSchema.CreateFromDiscriminatorValue); } },
                 { "pageVisitType", n => { PageVisitType = n.GetStringValue(); } },
                 { "parentId", n => { ParentId = n.GetStringValue(); } },
                 { "parentName", n => { ParentName = n.GetStringValue(); } },
@@ -205,7 +205,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("adSource", AdSource);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.FormsContactSessionIds>("contactSessionIds", ContactSessionIds);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SurveysContactSessionIds>("contactSessionIds", ContactSessionIds);
             writer.WriteStringValue("domain", Domain);
             writer.WriteStringValue("fbc", Fbc);
             writer.WriteStringValue("fbEventId", FbEventId);
@@ -213,7 +213,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("fingerprint", Fingerprint);
             writer.WriteStringValue("medium", Medium);
             writer.WriteStringValue("mediumId", MediumId);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.FormsPageDetailsSchema>("page", Page);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SurveysPageDetailsSchema>("page", Page);
             writer.WriteStringValue("pageVisitType", PageVisitType);
             writer.WriteStringValue("parentId", ParentId);
             writer.WriteStringValue("parentName", ParentName);
