@@ -3,53 +3,57 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HighLevel.OpenApiClient.Models
 {
-    /// <summary>&quot;Allowed file formats for uploads. Options include: .pdf, .docx, .doc, .jpg, .jpeg, .png, .gif, .csv, .xlsx, .xls, all&quot;</summary>
+    /// <summary>Type of field that you are trying to create</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum CustomFieldsUpdateCustomFieldsDTO_acceptedFormats
+    public enum ObjectsICustomField_dataType
     {
-        [EnumMember(Value = ".pdf")]
+        [EnumMember(Value = "TEXT")]
         #pragma warning disable CS1591
-        Pdf,
+        TEXT,
         #pragma warning restore CS1591
-        [EnumMember(Value = ".docx")]
+        [EnumMember(Value = "LARGE_TEXT")]
         #pragma warning disable CS1591
-        Docx,
+        LARGE_TEXT,
         #pragma warning restore CS1591
-        [EnumMember(Value = ".doc")]
+        [EnumMember(Value = "NUMERICAL")]
         #pragma warning disable CS1591
-        Doc,
+        NUMERICAL,
         #pragma warning restore CS1591
-        [EnumMember(Value = ".jpg")]
+        [EnumMember(Value = "PHONE")]
         #pragma warning disable CS1591
-        Jpg,
+        PHONE,
         #pragma warning restore CS1591
-        [EnumMember(Value = ".jpeg")]
+        [EnumMember(Value = "MONETORY")]
         #pragma warning disable CS1591
-        Jpeg,
+        MONETORY,
         #pragma warning restore CS1591
-        [EnumMember(Value = ".png")]
+        [EnumMember(Value = "CHECKBOX")]
         #pragma warning disable CS1591
-        Png,
+        CHECKBOX,
         #pragma warning restore CS1591
-        [EnumMember(Value = ".gif")]
+        [EnumMember(Value = "SINGLE_OPTIONS")]
         #pragma warning disable CS1591
-        Gif,
+        SINGLE_OPTIONS,
         #pragma warning restore CS1591
-        [EnumMember(Value = ".csv")]
+        [EnumMember(Value = "MULTIPLE_OPTIONS")]
         #pragma warning disable CS1591
-        Csv,
+        MULTIPLE_OPTIONS,
         #pragma warning restore CS1591
-        [EnumMember(Value = ".xlsx")]
+        [EnumMember(Value = "DATE")]
         #pragma warning disable CS1591
-        Xlsx,
+        DATE,
         #pragma warning restore CS1591
-        [EnumMember(Value = ".xls")]
+        [EnumMember(Value = "TEXTBOX_LIST")]
         #pragma warning disable CS1591
-        Xls,
+        TEXTBOX_LIST,
         #pragma warning restore CS1591
-        [EnumMember(Value = "all")]
+        [EnumMember(Value = "FILE_UPLOAD")]
         #pragma warning disable CS1591
-        All,
+        FILE_UPLOAD,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "RADIO")]
+        #pragma warning disable CS1591
+        RADIO,
         #pragma warning restore CS1591
     }
 }

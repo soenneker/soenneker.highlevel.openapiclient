@@ -9,17 +9,17 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class CustomFieldsICustomField : IAdditionalDataHolder, IParsable
+    public partial class ObjectsICustomField : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>&quot;Allowed file formats for uploads. Options include: .pdf, .docx, .doc, .jpg, .jpeg, .png, .gif, .csv, .xlsx, .xls, all&quot;</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsICustomField_acceptedFormats? AcceptedFormats { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ObjectsICustomField_acceptedFormats? AcceptedFormats { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Determines if users can add a custom option value different from the predefined options in records for RADIO type fields. A custom value added in one record does not automatically become an option and will not appear as an option for other records.</summary>
         public bool? AllowCustomOption { get; set; }
         /// <summary>Type of field that you are trying to create</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsICustomField_dataType? DataType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ObjectsICustomField_dataType? DataType { get; set; }
         /// <summary>Date and time when the object was added</summary>
         public DateTimeOffset? DateAdded { get; set; }
         /// <summary>Date and time when the object was last updated</summary>
@@ -77,10 +77,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Options for the field (Optional, valid only for SINGLE_OPTIONS, MULTIPLE_OPTIONS, RADIO, CHECKBOX, TEXTBOX_LIST type)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsOptionDTO>? Options { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ObjectsOptionDTO>? Options { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsOptionDTO> Options { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ObjectsOptionDTO> Options { get; set; }
 #endif
         /// <summary>ID of the parent folder</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -101,21 +101,21 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Whether the field should be shown in forms</summary>
         public bool? ShowInForms { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsICustomField"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.ObjectsICustomField"/> and sets the default values.
         /// </summary>
-        public CustomFieldsICustomField()
+        public ObjectsICustomField()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsICustomField"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.ObjectsICustomField"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsICustomField CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.HighLevel.OpenApiClient.Models.ObjectsICustomField CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsICustomField();
+            return new global::Soenneker.HighLevel.OpenApiClient.Models.ObjectsICustomField();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -125,9 +125,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "acceptedFormats", n => { AcceptedFormats = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsICustomField_acceptedFormats>(); } },
+                { "acceptedFormats", n => { AcceptedFormats = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ObjectsICustomField_acceptedFormats>(); } },
                 { "allowCustomOption", n => { AllowCustomOption = n.GetBoolValue(); } },
-                { "dataType", n => { DataType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsICustomField_dataType>(); } },
+                { "dataType", n => { DataType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ObjectsICustomField_dataType>(); } },
                 { "dateAdded", n => { DateAdded = n.GetDateTimeOffsetValue(); } },
                 { "dateUpdated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
@@ -137,7 +137,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "maxFileLimit", n => { MaxFileLimit = n.GetDoubleValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "objectKey", n => { ObjectKey = n.GetStringValue(); } },
-                { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsOptionDTO>(global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsOptionDTO.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ObjectsOptionDTO>(global::Soenneker.HighLevel.OpenApiClient.Models.ObjectsOptionDTO.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "parentId", n => { ParentId = n.GetStringValue(); } },
                 { "placeholder", n => { Placeholder = n.GetStringValue(); } },
                 { "showInForms", n => { ShowInForms = n.GetBoolValue(); } },
@@ -150,9 +150,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsICustomField_acceptedFormats>("acceptedFormats", AcceptedFormats);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ObjectsICustomField_acceptedFormats>("acceptedFormats", AcceptedFormats);
             writer.WriteBoolValue("allowCustomOption", AllowCustomOption);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsICustomField_dataType>("dataType", DataType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ObjectsICustomField_dataType>("dataType", DataType);
             writer.WriteDateTimeOffsetValue("dateAdded", DateAdded);
             writer.WriteDateTimeOffsetValue("dateUpdated", DateUpdated);
             writer.WriteStringValue("description", Description);
@@ -162,7 +162,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteDoubleValue("maxFileLimit", MaxFileLimit);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("objectKey", ObjectKey);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsOptionDTO>("options", Options);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ObjectsOptionDTO>("options", Options);
             writer.WriteStringValue("parentId", ParentId);
             writer.WriteStringValue("placeholder", Placeholder);
             writer.WriteBoolValue("showInForms", ShowInForms);

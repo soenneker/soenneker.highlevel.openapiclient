@@ -5,7 +5,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 {
     /// <summary>Type of field that you are trying to create</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum CustomFieldsCreateCustomFieldsDTO_dataType
+    public enum CreateCustomFieldsDTO_dataType
     {
         [EnumMember(Value = "TEXT")]
         #pragma warning disable CS1591
