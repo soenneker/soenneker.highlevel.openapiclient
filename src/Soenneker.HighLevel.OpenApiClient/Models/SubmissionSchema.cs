@@ -57,10 +57,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The others property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.OthersSchema? Others { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SurveysOthersSchema? Others { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.OthersSchema Others { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SurveysOthersSchema Others { get; set; }
 #endif
         /// <summary>The surveyId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -100,7 +100,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "email", n => { Email = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "others", n => { Others = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.OthersSchema>(global::Soenneker.HighLevel.OpenApiClient.Models.OthersSchema.CreateFromDiscriminatorValue); } },
+                { "others", n => { Others = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SurveysOthersSchema>(global::Soenneker.HighLevel.OpenApiClient.Models.SurveysOthersSchema.CreateFromDiscriminatorValue); } },
                 { "surveyId", n => { SurveyId = n.GetStringValue(); } },
             };
         }
@@ -116,7 +116,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("email", Email);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.OthersSchema>("others", Others);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SurveysOthersSchema>("others", Others);
             writer.WriteStringValue("surveyId", SurveyId);
             writer.WriteAdditionalData(AdditionalData);
         }

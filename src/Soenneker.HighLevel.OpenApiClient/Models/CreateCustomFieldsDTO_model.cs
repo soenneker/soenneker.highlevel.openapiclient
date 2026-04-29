@@ -3,9 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HighLevel.OpenApiClient.Models
 {
-    /// <summary>Model of the custom field you want to update</summary>
+    /// <summary>Model of the custom field you want to create</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum LocationsUpdateCustomFieldsDTO_model
+    public enum CreateCustomFieldsDTO_model
     {
         [EnumMember(Value = "contact")]
         #pragma warning disable CS1591
