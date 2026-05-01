@@ -68,6 +68,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #endif
         /// <summary>The creation timestamp of the order.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
+        /// <summary>User ID who created the order.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CreatedBy { get; set; }
+#nullable restore
+#else
+        public string CreatedBy { get; set; }
+#endif
         /// <summary>Currency in which order was created.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -196,6 +204,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "contactSnapshot", n => { ContactSnapshot = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchema_contactSnapshot>(global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchema_contactSnapshot.CreateFromDiscriminatorValue); } },
                 { "coupon", n => { Coupon = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchema_coupon>(global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchema_coupon.CreateFromDiscriminatorValue); } },
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
+                { "createdBy", n => { CreatedBy = n.GetStringValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "fingerprint", n => { Fingerprint = n.GetStringValue(); } },
                 { "fulfillmentStatus", n => { FulfillmentStatus = n.GetStringValue(); } },
@@ -228,6 +237,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchema_contactSnapshot>("contactSnapshot", ContactSnapshot);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchema_coupon>("coupon", Coupon);
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
+            writer.WriteStringValue("createdBy", CreatedBy);
             writer.WriteStringValue("currency", Currency);
             writer.WriteStringValue("fingerprint", Fingerprint);
             writer.WriteStringValue("fulfillmentStatus", FulfillmentStatus);

@@ -35,7 +35,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Payments.Subscriptions
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SubscriptionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/payments/subscriptions?altId={altId}&altType={altType}{&contactId*,endAt*,entityId*,entitySourceType*,id*,limit*,offset*,paymentMode*,search*,startAt*}", pathParameters)
+        public SubscriptionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/payments/subscriptions?altId={altId}&altType={altType}{&contactId*,endAt*,entityId*,entitySourceType*,getPaymentsCollectedCount*,id*,limit*,offset*,paymentMode*,search*,startAt*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Payments.Subscriptions
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SubscriptionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/payments/subscriptions?altId={altId}&altType={altType}{&contactId*,endAt*,entityId*,entitySourceType*,id*,limit*,offset*,paymentMode*,search*,startAt*}", rawUrl)
+        public SubscriptionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/payments/subscriptions?altId={altId}&altType={altType}{&contactId*,endAt*,entityId*,entitySourceType*,getPaymentsCollectedCount*,id*,limit*,offset*,paymentMode*,search*,startAt*}", rawUrl)
         {
         }
         /// <summary>
@@ -54,7 +54,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Payments.Subscriptions
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasBadRequestDTO">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDTO">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.UnprocessableDTO">When receiving a 422 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnprocessableDTO">When receiving a 422 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.ListSubscriptionResponseDto?> GetAsync(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Payments.Subscriptions.SubscriptionsRequestBuilder.SubscriptionsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -69,7 +69,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Payments.Subscriptions
             {
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasBadRequestDTO.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDTO.CreateFromDiscriminatorValue },
-                { "422", global::Soenneker.HighLevel.OpenApiClient.Models.UnprocessableDTO.CreateFromDiscriminatorValue },
+                { "422", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnprocessableDTO.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.ListSubscriptionResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.ListSubscriptionResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -160,6 +160,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Payments.Subscriptions
             [QueryParameter("entitySourceType")]
             public string EntitySourceType { get; set; }
 #endif
+            /// <summary>Get the total payments collected for the subscription.</summary>
+            [QueryParameter("getPaymentsCollectedCount")]
+            public bool? GetPaymentsCollectedCount { get; set; }
             /// <summary>Subscription id for filtering of subscriptions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

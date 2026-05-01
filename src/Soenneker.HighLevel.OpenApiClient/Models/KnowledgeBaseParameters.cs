@@ -22,22 +22,6 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string KnowledgeBaseId { get; set; }
 #endif
-        /// <summary>Additional parameters for the knowledge base query</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParameterDTO>? Parameters { get; set; }
-#nullable restore
-#else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParameterDTO> Parameters { get; set; }
-#endif
-        /// <summary>Message to tell the caller</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? TriggerMessage { get; set; }
-#nullable restore
-#else
-        public string TriggerMessage { get; set; }
-#endif
         /// <summary>When to query the knowledge base</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -72,8 +56,6 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "knowledgeBaseId", n => { KnowledgeBaseId = n.GetStringValue(); } },
-                { "parameters", n => { Parameters = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParameterDTO>(global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParameterDTO.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "triggerMessage", n => { TriggerMessage = n.GetStringValue(); } },
                 { "triggerPrompt", n => { TriggerPrompt = n.GetStringValue(); } },
             };
         }
@@ -85,8 +67,6 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("knowledgeBaseId", KnowledgeBaseId);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParameterDTO>("parameters", Parameters);
-            writer.WriteStringValue("triggerMessage", TriggerMessage);
             writer.WriteStringValue("triggerPrompt", TriggerPrompt);
             writer.WriteAdditionalData(AdditionalData);
         }

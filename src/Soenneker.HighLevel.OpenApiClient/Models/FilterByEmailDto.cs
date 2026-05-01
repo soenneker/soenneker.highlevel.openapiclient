@@ -24,13 +24,13 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #endif
         /// <summary>Filter deleted users</summary>
         public bool? Deleted { get; set; }
-        /// <summary>Array of email addresses to filter users</summary>
+        /// <summary>Comma-separated list of email addresses to filter users</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Emails { get; set; }
+        public string? Emails { get; set; }
 #nullable restore
 #else
-        public List<string> Emails { get; set; }
+        public string Emails { get; set; }
 #endif
         /// <summary>No of results to be limited before returning the result</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -85,7 +85,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             {
                 { "companyId", n => { CompanyId = n.GetStringValue(); } },
                 { "deleted", n => { Deleted = n.GetBoolValue(); } },
-                { "emails", n => { Emails = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "emails", n => { Emails = n.GetStringValue(); } },
                 { "limit", n => { Limit = n.GetStringValue(); } },
                 { "projection", n => { Projection = n.GetStringValue(); } },
                 { "skip", n => { Skip = n.GetStringValue(); } },
@@ -100,7 +100,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("companyId", CompanyId);
             writer.WriteBoolValue("deleted", Deleted);
-            writer.WriteCollectionOfPrimitiveValues<string>("emails", Emails);
+            writer.WriteStringValue("emails", Emails);
             writer.WriteStringValue("limit", Limit);
             writer.WriteStringValue("projection", Projection);
             writer.WriteStringValue("skip", Skip);

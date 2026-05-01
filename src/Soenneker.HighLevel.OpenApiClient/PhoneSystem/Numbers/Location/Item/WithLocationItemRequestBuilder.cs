@@ -4,6 +4,8 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.HighLevel.OpenApiClient.Models;
+using Soenneker.HighLevel.OpenApiClient.PhoneSystem.Numbers.Location.Item.Available;
+using Soenneker.HighLevel.OpenApiClient.PhoneSystem.Numbers.Location.Item.Purchase;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -17,6 +19,16 @@ namespace Soenneker.HighLevel.OpenApiClient.PhoneSystem.Numbers.Location.Item
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithLocationItemRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The available property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.PhoneSystem.Numbers.Location.Item.Available.AvailableRequestBuilder Available
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.PhoneSystem.Numbers.Location.Item.Available.AvailableRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The purchase property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.PhoneSystem.Numbers.Location.Item.Purchase.PurchaseRequestBuilder Purchase
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.PhoneSystem.Numbers.Location.Item.Purchase.PurchaseRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.PhoneSystem.Numbers.Location.Item.WithLocationItemRequestBuilder"/> and sets the default values.
         /// </summary>

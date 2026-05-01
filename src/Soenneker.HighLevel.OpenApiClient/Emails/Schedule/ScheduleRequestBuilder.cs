@@ -43,7 +43,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Emails.Schedule
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDTO">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.InvalidLocationDTO">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.NotFoundDTO">When receiving a 404 status code</exception>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.UnprocessableDTO">When receiving a 422 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnprocessableDTO">When receiving a 422 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleFetchSuccessfulDTO?> GetAsync(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Emails.Schedule.ScheduleRequestBuilder.ScheduleRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -60,7 +60,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Emails.Schedule
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDTO.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.HighLevel.OpenApiClient.Models.InvalidLocationDTO.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.HighLevel.OpenApiClient.Models.NotFoundDTO.CreateFromDiscriminatorValue },
-                { "422", global::Soenneker.HighLevel.OpenApiClient.Models.UnprocessableDTO.CreateFromDiscriminatorValue },
+                { "422", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnprocessableDTO.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleFetchSuccessfulDTO>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleFetchSuccessfulDTO.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

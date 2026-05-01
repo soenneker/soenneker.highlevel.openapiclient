@@ -40,14 +40,6 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public global::Soenneker.HighLevel.OpenApiClient.Models.CallActionSchema_actionType? ActionType { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Action description</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Description { get; set; }
-#nullable restore
-#else
-        public string Description { get; set; }
-#endif
         /// <summary>When the action was executed</summary>
         public DateTimeOffset? ExecutedAt { get; set; }
         /// <summary>When the trigger was received</summary>
@@ -81,7 +73,6 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "actionName", n => { ActionName = n.GetStringValue(); } },
                 { "actionParameters", n => { ActionParameters = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CallActionSchema.CallActionSchema_actionParameters>(global::Soenneker.HighLevel.OpenApiClient.Models.CallActionSchema.CallActionSchema_actionParameters.CreateFromDiscriminatorValue); } },
                 { "actionType", n => { ActionType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CallActionSchema_actionType>(); } },
-                { "description", n => { Description = n.GetStringValue(); } },
                 { "executedAt", n => { ExecutedAt = n.GetDateTimeOffsetValue(); } },
                 { "triggerReceivedAt", n => { TriggerReceivedAt = n.GetDateTimeOffsetValue(); } },
             };
@@ -97,7 +88,6 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("actionName", ActionName);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CallActionSchema.CallActionSchema_actionParameters>("actionParameters", ActionParameters);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CallActionSchema_actionType>("actionType", ActionType);
-            writer.WriteStringValue("description", Description);
             writer.WriteDateTimeOffsetValue("executedAt", ExecutedAt);
             writer.WriteDateTimeOffsetValue("triggerReceivedAt", TriggerReceivedAt);
             writer.WriteAdditionalData(AdditionalData);

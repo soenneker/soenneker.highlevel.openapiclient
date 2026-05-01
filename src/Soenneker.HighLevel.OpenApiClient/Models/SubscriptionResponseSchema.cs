@@ -52,6 +52,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #endif
         /// <summary>The creation timestamp of the subscription.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
+        /// <summary>User ID who created the subscription.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CreatedBy { get; set; }
+#nullable restore
+#else
+        public string CreatedBy { get; set; }
+#endif
         /// <summary>Currency in which subscription occurred.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -200,6 +208,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "contactId", n => { ContactId = n.GetStringValue(); } },
                 { "contactName", n => { ContactName = n.GetStringValue(); } },
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
+                { "createdBy", n => { CreatedBy = n.GetStringValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "entityId", n => { EntityId = n.GetStringValue(); } },
                 { "entitySourceId", n => { EntitySourceId = n.GetStringValue(); } },
@@ -232,6 +241,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("contactId", ContactId);
             writer.WriteStringValue("contactName", ContactName);
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
+            writer.WriteStringValue("createdBy", CreatedBy);
             writer.WriteStringValue("currency", Currency);
             writer.WriteStringValue("entityId", EntityId);
             writer.WriteStringValue("entitySourceId", EntitySourceId);

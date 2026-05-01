@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.HighLevel.OpenApiClient.Marketplace.App.Item.Installations;
+using Soenneker.HighLevel.OpenApiClient.Marketplace.App.Item.RebillingConfig;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -19,6 +20,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Marketplace.App.Item
         public global::Soenneker.HighLevel.OpenApiClient.Marketplace.App.Item.Installations.InstallationsRequestBuilder Installations
         {
             get => new global::Soenneker.HighLevel.OpenApiClient.Marketplace.App.Item.Installations.InstallationsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The rebillingConfig property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Marketplace.App.Item.RebillingConfig.RebillingConfigRequestBuilder RebillingConfig
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Marketplace.App.Item.RebillingConfig.RebillingConfigRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Marketplace.App.Item.WithAppItemRequestBuilder"/> and sets the default values.

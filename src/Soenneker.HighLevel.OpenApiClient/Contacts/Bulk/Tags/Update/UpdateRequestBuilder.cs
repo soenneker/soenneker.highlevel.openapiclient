@@ -16,7 +16,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Contacts.Bulk.Tags.Update
     public partial class UpdateRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.HighLevel.OpenApiClient.contacts.bulk.tags.update.item collection</summary>
-        /// <param name="position">Tags operation type</param>
+        /// <param name="position">Unique identifier of the item</param>
         /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Contacts.Bulk.Tags.Update.Item.WithTypeItemRequestBuilder"/></returns>
         public global::Soenneker.HighLevel.OpenApiClient.Contacts.Bulk.Tags.Update.Item.WithTypeItemRequestBuilder this[string position]
         {

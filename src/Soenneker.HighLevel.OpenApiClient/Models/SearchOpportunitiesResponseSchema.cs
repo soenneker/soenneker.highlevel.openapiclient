@@ -25,10 +25,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The calendarEvents property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? CalendarEvents { get; set; }
+        public UntypedNode? CalendarEvents { get; set; }
 #nullable restore
 #else
-        public List<string> CalendarEvents { get; set; }
+        public UntypedNode CalendarEvents { get; set; }
 #endif
         /// <summary>The contact property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -61,6 +61,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #nullable restore
 #else
         public List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchema> CustomFields { get; set; }
+#endif
+        /// <summary>The externalObjectId property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ExternalObjectId { get; set; }
+#nullable restore
+#else
+        public string ExternalObjectId { get; set; }
 #endif
         /// <summary>The followers property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -118,6 +126,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string LocationId { get; set; }
 #endif
+        /// <summary>The lostReasonId property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? LostReasonId { get; set; }
+#nullable restore
+#else
+        public string LostReasonId { get; set; }
+#endif
         /// <summary>The monetaryValue property</summary>
         public double? MonetaryValue { get; set; }
         /// <summary>The name property</summary>
@@ -131,10 +147,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The notes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Notes { get; set; }
+        public UntypedNode? Notes { get; set; }
 #nullable restore
 #else
-        public List<string> Notes { get; set; }
+        public UntypedNode Notes { get; set; }
 #endif
         /// <summary>The pipelineId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -171,10 +187,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The tasks property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Tasks { get; set; }
+        public UntypedNode? Tasks { get; set; }
 #nullable restore
 #else
-        public List<string> Tasks { get; set; }
+        public UntypedNode Tasks { get; set; }
 #endif
         /// <summary>The updatedAt property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -210,11 +226,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "assignedTo", n => { AssignedTo = n.GetStringValue(); } },
-                { "calendarEvents", n => { CalendarEvents = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "calendarEvents", n => { CalendarEvents = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "contact", n => { Contact = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SearchOpportunitiesContactResponseSchema>(global::Soenneker.HighLevel.OpenApiClient.Models.SearchOpportunitiesContactResponseSchema.CreateFromDiscriminatorValue); } },
                 { "contactId", n => { ContactId = n.GetStringValue(); } },
                 { "createdAt", n => { CreatedAt = n.GetStringValue(); } },
                 { "customFields", n => { CustomFields = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchema>(global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchema.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "externalObjectId", n => { ExternalObjectId = n.GetStringValue(); } },
                 { "followers", n => { Followers = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "indexVersion", n => { IndexVersion = n.GetStringValue(); } },
@@ -222,14 +239,15 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "lastStageChangeAt", n => { LastStageChangeAt = n.GetStringValue(); } },
                 { "lastStatusChangeAt", n => { LastStatusChangeAt = n.GetStringValue(); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
+                { "lostReasonId", n => { LostReasonId = n.GetStringValue(); } },
                 { "monetaryValue", n => { MonetaryValue = n.GetDoubleValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "notes", n => { Notes = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "notes", n => { Notes = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "pipelineId", n => { PipelineId = n.GetStringValue(); } },
                 { "pipelineStageId", n => { PipelineStageId = n.GetStringValue(); } },
                 { "source", n => { Source = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
-                { "tasks", n => { Tasks = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "tasks", n => { Tasks = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "updatedAt", n => { UpdatedAt = n.GetStringValue(); } },
             };
         }
@@ -241,11 +259,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("assignedTo", AssignedTo);
-            writer.WriteCollectionOfPrimitiveValues<string>("calendarEvents", CalendarEvents);
+            writer.WriteObjectValue<UntypedNode>("calendarEvents", CalendarEvents);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SearchOpportunitiesContactResponseSchema>("contact", Contact);
             writer.WriteStringValue("contactId", ContactId);
             writer.WriteStringValue("createdAt", CreatedAt);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchema>("customFields", CustomFields);
+            writer.WriteStringValue("externalObjectId", ExternalObjectId);
             writer.WriteObjectValue<UntypedNode>("followers", Followers);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("indexVersion", IndexVersion);
@@ -253,14 +272,15 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("lastStageChangeAt", LastStageChangeAt);
             writer.WriteStringValue("lastStatusChangeAt", LastStatusChangeAt);
             writer.WriteStringValue("locationId", LocationId);
+            writer.WriteStringValue("lostReasonId", LostReasonId);
             writer.WriteDoubleValue("monetaryValue", MonetaryValue);
             writer.WriteStringValue("name", Name);
-            writer.WriteCollectionOfPrimitiveValues<string>("notes", Notes);
+            writer.WriteObjectValue<UntypedNode>("notes", Notes);
             writer.WriteStringValue("pipelineId", PipelineId);
             writer.WriteStringValue("pipelineStageId", PipelineStageId);
             writer.WriteStringValue("source", Source);
             writer.WriteStringValue("status", Status);
-            writer.WriteCollectionOfPrimitiveValues<string>("tasks", Tasks);
+            writer.WriteObjectValue<UntypedNode>("tasks", Tasks);
             writer.WriteStringValue("updatedAt", UpdatedAt);
             writer.WriteAdditionalData(AdditionalData);
         }

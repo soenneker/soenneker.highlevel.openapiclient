@@ -8,6 +8,7 @@ using Soenneker.HighLevel.OpenApiClient.Calendars.Events;
 using Soenneker.HighLevel.OpenApiClient.Calendars.Groups;
 using Soenneker.HighLevel.OpenApiClient.Calendars.Item;
 using Soenneker.HighLevel.OpenApiClient.Calendars.Resources;
+using Soenneker.HighLevel.OpenApiClient.Calendars.Schedules;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -49,6 +50,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Calendars
         public global::Soenneker.HighLevel.OpenApiClient.Calendars.Resources.ResourcesRequestBuilder Resources
         {
             get => new global::Soenneker.HighLevel.OpenApiClient.Calendars.Resources.ResourcesRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The schedules property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Calendars.Schedules.SchedulesRequestBuilder Schedules
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Calendars.Schedules.SchedulesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.HighLevel.OpenApiClient.calendars.item collection</summary>
         /// <param name="position">Calendar Id</param>

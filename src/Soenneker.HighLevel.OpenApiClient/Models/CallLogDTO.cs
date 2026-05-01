@@ -34,7 +34,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public DateTimeOffset? CreatedAt { get; set; }
         /// <summary>Call duration in seconds</summary>
         public double? Duration { get; set; }
-        /// <summary>Actions performed during the call</summary>
+        /// <summary>&quot;Actions performed during the call. Note: The APPOINTMENT_BOOKING action will only be visible in executedCallActions from Sep 9th 2025.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HighLevel.OpenApiClient.Models.CallActionSchema>? ExecutedCallActions { get; set; }

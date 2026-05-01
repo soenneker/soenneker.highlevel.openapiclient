@@ -4,6 +4,7 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.HighLevel.OpenApiClient.Marketplace.App;
 using Soenneker.HighLevel.OpenApiClient.Marketplace.Billing;
+using Soenneker.HighLevel.OpenApiClient.Marketplace.ExternalAuth;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -25,6 +26,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Marketplace
         public global::Soenneker.HighLevel.OpenApiClient.Marketplace.Billing.BillingRequestBuilder Billing
         {
             get => new global::Soenneker.HighLevel.OpenApiClient.Marketplace.Billing.BillingRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The externalAuth property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Marketplace.ExternalAuth.ExternalAuthRequestBuilder ExternalAuth
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Marketplace.ExternalAuth.ExternalAuthRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Marketplace.MarketplaceRequestBuilder"/> and sets the default values.

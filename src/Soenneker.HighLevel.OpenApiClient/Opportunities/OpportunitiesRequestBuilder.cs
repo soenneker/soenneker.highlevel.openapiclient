@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.HighLevel.OpenApiClient.Opportunities.Item;
+using Soenneker.HighLevel.OpenApiClient.Opportunities.LostReason;
 using Soenneker.HighLevel.OpenApiClient.Opportunities.Pipelines;
 using Soenneker.HighLevel.OpenApiClient.Opportunities.Search;
 using Soenneker.HighLevel.OpenApiClient.Opportunities.Upsert;
@@ -22,6 +23,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Opportunities
         public global::Soenneker.HighLevel.OpenApiClient.Opportunities.EmptyPathSegmentRequestBuilder EmptyPathSegment
         {
             get => new global::Soenneker.HighLevel.OpenApiClient.Opportunities.EmptyPathSegmentRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The lostReason property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Opportunities.LostReason.LostReasonRequestBuilder LostReason
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Opportunities.LostReason.LostReasonRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The pipelines property</summary>
         public global::Soenneker.HighLevel.OpenApiClient.Opportunities.Pipelines.PipelinesRequestBuilder Pipelines

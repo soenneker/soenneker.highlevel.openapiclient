@@ -95,7 +95,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentBookingActionParameters"/>, <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CallTransferActionParameters"/>, <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParameters"/>, <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.DataExtractionActionParameters"/>, <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.InCallDataExtractionActionParameters"/>, <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.SMSParameters"/>, <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.WorkflowTriggerParameters"/>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentBookingActionParameters"/>, <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CallTransferActionParameters"/>, <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParameters"/>, <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.DataExtractionActionParameters"/>, <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.InCallDataExtractionActionParameters"/>, <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.KnowledgeBaseParameters"/>, <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.SMSParameters"/>, <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.WorkflowTriggerParameters"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class UpdateSingleActionDTO_actionParameters : IComposedTypeWrapper, IParsable
@@ -139,6 +139,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #nullable restore
 #else
             public global::Soenneker.HighLevel.OpenApiClient.Models.InCallDataExtractionActionParameters InCallDataExtractionActionParameters { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.KnowledgeBaseParameters"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HighLevel.OpenApiClient.Models.KnowledgeBaseParameters? KnowledgeBaseParameters { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HighLevel.OpenApiClient.Models.KnowledgeBaseParameters KnowledgeBaseParameters { get; set; }
 #endif
             /// <summary>Composed type representation for type <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.SMSParameters"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -186,6 +194,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 {
                     result.InCallDataExtractionActionParameters = new global::Soenneker.HighLevel.OpenApiClient.Models.InCallDataExtractionActionParameters();
                 }
+                else if("KnowledgeBaseParameters".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.KnowledgeBaseParameters = new global::Soenneker.HighLevel.OpenApiClient.Models.KnowledgeBaseParameters();
+                }
                 else if("SMSParameters".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
                     result.SMSParameters = new global::Soenneker.HighLevel.OpenApiClient.Models.SMSParameters();
@@ -221,6 +233,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 else if(InCallDataExtractionActionParameters != null)
                 {
                     return InCallDataExtractionActionParameters.GetFieldDeserializers();
+                }
+                else if(KnowledgeBaseParameters != null)
+                {
+                    return KnowledgeBaseParameters.GetFieldDeserializers();
                 }
                 else if(SMSParameters != null)
                 {
@@ -258,6 +274,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 else if(InCallDataExtractionActionParameters != null)
                 {
                     writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.InCallDataExtractionActionParameters>(null, InCallDataExtractionActionParameters);
+                }
+                else if(KnowledgeBaseParameters != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.KnowledgeBaseParameters>(null, KnowledgeBaseParameters);
                 }
                 else if(SMSParameters != null)
                 {

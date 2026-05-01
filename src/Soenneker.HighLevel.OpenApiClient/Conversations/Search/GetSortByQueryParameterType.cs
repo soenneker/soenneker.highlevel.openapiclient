@@ -20,5 +20,13 @@ namespace Soenneker.HighLevel.OpenApiClient.Conversations.Search
         #pragma warning disable CS1591
         Score_profile,
         #pragma warning restore CS1591
+        [EnumMember(Value = "overdue_at")]
+        #pragma warning disable CS1591
+        Overdue_at,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "due_at")]
+        #pragma warning disable CS1591
+        Due_at,
+        #pragma warning restore CS1591
     }
 }

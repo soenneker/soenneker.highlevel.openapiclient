@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Item.Attachments;
 using Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Item.Locations;
 using Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Item.Schedule;
 using Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Item.Status;
@@ -20,6 +21,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Item
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ItemRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The attachments property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Item.Attachments.AttachmentsRequestBuilder Attachments
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Item.Attachments.AttachmentsRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The locations property</summary>
         public global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Item.Locations.LocationsRequestBuilder Locations
         {

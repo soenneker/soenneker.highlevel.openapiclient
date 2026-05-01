@@ -16,7 +16,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The type property</summary>
         public global::Soenneker.HighLevel.OpenApiClient.Models.LateFeesMaxFeesDto_type? Type { get; set; }
-        /// <summary>10</summary>
+        /// <summary>Max late fees to pay</summary>
         public double? Value { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.LateFeesMaxFeesDto"/> and sets the default values.

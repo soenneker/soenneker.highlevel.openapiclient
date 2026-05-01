@@ -68,6 +68,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #endif
         /// <summary>The creation timestamp of the transaction.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
+        /// <summary>User ID who created the transaction.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CreatedBy { get; set; }
+#nullable restore
+#else
+        public string CreatedBy { get; set; }
+#endif
         /// <summary>Currency in which transaction was made.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -232,6 +240,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "contactId", n => { ContactId = n.GetStringValue(); } },
                 { "contactSnapshot", n => { ContactSnapshot = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetTxnResponseSchema_contactSnapshot>(global::Soenneker.HighLevel.OpenApiClient.Models.GetTxnResponseSchema_contactSnapshot.CreateFromDiscriminatorValue); } },
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
+                { "createdBy", n => { CreatedBy = n.GetStringValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "entityId", n => { EntityId = n.GetStringValue(); } },
                 { "entitySource", n => { EntitySource = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetTxnResponseSchema_entitySource>(global::Soenneker.HighLevel.OpenApiClient.Models.GetTxnResponseSchema_entitySource.CreateFromDiscriminatorValue); } },
@@ -270,6 +279,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("contactId", ContactId);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetTxnResponseSchema_contactSnapshot>("contactSnapshot", ContactSnapshot);
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
+            writer.WriteStringValue("createdBy", CreatedBy);
             writer.WriteStringValue("currency", Currency);
             writer.WriteStringValue("entityId", EntityId);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetTxnResponseSchema_entitySource>("entitySource", EntitySource);

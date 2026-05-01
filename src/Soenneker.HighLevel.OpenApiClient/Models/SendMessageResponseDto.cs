@@ -30,6 +30,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string EmailMessageId { get; set; }
 #endif
+        /// <summary>Optional metadata for forwarded email</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageResponseDto_forwardData? ForwardData { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageResponseDto_forwardData ForwardData { get; set; }
+#endif
         /// <summary>This is the main Message ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -54,6 +62,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string Msg { get; set; }
 #endif
+        /// <summary>Message status</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageResponseDto_status? Status { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageResponseDto"/> and sets the default values.
         /// </summary>
@@ -81,9 +91,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             {
                 { "conversationId", n => { ConversationId = n.GetStringValue(); } },
                 { "emailMessageId", n => { EmailMessageId = n.GetStringValue(); } },
+                { "forwardData", n => { ForwardData = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageResponseDto_forwardData>(global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageResponseDto_forwardData.CreateFromDiscriminatorValue); } },
                 { "messageId", n => { MessageId = n.GetStringValue(); } },
                 { "messageIds", n => { MessageIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "msg", n => { Msg = n.GetStringValue(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageResponseDto_status>(); } },
             };
         }
         /// <summary>
@@ -95,9 +107,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("conversationId", ConversationId);
             writer.WriteStringValue("emailMessageId", EmailMessageId);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageResponseDto_forwardData>("forwardData", ForwardData);
             writer.WriteStringValue("messageId", MessageId);
             writer.WriteCollectionOfPrimitiveValues<string>("messageIds", MessageIds);
             writer.WriteStringValue("msg", Msg);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageResponseDto_status>("status", Status);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

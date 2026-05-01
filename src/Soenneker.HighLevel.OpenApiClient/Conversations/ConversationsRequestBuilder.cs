@@ -5,6 +5,7 @@ using Microsoft.Kiota.Abstractions;
 using Soenneker.HighLevel.OpenApiClient.Conversations.Item;
 using Soenneker.HighLevel.OpenApiClient.Conversations.Locations;
 using Soenneker.HighLevel.OpenApiClient.Conversations.Messages;
+using Soenneker.HighLevel.OpenApiClient.Conversations.Preferences;
 using Soenneker.HighLevel.OpenApiClient.Conversations.Providers;
 using Soenneker.HighLevel.OpenApiClient.Conversations.Search;
 using System.Collections.Generic;
@@ -33,6 +34,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Conversations
         public global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.MessagesRequestBuilder Messages
         {
             get => new global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.MessagesRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The preferences property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Conversations.Preferences.PreferencesRequestBuilder Preferences
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Conversations.Preferences.PreferencesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The providers property</summary>
         public global::Soenneker.HighLevel.OpenApiClient.Conversations.Providers.ProvidersRequestBuilder Providers

@@ -22,7 +22,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Oauth.InstalledLocations
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public InstalledLocationsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/oauth/installedLocations?appId={appId}&companyId={companyId}{&isInstalled*,limit*,onTrial*,planId*,query*,skip*,versionId*}", pathParameters)
+        public InstalledLocationsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/oauth/installedLocations?appId={appId}&companyId={companyId}{&isInstalled*,limit*,locationId*,onTrial*,planId*,query*,skip*,versionId*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Oauth.InstalledLocations
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public InstalledLocationsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/oauth/installedLocations?appId={appId}&companyId={companyId}{&isInstalled*,limit*,onTrial*,planId*,query*,skip*,versionId*}", rawUrl)
+        public InstalledLocationsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/oauth/installedLocations?appId={appId}&companyId={companyId}{&isInstalled*,limit*,locationId*,onTrial*,planId*,query*,skip*,versionId*}", rawUrl)
         {
         }
         /// <summary>
@@ -41,7 +41,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Oauth.InstalledLocations
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasBadRequestDTO">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDTO">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.UnprocessableDTO">When receiving a 422 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnprocessableDTO">When receiving a 422 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.GetInstalledLocationsSuccessfulResponseDto?> GetAsync(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Oauth.InstalledLocations.InstalledLocationsRequestBuilder.InstalledLocationsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -56,7 +56,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Oauth.InstalledLocations
             {
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasBadRequestDTO.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDTO.CreateFromDiscriminatorValue },
-                { "422", global::Soenneker.HighLevel.OpenApiClient.Models.UnprocessableDTO.CreateFromDiscriminatorValue },
+                { "422", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnprocessableDTO.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.GetInstalledLocationsSuccessfulResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.GetInstalledLocationsSuccessfulResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -126,6 +126,16 @@ namespace Soenneker.HighLevel.OpenApiClient.Oauth.InstalledLocations
 #else
             [QueryParameter("limit")]
             public string Limit { get; set; }
+#endif
+            /// <summary>locationId</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("locationId")]
+            public string? LocationId { get; set; }
+#nullable restore
+#else
+            [QueryParameter("locationId")]
+            public string LocationId { get; set; }
 #endif
             /// <summary>Filters out locations which are installed for specified app in trial mode</summary>
             [QueryParameter("onTrial")]

@@ -27,5 +27,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         #pragma warning disable CS1591
         PhoneNumbers,
         #pragma warning restore CS1591
+        [EnumMember(Value = "business")]
+        #pragma warning disable CS1591
+        Business,
+        #pragma warning restore CS1591
     }
 }

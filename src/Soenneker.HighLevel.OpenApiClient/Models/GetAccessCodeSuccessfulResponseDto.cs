@@ -22,6 +22,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Boolean indicating if user approved all locations during bulk installation (only for company tokens)</summary>
+        public bool? ApproveAllLocations { get; set; }
         /// <summary>Approved locations to generate location access token</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -40,6 +42,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #endif
         /// <summary>The expires_in property</summary>
         public double? ExpiresIn { get; set; }
+        /// <summary>Boolean to control if user wants app to be automatically installed to future locations (only for company tokens)</summary>
+        public bool? InstallToFutureLocations { get; set; }
         /// <summary>The isBulkInstallation property</summary>
         public bool? IsBulkInstallation { get; set; }
         /// <summary>Location ID - Present only for Sub-Account Access Token</summary>
@@ -124,9 +128,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "access_token", n => { AccessToken = n.GetStringValue(); } },
+                { "approveAllLocations", n => { ApproveAllLocations = n.GetBoolValue(); } },
                 { "approvedLocations", n => { ApprovedLocations = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "companyId", n => { CompanyId = n.GetStringValue(); } },
                 { "expires_in", n => { ExpiresIn = n.GetDoubleValue(); } },
+                { "installToFutureLocations", n => { InstallToFutureLocations = n.GetBoolValue(); } },
                 { "isBulkInstallation", n => { IsBulkInstallation = n.GetBoolValue(); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
                 { "planId", n => { PlanId = n.GetStringValue(); } },
@@ -145,9 +151,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("access_token", AccessToken);
+            writer.WriteBoolValue("approveAllLocations", ApproveAllLocations);
             writer.WriteCollectionOfPrimitiveValues<string>("approvedLocations", ApprovedLocations);
             writer.WriteStringValue("companyId", CompanyId);
             writer.WriteDoubleValue("expires_in", ExpiresIn);
+            writer.WriteBoolValue("installToFutureLocations", InstallToFutureLocations);
             writer.WriteBoolValue("isBulkInstallation", IsBulkInstallation);
             writer.WriteStringValue("locationId", LocationId);
             writer.WriteStringValue("planId", PlanId);

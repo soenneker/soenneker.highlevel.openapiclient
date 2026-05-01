@@ -16,6 +16,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Conversations.Item.Messages
         #pragma warning disable CS1591
         TYPE_SMS,
         #pragma warning restore CS1591
+        [EnumMember(Value = "TYPE_RCS")]
+        #pragma warning disable CS1591
+        TYPE_RCS,
+        #pragma warning restore CS1591
         [EnumMember(Value = "TYPE_EMAIL")]
         #pragma warning disable CS1591
         TYPE_EMAIL,
@@ -67,6 +71,18 @@ namespace Soenneker.HighLevel.OpenApiClient.Conversations.Item.Messages
         [EnumMember(Value = "TYPE_ACTIVITY_EMPLOYEE_ACTION_LOG")]
         #pragma warning disable CS1591
         TYPE_ACTIVITY_EMPLOYEE_ACTION_LOG,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "TYPE_TIKTOK")]
+        #pragma warning disable CS1591
+        TYPE_TIKTOK,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "TYPE_ACTIVITY_WHATSAPP")]
+        #pragma warning disable CS1591
+        TYPE_ACTIVITY_WHATSAPP,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "TYPE_FORM_SUBMISSION")]
+        #pragma warning disable CS1591
+        TYPE_FORM_SUBMISSION,
         #pragma warning restore CS1591
     }
 }

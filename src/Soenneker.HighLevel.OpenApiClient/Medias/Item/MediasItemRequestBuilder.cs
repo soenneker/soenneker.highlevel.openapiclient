@@ -34,7 +34,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Medias.Item
         {
         }
         /// <summary>
-        /// Deletes specific file or folder from the media library
+        /// Deletes specific file or folder from the media storage
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -71,7 +71,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Medias.Item
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Medias.Item.MediasPostResponse>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Medias.Item.MediasPostResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Deletes specific file or folder from the media library
+        /// Deletes specific file or folder from the media storage
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -121,7 +121,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Medias.Item
             return new global::Soenneker.HighLevel.OpenApiClient.Medias.Item.MediasItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Deletes specific file or folder from the media library
+        /// Deletes specific file or folder from the media storage
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class MediasItemRequestBuilderDeleteQueryParameters 

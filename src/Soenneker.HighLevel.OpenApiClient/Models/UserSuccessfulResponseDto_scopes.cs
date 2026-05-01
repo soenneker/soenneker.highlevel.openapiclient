@@ -124,25 +124,129 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         #pragma warning disable CS1591
         ReportingReportsWrite,
         #pragma warning restore CS1591
+        [EnumMember(Value = "reporting/stats.export")]
+        #pragma warning disable CS1591
+        ReportingStatsExport,
+        #pragma warning restore CS1591
         [EnumMember(Value = "payments.write")]
         #pragma warning disable CS1591
         PaymentsWrite,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "payments/refunds.write")]
-        #pragma warning disable CS1591
-        PaymentsRefundsWrite,
         #pragma warning restore CS1591
         [EnumMember(Value = "payments/records.write")]
         #pragma warning disable CS1591
         PaymentsRecordsWrite,
         #pragma warning restore CS1591
-        [EnumMember(Value = "payments/exports.write")]
+        [EnumMember(Value = "payments/orders.readonly")]
         #pragma warning disable CS1591
-        PaymentsExportsWrite,
+        PaymentsOrdersReadonly,
         #pragma warning restore CS1591
-        [EnumMember(Value = "payments/subscriptionsCancel.write")]
+        [EnumMember(Value = "payments/orders.export")]
         #pragma warning disable CS1591
-        PaymentsSubscriptionsCancelWrite,
+        PaymentsOrdersExport,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "payments/orders.import")]
+        #pragma warning disable CS1591
+        PaymentsOrdersImport,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "payments/orders.collectPayment")]
+        #pragma warning disable CS1591
+        PaymentsOrdersCollectPayment,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "payments/subscriptions.readonly")]
+        #pragma warning disable CS1591
+        PaymentsSubscriptionsReadonly,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "payments/subscriptions.write")]
+        #pragma warning disable CS1591
+        PaymentsSubscriptionsWrite,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "payments/subscriptions.update")]
+        #pragma warning disable CS1591
+        PaymentsSubscriptionsUpdate,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "payments/subscriptions.export")]
+        #pragma warning disable CS1591
+        PaymentsSubscriptionsExport,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "payments/subscriptions.pauseResumeCancel")]
+        #pragma warning disable CS1591
+        PaymentsSubscriptionsPauseResumeCancel,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "payments/subscriptions.sharePaymentMethod")]
+        #pragma warning disable CS1591
+        PaymentsSubscriptionsSharePaymentMethod,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "payments/transactions.readonly")]
+        #pragma warning disable CS1591
+        PaymentsTransactionsReadonly,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "payments/transactions.export")]
+        #pragma warning disable CS1591
+        PaymentsTransactionsExport,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "payments/transactions.import")]
+        #pragma warning disable CS1591
+        PaymentsTransactionsImport,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "payments/transactions.refund")]
+        #pragma warning disable CS1591
+        PaymentsTransactionsRefund,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "payments/transactions.viewReceipts")]
+        #pragma warning disable CS1591
+        PaymentsTransactionsViewReceipts,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "payments/taxesSettings.readonly")]
+        #pragma warning disable CS1591
+        PaymentsTaxesSettingsReadonly,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "payments/settings.readonly")]
+        #pragma warning disable CS1591
+        PaymentsSettingsReadonly,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "payments/taxesSettings.updateInclusiveExclusive")]
+        #pragma warning disable CS1591
+        PaymentsTaxesSettingsUpdateInclusiveExclusive,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "payments/taxesSettings.manageRates")]
+        #pragma warning disable CS1591
+        PaymentsTaxesSettingsManageRates,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "payments/taxesSettings.configureAutomatic")]
+        #pragma warning disable CS1591
+        PaymentsTaxesSettingsConfigureAutomatic,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "products.readonly")]
+        #pragma warning disable CS1591
+        ProductsReadonly,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "products.write")]
+        #pragma warning disable CS1591
+        ProductsWrite,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "products.delete")]
+        #pragma warning disable CS1591
+        ProductsDelete,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "products.duplicate")]
+        #pragma warning disable CS1591
+        ProductsDuplicate,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "products.bulkActions")]
+        #pragma warning disable CS1591
+        ProductsBulkActions,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "payments/settings.write")]
+        #pragma warning disable CS1591
+        PaymentsSettingsWrite,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "payments/settings.configureReceipt")]
+        #pragma warning disable CS1591
+        PaymentsSettingsConfigureReceipt,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "payments/settings.configureSubscription")]
+        #pragma warning disable CS1591
+        PaymentsSettingsConfigureSubscription,
         #pragma warning restore CS1591
         [EnumMember(Value = "invoices.write")]
         #pragma warning disable CS1591
@@ -179,6 +283,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         [EnumMember(Value = "reputation/reviewsAIAgents.write")]
         #pragma warning disable CS1591
         ReputationReviewsAIAgentsWrite,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "reputation/gbp.write")]
+        #pragma warning disable CS1591
+        ReputationGbpWrite,
         #pragma warning restore CS1591
         [EnumMember(Value = "conversations.write")]
         #pragma warning disable CS1591
@@ -476,6 +584,18 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         #pragma warning disable CS1591
         LoginasWrite,
         #pragma warning restore CS1591
+        [EnumMember(Value = "users-sso-login-management.write")]
+        #pragma warning disable CS1591
+        UsersSsoLoginManagementWrite,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "users-sso-login-management.readonly")]
+        #pragma warning disable CS1591
+        UsersSsoLoginManagementReadonly,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "sso-config.write")]
+        #pragma warning disable CS1591
+        SsoConfigWrite,
+        #pragma warning restore CS1591
         [EnumMember(Value = "snapshots/api.readonly")]
         #pragma warning disable CS1591
         SnapshotsApiReadonly,
@@ -544,6 +664,18 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         #pragma warning disable CS1591
         VoiceAiAgentsWrite,
         #pragma warning restore CS1591
+        [EnumMember(Value = "voice-ai-agents.readonly")]
+        #pragma warning disable CS1591
+        VoiceAiAgentsReadonly,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "voice-ai-common.readonly")]
+        #pragma warning disable CS1591
+        VoiceAiCommonReadonly,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "voice-ai-common.write")]
+        #pragma warning disable CS1591
+        VoiceAiCommonWrite,
+        #pragma warning restore CS1591
         [EnumMember(Value = "voice-ai-agent-goals.readonly")]
         #pragma warning disable CS1591
         VoiceAiAgentGoalsReadonly,
@@ -564,13 +696,13 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         #pragma warning disable CS1591
         AgencyLaunchpadReadonly,
         #pragma warning restore CS1591
-        [EnumMember(Value = "launchpad.write")]
+        [EnumMember(Value = "launchpad/location.write")]
         #pragma warning disable CS1591
-        LaunchpadWrite,
+        LaunchpadLocationWrite,
         #pragma warning restore CS1591
-        [EnumMember(Value = "launchpad.readonly")]
+        [EnumMember(Value = "launchpad/location.readonly")]
         #pragma warning disable CS1591
-        LaunchpadReadonly,
+        LaunchpadLocationReadonly,
         #pragma warning restore CS1591
         [EnumMember(Value = "text-ai-agents.write")]
         #pragma warning disable CS1591
@@ -587,6 +719,50 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         [EnumMember(Value = "text-ai-agent-training.write")]
         #pragma warning disable CS1591
         TextAiAgentTrainingWrite,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "text-ai-agents-dashboard.readonly")]
+        #pragma warning disable CS1591
+        TextAiAgentsDashboardReadonly,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "locations.create")]
+        #pragma warning disable CS1591
+        LocationsCreate,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "locations.delete")]
+        #pragma warning disable CS1591
+        LocationsDelete,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "locations.export.list")]
+        #pragma warning disable CS1591
+        LocationsExportList,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "locations.features-limits.manage")]
+        #pragma warning disable CS1591
+        LocationsFeaturesLimitsManage,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "locations.pause-resume")]
+        #pragma warning disable CS1591
+        LocationsPauseResume,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "locations.agency-subaccounts.manage")]
+        #pragma warning disable CS1591
+        LocationsAgencySubaccountsManage,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "locations.billing.manage")]
+        #pragma warning disable CS1591
+        LocationsBillingManage,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "locations.details.manage")]
+        #pragma warning disable CS1591
+        LocationsDetailsManage,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "audit-logs.readonly")]
+        #pragma warning disable CS1591
+        AuditLogsReadonly,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "audit-logs.export")]
+        #pragma warning disable CS1591
+        AuditLogsExport,
         #pragma warning restore CS1591
     }
 }

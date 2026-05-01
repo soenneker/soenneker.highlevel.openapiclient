@@ -14,14 +14,24 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The messages property</summary>
+        /// <summary>Id of the last message in the messages array</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetMessagesByConversationResponseDtoMessages? Messages { get; set; }
+        public string? LastMessageId { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetMessagesByConversationResponseDtoMessages Messages { get; set; }
+        public string LastMessageId { get; set; }
 #endif
+        /// <summary>Array of messages</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GetMessageResponseDto>? Messages { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GetMessageResponseDto> Messages { get; set; }
+#endif
+        /// <summary>Next page value true indicates only 20 message is in the response. Rest of the messages are in the next page. Please use the lastMessageId value in the query to get the next page messages</summary>
+        public bool? NextPage { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GetMessagesByConversationResponseDto"/> and sets the default values.
         /// </summary>
@@ -47,7 +57,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "messages", n => { Messages = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetMessagesByConversationResponseDtoMessages>(global::Soenneker.HighLevel.OpenApiClient.Models.GetMessagesByConversationResponseDtoMessages.CreateFromDiscriminatorValue); } },
+                { "lastMessageId", n => { LastMessageId = n.GetStringValue(); } },
+                { "messages", n => { Messages = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.GetMessageResponseDto>(global::Soenneker.HighLevel.OpenApiClient.Models.GetMessageResponseDto.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "nextPage", n => { NextPage = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -57,7 +69,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetMessagesByConversationResponseDtoMessages>("messages", Messages);
+            writer.WriteStringValue("lastMessageId", LastMessageId);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.GetMessageResponseDto>("messages", Messages);
+            writer.WriteBoolValue("nextPage", NextPage);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

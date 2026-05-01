@@ -34,7 +34,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Medias.Files
         {
         }
         /// <summary>
-        /// Fetches list of files and folders from the media library
+        /// Fetches list of files and folders from the media storage
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GetFilesResponseDTO"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Medias.Files
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.GetFilesResponseDTO>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.GetFilesResponseDTO.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Fetches list of files and folders from the media library
+        /// Fetches list of files and folders from the media storage
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -80,7 +80,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Medias.Files
             return new global::Soenneker.HighLevel.OpenApiClient.Medias.Files.FilesRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Fetches list of files and folders from the media library
+        /// Fetches list of files and folders from the media storage
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class FilesRequestBuilderGetQueryParameters 

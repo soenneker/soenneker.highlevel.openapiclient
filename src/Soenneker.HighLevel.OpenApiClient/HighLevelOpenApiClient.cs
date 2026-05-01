@@ -6,13 +6,18 @@ using Microsoft.Kiota.Serialization.Form;
 using Microsoft.Kiota.Serialization.Json;
 using Microsoft.Kiota.Serialization.Multipart;
 using Microsoft.Kiota.Serialization.Text;
+using Soenneker.HighLevel.OpenApiClient.AdManager;
+using Soenneker.HighLevel.OpenApiClient.AffiliateManager;
+using Soenneker.HighLevel.OpenApiClient.AgentStudio;
 using Soenneker.HighLevel.OpenApiClient.Associations;
 using Soenneker.HighLevel.OpenApiClient.Blogs;
+using Soenneker.HighLevel.OpenApiClient.BrandBoards;
 using Soenneker.HighLevel.OpenApiClient.Businesses;
 using Soenneker.HighLevel.OpenApiClient.Calendars;
 using Soenneker.HighLevel.OpenApiClient.Campaigns;
 using Soenneker.HighLevel.OpenApiClient.Companies;
 using Soenneker.HighLevel.OpenApiClient.Contacts;
+using Soenneker.HighLevel.OpenApiClient.ConversationAi;
 using Soenneker.HighLevel.OpenApiClient.Conversations;
 using Soenneker.HighLevel.OpenApiClient.Courses;
 using Soenneker.HighLevel.OpenApiClient.CustomFields;
@@ -22,6 +27,7 @@ using Soenneker.HighLevel.OpenApiClient.Emails;
 using Soenneker.HighLevel.OpenApiClient.Forms;
 using Soenneker.HighLevel.OpenApiClient.Funnels;
 using Soenneker.HighLevel.OpenApiClient.Invoices;
+using Soenneker.HighLevel.OpenApiClient.KnowledgeBase;
 using Soenneker.HighLevel.OpenApiClient.Links;
 using Soenneker.HighLevel.OpenApiClient.Locations;
 using Soenneker.HighLevel.OpenApiClient.Marketplace;
@@ -53,6 +59,21 @@ namespace Soenneker.HighLevel.OpenApiClient
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class HighLevelOpenApiClient : BaseRequestBuilder
     {
+        /// <summary>The adManager property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.AdManager.AdManagerRequestBuilder AdManager
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.AdManager.AdManagerRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The affiliateManager property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.AffiliateManager.AffiliateManagerRequestBuilder AffiliateManager
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.AffiliateManager.AffiliateManagerRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The agentStudio property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.AgentStudio.AgentStudioRequestBuilder AgentStudio
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.AgentStudio.AgentStudioRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The associations property</summary>
         public global::Soenneker.HighLevel.OpenApiClient.Associations.AssociationsRequestBuilder Associations
         {
@@ -62,6 +83,11 @@ namespace Soenneker.HighLevel.OpenApiClient
         public global::Soenneker.HighLevel.OpenApiClient.Blogs.BlogsRequestBuilder Blogs
         {
             get => new global::Soenneker.HighLevel.OpenApiClient.Blogs.BlogsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The brandBoards property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.BrandBoards.BrandBoardsRequestBuilder BrandBoards
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.BrandBoards.BrandBoardsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The businesses property</summary>
         public global::Soenneker.HighLevel.OpenApiClient.Businesses.BusinessesRequestBuilder Businesses
@@ -87,6 +113,11 @@ namespace Soenneker.HighLevel.OpenApiClient
         public global::Soenneker.HighLevel.OpenApiClient.Contacts.ContactsRequestBuilder Contacts
         {
             get => new global::Soenneker.HighLevel.OpenApiClient.Contacts.ContactsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The conversationAi property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.ConversationAi.ConversationAiRequestBuilder ConversationAi
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.ConversationAi.ConversationAiRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The conversations property</summary>
         public global::Soenneker.HighLevel.OpenApiClient.Conversations.ConversationsRequestBuilder Conversations
@@ -132,6 +163,11 @@ namespace Soenneker.HighLevel.OpenApiClient
         public global::Soenneker.HighLevel.OpenApiClient.Invoices.InvoicesRequestBuilder Invoices
         {
             get => new global::Soenneker.HighLevel.OpenApiClient.Invoices.InvoicesRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The knowledgeBase property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.KnowledgeBase.KnowledgeBaseRequestBuilder KnowledgeBase
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.KnowledgeBase.KnowledgeBaseRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The links property</summary>
         public global::Soenneker.HighLevel.OpenApiClient.Links.LinksRequestBuilder Links

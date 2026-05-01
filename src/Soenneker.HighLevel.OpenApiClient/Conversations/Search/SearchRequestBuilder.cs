@@ -22,7 +22,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Conversations.Search
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SearchRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/conversations/search?locationId={locationId}{&assignedTo*,contactId*,followers*,id*,lastMessageAction*,lastMessageDirection*,lastMessageType*,limit*,mentions*,query*,scoreProfile*,scoreProfileMax*,scoreProfileMin*,sort*,sortBy*,sortScoreProfile*,startAfterDate*,status*}", pathParameters)
+        public SearchRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/conversations/search?locationId={locationId}{&assignedTo*,contactId*,endDate*,followers*,id*,lastMessageAction*,lastMessageDirection*,lastMessageType*,limit*,mentions*,query*,scoreProfile*,scoreProfileMax*,scoreProfileMin*,sort*,sortBy*,sortScoreProfile*,startAfterDate*,startDate*,status*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Conversations.Search
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SearchRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/conversations/search?locationId={locationId}{&assignedTo*,contactId*,followers*,id*,lastMessageAction*,lastMessageDirection*,lastMessageType*,limit*,mentions*,query*,scoreProfile*,scoreProfileMax*,scoreProfileMin*,sort*,sortBy*,sortScoreProfile*,startAfterDate*,status*}", rawUrl)
+        public SearchRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/conversations/search?locationId={locationId}{&assignedTo*,contactId*,endDate*,followers*,id*,lastMessageAction*,lastMessageDirection*,lastMessageType*,limit*,mentions*,query*,scoreProfile*,scoreProfileMax*,scoreProfileMin*,sort*,sortBy*,sortScoreProfile*,startAfterDate*,startDate*,status*}", rawUrl)
         {
         }
         /// <summary>
@@ -112,6 +112,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Conversations.Search
             [QueryParameter("contactId")]
             public string ContactId { get; set; }
 #endif
+            /// <summary>End date filter for dateAdded field (Unix timestamp in milliseconds)</summary>
+            [QueryParameter("endDate")]
+            public double? EndDate { get; set; }
             /// <summary>User IDs of followers to filter conversations by. Multiple IDs can be provided as comma-separated values.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -216,6 +219,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Conversations.Search
             [QueryParameter("startAfterDate")]
             public string StartAfterDate { get; set; }
 #endif
+            /// <summary>Start date filter for dateAdded field (Unix timestamp in milliseconds)</summary>
+            [QueryParameter("startDate")]
+            public double? StartDate { get; set; }
             /// <summary>The status of the conversation to be filtered - all, read, unread, starred </summary>
             [QueryParameter("status")]
             public global::Soenneker.HighLevel.OpenApiClient.Conversations.Search.GetStatusQueryParameterType? Status { get; set; }

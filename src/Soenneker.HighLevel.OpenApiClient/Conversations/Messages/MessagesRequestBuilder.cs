@@ -4,9 +4,11 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Email;
+using Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Export;
 using Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Inbound;
 using Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Item;
 using Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Outbound;
+using Soenneker.HighLevel.OpenApiClient.Conversations.Messages.ReviewReply;
 using Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Upload;
 using Soenneker.HighLevel.OpenApiClient.Models;
 using System.Collections.Generic;
@@ -27,6 +29,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Conversations.Messages
         {
             get => new global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Email.EmailRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The export property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Export.ExportRequestBuilder Export
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Export.ExportRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The inbound property</summary>
         public global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Inbound.InboundRequestBuilder Inbound
         {
@@ -36,6 +43,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Conversations.Messages
         public global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Outbound.OutboundRequestBuilder Outbound
         {
             get => new global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Outbound.OutboundRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The reviewReply property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.ReviewReply.ReviewReplyRequestBuilder ReviewReply
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.ReviewReply.ReviewReplyRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The upload property</summary>
         public global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Upload.UploadRequestBuilder Upload

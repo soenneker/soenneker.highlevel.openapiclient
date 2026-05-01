@@ -73,13 +73,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Price per unit to charge</summary>
         public double? Price { get; set; }
         /// <summary>Number of units to charge</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Units { get; set; }
-#nullable restore
-#else
-        public string Units { get; set; }
-#endif
+        public double? Units { get; set; }
         /// <summary>User ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -121,7 +115,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
                 { "meterId", n => { MeterId = n.GetStringValue(); } },
                 { "price", n => { Price = n.GetDoubleValue(); } },
-                { "units", n => { Units = n.GetStringValue(); } },
+                { "units", n => { Units = n.GetDoubleValue(); } },
                 { "userId", n => { UserId = n.GetStringValue(); } },
             };
         }
@@ -140,7 +134,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("locationId", LocationId);
             writer.WriteStringValue("meterId", MeterId);
             writer.WriteDoubleValue("price", Price);
-            writer.WriteStringValue("units", Units);
+            writer.WriteDoubleValue("units", Units);
             writer.WriteStringValue("userId", UserId);
             writer.WriteAdditionalData(AdditionalData);
         }

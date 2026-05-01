@@ -54,6 +54,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string Country { get; set; }
 #endif
+        /// <summary>&quot;Controls whether to create a new contact or update an existing duplicate. **Scenario 1:** If this value is `true` and the location allows duplicate contacts, a new contact will be created immediately without checking for duplicates. **Scenario 2:** If this value is `true` but the location does not allow duplicate contacts, this field is ignored and the normal upsert behavior applies: the API will search for an existing duplicate contact, update it if found, or create a new contact if not found. **Scenario 3:** If this value is `false` or not provided, the normal upsert behavior applies regardless of the location&apos;s duplicate contact setting.&quot;</summary>
+        public bool? CreateNewIfDuplicateAllowed { get; set; }
         /// <summary>The customFields property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -61,6 +63,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #nullable restore
 #else
         public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpsertContactDto.UpsertContactDto_customFields> CustomFields { get; set; }
+#endif
+        /// <summary>&quot;The birth date of the contact. Supported formats: YYYY/MM/DD, MM/DD/YYYY, YYYY-MM-DD, MM-DD-YYYY, YYYY.MM.DD, MM.DD.YYYY, YYYY_MM_DD, MM_DD_YYYY&quot;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpsertContactDto_dateOfBirth? DateOfBirth { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpsertContactDto_dateOfBirth DateOfBirth { get; set; }
 #endif
         /// <summary>The dnd property</summary>
         public bool? Dnd { get; set; }
@@ -214,7 +224,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "city", n => { City = n.GetStringValue(); } },
                 { "companyName", n => { CompanyName = n.GetStringValue(); } },
                 { "country", n => { Country = n.GetStringValue(); } },
+                { "createNewIfDuplicateAllowed", n => { CreateNewIfDuplicateAllowed = n.GetBoolValue(); } },
                 { "customFields", n => { CustomFields = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.UpsertContactDto.UpsertContactDto_customFields>(global::Soenneker.HighLevel.OpenApiClient.Models.UpsertContactDto.UpsertContactDto_customFields.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "dateOfBirth", n => { DateOfBirth = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpsertContactDto_dateOfBirth>(global::Soenneker.HighLevel.OpenApiClient.Models.UpsertContactDto_dateOfBirth.CreateFromDiscriminatorValue); } },
                 { "dnd", n => { Dnd = n.GetBoolValue(); } },
                 { "dndSettings", n => { DndSettings = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DndSettingsSchema>(global::Soenneker.HighLevel.OpenApiClient.Models.DndSettingsSchema.CreateFromDiscriminatorValue); } },
                 { "email", n => { Email = n.GetStringValue(); } },
@@ -245,7 +257,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("city", City);
             writer.WriteStringValue("companyName", CompanyName);
             writer.WriteStringValue("country", Country);
+            writer.WriteBoolValue("createNewIfDuplicateAllowed", CreateNewIfDuplicateAllowed);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.UpsertContactDto.UpsertContactDto_customFields>("customFields", CustomFields);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpsertContactDto_dateOfBirth>("dateOfBirth", DateOfBirth);
             writer.WriteBoolValue("dnd", Dnd);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DndSettingsSchema>("dndSettings", DndSettings);
             writer.WriteStringValue("email", Email);

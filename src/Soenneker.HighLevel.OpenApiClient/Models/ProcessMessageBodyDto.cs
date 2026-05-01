@@ -38,6 +38,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public global::Soenneker.HighLevel.OpenApiClient.Models.ProcessMessageBodyDto_call Call { get; set; }
 #endif
+        /// <summary>Contact Id</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ContactId { get; set; }
+#nullable restore
+#else
+        public string ContactId { get; set; }
+#endif
         /// <summary>Conversation Id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -158,6 +166,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "altId", n => { AltId = n.GetStringValue(); } },
                 { "attachments", n => { Attachments = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "call", n => { Call = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProcessMessageBodyDto_call>(global::Soenneker.HighLevel.OpenApiClient.Models.ProcessMessageBodyDto_call.CreateFromDiscriminatorValue); } },
+                { "contactId", n => { ContactId = n.GetStringValue(); } },
                 { "conversationId", n => { ConversationId = n.GetStringValue(); } },
                 { "conversationProviderId", n => { ConversationProviderId = n.GetStringValue(); } },
                 { "date", n => { Date = n.GetDateTimeOffsetValue(); } },
@@ -183,6 +192,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("altId", AltId);
             writer.WriteCollectionOfPrimitiveValues<string>("attachments", Attachments);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProcessMessageBodyDto_call>("call", Call);
+            writer.WriteStringValue("contactId", ContactId);
             writer.WriteStringValue("conversationId", ConversationId);
             writer.WriteStringValue("conversationProviderId", ConversationProviderId);
             writer.WriteDateTimeOffsetValue("date", Date);

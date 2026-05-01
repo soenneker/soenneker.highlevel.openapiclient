@@ -12,34 +12,18 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     public partial class UpdateActionResponseDTO : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>Action parameters - structure varies by actionType</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateActionResponseDTO.UpdateActionResponseDTO_actionParameters? ActionParameters { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateActionResponseDTO.UpdateActionResponseDTO_actionParameters ActionParameters { get; set; }
-#endif
-        /// <summary>Type of action</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateActionResponseDTO_actionType? ActionType { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Unique identifier for the created action</summary>
+        /// <summary>Updated action details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateActionResponseDTO_data? Data { get; set; }
 #nullable restore
 #else
-        public string Id { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateActionResponseDTO_data Data { get; set; }
 #endif
-        /// <summary>Human-readable name for this action</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Name { get; set; }
-#nullable restore
-#else
-        public string Name { get; set; }
-#endif
+        /// <summary>Success status of the request</summary>
+        public bool? Success { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpdateActionResponseDTO"/> and sets the default values.
         /// </summary>
@@ -65,10 +49,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "actionParameters", n => { ActionParameters = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateActionResponseDTO.UpdateActionResponseDTO_actionParameters>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateActionResponseDTO.UpdateActionResponseDTO_actionParameters.CreateFromDiscriminatorValue); } },
-                { "actionType", n => { ActionType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateActionResponseDTO_actionType>(); } },
-                { "id", n => { Id = n.GetStringValue(); } },
-                { "name", n => { Name = n.GetStringValue(); } },
+                { "data", n => { Data = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateActionResponseDTO_data>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateActionResponseDTO_data.CreateFromDiscriminatorValue); } },
+                { "success", n => { Success = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -78,186 +60,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateActionResponseDTO.UpdateActionResponseDTO_actionParameters>("actionParameters", ActionParameters);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateActionResponseDTO_actionType>("actionType", ActionType);
-            writer.WriteStringValue("id", Id);
-            writer.WriteStringValue("name", Name);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateActionResponseDTO_data>("data", Data);
+            writer.WriteBoolValue("success", Success);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentBookingActionParameters"/>, <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CallTransferActionParameters"/>, <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParameters"/>, <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.DataExtractionActionParameters"/>, <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.InCallDataExtractionActionParameters"/>, <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.SMSParameters"/>, <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.WorkflowTriggerParameters"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class UpdateActionResponseDTO_actionParameters : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentBookingActionParameters"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentBookingActionParameters? AppointmentBookingActionParameters { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentBookingActionParameters AppointmentBookingActionParameters { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CallTransferActionParameters"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HighLevel.OpenApiClient.Models.CallTransferActionParameters? CallTransferActionParameters { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HighLevel.OpenApiClient.Models.CallTransferActionParameters CallTransferActionParameters { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParameters"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParameters? CustomActionParameters { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParameters CustomActionParameters { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.DataExtractionActionParameters"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HighLevel.OpenApiClient.Models.DataExtractionActionParameters? DataExtractionActionParameters { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HighLevel.OpenApiClient.Models.DataExtractionActionParameters DataExtractionActionParameters { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.InCallDataExtractionActionParameters"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HighLevel.OpenApiClient.Models.InCallDataExtractionActionParameters? InCallDataExtractionActionParameters { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HighLevel.OpenApiClient.Models.InCallDataExtractionActionParameters InCallDataExtractionActionParameters { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.SMSParameters"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HighLevel.OpenApiClient.Models.SMSParameters? SMSParameters { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HighLevel.OpenApiClient.Models.SMSParameters SMSParameters { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.WorkflowTriggerParameters"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HighLevel.OpenApiClient.Models.WorkflowTriggerParameters? WorkflowTriggerParameters { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HighLevel.OpenApiClient.Models.WorkflowTriggerParameters WorkflowTriggerParameters { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpdateActionResponseDTO.UpdateActionResponseDTO_actionParameters"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.HighLevel.OpenApiClient.Models.UpdateActionResponseDTO.UpdateActionResponseDTO_actionParameters CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::Soenneker.HighLevel.OpenApiClient.Models.UpdateActionResponseDTO.UpdateActionResponseDTO_actionParameters();
-                if("AppointmentBookingActionParameters".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.AppointmentBookingActionParameters = new global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentBookingActionParameters();
-                }
-                else if("CallTransferActionParameters".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.CallTransferActionParameters = new global::Soenneker.HighLevel.OpenApiClient.Models.CallTransferActionParameters();
-                }
-                else if("CustomActionParameters".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.CustomActionParameters = new global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParameters();
-                }
-                else if("DataExtractionActionParameters".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.DataExtractionActionParameters = new global::Soenneker.HighLevel.OpenApiClient.Models.DataExtractionActionParameters();
-                }
-                else if("InCallDataExtractionActionParameters".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.InCallDataExtractionActionParameters = new global::Soenneker.HighLevel.OpenApiClient.Models.InCallDataExtractionActionParameters();
-                }
-                else if("SMSParameters".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.SMSParameters = new global::Soenneker.HighLevel.OpenApiClient.Models.SMSParameters();
-                }
-                else if("WorkflowTriggerParameters".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.WorkflowTriggerParameters = new global::Soenneker.HighLevel.OpenApiClient.Models.WorkflowTriggerParameters();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(AppointmentBookingActionParameters != null)
-                {
-                    return AppointmentBookingActionParameters.GetFieldDeserializers();
-                }
-                else if(CallTransferActionParameters != null)
-                {
-                    return CallTransferActionParameters.GetFieldDeserializers();
-                }
-                else if(CustomActionParameters != null)
-                {
-                    return CustomActionParameters.GetFieldDeserializers();
-                }
-                else if(DataExtractionActionParameters != null)
-                {
-                    return DataExtractionActionParameters.GetFieldDeserializers();
-                }
-                else if(InCallDataExtractionActionParameters != null)
-                {
-                    return InCallDataExtractionActionParameters.GetFieldDeserializers();
-                }
-                else if(SMSParameters != null)
-                {
-                    return SMSParameters.GetFieldDeserializers();
-                }
-                else if(WorkflowTriggerParameters != null)
-                {
-                    return WorkflowTriggerParameters.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(AppointmentBookingActionParameters != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentBookingActionParameters>(null, AppointmentBookingActionParameters);
-                }
-                else if(CallTransferActionParameters != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CallTransferActionParameters>(null, CallTransferActionParameters);
-                }
-                else if(CustomActionParameters != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParameters>(null, CustomActionParameters);
-                }
-                else if(DataExtractionActionParameters != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DataExtractionActionParameters>(null, DataExtractionActionParameters);
-                }
-                else if(InCallDataExtractionActionParameters != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.InCallDataExtractionActionParameters>(null, InCallDataExtractionActionParameters);
-                }
-                else if(SMSParameters != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SMSParameters>(null, SMSParameters);
-                }
-                else if(WorkflowTriggerParameters != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.WorkflowTriggerParameters>(null, WorkflowTriggerParameters);
-                }
-            }
         }
     }
 }

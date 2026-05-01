@@ -22,6 +22,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>App ID of the installed application</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AppId { get; set; }
+#nullable restore
+#else
+        public string AppId { get; set; }
+#endif
         /// <summary>Time in seconds remaining for token to expire</summary>
         public double? ExpiresIn { get; set; }
         /// <summary>Location ID - Present only for Sub-Account Access Token</summary>
@@ -64,6 +72,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string UserId { get; set; }
 #endif
+        /// <summary>Version ID of the installed app version</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? VersionId { get; set; }
+#nullable restore
+#else
+        public string VersionId { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationAccessTokenSuccessfulResponseDto"/> and sets the default values.
         /// </summary>
@@ -90,12 +106,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "access_token", n => { AccessToken = n.GetStringValue(); } },
+                { "appId", n => { AppId = n.GetStringValue(); } },
                 { "expires_in", n => { ExpiresIn = n.GetDoubleValue(); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
                 { "planId", n => { PlanId = n.GetStringValue(); } },
                 { "scope", n => { Scope = n.GetStringValue(); } },
                 { "token_type", n => { TokenType = n.GetStringValue(); } },
                 { "userId", n => { UserId = n.GetStringValue(); } },
+                { "versionId", n => { VersionId = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -106,12 +124,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("access_token", AccessToken);
+            writer.WriteStringValue("appId", AppId);
             writer.WriteDoubleValue("expires_in", ExpiresIn);
             writer.WriteStringValue("locationId", LocationId);
             writer.WriteStringValue("planId", PlanId);
             writer.WriteStringValue("scope", Scope);
             writer.WriteStringValue("token_type", TokenType);
             writer.WriteStringValue("userId", UserId);
+            writer.WriteStringValue("versionId", VersionId);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

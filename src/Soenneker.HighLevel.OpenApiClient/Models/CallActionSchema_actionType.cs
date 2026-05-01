@@ -35,5 +35,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         #pragma warning disable CS1591
         CUSTOM_ACTION,
         #pragma warning restore CS1591
+        [EnumMember(Value = "KNOWLEDGE_BASE")]
+        #pragma warning disable CS1591
+        KNOWLEDGE_BASE,
+        #pragma warning restore CS1591
     }
 }

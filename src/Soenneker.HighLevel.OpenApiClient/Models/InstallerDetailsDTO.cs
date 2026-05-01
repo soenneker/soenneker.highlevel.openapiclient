@@ -14,7 +14,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Company email</summary>
+        /// <summary>Company email. Will be null for sub-account installations due to PII concerns.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CompanyEmail { get; set; }
@@ -22,7 +22,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string CompanyEmail { get; set; }
 #endif
-        /// <summary>Company plan</summary>
+        /// <summary>Company plan. Will be null for sub-account installations due to business sensitivity.</summary>
+        [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CompanyHighLevelPlan { get; set; }
@@ -46,13 +47,21 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string CompanyName { get; set; }
 #endif
-        /// <summary>Company owner full name</summary>
+        /// <summary>Company owner full name. Will be null for sub-account installations due to PII concerns.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CompanyOwnerFullName { get; set; }
 #nullable restore
 #else
         public string CompanyOwnerFullName { get; set; }
+#endif
+        /// <summary>Company plan. Will be null for sub-account installations due to business sensitivity.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CompanyPlan { get; set; }
+#nullable restore
+#else
+        public string CompanyPlan { get; set; }
 #endif
         /// <summary>Whether the company is a whitelabel company</summary>
         public bool? IsWhitelabelCompany { get; set; }
@@ -71,6 +80,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #nullable restore
 #else
         public string MarketplaceAppPlanId { get; set; }
+#endif
+        /// <summary>Company relationship number</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? RelationshipNumber { get; set; }
+#nullable restore
+#else
+        public string RelationshipNumber { get; set; }
 #endif
         /// <summary>User ID who installed the app</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -118,9 +135,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "companyId", n => { CompanyId = n.GetStringValue(); } },
                 { "companyName", n => { CompanyName = n.GetStringValue(); } },
                 { "companyOwnerFullName", n => { CompanyOwnerFullName = n.GetStringValue(); } },
+                { "companyPlan", n => { CompanyPlan = n.GetStringValue(); } },
                 { "isWhitelabelCompany", n => { IsWhitelabelCompany = n.GetBoolValue(); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
                 { "marketplaceAppPlanId", n => { MarketplaceAppPlanId = n.GetStringValue(); } },
+                { "relationshipNumber", n => { RelationshipNumber = n.GetStringValue(); } },
                 { "userId", n => { UserId = n.GetStringValue(); } },
                 { "whitelabelDetails", n => { WhitelabelDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.InstallerDetailsDTO_whitelabelDetails>(global::Soenneker.HighLevel.OpenApiClient.Models.InstallerDetailsDTO_whitelabelDetails.CreateFromDiscriminatorValue); } },
             };
@@ -137,9 +156,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("companyId", CompanyId);
             writer.WriteStringValue("companyName", CompanyName);
             writer.WriteStringValue("companyOwnerFullName", CompanyOwnerFullName);
+            writer.WriteStringValue("companyPlan", CompanyPlan);
             writer.WriteBoolValue("isWhitelabelCompany", IsWhitelabelCompany);
             writer.WriteStringValue("locationId", LocationId);
             writer.WriteStringValue("marketplaceAppPlanId", MarketplaceAppPlanId);
+            writer.WriteStringValue("relationshipNumber", RelationshipNumber);
             writer.WriteStringValue("userId", UserId);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.InstallerDetailsDTO_whitelabelDetails>("whitelabelDetails", WhitelabelDetails);
             writer.WriteAdditionalData(AdditionalData);

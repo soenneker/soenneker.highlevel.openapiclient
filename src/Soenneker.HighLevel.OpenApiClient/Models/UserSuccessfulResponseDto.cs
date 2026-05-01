@@ -86,6 +86,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string Phone { get; set; }
 #endif
+        /// <summary>Platform language preference for the user</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UserSuccessfulResponseDto_platformLanguage? PlatformLanguage { get; set; }
         /// <summary>The roles property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -130,6 +132,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "permissions", n => { Permissions = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PermissionsDto>(global::Soenneker.HighLevel.OpenApiClient.Models.PermissionsDto.CreateFromDiscriminatorValue); } },
                 { "phone", n => { Phone = n.GetStringValue(); } },
+                { "platformLanguage", n => { PlatformLanguage = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UserSuccessfulResponseDto_platformLanguage>(); } },
                 { "roles", n => { Roles = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.RoleSchema>(global::Soenneker.HighLevel.OpenApiClient.Models.RoleSchema.CreateFromDiscriminatorValue); } },
                 { "scopes", n => { Scopes = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UserSuccessfulResponseDto_scopes>(); } },
             };
@@ -150,6 +153,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PermissionsDto>("permissions", Permissions);
             writer.WriteStringValue("phone", Phone);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UserSuccessfulResponseDto_platformLanguage>("platformLanguage", PlatformLanguage);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.RoleSchema>("roles", Roles);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UserSuccessfulResponseDto_scopes>("scopes", Scopes);
             writer.WriteAdditionalData(AdditionalData);

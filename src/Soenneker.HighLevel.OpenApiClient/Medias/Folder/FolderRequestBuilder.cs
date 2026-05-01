@@ -34,7 +34,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Medias.Folder
         {
         }
         /// <summary>
-        /// Creates a new folder in the media library
+        /// Creates a new folder in the media storage
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.FolderDTO"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Medias.Folder
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.FolderDTO>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.FolderDTO.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Creates a new folder in the media library
+        /// Creates a new folder in the media storage
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

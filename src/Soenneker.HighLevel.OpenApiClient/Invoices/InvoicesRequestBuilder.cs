@@ -6,6 +6,7 @@ using Soenneker.HighLevel.OpenApiClient.Invoices.Estimate;
 using Soenneker.HighLevel.OpenApiClient.Invoices.GenerateInvoiceNumber;
 using Soenneker.HighLevel.OpenApiClient.Invoices.Item;
 using Soenneker.HighLevel.OpenApiClient.Invoices.Schedule;
+using Soenneker.HighLevel.OpenApiClient.Invoices.Settings;
 using Soenneker.HighLevel.OpenApiClient.Invoices.Stats;
 using Soenneker.HighLevel.OpenApiClient.Invoices.Template;
 using Soenneker.HighLevel.OpenApiClient.Invoices.Text2pay;
@@ -40,6 +41,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Invoices
         public global::Soenneker.HighLevel.OpenApiClient.Invoices.Schedule.ScheduleRequestBuilder Schedule
         {
             get => new global::Soenneker.HighLevel.OpenApiClient.Invoices.Schedule.ScheduleRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The settings property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Invoices.Settings.SettingsRequestBuilder Settings
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Invoices.Settings.SettingsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The stats property</summary>
         public global::Soenneker.HighLevel.OpenApiClient.Invoices.Stats.StatsRequestBuilder Stats

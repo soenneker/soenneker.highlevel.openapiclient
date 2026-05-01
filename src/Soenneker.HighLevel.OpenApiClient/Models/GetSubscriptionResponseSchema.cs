@@ -76,6 +76,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #endif
         /// <summary>The creation timestamp of the subscription.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
+        /// <summary>User ID who created the subscription.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CreatedBy { get; set; }
+#nullable restore
+#else
+        public string CreatedBy { get; set; }
+#endif
         /// <summary>Currency in which subscription was made.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -229,6 +237,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "contactSnapshot", n => { ContactSnapshot = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_contactSnapshot>(global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_contactSnapshot.CreateFromDiscriminatorValue); } },
                 { "coupon", n => { Coupon = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_coupon>(global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_coupon.CreateFromDiscriminatorValue); } },
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
+                { "createdBy", n => { CreatedBy = n.GetStringValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "entityId", n => { EntityId = n.GetStringValue(); } },
                 { "entitySource", n => { EntitySource = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_entitySource>(global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_entitySource.CreateFromDiscriminatorValue); } },
@@ -265,6 +274,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_contactSnapshot>("contactSnapshot", ContactSnapshot);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_coupon>("coupon", Coupon);
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
+            writer.WriteStringValue("createdBy", CreatedBy);
             writer.WriteStringValue("currency", Currency);
             writer.WriteStringValue("entityId", EntityId);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_entitySource>("entitySource", EntitySource);

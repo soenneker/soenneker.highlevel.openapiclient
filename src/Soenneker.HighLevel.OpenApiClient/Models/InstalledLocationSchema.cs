@@ -30,6 +30,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
+        /// <summary>Timestamp when the app was installed on this location</summary>
+        public DateTimeOffset? InstalledAt { get; set; }
         /// <summary>Check if the requested app is installed for following location</summary>
         public bool? IsInstalled { get; set; }
         /// <summary>Name of the location</summary>
@@ -39,6 +41,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #nullable restore
 #else
         public string Name { get; set; }
+#endif
+        /// <summary>Version ID of the installed app version for this location</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? VersionId { get; set; }
+#nullable restore
+#else
+        public string VersionId { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.InstalledLocationSchema"/> and sets the default values.
@@ -67,8 +77,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             {
                 { "address", n => { Address = n.GetStringValue(); } },
                 { "_id", n => { Id = n.GetStringValue(); } },
+                { "installedAt", n => { InstalledAt = n.GetDateTimeOffsetValue(); } },
                 { "isInstalled", n => { IsInstalled = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
+                { "versionId", n => { VersionId = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -80,8 +92,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("address", Address);
             writer.WriteStringValue("_id", Id);
+            writer.WriteDateTimeOffsetValue("installedAt", InstalledAt);
             writer.WriteBoolValue("isInstalled", IsInstalled);
             writer.WriteStringValue("name", Name);
+            writer.WriteStringValue("versionId", VersionId);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

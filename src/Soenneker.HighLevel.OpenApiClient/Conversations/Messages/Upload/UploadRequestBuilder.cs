@@ -3,6 +3,8 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Upload.Complete;
+using Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Upload.Initiate;
 using Soenneker.HighLevel.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
@@ -17,6 +19,16 @@ namespace Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Upload
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UploadRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The complete property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Upload.Complete.CompleteRequestBuilder Complete
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Upload.Complete.CompleteRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The initiate property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Upload.Initiate.InitiateRequestBuilder Initiate
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Upload.Initiate.InitiateRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Upload.UploadRequestBuilder"/> and sets the default values.
         /// </summary>

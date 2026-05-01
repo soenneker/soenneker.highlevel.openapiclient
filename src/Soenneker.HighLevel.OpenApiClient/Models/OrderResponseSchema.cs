@@ -66,6 +66,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #endif
         /// <summary>The creation timestamp of the order.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
+        /// <summary>User ID who created the order.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CreatedBy { get; set; }
+#nullable restore
+#else
+        public string CreatedBy { get; set; }
+#endif
         /// <summary>Currency in which order was created.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -185,6 +193,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "contactName", n => { ContactName = n.GetStringValue(); } },
                 { "couponCode", n => { CouponCode = n.GetStringValue(); } },
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
+                { "createdBy", n => { CreatedBy = n.GetStringValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "discount", n => { Discount = n.GetDoubleValue(); } },
                 { "fulfillmentStatus", n => { FulfillmentStatus = n.GetStringValue(); } },
@@ -218,6 +227,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("contactName", ContactName);
             writer.WriteStringValue("couponCode", CouponCode);
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
+            writer.WriteStringValue("createdBy", CreatedBy);
             writer.WriteStringValue("currency", Currency);
             writer.WriteDoubleValue("discount", Discount);
             writer.WriteStringValue("fulfillmentStatus", FulfillmentStatus);

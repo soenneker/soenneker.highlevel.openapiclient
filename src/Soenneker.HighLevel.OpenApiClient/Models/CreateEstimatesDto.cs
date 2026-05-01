@@ -111,10 +111,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>An array of items for the estimate.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.InvoiceItemDto>? Items { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateLineItemDto>? Items { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.InvoiceItemDto> Items { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateLineItemDto> Items { get; set; }
 #endif
         /// <summary>livemode for estimate</summary>
         public bool? LiveMode { get; set; }
@@ -230,7 +230,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "expiryDate", n => { ExpiryDate = n.GetStringValue(); } },
                 { "frequencySettings", n => { FrequencySettings = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateEstimatesDto_frequencySettings>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateEstimatesDto_frequencySettings.CreateFromDiscriminatorValue); } },
                 { "issueDate", n => { IssueDate = n.GetStringValue(); } },
-                { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.InvoiceItemDto>(global::Soenneker.HighLevel.OpenApiClient.Models.InvoiceItemDto.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateLineItemDto>(global::Soenneker.HighLevel.OpenApiClient.Models.EstimateLineItemDto.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "liveMode", n => { LiveMode = n.GetBoolValue(); } },
                 { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateEstimatesDto_meta>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateEstimatesDto_meta.CreateFromDiscriminatorValue); } },
                 { "miscellaneousCharges", n => { MiscellaneousCharges = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateEstimatesDto_miscellaneousCharges>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateEstimatesDto_miscellaneousCharges.CreateFromDiscriminatorValue); } },
@@ -264,7 +264,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("expiryDate", ExpiryDate);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateEstimatesDto_frequencySettings>("frequencySettings", FrequencySettings);
             writer.WriteStringValue("issueDate", IssueDate);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.InvoiceItemDto>("items", Items);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateLineItemDto>("items", Items);
             writer.WriteBoolValue("liveMode", LiveMode);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateEstimatesDto_meta>("meta", Meta);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateEstimatesDto_miscellaneousCharges>("miscellaneousCharges", MiscellaneousCharges);

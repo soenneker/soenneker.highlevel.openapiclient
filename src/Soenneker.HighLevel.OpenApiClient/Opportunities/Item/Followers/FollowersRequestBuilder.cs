@@ -22,7 +22,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Opportunities.Item.Followers
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public FollowersRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/opportunities/{id}/followers", pathParameters)
+        public FollowersRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/opportunities/{id}/followers{?isRemoveAllFollowers*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,11 +30,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Opportunities.Item.Followers
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public FollowersRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/opportunities/{id}/followers", rawUrl)
+        public FollowersRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/opportunities/{id}/followers{?isRemoveAllFollowers*}", rawUrl)
         {
         }
         /// <summary>
-        /// Remove Followers
+        /// Allows removal of one or all followers from an opportunity.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.DeleteFollowersSuccessfulResponseDto"/></returns>
         /// <param name="body">The request body</param>
@@ -42,14 +42,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Opportunities.Item.Followers
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasBadRequestDTO">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDTO">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.UnprocessableDTO">When receiving a 422 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnprocessableDTO">When receiving a 422 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteFollowersSuccessfulResponseDto?> DeleteAsync(global::Soenneker.HighLevel.OpenApiClient.Models.FollowersDTO body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteFollowersSuccessfulResponseDto?> DeleteAsync(global::Soenneker.HighLevel.OpenApiClient.Models.FollowersDTO body, Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Opportunities.Item.Followers.FollowersRequestBuilder.FollowersRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteFollowersSuccessfulResponseDto> DeleteAsync(global::Soenneker.HighLevel.OpenApiClient.Models.FollowersDTO body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteFollowersSuccessfulResponseDto> DeleteAsync(global::Soenneker.HighLevel.OpenApiClient.Models.FollowersDTO body, Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Opportunities.Item.Followers.FollowersRequestBuilder.FollowersRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -58,7 +58,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Opportunities.Item.Followers
             {
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasBadRequestDTO.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDTO.CreateFromDiscriminatorValue },
-                { "422", global::Soenneker.HighLevel.OpenApiClient.Models.UnprocessableDTO.CreateFromDiscriminatorValue },
+                { "422", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnprocessableDTO.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteFollowersSuccessfulResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.DeleteFollowersSuccessfulResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -71,7 +71,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Opportunities.Item.Followers
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasBadRequestDTO">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDTO">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.UnprocessableDTO">When receiving a 422 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnprocessableDTO">When receiving a 422 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.CreateAddFollowersSuccessfulResponseDto?> PostAsync(global::Soenneker.HighLevel.OpenApiClient.Models.FollowersDTO body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -87,23 +87,23 @@ namespace Soenneker.HighLevel.OpenApiClient.Opportunities.Item.Followers
             {
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasBadRequestDTO.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDTO.CreateFromDiscriminatorValue },
-                { "422", global::Soenneker.HighLevel.OpenApiClient.Models.UnprocessableDTO.CreateFromDiscriminatorValue },
+                { "422", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnprocessableDTO.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.CreateAddFollowersSuccessfulResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.CreateAddFollowersSuccessfulResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Remove Followers
+        /// Allows removal of one or all followers from an opportunity.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToDeleteRequestInformation(global::Soenneker.HighLevel.OpenApiClient.Models.FollowersDTO body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToDeleteRequestInformation(global::Soenneker.HighLevel.OpenApiClient.Models.FollowersDTO body, Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Opportunities.Item.Followers.FollowersRequestBuilder.FollowersRequestBuilderDeleteQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToDeleteRequestInformation(global::Soenneker.HighLevel.OpenApiClient.Models.FollowersDTO body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToDeleteRequestInformation(global::Soenneker.HighLevel.OpenApiClient.Models.FollowersDTO body, Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Opportunities.Item.Followers.FollowersRequestBuilder.FollowersRequestBuilderDeleteQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -143,6 +143,15 @@ namespace Soenneker.HighLevel.OpenApiClient.Opportunities.Item.Followers
         public global::Soenneker.HighLevel.OpenApiClient.Opportunities.Item.Followers.FollowersRequestBuilder WithUrl(string rawUrl)
         {
             return new global::Soenneker.HighLevel.OpenApiClient.Opportunities.Item.Followers.FollowersRequestBuilder(rawUrl, RequestAdapter);
+        }
+        /// <summary>
+        /// Allows removal of one or all followers from an opportunity.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class FollowersRequestBuilderDeleteQueryParameters 
+        {
+            [QueryParameter("isRemoveAllFollowers")]
+            public bool? IsRemoveAllFollowers { get; set; }
         }
     }
 }

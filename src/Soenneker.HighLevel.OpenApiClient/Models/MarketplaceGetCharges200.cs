@@ -14,7 +14,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The charges property</summary>
+        /// <summary>List of wallet charges</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HighLevel.OpenApiClient.Models.MarketplaceGetCharges200_charges>? Charges { get; set; }
@@ -22,8 +22,17 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public List<global::Soenneker.HighLevel.OpenApiClient.Models.MarketplaceGetCharges200_charges> Charges { get; set; }
 #endif
-        /// <summary>The total property</summary>
-        public double? Total { get; set; }
+        /// <summary>Total number of charges</summary>
+        [Obsolete("")]
+        public double? Count { get; set; }
+        /// <summary>Pagination metadata for the charges list</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.HighLevel.OpenApiClient.Models.MarketplaceGetCharges200_pagination? Pagination { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.HighLevel.OpenApiClient.Models.MarketplaceGetCharges200_pagination Pagination { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.MarketplaceGetCharges200"/> and sets the default values.
         /// </summary>
@@ -50,7 +59,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "charges", n => { Charges = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.MarketplaceGetCharges200_charges>(global::Soenneker.HighLevel.OpenApiClient.Models.MarketplaceGetCharges200_charges.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "total", n => { Total = n.GetDoubleValue(); } },
+                { "count", n => { Count = n.GetDoubleValue(); } },
+                { "pagination", n => { Pagination = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.MarketplaceGetCharges200_pagination>(global::Soenneker.HighLevel.OpenApiClient.Models.MarketplaceGetCharges200_pagination.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -61,7 +71,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.MarketplaceGetCharges200_charges>("charges", Charges);
-            writer.WriteDoubleValue("total", Total);
+            writer.WriteDoubleValue("count", Count);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.MarketplaceGetCharges200_pagination>("pagination", Pagination);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

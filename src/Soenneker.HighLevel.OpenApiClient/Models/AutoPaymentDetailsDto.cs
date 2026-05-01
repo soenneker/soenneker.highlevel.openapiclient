@@ -64,6 +64,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string PaymentMethodId { get; set; }
 #endif
+        /// <summary>The provider property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AutoPaymentDetailsDto_provider? Provider { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AutoPaymentDetailsDto_provider Provider { get; set; }
+#endif
         /// <summary>The sepaDirectDebit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -120,6 +128,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "customerId", n => { CustomerId = n.GetStringValue(); } },
                 { "enable", n => { Enable = n.GetBoolValue(); } },
                 { "paymentMethodId", n => { PaymentMethodId = n.GetStringValue(); } },
+                { "provider", n => { Provider = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AutoPaymentDetailsDto_provider>(global::Soenneker.HighLevel.OpenApiClient.Models.AutoPaymentDetailsDto_provider.CreateFromDiscriminatorValue); } },
                 { "sepaDirectDebit", n => { SepaDirectDebit = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SepaDirectDebitDTO>(global::Soenneker.HighLevel.OpenApiClient.Models.SepaDirectDebitDTO.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
                 { "usBankAccount", n => { UsBankAccount = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.USBankAccountDto>(global::Soenneker.HighLevel.OpenApiClient.Models.USBankAccountDto.CreateFromDiscriminatorValue); } },
@@ -139,6 +148,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("customerId", CustomerId);
             writer.WriteBoolValue("enable", Enable);
             writer.WriteStringValue("paymentMethodId", PaymentMethodId);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AutoPaymentDetailsDto_provider>("provider", Provider);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SepaDirectDebitDTO>("sepaDirectDebit", SepaDirectDebit);
             writer.WriteStringValue("type", Type);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.USBankAccountDto>("usBankAccount", UsBankAccount);

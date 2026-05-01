@@ -14,14 +14,6 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Alternative identifier for the message</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? AltId { get; set; }
-#nullable restore
-#else
-        public string AltId { get; set; }
-#endif
         /// <summary>An array of attachment URLs. Attachments will be empty for Call and Voicemails, type 1 and 10. Please use get call recording API to fetch call recording and voicemails.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -153,7 +145,6 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "altId", n => { AltId = n.GetStringValue(); } },
                 { "attachments", n => { Attachments = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "body", n => { Body = n.GetStringValue(); } },
                 { "chatWidgetId", n => { ChatWidgetId = n.GetStringValue(); } },
@@ -180,7 +171,6 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("altId", AltId);
             writer.WriteCollectionOfPrimitiveValues<string>("attachments", Attachments);
             writer.WriteStringValue("body", Body);
             writer.WriteStringValue("chatWidgetId", ChatWidgetId);

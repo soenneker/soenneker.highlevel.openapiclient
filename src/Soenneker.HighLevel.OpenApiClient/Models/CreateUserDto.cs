@@ -78,6 +78,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string Phone { get; set; }
 #endif
+        /// <summary>Platform language preference for the user</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateUserDto_platformLanguage? PlatformLanguage { get; set; }
         /// <summary>The profilePhoto property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -109,6 +111,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #nullable restore
 #else
         public List<global::Soenneker.HighLevel.OpenApiClient.Models.CreateUserDto_scopesAssignedToOnly?> ScopesAssignedToOnly { get; set; }
+#endif
+        /// <summary>&quot;Per-location inbound Twilio number in E.164 format, keyed by location id (Call and Voicemail Inbound Number for direct Twilio, not LC Phone). Replacement semantics: if you send twilioPhone in the request body, the stored map is replaced entirely with this object (not merged). Any location id omitted from the object is removed from the saved map. Omit the twilioPhone property entirely to leave existing numbers unchanged. Send an empty object {} to clear all per-location numbers. To clear a single location only, set that location id to an empty string \&quot;\&quot;.&quot;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateUserDto_twilioPhone? TwilioPhone { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateUserDto_twilioPhone TwilioPhone { get; set; }
 #endif
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -151,10 +161,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "password", n => { Password = n.GetStringValue(); } },
                 { "permissions", n => { Permissions = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PermissionsDto>(global::Soenneker.HighLevel.OpenApiClient.Models.PermissionsDto.CreateFromDiscriminatorValue); } },
                 { "phone", n => { Phone = n.GetStringValue(); } },
+                { "platformLanguage", n => { PlatformLanguage = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateUserDto_platformLanguage>(); } },
                 { "profilePhoto", n => { ProfilePhoto = n.GetStringValue(); } },
                 { "role", n => { Role = n.GetStringValue(); } },
                 { "scopes", n => { Scopes = n.GetCollectionOfEnumValues<global::Soenneker.HighLevel.OpenApiClient.Models.CreateUserDto_scopes>()?.AsList(); } },
                 { "scopesAssignedToOnly", n => { ScopesAssignedToOnly = n.GetCollectionOfEnumValues<global::Soenneker.HighLevel.OpenApiClient.Models.CreateUserDto_scopesAssignedToOnly>()?.AsList(); } },
+                { "twilioPhone", n => { TwilioPhone = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateUserDto_twilioPhone>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateUserDto_twilioPhone.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
             };
         }
@@ -173,10 +185,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("password", Password);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PermissionsDto>("permissions", Permissions);
             writer.WriteStringValue("phone", Phone);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateUserDto_platformLanguage>("platformLanguage", PlatformLanguage);
             writer.WriteStringValue("profilePhoto", ProfilePhoto);
             writer.WriteStringValue("role", Role);
             writer.WriteCollectionOfEnumValues<global::Soenneker.HighLevel.OpenApiClient.Models.CreateUserDto_scopes>("scopes", Scopes);
             writer.WriteCollectionOfEnumValues<global::Soenneker.HighLevel.OpenApiClient.Models.CreateUserDto_scopesAssignedToOnly>("scopesAssignedToOnly", ScopesAssignedToOnly);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateUserDto_twilioPhone>("twilioPhone", TwilioPhone);
             writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -88,7 +88,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCalendarNotificationsDTO_notificationType? NotificationType { get; set; }
         /// <summary>Notification recipient type</summary>
         public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCalendarNotificationsDTO_receiverType? ReceiverType { get; set; }
-        /// <summary>selected user for in-App notification</summary>
+        /// <summary>Selected users for in-App and business email notifications. Supports user IDs and special keyword &quot;sub_account_admin&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? SelectedUsers { get; set; }

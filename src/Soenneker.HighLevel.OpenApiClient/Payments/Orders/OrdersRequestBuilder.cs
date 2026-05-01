@@ -5,7 +5,6 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.HighLevel.OpenApiClient.Models;
 using Soenneker.HighLevel.OpenApiClient.Payments.Orders.Item;
-using Soenneker.HighLevel.OpenApiClient.Payments.Orders.MigrateOrderPs;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -19,11 +18,6 @@ namespace Soenneker.HighLevel.OpenApiClient.Payments.Orders
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class OrdersRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The migrateOrderPs property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Payments.Orders.MigrateOrderPs.MigrateOrderPsRequestBuilder MigrateOrderPs
-        {
-            get => new global::Soenneker.HighLevel.OpenApiClient.Payments.Orders.MigrateOrderPs.MigrateOrderPsRequestBuilder(PathParameters, RequestAdapter);
-        }
         /// <summary>Gets an item from the Soenneker.HighLevel.OpenApiClient.payments.orders.item collection</summary>
         /// <param name="position">ID of the order that needs to be returned</param>
         /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Payments.Orders.Item.WithOrderItemRequestBuilder"/></returns>
@@ -41,7 +35,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Payments.Orders
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public OrdersRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/payments/orders?altId={altId}&altType={altType}{&contactId*,endAt*,funnelProductIds*,limit*,locationId*,offset*,paymentMode*,search*,startAt*,status*}", pathParameters)
+        public OrdersRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/payments/orders?altId={altId}{&contactId*,endAt*,funnelProductIds*,limit*,locationId*,offset*,paymentMode*,paymentStatus*,search*,sourceId*,startAt*,status*}", pathParameters)
         {
         }
         /// <summary>
@@ -49,7 +43,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Payments.Orders
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public OrdersRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/payments/orders?altId={altId}&altType={altType}{&contactId*,endAt*,funnelProductIds*,limit*,locationId*,offset*,paymentMode*,search*,startAt*,status*}", rawUrl)
+        public OrdersRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/payments/orders?altId={altId}{&contactId*,endAt*,funnelProductIds*,limit*,locationId*,offset*,paymentMode*,paymentStatus*,search*,sourceId*,startAt*,status*}", rawUrl)
         {
         }
         /// <summary>
@@ -60,7 +54,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Payments.Orders
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasBadRequestDTO">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDTO">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.UnprocessableDTO">When receiving a 422 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnprocessableDTO">When receiving a 422 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.ListOrdersResponseDto?> GetAsync(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Payments.Orders.OrdersRequestBuilder.OrdersRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -75,7 +69,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Payments.Orders
             {
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasBadRequestDTO.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDTO.CreateFromDiscriminatorValue },
-                { "422", global::Soenneker.HighLevel.OpenApiClient.Models.UnprocessableDTO.CreateFromDiscriminatorValue },
+                { "422", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnprocessableDTO.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.ListOrdersResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.ListOrdersResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -122,16 +116,6 @@ namespace Soenneker.HighLevel.OpenApiClient.Payments.Orders
 #else
             [QueryParameter("altId")]
             public string AltId { get; set; }
-#endif
-            /// <summary>AltType is the type of identifier.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            [QueryParameter("altType")]
-            public string? AltType { get; set; }
-#nullable restore
-#else
-            [QueryParameter("altType")]
-            public string AltType { get; set; }
 #endif
             /// <summary>Contact id for filtering of orders.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -189,6 +173,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Payments.Orders
             [QueryParameter("paymentMode")]
             public string PaymentMode { get; set; }
 #endif
+            /// <summary>Payment Status of the Order</summary>
+            [QueryParameter("paymentStatus")]
+            public global::Soenneker.HighLevel.OpenApiClient.Payments.Orders.GetPaymentStatusQueryParameterType? PaymentStatus { get; set; }
             /// <summary>The name of the order for searching.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -198,6 +185,16 @@ namespace Soenneker.HighLevel.OpenApiClient.Payments.Orders
 #else
             [QueryParameter("search")]
             public string Search { get; set; }
+#endif
+            /// <summary>Source id</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("sourceId")]
+            public string? SourceId { get; set; }
+#nullable restore
+#else
+            [QueryParameter("sourceId")]
+            public string SourceId { get; set; }
 #endif
             /// <summary>Starting interval of orders.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

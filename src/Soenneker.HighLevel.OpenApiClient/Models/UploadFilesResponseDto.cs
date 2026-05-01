@@ -14,6 +14,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Twilio media SIDs for group SMS (when isGroupSms=true)</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? TwilioMediaSids { get; set; }
+#nullable restore
+#else
+        public List<string> TwilioMediaSids { get; set; }
+#endif
         /// <summary>The uploadedFiles property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -47,6 +55,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "twilioMediaSids", n => { TwilioMediaSids = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "uploadedFiles", n => { UploadedFiles = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UploadFilesResponseDto_uploadedFiles>(global::Soenneker.HighLevel.OpenApiClient.Models.UploadFilesResponseDto_uploadedFiles.CreateFromDiscriminatorValue); } },
             };
         }
@@ -57,6 +66,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteCollectionOfPrimitiveValues<string>("twilioMediaSids", TwilioMediaSids);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UploadFilesResponseDto_uploadedFiles>("uploadedFiles", UploadedFiles);
             writer.WriteAdditionalData(AdditionalData);
         }

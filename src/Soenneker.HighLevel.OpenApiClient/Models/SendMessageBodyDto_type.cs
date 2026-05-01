@@ -11,6 +11,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         #pragma warning disable CS1591
         SMS,
         #pragma warning restore CS1591
+        [EnumMember(Value = "RCS")]
+        #pragma warning disable CS1591
+        RCS,
+        #pragma warning restore CS1591
         [EnumMember(Value = "Email")]
         #pragma warning disable CS1591
         Email,
@@ -34,6 +38,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         [EnumMember(Value = "Live_Chat")]
         #pragma warning disable CS1591
         Live_Chat,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "TIKTOK")]
+        #pragma warning disable CS1591
+        TIKTOK,
         #pragma warning restore CS1591
     }
 }

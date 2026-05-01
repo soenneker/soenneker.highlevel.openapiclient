@@ -52,5 +52,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         #pragma warning disable CS1591
         Opt_out,
         #pragma warning restore CS1591
+        [EnumMember(Value = "queued")]
+        #pragma warning disable CS1591
+        Queued,
+        #pragma warning restore CS1591
     }
 }
