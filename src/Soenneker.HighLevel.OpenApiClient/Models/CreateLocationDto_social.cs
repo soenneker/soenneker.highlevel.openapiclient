@@ -11,14 +11,111 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// The social media links for location
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class CreateLocationDto_social : global::Soenneker.HighLevel.OpenApiClient.Models.SocialSchema, IParsable
+    public partial class CreateLocationDto_social : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Instagram URL</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? BlogRss { get; set; }
+#nullable restore
+#else
+        public string BlogRss { get; set; }
+#endif
+        /// <summary>Facebook URL</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? FacebookUrl { get; set; }
+#nullable restore
+#else
+        public string FacebookUrl { get; set; }
+#endif
+        /// <summary>Foursquare URL</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Foursquare { get; set; }
+#nullable restore
+#else
+        public string Foursquare { get; set; }
+#endif
+        /// <summary>Google Business Places ID</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? GooglePlacesId { get; set; }
+#nullable restore
+#else
+        public string GooglePlacesId { get; set; }
+#endif
+        /// <summary>Googleplus URL</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? GooglePlus { get; set; }
+#nullable restore
+#else
+        public string GooglePlus { get; set; }
+#endif
+        /// <summary>Instagram URL</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Instagram { get; set; }
+#nullable restore
+#else
+        public string Instagram { get; set; }
+#endif
+        /// <summary>LinkedIn URL</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? LinkedIn { get; set; }
+#nullable restore
+#else
+        public string LinkedIn { get; set; }
+#endif
+        /// <summary>Instagram URL</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Pinterest { get; set; }
+#nullable restore
+#else
+        public string Pinterest { get; set; }
+#endif
+        /// <summary>Twitter URL</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Twitter { get; set; }
+#nullable restore
+#else
+        public string Twitter { get; set; }
+#endif
+        /// <summary>Yelp URL</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Yelp { get; set; }
+#nullable restore
+#else
+        public string Yelp { get; set; }
+#endif
+        /// <summary>Instagram URL</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Youtube { get; set; }
+#nullable restore
+#else
+        public string Youtube { get; set; }
+#endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDto_social"/> and sets the default values.
+        /// </summary>
+        public CreateLocationDto_social()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDto_social"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDto_social CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDto_social CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDto_social();
@@ -27,20 +124,42 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
+                { "blogRss", n => { BlogRss = n.GetStringValue(); } },
+                { "facebookUrl", n => { FacebookUrl = n.GetStringValue(); } },
+                { "foursquare", n => { Foursquare = n.GetStringValue(); } },
+                { "googlePlacesId", n => { GooglePlacesId = n.GetStringValue(); } },
+                { "googlePlus", n => { GooglePlus = n.GetStringValue(); } },
+                { "instagram", n => { Instagram = n.GetStringValue(); } },
+                { "linkedIn", n => { LinkedIn = n.GetStringValue(); } },
+                { "pinterest", n => { Pinterest = n.GetStringValue(); } },
+                { "twitter", n => { Twitter = n.GetStringValue(); } },
+                { "yelp", n => { Yelp = n.GetStringValue(); } },
+                { "youtube", n => { Youtube = n.GetStringValue(); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            writer.WriteStringValue("blogRss", BlogRss);
+            writer.WriteStringValue("facebookUrl", FacebookUrl);
+            writer.WriteStringValue("foursquare", Foursquare);
+            writer.WriteStringValue("googlePlacesId", GooglePlacesId);
+            writer.WriteStringValue("googlePlus", GooglePlus);
+            writer.WriteStringValue("instagram", Instagram);
+            writer.WriteStringValue("linkedIn", LinkedIn);
+            writer.WriteStringValue("pinterest", Pinterest);
+            writer.WriteStringValue("twitter", Twitter);
+            writer.WriteStringValue("yelp", Yelp);
+            writer.WriteStringValue("youtube", Youtube);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

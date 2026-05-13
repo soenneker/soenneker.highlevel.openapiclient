@@ -11,14 +11,31 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// The default settings for location
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class CreateLocationSuccessfulResponseDto_settings : global::Soenneker.HighLevel.OpenApiClient.Models.SettingsSchema, IParsable
+    public partial class CreateLocationSuccessfulResponseDto_settings : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The allowDuplicateContact property</summary>
+        public bool? AllowDuplicateContact { get; set; }
+        /// <summary>The allowDuplicateOpportunity property</summary>
+        public bool? AllowDuplicateOpportunity { get; set; }
+        /// <summary>The allowFacebookNameMerge property</summary>
+        public bool? AllowFacebookNameMerge { get; set; }
+        /// <summary>The disableContactTimezone property</summary>
+        public bool? DisableContactTimezone { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationSuccessfulResponseDto_settings"/> and sets the default values.
+        /// </summary>
+        public CreateLocationSuccessfulResponseDto_settings()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationSuccessfulResponseDto_settings"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationSuccessfulResponseDto_settings CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationSuccessfulResponseDto_settings CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationSuccessfulResponseDto_settings();
@@ -27,20 +44,28 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
+                { "allowDuplicateContact", n => { AllowDuplicateContact = n.GetBoolValue(); } },
+                { "allowDuplicateOpportunity", n => { AllowDuplicateOpportunity = n.GetBoolValue(); } },
+                { "allowFacebookNameMerge", n => { AllowFacebookNameMerge = n.GetBoolValue(); } },
+                { "disableContactTimezone", n => { DisableContactTimezone = n.GetBoolValue(); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            writer.WriteBoolValue("allowDuplicateContact", AllowDuplicateContact);
+            writer.WriteBoolValue("allowDuplicateOpportunity", AllowDuplicateOpportunity);
+            writer.WriteBoolValue("allowFacebookNameMerge", AllowFacebookNameMerge);
+            writer.WriteBoolValue("disableContactTimezone", DisableContactTimezone);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

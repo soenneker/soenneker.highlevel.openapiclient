@@ -11,14 +11,73 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// fulfillment data
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class CreateFulfillmentResponseDto_data : global::Soenneker.HighLevel.OpenApiClient.Models.FulfillmentSchema, IParsable
+    public partial class CreateFulfillmentResponseDto_data : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Location Id or Agency Id</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AltId { get; set; }
+#nullable restore
+#else
+        public string AltId { get; set; }
+#endif
+        /// <summary>The altType property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateFulfillmentResponseDto_data_altType? AltType { get; set; }
+        /// <summary>created at</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CreatedAt { get; set; }
+#nullable restore
+#else
+        public string CreatedAt { get; set; }
+#endif
+        /// <summary>The unique identifier for the fulfillment item.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Id { get; set; }
+#nullable restore
+#else
+        public string Id { get; set; }
+#endif
+        /// <summary>Fulfilled items</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.FulfilledItem>? Items { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.FulfilledItem> Items { get; set; }
+#endif
+        /// <summary>Fulfillment tracking information</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.FulfillmentTracking>? Trackings { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.FulfillmentTracking> Trackings { get; set; }
+#endif
+        /// <summary>updated at</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? UpdatedAt { get; set; }
+#nullable restore
+#else
+        public string UpdatedAt { get; set; }
+#endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CreateFulfillmentResponseDto_data"/> and sets the default values.
+        /// </summary>
+        public CreateFulfillmentResponseDto_data()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CreateFulfillmentResponseDto_data"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.HighLevel.OpenApiClient.Models.CreateFulfillmentResponseDto_data CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.HighLevel.OpenApiClient.Models.CreateFulfillmentResponseDto_data CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.HighLevel.OpenApiClient.Models.CreateFulfillmentResponseDto_data();
@@ -27,20 +86,34 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
+                { "altId", n => { AltId = n.GetStringValue(); } },
+                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateFulfillmentResponseDto_data_altType>(); } },
+                { "createdAt", n => { CreatedAt = n.GetStringValue(); } },
+                { "_id", n => { Id = n.GetStringValue(); } },
+                { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.FulfilledItem>(global::Soenneker.HighLevel.OpenApiClient.Models.FulfilledItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "trackings", n => { Trackings = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.FulfillmentTracking>(global::Soenneker.HighLevel.OpenApiClient.Models.FulfillmentTracking.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "updatedAt", n => { UpdatedAt = n.GetStringValue(); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            writer.WriteStringValue("altId", AltId);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateFulfillmentResponseDto_data_altType>("altType", AltType);
+            writer.WriteStringValue("createdAt", CreatedAt);
+            writer.WriteStringValue("_id", Id);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.FulfilledItem>("items", Items);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.FulfillmentTracking>("trackings", Trackings);
+            writer.WriteStringValue("updatedAt", UpdatedAt);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

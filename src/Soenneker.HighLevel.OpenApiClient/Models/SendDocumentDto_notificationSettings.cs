@@ -9,15 +9,40 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class SendDocumentDto_notificationSettings : global::Soenneker.HighLevel.OpenApiClient.Models.NotificationSettingsDto, IParsable
+    public partial class SendDocumentDto_notificationSettings : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The receive property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.HighLevel.OpenApiClient.Models.NotificationSendSettingDto? Receive { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.HighLevel.OpenApiClient.Models.NotificationSendSettingDto Receive { get; set; }
+#endif
+        /// <summary>The sender property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.HighLevel.OpenApiClient.Models.NotificationSenderSettingDto? Sender { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.HighLevel.OpenApiClient.Models.NotificationSenderSettingDto Sender { get; set; }
+#endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.SendDocumentDto_notificationSettings"/> and sets the default values.
+        /// </summary>
+        public SendDocumentDto_notificationSettings()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.SendDocumentDto_notificationSettings"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.HighLevel.OpenApiClient.Models.SendDocumentDto_notificationSettings CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.HighLevel.OpenApiClient.Models.SendDocumentDto_notificationSettings CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.HighLevel.OpenApiClient.Models.SendDocumentDto_notificationSettings();
@@ -26,20 +51,24 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
+                { "receive", n => { Receive = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.NotificationSendSettingDto>(global::Soenneker.HighLevel.OpenApiClient.Models.NotificationSendSettingDto.CreateFromDiscriminatorValue); } },
+                { "sender", n => { Sender = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.NotificationSenderSettingDto>(global::Soenneker.HighLevel.OpenApiClient.Models.NotificationSenderSettingDto.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.NotificationSendSettingDto>("receive", Receive);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.NotificationSenderSettingDto>("sender", Sender);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

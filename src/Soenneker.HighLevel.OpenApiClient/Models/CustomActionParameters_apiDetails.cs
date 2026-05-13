@@ -11,14 +11,59 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// API endpoint configuration
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class CustomActionParameters_apiDetails : global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionApiDetailsDTO, IParsable
+    public partial class CustomActionParameters_apiDetails : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Whether authentication is required</summary>
+        public bool? AuthenticationRequired { get; set; }
+        /// <summary>Authentication token or API key (required if authenticationRequired is true)</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AuthenticationValue { get; set; }
+#nullable restore
+#else
+        public string AuthenticationValue { get; set; }
+#endif
+        /// <summary>HTTP headers to include</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionHeaderDTO>? Headers { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionHeaderDTO> Headers { get; set; }
+#endif
+        /// <summary>HTTP method</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParameters_apiDetails_method? Method { get; set; }
+        /// <summary>API parameters to send</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParameterDTO>? Parameters { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParameterDTO> Parameters { get; set; }
+#endif
+        /// <summary>API endpoint URL</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Url { get; set; }
+#nullable restore
+#else
+        public string Url { get; set; }
+#endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParameters_apiDetails"/> and sets the default values.
+        /// </summary>
+        public CustomActionParameters_apiDetails()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParameters_apiDetails"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParameters_apiDetails CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParameters_apiDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParameters_apiDetails();
@@ -27,20 +72,32 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
+                { "authenticationRequired", n => { AuthenticationRequired = n.GetBoolValue(); } },
+                { "authenticationValue", n => { AuthenticationValue = n.GetStringValue(); } },
+                { "headers", n => { Headers = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionHeaderDTO>(global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionHeaderDTO.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "method", n => { Method = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParameters_apiDetails_method>(); } },
+                { "parameters", n => { Parameters = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParameterDTO>(global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParameterDTO.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "url", n => { Url = n.GetStringValue(); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            writer.WriteBoolValue("authenticationRequired", AuthenticationRequired);
+            writer.WriteStringValue("authenticationValue", AuthenticationValue);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionHeaderDTO>("headers", Headers);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParameters_apiDetails_method>("method", Method);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParameterDTO>("parameters", Parameters);
+            writer.WriteStringValue("url", Url);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

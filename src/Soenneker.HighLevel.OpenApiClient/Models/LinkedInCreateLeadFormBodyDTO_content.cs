@@ -11,14 +11,63 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// Form content
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class LinkedInCreateLeadFormBodyDTO_content : global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDTO, IParsable
+    public partial class LinkedInCreateLeadFormBodyDTO_content : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Form description</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDTO_content_description? Description { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDTO_content_description Description { get; set; }
+#endif
+        /// <summary>Form headline</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDTO_content_headline? Headline { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDTO_content_headline Headline { get; set; }
+#endif
+        /// <summary>Legal information</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDTO_content_legalInfo? LegalInfo { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDTO_content_legalInfo LegalInfo { get; set; }
+#endif
+        /// <summary>Post-submission info</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDTO_content_postSubmissionInfo? PostSubmissionInfo { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDTO_content_postSubmissionInfo PostSubmissionInfo { get; set; }
+#endif
+        /// <summary>Form questions</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormQuestionDTO>? Questions { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormQuestionDTO> Questions { get; set; }
+#endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDTO_content"/> and sets the default values.
+        /// </summary>
+        public LinkedInCreateLeadFormBodyDTO_content()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDTO_content"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDTO_content CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDTO_content CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDTO_content();
@@ -27,20 +76,30 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
+                { "description", n => { Description = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDTO_content_description>(global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDTO_content_description.CreateFromDiscriminatorValue); } },
+                { "headline", n => { Headline = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDTO_content_headline>(global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDTO_content_headline.CreateFromDiscriminatorValue); } },
+                { "legalInfo", n => { LegalInfo = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDTO_content_legalInfo>(global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDTO_content_legalInfo.CreateFromDiscriminatorValue); } },
+                { "postSubmissionInfo", n => { PostSubmissionInfo = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDTO_content_postSubmissionInfo>(global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDTO_content_postSubmissionInfo.CreateFromDiscriminatorValue); } },
+                { "questions", n => { Questions = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormQuestionDTO>(global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormQuestionDTO.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDTO_content_description>("description", Description);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDTO_content_headline>("headline", Headline);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDTO_content_legalInfo>("legalInfo", LegalInfo);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDTO_content_postSubmissionInfo>("postSubmissionInfo", PostSubmissionInfo);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormQuestionDTO>("questions", Questions);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

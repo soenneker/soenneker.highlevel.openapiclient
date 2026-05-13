@@ -11,14 +11,87 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// Contact information to send the invoice to
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class Text2PayDto_contactDetails : global::Soenneker.HighLevel.OpenApiClient.Models.ContactDetailsDto, IParsable
+    public partial class Text2PayDto_contactDetails : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Secondary email addresses for the contact to be saved</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.AdditionalEmailsDto>? AdditionalEmails { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.AdditionalEmailsDto> AdditionalEmails { get; set; }
+#endif
+        /// <summary>The address property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AddressDto? Address { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AddressDto Address { get; set; }
+#endif
+        /// <summary>Contact Company Name</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CompanyName { get; set; }
+#nullable restore
+#else
+        public string CompanyName { get; set; }
+#endif
+        /// <summary>Custom Values</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? CustomFields { get; set; }
+#nullable restore
+#else
+        public List<string> CustomFields { get; set; }
+#endif
+        /// <summary>Contact Email</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Email { get; set; }
+#nullable restore
+#else
+        public string Email { get; set; }
+#endif
+        /// <summary>Contact ID</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Id { get; set; }
+#nullable restore
+#else
+        public string Id { get; set; }
+#endif
+        /// <summary>Contact Name</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Name { get; set; }
+#nullable restore
+#else
+        public string Name { get; set; }
+#endif
+        /// <summary>Contact Phone Number</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? PhoneNo { get; set; }
+#nullable restore
+#else
+        public string PhoneNo { get; set; }
+#endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.Text2PayDto_contactDetails"/> and sets the default values.
+        /// </summary>
+        public Text2PayDto_contactDetails()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.Text2PayDto_contactDetails"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.HighLevel.OpenApiClient.Models.Text2PayDto_contactDetails CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.HighLevel.OpenApiClient.Models.Text2PayDto_contactDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.HighLevel.OpenApiClient.Models.Text2PayDto_contactDetails();
@@ -27,20 +100,36 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
+                { "additionalEmails", n => { AdditionalEmails = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.AdditionalEmailsDto>(global::Soenneker.HighLevel.OpenApiClient.Models.AdditionalEmailsDto.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "address", n => { Address = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AddressDto>(global::Soenneker.HighLevel.OpenApiClient.Models.AddressDto.CreateFromDiscriminatorValue); } },
+                { "companyName", n => { CompanyName = n.GetStringValue(); } },
+                { "customFields", n => { CustomFields = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "email", n => { Email = n.GetStringValue(); } },
+                { "id", n => { Id = n.GetStringValue(); } },
+                { "name", n => { Name = n.GetStringValue(); } },
+                { "phoneNo", n => { PhoneNo = n.GetStringValue(); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.AdditionalEmailsDto>("additionalEmails", AdditionalEmails);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AddressDto>("address", Address);
+            writer.WriteStringValue("companyName", CompanyName);
+            writer.WriteCollectionOfPrimitiveValues<string>("customFields", CustomFields);
+            writer.WriteStringValue("email", Email);
+            writer.WriteStringValue("id", Id);
+            writer.WriteStringValue("name", Name);
+            writer.WriteStringValue("phoneNo", PhoneNo);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

@@ -11,14 +11,79 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// created Collection
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class CreateCollectionResponseDto_data : global::Soenneker.HighLevel.OpenApiClient.Models.CollectionSchema, IParsable
+    public partial class CreateCollectionResponseDto_data : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Location Id to which the collection is associated</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AltId { get; set; }
+#nullable restore
+#else
+        public string AltId { get; set; }
+#endif
+        /// <summary>Date at which the collection was created</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CreatedAt { get; set; }
+#nullable restore
+#else
+        public string CreatedAt { get; set; }
+#endif
+        /// <summary>The unique identifier for the collection</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Id { get; set; }
+#nullable restore
+#else
+        public string Id { get; set; }
+#endif
+        /// <summary>The URL of the image that is going to be displayed as the collection Thumbnail</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Image { get; set; }
+#nullable restore
+#else
+        public string Image { get; set; }
+#endif
+        /// <summary>Name of the collection</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Name { get; set; }
+#nullable restore
+#else
+        public string Name { get; set; }
+#endif
+        /// <summary>The information which will be displayed in SEO previews</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateCollectionResponseDto_data_seo? Seo { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateCollectionResponseDto_data_seo Seo { get; set; }
+#endif
+        /// <summary>Slug of the collection with which navigation is established. Special Characters and spacing is not allowed and should be unique</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Slug { get; set; }
+#nullable restore
+#else
+        public string Slug { get; set; }
+#endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CreateCollectionResponseDto_data"/> and sets the default values.
+        /// </summary>
+        public CreateCollectionResponseDto_data()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CreateCollectionResponseDto_data"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.HighLevel.OpenApiClient.Models.CreateCollectionResponseDto_data CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.HighLevel.OpenApiClient.Models.CreateCollectionResponseDto_data CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.HighLevel.OpenApiClient.Models.CreateCollectionResponseDto_data();
@@ -27,20 +92,34 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
+                { "altId", n => { AltId = n.GetStringValue(); } },
+                { "createdAt", n => { CreatedAt = n.GetStringValue(); } },
+                { "_id", n => { Id = n.GetStringValue(); } },
+                { "image", n => { Image = n.GetStringValue(); } },
+                { "name", n => { Name = n.GetStringValue(); } },
+                { "seo", n => { Seo = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateCollectionResponseDto_data_seo>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateCollectionResponseDto_data_seo.CreateFromDiscriminatorValue); } },
+                { "slug", n => { Slug = n.GetStringValue(); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            writer.WriteStringValue("altId", AltId);
+            writer.WriteStringValue("createdAt", CreatedAt);
+            writer.WriteStringValue("_id", Id);
+            writer.WriteStringValue("image", Image);
+            writer.WriteStringValue("name", Name);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateCollectionResponseDto_data_seo>("seo", Seo);
+            writer.WriteStringValue("slug", Slug);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

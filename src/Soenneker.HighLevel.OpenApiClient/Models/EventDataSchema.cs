@@ -25,10 +25,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The contactSessionIds property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ContactSessionIds? ContactSessionIds { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.EventDataSchema_contactSessionIds? ContactSessionIds { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ContactSessionIds ContactSessionIds { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.EventDataSchema_contactSessionIds ContactSessionIds { get; set; }
 #endif
         /// <summary>The domain property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -178,7 +178,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "adSource", n => { AdSource = n.GetStringValue(); } },
-                { "contactSessionIds", n => { ContactSessionIds = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ContactSessionIds>(global::Soenneker.HighLevel.OpenApiClient.Models.ContactSessionIds.CreateFromDiscriminatorValue); } },
+                { "contactSessionIds", n => { ContactSessionIds = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EventDataSchema_contactSessionIds>(global::Soenneker.HighLevel.OpenApiClient.Models.EventDataSchema_contactSessionIds.CreateFromDiscriminatorValue); } },
                 { "domain", n => { Domain = n.GetStringValue(); } },
                 { "fbEventId", n => { FbEventId = n.GetStringValue(); } },
                 { "fbc", n => { Fbc = n.GetStringValue(); } },
@@ -205,7 +205,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("adSource", AdSource);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ContactSessionIds>("contactSessionIds", ContactSessionIds);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EventDataSchema_contactSessionIds>("contactSessionIds", ContactSessionIds);
             writer.WriteStringValue("domain", Domain);
             writer.WriteStringValue("fbc", Fbc);
             writer.WriteStringValue("fbEventId", FbEventId);

@@ -11,14 +11,55 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// Recurring rules
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class RecurringTaskUpdateDTO_rruleOptions : global::Soenneker.HighLevel.OpenApiClient.Models.CustomRRulesOptions, IParsable
+    public partial class RecurringTaskUpdateDTO_rruleOptions : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Max number of task executions</summary>
+        public double? Count { get; set; }
+        /// <summary>Create Task If Over Due</summary>
+        public bool? CreateTaskIfOverDue { get; set; }
+        /// <summary>1, 2, 3, ..., 27, 31</summary>
+        public double? DayOfMonth { get; set; }
+        /// <summary>The dayOfWeek property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Models.RecurringTaskUpdateDTO_rruleOptions_dayOfWeek? DayOfWeek { get; set; }
+        /// <summary>Due after seconds</summary>
+        public double? DueAfterSeconds { get; set; }
+        /// <summary>End Date</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? EndDate { get; set; }
+#nullable restore
+#else
+        public string EndDate { get; set; }
+#endif
+        /// <summary>The interval property</summary>
+        public double? Interval { get; set; }
+        /// <summary>The intervalType property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Models.RecurringTaskUpdateDTO_rruleOptions_intervalType? IntervalType { get; set; }
+        /// <summary>1, 2, ....., 11, 12</summary>
+        public double? MonthOfYear { get; set; }
+        /// <summary>Start Date</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? StartDate { get; set; }
+#nullable restore
+#else
+        public string StartDate { get; set; }
+#endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.RecurringTaskUpdateDTO_rruleOptions"/> and sets the default values.
+        /// </summary>
+        public RecurringTaskUpdateDTO_rruleOptions()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.RecurringTaskUpdateDTO_rruleOptions"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.HighLevel.OpenApiClient.Models.RecurringTaskUpdateDTO_rruleOptions CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.HighLevel.OpenApiClient.Models.RecurringTaskUpdateDTO_rruleOptions CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.HighLevel.OpenApiClient.Models.RecurringTaskUpdateDTO_rruleOptions();
@@ -27,20 +68,40 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
+                { "count", n => { Count = n.GetDoubleValue(); } },
+                { "createTaskIfOverDue", n => { CreateTaskIfOverDue = n.GetBoolValue(); } },
+                { "dayOfMonth", n => { DayOfMonth = n.GetDoubleValue(); } },
+                { "dayOfWeek", n => { DayOfWeek = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.RecurringTaskUpdateDTO_rruleOptions_dayOfWeek>(); } },
+                { "dueAfterSeconds", n => { DueAfterSeconds = n.GetDoubleValue(); } },
+                { "endDate", n => { EndDate = n.GetStringValue(); } },
+                { "interval", n => { Interval = n.GetDoubleValue(); } },
+                { "intervalType", n => { IntervalType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.RecurringTaskUpdateDTO_rruleOptions_intervalType>(); } },
+                { "monthOfYear", n => { MonthOfYear = n.GetDoubleValue(); } },
+                { "startDate", n => { StartDate = n.GetStringValue(); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            writer.WriteDoubleValue("count", Count);
+            writer.WriteBoolValue("createTaskIfOverDue", CreateTaskIfOverDue);
+            writer.WriteDoubleValue("dayOfMonth", DayOfMonth);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.RecurringTaskUpdateDTO_rruleOptions_dayOfWeek>("dayOfWeek", DayOfWeek);
+            writer.WriteDoubleValue("dueAfterSeconds", DueAfterSeconds);
+            writer.WriteStringValue("endDate", EndDate);
+            writer.WriteDoubleValue("interval", Interval);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.RecurringTaskUpdateDTO_rruleOptions_intervalType>("intervalType", IntervalType);
+            writer.WriteDoubleValue("monthOfYear", MonthOfYear);
+            writer.WriteStringValue("startDate", StartDate);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

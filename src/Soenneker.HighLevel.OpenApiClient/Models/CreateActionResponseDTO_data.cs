@@ -11,14 +11,57 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// Created action details
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class CreateActionResponseDTO_data : global::Soenneker.HighLevel.OpenApiClient.Models.ActionDataDTO, IParsable
+    public partial class CreateActionResponseDTO_data : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Agent ID where the action belongs</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? AgentId { get; set; }
+#nullable restore
+#else
+        public string AgentId { get; set; }
+#endif
+        /// <summary>Action-specific details. The structure depends on the action type. For TRIGGER_WORKFLOW use triggerWorkflowDto, for UPDATE_CONTACT_FIELD use updateContactFieldDto, for APPOINTMENT_BOOKING use appointmentBookingDto, for STOP_BOT use stopBotDto, for HUMAN_HAND_OVER use humanHandOverDto, for ADVANCED_FOLLOWUP use advancedFollowupDto, and for TRANSFER_BOT use transferBotDto.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateActionResponseDTO_data.CreateActionResponseDTO_data_details? Details { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateActionResponseDTO_data.CreateActionResponseDTO_data_details Details { get; set; }
+#endif
+        /// <summary>Unique identifier for the action</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Id { get; set; }
+#nullable restore
+#else
+        public string Id { get; set; }
+#endif
+        /// <summary>Name of the action</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Name { get; set; }
+#nullable restore
+#else
+        public string Name { get; set; }
+#endif
+        /// <summary>Type of the action</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateActionResponseDTO_data_type? Type { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CreateActionResponseDTO_data"/> and sets the default values.
+        /// </summary>
+        public CreateActionResponseDTO_data()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CreateActionResponseDTO_data"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.HighLevel.OpenApiClient.Models.CreateActionResponseDTO_data CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.HighLevel.OpenApiClient.Models.CreateActionResponseDTO_data CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.HighLevel.OpenApiClient.Models.CreateActionResponseDTO_data();
@@ -27,20 +70,205 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
+                { "agentId", n => { AgentId = n.GetStringValue(); } },
+                { "details", n => { Details = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateActionResponseDTO_data.CreateActionResponseDTO_data_details>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateActionResponseDTO_data.CreateActionResponseDTO_data_details.CreateFromDiscriminatorValue); } },
+                { "id", n => { Id = n.GetStringValue(); } },
+                { "name", n => { Name = n.GetStringValue(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateActionResponseDTO_data_type>(); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            writer.WriteStringValue("agentId", AgentId);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateActionResponseDTO_data.CreateActionResponseDTO_data_details>("details", Details);
+            writer.WriteStringValue("id", Id);
+            writer.WriteStringValue("name", Name);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateActionResponseDTO_data_type>("type", Type);
+            writer.WriteAdditionalData(AdditionalData);
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.AdvancedFollowupDto"/>, <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentBookingDto"/>, <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.HumanHandOverDto"/>, <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.StopBotDto"/>, <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.TransferBotDto"/>, <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.TriggerWorkflowDto"/>, <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpdateContactFieldDto"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class CreateActionResponseDTO_data_details : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.AdvancedFollowupDto"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HighLevel.OpenApiClient.Models.AdvancedFollowupDto? AdvancedFollowupDto { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HighLevel.OpenApiClient.Models.AdvancedFollowupDto AdvancedFollowupDto { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentBookingDto"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentBookingDto? AppointmentBookingDto { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentBookingDto AppointmentBookingDto { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.HumanHandOverDto"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HighLevel.OpenApiClient.Models.HumanHandOverDto? HumanHandOverDto { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HighLevel.OpenApiClient.Models.HumanHandOverDto HumanHandOverDto { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.StopBotDto"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HighLevel.OpenApiClient.Models.StopBotDto? StopBotDto { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HighLevel.OpenApiClient.Models.StopBotDto StopBotDto { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.TransferBotDto"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HighLevel.OpenApiClient.Models.TransferBotDto? TransferBotDto { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HighLevel.OpenApiClient.Models.TransferBotDto TransferBotDto { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.TriggerWorkflowDto"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HighLevel.OpenApiClient.Models.TriggerWorkflowDto? TriggerWorkflowDto { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HighLevel.OpenApiClient.Models.TriggerWorkflowDto TriggerWorkflowDto { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpdateContactFieldDto"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateContactFieldDto? UpdateContactFieldDto { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateContactFieldDto UpdateContactFieldDto { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CreateActionResponseDTO_data.CreateActionResponseDTO_data_details"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.HighLevel.OpenApiClient.Models.CreateActionResponseDTO_data.CreateActionResponseDTO_data_details CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Soenneker.HighLevel.OpenApiClient.Models.CreateActionResponseDTO_data.CreateActionResponseDTO_data_details();
+                if("AdvancedFollowupDto".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.AdvancedFollowupDto = new global::Soenneker.HighLevel.OpenApiClient.Models.AdvancedFollowupDto();
+                }
+                else if("AppointmentBookingDto".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.AppointmentBookingDto = new global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentBookingDto();
+                }
+                else if("HumanHandOverDto".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.HumanHandOverDto = new global::Soenneker.HighLevel.OpenApiClient.Models.HumanHandOverDto();
+                }
+                else if("StopBotDto".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.StopBotDto = new global::Soenneker.HighLevel.OpenApiClient.Models.StopBotDto();
+                }
+                else if("TransferBotDto".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.TransferBotDto = new global::Soenneker.HighLevel.OpenApiClient.Models.TransferBotDto();
+                }
+                else if("TriggerWorkflowDto".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.TriggerWorkflowDto = new global::Soenneker.HighLevel.OpenApiClient.Models.TriggerWorkflowDto();
+                }
+                else if("UpdateContactFieldDto".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.UpdateContactFieldDto = new global::Soenneker.HighLevel.OpenApiClient.Models.UpdateContactFieldDto();
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                if(AdvancedFollowupDto != null)
+                {
+                    return AdvancedFollowupDto.GetFieldDeserializers();
+                }
+                else if(AppointmentBookingDto != null)
+                {
+                    return AppointmentBookingDto.GetFieldDeserializers();
+                }
+                else if(HumanHandOverDto != null)
+                {
+                    return HumanHandOverDto.GetFieldDeserializers();
+                }
+                else if(StopBotDto != null)
+                {
+                    return StopBotDto.GetFieldDeserializers();
+                }
+                else if(TransferBotDto != null)
+                {
+                    return TransferBotDto.GetFieldDeserializers();
+                }
+                else if(TriggerWorkflowDto != null)
+                {
+                    return TriggerWorkflowDto.GetFieldDeserializers();
+                }
+                else if(UpdateContactFieldDto != null)
+                {
+                    return UpdateContactFieldDto.GetFieldDeserializers();
+                }
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(AdvancedFollowupDto != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AdvancedFollowupDto>(null, AdvancedFollowupDto);
+                }
+                else if(AppointmentBookingDto != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentBookingDto>(null, AppointmentBookingDto);
+                }
+                else if(HumanHandOverDto != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.HumanHandOverDto>(null, HumanHandOverDto);
+                }
+                else if(StopBotDto != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.StopBotDto>(null, StopBotDto);
+                }
+                else if(TransferBotDto != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.TransferBotDto>(null, TransferBotDto);
+                }
+                else if(TriggerWorkflowDto != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.TriggerWorkflowDto>(null, TriggerWorkflowDto);
+                }
+                else if(UpdateContactFieldDto != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateContactFieldDto>(null, UpdateContactFieldDto);
+                }
+            }
         }
     }
 }

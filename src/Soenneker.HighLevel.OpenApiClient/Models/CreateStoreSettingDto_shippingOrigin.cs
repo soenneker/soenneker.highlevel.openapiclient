@@ -11,14 +11,83 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// Shipping origin address
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class CreateStoreSettingDto_shippingOrigin : global::Soenneker.HighLevel.OpenApiClient.Models.StoreShippingOriginDto, IParsable
+    public partial class CreateStoreSettingDto_shippingOrigin : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>City name</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? City { get; set; }
+#nullable restore
+#else
+        public string City { get; set; }
+#endif
+        /// <summary>Country code</summary>
+        public double? Country { get; set; }
+        /// <summary>Email</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Email { get; set; }
+#nullable restore
+#else
+        public string Email { get; set; }
+#endif
+        /// <summary>Name of the store / company</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Name { get; set; }
+#nullable restore
+#else
+        public string Name { get; set; }
+#endif
+        /// <summary>Business Phone Number</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Phone { get; set; }
+#nullable restore
+#else
+        public string Phone { get; set; }
+#endif
+        /// <summary>State code</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDto_shippingOrigin_state? State { get; set; }
+        /// <summary>Street address line 1</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Street1 { get; set; }
+#nullable restore
+#else
+        public string Street1 { get; set; }
+#endif
+        /// <summary>Street address line 2</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Street2 { get; set; }
+#nullable restore
+#else
+        public string Street2 { get; set; }
+#endif
+        /// <summary>Zip code</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Zip { get; set; }
+#nullable restore
+#else
+        public string Zip { get; set; }
+#endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDto_shippingOrigin"/> and sets the default values.
+        /// </summary>
+        public CreateStoreSettingDto_shippingOrigin()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDto_shippingOrigin"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDto_shippingOrigin CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDto_shippingOrigin CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDto_shippingOrigin();
@@ -27,20 +96,38 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
+                { "city", n => { City = n.GetStringValue(); } },
+                { "country", n => { Country = n.GetDoubleValue(); } },
+                { "email", n => { Email = n.GetStringValue(); } },
+                { "name", n => { Name = n.GetStringValue(); } },
+                { "phone", n => { Phone = n.GetStringValue(); } },
+                { "state", n => { State = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDto_shippingOrigin_state>(); } },
+                { "street1", n => { Street1 = n.GetStringValue(); } },
+                { "street2", n => { Street2 = n.GetStringValue(); } },
+                { "zip", n => { Zip = n.GetStringValue(); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            writer.WriteStringValue("city", City);
+            writer.WriteDoubleValue("country", Country);
+            writer.WriteStringValue("email", Email);
+            writer.WriteStringValue("name", Name);
+            writer.WriteStringValue("phone", Phone);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDto_shippingOrigin_state>("state", State);
+            writer.WriteStringValue("street1", Street1);
+            writer.WriteStringValue("street2", Street2);
+            writer.WriteStringValue("zip", Zip);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

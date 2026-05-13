@@ -11,14 +11,53 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// Late fees configuration for the invoices
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class CreateInvoiceTemplateDto_lateFeesConfiguration : global::Soenneker.HighLevel.OpenApiClient.Models.LateFeesConfigurationDto, IParsable
+    public partial class CreateInvoiceTemplateDto_lateFeesConfiguration : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Enable late fees</summary>
+        public bool? Enable { get; set; }
+        /// <summary>Late Fees Frequency</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceTemplateDto_lateFeesConfiguration_frequency? Frequency { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceTemplateDto_lateFeesConfiguration_frequency Frequency { get; set; }
+#endif
+        /// <summary>Late Fees Grace</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceTemplateDto_lateFeesConfiguration_grace? Grace { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceTemplateDto_lateFeesConfiguration_grace Grace { get; set; }
+#endif
+        /// <summary>Max late fees payable</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceTemplateDto_lateFeesConfiguration_maxLateFees? MaxLateFees { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceTemplateDto_lateFeesConfiguration_maxLateFees MaxLateFees { get; set; }
+#endif
+        /// <summary>Late Fees Type</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceTemplateDto_lateFeesConfiguration_type? Type { get; set; }
+        /// <summary>Late Fees Value</summary>
+        public double? Value { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceTemplateDto_lateFeesConfiguration"/> and sets the default values.
+        /// </summary>
+        public CreateInvoiceTemplateDto_lateFeesConfiguration()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceTemplateDto_lateFeesConfiguration"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceTemplateDto_lateFeesConfiguration CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceTemplateDto_lateFeesConfiguration CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceTemplateDto_lateFeesConfiguration();
@@ -27,20 +66,32 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
+                { "enable", n => { Enable = n.GetBoolValue(); } },
+                { "frequency", n => { Frequency = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceTemplateDto_lateFeesConfiguration_frequency>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceTemplateDto_lateFeesConfiguration_frequency.CreateFromDiscriminatorValue); } },
+                { "grace", n => { Grace = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceTemplateDto_lateFeesConfiguration_grace>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceTemplateDto_lateFeesConfiguration_grace.CreateFromDiscriminatorValue); } },
+                { "maxLateFees", n => { MaxLateFees = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceTemplateDto_lateFeesConfiguration_maxLateFees>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceTemplateDto_lateFeesConfiguration_maxLateFees.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceTemplateDto_lateFeesConfiguration_type>(); } },
+                { "value", n => { Value = n.GetDoubleValue(); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            writer.WriteBoolValue("enable", Enable);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceTemplateDto_lateFeesConfiguration_frequency>("frequency", Frequency);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceTemplateDto_lateFeesConfiguration_grace>("grace", Grace);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceTemplateDto_lateFeesConfiguration_maxLateFees>("maxLateFees", MaxLateFees);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceTemplateDto_lateFeesConfiguration_type>("type", Type);
+            writer.WriteDoubleValue("value", Value);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

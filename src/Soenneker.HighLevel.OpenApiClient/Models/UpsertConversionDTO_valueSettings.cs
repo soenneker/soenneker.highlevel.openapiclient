@@ -11,14 +11,35 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// Value settings that control how monetary value is attributed to conversions
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class UpsertConversionDTO_valueSettings : global::Soenneker.HighLevel.OpenApiClient.Models.ConversionValueSettings, IParsable
+    public partial class UpsertConversionDTO_valueSettings : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>When true, always uses the default value even if a transaction-specific value is provided</summary>
+        public bool? AlwaysUseDefaultValue { get; set; }
+        /// <summary>ISO 4217 currency code for the default value</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? DefaultCurrencyCode { get; set; }
+#nullable restore
+#else
+        public string DefaultCurrencyCode { get; set; }
+#endif
+        /// <summary>Default monetary value assigned to each conversion</summary>
+        public double? DefaultValue { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpsertConversionDTO_valueSettings"/> and sets the default values.
+        /// </summary>
+        public UpsertConversionDTO_valueSettings()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpsertConversionDTO_valueSettings"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.HighLevel.OpenApiClient.Models.UpsertConversionDTO_valueSettings CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.HighLevel.OpenApiClient.Models.UpsertConversionDTO_valueSettings CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.HighLevel.OpenApiClient.Models.UpsertConversionDTO_valueSettings();
@@ -27,20 +48,26 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
+                { "alwaysUseDefaultValue", n => { AlwaysUseDefaultValue = n.GetBoolValue(); } },
+                { "defaultCurrencyCode", n => { DefaultCurrencyCode = n.GetStringValue(); } },
+                { "defaultValue", n => { DefaultValue = n.GetDoubleValue(); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            writer.WriteBoolValue("alwaysUseDefaultValue", AlwaysUseDefaultValue);
+            writer.WriteStringValue("defaultCurrencyCode", DefaultCurrencyCode);
+            writer.WriteDoubleValue("defaultValue", DefaultValue);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

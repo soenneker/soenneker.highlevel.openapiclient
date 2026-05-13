@@ -11,14 +11,83 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// Knowledge base details
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class GetKnowledgeBaseByIdResponseDTO_data : global::Soenneker.HighLevel.OpenApiClient.Models.GetKnowledgeBaseByIdDataDTO, IParsable
+    public partial class GetKnowledgeBaseByIdResponseDTO_data : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Date when knowledge base was created</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CreatedAt { get; set; }
+#nullable restore
+#else
+        public string CreatedAt { get; set; }
+#endif
+        /// <summary>Whether the knowledge base is deleted</summary>
+        public bool? Deleted { get; set; }
+        /// <summary>Knowledge base ID</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Id { get; set; }
+#nullable restore
+#else
+        public string Id { get; set; }
+#endif
+        /// <summary>Whether the knowledge base is default or not</summary>
+        public bool? IsDefault { get; set; }
+        /// <summary>Knowledge base metadata with content counts</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetKnowledgeBaseByIdResponseDTO_data_kbMetadata? KbMetadata { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetKnowledgeBaseByIdResponseDTO_data_kbMetadata KbMetadata { get; set; }
+#endif
+        /// <summary>Location ID</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? LocationId { get; set; }
+#nullable restore
+#else
+        public string LocationId { get; set; }
+#endif
+        /// <summary>Knowledge base name</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Name { get; set; }
+#nullable restore
+#else
+        public string Name { get; set; }
+#endif
+        /// <summary>Knowledge base name in lowercase</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? NameLowerCase { get; set; }
+#nullable restore
+#else
+        public string NameLowerCase { get; set; }
+#endif
+        /// <summary>Date when knowledge base was last updated</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? UpdatedAt { get; set; }
+#nullable restore
+#else
+        public string UpdatedAt { get; set; }
+#endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GetKnowledgeBaseByIdResponseDTO_data"/> and sets the default values.
+        /// </summary>
+        public GetKnowledgeBaseByIdResponseDTO_data()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GetKnowledgeBaseByIdResponseDTO_data"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.HighLevel.OpenApiClient.Models.GetKnowledgeBaseByIdResponseDTO_data CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.HighLevel.OpenApiClient.Models.GetKnowledgeBaseByIdResponseDTO_data CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.HighLevel.OpenApiClient.Models.GetKnowledgeBaseByIdResponseDTO_data();
@@ -27,20 +96,38 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
+                { "createdAt", n => { CreatedAt = n.GetStringValue(); } },
+                { "deleted", n => { Deleted = n.GetBoolValue(); } },
+                { "id", n => { Id = n.GetStringValue(); } },
+                { "isDefault", n => { IsDefault = n.GetBoolValue(); } },
+                { "kbMetadata", n => { KbMetadata = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetKnowledgeBaseByIdResponseDTO_data_kbMetadata>(global::Soenneker.HighLevel.OpenApiClient.Models.GetKnowledgeBaseByIdResponseDTO_data_kbMetadata.CreateFromDiscriminatorValue); } },
+                { "locationId", n => { LocationId = n.GetStringValue(); } },
+                { "name", n => { Name = n.GetStringValue(); } },
+                { "nameLowerCase", n => { NameLowerCase = n.GetStringValue(); } },
+                { "updatedAt", n => { UpdatedAt = n.GetStringValue(); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            writer.WriteStringValue("createdAt", CreatedAt);
+            writer.WriteBoolValue("deleted", Deleted);
+            writer.WriteStringValue("id", Id);
+            writer.WriteBoolValue("isDefault", IsDefault);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetKnowledgeBaseByIdResponseDTO_data_kbMetadata>("kbMetadata", KbMetadata);
+            writer.WriteStringValue("locationId", LocationId);
+            writer.WriteStringValue("name", Name);
+            writer.WriteStringValue("nameLowerCase", NameLowerCase);
+            writer.WriteStringValue("updatedAt", UpdatedAt);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

@@ -11,14 +11,45 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// &quot;Configuration for post-call email notifications to various recipients. Default: []&quot;
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class AgentCreationRequestDTO_sendPostCallNotificationTo : global::Soenneker.HighLevel.OpenApiClient.Models.SendPostCallNotificationDTO, IParsable
+    public partial class AgentCreationRequestDTO_sendPostCallNotificationTo : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>&quot;Enables post-call notifications to all admin users in the location. Default: true&quot;</summary>
+        public bool? Admins { get; set; }
+        /// <summary>&quot;Enables post-call notifications to all users in the location. Default: false&quot;</summary>
+        public bool? AllUsers { get; set; }
+        /// <summary>&quot;Enables post-call notifications to the user assigned to the contact. Default: false&quot;</summary>
+        public bool? ContactAssignedUser { get; set; }
+        /// <summary>&quot;Array of custom email addresses to receive post-call notifications. Default: []&quot;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? CustomEmails { get; set; }
+#nullable restore
+#else
+        public List<string> CustomEmails { get; set; }
+#endif
+        /// <summary>&quot;Array of specific user IDs to receive post-call notifications. Default: []&quot;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? SpecificUsers { get; set; }
+#nullable restore
+#else
+        public List<string> SpecificUsers { get; set; }
+#endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.AgentCreationRequestDTO_sendPostCallNotificationTo"/> and sets the default values.
+        /// </summary>
+        public AgentCreationRequestDTO_sendPostCallNotificationTo()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.AgentCreationRequestDTO_sendPostCallNotificationTo"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.HighLevel.OpenApiClient.Models.AgentCreationRequestDTO_sendPostCallNotificationTo CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.HighLevel.OpenApiClient.Models.AgentCreationRequestDTO_sendPostCallNotificationTo CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.HighLevel.OpenApiClient.Models.AgentCreationRequestDTO_sendPostCallNotificationTo();
@@ -27,20 +58,30 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
+                { "admins", n => { Admins = n.GetBoolValue(); } },
+                { "allUsers", n => { AllUsers = n.GetBoolValue(); } },
+                { "contactAssignedUser", n => { ContactAssignedUser = n.GetBoolValue(); } },
+                { "customEmails", n => { CustomEmails = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "specificUsers", n => { SpecificUsers = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            writer.WriteBoolValue("admins", Admins);
+            writer.WriteBoolValue("allUsers", AllUsers);
+            writer.WriteBoolValue("contactAssignedUser", ContactAssignedUser);
+            writer.WriteCollectionOfPrimitiveValues<string>("customEmails", CustomEmails);
+            writer.WriteCollectionOfPrimitiveValues<string>("specificUsers", SpecificUsers);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

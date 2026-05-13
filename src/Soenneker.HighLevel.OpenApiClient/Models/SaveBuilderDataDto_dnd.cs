@@ -9,15 +9,48 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class SaveBuilderDataDto_dnd : global::Soenneker.HighLevel.OpenApiClient.Models.IBuilderJsonMapper, IParsable
+    public partial class SaveBuilderDataDto_dnd : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The attrs property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDto_dnd_attrs? Attrs { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDto_dnd_attrs Attrs { get; set; }
+#endif
+        /// <summary>The elements property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? Elements { get; set; }
+#nullable restore
+#else
+        public List<string> Elements { get; set; }
+#endif
+        /// <summary>The templateSettings property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDto_dnd_templateSettings? TemplateSettings { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDto_dnd_templateSettings TemplateSettings { get; set; }
+#endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDto_dnd"/> and sets the default values.
+        /// </summary>
+        public SaveBuilderDataDto_dnd()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDto_dnd"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDto_dnd CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDto_dnd CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             return new global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDto_dnd();
@@ -26,20 +59,26 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// The deserialization information for the current model
         /// </summary>
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-        public override IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+        public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
+            return new Dictionary<string, Action<IParseNode>>
             {
+                { "attrs", n => { Attrs = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDto_dnd_attrs>(global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDto_dnd_attrs.CreateFromDiscriminatorValue); } },
+                { "elements", n => { Elements = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "templateSettings", n => { TemplateSettings = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDto_dnd_templateSettings>(global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDto_dnd_templateSettings.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
         /// Serializes information the current object
         /// </summary>
         /// <param name="writer">Serialization writer to use to serialize this model</param>
-        public override void Serialize(ISerializationWriter writer)
+        public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDto_dnd_attrs>("attrs", Attrs);
+            writer.WriteCollectionOfPrimitiveValues<string>("elements", Elements);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDto_dnd_templateSettings>("templateSettings", TemplateSettings);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }
