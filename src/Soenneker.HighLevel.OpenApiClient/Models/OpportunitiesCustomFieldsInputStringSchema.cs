@@ -9,47 +9,51 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class SocialMediaPostingUploadFileResponseDTO : IAdditionalDataHolder, IParsable
+    public partial class OpportunitiesCustomFieldsInputStringSchema : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Message</summary>
+        /// <summary>The field_value property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Message { get; set; }
+        public string? FieldValue { get; set; }
 #nullable restore
 #else
-        public string Message { get; set; }
+        public string FieldValue { get; set; }
 #endif
-        /// <summary>Requested Results</summary>
+        /// <summary>Pass either `id` or `key` of custom field</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaPostingUploadFileResponseDTO_results? Results { get; set; }
+        public string? Id { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaPostingUploadFileResponseDTO_results Results { get; set; }
+        public string Id { get; set; }
 #endif
-        /// <summary>Status Code</summary>
-        public double? StatusCode { get; set; }
-        /// <summary>Success or Failure</summary>
-        public bool? Success { get; set; }
+        /// <summary>Pass either `id` or `key` of custom field</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Key { get; set; }
+#nullable restore
+#else
+        public string Key { get; set; }
+#endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaPostingUploadFileResponseDTO"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.OpportunitiesCustomFieldsInputStringSchema"/> and sets the default values.
         /// </summary>
-        public SocialMediaPostingUploadFileResponseDTO()
+        public OpportunitiesCustomFieldsInputStringSchema()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaPostingUploadFileResponseDTO"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.OpportunitiesCustomFieldsInputStringSchema"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaPostingUploadFileResponseDTO CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.HighLevel.OpenApiClient.Models.OpportunitiesCustomFieldsInputStringSchema CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaPostingUploadFileResponseDTO();
+            return new global::Soenneker.HighLevel.OpenApiClient.Models.OpportunitiesCustomFieldsInputStringSchema();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -59,10 +63,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "message", n => { Message = n.GetStringValue(); } },
-                { "results", n => { Results = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaPostingUploadFileResponseDTO_results>(global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaPostingUploadFileResponseDTO_results.CreateFromDiscriminatorValue); } },
-                { "statusCode", n => { StatusCode = n.GetDoubleValue(); } },
-                { "success", n => { Success = n.GetBoolValue(); } },
+                { "field_value", n => { FieldValue = n.GetStringValue(); } },
+                { "id", n => { Id = n.GetStringValue(); } },
+                { "key", n => { Key = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -72,10 +75,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("message", Message);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaPostingUploadFileResponseDTO_results>("results", Results);
-            writer.WriteDoubleValue("statusCode", StatusCode);
-            writer.WriteBoolValue("success", Success);
+            writer.WriteStringValue("field_value", FieldValue);
+            writer.WriteStringValue("id", Id);
+            writer.WriteStringValue("key", Key);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

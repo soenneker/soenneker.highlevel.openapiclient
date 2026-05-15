@@ -7,37 +7,54 @@ using System.IO;
 using System;
 namespace Soenneker.HighLevel.OpenApiClient.Models
 {
+    /// <summary>
+    /// The Product label details
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class LocationsSearchSuccessfulResponseDto : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class DefaultProductResponseDto_label : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The locations property</summary>
+        /// <summary>Start date in YYYY-MM-DDTHH:mm:ssZ format</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationSchema>? Locations { get; set; }
+        public string? EndDate { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationSchema> Locations { get; set; }
+        public string EndDate { get; set; }
+#endif
+        /// <summary>Start date in YYYY-MM-DDTHH:mm:ssZ format</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? StartDate { get; set; }
+#nullable restore
+#else
+        public string StartDate { get; set; }
+#endif
+        /// <summary>The content for the product label.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Title { get; set; }
+#nullable restore
+#else
+        public string Title { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.LocationsSearchSuccessfulResponseDto"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.DefaultProductResponseDto_label"/> and sets the default values.
         /// </summary>
-        public LocationsSearchSuccessfulResponseDto()
+        public DefaultProductResponseDto_label()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.LocationsSearchSuccessfulResponseDto"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.DefaultProductResponseDto_label"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.HighLevel.OpenApiClient.Models.LocationsSearchSuccessfulResponseDto CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.HighLevel.OpenApiClient.Models.DefaultProductResponseDto_label CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.LocationsSearchSuccessfulResponseDto();
+            return new global::Soenneker.HighLevel.OpenApiClient.Models.DefaultProductResponseDto_label();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -47,7 +64,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "locations", n => { Locations = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationSchema>(global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationSchema.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "endDate", n => { EndDate = n.GetStringValue(); } },
+                { "startDate", n => { StartDate = n.GetStringValue(); } },
+                { "title", n => { Title = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -57,7 +76,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationSchema>("locations", Locations);
+            writer.WriteStringValue("endDate", EndDate);
+            writer.WriteStringValue("startDate", StartDate);
+            writer.WriteStringValue("title", Title);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -5,7 +5,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 {
     /// <summary>The interval at which the recurring event occurs.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum ProductsDefaultPriceResponseDto_recurring_interval
+    public enum DefaultPriceResponseDto_recurring_interval
     {
         [EnumMember(Value = "day")]
         #pragma warning disable CS1591

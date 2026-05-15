@@ -9,7 +9,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class ProductsDefaultProductResponseDto : IAdditionalDataHolder, IParsable
+    public partial class DefaultProductResponseDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -63,10 +63,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The Product label details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ProductsDefaultProductResponseDto_label? Label { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DefaultProductResponseDto_label? Label { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ProductsDefaultProductResponseDto_label Label { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DefaultProductResponseDto_label Label { get; set; }
 #endif
         /// <summary>The unique identifier for the location.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -121,27 +121,27 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>An array of variants for the product.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ProductsProductVariantDto>? Variants { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ProductVariantDto>? Variants { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ProductsProductVariantDto> Variants { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ProductVariantDto> Variants { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.ProductsDefaultProductResponseDto"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.DefaultProductResponseDto"/> and sets the default values.
         /// </summary>
-        public ProductsDefaultProductResponseDto()
+        public DefaultProductResponseDto()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.ProductsDefaultProductResponseDto"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.DefaultProductResponseDto"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.HighLevel.OpenApiClient.Models.ProductsDefaultProductResponseDto CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.HighLevel.OpenApiClient.Models.DefaultProductResponseDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.ProductsDefaultProductResponseDto();
+            return new global::Soenneker.HighLevel.OpenApiClient.Models.DefaultProductResponseDto();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -159,7 +159,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "_id", n => { Id = n.GetStringValue(); } },
                 { "image", n => { Image = n.GetStringValue(); } },
                 { "isTaxesEnabled", n => { IsTaxesEnabled = n.GetBoolValue(); } },
-                { "label", n => { Label = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProductsDefaultProductResponseDto_label>(global::Soenneker.HighLevel.OpenApiClient.Models.ProductsDefaultProductResponseDto_label.CreateFromDiscriminatorValue); } },
+                { "label", n => { Label = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DefaultProductResponseDto_label>(global::Soenneker.HighLevel.OpenApiClient.Models.DefaultProductResponseDto_label.CreateFromDiscriminatorValue); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "productType", n => { ProductType = n.GetStringValue(); } },
@@ -167,7 +167,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "statementDescriptor", n => { StatementDescriptor = n.GetStringValue(); } },
                 { "taxes", n => { Taxes = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
-                { "variants", n => { Variants = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ProductsProductVariantDto>(global::Soenneker.HighLevel.OpenApiClient.Models.ProductsProductVariantDto.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "variants", n => { Variants = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ProductVariantDto>(global::Soenneker.HighLevel.OpenApiClient.Models.ProductVariantDto.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -185,7 +185,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("_id", Id);
             writer.WriteStringValue("image", Image);
             writer.WriteBoolValue("isTaxesEnabled", IsTaxesEnabled);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProductsDefaultProductResponseDto_label>("label", Label);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DefaultProductResponseDto_label>("label", Label);
             writer.WriteStringValue("locationId", LocationId);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("productType", ProductType);
@@ -193,7 +193,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("statementDescriptor", StatementDescriptor);
             writer.WriteCollectionOfPrimitiveValues<string>("taxes", Taxes);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ProductsProductVariantDto>("variants", Variants);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ProductVariantDto>("variants", Variants);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

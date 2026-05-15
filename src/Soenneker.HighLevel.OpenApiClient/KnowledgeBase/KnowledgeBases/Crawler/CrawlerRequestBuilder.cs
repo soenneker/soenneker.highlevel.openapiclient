@@ -52,10 +52,10 @@ namespace Soenneker.HighLevel.OpenApiClient.KnowledgeBase.KnowledgeBases.Crawler
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.BadRequestDTO">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.UnauthorizedDTO">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.KnowledgeBaseBadRequestDTO">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.KnowledgeBaseUnauthorizedDTO">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.UnprocessableDTO">When receiving a 422 status code</exception>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.InternalServerErrorDTO">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.KnowledgeBaseInternalServerErrorDTO">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteWebsiteUrlResponseDTO?> DeleteAsync(global::Soenneker.HighLevel.OpenApiClient.Models.DeleteWebsiteUrlRequestDTO body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -69,10 +69,10 @@ namespace Soenneker.HighLevel.OpenApiClient.KnowledgeBase.KnowledgeBases.Crawler
             var requestInfo = ToDeleteRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.HighLevel.OpenApiClient.Models.BadRequestDTO.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.HighLevel.OpenApiClient.Models.UnauthorizedDTO.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.HighLevel.OpenApiClient.Models.KnowledgeBaseBadRequestDTO.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.HighLevel.OpenApiClient.Models.KnowledgeBaseUnauthorizedDTO.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.UnprocessableDTO.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.HighLevel.OpenApiClient.Models.InternalServerErrorDTO.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.HighLevel.OpenApiClient.Models.KnowledgeBaseInternalServerErrorDTO.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteWebsiteUrlResponseDTO>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.DeleteWebsiteUrlResponseDTO.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -82,10 +82,10 @@ namespace Soenneker.HighLevel.OpenApiClient.KnowledgeBase.KnowledgeBases.Crawler
         /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GetAllUrlsByKnowledgeBaseResponseDTO"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.BadRequestDTO">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.UnauthorizedDTO">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.KnowledgeBaseBadRequestDTO">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.KnowledgeBaseUnauthorizedDTO">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.UnprocessableDTO">When receiving a 422 status code</exception>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.InternalServerErrorDTO">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.KnowledgeBaseInternalServerErrorDTO">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.GetAllUrlsByKnowledgeBaseResponseDTO?> GetAsync(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.KnowledgeBase.KnowledgeBases.Crawler.CrawlerRequestBuilder.CrawlerRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -98,10 +98,10 @@ namespace Soenneker.HighLevel.OpenApiClient.KnowledgeBase.KnowledgeBases.Crawler
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.HighLevel.OpenApiClient.Models.BadRequestDTO.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.HighLevel.OpenApiClient.Models.UnauthorizedDTO.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.HighLevel.OpenApiClient.Models.KnowledgeBaseBadRequestDTO.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.HighLevel.OpenApiClient.Models.KnowledgeBaseUnauthorizedDTO.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.UnprocessableDTO.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.HighLevel.OpenApiClient.Models.InternalServerErrorDTO.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.HighLevel.OpenApiClient.Models.KnowledgeBaseInternalServerErrorDTO.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.GetAllUrlsByKnowledgeBaseResponseDTO>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.GetAllUrlsByKnowledgeBaseResponseDTO.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -112,10 +112,10 @@ namespace Soenneker.HighLevel.OpenApiClient.KnowledgeBase.KnowledgeBases.Crawler
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.BadRequestDTO">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.UnauthorizedDTO">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.KnowledgeBaseBadRequestDTO">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.KnowledgeBaseUnauthorizedDTO">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.UnprocessableDTO">When receiving a 422 status code</exception>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.InternalServerErrorDTO">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.KnowledgeBaseInternalServerErrorDTO">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.DiscoverWebsiteResponseDTO?> PostAsync(global::Soenneker.HighLevel.OpenApiClient.Models.DiscoverWebsiteRequestDTO body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -129,10 +129,10 @@ namespace Soenneker.HighLevel.OpenApiClient.KnowledgeBase.KnowledgeBases.Crawler
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.HighLevel.OpenApiClient.Models.BadRequestDTO.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.HighLevel.OpenApiClient.Models.UnauthorizedDTO.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.HighLevel.OpenApiClient.Models.KnowledgeBaseBadRequestDTO.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.HighLevel.OpenApiClient.Models.KnowledgeBaseUnauthorizedDTO.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.UnprocessableDTO.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.HighLevel.OpenApiClient.Models.InternalServerErrorDTO.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.HighLevel.OpenApiClient.Models.KnowledgeBaseInternalServerErrorDTO.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.DiscoverWebsiteResponseDTO>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.DiscoverWebsiteResponseDTO.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

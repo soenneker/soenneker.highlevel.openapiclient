@@ -5,7 +5,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 {
     /// <summary>The type of the price (e.g., one_time).</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum ProductsDefaultPriceResponseDto_type
+    public enum DefaultPriceResponseDto_type
     {
         [EnumMember(Value = "one_time")]
         #pragma warning disable CS1591

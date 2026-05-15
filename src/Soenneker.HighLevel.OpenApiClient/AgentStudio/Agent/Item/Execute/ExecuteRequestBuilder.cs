@@ -42,7 +42,7 @@ namespace Soenneker.HighLevel.OpenApiClient.AgentStudio.Agent.Item.Execute
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDTO">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnprocessableDTO">When receiving a 422 status code</exception>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.AgentStudioInternalServerErrorDTO">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.InternalServerErrorDTO">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentResponseDTO?> PostAsync(global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentDTO body, Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.AgentStudio.Agent.Item.Execute.ExecuteRequestBuilder.ExecuteRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -58,7 +58,7 @@ namespace Soenneker.HighLevel.OpenApiClient.AgentStudio.Agent.Item.Execute
             {
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDTO.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnprocessableDTO.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.HighLevel.OpenApiClient.Models.AgentStudioInternalServerErrorDTO.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.HighLevel.OpenApiClient.Models.InternalServerErrorDTO.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentResponseDTO>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentResponseDTO.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

@@ -9,12 +9,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class DiscountDto : IAdditionalDataHolder, IParsable
+    public partial class PaymentsProductVariantDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Unique identifier for the discount</summary>
+        /// <summary>A unique identifier for the variant.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }
@@ -22,26 +22,38 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
-        /// <summary>Type of discount</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto_type? Type { get; set; }
-        /// <summary>Discount value (either a percentage or custom amount)</summary>
-        public double? Value { get; set; }
+        /// <summary>The name of the variant.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Name { get; set; }
+#nullable restore
+#else
+        public string Name { get; set; }
+#endif
+        /// <summary>An array of options for the variant.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsProductVariantOptionDto>? Options { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsProductVariantOptionDto> Options { get; set; }
+#endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsProductVariantDto"/> and sets the default values.
         /// </summary>
-        public DiscountDto()
+        public PaymentsProductVariantDto()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsProductVariantDto"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsProductVariantDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto();
+            return new global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsProductVariantDto();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -52,8 +64,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto_type>(); } },
-                { "value", n => { Value = n.GetDoubleValue(); } },
+                { "name", n => { Name = n.GetStringValue(); } },
+                { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsProductVariantOptionDto>(global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsProductVariantOptionDto.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -64,8 +76,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("id", Id);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto_type>("type", Type);
-            writer.WriteDoubleValue("value", Value);
+            writer.WriteStringValue("name", Name);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsProductVariantOptionDto>("options", Options);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

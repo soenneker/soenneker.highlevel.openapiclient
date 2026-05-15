@@ -9,43 +9,51 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class ContactsDeleteFollowersSuccessfulResponseDto : IAdditionalDataHolder, IParsable
+    public partial class OpportunitiesCustomFieldsInputArraySchema : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The followers property</summary>
+        /// <summary>The field_value property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Followers { get; set; }
+        public List<string>? FieldValue { get; set; }
 #nullable restore
 #else
-        public List<string> Followers { get; set; }
+        public List<string> FieldValue { get; set; }
 #endif
-        /// <summary>The followersRemoved property</summary>
+        /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? FollowersRemoved { get; set; }
+        public string? Id { get; set; }
 #nullable restore
 #else
-        public List<string> FollowersRemoved { get; set; }
+        public string Id { get; set; }
+#endif
+        /// <summary>The key property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Key { get; set; }
+#nullable restore
+#else
+        public string Key { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.ContactsDeleteFollowersSuccessfulResponseDto"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.OpportunitiesCustomFieldsInputArraySchema"/> and sets the default values.
         /// </summary>
-        public ContactsDeleteFollowersSuccessfulResponseDto()
+        public OpportunitiesCustomFieldsInputArraySchema()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.ContactsDeleteFollowersSuccessfulResponseDto"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.OpportunitiesCustomFieldsInputArraySchema"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.HighLevel.OpenApiClient.Models.ContactsDeleteFollowersSuccessfulResponseDto CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.HighLevel.OpenApiClient.Models.OpportunitiesCustomFieldsInputArraySchema CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.ContactsDeleteFollowersSuccessfulResponseDto();
+            return new global::Soenneker.HighLevel.OpenApiClient.Models.OpportunitiesCustomFieldsInputArraySchema();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -55,8 +63,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "followers", n => { Followers = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "followersRemoved", n => { FollowersRemoved = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "field_value", n => { FieldValue = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "id", n => { Id = n.GetStringValue(); } },
+                { "key", n => { Key = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -66,8 +75,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfPrimitiveValues<string>("followers", Followers);
-            writer.WriteCollectionOfPrimitiveValues<string>("followersRemoved", FollowersRemoved);
+            writer.WriteCollectionOfPrimitiveValues<string>("field_value", FieldValue);
+            writer.WriteStringValue("id", Id);
+            writer.WriteStringValue("key", Key);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

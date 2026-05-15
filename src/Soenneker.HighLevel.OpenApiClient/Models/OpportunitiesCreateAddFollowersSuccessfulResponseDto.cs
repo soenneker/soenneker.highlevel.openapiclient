@@ -9,51 +9,43 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class ProductsMembershipOfferDto : IAdditionalDataHolder, IParsable
+    public partial class OpportunitiesCreateAddFollowersSuccessfulResponseDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The unique identifier for the membership offer.</summary>
+        /// <summary>The followers property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public List<string>? Followers { get; set; }
 #nullable restore
 #else
-        public string Id { get; set; }
+        public List<string> Followers { get; set; }
 #endif
-        /// <summary>Membership offer label</summary>
+        /// <summary>The followersAdded property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Label { get; set; }
+        public List<string>? FollowersAdded { get; set; }
 #nullable restore
 #else
-        public string Label { get; set; }
-#endif
-        /// <summary>Membership offer label</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Value { get; set; }
-#nullable restore
-#else
-        public string Value { get; set; }
+        public List<string> FollowersAdded { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.ProductsMembershipOfferDto"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.OpportunitiesCreateAddFollowersSuccessfulResponseDto"/> and sets the default values.
         /// </summary>
-        public ProductsMembershipOfferDto()
+        public OpportunitiesCreateAddFollowersSuccessfulResponseDto()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.ProductsMembershipOfferDto"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.OpportunitiesCreateAddFollowersSuccessfulResponseDto"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.HighLevel.OpenApiClient.Models.ProductsMembershipOfferDto CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.HighLevel.OpenApiClient.Models.OpportunitiesCreateAddFollowersSuccessfulResponseDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.ProductsMembershipOfferDto();
+            return new global::Soenneker.HighLevel.OpenApiClient.Models.OpportunitiesCreateAddFollowersSuccessfulResponseDto();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -63,9 +55,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "_id", n => { Id = n.GetStringValue(); } },
-                { "label", n => { Label = n.GetStringValue(); } },
-                { "value", n => { Value = n.GetStringValue(); } },
+                { "followers", n => { Followers = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "followersAdded", n => { FollowersAdded = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
         }
         /// <summary>
@@ -75,9 +66,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("_id", Id);
-            writer.WriteStringValue("label", Label);
-            writer.WriteStringValue("value", Value);
+            writer.WriteCollectionOfPrimitiveValues<string>("followers", Followers);
+            writer.WriteCollectionOfPrimitiveValues<string>("followersAdded", FollowersAdded);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

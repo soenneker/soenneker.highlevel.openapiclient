@@ -30,10 +30,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>List of applied discounts</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ProposalsDiscountDto>? Discounts { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto>? Discounts { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ProposalsDiscountDto> Discounts { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto> Discounts { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.DocumentDto_grandTotal"/> and sets the default values.
@@ -63,7 +63,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "amount", n => { Amount = n.GetDoubleValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "discountPercentage", n => { DiscountPercentage = n.GetDoubleValue(); } },
-                { "discounts", n => { Discounts = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ProposalsDiscountDto>(global::Soenneker.HighLevel.OpenApiClient.Models.ProposalsDiscountDto.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "discounts", n => { Discounts = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto>(global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -76,7 +76,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteDoubleValue("amount", Amount);
             writer.WriteStringValue("currency", Currency);
             writer.WriteDoubleValue("discountPercentage", DiscountPercentage);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ProposalsDiscountDto>("discounts", Discounts);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto>("discounts", Discounts);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
