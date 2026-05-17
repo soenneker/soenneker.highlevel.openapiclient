@@ -1360,7 +1360,7 @@
         ]
       }
     },
-    "/objects/": {
+    "/objects": {
       "get": {
         "tags": [
           "Object Schema"
@@ -2624,7 +2624,7 @@
         ]
       }
     },
-    "/forms/": {
+    "/forms": {
       "get": {
         "tags": [
           "Forms"
@@ -6120,7 +6120,7 @@
         ]
       }
     },
-    "/calendars/": {
+    "/calendars": {
       "get": {
         "tags": [
           "Calendars"
@@ -10588,7 +10588,7 @@
         ]
       }
     },
-    "/associations/": {
+    "/associations": {
       "post": {
         "tags": [
           "Associations"
@@ -11028,7 +11028,7 @@
         ]
       }
     },
-    "/businesses/": {
+    "/businesses": {
       "get": {
         "tags": [
           "Businesses"
@@ -15469,7 +15469,7 @@
         ]
       }
     },
-    "/locations/": {
+    "/locations": {
       "post": {
         "tags": [
           "Sub-Account (Formerly Location)"
@@ -17597,7 +17597,7 @@
         ]
       }
     },
-    "/snapshots/": {
+    "/snapshots": {
       "get": {
         "tags": [
           "Snapshots"
@@ -18437,7 +18437,7 @@
         ]
       }
     },
-    "/campaigns/": {
+    "/campaigns": {
       "get": {
         "tags": [
           "Campaigns"
@@ -19042,7 +19042,7 @@
         ]
       }
     },
-    "/users/": {
+    "/users": {
       "post": {
         "tags": [
           "Users"
@@ -19609,7 +19609,7 @@
         ]
       }
     },
-    "/brand-boards/": {
+    "/brand-boards": {
       "post": {
         "tags": [
           "Brand Boards"
@@ -22072,7 +22072,7 @@
         ]
       }
     },
-    "/conversations/": {
+    "/conversations": {
       "post": {
         "tags": [
           "Conversations"
@@ -27288,7 +27288,7 @@
         ]
       }
     },
-    "/contacts/": {
+    "/contacts": {
       "post": {
         "tags": [
           "Contacts"
@@ -30018,7 +30018,7 @@
         ]
       }
     },
-    "/products/": {
+    "/products": {
       "post": {
         "tags": [
           "Products"
@@ -39867,7 +39867,7 @@
         ]
       }
     },
-    "/knowledge-base/knowledge-bases/": {
+    "/knowledge-base/knowledge-bases": {
       "get": {
         "tags": [
           "Knowledge Base"
@@ -40260,7 +40260,7 @@
         ]
       }
     },
-    "/custom-menus/": {
+    "/custom-menus": {
       "get": {
         "tags": [
           "Custom Menu Links"
@@ -47080,7 +47080,7 @@
         ]
       }
     },
-    "/invoices/": {
+    "/invoices": {
       "post": {
         "tags": [
           "Invoice"
@@ -48554,7 +48554,7 @@
         ]
       }
     },
-    "/opportunities/": {
+    "/opportunities": {
       "post": {
         "tags": [
           "Opportunities"
@@ -49077,7 +49077,7 @@
         ]
       }
     },
-    "/links/": {
+    "/links": {
       "get": {
         "tags": [
           "Trigger Links"
@@ -49231,7 +49231,7 @@
         ]
       }
     },
-    "/workflows/": {
+    "/workflows": {
       "get": {
         "tags": [
           "Workflows"
@@ -49453,7 +49453,7 @@
         ]
       }
     },
-    "/surveys/": {
+    "/surveys": {
       "get": {
         "tags": [
           "Surveys"
@@ -51952,7 +51952,7 @@
         ]
       }
     },
-    "/custom-fields/": {
+    "/custom-fields": {
       "post": {
         "tags": [
           "Custom Fields V2"
