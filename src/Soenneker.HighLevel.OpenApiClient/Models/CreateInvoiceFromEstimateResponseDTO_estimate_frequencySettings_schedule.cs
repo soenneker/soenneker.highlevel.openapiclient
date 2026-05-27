@@ -26,10 +26,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The rrule property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCustomRRuleOptionsDto? Rrule { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomRRuleOptionsDto? Rrule { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCustomRRuleOptionsDto Rrule { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomRRuleOptionsDto Rrule { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceFromEstimateResponseDTO_estimate_frequencySettings_schedule"/> and sets the default values.
@@ -57,7 +57,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "executeAt", n => { ExecuteAt = n.GetStringValue(); } },
-                { "rrule", n => { Rrule = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCustomRRuleOptionsDto>(global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCustomRRuleOptionsDto.CreateFromDiscriminatorValue); } },
+                { "rrule", n => { Rrule = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomRRuleOptionsDto>(global::Soenneker.HighLevel.OpenApiClient.Models.CustomRRuleOptionsDto.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -68,7 +68,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("executeAt", ExecuteAt);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCustomRRuleOptionsDto>("rrule", Rrule);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomRRuleOptionsDto>("rrule", Rrule);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

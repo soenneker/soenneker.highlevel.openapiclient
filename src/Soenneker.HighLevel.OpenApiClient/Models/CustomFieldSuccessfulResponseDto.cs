@@ -14,13 +14,13 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The customField property</summary>
+        /// <summary>The field property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldSchema? CustomField { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ICustomField? Field { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldSchema CustomField { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ICustomField Field { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldSuccessfulResponseDto"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "customField", n => { CustomField = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldSchema>(global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldSchema.CreateFromDiscriminatorValue); } },
+                { "field", n => { Field = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ICustomField>(global::Soenneker.HighLevel.OpenApiClient.Models.ICustomField.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldSchema>("customField", CustomField);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ICustomField>("field", Field);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

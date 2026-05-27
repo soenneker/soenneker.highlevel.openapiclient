@@ -122,10 +122,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>An array of variants for the product.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsProductVariantDto>? Variants { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ProductVariantDto>? Variants { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsProductVariantDto> Variants { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ProductVariantDto> Variants { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.FulfilledItem_product"/> and sets the default values.
@@ -168,7 +168,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "statementDescriptor", n => { StatementDescriptor = n.GetStringValue(); } },
                 { "taxes", n => { Taxes = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
-                { "variants", n => { Variants = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsProductVariantDto>(global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsProductVariantDto.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "variants", n => { Variants = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ProductVariantDto>(global::Soenneker.HighLevel.OpenApiClient.Models.ProductVariantDto.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -194,7 +194,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("statementDescriptor", StatementDescriptor);
             writer.WriteCollectionOfPrimitiveValues<string>("taxes", Taxes);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsProductVariantDto>("variants", Variants);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ProductVariantDto>("variants", Variants);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
