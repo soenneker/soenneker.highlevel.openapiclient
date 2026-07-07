@@ -23,7 +23,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string Message { get; set; }
 #endif
         /// <summary>The status property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.InboundDndSettingSchema_status? Status { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.InboundDndSettingSchemaStatus? Status { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.InboundDndSettingSchema"/> and sets the default values.
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "message", n => { Message = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.InboundDndSettingSchema_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.InboundDndSettingSchemaStatus>(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("message", Message);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.InboundDndSettingSchema_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.InboundDndSettingSchemaStatus>("status", Status);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

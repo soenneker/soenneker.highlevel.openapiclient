@@ -23,11 +23,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string AltId { get; set; }
 #endif
         /// <summary>The altType property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateShippingRateDto_altType? AltType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateShippingRateDtoAltType? AltType { get; set; }
         /// <summary>The amount of the shipping rate if it is normal rate (0 means free ). Fixed Handling fee if it is a carrier rate (it will add to the carrier rate).</summary>
         public double? Amount { get; set; }
         /// <summary>Type of condition to provide the conditional pricing</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateShippingRateDto_conditionType? ConditionType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateShippingRateDtoConditionType? ConditionType { get; set; }
         /// <summary>The currency of the amount of the rate / handling fee</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -102,9 +102,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "altId", n => { AltId = n.GetStringValue(); } },
-                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateShippingRateDto_altType>(); } },
+                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateShippingRateDtoAltType>(); } },
                 { "amount", n => { Amount = n.GetDoubleValue(); } },
-                { "conditionType", n => { ConditionType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateShippingRateDto_conditionType>(); } },
+                { "conditionType", n => { ConditionType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateShippingRateDtoConditionType>(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "isCarrierRate", n => { IsCarrierRate = n.GetBoolValue(); } },
@@ -124,9 +124,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("altId", AltId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateShippingRateDto_altType>("altType", AltType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateShippingRateDtoAltType>("altType", AltType);
             writer.WriteDoubleValue("amount", Amount);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateShippingRateDto_conditionType>("conditionType", ConditionType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateShippingRateDtoConditionType>("conditionType", ConditionType);
             writer.WriteStringValue("currency", Currency);
             writer.WriteStringValue("description", Description);
             writer.WriteBoolValue("isCarrierRate", IsCarrierRate);

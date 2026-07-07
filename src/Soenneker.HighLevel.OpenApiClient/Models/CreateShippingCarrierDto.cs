@@ -25,7 +25,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string AltId { get; set; }
 #endif
         /// <summary>The altType property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateShippingCarrierDto_altType? AltType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateShippingCarrierDtoAltType? AltType { get; set; }
         /// <summary>The URL endpoint that GHL needs to retrieve shipping rates. This must be a public URL.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -77,7 +77,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             {
                 { "allowsMultipleServiceSelection", n => { AllowsMultipleServiceSelection = n.GetBoolValue(); } },
                 { "altId", n => { AltId = n.GetStringValue(); } },
-                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateShippingCarrierDto_altType>(); } },
+                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateShippingCarrierDtoAltType>(); } },
                 { "callbackUrl", n => { CallbackUrl = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "services", n => { Services = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ShippingCarrierServiceDto>(global::Soenneker.HighLevel.OpenApiClient.Models.ShippingCarrierServiceDto.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -92,7 +92,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("allowsMultipleServiceSelection", AllowsMultipleServiceSelection);
             writer.WriteStringValue("altId", AltId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateShippingCarrierDto_altType>("altType", AltType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateShippingCarrierDtoAltType>("altType", AltType);
             writer.WriteStringValue("callbackUrl", CallbackUrl);
             writer.WriteStringValue("name", Name);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ShippingCarrierServiceDto>("services", Services);

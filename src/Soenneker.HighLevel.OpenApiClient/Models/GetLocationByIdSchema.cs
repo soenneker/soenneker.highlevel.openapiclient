@@ -129,10 +129,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The reseller property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationByIdSchema_reseller? Reseller { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationByIdSchemaResellerProperty? Reseller { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationByIdSchema_reseller Reseller { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationByIdSchemaResellerProperty Reseller { get; set; }
 #endif
         /// <summary>The settings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -213,7 +213,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "phone", n => { Phone = n.GetStringValue(); } },
                 { "postalCode", n => { PostalCode = n.GetStringValue(); } },
-                { "reseller", n => { Reseller = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationByIdSchema_reseller>(global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationByIdSchema_reseller.CreateFromDiscriminatorValue); } },
+                { "reseller", n => { Reseller = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationByIdSchemaResellerProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationByIdSchemaResellerProperty.CreateFromDiscriminatorValue); } },
                 { "settings", n => { Settings = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SettingsSchema>(global::Soenneker.HighLevel.OpenApiClient.Models.SettingsSchema.CreateFromDiscriminatorValue); } },
                 { "social", n => { Social = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SocialSchema>(global::Soenneker.HighLevel.OpenApiClient.Models.SocialSchema.CreateFromDiscriminatorValue); } },
                 { "state", n => { State = n.GetStringValue(); } },
@@ -242,7 +242,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("phone", Phone);
             writer.WriteStringValue("postalCode", PostalCode);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationByIdSchema_reseller>("reseller", Reseller);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationByIdSchemaResellerProperty>("reseller", Reseller);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SettingsSchema>("settings", Settings);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SocialSchema>("social", Social);
             writer.WriteStringValue("state", State);

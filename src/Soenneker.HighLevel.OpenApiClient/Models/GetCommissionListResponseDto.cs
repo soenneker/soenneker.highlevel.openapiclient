@@ -25,10 +25,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Pagination metadata</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetCommissionListResponseDto_meta? Meta { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetCommissionListResponseDtoMeta? Meta { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetCommissionListResponseDto_meta Meta { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetCommissionListResponseDtoMeta Meta { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GetCommissionListResponseDto"/> and sets the default values.
@@ -56,7 +56,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "commissions", n => { Commissions = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CommissionListItemResponseDto>(global::Soenneker.HighLevel.OpenApiClient.Models.CommissionListItemResponseDto.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetCommissionListResponseDto_meta>(global::Soenneker.HighLevel.OpenApiClient.Models.GetCommissionListResponseDto_meta.CreateFromDiscriminatorValue); } },
+                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetCommissionListResponseDtoMeta>(global::Soenneker.HighLevel.OpenApiClient.Models.GetCommissionListResponseDtoMeta.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -67,7 +67,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CommissionListItemResponseDto>("commissions", Commissions);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetCommissionListResponseDto_meta>("meta", Meta);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetCommissionListResponseDtoMeta>("meta", Meta);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

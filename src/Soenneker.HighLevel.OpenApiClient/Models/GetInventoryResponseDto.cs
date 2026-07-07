@@ -25,10 +25,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Total count of inventory items</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInventoryResponseDto_total? Total { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInventoryResponseDtoTotalProperty? Total { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInventoryResponseDto_total Total { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInventoryResponseDtoTotalProperty Total { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GetInventoryResponseDto"/> and sets the default values.
@@ -56,7 +56,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "inventory", n => { Inventory = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.InventoryItemDto>(global::Soenneker.HighLevel.OpenApiClient.Models.InventoryItemDto.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "total", n => { Total = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetInventoryResponseDto_total>(global::Soenneker.HighLevel.OpenApiClient.Models.GetInventoryResponseDto_total.CreateFromDiscriminatorValue); } },
+                { "total", n => { Total = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetInventoryResponseDtoTotalProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.GetInventoryResponseDtoTotalProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -67,7 +67,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.InventoryItemDto>("inventory", Inventory);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetInventoryResponseDto_total>("total", Total);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetInventoryResponseDtoTotalProperty>("total", Total);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -53,10 +53,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>GMB Post Details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchema_gmbPostDetails? GmbPostDetails { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaGmbPostDetails? GmbPostDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchema_gmbPostDetails GmbPostDetails { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaGmbPostDetails GmbPostDetails { get; set; }
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -85,10 +85,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Og Tags Meta Data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchema_ogTagsDetails? OgTagsDetails { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaOgTagsDetails? OgTagsDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchema_ogTagsDetails OgTagsDetails { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaOgTagsDetails OgTagsDetails { get; set; }
 #endif
         /// <summary>&quot;platform must be one of the following values: google, facebook, instagram, linkedin, twitter, tiktok&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -101,10 +101,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Post Approval Details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchema_postApprovalDetails? PostApprovalDetails { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaPostApprovalDetails? PostApprovalDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchema_postApprovalDetails PostApprovalDetails { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaPostApprovalDetails PostApprovalDetails { get; set; }
 #endif
         /// <summary>The postId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -123,14 +123,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string PublishedAt { get; set; }
 #endif
         /// <summary>&quot;source must be one of the following values: composer, recurring, csv&quot;</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchema_source? Source { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaSource? Source { get; set; }
         /// <summary>&quot;Status must be one of the following values: in_progress, draft, failed, published, scheduled, in_review, notification_sent, deleted&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchema_status? Status { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaStatusProperty? Status { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchema_status Status { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaStatusProperty Status { get; set; }
 #endif
         /// <summary>The summary property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -151,28 +151,28 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Tiktok Post Details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchema_tiktokPostDetails? TiktokPostDetails { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaTiktokPostDetails? TiktokPostDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchema_tiktokPostDetails TiktokPostDetails { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaTiktokPostDetails TiktokPostDetails { get; set; }
 #endif
         /// <summary>&quot;Post Type must be one of the following values: - post, story, reel&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchema_type? Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaTypeProperty? Type { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchema_type Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaTypeProperty Type { get; set; }
 #endif
         /// <summary>The updatedAt property</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
         /// <summary>User</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchema_user? User { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaUser? User { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchema_user User { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaUser User { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchema"/> and sets the default values.
@@ -205,23 +205,23 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "createdBy", n => { CreatedBy = n.GetStringValue(); } },
                 { "displayDate", n => { DisplayDate = n.GetDateTimeOffsetValue(); } },
                 { "error", n => { Error = n.GetStringValue(); } },
-                { "gmbPostDetails", n => { GmbPostDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchema_gmbPostDetails>(global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchema_gmbPostDetails.CreateFromDiscriminatorValue); } },
+                { "gmbPostDetails", n => { GmbPostDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaGmbPostDetails>(global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaGmbPostDetails.CreateFromDiscriminatorValue); } },
                 { "_id", n => { Id = n.GetStringValue(); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
                 { "media", n => { Media = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.PostMediaSchema>(global::Soenneker.HighLevel.OpenApiClient.Models.PostMediaSchema.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "ogTagsDetails", n => { OgTagsDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchema_ogTagsDetails>(global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchema_ogTagsDetails.CreateFromDiscriminatorValue); } },
+                { "ogTagsDetails", n => { OgTagsDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaOgTagsDetails>(global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaOgTagsDetails.CreateFromDiscriminatorValue); } },
                 { "platform", n => { Platform = n.GetStringValue(); } },
-                { "postApprovalDetails", n => { PostApprovalDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchema_postApprovalDetails>(global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchema_postApprovalDetails.CreateFromDiscriminatorValue); } },
+                { "postApprovalDetails", n => { PostApprovalDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaPostApprovalDetails>(global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaPostApprovalDetails.CreateFromDiscriminatorValue); } },
                 { "postId", n => { PostId = n.GetStringValue(); } },
                 { "publishedAt", n => { PublishedAt = n.GetStringValue(); } },
-                { "source", n => { Source = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchema_source>(); } },
-                { "status", n => { Status = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchema_status>(global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchema_status.CreateFromDiscriminatorValue); } },
+                { "source", n => { Source = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaSource>(); } },
+                { "status", n => { Status = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaStatusProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaStatusProperty.CreateFromDiscriminatorValue); } },
                 { "summary", n => { Summary = n.GetStringValue(); } },
                 { "tags", n => { Tags = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "tiktokPostDetails", n => { TiktokPostDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchema_tiktokPostDetails>(global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchema_tiktokPostDetails.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchema_type>(global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchema_type.CreateFromDiscriminatorValue); } },
+                { "tiktokPostDetails", n => { TiktokPostDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaTiktokPostDetails>(global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaTiktokPostDetails.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaTypeProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaTypeProperty.CreateFromDiscriminatorValue); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
-                { "user", n => { User = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchema_user>(global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchema_user.CreateFromDiscriminatorValue); } },
+                { "user", n => { User = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaUser>(global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaUser.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -237,23 +237,23 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("createdBy", CreatedBy);
             writer.WriteDateTimeOffsetValue("displayDate", DisplayDate);
             writer.WriteStringValue("error", Error);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchema_gmbPostDetails>("gmbPostDetails", GmbPostDetails);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaGmbPostDetails>("gmbPostDetails", GmbPostDetails);
             writer.WriteStringValue("_id", Id);
             writer.WriteStringValue("locationId", LocationId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.PostMediaSchema>("media", Media);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchema_ogTagsDetails>("ogTagsDetails", OgTagsDetails);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaOgTagsDetails>("ogTagsDetails", OgTagsDetails);
             writer.WriteStringValue("platform", Platform);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchema_postApprovalDetails>("postApprovalDetails", PostApprovalDetails);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaPostApprovalDetails>("postApprovalDetails", PostApprovalDetails);
             writer.WriteStringValue("postId", PostId);
             writer.WriteStringValue("publishedAt", PublishedAt);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchema_source>("source", Source);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchema_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaSource>("source", Source);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaStatusProperty>("status", Status);
             writer.WriteStringValue("summary", Summary);
             writer.WriteCollectionOfPrimitiveValues<string>("tags", Tags);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchema_tiktokPostDetails>("tiktokPostDetails", TiktokPostDetails);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchema_type>("type", Type);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaTiktokPostDetails>("tiktokPostDetails", TiktokPostDetails);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaTypeProperty>("type", Type);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchema_user>("user", User);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaUser>("user", User);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

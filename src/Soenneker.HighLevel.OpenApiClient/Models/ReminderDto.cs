@@ -41,7 +41,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string EndTime { get; set; }
 #endif
         /// <summary>Interval type for the reminder</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ReminderDto_intervalType? IntervalType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ReminderDtoIntervalType? IntervalType { get; set; }
         /// <summary>Maximum number of reminders that can be sent</summary>
         public double? MaxReminders { get; set; }
         /// <summary>Unique identifier for the reminder</summary>
@@ -53,7 +53,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string ReminderId { get; set; }
 #endif
         /// <summary>Condition for sending the reminder</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ReminderDto_reminderInvoiceCondition? ReminderInvoiceCondition { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ReminderDtoReminderInvoiceCondition? ReminderInvoiceCondition { get; set; }
         /// <summary>Name of the reminder</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -65,7 +65,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>frequency gap of the reminder to exeucte</summary>
         public double? ReminderNumber { get; set; }
         /// <summary>Time condition for the reminder</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ReminderDto_reminderTime? ReminderTime { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ReminderDtoReminderTime? ReminderTime { get; set; }
         /// <summary>SMS template to be used for sending reminders</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -119,13 +119,13 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "emailTemplate", n => { EmailTemplate = n.GetStringValue(); } },
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
                 { "endTime", n => { EndTime = n.GetStringValue(); } },
-                { "intervalType", n => { IntervalType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ReminderDto_intervalType>(); } },
+                { "intervalType", n => { IntervalType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ReminderDtoIntervalType>(); } },
                 { "maxReminders", n => { MaxReminders = n.GetDoubleValue(); } },
                 { "reminderId", n => { ReminderId = n.GetStringValue(); } },
-                { "reminderInvoiceCondition", n => { ReminderInvoiceCondition = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ReminderDto_reminderInvoiceCondition>(); } },
+                { "reminderInvoiceCondition", n => { ReminderInvoiceCondition = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ReminderDtoReminderInvoiceCondition>(); } },
                 { "reminderName", n => { ReminderName = n.GetStringValue(); } },
                 { "reminderNumber", n => { ReminderNumber = n.GetDoubleValue(); } },
-                { "reminderTime", n => { ReminderTime = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ReminderDto_reminderTime>(); } },
+                { "reminderTime", n => { ReminderTime = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ReminderDtoReminderTime>(); } },
                 { "smsTemplate", n => { SmsTemplate = n.GetStringValue(); } },
                 { "startTime", n => { StartTime = n.GetStringValue(); } },
                 { "timezone", n => { Timezone = n.GetStringValue(); } },
@@ -142,13 +142,13 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("emailTemplate", EmailTemplate);
             writer.WriteBoolValue("enabled", Enabled);
             writer.WriteStringValue("endTime", EndTime);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ReminderDto_intervalType>("intervalType", IntervalType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ReminderDtoIntervalType>("intervalType", IntervalType);
             writer.WriteDoubleValue("maxReminders", MaxReminders);
             writer.WriteStringValue("reminderId", ReminderId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ReminderDto_reminderInvoiceCondition>("reminderInvoiceCondition", ReminderInvoiceCondition);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ReminderDtoReminderInvoiceCondition>("reminderInvoiceCondition", ReminderInvoiceCondition);
             writer.WriteStringValue("reminderName", ReminderName);
             writer.WriteDoubleValue("reminderNumber", ReminderNumber);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ReminderDto_reminderTime>("reminderTime", ReminderTime);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ReminderDtoReminderTime>("reminderTime", ReminderTime);
             writer.WriteStringValue("smsTemplate", SmsTemplate);
             writer.WriteStringValue("startTime", StartTime);
             writer.WriteStringValue("timezone", Timezone);

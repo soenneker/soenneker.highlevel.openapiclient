@@ -23,14 +23,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string AltId { get; set; }
 #endif
         /// <summary>The altType property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceTemplateResponseDto_altType? AltType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceTemplateResponseDtoAltType? AltType { get; set; }
         /// <summary>Business Details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceTemplateResponseDto_businessDetails? BusinessDetails { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceTemplateResponseDtoBusinessDetails? BusinessDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceTemplateResponseDto_businessDetails BusinessDetails { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceTemplateResponseDtoBusinessDetails BusinessDetails { get; set; }
 #endif
         /// <summary>created at</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -51,10 +51,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Discount</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceTemplateResponseDto_discount? Discount { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceTemplateResponseDtoDiscount? Discount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceTemplateResponseDto_discount Discount { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceTemplateResponseDtoDiscount Discount { get; set; }
 #endif
         /// <summary>Template Id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -124,11 +124,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "altId", n => { AltId = n.GetStringValue(); } },
-                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceTemplateResponseDto_altType>(); } },
-                { "businessDetails", n => { BusinessDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceTemplateResponseDto_businessDetails>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceTemplateResponseDto_businessDetails.CreateFromDiscriminatorValue); } },
+                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceTemplateResponseDtoAltType>(); } },
+                { "businessDetails", n => { BusinessDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceTemplateResponseDtoBusinessDetails>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceTemplateResponseDtoBusinessDetails.CreateFromDiscriminatorValue); } },
                 { "createdAt", n => { CreatedAt = n.GetStringValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
-                { "discount", n => { Discount = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceTemplateResponseDto_discount>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceTemplateResponseDto_discount.CreateFromDiscriminatorValue); } },
+                { "discount", n => { Discount = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceTemplateResponseDtoDiscount>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceTemplateResponseDtoDiscount.CreateFromDiscriminatorValue); } },
                 { "_id", n => { Id = n.GetStringValue(); } },
                 { "invoiceNumberPrefix", n => { InvoiceNumberPrefix = n.GetStringValue(); } },
                 { "items", n => { Items = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -145,11 +145,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("altId", AltId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceTemplateResponseDto_altType>("altType", AltType);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceTemplateResponseDto_businessDetails>("businessDetails", BusinessDetails);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceTemplateResponseDtoAltType>("altType", AltType);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceTemplateResponseDtoBusinessDetails>("businessDetails", BusinessDetails);
             writer.WriteStringValue("createdAt", CreatedAt);
             writer.WriteStringValue("currency", Currency);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceTemplateResponseDto_discount>("discount", Discount);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceTemplateResponseDtoDiscount>("discount", Discount);
             writer.WriteStringValue("_id", Id);
             writer.WriteStringValue("invoiceNumberPrefix", InvoiceNumberPrefix);
             writer.WriteCollectionOfPrimitiveValues<string>("items", Items);

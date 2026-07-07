@@ -17,10 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>list of integration provider.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ListWhitelabelIntegrationProviderResponseDto_providers? Providers { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ListWhitelabelIntegrationProviderResponseDtoProviders? Providers { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ListWhitelabelIntegrationProviderResponseDto_providers Providers { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ListWhitelabelIntegrationProviderResponseDtoProviders Providers { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.ListWhitelabelIntegrationProviderResponseDto"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "providers", n => { Providers = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ListWhitelabelIntegrationProviderResponseDto_providers>(global::Soenneker.HighLevel.OpenApiClient.Models.ListWhitelabelIntegrationProviderResponseDto_providers.CreateFromDiscriminatorValue); } },
+                { "providers", n => { Providers = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ListWhitelabelIntegrationProviderResponseDtoProviders>(global::Soenneker.HighLevel.OpenApiClient.Models.ListWhitelabelIntegrationProviderResponseDtoProviders.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ListWhitelabelIntegrationProviderResponseDto_providers>("providers", Providers);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ListWhitelabelIntegrationProviderResponseDtoProviders>("providers", Providers);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

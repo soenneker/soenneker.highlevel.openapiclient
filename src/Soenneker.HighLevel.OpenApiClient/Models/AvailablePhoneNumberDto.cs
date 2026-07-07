@@ -15,7 +15,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Address requirements for purchasing this number</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AvailablePhoneNumberDto_addressRequirements? AddressRequirements { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AvailablePhoneNumberDtoAddressRequirements? AddressRequirements { get; set; }
         /// <summary>Whether this is a beta number</summary>
         public bool? Beta { get; set; }
         /// <summary>Communication capabilities supported by this number</summary>
@@ -139,7 +139,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "addressRequirements", n => { AddressRequirements = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.AvailablePhoneNumberDto_addressRequirements>(); } },
+                { "addressRequirements", n => { AddressRequirements = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.AvailablePhoneNumberDtoAddressRequirements>(); } },
                 { "beta", n => { Beta = n.GetBoolValue(); } },
                 { "capabilities", n => { Capabilities = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AvailablePhoneNumberDtoCapabilities>(global::Soenneker.HighLevel.OpenApiClient.Models.AvailablePhoneNumberDtoCapabilities.CreateFromDiscriminatorValue); } },
                 { "friendlyName", n => { FriendlyName = n.GetStringValue(); } },
@@ -162,7 +162,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.AvailablePhoneNumberDto_addressRequirements>("addressRequirements", AddressRequirements);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.AvailablePhoneNumberDtoAddressRequirements>("addressRequirements", AddressRequirements);
             writer.WriteBoolValue("beta", Beta);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AvailablePhoneNumberDtoCapabilities>("capabilities", Capabilities);
             writer.WriteStringValue("friendlyName", FriendlyName);

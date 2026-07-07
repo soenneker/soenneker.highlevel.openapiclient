@@ -17,10 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The field property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ICustomField? Field { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsICustomField? Field { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ICustomField Field { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsICustomField Field { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldSuccessfulResponseDto"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "field", n => { Field = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ICustomField>(global::Soenneker.HighLevel.OpenApiClient.Models.ICustomField.CreateFromDiscriminatorValue); } },
+                { "field", n => { Field = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsICustomField>(global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsICustomField.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ICustomField>("field", Field);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsICustomField>("field", Field);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

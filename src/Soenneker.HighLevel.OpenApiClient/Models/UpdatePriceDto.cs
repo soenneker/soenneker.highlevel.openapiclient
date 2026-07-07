@@ -67,10 +67,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Additional metadata associated with the price.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePriceDto_meta? Meta { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePriceDtoMeta? Meta { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePriceDto_meta Meta { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePriceDtoMeta Meta { get; set; }
 #endif
         /// <summary>The name of the price.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -83,20 +83,20 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The recurring details of the price (if type is recurring).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePriceDto_recurring? Recurring { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePriceDtoRecurring? Recurring { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePriceDto_recurring Recurring { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePriceDtoRecurring Recurring { get; set; }
 #endif
         /// <summary>The setup fee for the price.</summary>
         public double? SetupFee { get; set; }
         /// <summary>Shipping options of the Price</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePriceDto_shippingOptions? ShippingOptions { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePriceDtoShippingOptions? ShippingOptions { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePriceDto_shippingOptions ShippingOptions { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePriceDtoShippingOptions ShippingOptions { get; set; }
 #endif
         /// <summary>The unique identifier of the SKU associated with the price</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -113,7 +113,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The trial period duration in days (if applicable).</summary>
         public double? TrialPeriod { get; set; }
         /// <summary>The type of the price.</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePriceDto_type? Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePriceDtoType? Type { get; set; }
         /// <summary>The unique identifier of the user who created the price.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -165,16 +165,16 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "isDigitalProduct", n => { IsDigitalProduct = n.GetBoolValue(); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
                 { "membershipOffers", n => { MembershipOffers = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ProductsMembershipOfferDto>(global::Soenneker.HighLevel.OpenApiClient.Models.ProductsMembershipOfferDto.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePriceDto_meta>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePriceDto_meta.CreateFromDiscriminatorValue); } },
+                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePriceDtoMeta>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePriceDtoMeta.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "recurring", n => { Recurring = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePriceDto_recurring>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePriceDto_recurring.CreateFromDiscriminatorValue); } },
+                { "recurring", n => { Recurring = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePriceDtoRecurring>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePriceDtoRecurring.CreateFromDiscriminatorValue); } },
                 { "setupFee", n => { SetupFee = n.GetDoubleValue(); } },
-                { "shippingOptions", n => { ShippingOptions = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePriceDto_shippingOptions>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePriceDto_shippingOptions.CreateFromDiscriminatorValue); } },
+                { "shippingOptions", n => { ShippingOptions = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePriceDtoShippingOptions>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePriceDtoShippingOptions.CreateFromDiscriminatorValue); } },
                 { "sku", n => { Sku = n.GetStringValue(); } },
                 { "totalCycles", n => { TotalCycles = n.GetDoubleValue(); } },
                 { "trackInventory", n => { TrackInventory = n.GetBoolValue(); } },
                 { "trialPeriod", n => { TrialPeriod = n.GetDoubleValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePriceDto_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePriceDtoType>(); } },
                 { "userId", n => { UserId = n.GetStringValue(); } },
                 { "variantOptionIds", n => { VariantOptionIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
@@ -196,16 +196,16 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteBoolValue("isDigitalProduct", IsDigitalProduct);
             writer.WriteStringValue("locationId", LocationId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ProductsMembershipOfferDto>("membershipOffers", MembershipOffers);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePriceDto_meta>("meta", Meta);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePriceDtoMeta>("meta", Meta);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePriceDto_recurring>("recurring", Recurring);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePriceDtoRecurring>("recurring", Recurring);
             writer.WriteDoubleValue("setupFee", SetupFee);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePriceDto_shippingOptions>("shippingOptions", ShippingOptions);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePriceDtoShippingOptions>("shippingOptions", ShippingOptions);
             writer.WriteStringValue("sku", Sku);
             writer.WriteDoubleValue("totalCycles", TotalCycles);
             writer.WriteBoolValue("trackInventory", TrackInventory);
             writer.WriteDoubleValue("trialPeriod", TrialPeriod);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePriceDto_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePriceDtoType>("type", Type);
             writer.WriteStringValue("userId", UserId);
             writer.WriteCollectionOfPrimitiveValues<string>("variantOptionIds", VariantOptionIds);
             writer.WriteAdditionalData(AdditionalData);

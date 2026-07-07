@@ -96,6 +96,44 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public PermissionsDto()
         {
             AdditionalData = new Dictionary<string, object>();
+            AdwordsReportingEnabled = false;
+            AffiliateManagerEnabled = true;
+            AgentReportingEnabled = true;
+            AppointmentsEnabled = true;
+            AssignedDataOnly = false;
+            AttributionsReportingEnabled = false;
+            BloggingEnabled = true;
+            BotService = false;
+            BulkRequestsEnabled = true;
+            CampaignsEnabled = true;
+            CampaignsReadOnly = false;
+            CancelSubscriptionEnabled = true;
+            CommunitiesEnabled = true;
+            ContactsEnabled = true;
+            ContentAiEnabled = true;
+            ConversationsEnabled = true;
+            DashboardStatsEnabled = true;
+            ExportPaymentsEnabled = true;
+            FacebookAdsReportingEnabled = false;
+            FunnelsEnabled = true;
+            InvoiceEnabled = true;
+            LeadValueEnabled = true;
+            MarketingEnabled = true;
+            MembershipEnabled = false;
+            OnlineListingsEnabled = true;
+            OpportunitiesEnabled = true;
+            PaymentsEnabled = true;
+            PhoneCallEnabled = true;
+            RecordPaymentEnabled = true;
+            RefundsEnabled = true;
+            ReviewsEnabled = true;
+            SettingsEnabled = true;
+            SocialPlanner = true;
+            TagsEnabled = true;
+            TriggersEnabled = true;
+            WebsitesEnabled = false;
+            WorkflowsEnabled = true;
+            WorkflowsReadOnly = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

@@ -17,10 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The value of the custom field</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchema_fieldValue? FieldValue { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValue? FieldValue { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchema_fieldValue FieldValue { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValue FieldValue { get; set; }
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,7 +55,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "fieldValue", n => { FieldValue = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchema_fieldValue>(global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchema_fieldValue.CreateFromDiscriminatorValue); } },
+                { "fieldValue", n => { FieldValue = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValue>(global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValue.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
             };
         }
@@ -66,7 +66,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchema_fieldValue>("fieldValue", FieldValue);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValue>("fieldValue", FieldValue);
             writer.WriteStringValue("id", Id);
             writer.WriteAdditionalData(AdditionalData);
         }

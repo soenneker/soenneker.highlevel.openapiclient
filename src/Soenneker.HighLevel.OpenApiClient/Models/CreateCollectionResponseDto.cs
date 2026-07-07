@@ -17,10 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>created Collection</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateCollectionResponseDto_data? Data { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateCollectionResponseDtoData? Data { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateCollectionResponseDto_data Data { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateCollectionResponseDtoData Data { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CreateCollectionResponseDto"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "data", n => { Data = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateCollectionResponseDto_data>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateCollectionResponseDto_data.CreateFromDiscriminatorValue); } },
+                { "data", n => { Data = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateCollectionResponseDtoData>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateCollectionResponseDtoData.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateCollectionResponseDto_data>("data", Data);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateCollectionResponseDtoData>("data", Data);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

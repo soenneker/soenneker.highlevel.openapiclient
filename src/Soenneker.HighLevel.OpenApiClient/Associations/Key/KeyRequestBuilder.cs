@@ -17,14 +17,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Associations.Key
     {
         /// <summary>Gets an item from the Soenneker.HighLevel.OpenApiClient.associations.key.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Associations.Key.Item.WithKey_nameItemRequestBuilder"/></returns>
-        public global::Soenneker.HighLevel.OpenApiClient.Associations.Key.Item.WithKey_nameItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Associations.Key.Item.WithKeyNameItemRequestBuilder"/></returns>
+        public global::Soenneker.HighLevel.OpenApiClient.Associations.Key.Item.WithKeyNameItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("key_name", position);
-                return new global::Soenneker.HighLevel.OpenApiClient.Associations.Key.Item.WithKey_nameItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("keyName", position);
+                return new global::Soenneker.HighLevel.OpenApiClient.Associations.Key.Item.WithKeyNameItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

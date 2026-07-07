@@ -69,10 +69,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Payment provider details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ConnectCustomProvidersResponseSchema_paymentProvider? PaymentProvider { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ConnectCustomProvidersResponseSchemaPaymentProviderProperty? PaymentProvider { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ConnectCustomProvidersResponseSchema_paymentProvider PaymentProvider { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ConnectCustomProvidersResponseSchemaPaymentProviderProperty PaymentProvider { get; set; }
 #endif
         /// <summary>This url will be loaded in iFrame to start a payment session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -133,7 +133,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
                 { "marketplaceAppId", n => { MarketplaceAppId = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "paymentProvider", n => { PaymentProvider = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ConnectCustomProvidersResponseSchema_paymentProvider>(global::Soenneker.HighLevel.OpenApiClient.Models.ConnectCustomProvidersResponseSchema_paymentProvider.CreateFromDiscriminatorValue); } },
+                { "paymentProvider", n => { PaymentProvider = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ConnectCustomProvidersResponseSchemaPaymentProviderProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.ConnectCustomProvidersResponseSchemaPaymentProviderProperty.CreateFromDiscriminatorValue); } },
                 { "paymentsUrl", n => { PaymentsUrl = n.GetStringValue(); } },
                 { "queryUrl", n => { QueryUrl = n.GetStringValue(); } },
                 { "traceId", n => { TraceId = n.GetStringValue(); } },
@@ -155,7 +155,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("locationId", LocationId);
             writer.WriteStringValue("marketplaceAppId", MarketplaceAppId);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ConnectCustomProvidersResponseSchema_paymentProvider>("paymentProvider", PaymentProvider);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ConnectCustomProvidersResponseSchemaPaymentProviderProperty>("paymentProvider", PaymentProvider);
             writer.WriteStringValue("paymentsUrl", PaymentsUrl);
             writer.WriteStringValue("queryUrl", QueryUrl);
             writer.WriteStringValue("traceId", TraceId);

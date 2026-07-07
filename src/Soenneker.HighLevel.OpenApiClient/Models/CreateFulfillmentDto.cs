@@ -23,7 +23,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string AltId { get; set; }
 #endif
         /// <summary>The altType property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateFulfillmentDto_altType? AltType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateFulfillmentDtoAltType? AltType { get; set; }
         /// <summary>Fulfilled items</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -68,7 +68,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "altId", n => { AltId = n.GetStringValue(); } },
-                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateFulfillmentDto_altType>(); } },
+                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateFulfillmentDtoAltType>(); } },
                 { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.FulfillmentItems>(global::Soenneker.HighLevel.OpenApiClient.Models.FulfillmentItems.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "notifyCustomer", n => { NotifyCustomer = n.GetBoolValue(); } },
                 { "trackings", n => { Trackings = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.FulfillmentTracking>(global::Soenneker.HighLevel.OpenApiClient.Models.FulfillmentTracking.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -82,7 +82,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("altId", AltId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateFulfillmentDto_altType>("altType", AltType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateFulfillmentDtoAltType>("altType", AltType);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.FulfillmentItems>("items", Items);
             writer.WriteBoolValue("notifyCustomer", NotifyCustomer);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.FulfillmentTracking>("trackings", Trackings);

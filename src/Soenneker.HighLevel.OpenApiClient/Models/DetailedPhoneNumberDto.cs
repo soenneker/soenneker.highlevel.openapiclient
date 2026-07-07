@@ -69,10 +69,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Configuration for inbound call handling service</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDto_inboundCallService? InboundCallService { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDtoInboundCallService? InboundCallService { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDto_inboundCallService InboundCallService { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDtoInboundCallService InboundCallService { get; set; }
 #endif
         /// <summary>Whether this is the default outbound number for the location</summary>
         public bool? IsDefaultNumber { get; set; }
@@ -95,7 +95,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string LinkedUser { get; set; }
 #endif
         /// <summary>Source or origin of the phone number</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDto_origin? Origin { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDtoOrigin? Origin { get; set; }
         /// <summary>E.164 formatted phone number</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -113,7 +113,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string Sid { get; set; }
 #endif
         /// <summary>Type of phone number (local, toll-free, mobile, etc.)</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDto_type? Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDtoType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDto"/> and sets the default values.
         /// </summary>
@@ -147,15 +147,15 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "dateUpdated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
                 { "forwardingNumber", n => { ForwardingNumber = n.GetStringValue(); } },
                 { "friendlyName", n => { FriendlyName = n.GetStringValue(); } },
-                { "inboundCallService", n => { InboundCallService = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDto_inboundCallService>(global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDto_inboundCallService.CreateFromDiscriminatorValue); } },
+                { "inboundCallService", n => { InboundCallService = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDtoInboundCallService>(global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDtoInboundCallService.CreateFromDiscriminatorValue); } },
                 { "isDefaultNumber", n => { IsDefaultNumber = n.GetBoolValue(); } },
                 { "isGroupConversationEnabled", n => { IsGroupConversationEnabled = n.GetBoolValue(); } },
                 { "linkedRingAllUsers", n => { LinkedRingAllUsers = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "linkedUser", n => { LinkedUser = n.GetStringValue(); } },
-                { "origin", n => { Origin = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDto_origin>(); } },
+                { "origin", n => { Origin = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDtoOrigin>(); } },
                 { "phoneNumber", n => { PhoneNumber = n.GetStringValue(); } },
                 { "sid", n => { Sid = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDto_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDtoType>(); } },
             };
         }
         /// <summary>
@@ -173,15 +173,15 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("dateUpdated", DateUpdated);
             writer.WriteStringValue("forwardingNumber", ForwardingNumber);
             writer.WriteStringValue("friendlyName", FriendlyName);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDto_inboundCallService>("inboundCallService", InboundCallService);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDtoInboundCallService>("inboundCallService", InboundCallService);
             writer.WriteBoolValue("isDefaultNumber", IsDefaultNumber);
             writer.WriteBoolValue("isGroupConversationEnabled", IsGroupConversationEnabled);
             writer.WriteCollectionOfPrimitiveValues<string>("linkedRingAllUsers", LinkedRingAllUsers);
             writer.WriteStringValue("linkedUser", LinkedUser);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDto_origin>("origin", Origin);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDtoOrigin>("origin", Origin);
             writer.WriteStringValue("phoneNumber", PhoneNumber);
             writer.WriteStringValue("sid", Sid);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDto_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDtoType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

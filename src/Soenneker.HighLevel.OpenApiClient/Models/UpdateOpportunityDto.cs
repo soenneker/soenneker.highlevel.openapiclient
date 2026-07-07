@@ -25,10 +25,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Update custom fields to opportunities.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateOpportunityDto.UpdateOpportunityDto_customFields>? CustomFields { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateOpportunityDtoCustomFieldsItem>? CustomFields { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateOpportunityDto.UpdateOpportunityDto_customFields> CustomFields { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateOpportunityDtoCustomFieldsItem> CustomFields { get; set; }
 #endif
         /// <summary>The monetaryValue property</summary>
         public double? MonetaryValue { get; set; }
@@ -57,7 +57,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string PipelineStageId { get; set; }
 #endif
         /// <summary>The status property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateOpportunityDto_status? Status { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateOpportunityDtoStatus? Status { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpdateOpportunityDto"/> and sets the default values.
         /// </summary>
@@ -84,12 +84,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "assignedTo", n => { AssignedTo = n.GetStringValue(); } },
-                { "customFields", n => { CustomFields = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateOpportunityDto.UpdateOpportunityDto_customFields>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateOpportunityDto.UpdateOpportunityDto_customFields.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "customFields", n => { CustomFields = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateOpportunityDtoCustomFieldsItem>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateOpportunityDtoCustomFieldsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "monetaryValue", n => { MonetaryValue = n.GetDoubleValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "pipelineId", n => { PipelineId = n.GetStringValue(); } },
                 { "pipelineStageId", n => { PipelineStageId = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateOpportunityDto_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateOpportunityDtoStatus>(); } },
             };
         }
         /// <summary>
@@ -100,79 +100,13 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("assignedTo", AssignedTo);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateOpportunityDto.UpdateOpportunityDto_customFields>("customFields", CustomFields);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateOpportunityDtoCustomFieldsItem>("customFields", CustomFields);
             writer.WriteDoubleValue("monetaryValue", MonetaryValue);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("pipelineId", PipelineId);
             writer.WriteStringValue("pipelineStageId", PipelineStageId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateOpportunityDto_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateOpportunityDtoStatus>("status", Status);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.OpportunitiesCustomFieldsInputArraySchema"/>, <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.OpportunitiesCustomFieldsInputObjectSchema"/>, <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.OpportunitiesCustomFieldsInputStringSchema"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class UpdateOpportunityDto_customFields : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.OpportunitiesCustomFieldsInputArraySchema"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HighLevel.OpenApiClient.Models.OpportunitiesCustomFieldsInputArraySchema? OpportunitiesCustomFieldsInputArraySchema { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HighLevel.OpenApiClient.Models.OpportunitiesCustomFieldsInputArraySchema OpportunitiesCustomFieldsInputArraySchema { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.OpportunitiesCustomFieldsInputObjectSchema"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HighLevel.OpenApiClient.Models.OpportunitiesCustomFieldsInputObjectSchema? OpportunitiesCustomFieldsInputObjectSchema { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HighLevel.OpenApiClient.Models.OpportunitiesCustomFieldsInputObjectSchema OpportunitiesCustomFieldsInputObjectSchema { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.OpportunitiesCustomFieldsInputStringSchema"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HighLevel.OpenApiClient.Models.OpportunitiesCustomFieldsInputStringSchema? OpportunitiesCustomFieldsInputStringSchema { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HighLevel.OpenApiClient.Models.OpportunitiesCustomFieldsInputStringSchema OpportunitiesCustomFieldsInputStringSchema { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpdateOpportunityDto.UpdateOpportunityDto_customFields"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.HighLevel.OpenApiClient.Models.UpdateOpportunityDto.UpdateOpportunityDto_customFields CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.HighLevel.OpenApiClient.Models.UpdateOpportunityDto.UpdateOpportunityDto_customFields();
-                result.OpportunitiesCustomFieldsInputArraySchema = new global::Soenneker.HighLevel.OpenApiClient.Models.OpportunitiesCustomFieldsInputArraySchema();
-                result.OpportunitiesCustomFieldsInputObjectSchema = new global::Soenneker.HighLevel.OpenApiClient.Models.OpportunitiesCustomFieldsInputObjectSchema();
-                result.OpportunitiesCustomFieldsInputStringSchema = new global::Soenneker.HighLevel.OpenApiClient.Models.OpportunitiesCustomFieldsInputStringSchema();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(OpportunitiesCustomFieldsInputArraySchema != null || OpportunitiesCustomFieldsInputObjectSchema != null || OpportunitiesCustomFieldsInputStringSchema != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(OpportunitiesCustomFieldsInputArraySchema, OpportunitiesCustomFieldsInputObjectSchema, OpportunitiesCustomFieldsInputStringSchema);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.OpportunitiesCustomFieldsInputArraySchema>(null, OpportunitiesCustomFieldsInputArraySchema, OpportunitiesCustomFieldsInputObjectSchema, OpportunitiesCustomFieldsInputStringSchema);
-            }
         }
     }
 }

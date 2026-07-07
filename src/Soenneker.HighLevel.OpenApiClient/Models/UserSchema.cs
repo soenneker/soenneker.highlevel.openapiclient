@@ -59,10 +59,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>LC Phone Inbound Phone Numbers</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UserSchema_lcPhone? LcPhone { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UserSchemaLcPhoneProperty? LcPhone { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UserSchema_lcPhone LcPhone { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UserSchemaLcPhoneProperty LcPhone { get; set; }
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -89,7 +89,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string Phone { get; set; }
 #endif
         /// <summary>Platform language preference for the user</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UserSchema_platformLanguage? PlatformLanguage { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UserSchemaPlatformLanguage? PlatformLanguage { get; set; }
         /// <summary>The roles property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -99,7 +99,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public global::Soenneker.HighLevel.OpenApiClient.Models.RoleSchema Roles { get; set; }
 #endif
         /// <summary>The scopes property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UserSchema_scopes? Scopes { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UserSchemaScopes? Scopes { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UserSchema"/> and sets the default values.
         /// </summary>
@@ -131,13 +131,13 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "firstName", n => { FirstName = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "lastName", n => { LastName = n.GetStringValue(); } },
-                { "lcPhone", n => { LcPhone = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UserSchema_lcPhone>(global::Soenneker.HighLevel.OpenApiClient.Models.UserSchema_lcPhone.CreateFromDiscriminatorValue); } },
+                { "lcPhone", n => { LcPhone = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UserSchemaLcPhoneProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.UserSchemaLcPhoneProperty.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "permissions", n => { Permissions = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PermissionsDto>(global::Soenneker.HighLevel.OpenApiClient.Models.PermissionsDto.CreateFromDiscriminatorValue); } },
                 { "phone", n => { Phone = n.GetStringValue(); } },
-                { "platformLanguage", n => { PlatformLanguage = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UserSchema_platformLanguage>(); } },
+                { "platformLanguage", n => { PlatformLanguage = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UserSchemaPlatformLanguage>(); } },
                 { "roles", n => { Roles = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.RoleSchema>(global::Soenneker.HighLevel.OpenApiClient.Models.RoleSchema.CreateFromDiscriminatorValue); } },
-                { "scopes", n => { Scopes = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UserSchema_scopes>(); } },
+                { "scopes", n => { Scopes = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UserSchemaScopes>(); } },
             };
         }
         /// <summary>
@@ -153,13 +153,13 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("firstName", FirstName);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("lastName", LastName);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UserSchema_lcPhone>("lcPhone", LcPhone);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UserSchemaLcPhoneProperty>("lcPhone", LcPhone);
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PermissionsDto>("permissions", Permissions);
             writer.WriteStringValue("phone", Phone);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UserSchema_platformLanguage>("platformLanguage", PlatformLanguage);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UserSchemaPlatformLanguage>("platformLanguage", PlatformLanguage);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.RoleSchema>("roles", Roles);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UserSchema_scopes>("scopes", Scopes);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UserSchemaScopes>("scopes", Scopes);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

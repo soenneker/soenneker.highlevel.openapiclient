@@ -23,7 +23,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string Address { get; set; }
 #endif
         /// <summary>The appointmentStatus property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentSchemaResponse_appointmentStatus? AppointmentStatus { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentSchemaResponseAppointmentStatus? AppointmentStatus { get; set; }
         /// <summary>Assigned User Id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -133,7 +133,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "address", n => { Address = n.GetStringValue(); } },
-                { "appointmentStatus", n => { AppointmentStatus = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentSchemaResponse_appointmentStatus>(); } },
+                { "appointmentStatus", n => { AppointmentStatus = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentSchemaResponseAppointmentStatus>(); } },
                 { "assignedUserId", n => { AssignedUserId = n.GetStringValue(); } },
                 { "calendarId", n => { CalendarId = n.GetStringValue(); } },
                 { "contactId", n => { ContactId = n.GetStringValue(); } },
@@ -155,7 +155,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("address", Address);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentSchemaResponse_appointmentStatus>("appointmentStatus", AppointmentStatus);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentSchemaResponseAppointmentStatus>("appointmentStatus", AppointmentStatus);
             writer.WriteStringValue("assignedUserId", AssignedUserId);
             writer.WriteStringValue("calendarId", CalendarId);
             writer.WriteStringValue("contactId", ContactId);

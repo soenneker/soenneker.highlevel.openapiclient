@@ -31,7 +31,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The shouldSendToUser property</summary>
         public bool? ShouldSendToUser { get; set; }
         /// <summary>Calendar Notification</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CalendarNotification_type? Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CalendarNotificationType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CalendarNotification"/> and sets the default values.
         /// </summary>
@@ -62,7 +62,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "shouldSendToGuest", n => { ShouldSendToGuest = n.GetBoolValue(); } },
                 { "shouldSendToSelectedUsers", n => { ShouldSendToSelectedUsers = n.GetBoolValue(); } },
                 { "shouldSendToUser", n => { ShouldSendToUser = n.GetBoolValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CalendarNotification_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CalendarNotificationType>(); } },
             };
         }
         /// <summary>
@@ -77,7 +77,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteBoolValue("shouldSendToGuest", ShouldSendToGuest);
             writer.WriteBoolValue("shouldSendToSelectedUsers", ShouldSendToSelectedUsers);
             writer.WriteBoolValue("shouldSendToUser", ShouldSendToUser);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CalendarNotification_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CalendarNotificationType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

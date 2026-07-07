@@ -17,10 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>API endpoint configuration</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParameters_apiDetails? ApiDetails { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParametersApiDetails? ApiDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParameters_apiDetails ApiDetails { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParametersApiDetails ApiDetails { get; set; }
 #endif
         /// <summary>&quot;Selected response paths to extract from API response. Required: at least 1 value if the method is GET. Should be empty if the method is POST.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -71,7 +71,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "apiDetails", n => { ApiDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParameters_apiDetails>(global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParameters_apiDetails.CreateFromDiscriminatorValue); } },
+                { "apiDetails", n => { ApiDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParametersApiDetails>(global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParametersApiDetails.CreateFromDiscriminatorValue); } },
                 { "selectedPaths", n => { SelectedPaths = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "triggerMessage", n => { TriggerMessage = n.GetStringValue(); } },
                 { "triggerPrompt", n => { TriggerPrompt = n.GetStringValue(); } },
@@ -84,7 +84,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParameters_apiDetails>("apiDetails", ApiDetails);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParametersApiDetails>("apiDetails", ApiDetails);
             writer.WriteCollectionOfPrimitiveValues<string>("selectedPaths", SelectedPaths);
             writer.WriteStringValue("triggerMessage", TriggerMessage);
             writer.WriteStringValue("triggerPrompt", TriggerPrompt);

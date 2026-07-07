@@ -46,6 +46,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public DataExtractionActionParameters()
         {
             AdditionalData = new Dictionary<string, object>();
+            OverwriteExistingValue = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

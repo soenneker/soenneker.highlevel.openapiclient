@@ -23,7 +23,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string AltId { get; set; }
 #endif
         /// <summary>Alt Type</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDto_altType? AltType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoAltType? AltType { get; set; }
         /// <summary>attachments for the invoice</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -37,10 +37,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Business details which need to be updated</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDto_businessDetails? BusinessDetails { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoBusinessDetails? BusinessDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDto_businessDetails BusinessDetails { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoBusinessDetails BusinessDetails { get; set; }
 #endif
         /// <summary>The contactDetails property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -77,10 +77,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The discount property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto? Discount { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesDiscountDto? Discount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto Discount { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesDiscountDto Discount { get; set; }
 #endif
         /// <summary>Due date in YYYY-MM-DD format</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -127,10 +127,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>miscellaneous charges for the invoice</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDto_miscellaneousCharges? MiscellaneousCharges { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoMiscellaneousCharges? MiscellaneousCharges { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDto_miscellaneousCharges MiscellaneousCharges { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoMiscellaneousCharges MiscellaneousCharges { get; set; }
 #endif
         /// <summary>Name to be updated</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -143,18 +143,18 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Payment Methods for Invoices</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDto_paymentMethods? PaymentMethods { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoPaymentMethods? PaymentMethods { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDto_paymentMethods PaymentMethods { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoPaymentMethods PaymentMethods { get; set; }
 #endif
         /// <summary>split invoice into payment schedule summing up to full invoice amount</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDto_paymentSchedule? PaymentSchedule { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoPaymentSchedule? PaymentSchedule { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDto_paymentSchedule PaymentSchedule { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoPaymentSchedule PaymentSchedule { get; set; }
 #endif
         /// <summary>Terms notes, Also supports HTML markups</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -167,10 +167,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>tips configuration for the invoice</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDto_tipsConfiguration? TipsConfiguration { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoTipsConfiguration? TipsConfiguration { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDto_tipsConfiguration TipsConfiguration { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoTipsConfiguration TipsConfiguration { get; set; }
 #endif
         /// <summary>Title for the invoice</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -183,10 +183,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The xeroDetails property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDto_xeroDetails? XeroDetails { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoXeroDetailsProperty? XeroDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDto_xeroDetails XeroDetails { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoXeroDetailsProperty XeroDetails { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDto"/> and sets the default values.
@@ -214,29 +214,29 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "altId", n => { AltId = n.GetStringValue(); } },
-                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDto_altType>(); } },
+                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoAltType>(); } },
                 { "attachments", n => { Attachments = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.AttachmentsDto>(global::Soenneker.HighLevel.OpenApiClient.Models.AttachmentsDto.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "automaticTaxesEnabled", n => { AutomaticTaxesEnabled = n.GetBoolValue(); } },
-                { "businessDetails", n => { BusinessDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDto_businessDetails>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDto_businessDetails.CreateFromDiscriminatorValue); } },
+                { "businessDetails", n => { BusinessDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoBusinessDetails>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoBusinessDetails.CreateFromDiscriminatorValue); } },
                 { "contactDetails", n => { ContactDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ContactDetailsDto>(global::Soenneker.HighLevel.OpenApiClient.Models.ContactDetailsDto.CreateFromDiscriminatorValue); } },
                 { "contactId", n => { ContactId = n.GetStringValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "discount", n => { Discount = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto>(global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto.CreateFromDiscriminatorValue); } },
+                { "discount", n => { Discount = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesDiscountDto>(global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesDiscountDto.CreateFromDiscriminatorValue); } },
                 { "dueDate", n => { DueDate = n.GetStringValue(); } },
                 { "invoiceItems", n => { InvoiceItems = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.InvoiceItemDto>(global::Soenneker.HighLevel.OpenApiClient.Models.InvoiceItemDto.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "invoiceNumber", n => { InvoiceNumber = n.GetStringValue(); } },
                 { "invoiceNumberPrefix", n => { InvoiceNumberPrefix = n.GetStringValue(); } },
                 { "issueDate", n => { IssueDate = n.GetStringValue(); } },
                 { "liveMode", n => { LiveMode = n.GetBoolValue(); } },
-                { "miscellaneousCharges", n => { MiscellaneousCharges = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDto_miscellaneousCharges>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDto_miscellaneousCharges.CreateFromDiscriminatorValue); } },
+                { "miscellaneousCharges", n => { MiscellaneousCharges = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoMiscellaneousCharges>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoMiscellaneousCharges.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "paymentMethods", n => { PaymentMethods = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDto_paymentMethods>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDto_paymentMethods.CreateFromDiscriminatorValue); } },
-                { "paymentSchedule", n => { PaymentSchedule = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDto_paymentSchedule>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDto_paymentSchedule.CreateFromDiscriminatorValue); } },
+                { "paymentMethods", n => { PaymentMethods = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoPaymentMethods>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoPaymentMethods.CreateFromDiscriminatorValue); } },
+                { "paymentSchedule", n => { PaymentSchedule = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoPaymentSchedule>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoPaymentSchedule.CreateFromDiscriminatorValue); } },
                 { "termsNotes", n => { TermsNotes = n.GetStringValue(); } },
-                { "tipsConfiguration", n => { TipsConfiguration = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDto_tipsConfiguration>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDto_tipsConfiguration.CreateFromDiscriminatorValue); } },
+                { "tipsConfiguration", n => { TipsConfiguration = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoTipsConfiguration>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoTipsConfiguration.CreateFromDiscriminatorValue); } },
                 { "title", n => { Title = n.GetStringValue(); } },
-                { "xeroDetails", n => { XeroDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDto_xeroDetails>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDto_xeroDetails.CreateFromDiscriminatorValue); } },
+                { "xeroDetails", n => { XeroDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoXeroDetailsProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoXeroDetailsProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -247,29 +247,29 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("altId", AltId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDto_altType>("altType", AltType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoAltType>("altType", AltType);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.AttachmentsDto>("attachments", Attachments);
             writer.WriteBoolValue("automaticTaxesEnabled", AutomaticTaxesEnabled);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDto_businessDetails>("businessDetails", BusinessDetails);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoBusinessDetails>("businessDetails", BusinessDetails);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ContactDetailsDto>("contactDetails", ContactDetails);
             writer.WriteStringValue("contactId", ContactId);
             writer.WriteStringValue("currency", Currency);
             writer.WriteStringValue("description", Description);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto>("discount", Discount);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesDiscountDto>("discount", Discount);
             writer.WriteStringValue("dueDate", DueDate);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.InvoiceItemDto>("invoiceItems", InvoiceItems);
             writer.WriteStringValue("invoiceNumber", InvoiceNumber);
             writer.WriteStringValue("invoiceNumberPrefix", InvoiceNumberPrefix);
             writer.WriteStringValue("issueDate", IssueDate);
             writer.WriteBoolValue("liveMode", LiveMode);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDto_miscellaneousCharges>("miscellaneousCharges", MiscellaneousCharges);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoMiscellaneousCharges>("miscellaneousCharges", MiscellaneousCharges);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDto_paymentMethods>("paymentMethods", PaymentMethods);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDto_paymentSchedule>("paymentSchedule", PaymentSchedule);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoPaymentMethods>("paymentMethods", PaymentMethods);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoPaymentSchedule>("paymentSchedule", PaymentSchedule);
             writer.WriteStringValue("termsNotes", TermsNotes);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDto_tipsConfiguration>("tipsConfiguration", TipsConfiguration);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoTipsConfiguration>("tipsConfiguration", TipsConfiguration);
             writer.WriteStringValue("title", Title);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDto_xeroDetails>("xeroDetails", XeroDetails);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoXeroDetailsProperty>("xeroDetails", XeroDetails);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

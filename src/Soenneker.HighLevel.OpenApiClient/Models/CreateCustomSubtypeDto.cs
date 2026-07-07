@@ -15,7 +15,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Communication channel</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateCustomSubtypeDto_channel? Channel { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateCustomSubtypeDtoChannel? Channel { get; set; }
         /// <summary>Description of the custom subtype (max 100 characters)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -65,7 +65,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "channel", n => { Channel = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateCustomSubtypeDto_channel>(); } },
+                { "channel", n => { Channel = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateCustomSubtypeDtoChannel>(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "language", n => { Language = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
@@ -78,7 +78,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateCustomSubtypeDto_channel>("channel", Channel);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateCustomSubtypeDtoChannel>("channel", Channel);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("language", Language);
             writer.WriteStringValue("name", Name);

@@ -35,10 +35,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Configuration for how the coupon applies to future payments</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CouponDto_applyToFuturePaymentsConfig? ApplyToFuturePaymentsConfig { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CouponDtoApplyToFuturePaymentsConfig? ApplyToFuturePaymentsConfig { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CouponDto_applyToFuturePaymentsConfig ApplyToFuturePaymentsConfig { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CouponDtoApplyToFuturePaymentsConfig ApplyToFuturePaymentsConfig { get; set; }
 #endif
         /// <summary>Redemption code for the coupon</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -57,7 +57,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string CreatedAt { get; set; }
 #endif
         /// <summary>Type of discount (percentage or amount)</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CouponDto_discountType? DiscountType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CouponDtoDiscountType? DiscountType { get; set; }
         /// <summary>Value of the discount (percentage or fixed amount)</summary>
         public double? DiscountValue { get; set; }
         /// <summary>End date when the coupon expires</summary>
@@ -95,7 +95,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string StartDate { get; set; }
 #endif
         /// <summary>Current status of the coupon</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CouponDto_status? Status { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CouponDtoStatus? Status { get; set; }
         /// <summary>Last update timestamp</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -142,17 +142,17 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "altId", n => { AltId = n.GetStringValue(); } },
                 { "altType", n => { AltType = n.GetStringValue(); } },
                 { "applyToFuturePayments", n => { ApplyToFuturePayments = n.GetBoolValue(); } },
-                { "applyToFuturePaymentsConfig", n => { ApplyToFuturePaymentsConfig = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CouponDto_applyToFuturePaymentsConfig>(global::Soenneker.HighLevel.OpenApiClient.Models.CouponDto_applyToFuturePaymentsConfig.CreateFromDiscriminatorValue); } },
+                { "applyToFuturePaymentsConfig", n => { ApplyToFuturePaymentsConfig = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CouponDtoApplyToFuturePaymentsConfig>(global::Soenneker.HighLevel.OpenApiClient.Models.CouponDtoApplyToFuturePaymentsConfig.CreateFromDiscriminatorValue); } },
                 { "code", n => { Code = n.GetStringValue(); } },
                 { "createdAt", n => { CreatedAt = n.GetStringValue(); } },
-                { "discountType", n => { DiscountType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CouponDto_discountType>(); } },
+                { "discountType", n => { DiscountType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CouponDtoDiscountType>(); } },
                 { "discountValue", n => { DiscountValue = n.GetDoubleValue(); } },
                 { "endDate", n => { EndDate = n.GetStringValue(); } },
                 { "_id", n => { Id = n.GetStringValue(); } },
                 { "limitPerCustomer", n => { LimitPerCustomer = n.GetDoubleValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "startDate", n => { StartDate = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CouponDto_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CouponDtoStatus>(); } },
                 { "updatedAt", n => { UpdatedAt = n.GetStringValue(); } },
                 { "usageCount", n => { UsageCount = n.GetDoubleValue(); } },
                 { "userId", n => { UserId = n.GetStringValue(); } },
@@ -168,17 +168,17 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("altId", AltId);
             writer.WriteStringValue("altType", AltType);
             writer.WriteBoolValue("applyToFuturePayments", ApplyToFuturePayments);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CouponDto_applyToFuturePaymentsConfig>("applyToFuturePaymentsConfig", ApplyToFuturePaymentsConfig);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CouponDtoApplyToFuturePaymentsConfig>("applyToFuturePaymentsConfig", ApplyToFuturePaymentsConfig);
             writer.WriteStringValue("code", Code);
             writer.WriteStringValue("createdAt", CreatedAt);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CouponDto_discountType>("discountType", DiscountType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CouponDtoDiscountType>("discountType", DiscountType);
             writer.WriteDoubleValue("discountValue", DiscountValue);
             writer.WriteStringValue("endDate", EndDate);
             writer.WriteStringValue("_id", Id);
             writer.WriteDoubleValue("limitPerCustomer", LimitPerCustomer);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("startDate", StartDate);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CouponDto_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CouponDtoStatus>("status", Status);
             writer.WriteStringValue("updatedAt", UpdatedAt);
             writer.WriteDoubleValue("usageCount", UsageCount);
             writer.WriteStringValue("userId", UserId);

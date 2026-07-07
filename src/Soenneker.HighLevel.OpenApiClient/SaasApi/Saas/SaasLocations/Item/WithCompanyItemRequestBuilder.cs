@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.HighLevel.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -35,20 +36,20 @@ namespace Soenneker.HighLevel.OpenApiClient.SaasApi.Saas.SaasLocations.Item
         /// <summary>
         /// Fetch all SaaS-activated locations for a company with pagination
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.SaasApi.Saas.SaasLocations.Item.WithCompanyGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.DefaultResponseResponseJson11"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HighLevel.OpenApiClient.SaasApi.Saas.SaasLocations.Item.WithCompanyGetResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.SaasApi.Saas.SaasLocations.Item.WithCompanyItemRequestBuilder.WithCompanyItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.DefaultResponseResponseJson11?> GetAsync(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.SaasApi.Saas.SaasLocations.Item.WithCompanyItemRequestBuilder.WithCompanyItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HighLevel.OpenApiClient.SaasApi.Saas.SaasLocations.Item.WithCompanyGetResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.SaasApi.Saas.SaasLocations.Item.WithCompanyItemRequestBuilder.WithCompanyItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.DefaultResponseResponseJson11> GetAsync(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.SaasApi.Saas.SaasLocations.Item.WithCompanyItemRequestBuilder.WithCompanyItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.SaasApi.Saas.SaasLocations.Item.WithCompanyGetResponse>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.SaasApi.Saas.SaasLocations.Item.WithCompanyGetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.DefaultResponseResponseJson11>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.DefaultResponseResponseJson11.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Fetch all SaaS-activated locations for a company with pagination

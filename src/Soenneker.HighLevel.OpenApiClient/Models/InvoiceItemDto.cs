@@ -79,13 +79,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>true if item amount is tax inclusive</summary>
         public bool? TaxInclusive { get; set; }
         /// <summary>Price type of the item</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.InvoiceItemDto_type? Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.InvoiceItemDtoType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.InvoiceItemDto"/> and sets the default values.
         /// </summary>
         public InvoiceItemDto()
         {
             AdditionalData = new Dictionary<string, object>();
+            TaxInclusive = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -116,7 +117,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "qty", n => { Qty = n.GetDoubleValue(); } },
                 { "taxInclusive", n => { TaxInclusive = n.GetBoolValue(); } },
                 { "taxes", n => { Taxes = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ItemTaxDto>(global::Soenneker.HighLevel.OpenApiClient.Models.ItemTaxDto.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.InvoiceItemDto_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.InvoiceItemDtoType>(); } },
             };
         }
         /// <summary>
@@ -137,7 +138,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteDoubleValue("qty", Qty);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ItemTaxDto>("taxes", Taxes);
             writer.WriteBoolValue("taxInclusive", TaxInclusive);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.InvoiceItemDto_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.InvoiceItemDtoType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

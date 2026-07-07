@@ -29,9 +29,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Time duration before reactivation (required when reactivateEnabled is true)</summary>
         public double? SleepTime { get; set; }
         /// <summary>Time unit for reactivation delay (required when reactivateEnabled is true)</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.StopBotDto_sleepTimeUnit? SleepTimeUnit { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.StopBotDtoSleepTimeUnit? SleepTimeUnit { get; set; }
         /// <summary>Type of stop bot detection - Goodbye or Custom</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.StopBotDto_stopBotDetectionType? StopBotDetectionType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.StopBotDtoStopBotDetectionType? StopBotDetectionType { get; set; }
         /// <summary>Example phrases that trigger stop bot action (minimum 2 required)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -85,8 +85,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "finalMessage", n => { FinalMessage = n.GetStringValue(); } },
                 { "reactivateEnabled", n => { ReactivateEnabled = n.GetBoolValue(); } },
                 { "sleepTime", n => { SleepTime = n.GetDoubleValue(); } },
-                { "sleepTimeUnit", n => { SleepTimeUnit = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.StopBotDto_sleepTimeUnit>(); } },
-                { "stopBotDetectionType", n => { StopBotDetectionType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.StopBotDto_stopBotDetectionType>(); } },
+                { "sleepTimeUnit", n => { SleepTimeUnit = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.StopBotDtoSleepTimeUnit>(); } },
+                { "stopBotDetectionType", n => { StopBotDetectionType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.StopBotDtoStopBotDetectionType>(); } },
                 { "stopBotExamples", n => { StopBotExamples = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "stopBotTriggerCondition", n => { StopBotTriggerCondition = n.GetStringValue(); } },
                 { "tags", n => { Tags = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -103,8 +103,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("finalMessage", FinalMessage);
             writer.WriteBoolValue("reactivateEnabled", ReactivateEnabled);
             writer.WriteDoubleValue("sleepTime", SleepTime);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.StopBotDto_sleepTimeUnit>("sleepTimeUnit", SleepTimeUnit);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.StopBotDto_stopBotDetectionType>("stopBotDetectionType", StopBotDetectionType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.StopBotDtoSleepTimeUnit>("sleepTimeUnit", SleepTimeUnit);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.StopBotDtoStopBotDetectionType>("stopBotDetectionType", StopBotDetectionType);
             writer.WriteCollectionOfPrimitiveValues<string>("stopBotExamples", StopBotExamples);
             writer.WriteStringValue("stopBotTriggerCondition", StopBotTriggerCondition);
             writer.WriteCollectionOfPrimitiveValues<string>("tags", Tags);

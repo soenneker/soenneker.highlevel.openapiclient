@@ -17,18 +17,18 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Live config containing api-key and publishable key for live payments</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ConnectCustomProvidersConfigDto_live? Live { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ConnectCustomProvidersConfigDtoLive? Live { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ConnectCustomProvidersConfigDto_live Live { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ConnectCustomProvidersConfigDtoLive Live { get; set; }
 #endif
         /// <summary>Test config containing api-key and publishable-key for test payments</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ConnectCustomProvidersConfigDto_test? Test { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ConnectCustomProvidersConfigDtoTest? Test { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ConnectCustomProvidersConfigDto_test Test { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ConnectCustomProvidersConfigDtoTest Test { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.ConnectCustomProvidersConfigDto"/> and sets the default values.
@@ -55,8 +55,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "live", n => { Live = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ConnectCustomProvidersConfigDto_live>(global::Soenneker.HighLevel.OpenApiClient.Models.ConnectCustomProvidersConfigDto_live.CreateFromDiscriminatorValue); } },
-                { "test", n => { Test = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ConnectCustomProvidersConfigDto_test>(global::Soenneker.HighLevel.OpenApiClient.Models.ConnectCustomProvidersConfigDto_test.CreateFromDiscriminatorValue); } },
+                { "live", n => { Live = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ConnectCustomProvidersConfigDtoLive>(global::Soenneker.HighLevel.OpenApiClient.Models.ConnectCustomProvidersConfigDtoLive.CreateFromDiscriminatorValue); } },
+                { "test", n => { Test = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ConnectCustomProvidersConfigDtoTest>(global::Soenneker.HighLevel.OpenApiClient.Models.ConnectCustomProvidersConfigDtoTest.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -66,8 +66,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ConnectCustomProvidersConfigDto_live>("live", Live);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ConnectCustomProvidersConfigDto_test>("test", Test);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ConnectCustomProvidersConfigDtoLive>("live", Live);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ConnectCustomProvidersConfigDtoTest>("test", Test);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

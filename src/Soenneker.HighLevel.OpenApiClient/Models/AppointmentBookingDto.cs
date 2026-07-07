@@ -41,7 +41,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Sleep duration (required when sleepAfterBooking is true)</summary>
         public double? SleepTime { get; set; }
         /// <summary>Unit for sleep time (required when sleepAfterBooking is true)</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentBookingDto_sleepTimeUnit? SleepTimeUnit { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentBookingDtoSleepTimeUnit? SleepTimeUnit { get; set; }
         /// <summary>Agent ID to transfer to (required when transferBot is true)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -68,6 +68,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public AppointmentBookingDto()
         {
             AdditionalData = new Dictionary<string, object>();
+            CancelEnabled = false;
+            RescheduleEnabled = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -94,7 +96,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "rescheduleEnabled", n => { RescheduleEnabled = n.GetBoolValue(); } },
                 { "sleepAfterBooking", n => { SleepAfterBooking = n.GetBoolValue(); } },
                 { "sleepTime", n => { SleepTime = n.GetDoubleValue(); } },
-                { "sleepTimeUnit", n => { SleepTimeUnit = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentBookingDto_sleepTimeUnit>(); } },
+                { "sleepTimeUnit", n => { SleepTimeUnit = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentBookingDtoSleepTimeUnit>(); } },
                 { "transferAgent", n => { TransferAgent = n.GetStringValue(); } },
                 { "transferBot", n => { TransferBot = n.GetBoolValue(); } },
                 { "triggerWorkflow", n => { TriggerWorkflow = n.GetBoolValue(); } },
@@ -115,7 +117,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteBoolValue("rescheduleEnabled", RescheduleEnabled);
             writer.WriteBoolValue("sleepAfterBooking", SleepAfterBooking);
             writer.WriteDoubleValue("sleepTime", SleepTime);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentBookingDto_sleepTimeUnit>("sleepTimeUnit", SleepTimeUnit);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentBookingDtoSleepTimeUnit>("sleepTimeUnit", SleepTimeUnit);
             writer.WriteStringValue("transferAgent", TransferAgent);
             writer.WriteBoolValue("transferBot", TransferBot);
             writer.WriteBoolValue("triggerWorkflow", TriggerWorkflow);

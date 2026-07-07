@@ -15,13 +15,13 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>This setting contols what to do incase a recurring slot is unavailable</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.Recurring_bookingOption? BookingOption { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.RecurringBookingOption? BookingOption { get; set; }
         /// <summary>This setting contols what to do incase a recurring slot is unavailable</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.Recurring_bookingOverlapDefaultStatus? BookingOverlapDefaultStatus { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.RecurringBookingOverlapDefaultStatus? BookingOverlapDefaultStatus { get; set; }
         /// <summary>Number of recurrences</summary>
         public double? Count { get; set; }
         /// <summary>The freq property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.Recurring_freq? Freq { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.RecurringFreq? Freq { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.Recurring"/> and sets the default values.
         /// </summary>
@@ -47,10 +47,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "bookingOption", n => { BookingOption = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.Recurring_bookingOption>(); } },
-                { "bookingOverlapDefaultStatus", n => { BookingOverlapDefaultStatus = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.Recurring_bookingOverlapDefaultStatus>(); } },
+                { "bookingOption", n => { BookingOption = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.RecurringBookingOption>(); } },
+                { "bookingOverlapDefaultStatus", n => { BookingOverlapDefaultStatus = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.RecurringBookingOverlapDefaultStatus>(); } },
                 { "count", n => { Count = n.GetDoubleValue(); } },
-                { "freq", n => { Freq = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.Recurring_freq>(); } },
+                { "freq", n => { Freq = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.RecurringFreq>(); } },
             };
         }
         /// <summary>
@@ -60,10 +60,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.Recurring_bookingOption>("bookingOption", BookingOption);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.Recurring_bookingOverlapDefaultStatus>("bookingOverlapDefaultStatus", BookingOverlapDefaultStatus);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.RecurringBookingOption>("bookingOption", BookingOption);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.RecurringBookingOverlapDefaultStatus>("bookingOverlapDefaultStatus", BookingOverlapDefaultStatus);
             writer.WriteDoubleValue("count", Count);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.Recurring_freq>("freq", Freq);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.RecurringFreq>("freq", Freq);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

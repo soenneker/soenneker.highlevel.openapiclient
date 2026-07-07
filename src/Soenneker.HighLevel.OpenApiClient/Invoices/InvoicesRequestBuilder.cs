@@ -77,7 +77,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Invoices
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public InvoicesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/invoices?altId={altId}&altType={altType}&limit={limit}&offset={offset}{&contactId*,endAt*,paymentMode*,search*,sortField*,sortOrder*,startAt*,status*}", pathParameters)
+        public InvoicesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/invoices{?contactId*,endAt*,paymentMode*,search*,sortField*,sortOrder*,startAt*,status*}", pathParameters)
         {
         }
         /// <summary>
@@ -85,7 +85,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Invoices
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public InvoicesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/invoices?altId={altId}&altType={altType}&limit={limit}&offset={offset}{&contactId*,endAt*,paymentMode*,search*,sortField*,sortOrder*,startAt*,status*}", rawUrl)
+        public InvoicesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/invoices{?contactId*,endAt*,paymentMode*,search*,sortField*,sortOrder*,startAt*,status*}", rawUrl)
         {
         }
         /// <summary>
@@ -94,9 +94,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Invoices
         /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.ListInvoicesResponseDto"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasBadRequestDTO">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDTO">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnprocessableDTO">When receiving a 422 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasBadRequestDto">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDto">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnprocessableDto">When receiving a 422 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.ListInvoicesResponseDto?> GetAsync(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Invoices.InvoicesRequestBuilder.InvoicesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -109,9 +109,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Invoices
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasBadRequestDTO.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDTO.CreateFromDiscriminatorValue },
-                { "422", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnprocessableDTO.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
+                { "422", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.ListInvoicesResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.ListInvoicesResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -122,9 +122,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Invoices
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasBadRequestDTO">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDTO">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnprocessableDTO">When receiving a 422 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasBadRequestDto">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDto">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnprocessableDto">When receiving a 422 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceResponseDto?> PostAsync(global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceDto body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -138,9 +138,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Invoices
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasBadRequestDTO.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDTO.CreateFromDiscriminatorValue },
-                { "422", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnprocessableDTO.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
+                { "422", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -158,7 +158,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Invoices
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Invoices.InvoicesRequestBuilder.InvoicesRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/invoices?altId={altId}&altType={altType}&limit={limit}&offset={offset}{&contactId*,endAt*,paymentMode*,search*,sortField*,sortOrder*,startAt*,status*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -179,7 +179,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Invoices
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, "{+baseurl}/invoices", PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
@@ -212,7 +212,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Invoices
 #endif
             /// <summary>Alt Type</summary>
             [QueryParameter("altType")]
-            public global::Soenneker.HighLevel.OpenApiClient.Invoices.GetAltTypeQueryParameterType? AltType { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesListInvoicesAltTypeParameter? AltType { get; set; }
             /// <summary>Contact ID for the invoice</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -255,7 +255,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Invoices
 #endif
             /// <summary>payment mode</summary>
             [QueryParameter("paymentMode")]
-            public global::Soenneker.HighLevel.OpenApiClient.Invoices.GetPaymentModeQueryParameterType? PaymentMode { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesListInvoicesPaymentModeParameter? PaymentMode { get; set; }
             /// <summary>To search for an invoice by id / name / email / phoneNo</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -268,10 +268,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Invoices
 #endif
             /// <summary>The field on which sorting should be applied</summary>
             [QueryParameter("sortField")]
-            public global::Soenneker.HighLevel.OpenApiClient.Invoices.GetSortFieldQueryParameterType? SortField { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesListInvoicesSortFieldParameter? SortField { get; set; }
             /// <summary>The order of sort which should be applied for the sortField</summary>
             [QueryParameter("sortOrder")]
-            public global::Soenneker.HighLevel.OpenApiClient.Invoices.GetSortOrderQueryParameterType? SortOrder { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesListInvoicesSortOrderParameter? SortOrder { get; set; }
             /// <summary>startAt in YYYY-MM-DD format</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

@@ -23,14 +23,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string AltId { get; set; }
 #endif
         /// <summary>Alt Type</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePaymentMethodsConfigurationDto_altType? AltType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePaymentMethodsConfigurationDtoAltType? AltType { get; set; }
         /// <summary>Payment Methods for Invoices</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePaymentMethodsConfigurationDto_paymentMethods? PaymentMethods { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePaymentMethodsConfigurationDtoPaymentMethods? PaymentMethods { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePaymentMethodsConfigurationDto_paymentMethods PaymentMethods { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePaymentMethodsConfigurationDtoPaymentMethods PaymentMethods { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePaymentMethodsConfigurationDto"/> and sets the default values.
@@ -58,8 +58,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "altId", n => { AltId = n.GetStringValue(); } },
-                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePaymentMethodsConfigurationDto_altType>(); } },
-                { "paymentMethods", n => { PaymentMethods = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePaymentMethodsConfigurationDto_paymentMethods>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePaymentMethodsConfigurationDto_paymentMethods.CreateFromDiscriminatorValue); } },
+                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePaymentMethodsConfigurationDtoAltType>(); } },
+                { "paymentMethods", n => { PaymentMethods = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePaymentMethodsConfigurationDtoPaymentMethods>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePaymentMethodsConfigurationDtoPaymentMethods.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -70,8 +70,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("altId", AltId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePaymentMethodsConfigurationDto_altType>("altType", AltType);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePaymentMethodsConfigurationDto_paymentMethods>("paymentMethods", PaymentMethods);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePaymentMethodsConfigurationDtoAltType>("altType", AltType);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePaymentMethodsConfigurationDtoPaymentMethods>("paymentMethods", PaymentMethods);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -95,7 +95,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string DateAdded { get; set; }
 #endif
         /// <summary>The direction property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetEmailMessageResponseDto_direction? Direction { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetEmailMessageResponseDtoDirection? Direction { get; set; }
         /// <summary>Name and Email Id of the sender</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -137,9 +137,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string ReplyToMessageId { get; set; }
 #endif
         /// <summary>Email source</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetEmailMessageResponseDto_source? Source { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetEmailMessageResponseDtoSource? Source { get; set; }
         /// <summary>The status property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetEmailMessageResponseDto_status? Status { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetEmailMessageResponseDtoStatus? Status { get; set; }
         /// <summary>The subject property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -199,14 +199,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "conversationId", n => { ConversationId = n.GetStringValue(); } },
                 { "conversationProviderId", n => { ConversationProviderId = n.GetStringValue(); } },
                 { "dateAdded", n => { DateAdded = n.GetStringValue(); } },
-                { "direction", n => { Direction = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetEmailMessageResponseDto_direction>(); } },
+                { "direction", n => { Direction = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetEmailMessageResponseDtoDirection>(); } },
                 { "from", n => { From = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
                 { "provider", n => { Provider = n.GetStringValue(); } },
                 { "replyToMessageId", n => { ReplyToMessageId = n.GetStringValue(); } },
-                { "source", n => { Source = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetEmailMessageResponseDto_source>(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetEmailMessageResponseDto_status>(); } },
+                { "source", n => { Source = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetEmailMessageResponseDtoSource>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetEmailMessageResponseDtoStatus>(); } },
                 { "subject", n => { Subject = n.GetStringValue(); } },
                 { "threadId", n => { ThreadId = n.GetStringValue(); } },
                 { "to", n => { To = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -229,14 +229,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("conversationId", ConversationId);
             writer.WriteStringValue("conversationProviderId", ConversationProviderId);
             writer.WriteStringValue("dateAdded", DateAdded);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetEmailMessageResponseDto_direction>("direction", Direction);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetEmailMessageResponseDtoDirection>("direction", Direction);
             writer.WriteStringValue("from", From);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("locationId", LocationId);
             writer.WriteStringValue("provider", Provider);
             writer.WriteStringValue("replyToMessageId", ReplyToMessageId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetEmailMessageResponseDto_source>("source", Source);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetEmailMessageResponseDto_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetEmailMessageResponseDtoSource>("source", Source);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetEmailMessageResponseDtoStatus>("status", Status);
             writer.WriteStringValue("subject", Subject);
             writer.WriteStringValue("threadId", ThreadId);
             writer.WriteCollectionOfPrimitiveValues<string>("to", To);

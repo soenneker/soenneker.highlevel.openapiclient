@@ -55,10 +55,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Details for Product Label</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductDto_label? Label { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductDtoLabel? Label { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductDto_label Label { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductDtoLabel Label { get; set; }
 #endif
         /// <summary>The unique identifier for the location.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -93,14 +93,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public List<string> Prices { get; set; }
 #endif
         /// <summary>The productType property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductDto_productType? ProductType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductDtoProductType? ProductType { get; set; }
         /// <summary>SEO data for the product that will be displayed in the preview</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductDto_seo? Seo { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductDtoSeo? Seo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductDto_seo Seo { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductDtoSeo Seo { get; set; }
 #endif
         /// <summary>The slug using which the product navigation will be handled</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -142,6 +142,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public UpdateProductDto()
         {
             AdditionalData = new Dictionary<string, object>();
+            IsLabelEnabled = false;
+            IsTaxesEnabled = false;
+            TaxInclusive = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -168,13 +171,13 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "image", n => { Image = n.GetStringValue(); } },
                 { "isLabelEnabled", n => { IsLabelEnabled = n.GetBoolValue(); } },
                 { "isTaxesEnabled", n => { IsTaxesEnabled = n.GetBoolValue(); } },
-                { "label", n => { Label = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductDto_label>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductDto_label.CreateFromDiscriminatorValue); } },
+                { "label", n => { Label = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductDtoLabel>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductDtoLabel.CreateFromDiscriminatorValue); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
                 { "medias", n => { Medias = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ProductMediaDto>(global::Soenneker.HighLevel.OpenApiClient.Models.ProductMediaDto.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "prices", n => { Prices = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "productType", n => { ProductType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductDto_productType>(); } },
-                { "seo", n => { Seo = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductDto_seo>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductDto_seo.CreateFromDiscriminatorValue); } },
+                { "productType", n => { ProductType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductDtoProductType>(); } },
+                { "seo", n => { Seo = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductDtoSeo>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductDtoSeo.CreateFromDiscriminatorValue); } },
                 { "slug", n => { Slug = n.GetStringValue(); } },
                 { "statementDescriptor", n => { StatementDescriptor = n.GetStringValue(); } },
                 { "taxInclusive", n => { TaxInclusive = n.GetBoolValue(); } },
@@ -196,13 +199,13 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("image", Image);
             writer.WriteBoolValue("isLabelEnabled", IsLabelEnabled);
             writer.WriteBoolValue("isTaxesEnabled", IsTaxesEnabled);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductDto_label>("label", Label);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductDtoLabel>("label", Label);
             writer.WriteStringValue("locationId", LocationId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ProductMediaDto>("medias", Medias);
             writer.WriteStringValue("name", Name);
             writer.WriteCollectionOfPrimitiveValues<string>("prices", Prices);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductDto_productType>("productType", ProductType);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductDto_seo>("seo", Seo);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductDtoProductType>("productType", ProductType);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductDtoSeo>("seo", Seo);
             writer.WriteStringValue("slug", Slug);
             writer.WriteStringValue("statementDescriptor", StatementDescriptor);
             writer.WriteCollectionOfPrimitiveValues<string>("taxes", Taxes);

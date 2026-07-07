@@ -17,18 +17,18 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The firstObjectLabel property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateAssociationReqDto_firstObjectLabel? FirstObjectLabel { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateAssociationReqDtoFirstObjectLabelProperty? FirstObjectLabel { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateAssociationReqDto_firstObjectLabel FirstObjectLabel { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateAssociationReqDtoFirstObjectLabelProperty FirstObjectLabel { get; set; }
 #endif
         /// <summary>The secondObjectLabel property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateAssociationReqDto_secondObjectLabel? SecondObjectLabel { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateAssociationReqDtoSecondObjectLabelProperty? SecondObjectLabel { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateAssociationReqDto_secondObjectLabel SecondObjectLabel { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateAssociationReqDtoSecondObjectLabelProperty SecondObjectLabel { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpdateAssociationReqDto"/> and sets the default values.
@@ -55,8 +55,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "firstObjectLabel", n => { FirstObjectLabel = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateAssociationReqDto_firstObjectLabel>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateAssociationReqDto_firstObjectLabel.CreateFromDiscriminatorValue); } },
-                { "secondObjectLabel", n => { SecondObjectLabel = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateAssociationReqDto_secondObjectLabel>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateAssociationReqDto_secondObjectLabel.CreateFromDiscriminatorValue); } },
+                { "firstObjectLabel", n => { FirstObjectLabel = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateAssociationReqDtoFirstObjectLabelProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateAssociationReqDtoFirstObjectLabelProperty.CreateFromDiscriminatorValue); } },
+                { "secondObjectLabel", n => { SecondObjectLabel = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateAssociationReqDtoSecondObjectLabelProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateAssociationReqDtoSecondObjectLabelProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -66,8 +66,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateAssociationReqDto_firstObjectLabel>("firstObjectLabel", FirstObjectLabel);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateAssociationReqDto_secondObjectLabel>("secondObjectLabel", SecondObjectLabel);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateAssociationReqDtoFirstObjectLabelProperty>("firstObjectLabel", FirstObjectLabel);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateAssociationReqDtoSecondObjectLabelProperty>("secondObjectLabel", SecondObjectLabel);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

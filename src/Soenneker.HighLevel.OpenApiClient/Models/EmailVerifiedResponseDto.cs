@@ -25,10 +25,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Lead Connector email verification recomendation</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.EmailVerifiedResponseDto_leadconnectorRecomendation? LeadconnectorRecomendation { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.EmailVerifiedResponseDtoLeadconnectorRecomendation? LeadconnectorRecomendation { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.EmailVerifiedResponseDto_leadconnectorRecomendation LeadconnectorRecomendation { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.EmailVerifiedResponseDtoLeadconnectorRecomendation LeadconnectorRecomendation { get; set; }
 #endif
         /// <summary>Reason for email verification failure</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -39,9 +39,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public List<string> Reason { get; set; }
 #endif
         /// <summary>Email verification result</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.EmailVerifiedResponseDto_result? Result { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.EmailVerifiedResponseDtoResult? Result { get; set; }
         /// <summary>Risk level of email sending to bounce</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.EmailVerifiedResponseDto_risk? Risk { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.EmailVerifiedResponseDtoRisk? Risk { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.EmailVerifiedResponseDto"/> and sets the default values.
         /// </summary>
@@ -68,10 +68,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "address", n => { Address = n.GetStringValue(); } },
-                { "leadconnectorRecomendation", n => { LeadconnectorRecomendation = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EmailVerifiedResponseDto_leadconnectorRecomendation>(global::Soenneker.HighLevel.OpenApiClient.Models.EmailVerifiedResponseDto_leadconnectorRecomendation.CreateFromDiscriminatorValue); } },
+                { "leadconnectorRecomendation", n => { LeadconnectorRecomendation = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EmailVerifiedResponseDtoLeadconnectorRecomendation>(global::Soenneker.HighLevel.OpenApiClient.Models.EmailVerifiedResponseDtoLeadconnectorRecomendation.CreateFromDiscriminatorValue); } },
                 { "reason", n => { Reason = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "result", n => { Result = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.EmailVerifiedResponseDto_result>(); } },
-                { "risk", n => { Risk = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.EmailVerifiedResponseDto_risk>(); } },
+                { "result", n => { Result = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.EmailVerifiedResponseDtoResult>(); } },
+                { "risk", n => { Risk = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.EmailVerifiedResponseDtoRisk>(); } },
             };
         }
         /// <summary>
@@ -82,10 +82,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("address", Address);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EmailVerifiedResponseDto_leadconnectorRecomendation>("leadconnectorRecomendation", LeadconnectorRecomendation);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EmailVerifiedResponseDtoLeadconnectorRecomendation>("leadconnectorRecomendation", LeadconnectorRecomendation);
             writer.WriteCollectionOfPrimitiveValues<string>("reason", Reason);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.EmailVerifiedResponseDto_result>("result", Result);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.EmailVerifiedResponseDto_risk>("risk", Risk);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.EmailVerifiedResponseDtoResult>("result", Result);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.EmailVerifiedResponseDtoRisk>("risk", Risk);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

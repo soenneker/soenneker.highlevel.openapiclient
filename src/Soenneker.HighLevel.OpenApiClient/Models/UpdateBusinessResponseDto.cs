@@ -17,10 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Business Response</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateBusinessResponseDto_buiseness? Buiseness { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateBusinessResponseDtoBuiseness? Buiseness { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateBusinessResponseDto_buiseness Buiseness { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateBusinessResponseDtoBuiseness Buiseness { get; set; }
 #endif
         /// <summary>Success Value</summary>
         public bool? Success { get; set; }
@@ -49,7 +49,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "buiseness", n => { Buiseness = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateBusinessResponseDto_buiseness>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateBusinessResponseDto_buiseness.CreateFromDiscriminatorValue); } },
+                { "buiseness", n => { Buiseness = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateBusinessResponseDtoBuiseness>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateBusinessResponseDtoBuiseness.CreateFromDiscriminatorValue); } },
                 { "success", n => { Success = n.GetBoolValue(); } },
             };
         }
@@ -60,7 +60,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateBusinessResponseDto_buiseness>("buiseness", Buiseness);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateBusinessResponseDtoBuiseness>("buiseness", Buiseness);
             writer.WriteBoolValue("success", Success);
             writer.WriteAdditionalData(AdditionalData);
         }

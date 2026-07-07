@@ -15,7 +15,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Email Verification type</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.VerificationBodyDto_type? Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.VerificationBodyDtoType? Type { get; set; }
         /// <summary>Email Verification recepient (email address / contactId)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -49,7 +49,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.VerificationBodyDto_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.VerificationBodyDtoType>(); } },
                 { "verify", n => { Verify = n.GetStringValue(); } },
             };
         }
@@ -60,7 +60,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.VerificationBodyDto_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.VerificationBodyDtoType>("type", Type);
             writer.WriteStringValue("verify", Verify);
             writer.WriteAdditionalData(AdditionalData);
         }

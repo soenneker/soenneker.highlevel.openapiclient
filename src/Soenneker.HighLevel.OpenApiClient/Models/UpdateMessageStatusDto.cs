@@ -25,10 +25,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Error object from the conversation provider</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateMessageStatusDto_error? Error { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateMessageStatusDtoError? Error { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateMessageStatusDto_error Error { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateMessageStatusDtoError Error { get; set; }
 #endif
         /// <summary>Email delivery status for additional email recipients.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -39,7 +39,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public List<string> Recipients { get; set; }
 #endif
         /// <summary>Message status</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateMessageStatusDto_status? Status { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateMessageStatusDtoStatus? Status { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpdateMessageStatusDto"/> and sets the default values.
         /// </summary>
@@ -66,9 +66,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "emailMessageId", n => { EmailMessageId = n.GetStringValue(); } },
-                { "error", n => { Error = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateMessageStatusDto_error>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateMessageStatusDto_error.CreateFromDiscriminatorValue); } },
+                { "error", n => { Error = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateMessageStatusDtoError>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateMessageStatusDtoError.CreateFromDiscriminatorValue); } },
                 { "recipients", n => { Recipients = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateMessageStatusDto_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateMessageStatusDtoStatus>(); } },
             };
         }
         /// <summary>
@@ -79,9 +79,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("emailMessageId", EmailMessageId);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateMessageStatusDto_error>("error", Error);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateMessageStatusDtoError>("error", Error);
             writer.WriteCollectionOfPrimitiveValues<string>("recipients", Recipients);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateMessageStatusDto_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateMessageStatusDtoStatus>("status", Status);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

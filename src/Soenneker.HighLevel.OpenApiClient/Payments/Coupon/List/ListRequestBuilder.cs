@@ -39,7 +39,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Payments.Coupon.List
         /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.ListCouponsResponseDto"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnprocessableDTO">When receiving a 422 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnprocessableDto">When receiving a 422 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.ListCouponsResponseDto?> GetAsync(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Payments.Coupon.List.ListRequestBuilder.ListRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -52,7 +52,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Payments.Coupon.List
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "422", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnprocessableDTO.CreateFromDiscriminatorValue },
+                { "422", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.ListCouponsResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.ListCouponsResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -102,7 +102,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Payments.Coupon.List
 #endif
             /// <summary>Alt Type</summary>
             [QueryParameter("altType")]
-            public global::Soenneker.HighLevel.OpenApiClient.Payments.Coupon.List.GetAltTypeQueryParameterType? AltType { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsListCouponsAltTypeParameter? AltType { get; set; }
             /// <summary>Maximum number of coupons to return</summary>
             [QueryParameter("limit")]
             public double? Limit { get; set; }
@@ -121,7 +121,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Payments.Coupon.List
 #endif
             /// <summary>Filter coupons by status</summary>
             [QueryParameter("status")]
-            public global::Soenneker.HighLevel.OpenApiClient.Payments.Coupon.List.GetStatusQueryParameterType? Status { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsListCouponsStatusParameter? Status { get; set; }
         }
     }
 }

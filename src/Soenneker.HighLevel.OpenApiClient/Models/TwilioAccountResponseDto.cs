@@ -25,10 +25,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Map of phone numbers to assigned user IDs</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDto_assigned_to_numbers? AssignedToNumbers { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDtoAssignedToNumbersProperty? AssignedToNumbers { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDto_assigned_to_numbers AssignedToNumbers { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDtoAssignedToNumbersProperty AssignedToNumbers { get; set; }
 #endif
         /// <summary>Unique identifier of the Twilio account record</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -73,18 +73,18 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Map of phone numbers to their friendly names</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDto_number_name? NumberName { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDtoNumberNameProperty? NumberName { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDto_number_name NumberName { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDtoNumberNameProperty NumberName { get; set; }
 #endif
         /// <summary>Map of phone numbers to their service type (e.g. &apos;conversation&apos;)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDto_numbers? Numbers { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDtoNumbersProperty? Numbers { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDto_numbers Numbers { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDtoNumbersProperty Numbers { get; set; }
 #endif
         /// <summary>Whether this location is under a GHL-managed Twilio account</summary>
         public bool? UnderGhlAccount { get; set; }
@@ -116,14 +116,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "account_sid", n => { AccountSid = n.GetStringValue(); } },
-                { "assigned_to_numbers", n => { AssignedToNumbers = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDto_assigned_to_numbers>(global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDto_assigned_to_numbers.CreateFromDiscriminatorValue); } },
+                { "assigned_to_numbers", n => { AssignedToNumbers = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDtoAssignedToNumbersProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDtoAssignedToNumbersProperty.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "location_id", n => { LocationId = n.GetStringValue(); } },
                 { "migration_numbers", n => { MigrationNumbers = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "migration_status", n => { MigrationStatus = n.GetStringValue(); } },
                 { "new_account_sid", n => { NewAccountSid = n.GetStringValue(); } },
-                { "number_name", n => { NumberName = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDto_number_name>(global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDto_number_name.CreateFromDiscriminatorValue); } },
-                { "numbers", n => { Numbers = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDto_numbers>(global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDto_numbers.CreateFromDiscriminatorValue); } },
+                { "number_name", n => { NumberName = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDtoNumberNameProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDtoNumberNameProperty.CreateFromDiscriminatorValue); } },
+                { "numbers", n => { Numbers = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDtoNumbersProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDtoNumbersProperty.CreateFromDiscriminatorValue); } },
                 { "under_ghl_account", n => { UnderGhlAccount = n.GetBoolValue(); } },
                 { "validate_sms", n => { ValidateSms = n.GetBoolValue(); } },
             };
@@ -136,14 +136,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("account_sid", AccountSid);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDto_assigned_to_numbers>("assigned_to_numbers", AssignedToNumbers);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDtoAssignedToNumbersProperty>("assigned_to_numbers", AssignedToNumbers);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("location_id", LocationId);
             writer.WriteCollectionOfPrimitiveValues<string>("migration_numbers", MigrationNumbers);
             writer.WriteStringValue("migration_status", MigrationStatus);
             writer.WriteStringValue("new_account_sid", NewAccountSid);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDto_number_name>("number_name", NumberName);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDto_numbers>("numbers", Numbers);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDtoNumberNameProperty>("number_name", NumberName);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDtoNumbersProperty>("numbers", Numbers);
             writer.WriteBoolValue("under_ghl_account", UnderGhlAccount);
             writer.WriteBoolValue("validate_sms", ValidateSms);
             writer.WriteAdditionalData(AdditionalData);

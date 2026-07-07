@@ -35,10 +35,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Amount details of the order.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchema_amountSummary? AmountSummary { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchemaAmountSummary? AmountSummary { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchema_amountSummary AmountSummary { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchemaAmountSummary AmountSummary { get; set; }
 #endif
         /// <summary>Automatic taxes applied for the Order</summary>
         public bool? AutomaticTaxesCalculated { get; set; }
@@ -53,18 +53,18 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Contact details of the order.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchema_contactSnapshot? ContactSnapshot { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchemaContactSnapshotProperty? ContactSnapshot { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchema_contactSnapshot ContactSnapshot { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchemaContactSnapshotProperty ContactSnapshot { get; set; }
 #endif
         /// <summary>Coupon details of the order.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchema_coupon? Coupon { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchemaCouponProperty? Coupon { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchema_coupon Coupon { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchemaCouponProperty Coupon { get; set; }
 #endif
         /// <summary>The creation timestamp of the order.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
@@ -123,18 +123,18 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Meta details of the order.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchema_meta? Meta { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchemaMetaProperty? Meta { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchema_meta Meta { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchemaMetaProperty Meta { get; set; }
 #endif
         /// <summary>Source details of the order.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchema_source? Source { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchemaSource? Source { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchema_source Source { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchemaSource Source { get; set; }
 #endif
         /// <summary>The status of the order (e.g., completed).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -147,10 +147,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Provider name for automatic tax calculation</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchema_taxCalculationProvider? TaxCalculationProvider { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchemaTaxCalculationProviderProperty? TaxCalculationProvider { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchema_taxCalculationProvider TaxCalculationProvider { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchemaTaxCalculationProviderProperty TaxCalculationProvider { get; set; }
 #endif
         /// <summary>Trace id of the order.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -198,11 +198,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "altId", n => { AltId = n.GetStringValue(); } },
                 { "altType", n => { AltType = n.GetStringValue(); } },
                 { "amount", n => { Amount = n.GetDoubleValue(); } },
-                { "amountSummary", n => { AmountSummary = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchema_amountSummary>(global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchema_amountSummary.CreateFromDiscriminatorValue); } },
+                { "amountSummary", n => { AmountSummary = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchemaAmountSummary>(global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchemaAmountSummary.CreateFromDiscriminatorValue); } },
                 { "automaticTaxesCalculated", n => { AutomaticTaxesCalculated = n.GetBoolValue(); } },
                 { "contactId", n => { ContactId = n.GetStringValue(); } },
-                { "contactSnapshot", n => { ContactSnapshot = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchema_contactSnapshot>(global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchema_contactSnapshot.CreateFromDiscriminatorValue); } },
-                { "coupon", n => { Coupon = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchema_coupon>(global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchema_coupon.CreateFromDiscriminatorValue); } },
+                { "contactSnapshot", n => { ContactSnapshot = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchemaContactSnapshotProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchemaContactSnapshotProperty.CreateFromDiscriminatorValue); } },
+                { "coupon", n => { Coupon = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchemaCouponProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchemaCouponProperty.CreateFromDiscriminatorValue); } },
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "createdBy", n => { CreatedBy = n.GetStringValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
@@ -212,10 +212,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "items", n => { Items = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "liveMode", n => { LiveMode = n.GetBoolValue(); } },
                 { "markAsTest", n => { MarkAsTest = n.GetBoolValue(); } },
-                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchema_meta>(global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchema_meta.CreateFromDiscriminatorValue); } },
-                { "source", n => { Source = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchema_source>(global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchema_source.CreateFromDiscriminatorValue); } },
+                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchemaMetaProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchemaMetaProperty.CreateFromDiscriminatorValue); } },
+                { "source", n => { Source = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchemaSource>(global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchemaSource.CreateFromDiscriminatorValue); } },
                 { "status", n => { Status = n.GetStringValue(); } },
-                { "taxCalculationProvider", n => { TaxCalculationProvider = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchema_taxCalculationProvider>(global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchema_taxCalculationProvider.CreateFromDiscriminatorValue); } },
+                { "taxCalculationProvider", n => { TaxCalculationProvider = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchemaTaxCalculationProviderProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchemaTaxCalculationProviderProperty.CreateFromDiscriminatorValue); } },
                 { "traceId", n => { TraceId = n.GetStringValue(); } },
                 { "trackingId", n => { TrackingId = n.GetStringValue(); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
@@ -231,11 +231,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("altId", AltId);
             writer.WriteStringValue("altType", AltType);
             writer.WriteDoubleValue("amount", Amount);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchema_amountSummary>("amountSummary", AmountSummary);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchemaAmountSummary>("amountSummary", AmountSummary);
             writer.WriteBoolValue("automaticTaxesCalculated", AutomaticTaxesCalculated);
             writer.WriteStringValue("contactId", ContactId);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchema_contactSnapshot>("contactSnapshot", ContactSnapshot);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchema_coupon>("coupon", Coupon);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchemaContactSnapshotProperty>("contactSnapshot", ContactSnapshot);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchemaCouponProperty>("coupon", Coupon);
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
             writer.WriteStringValue("createdBy", CreatedBy);
             writer.WriteStringValue("currency", Currency);
@@ -245,10 +245,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("items", Items);
             writer.WriteBoolValue("liveMode", LiveMode);
             writer.WriteBoolValue("markAsTest", MarkAsTest);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchema_meta>("meta", Meta);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchema_source>("source", Source);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchemaMetaProperty>("meta", Meta);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchemaSource>("source", Source);
             writer.WriteStringValue("status", Status);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchema_taxCalculationProvider>("taxCalculationProvider", TaxCalculationProvider);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchemaTaxCalculationProviderProperty>("taxCalculationProvider", TaxCalculationProvider);
             writer.WriteStringValue("traceId", TraceId);
             writer.WriteStringValue("trackingId", TrackingId);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);

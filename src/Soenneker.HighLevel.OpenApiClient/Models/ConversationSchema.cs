@@ -63,7 +63,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string LastMessageBody { get; set; }
 #endif
         /// <summary>Channel/type of the most recent message (SMS, Email, Call, etc)</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ConversationSchema_lastMessageType? LastMessageType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ConversationSchemaLastMessageType? LastMessageType { get; set; }
         /// <summary>Location Id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -81,7 +81,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string Phone { get; set; }
 #endif
         /// <summary>Primary channel/type of the conversation (Phone, Email, etc)</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ConversationSchema_type? Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ConversationSchemaType? Type { get; set; }
         /// <summary>Number of unread messages in this conversation</summary>
         public double? UnreadCount { get; set; }
         /// <summary>
@@ -115,10 +115,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "fullName", n => { FullName = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "lastMessageBody", n => { LastMessageBody = n.GetStringValue(); } },
-                { "lastMessageType", n => { LastMessageType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ConversationSchema_lastMessageType>(); } },
+                { "lastMessageType", n => { LastMessageType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ConversationSchemaLastMessageType>(); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
                 { "phone", n => { Phone = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ConversationSchema_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ConversationSchemaType>(); } },
                 { "unreadCount", n => { UnreadCount = n.GetDoubleValue(); } },
             };
         }
@@ -135,10 +135,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("fullName", FullName);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("lastMessageBody", LastMessageBody);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ConversationSchema_lastMessageType>("lastMessageType", LastMessageType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ConversationSchemaLastMessageType>("lastMessageType", LastMessageType);
             writer.WriteStringValue("locationId", LocationId);
             writer.WriteStringValue("phone", Phone);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ConversationSchema_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ConversationSchemaType>("type", Type);
             writer.WriteDoubleValue("unreadCount", UnreadCount);
             writer.WriteAdditionalData(AdditionalData);
         }

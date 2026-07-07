@@ -23,7 +23,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string AltId { get; set; }
 #endif
         /// <summary>Type of entity that owns the files</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DeleteMediaObjectsBodyParams_altType? AltType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DeleteMediaObjectsBodyParamsAltType? AltType { get; set; }
         /// <summary>Array of file objects to be deleted or trashed</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -33,7 +33,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public List<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteMediaObjectItem> FilesToBeDeleted { get; set; }
 #endif
         /// <summary>Status to set for the files (deleted or trashed)</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DeleteMediaObjectsBodyParams_status? Status { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DeleteMediaObjectsBodyParamsStatus? Status { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.DeleteMediaObjectsBodyParams"/> and sets the default values.
         /// </summary>
@@ -60,9 +60,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "altId", n => { AltId = n.GetStringValue(); } },
-                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteMediaObjectsBodyParams_altType>(); } },
+                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteMediaObjectsBodyParamsAltType>(); } },
                 { "filesToBeDeleted", n => { FilesToBeDeleted = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteMediaObjectItem>(global::Soenneker.HighLevel.OpenApiClient.Models.DeleteMediaObjectItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteMediaObjectsBodyParams_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteMediaObjectsBodyParamsStatus>(); } },
             };
         }
         /// <summary>
@@ -73,9 +73,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("altId", AltId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteMediaObjectsBodyParams_altType>("altType", AltType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteMediaObjectsBodyParamsAltType>("altType", AltType);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteMediaObjectItem>("filesToBeDeleted", FilesToBeDeleted);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteMediaObjectsBodyParams_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteMediaObjectsBodyParamsStatus>("status", Status);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

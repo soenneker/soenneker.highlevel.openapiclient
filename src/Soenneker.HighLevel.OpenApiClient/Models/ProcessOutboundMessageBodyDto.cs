@@ -33,10 +33,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Phone call dialer and receiver information</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ProcessOutboundMessageBodyDto_call? Call { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ProcessOutboundMessageBodyDtoCall? Call { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ProcessOutboundMessageBodyDto_call Call { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ProcessOutboundMessageBodyDtoCall Call { get; set; }
 #endif
         /// <summary>Conversation Id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -57,7 +57,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Date of the outbound message</summary>
         public DateTimeOffset? Date { get; set; }
         /// <summary>Message Type</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ProcessOutboundMessageBodyDto_type? Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ProcessOutboundMessageBodyDtoType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.ProcessOutboundMessageBodyDto"/> and sets the default values.
         /// </summary>
@@ -85,11 +85,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             {
                 { "altId", n => { AltId = n.GetStringValue(); } },
                 { "attachments", n => { Attachments = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "call", n => { Call = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProcessOutboundMessageBodyDto_call>(global::Soenneker.HighLevel.OpenApiClient.Models.ProcessOutboundMessageBodyDto_call.CreateFromDiscriminatorValue); } },
+                { "call", n => { Call = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProcessOutboundMessageBodyDtoCall>(global::Soenneker.HighLevel.OpenApiClient.Models.ProcessOutboundMessageBodyDtoCall.CreateFromDiscriminatorValue); } },
                 { "conversationId", n => { ConversationId = n.GetStringValue(); } },
                 { "conversationProviderId", n => { ConversationProviderId = n.GetStringValue(); } },
                 { "date", n => { Date = n.GetDateTimeOffsetValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProcessOutboundMessageBodyDto_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProcessOutboundMessageBodyDtoType>(); } },
             };
         }
         /// <summary>
@@ -101,11 +101,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("altId", AltId);
             writer.WriteCollectionOfPrimitiveValues<string>("attachments", Attachments);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProcessOutboundMessageBodyDto_call>("call", Call);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProcessOutboundMessageBodyDtoCall>("call", Call);
             writer.WriteStringValue("conversationId", ConversationId);
             writer.WriteStringValue("conversationProviderId", ConversationProviderId);
             writer.WriteDateTimeOffsetValue("date", Date);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProcessOutboundMessageBodyDto_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProcessOutboundMessageBodyDtoType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

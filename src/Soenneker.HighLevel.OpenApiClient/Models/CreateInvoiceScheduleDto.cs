@@ -23,7 +23,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string AltId { get; set; }
 #endif
         /// <summary>Alt Type</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceScheduleDto_altType? AltType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceScheduleDtoAltType? AltType { get; set; }
         /// <summary>attachments for the invoice</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -61,10 +61,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The discount property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto? Discount { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesDiscountDto? Discount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto Discount { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesDiscountDto Discount { get; set; }
 #endif
         /// <summary>prefix for invoice number</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -85,20 +85,20 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Late fees configuration for the invoices</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceScheduleDto_lateFeesConfiguration? LateFeesConfiguration { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceScheduleDtoLateFeesConfiguration? LateFeesConfiguration { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceScheduleDto_lateFeesConfiguration LateFeesConfiguration { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceScheduleDtoLateFeesConfiguration LateFeesConfiguration { get; set; }
 #endif
         /// <summary>The liveMode property</summary>
         public bool? LiveMode { get; set; }
         /// <summary>miscellaneous charges for the invoice</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceScheduleDto_miscellaneousCharges? MiscellaneousCharges { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceScheduleDtoMiscellaneousCharges? MiscellaneousCharges { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceScheduleDto_miscellaneousCharges MiscellaneousCharges { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceScheduleDtoMiscellaneousCharges MiscellaneousCharges { get; set; }
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -111,10 +111,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Payment Methods for Invoices</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceScheduleDto_paymentMethods? PaymentMethods { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceScheduleDtoPaymentMethods? PaymentMethods { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceScheduleDto_paymentMethods PaymentMethods { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceScheduleDtoPaymentMethods PaymentMethods { get; set; }
 #endif
         /// <summary>The schedule property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -135,10 +135,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Configuration for tips on invoices</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceScheduleDto_tipsConfiguration? TipsConfiguration { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceScheduleDtoTipsConfiguration? TipsConfiguration { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceScheduleDto_tipsConfiguration TipsConfiguration { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceScheduleDtoTipsConfiguration TipsConfiguration { get; set; }
 #endif
         /// <summary>The title property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -174,23 +174,23 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "altId", n => { AltId = n.GetStringValue(); } },
-                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceScheduleDto_altType>(); } },
+                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceScheduleDtoAltType>(); } },
                 { "attachments", n => { Attachments = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.AttachmentsDto>(global::Soenneker.HighLevel.OpenApiClient.Models.AttachmentsDto.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "automaticTaxesEnabled", n => { AutomaticTaxesEnabled = n.GetBoolValue(); } },
                 { "businessDetails", n => { BusinessDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BusinessDetailsDto>(global::Soenneker.HighLevel.OpenApiClient.Models.BusinessDetailsDto.CreateFromDiscriminatorValue); } },
                 { "contactDetails", n => { ContactDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ContactDetailsDto>(global::Soenneker.HighLevel.OpenApiClient.Models.ContactDetailsDto.CreateFromDiscriminatorValue); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
-                { "discount", n => { Discount = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto>(global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto.CreateFromDiscriminatorValue); } },
+                { "discount", n => { Discount = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesDiscountDto>(global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesDiscountDto.CreateFromDiscriminatorValue); } },
                 { "invoiceNumberPrefix", n => { InvoiceNumberPrefix = n.GetStringValue(); } },
                 { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.InvoiceItemDto>(global::Soenneker.HighLevel.OpenApiClient.Models.InvoiceItemDto.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "lateFeesConfiguration", n => { LateFeesConfiguration = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceScheduleDto_lateFeesConfiguration>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceScheduleDto_lateFeesConfiguration.CreateFromDiscriminatorValue); } },
+                { "lateFeesConfiguration", n => { LateFeesConfiguration = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceScheduleDtoLateFeesConfiguration>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceScheduleDtoLateFeesConfiguration.CreateFromDiscriminatorValue); } },
                 { "liveMode", n => { LiveMode = n.GetBoolValue(); } },
-                { "miscellaneousCharges", n => { MiscellaneousCharges = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceScheduleDto_miscellaneousCharges>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceScheduleDto_miscellaneousCharges.CreateFromDiscriminatorValue); } },
+                { "miscellaneousCharges", n => { MiscellaneousCharges = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceScheduleDtoMiscellaneousCharges>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceScheduleDtoMiscellaneousCharges.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "paymentMethods", n => { PaymentMethods = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceScheduleDto_paymentMethods>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceScheduleDto_paymentMethods.CreateFromDiscriminatorValue); } },
+                { "paymentMethods", n => { PaymentMethods = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceScheduleDtoPaymentMethods>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceScheduleDtoPaymentMethods.CreateFromDiscriminatorValue); } },
                 { "schedule", n => { Schedule = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleOptionsDto>(global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleOptionsDto.CreateFromDiscriminatorValue); } },
                 { "termsNotes", n => { TermsNotes = n.GetStringValue(); } },
-                { "tipsConfiguration", n => { TipsConfiguration = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceScheduleDto_tipsConfiguration>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceScheduleDto_tipsConfiguration.CreateFromDiscriminatorValue); } },
+                { "tipsConfiguration", n => { TipsConfiguration = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceScheduleDtoTipsConfiguration>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceScheduleDtoTipsConfiguration.CreateFromDiscriminatorValue); } },
                 { "title", n => { Title = n.GetStringValue(); } },
             };
         }
@@ -202,23 +202,23 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("altId", AltId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceScheduleDto_altType>("altType", AltType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceScheduleDtoAltType>("altType", AltType);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.AttachmentsDto>("attachments", Attachments);
             writer.WriteBoolValue("automaticTaxesEnabled", AutomaticTaxesEnabled);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BusinessDetailsDto>("businessDetails", BusinessDetails);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ContactDetailsDto>("contactDetails", ContactDetails);
             writer.WriteStringValue("currency", Currency);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto>("discount", Discount);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesDiscountDto>("discount", Discount);
             writer.WriteStringValue("invoiceNumberPrefix", InvoiceNumberPrefix);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.InvoiceItemDto>("items", Items);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceScheduleDto_lateFeesConfiguration>("lateFeesConfiguration", LateFeesConfiguration);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceScheduleDtoLateFeesConfiguration>("lateFeesConfiguration", LateFeesConfiguration);
             writer.WriteBoolValue("liveMode", LiveMode);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceScheduleDto_miscellaneousCharges>("miscellaneousCharges", MiscellaneousCharges);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceScheduleDtoMiscellaneousCharges>("miscellaneousCharges", MiscellaneousCharges);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceScheduleDto_paymentMethods>("paymentMethods", PaymentMethods);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceScheduleDtoPaymentMethods>("paymentMethods", PaymentMethods);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleOptionsDto>("schedule", Schedule);
             writer.WriteStringValue("termsNotes", TermsNotes);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceScheduleDto_tipsConfiguration>("tipsConfiguration", TipsConfiguration);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceScheduleDtoTipsConfiguration>("tipsConfiguration", TipsConfiguration);
             writer.WriteStringValue("title", Title);
             writer.WriteAdditionalData(AdditionalData);
         }

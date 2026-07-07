@@ -33,7 +33,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string TransferBotTriggerCondition { get; set; }
 #endif
         /// <summary>Type of transfer - Default or Custom</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.TransferBotDto_transferBotType? TransferBotType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.TransferBotDtoTransferBotType? TransferBotType { get; set; }
         /// <summary>ID of the bot/agent to transfer to</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -70,7 +70,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
                 { "transferBotExamples", n => { TransferBotExamples = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "transferBotTriggerCondition", n => { TransferBotTriggerCondition = n.GetStringValue(); } },
-                { "transferBotType", n => { TransferBotType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.TransferBotDto_transferBotType>(); } },
+                { "transferBotType", n => { TransferBotType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.TransferBotDtoTransferBotType>(); } },
                 { "transferToBot", n => { TransferToBot = n.GetStringValue(); } },
             };
         }
@@ -84,7 +84,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteBoolValue("enabled", Enabled);
             writer.WriteCollectionOfPrimitiveValues<string>("transferBotExamples", TransferBotExamples);
             writer.WriteStringValue("transferBotTriggerCondition", TransferBotTriggerCondition);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.TransferBotDto_transferBotType>("transferBotType", TransferBotType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.TransferBotDtoTransferBotType>("transferBotType", TransferBotType);
             writer.WriteStringValue("transferToBot", TransferToBot);
             writer.WriteAdditionalData(AdditionalData);
         }

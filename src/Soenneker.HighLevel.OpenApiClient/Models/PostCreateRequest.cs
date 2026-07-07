@@ -49,10 +49,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>GMB Post Details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequest_gmbPostDetails? GmbPostDetails { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequestGmbPostDetails? GmbPostDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequest_gmbPostDetails GmbPostDetails { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequestGmbPostDetails GmbPostDetails { get; set; }
 #endif
         /// <summary>Post Media Data  The limitations of media as per the platforms is provided through the reference link in API description</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -65,18 +65,18 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Og Tags Meta Data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequest_ogTagsDetails? OgTagsDetails { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequestOgTagsDetails? OgTagsDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequest_ogTagsDetails OgTagsDetails { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequestOgTagsDetails OgTagsDetails { get; set; }
 #endif
         /// <summary>Post Approval Details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequest_postApprovalDetails? PostApprovalDetails { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequestPostApprovalDetails? PostApprovalDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequest_postApprovalDetails PostApprovalDetails { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequestPostApprovalDetails PostApprovalDetails { get; set; }
 #endif
         /// <summary>Schedule Date</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -91,10 +91,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>&quot;Status must be one of the following values: in_progress, draft, failed, published, scheduled, in_review, notification_sent, deleted&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequest_status? Status { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequestStatusProperty? Status { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequest_status Status { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequestStatusProperty Status { get; set; }
 #endif
         /// <summary>Post Content  The limitations of content as per the platforms is provided through the reference link in API description</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -115,18 +115,18 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Tiktok Post Details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequest_tiktokPostDetails? TiktokPostDetails { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequestTiktokPostDetails? TiktokPostDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequest_tiktokPostDetails TiktokPostDetails { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequestTiktokPostDetails TiktokPostDetails { get; set; }
 #endif
         /// <summary>&quot;Post Type must be one of the following values: - post, story, reel&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequest_type? Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequestTypeProperty? Type { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequest_type Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequestTypeProperty Type { get; set; }
 #endif
         /// <summary>User ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -165,17 +165,17 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "categoryId", n => { CategoryId = n.GetStringValue(); } },
                 { "createdBy", n => { CreatedBy = n.GetStringValue(); } },
                 { "followUpComment", n => { FollowUpComment = n.GetStringValue(); } },
-                { "gmbPostDetails", n => { GmbPostDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequest_gmbPostDetails>(global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequest_gmbPostDetails.CreateFromDiscriminatorValue); } },
+                { "gmbPostDetails", n => { GmbPostDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequestGmbPostDetails>(global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequestGmbPostDetails.CreateFromDiscriminatorValue); } },
                 { "media", n => { Media = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.PostMediaSchema>(global::Soenneker.HighLevel.OpenApiClient.Models.PostMediaSchema.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "ogTagsDetails", n => { OgTagsDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequest_ogTagsDetails>(global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequest_ogTagsDetails.CreateFromDiscriminatorValue); } },
-                { "postApprovalDetails", n => { PostApprovalDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequest_postApprovalDetails>(global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequest_postApprovalDetails.CreateFromDiscriminatorValue); } },
+                { "ogTagsDetails", n => { OgTagsDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequestOgTagsDetails>(global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequestOgTagsDetails.CreateFromDiscriminatorValue); } },
+                { "postApprovalDetails", n => { PostApprovalDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequestPostApprovalDetails>(global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequestPostApprovalDetails.CreateFromDiscriminatorValue); } },
                 { "scheduleDate", n => { ScheduleDate = n.GetStringValue(); } },
                 { "scheduleTimeUpdated", n => { ScheduleTimeUpdated = n.GetBoolValue(); } },
-                { "status", n => { Status = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequest_status>(global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequest_status.CreateFromDiscriminatorValue); } },
+                { "status", n => { Status = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequestStatusProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequestStatusProperty.CreateFromDiscriminatorValue); } },
                 { "summary", n => { Summary = n.GetStringValue(); } },
                 { "tags", n => { Tags = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "tiktokPostDetails", n => { TiktokPostDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequest_tiktokPostDetails>(global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequest_tiktokPostDetails.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequest_type>(global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequest_type.CreateFromDiscriminatorValue); } },
+                { "tiktokPostDetails", n => { TiktokPostDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequestTiktokPostDetails>(global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequestTiktokPostDetails.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequestTypeProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequestTypeProperty.CreateFromDiscriminatorValue); } },
                 { "userId", n => { UserId = n.GetStringValue(); } },
             };
         }
@@ -190,17 +190,17 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("categoryId", CategoryId);
             writer.WriteStringValue("createdBy", CreatedBy);
             writer.WriteStringValue("followUpComment", FollowUpComment);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequest_gmbPostDetails>("gmbPostDetails", GmbPostDetails);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequestGmbPostDetails>("gmbPostDetails", GmbPostDetails);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.PostMediaSchema>("media", Media);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequest_ogTagsDetails>("ogTagsDetails", OgTagsDetails);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequest_postApprovalDetails>("postApprovalDetails", PostApprovalDetails);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequestOgTagsDetails>("ogTagsDetails", OgTagsDetails);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequestPostApprovalDetails>("postApprovalDetails", PostApprovalDetails);
             writer.WriteStringValue("scheduleDate", ScheduleDate);
             writer.WriteBoolValue("scheduleTimeUpdated", ScheduleTimeUpdated);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequest_status>("status", Status);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequestStatusProperty>("status", Status);
             writer.WriteStringValue("summary", Summary);
             writer.WriteCollectionOfPrimitiveValues<string>("tags", Tags);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequest_tiktokPostDetails>("tiktokPostDetails", TiktokPostDetails);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequest_type>("type", Type);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequestTiktokPostDetails>("tiktokPostDetails", TiktokPostDetails);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequestTypeProperty>("type", Type);
             writer.WriteStringValue("userId", UserId);
             writer.WriteAdditionalData(AdditionalData);
         }

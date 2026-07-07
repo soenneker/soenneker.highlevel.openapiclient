@@ -23,7 +23,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string AltId { get; set; }
 #endif
         /// <summary>The altType property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.FulfillmentSchema_altType? AltType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.FulfillmentSchemaAltType? AltType { get; set; }
         /// <summary>created at</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -90,7 +90,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "altId", n => { AltId = n.GetStringValue(); } },
-                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.FulfillmentSchema_altType>(); } },
+                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.FulfillmentSchemaAltType>(); } },
                 { "createdAt", n => { CreatedAt = n.GetStringValue(); } },
                 { "_id", n => { Id = n.GetStringValue(); } },
                 { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.FulfilledItem>(global::Soenneker.HighLevel.OpenApiClient.Models.FulfilledItem.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -106,7 +106,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("altId", AltId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.FulfillmentSchema_altType>("altType", AltType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.FulfillmentSchemaAltType>("altType", AltType);
             writer.WriteStringValue("createdAt", CreatedAt);
             writer.WriteStringValue("_id", Id);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.FulfilledItem>("items", Items);

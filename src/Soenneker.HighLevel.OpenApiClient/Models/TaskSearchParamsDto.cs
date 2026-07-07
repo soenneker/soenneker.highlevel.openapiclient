@@ -58,6 +58,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public TaskSearchParamsDto()
         {
             AdditionalData = new Dictionary<string, object>();
+            Limit = 25;
+            Skip = 0;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

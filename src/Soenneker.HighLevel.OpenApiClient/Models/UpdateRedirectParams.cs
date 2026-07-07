@@ -13,7 +13,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning restore CS1591
     {
         /// <summary>The action property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateRedirectParams_action? Action { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateRedirectParamsAction? Action { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The locationId property</summary>
@@ -57,7 +57,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "action", n => { Action = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateRedirectParams_action>(); } },
+                { "action", n => { Action = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateRedirectParamsAction>(); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
                 { "target", n => { Target = n.GetStringValue(); } },
             };
@@ -69,7 +69,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateRedirectParams_action>("action", Action);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateRedirectParamsAction>("action", Action);
             writer.WriteStringValue("locationId", LocationId);
             writer.WriteStringValue("target", Target);
             writer.WriteAdditionalData(AdditionalData);

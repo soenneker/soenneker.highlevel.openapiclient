@@ -23,11 +23,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string AltId { get; set; }
 #endif
         /// <summary>The altType property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceFromEstimateDto_altType? AltType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceFromEstimateDtoAltType? AltType { get; set; }
         /// <summary>Mark Estimate as Invoiced</summary>
         public bool? MarkAsInvoiced { get; set; }
         /// <summary>Version of the update request</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceFromEstimateDto_version? Version { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceFromEstimateDtoVersion? Version { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceFromEstimateDto"/> and sets the default values.
         /// </summary>
@@ -54,9 +54,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "altId", n => { AltId = n.GetStringValue(); } },
-                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceFromEstimateDto_altType>(); } },
+                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceFromEstimateDtoAltType>(); } },
                 { "markAsInvoiced", n => { MarkAsInvoiced = n.GetBoolValue(); } },
-                { "version", n => { Version = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceFromEstimateDto_version>(); } },
+                { "version", n => { Version = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceFromEstimateDtoVersion>(); } },
             };
         }
         /// <summary>
@@ -67,9 +67,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("altId", AltId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceFromEstimateDto_altType>("altType", AltType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceFromEstimateDtoAltType>("altType", AltType);
             writer.WriteBoolValue("markAsInvoiced", MarkAsInvoiced);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceFromEstimateDto_version>("version", Version);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceFromEstimateDtoVersion>("version", Version);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

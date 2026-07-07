@@ -55,7 +55,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string Locality { get; set; }
 #endif
         /// <summary>Type of phone number</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PurchasePhoneNumberBodyDto_numberType? NumberType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PurchasePhoneNumberBodyDtoNumberType? NumberType { get; set; }
         /// <summary>The phone number to purchase</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -104,7 +104,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "countryCode", n => { CountryCode = n.GetStringValue(); } },
                 { "fingerprintId", n => { FingerprintId = n.GetStringValue(); } },
                 { "locality", n => { Locality = n.GetStringValue(); } },
-                { "numberType", n => { NumberType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PurchasePhoneNumberBodyDto_numberType>(); } },
+                { "numberType", n => { NumberType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PurchasePhoneNumberBodyDtoNumberType>(); } },
                 { "phoneNumber", n => { PhoneNumber = n.GetStringValue(); } },
                 { "region", n => { Region = n.GetStringValue(); } },
                 { "skipLocationKYC", n => { SkipLocationKYC = n.GetBoolValue(); } },
@@ -122,7 +122,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("countryCode", CountryCode);
             writer.WriteStringValue("fingerprintId", FingerprintId);
             writer.WriteStringValue("locality", Locality);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PurchasePhoneNumberBodyDto_numberType>("numberType", NumberType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PurchasePhoneNumberBodyDtoNumberType>("numberType", NumberType);
             writer.WriteStringValue("phoneNumber", PhoneNumber);
             writer.WriteStringValue("region", Region);
             writer.WriteBoolValue("skipLocationKYC", SkipLocationKYC);

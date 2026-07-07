@@ -21,10 +21,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Icon information for the menu item</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenuSchema_icon? Icon { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenuSchemaIcon? Icon { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenuSchema_icon Icon { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenuSchemaIcon Icon { get; set; }
 #endif
         /// <summary>Unique identifier for the custom menu</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -43,7 +43,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public List<string> Locations { get; set; }
 #endif
         /// <summary>Mode for opening the menu link</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenuSchema_openMode? OpenMode { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenuSchemaOpenMode? OpenMode { get; set; }
         /// <summary>Order of the custom menu</summary>
         public double? Order { get; set; }
         /// <summary>Filter to show only agency-level menu links. When omitted, fetches both agency and sub-account menu links. Ignored if locationId is provided</summary>
@@ -69,7 +69,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string Url { get; set; }
 #endif
         /// <summary>Which user-roles should the menu be accessible to?</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenuSchema_userRole? UserRole { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenuSchemaUserRole? UserRole { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenuSchema"/> and sets the default values.
         /// </summary>
@@ -97,17 +97,17 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             {
                 { "allowCamera", n => { AllowCamera = n.GetBoolValue(); } },
                 { "allowMicrophone", n => { AllowMicrophone = n.GetBoolValue(); } },
-                { "icon", n => { Icon = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenuSchema_icon>(global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenuSchema_icon.CreateFromDiscriminatorValue); } },
+                { "icon", n => { Icon = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenuSchemaIcon>(global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenuSchemaIcon.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "locations", n => { Locations = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "openMode", n => { OpenMode = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenuSchema_openMode>(); } },
+                { "openMode", n => { OpenMode = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenuSchemaOpenMode>(); } },
                 { "order", n => { Order = n.GetDoubleValue(); } },
                 { "showOnCompany", n => { ShowOnCompany = n.GetBoolValue(); } },
                 { "showOnLocation", n => { ShowOnLocation = n.GetBoolValue(); } },
                 { "showToAllLocations", n => { ShowToAllLocations = n.GetBoolValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
-                { "userRole", n => { UserRole = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenuSchema_userRole>(); } },
+                { "userRole", n => { UserRole = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenuSchemaUserRole>(); } },
             };
         }
         /// <summary>
@@ -119,17 +119,17 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("allowCamera", AllowCamera);
             writer.WriteBoolValue("allowMicrophone", AllowMicrophone);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenuSchema_icon>("icon", Icon);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenuSchemaIcon>("icon", Icon);
             writer.WriteStringValue("id", Id);
             writer.WriteCollectionOfPrimitiveValues<string>("locations", Locations);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenuSchema_openMode>("openMode", OpenMode);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenuSchemaOpenMode>("openMode", OpenMode);
             writer.WriteDoubleValue("order", Order);
             writer.WriteBoolValue("showOnCompany", ShowOnCompany);
             writer.WriteBoolValue("showOnLocation", ShowOnLocation);
             writer.WriteBoolValue("showToAllLocations", ShowToAllLocations);
             writer.WriteStringValue("title", Title);
             writer.WriteStringValue("url", Url);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenuSchema_userRole>("userRole", UserRole);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenuSchemaUserRole>("userRole", UserRole);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

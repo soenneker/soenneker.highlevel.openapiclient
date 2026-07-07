@@ -17,10 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Conversation data of the provided conversation ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetConversationSuccessfulResponse_conversation? Conversation { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetConversationSuccessfulResponseConversation? Conversation { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetConversationSuccessfulResponse_conversation Conversation { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetConversationSuccessfulResponseConversation Conversation { get; set; }
 #endif
         /// <summary>Boolean value as the API response.</summary>
         public bool? Success { get; set; }
@@ -49,7 +49,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "conversation", n => { Conversation = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetConversationSuccessfulResponse_conversation>(global::Soenneker.HighLevel.OpenApiClient.Models.GetConversationSuccessfulResponse_conversation.CreateFromDiscriminatorValue); } },
+                { "conversation", n => { Conversation = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetConversationSuccessfulResponseConversation>(global::Soenneker.HighLevel.OpenApiClient.Models.GetConversationSuccessfulResponseConversation.CreateFromDiscriminatorValue); } },
                 { "success", n => { Success = n.GetBoolValue(); } },
             };
         }
@@ -60,7 +60,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetConversationSuccessfulResponse_conversation>("conversation", Conversation);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetConversationSuccessfulResponseConversation>("conversation", Conversation);
             writer.WriteBoolValue("success", Success);
             writer.WriteAdditionalData(AdditionalData);
         }

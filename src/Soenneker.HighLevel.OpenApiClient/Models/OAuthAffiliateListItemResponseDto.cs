@@ -61,10 +61,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Created by audit info</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.OAuthAffiliateListItemResponseDto_createdBy? CreatedBy { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.OAuthAffiliateListItemResponseDtoCreatedByProperty? CreatedBy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.OAuthAffiliateListItemResponseDto_createdBy CreatedBy { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.OAuthAffiliateListItemResponseDtoCreatedByProperty CreatedBy { get; set; }
 #endif
         /// <summary>Currency code</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -131,10 +131,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Last updated by audit info</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.OAuthAffiliateListItemResponseDto_lastUpdatedBy? LastUpdatedBy { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.OAuthAffiliateListItemResponseDtoLastUpdatedByProperty? LastUpdatedBy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.OAuthAffiliateListItemResponseDto_lastUpdatedBy LastUpdatedBy { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.OAuthAffiliateListItemResponseDtoLastUpdatedByProperty LastUpdatedBy { get; set; }
 #endif
         /// <summary>Lead count</summary>
         public double? Lead { get; set; }
@@ -256,7 +256,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "clickCount", n => { ClickCount = n.GetDoubleValue(); } },
                 { "contactId", n => { ContactId = n.GetStringValue(); } },
                 { "createdAt", n => { CreatedAt = n.GetStringValue(); } },
-                { "createdBy", n => { CreatedBy = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.OAuthAffiliateListItemResponseDto_createdBy>(global::Soenneker.HighLevel.OpenApiClient.Models.OAuthAffiliateListItemResponseDto_createdBy.CreateFromDiscriminatorValue); } },
+                { "createdBy", n => { CreatedBy = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.OAuthAffiliateListItemResponseDtoCreatedByProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.OAuthAffiliateListItemResponseDtoCreatedByProperty.CreateFromDiscriminatorValue); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "customer", n => { Customer = n.GetDoubleValue(); } },
                 { "deleted", n => { Deleted = n.GetBoolValue(); } },
@@ -267,7 +267,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "_id", n => { Id = n.GetStringValue(); } },
                 { "instagramUrl", n => { InstagramUrl = n.GetStringValue(); } },
                 { "lastName", n => { LastName = n.GetStringValue(); } },
-                { "lastUpdatedBy", n => { LastUpdatedBy = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.OAuthAffiliateListItemResponseDto_lastUpdatedBy>(global::Soenneker.HighLevel.OpenApiClient.Models.OAuthAffiliateListItemResponseDto_lastUpdatedBy.CreateFromDiscriminatorValue); } },
+                { "lastUpdatedBy", n => { LastUpdatedBy = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.OAuthAffiliateListItemResponseDtoLastUpdatedByProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.OAuthAffiliateListItemResponseDtoLastUpdatedByProperty.CreateFromDiscriminatorValue); } },
                 { "lead", n => { Lead = n.GetDoubleValue(); } },
                 { "linkedInUrl", n => { LinkedInUrl = n.GetStringValue(); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
@@ -298,7 +298,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteDoubleValue("clickCount", ClickCount);
             writer.WriteStringValue("contactId", ContactId);
             writer.WriteStringValue("createdAt", CreatedAt);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.OAuthAffiliateListItemResponseDto_createdBy>("createdBy", CreatedBy);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.OAuthAffiliateListItemResponseDtoCreatedByProperty>("createdBy", CreatedBy);
             writer.WriteStringValue("currency", Currency);
             writer.WriteDoubleValue("customer", Customer);
             writer.WriteBoolValue("deleted", Deleted);
@@ -309,7 +309,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("_id", Id);
             writer.WriteStringValue("instagramUrl", InstagramUrl);
             writer.WriteStringValue("lastName", LastName);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.OAuthAffiliateListItemResponseDto_lastUpdatedBy>("lastUpdatedBy", LastUpdatedBy);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.OAuthAffiliateListItemResponseDtoLastUpdatedByProperty>("lastUpdatedBy", LastUpdatedBy);
             writer.WriteDoubleValue("lead", Lead);
             writer.WriteStringValue("linkedInUrl", LinkedInUrl);
             writer.WriteStringValue("locationId", LocationId);

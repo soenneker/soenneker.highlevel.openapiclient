@@ -17,7 +17,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Whether to play whisper message to the receiving party</summary>
         public bool? HearWhisperMessage { get; set; }
         /// <summary>Type of transfer destination (currently only &quot;number&quot; is supported)</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CallTransferActionParameters_transferToType? TransferToType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CallTransferActionParametersTransferToType? TransferToType { get; set; }
         /// <summary>Phone number to transfer to. Must start with +, include country code, contain only numbers, and be 11-16 characters long (e.g., +12345678901).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -68,7 +68,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "hearWhisperMessage", n => { HearWhisperMessage = n.GetBoolValue(); } },
-                { "transferToType", n => { TransferToType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CallTransferActionParameters_transferToType>(); } },
+                { "transferToType", n => { TransferToType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CallTransferActionParametersTransferToType>(); } },
                 { "transferToValue", n => { TransferToValue = n.GetStringValue(); } },
                 { "triggerMessage", n => { TriggerMessage = n.GetStringValue(); } },
                 { "triggerPrompt", n => { TriggerPrompt = n.GetStringValue(); } },
@@ -82,7 +82,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("hearWhisperMessage", HearWhisperMessage);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CallTransferActionParameters_transferToType>("transferToType", TransferToType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CallTransferActionParametersTransferToType>("transferToType", TransferToType);
             writer.WriteStringValue("transferToValue", TransferToValue);
             writer.WriteStringValue("triggerMessage", TriggerMessage);
             writer.WriteStringValue("triggerPrompt", TriggerPrompt);

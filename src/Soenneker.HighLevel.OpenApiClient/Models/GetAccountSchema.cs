@@ -35,10 +35,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The meta property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetAccountSchema_meta? Meta { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetAccountSchemaMetaProperty? Meta { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetAccountSchema_meta Meta { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetAccountSchemaMetaProperty Meta { get; set; }
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -108,7 +108,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "expire", n => { Expire = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "isExpired", n => { IsExpired = n.GetBoolValue(); } },
-                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetAccountSchema_meta>(global::Soenneker.HighLevel.OpenApiClient.Models.GetAccountSchema_meta.CreateFromDiscriminatorValue); } },
+                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetAccountSchemaMetaProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.GetAccountSchemaMetaProperty.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "oauthId", n => { OauthId = n.GetStringValue(); } },
                 { "platform", n => { Platform = n.GetStringValue(); } },
@@ -126,7 +126,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("expire", Expire);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("isExpired", IsExpired);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetAccountSchema_meta>("meta", Meta);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetAccountSchemaMetaProperty>("meta", Meta);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("oauthId", OauthId);
             writer.WriteStringValue("platform", Platform);

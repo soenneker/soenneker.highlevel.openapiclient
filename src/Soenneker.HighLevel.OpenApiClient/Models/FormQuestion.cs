@@ -39,7 +39,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public List<global::Soenneker.HighLevel.OpenApiClient.Models.FormQuestionOption> Options { get; set; }
 #endif
         /// <summary>Question input type — use a prefilled type for standard fields or CUSTOM / SHORT_ANSWER for freeform questions</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.FormQuestion_type? Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.FormQuestionType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.FormQuestion"/> and sets the default values.
         /// </summary>
@@ -68,7 +68,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "key", n => { Key = n.GetStringValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
                 { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.FormQuestionOption>(global::Soenneker.HighLevel.OpenApiClient.Models.FormQuestionOption.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.FormQuestion_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.FormQuestionType>(); } },
             };
         }
         /// <summary>
@@ -81,7 +81,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("key", Key);
             writer.WriteStringValue("label", Label);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.FormQuestionOption>("options", Options);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.FormQuestion_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.FormQuestionType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

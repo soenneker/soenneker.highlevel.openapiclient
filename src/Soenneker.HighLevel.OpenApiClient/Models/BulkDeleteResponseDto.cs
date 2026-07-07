@@ -25,10 +25,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Message and deleted count</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.BulkDeleteResponseDto_results? Results { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.BulkDeleteResponseDtoResults? Results { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.BulkDeleteResponseDto_results Results { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.BulkDeleteResponseDtoResults Results { get; set; }
 #endif
         /// <summary>Status Code</summary>
         public double? StatusCode { get; set; }
@@ -60,7 +60,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "message", n => { Message = n.GetStringValue(); } },
-                { "results", n => { Results = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BulkDeleteResponseDto_results>(global::Soenneker.HighLevel.OpenApiClient.Models.BulkDeleteResponseDto_results.CreateFromDiscriminatorValue); } },
+                { "results", n => { Results = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BulkDeleteResponseDtoResults>(global::Soenneker.HighLevel.OpenApiClient.Models.BulkDeleteResponseDtoResults.CreateFromDiscriminatorValue); } },
                 { "statusCode", n => { StatusCode = n.GetDoubleValue(); } },
                 { "success", n => { Success = n.GetBoolValue(); } },
             };
@@ -73,7 +73,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("message", Message);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BulkDeleteResponseDto_results>("results", Results);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BulkDeleteResponseDtoResults>("results", Results);
             writer.WriteDoubleValue("statusCode", StatusCode);
             writer.WriteBoolValue("success", Success);
             writer.WriteAdditionalData(AdditionalData);

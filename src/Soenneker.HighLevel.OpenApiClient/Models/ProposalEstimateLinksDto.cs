@@ -35,9 +35,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Document revision number</summary>
         public double? DocumentRevision { get; set; }
         /// <summary>Entity name that the recipient belongs to</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ProposalEstimateLinksDto_entityName? EntityName { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ProposalEstimateLinksDtoEntityName? EntityName { get; set; }
         /// <summary>Recipient category (recipient, cc, or bcc)</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ProposalEstimateLinksDto_recipientCategory? RecipientCategory { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ProposalEstimateLinksDtoRecipientCategory? RecipientCategory { get; set; }
         /// <summary>Recipient ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -83,8 +83,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "deleted", n => { Deleted = n.GetBoolValue(); } },
                 { "documentId", n => { DocumentId = n.GetStringValue(); } },
                 { "documentRevision", n => { DocumentRevision = n.GetDoubleValue(); } },
-                { "entityName", n => { EntityName = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProposalEstimateLinksDto_entityName>(); } },
-                { "recipientCategory", n => { RecipientCategory = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProposalEstimateLinksDto_recipientCategory>(); } },
+                { "entityName", n => { EntityName = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProposalEstimateLinksDtoEntityName>(); } },
+                { "recipientCategory", n => { RecipientCategory = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProposalEstimateLinksDtoRecipientCategory>(); } },
                 { "recipientId", n => { RecipientId = n.GetStringValue(); } },
                 { "referenceId", n => { ReferenceId = n.GetStringValue(); } },
             };
@@ -100,8 +100,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteBoolValue("deleted", Deleted);
             writer.WriteStringValue("documentId", DocumentId);
             writer.WriteDoubleValue("documentRevision", DocumentRevision);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProposalEstimateLinksDto_entityName>("entityName", EntityName);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProposalEstimateLinksDto_recipientCategory>("recipientCategory", RecipientCategory);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProposalEstimateLinksDtoEntityName>("entityName", EntityName);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProposalEstimateLinksDtoRecipientCategory>("recipientCategory", RecipientCategory);
             writer.WriteStringValue("recipientId", RecipientId);
             writer.WriteStringValue("referenceId", ReferenceId);
             writer.WriteAdditionalData(AdditionalData);

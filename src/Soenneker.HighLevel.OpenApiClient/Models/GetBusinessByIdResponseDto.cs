@@ -17,10 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Business Response</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetBusinessByIdResponseDto_business? Business { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetBusinessByIdResponseDtoBusiness? Business { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetBusinessByIdResponseDto_business Business { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetBusinessByIdResponseDtoBusiness Business { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GetBusinessByIdResponseDto"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "business", n => { Business = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetBusinessByIdResponseDto_business>(global::Soenneker.HighLevel.OpenApiClient.Models.GetBusinessByIdResponseDto_business.CreateFromDiscriminatorValue); } },
+                { "business", n => { Business = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetBusinessByIdResponseDtoBusiness>(global::Soenneker.HighLevel.OpenApiClient.Models.GetBusinessByIdResponseDtoBusiness.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetBusinessByIdResponseDto_business>("business", Business);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetBusinessByIdResponseDtoBusiness>("business", Business);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

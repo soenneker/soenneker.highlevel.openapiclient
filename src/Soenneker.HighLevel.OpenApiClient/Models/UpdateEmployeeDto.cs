@@ -27,10 +27,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Channels the agent can use.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateEmployeeDto_channels?>? Channels { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateEmployeeDtoChannelsItem?>? Channels { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateEmployeeDto_channels?> Channels { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateEmployeeDtoChannelsItem?> Channels { get; set; }
 #endif
         /// <summary>The goal of the agent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -59,7 +59,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public List<string> KnowledgeBaseIds { get; set; }
 #endif
         /// <summary>Mode of operation for the agent, required if primary is enabled.</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateEmployeeDto_mode? Mode { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateEmployeeDtoMode? Mode { get; set; }
         /// <summary>Name of the agent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -90,17 +90,20 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Duration of sleep period (required if sleepEnabled is true). Set to null for indefinite sleep. (max 2880 for minutes, 172800 for seconds, 48 for hours)</summary>
         public double? SleepTime { get; set; }
         /// <summary>Unit of sleep time - HOURS, MINUTES, or SECONDS (required if sleepEnabled is true). Set to null for indefinite sleep.</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateEmployeeDto_sleepTimeUnit? SleepTimeUnit { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateEmployeeDtoSleepTimeUnit? SleepTimeUnit { get; set; }
         /// <summary>Wait time before agent responds (max 5 for minutes, 300 for seconds).</summary>
         public double? WaitTime { get; set; }
         /// <summary>Unit for wait time - SECONDS or MINUTES</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateEmployeeDto_waitTimeUnit? WaitTimeUnit { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateEmployeeDtoWaitTimeUnit? WaitTimeUnit { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpdateEmployeeDto"/> and sets the default values.
         /// </summary>
         public UpdateEmployeeDto()
         {
             AdditionalData = new Dictionary<string, object>();
+            AutoPilotMaxMessages = 75;
+            RespondToAudio = false;
+            RespondToImages = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -122,12 +125,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             {
                 { "autoPilotMaxMessages", n => { AutoPilotMaxMessages = n.GetDoubleValue(); } },
                 { "businessName", n => { BusinessName = n.GetStringValue(); } },
-                { "channels", n => { Channels = n.GetCollectionOfEnumValues<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateEmployeeDto_channels>()?.AsList(); } },
+                { "channels", n => { Channels = n.GetCollectionOfEnumValues<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateEmployeeDtoChannelsItem>()?.AsList(); } },
                 { "goal", n => { Goal = n.GetStringValue(); } },
                 { "instructions", n => { Instructions = n.GetStringValue(); } },
                 { "isPrimary", n => { IsPrimary = n.GetBoolValue(); } },
                 { "knowledgeBaseIds", n => { KnowledgeBaseIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "mode", n => { Mode = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateEmployeeDto_mode>(); } },
+                { "mode", n => { Mode = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateEmployeeDtoMode>(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "personality", n => { Personality = n.GetStringValue(); } },
                 { "respondToAudio", n => { RespondToAudio = n.GetBoolValue(); } },
@@ -136,9 +139,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "sleepOnManualMessage", n => { SleepOnManualMessage = n.GetBoolValue(); } },
                 { "sleepOnWorkflowMessage", n => { SleepOnWorkflowMessage = n.GetBoolValue(); } },
                 { "sleepTime", n => { SleepTime = n.GetDoubleValue(); } },
-                { "sleepTimeUnit", n => { SleepTimeUnit = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateEmployeeDto_sleepTimeUnit>(); } },
+                { "sleepTimeUnit", n => { SleepTimeUnit = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateEmployeeDtoSleepTimeUnit>(); } },
                 { "waitTime", n => { WaitTime = n.GetDoubleValue(); } },
-                { "waitTimeUnit", n => { WaitTimeUnit = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateEmployeeDto_waitTimeUnit>(); } },
+                { "waitTimeUnit", n => { WaitTimeUnit = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateEmployeeDtoWaitTimeUnit>(); } },
             };
         }
         /// <summary>
@@ -150,12 +153,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDoubleValue("autoPilotMaxMessages", AutoPilotMaxMessages);
             writer.WriteStringValue("businessName", BusinessName);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateEmployeeDto_channels>("channels", Channels);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateEmployeeDtoChannelsItem>("channels", Channels);
             writer.WriteStringValue("goal", Goal);
             writer.WriteStringValue("instructions", Instructions);
             writer.WriteBoolValue("isPrimary", IsPrimary);
             writer.WriteCollectionOfPrimitiveValues<string>("knowledgeBaseIds", KnowledgeBaseIds);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateEmployeeDto_mode>("mode", Mode);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateEmployeeDtoMode>("mode", Mode);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("personality", Personality);
             writer.WriteBoolValue("respondToAudio", RespondToAudio);
@@ -164,9 +167,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteBoolValue("sleepOnManualMessage", SleepOnManualMessage);
             writer.WriteBoolValue("sleepOnWorkflowMessage", SleepOnWorkflowMessage);
             writer.WriteDoubleValue("sleepTime", SleepTime);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateEmployeeDto_sleepTimeUnit>("sleepTimeUnit", SleepTimeUnit);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateEmployeeDtoSleepTimeUnit>("sleepTimeUnit", SleepTimeUnit);
             writer.WriteDoubleValue("waitTime", WaitTime);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateEmployeeDto_waitTimeUnit>("waitTimeUnit", WaitTimeUnit);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateEmployeeDtoWaitTimeUnit>("waitTimeUnit", WaitTimeUnit);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

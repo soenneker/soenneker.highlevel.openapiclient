@@ -23,14 +23,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string AltId { get; set; }
 #endif
         /// <summary>Alt Type</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleInvoiceScheduleDto_altType? AltType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleInvoiceScheduleDtoAltType? AltType { get; set; }
         /// <summary>auto-payment configuration</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleInvoiceScheduleDto_autoPayment? AutoPayment { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleInvoiceScheduleDtoAutoPayment? AutoPayment { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleInvoiceScheduleDto_autoPayment AutoPayment { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleInvoiceScheduleDtoAutoPayment AutoPayment { get; set; }
 #endif
         /// <summary>The liveMode property</summary>
         public bool? LiveMode { get; set; }
@@ -60,8 +60,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "altId", n => { AltId = n.GetStringValue(); } },
-                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleInvoiceScheduleDto_altType>(); } },
-                { "autoPayment", n => { AutoPayment = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleInvoiceScheduleDto_autoPayment>(global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleInvoiceScheduleDto_autoPayment.CreateFromDiscriminatorValue); } },
+                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleInvoiceScheduleDtoAltType>(); } },
+                { "autoPayment", n => { AutoPayment = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleInvoiceScheduleDtoAutoPayment>(global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleInvoiceScheduleDtoAutoPayment.CreateFromDiscriminatorValue); } },
                 { "liveMode", n => { LiveMode = n.GetBoolValue(); } },
             };
         }
@@ -73,8 +73,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("altId", AltId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleInvoiceScheduleDto_altType>("altType", AltType);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleInvoiceScheduleDto_autoPayment>("autoPayment", AutoPayment);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleInvoiceScheduleDtoAltType>("altType", AltType);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleInvoiceScheduleDtoAutoPayment>("autoPayment", AutoPayment);
             writer.WriteBoolValue("liveMode", LiveMode);
             writer.WriteAdditionalData(AdditionalData);
         }

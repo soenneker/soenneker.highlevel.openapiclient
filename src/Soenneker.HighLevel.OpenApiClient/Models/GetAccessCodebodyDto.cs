@@ -39,7 +39,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string Code { get; set; }
 #endif
         /// <summary>The grant_type property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetAccessCodebodyDto_grant_type? GrantType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetAccessCodebodyDtoGrantType? GrantType { get; set; }
         /// <summary>The redirect URI for your application</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -57,7 +57,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string RefreshToken { get; set; }
 #endif
         /// <summary>The type of token to be requested</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetAccessCodebodyDto_user_type? UserType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetAccessCodebodyDtoUserType? UserType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GetAccessCodebodyDto"/> and sets the default values.
         /// </summary>
@@ -86,10 +86,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "client_id", n => { ClientId = n.GetStringValue(); } },
                 { "client_secret", n => { ClientSecret = n.GetStringValue(); } },
                 { "code", n => { Code = n.GetStringValue(); } },
-                { "grant_type", n => { GrantType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetAccessCodebodyDto_grant_type>(); } },
+                { "grant_type", n => { GrantType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetAccessCodebodyDtoGrantType>(); } },
                 { "redirect_uri", n => { RedirectUri = n.GetStringValue(); } },
                 { "refresh_token", n => { RefreshToken = n.GetStringValue(); } },
-                { "user_type", n => { UserType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetAccessCodebodyDto_user_type>(); } },
+                { "user_type", n => { UserType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetAccessCodebodyDtoUserType>(); } },
             };
         }
         /// <summary>
@@ -102,10 +102,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("client_id", ClientId);
             writer.WriteStringValue("client_secret", ClientSecret);
             writer.WriteStringValue("code", Code);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetAccessCodebodyDto_grant_type>("grant_type", GrantType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetAccessCodebodyDtoGrantType>("grant_type", GrantType);
             writer.WriteStringValue("redirect_uri", RedirectUri);
             writer.WriteStringValue("refresh_token", RefreshToken);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetAccessCodebodyDto_user_type>("user_type", UserType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetAccessCodebodyDtoUserType>("user_type", UserType);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

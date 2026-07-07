@@ -29,7 +29,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>&quot;Time duration before followup (max: 60 minutes, 24 hours, or 180 days depending on unit)&quot;</summary>
         public double? FollowupTime { get; set; }
         /// <summary>Time unit for followup delay</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.FollowupSequence_followupTimeUnit? FollowupTimeUnit { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.FollowupSequenceFollowupTimeUnit? FollowupTimeUnit { get; set; }
         /// <summary>Unique identifier for this followup step</summary>
         public double? Id { get; set; }
         /// <summary>Whether to trigger a workflow during this followup</summary>
@@ -48,6 +48,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public FollowupSequence()
         {
             AdditionalData = new Dictionary<string, object>();
+            AiEnabledMessage = true;
+            TriggerWorkflow = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -71,7 +73,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "contactRequested", n => { ContactRequested = n.GetBoolValue(); } },
                 { "customMessage", n => { CustomMessage = n.GetStringValue(); } },
                 { "followupTime", n => { FollowupTime = n.GetDoubleValue(); } },
-                { "followupTimeUnit", n => { FollowupTimeUnit = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.FollowupSequence_followupTimeUnit>(); } },
+                { "followupTimeUnit", n => { FollowupTimeUnit = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.FollowupSequenceFollowupTimeUnit>(); } },
                 { "id", n => { Id = n.GetDoubleValue(); } },
                 { "triggerWorkflow", n => { TriggerWorkflow = n.GetBoolValue(); } },
                 { "workflowId", n => { WorkflowId = n.GetStringValue(); } },
@@ -88,7 +90,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteBoolValue("contactRequested", ContactRequested);
             writer.WriteStringValue("customMessage", CustomMessage);
             writer.WriteDoubleValue("followupTime", FollowupTime);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.FollowupSequence_followupTimeUnit>("followupTimeUnit", FollowupTimeUnit);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.FollowupSequenceFollowupTimeUnit>("followupTimeUnit", FollowupTimeUnit);
             writer.WriteDoubleValue("id", Id);
             writer.WriteBoolValue("triggerWorkflow", TriggerWorkflow);
             writer.WriteStringValue("workflowId", WorkflowId);

@@ -35,7 +35,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #endif
         /// <summary>🚨 Deprecated! Use `locationConfigurations.kind` instead.</summary>
         [Obsolete("")]
-        public global::Soenneker.HighLevel.OpenApiClient.Models.TeamMember_meetingLocationType? MeetingLocationType { get; private set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.TeamMemberMeetingLocationType? MeetingLocationType { get; private set; }
         /// <summary>The priority property</summary>
         public double? Priority { get; set; }
         /// <summary>The userId property</summary>
@@ -52,7 +52,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public TeamMember()
         {
             AdditionalData = new Dictionary<string, object>();
-            MeetingLocationType = global::Soenneker.HighLevel.OpenApiClient.Models.TeamMember_meetingLocationType.Custom;
+            Priority = 0.5;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -75,7 +75,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "isPrimary", n => { IsPrimary = n.GetBoolValue(); } },
                 { "locationConfigurations", n => { LocationConfigurations = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.LocationConfiguration>(global::Soenneker.HighLevel.OpenApiClient.Models.LocationConfiguration.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "meetingLocation", n => { MeetingLocation = n.GetStringValue(); } },
-                { "meetingLocationType", n => { MeetingLocationType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.TeamMember_meetingLocationType>(); } },
+                { "meetingLocationType", n => { MeetingLocationType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.TeamMemberMeetingLocationType>(); } },
                 { "priority", n => { Priority = n.GetDoubleValue(); } },
                 { "userId", n => { UserId = n.GetStringValue(); } },
             };

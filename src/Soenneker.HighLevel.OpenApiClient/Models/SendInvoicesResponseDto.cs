@@ -17,10 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The emailData property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoicesResponseDto_emailData? EmailData { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoicesResponseDtoEmailDataProperty? EmailData { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoicesResponseDto_emailData EmailData { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoicesResponseDtoEmailDataProperty EmailData { get; set; }
 #endif
         /// <summary>The invoice property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -33,10 +33,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The smsData property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoicesResponseDto_smsData? SmsData { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoicesResponseDtoSmsDataProperty? SmsData { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoicesResponseDto_smsData SmsData { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoicesResponseDtoSmsDataProperty SmsData { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoicesResponseDto"/> and sets the default values.
@@ -63,9 +63,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "emailData", n => { EmailData = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoicesResponseDto_emailData>(global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoicesResponseDto_emailData.CreateFromDiscriminatorValue); } },
+                { "emailData", n => { EmailData = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoicesResponseDtoEmailDataProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoicesResponseDtoEmailDataProperty.CreateFromDiscriminatorValue); } },
                 { "invoice", n => { Invoice = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DefaultInvoiceResponseDto>(global::Soenneker.HighLevel.OpenApiClient.Models.DefaultInvoiceResponseDto.CreateFromDiscriminatorValue); } },
-                { "smsData", n => { SmsData = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoicesResponseDto_smsData>(global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoicesResponseDto_smsData.CreateFromDiscriminatorValue); } },
+                { "smsData", n => { SmsData = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoicesResponseDtoSmsDataProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoicesResponseDtoSmsDataProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -75,9 +75,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoicesResponseDto_emailData>("emailData", EmailData);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoicesResponseDtoEmailDataProperty>("emailData", EmailData);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DefaultInvoiceResponseDto>("invoice", Invoice);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoicesResponseDto_smsData>("smsData", SmsData);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoicesResponseDtoSmsDataProperty>("smsData", SmsData);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

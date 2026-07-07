@@ -19,10 +19,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Updated / New Opportunity</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunitySuccessfulResponseDto_opportunity? Opportunity { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunitySuccessfulResponseDtoOpportunityProperty? Opportunity { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunitySuccessfulResponseDto_opportunity Opportunity { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunitySuccessfulResponseDtoOpportunityProperty Opportunity { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunitySuccessfulResponseDto"/> and sets the default values.
@@ -50,7 +50,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "new", n => { New = n.GetBoolValue(); } },
-                { "opportunity", n => { Opportunity = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunitySuccessfulResponseDto_opportunity>(global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunitySuccessfulResponseDto_opportunity.CreateFromDiscriminatorValue); } },
+                { "opportunity", n => { Opportunity = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunitySuccessfulResponseDtoOpportunityProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunitySuccessfulResponseDtoOpportunityProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("new", New);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunitySuccessfulResponseDto_opportunity>("opportunity", Opportunity);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunitySuccessfulResponseDtoOpportunityProperty>("opportunity", Opportunity);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -15,10 +15,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Action payload for the bulk enable SaaS operation</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.BulkEnableSaasRequestDto_actionPayload? ActionPayload { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.BulkEnableSaasRequestDtoActionPayload? ActionPayload { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.BulkEnableSaasRequestDto_actionPayload ActionPayload { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.BulkEnableSaasRequestDtoActionPayload ActionPayload { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -57,7 +57,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "actionPayload", n => { ActionPayload = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BulkEnableSaasRequestDto_actionPayload>(global::Soenneker.HighLevel.OpenApiClient.Models.BulkEnableSaasRequestDto_actionPayload.CreateFromDiscriminatorValue); } },
+                { "actionPayload", n => { ActionPayload = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BulkEnableSaasRequestDtoActionPayload>(global::Soenneker.HighLevel.OpenApiClient.Models.BulkEnableSaasRequestDtoActionPayload.CreateFromDiscriminatorValue); } },
                 { "isSaaSV2", n => { IsSaaSV2 = n.GetBoolValue(); } },
                 { "locationIds", n => { LocationIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
@@ -69,7 +69,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BulkEnableSaasRequestDto_actionPayload>("actionPayload", ActionPayload);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BulkEnableSaasRequestDtoActionPayload>("actionPayload", ActionPayload);
             writer.WriteBoolValue("isSaaSV2", IsSaaSV2);
             writer.WriteCollectionOfPrimitiveValues<string>("locationIds", LocationIds);
             writer.WriteAdditionalData(AdditionalData);

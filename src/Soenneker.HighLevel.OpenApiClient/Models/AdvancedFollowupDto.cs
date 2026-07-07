@@ -27,13 +27,13 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Additional settings for followup behavior</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AdvancedFollowupDto_followupSettings? FollowupSettings { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AdvancedFollowupDtoFollowupSettings? FollowupSettings { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AdvancedFollowupDto_followupSettings FollowupSettings { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AdvancedFollowupDtoFollowupSettings FollowupSettings { get; set; }
 #endif
         /// <summary>ID of the followup scenario</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AdvancedFollowupDto_scenarioId? ScenarioId { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AdvancedFollowupDtoScenarioId? ScenarioId { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.AdvancedFollowupDto"/> and sets the default values.
         /// </summary>
@@ -61,8 +61,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             {
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
                 { "followupSequence", n => { FollowupSequence = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.FollowupSequence>(global::Soenneker.HighLevel.OpenApiClient.Models.FollowupSequence.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "followupSettings", n => { FollowupSettings = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AdvancedFollowupDto_followupSettings>(global::Soenneker.HighLevel.OpenApiClient.Models.AdvancedFollowupDto_followupSettings.CreateFromDiscriminatorValue); } },
-                { "scenarioId", n => { ScenarioId = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.AdvancedFollowupDto_scenarioId>(); } },
+                { "followupSettings", n => { FollowupSettings = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AdvancedFollowupDtoFollowupSettings>(global::Soenneker.HighLevel.OpenApiClient.Models.AdvancedFollowupDtoFollowupSettings.CreateFromDiscriminatorValue); } },
+                { "scenarioId", n => { ScenarioId = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.AdvancedFollowupDtoScenarioId>(); } },
             };
         }
         /// <summary>
@@ -74,8 +74,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("enabled", Enabled);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.FollowupSequence>("followupSequence", FollowupSequence);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AdvancedFollowupDto_followupSettings>("followupSettings", FollowupSettings);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.AdvancedFollowupDto_scenarioId>("scenarioId", ScenarioId);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AdvancedFollowupDtoFollowupSettings>("followupSettings", FollowupSettings);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.AdvancedFollowupDtoScenarioId>("scenarioId", ScenarioId);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

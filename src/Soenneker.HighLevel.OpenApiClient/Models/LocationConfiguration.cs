@@ -15,7 +15,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Type of meeting location. zoom_conference/google_conference/ms_teams_conference is not supported in event calendar type</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LocationConfiguration_kind? Kind { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LocationConfigurationKind? Kind { get; set; }
         /// <summary>Address for meeting location. Not applicable on &quot;zoom_conference&quot;, &quot;google_conference&quot; and &quot;ms_teams_conference&quot; kind</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -49,7 +49,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "kind", n => { Kind = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LocationConfiguration_kind>(); } },
+                { "kind", n => { Kind = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LocationConfigurationKind>(); } },
                 { "location", n => { Location = n.GetStringValue(); } },
             };
         }
@@ -60,7 +60,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LocationConfiguration_kind>("kind", Kind);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LocationConfigurationKind>("kind", Kind);
             writer.WriteStringValue("location", Location);
             writer.WriteAdditionalData(AdditionalData);
         }

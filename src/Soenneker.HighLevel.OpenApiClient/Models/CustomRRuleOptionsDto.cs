@@ -19,7 +19,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>-1, 1, 2, 3, ..., 27, 28</summary>
         public double? DayOfMonth { get; set; }
         /// <summary>The dayOfWeek property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomRRuleOptionsDto_dayOfWeek? DayOfWeek { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomRRuleOptionsDtoDayOfWeek? DayOfWeek { get; set; }
         /// <summary>Execute task number of days before</summary>
         public double? DaysBefore { get; set; }
         /// <summary>End date in YYYY-MM-DD format</summary>
@@ -49,9 +49,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The interval property</summary>
         public double? Interval { get; set; }
         /// <summary>The intervalType property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomRRuleOptionsDto_intervalType? IntervalType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomRRuleOptionsDtoIntervalType? IntervalType { get; set; }
         /// <summary>The monthOfYear property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomRRuleOptionsDto_monthOfYear? MonthOfYear { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomRRuleOptionsDtoMonthOfYear? MonthOfYear { get; set; }
         /// <summary>-1, 1, 2, 3, 4</summary>
         public double? NumOfWeek { get; set; }
         /// <summary>Start date in YYYY-MM-DD format</summary>
@@ -99,14 +99,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             {
                 { "count", n => { Count = n.GetDoubleValue(); } },
                 { "dayOfMonth", n => { DayOfMonth = n.GetDoubleValue(); } },
-                { "dayOfWeek", n => { DayOfWeek = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomRRuleOptionsDto_dayOfWeek>(); } },
+                { "dayOfWeek", n => { DayOfWeek = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomRRuleOptionsDtoDayOfWeek>(); } },
                 { "daysBefore", n => { DaysBefore = n.GetDoubleValue(); } },
                 { "endDate", n => { EndDate = n.GetStringValue(); } },
                 { "endTime", n => { EndTime = n.GetStringValue(); } },
                 { "endType", n => { EndType = n.GetStringValue(); } },
                 { "interval", n => { Interval = n.GetDoubleValue(); } },
-                { "intervalType", n => { IntervalType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomRRuleOptionsDto_intervalType>(); } },
-                { "monthOfYear", n => { MonthOfYear = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomRRuleOptionsDto_monthOfYear>(); } },
+                { "intervalType", n => { IntervalType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomRRuleOptionsDtoIntervalType>(); } },
+                { "monthOfYear", n => { MonthOfYear = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomRRuleOptionsDtoMonthOfYear>(); } },
                 { "numOfWeek", n => { NumOfWeek = n.GetDoubleValue(); } },
                 { "startDate", n => { StartDate = n.GetStringValue(); } },
                 { "startTime", n => { StartTime = n.GetStringValue(); } },
@@ -122,14 +122,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDoubleValue("count", Count);
             writer.WriteDoubleValue("dayOfMonth", DayOfMonth);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomRRuleOptionsDto_dayOfWeek>("dayOfWeek", DayOfWeek);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomRRuleOptionsDtoDayOfWeek>("dayOfWeek", DayOfWeek);
             writer.WriteDoubleValue("daysBefore", DaysBefore);
             writer.WriteStringValue("endDate", EndDate);
             writer.WriteStringValue("endTime", EndTime);
             writer.WriteStringValue("endType", EndType);
             writer.WriteDoubleValue("interval", Interval);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomRRuleOptionsDto_intervalType>("intervalType", IntervalType);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomRRuleOptionsDto_monthOfYear>("monthOfYear", MonthOfYear);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomRRuleOptionsDtoIntervalType>("intervalType", IntervalType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomRRuleOptionsDtoMonthOfYear>("monthOfYear", MonthOfYear);
             writer.WriteDoubleValue("numOfWeek", NumOfWeek);
             writer.WriteStringValue("startDate", StartDate);
             writer.WriteStringValue("startTime", StartTime);

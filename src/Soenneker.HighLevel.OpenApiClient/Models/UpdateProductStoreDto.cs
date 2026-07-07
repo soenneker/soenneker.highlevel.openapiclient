@@ -13,7 +13,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning restore CS1591
     {
         /// <summary>Action to include or exclude the product from the store</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductStoreDto_action? Action { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductStoreDtoAction? Action { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Location Id or Agency Id</summary>
@@ -25,7 +25,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string AltId { get; set; }
 #endif
         /// <summary>The altType property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductStoreDto_altType? AltType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductStoreDtoAltType? AltType { get; set; }
         /// <summary>Array of product IDs</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -59,9 +59,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "action", n => { Action = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductStoreDto_action>(); } },
+                { "action", n => { Action = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductStoreDtoAction>(); } },
                 { "altId", n => { AltId = n.GetStringValue(); } },
-                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductStoreDto_altType>(); } },
+                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductStoreDtoAltType>(); } },
                 { "productIds", n => { ProductIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
         }
@@ -72,9 +72,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductStoreDto_action>("action", Action);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductStoreDtoAction>("action", Action);
             writer.WriteStringValue("altId", AltId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductStoreDto_altType>("altType", AltType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductStoreDtoAltType>("altType", AltType);
             writer.WriteCollectionOfPrimitiveValues<string>("productIds", ProductIds);
             writer.WriteAdditionalData(AdditionalData);
         }

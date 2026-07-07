@@ -23,7 +23,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string AltId { get; set; }
 #endif
         /// <summary>The altType property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDto_altType? AltType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoAltType? AltType { get; set; }
         /// <summary>Attachments</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -35,10 +35,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Auto-invoice settings for the estimate</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDto_autoInvoice? AutoInvoice { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoAutoInvoice? AutoInvoice { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDto_autoInvoice AutoInvoice { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoAutoInvoice AutoInvoice { get; set; }
 #endif
         /// <summary>Indicates if automatic taxes were calculated</summary>
         public bool? AutomaticTaxesCalculated { get; set; }
@@ -47,10 +47,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Business details associated with the estimate</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDto_businessDetails? BusinessDetails { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoBusinessDetails? BusinessDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDto_businessDetails BusinessDetails { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoBusinessDetails BusinessDetails { get; set; }
 #endif
         /// <summary>Company identifier associated with the estimate</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -63,10 +63,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Contact details for the estimate</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDto_contactDetails? ContactDetails { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoContactDetails? ContactDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDto_contactDetails ContactDetails { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoContactDetails ContactDetails { get; set; }
 #endif
         /// <summary>Timestamp when created</summary>
         public DateTimeOffset? CreatedAt { get; set; }
@@ -83,10 +83,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Discount details for the estimate template</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDto_discount? Discount { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoDiscount? Discount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDto_discount Discount { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoDiscount Discount { get; set; }
 #endif
         /// <summary>History of actions taken on the estimate</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -109,10 +109,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Frequency settings for recurring estimates</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDto_frequencySettings? FrequencySettings { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoFrequencySettings? FrequencySettings { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDto_frequencySettings FrequencySettings { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoFrequencySettings FrequencySettings { get; set; }
 #endif
         /// <summary>Unique identifier</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -139,10 +139,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Additional metadata associated with the estimate</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDto_meta? Meta { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoMetaProperty? Meta { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDto_meta Meta { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoMetaProperty Meta { get; set; }
 #endif
         /// <summary>Name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -163,10 +163,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Recipient details for the estimate</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDto_sentTo? SentTo { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoSentTo? SentTo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDto_sentTo SentTo { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoSentTo SentTo { get; set; }
 #endif
         /// <summary>Terms and conditions for the estimate, supports HTML markup</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -234,31 +234,31 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "altId", n => { AltId = n.GetStringValue(); } },
-                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDto_altType>(); } },
+                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoAltType>(); } },
                 { "attachments", n => { Attachments = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.AttachmentsDto>(global::Soenneker.HighLevel.OpenApiClient.Models.AttachmentsDto.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "autoInvoice", n => { AutoInvoice = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDto_autoInvoice>(global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDto_autoInvoice.CreateFromDiscriminatorValue); } },
+                { "autoInvoice", n => { AutoInvoice = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoAutoInvoice>(global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoAutoInvoice.CreateFromDiscriminatorValue); } },
                 { "automaticTaxesCalculated", n => { AutomaticTaxesCalculated = n.GetBoolValue(); } },
                 { "automaticTaxesEnabled", n => { AutomaticTaxesEnabled = n.GetBoolValue(); } },
-                { "businessDetails", n => { BusinessDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDto_businessDetails>(global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDto_businessDetails.CreateFromDiscriminatorValue); } },
+                { "businessDetails", n => { BusinessDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoBusinessDetails>(global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoBusinessDetails.CreateFromDiscriminatorValue); } },
                 { "companyId", n => { CompanyId = n.GetStringValue(); } },
-                { "contactDetails", n => { ContactDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDto_contactDetails>(global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDto_contactDetails.CreateFromDiscriminatorValue); } },
+                { "contactDetails", n => { ContactDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoContactDetails>(global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoContactDetails.CreateFromDiscriminatorValue); } },
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "deleted", n => { Deleted = n.GetBoolValue(); } },
-                { "discount", n => { Discount = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDto_discount>(global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDto_discount.CreateFromDiscriminatorValue); } },
+                { "discount", n => { Discount = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoDiscount>(global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoDiscount.CreateFromDiscriminatorValue); } },
                 { "estimateActionHistory", n => { EstimateActionHistory = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "estimateNumberPrefix", n => { EstimateNumberPrefix = n.GetStringValue(); } },
                 { "expiryDate", n => { ExpiryDate = n.GetDateTimeOffsetValue(); } },
-                { "frequencySettings", n => { FrequencySettings = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDto_frequencySettings>(global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDto_frequencySettings.CreateFromDiscriminatorValue); } },
+                { "frequencySettings", n => { FrequencySettings = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoFrequencySettings>(global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoFrequencySettings.CreateFromDiscriminatorValue); } },
                 { "_id", n => { Id = n.GetStringValue(); } },
                 { "issueDate", n => { IssueDate = n.GetDateTimeOffsetValue(); } },
                 { "items", n => { Items = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "lastVisitedAt", n => { LastVisitedAt = n.GetDateTimeOffsetValue(); } },
                 { "liveMode", n => { LiveMode = n.GetBoolValue(); } },
-                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDto_meta>(global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDto_meta.CreateFromDiscriminatorValue); } },
+                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoMetaProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoMetaProperty.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "sentBy", n => { SentBy = n.GetStringValue(); } },
-                { "sentTo", n => { SentTo = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDto_sentTo>(global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDto_sentTo.CreateFromDiscriminatorValue); } },
+                { "sentTo", n => { SentTo = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoSentTo>(global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoSentTo.CreateFromDiscriminatorValue); } },
                 { "termsNotes", n => { TermsNotes = n.GetStringValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
                 { "total", n => { Total = n.GetDoubleValue(); } },
@@ -277,31 +277,31 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("altId", AltId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDto_altType>("altType", AltType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoAltType>("altType", AltType);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.AttachmentsDto>("attachments", Attachments);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDto_autoInvoice>("autoInvoice", AutoInvoice);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoAutoInvoice>("autoInvoice", AutoInvoice);
             writer.WriteBoolValue("automaticTaxesCalculated", AutomaticTaxesCalculated);
             writer.WriteBoolValue("automaticTaxesEnabled", AutomaticTaxesEnabled);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDto_businessDetails>("businessDetails", BusinessDetails);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoBusinessDetails>("businessDetails", BusinessDetails);
             writer.WriteStringValue("companyId", CompanyId);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDto_contactDetails>("contactDetails", ContactDetails);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoContactDetails>("contactDetails", ContactDetails);
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
             writer.WriteStringValue("currency", Currency);
             writer.WriteBoolValue("deleted", Deleted);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDto_discount>("discount", Discount);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoDiscount>("discount", Discount);
             writer.WriteCollectionOfPrimitiveValues<string>("estimateActionHistory", EstimateActionHistory);
             writer.WriteStringValue("estimateNumberPrefix", EstimateNumberPrefix);
             writer.WriteDateTimeOffsetValue("expiryDate", ExpiryDate);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDto_frequencySettings>("frequencySettings", FrequencySettings);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoFrequencySettings>("frequencySettings", FrequencySettings);
             writer.WriteStringValue("_id", Id);
             writer.WriteDateTimeOffsetValue("issueDate", IssueDate);
             writer.WriteObjectValue<UntypedNode>("items", Items);
             writer.WriteDateTimeOffsetValue("lastVisitedAt", LastVisitedAt);
             writer.WriteBoolValue("liveMode", LiveMode);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDto_meta>("meta", Meta);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoMetaProperty>("meta", Meta);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("sentBy", SentBy);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDto_sentTo>("sentTo", SentTo);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoSentTo>("sentTo", SentTo);
             writer.WriteStringValue("termsNotes", TermsNotes);
             writer.WriteStringValue("title", Title);
             writer.WriteDoubleValue("total", Total);

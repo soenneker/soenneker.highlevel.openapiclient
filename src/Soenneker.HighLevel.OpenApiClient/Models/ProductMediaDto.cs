@@ -41,7 +41,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string Title { get; set; }
 #endif
         /// <summary>The type of the media file (e.g., image, video will be supporting soon).</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ProductMediaDto_type? Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ProductMediaDtoType? Type { get; set; }
         /// <summary>The URL where the media file is stored.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -79,7 +79,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "isFeatured", n => { IsFeatured = n.GetBoolValue(); } },
                 { "priceIds", n => { PriceIds = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "title", n => { Title = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProductMediaDto_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProductMediaDtoType>(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
         }
@@ -94,7 +94,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteBoolValue("isFeatured", IsFeatured);
             writer.WriteObjectValue<UntypedNode>("priceIds", PriceIds);
             writer.WriteStringValue("title", Title);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProductMediaDto_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProductMediaDtoType>("type", Type);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);
         }

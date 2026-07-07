@@ -22,6 +22,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string Body { get; set; }
 #endif
+        /// <summary>The color property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Color { get; set; }
+#nullable restore
+#else
+        public string Color { get; set; }
+#endif
         /// <summary>The contactId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -29,14 +37,6 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #nullable restore
 #else
         public string ContactId { get; set; }
-#endif
-        /// <summary>The createdBy property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.NoteCreatedBySchema? CreatedBy { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.NoteCreatedBySchema CreatedBy { get; set; }
 #endif
         /// <summary>The dateAdded property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -53,6 +53,16 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #nullable restore
 #else
         public string Id { get; set; }
+#endif
+        /// <summary>The pinned property</summary>
+        public bool? Pinned { get; set; }
+        /// <summary>The title property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Title { get; set; }
+#nullable restore
+#else
+        public string Title { get; set; }
 #endif
         /// <summary>The userId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -88,10 +98,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "body", n => { Body = n.GetStringValue(); } },
+                { "color", n => { Color = n.GetStringValue(); } },
                 { "contactId", n => { ContactId = n.GetStringValue(); } },
-                { "createdBy", n => { CreatedBy = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.NoteCreatedBySchema>(global::Soenneker.HighLevel.OpenApiClient.Models.NoteCreatedBySchema.CreateFromDiscriminatorValue); } },
                 { "dateAdded", n => { DateAdded = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
+                { "pinned", n => { Pinned = n.GetBoolValue(); } },
+                { "title", n => { Title = n.GetStringValue(); } },
                 { "userId", n => { UserId = n.GetStringValue(); } },
             };
         }
@@ -103,10 +115,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("body", Body);
+            writer.WriteStringValue("color", Color);
             writer.WriteStringValue("contactId", ContactId);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.NoteCreatedBySchema>("createdBy", CreatedBy);
             writer.WriteStringValue("dateAdded", DateAdded);
             writer.WriteStringValue("id", Id);
+            writer.WriteBoolValue("pinned", Pinned);
+            writer.WriteStringValue("title", Title);
             writer.WriteStringValue("userId", UserId);
             writer.WriteAdditionalData(AdditionalData);
         }

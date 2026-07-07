@@ -73,7 +73,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string ParentId { get; set; }
 #endif
         /// <summary>Source type indicating how the brand board was created</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateBrandBoardParam_type? Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateBrandBoardParamType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CreateBrandBoardParam"/> and sets the default values.
         /// </summary>
@@ -107,7 +107,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "logos", n => { Logos = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.Logo>(global::Soenneker.HighLevel.OpenApiClient.Models.Logo.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "parentId", n => { ParentId = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateBrandBoardParam_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateBrandBoardParamType>(); } },
             };
         }
         /// <summary>
@@ -125,7 +125,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.Logo>("logos", Logos);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("parentId", ParentId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateBrandBoardParam_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateBrandBoardParamType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

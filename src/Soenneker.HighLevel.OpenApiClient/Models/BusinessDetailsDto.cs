@@ -17,10 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Business Address</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.BusinessDetailsDto_address? Address { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.BusinessDetailsDtoAddress? Address { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.BusinessDetailsDto_address Address { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.BusinessDetailsDtoAddress Address { get; set; }
 #endif
         /// <summary>Custom Values</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -87,7 +87,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "address", n => { Address = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BusinessDetailsDto_address>(global::Soenneker.HighLevel.OpenApiClient.Models.BusinessDetailsDto_address.CreateFromDiscriminatorValue); } },
+                { "address", n => { Address = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BusinessDetailsDtoAddress>(global::Soenneker.HighLevel.OpenApiClient.Models.BusinessDetailsDtoAddress.CreateFromDiscriminatorValue); } },
                 { "customValues", n => { CustomValues = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "logoUrl", n => { LogoUrl = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
@@ -102,7 +102,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BusinessDetailsDto_address>("address", Address);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BusinessDetailsDtoAddress>("address", Address);
             writer.WriteCollectionOfPrimitiveValues<string>("customValues", CustomValues);
             writer.WriteStringValue("logoUrl", LogoUrl);
             writer.WriteStringValue("name", Name);

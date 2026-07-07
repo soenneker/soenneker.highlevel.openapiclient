@@ -13,7 +13,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning restore CS1591
     {
         /// <summary>The action property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoiceDto_action? Action { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoiceDtoAction? Action { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>location Id / company Id based on altType</summary>
@@ -25,24 +25,24 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string AltId { get; set; }
 #endif
         /// <summary>Alt Type</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoiceDto_altType? AltType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoiceDtoAltType? AltType { get; set; }
         /// <summary>auto-payment configuration</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoiceDto_autoPayment? AutoPayment { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoiceDtoAutoPayment? AutoPayment { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoiceDto_autoPayment AutoPayment { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoiceDtoAutoPayment AutoPayment { get; set; }
 #endif
         /// <summary>The liveMode property</summary>
         public bool? LiveMode { get; set; }
         /// <summary>sender details for invoice, valid only if invoice is not sent manually</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoiceDto_sentFrom? SentFrom { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoiceDtoSentFrom? SentFrom { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoiceDto_sentFrom SentFrom { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoiceDtoSentFrom SentFrom { get; set; }
 #endif
         /// <summary>Please ensure that the UserId corresponds to an authorized personnel, either by an employee ID or agency ID, to access this location. This account will serve as the primary channel for all future communications and updates.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -77,12 +77,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "action", n => { Action = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoiceDto_action>(); } },
+                { "action", n => { Action = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoiceDtoAction>(); } },
                 { "altId", n => { AltId = n.GetStringValue(); } },
-                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoiceDto_altType>(); } },
-                { "autoPayment", n => { AutoPayment = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoiceDto_autoPayment>(global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoiceDto_autoPayment.CreateFromDiscriminatorValue); } },
+                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoiceDtoAltType>(); } },
+                { "autoPayment", n => { AutoPayment = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoiceDtoAutoPayment>(global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoiceDtoAutoPayment.CreateFromDiscriminatorValue); } },
                 { "liveMode", n => { LiveMode = n.GetBoolValue(); } },
-                { "sentFrom", n => { SentFrom = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoiceDto_sentFrom>(global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoiceDto_sentFrom.CreateFromDiscriminatorValue); } },
+                { "sentFrom", n => { SentFrom = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoiceDtoSentFrom>(global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoiceDtoSentFrom.CreateFromDiscriminatorValue); } },
                 { "userId", n => { UserId = n.GetStringValue(); } },
             };
         }
@@ -93,12 +93,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoiceDto_action>("action", Action);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoiceDtoAction>("action", Action);
             writer.WriteStringValue("altId", AltId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoiceDto_altType>("altType", AltType);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoiceDto_autoPayment>("autoPayment", AutoPayment);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoiceDtoAltType>("altType", AltType);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoiceDtoAutoPayment>("autoPayment", AutoPayment);
             writer.WriteBoolValue("liveMode", LiveMode);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoiceDto_sentFrom>("sentFrom", SentFrom);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoiceDtoSentFrom>("sentFrom", SentFrom);
             writer.WriteStringValue("userId", UserId);
             writer.WriteAdditionalData(AdditionalData);
         }

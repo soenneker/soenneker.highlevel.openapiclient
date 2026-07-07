@@ -35,10 +35,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Configuration for how the coupon applies to future payments</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateCouponResponseDto_applyToFuturePaymentsConfig? ApplyToFuturePaymentsConfig { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateCouponResponseDtoApplyToFuturePaymentsConfig? ApplyToFuturePaymentsConfig { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateCouponResponseDto_applyToFuturePaymentsConfig ApplyToFuturePaymentsConfig { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateCouponResponseDtoApplyToFuturePaymentsConfig ApplyToFuturePaymentsConfig { get; set; }
 #endif
         /// <summary>Redemption code for the coupon</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -57,7 +57,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string CreatedAt { get; set; }
 #endif
         /// <summary>Type of discount (percentage or amount)</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateCouponResponseDto_discountType? DiscountType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateCouponResponseDtoDiscountType? DiscountType { get; set; }
         /// <summary>Value of the discount (percentage or fixed amount)</summary>
         public double? DiscountValue { get; set; }
         /// <summary>End date when the coupon expires</summary>
@@ -95,7 +95,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string StartDate { get; set; }
 #endif
         /// <summary>Current status of the coupon</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateCouponResponseDto_status? Status { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateCouponResponseDtoStatus? Status { get; set; }
         /// <summary>Unique identifier for tracing this API request</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -150,17 +150,17 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "altId", n => { AltId = n.GetStringValue(); } },
                 { "altType", n => { AltType = n.GetStringValue(); } },
                 { "applyToFuturePayments", n => { ApplyToFuturePayments = n.GetBoolValue(); } },
-                { "applyToFuturePaymentsConfig", n => { ApplyToFuturePaymentsConfig = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateCouponResponseDto_applyToFuturePaymentsConfig>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateCouponResponseDto_applyToFuturePaymentsConfig.CreateFromDiscriminatorValue); } },
+                { "applyToFuturePaymentsConfig", n => { ApplyToFuturePaymentsConfig = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateCouponResponseDtoApplyToFuturePaymentsConfig>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateCouponResponseDtoApplyToFuturePaymentsConfig.CreateFromDiscriminatorValue); } },
                 { "code", n => { Code = n.GetStringValue(); } },
                 { "createdAt", n => { CreatedAt = n.GetStringValue(); } },
-                { "discountType", n => { DiscountType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateCouponResponseDto_discountType>(); } },
+                { "discountType", n => { DiscountType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateCouponResponseDtoDiscountType>(); } },
                 { "discountValue", n => { DiscountValue = n.GetDoubleValue(); } },
                 { "endDate", n => { EndDate = n.GetStringValue(); } },
                 { "_id", n => { Id = n.GetStringValue(); } },
                 { "limitPerCustomer", n => { LimitPerCustomer = n.GetDoubleValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "startDate", n => { StartDate = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateCouponResponseDto_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateCouponResponseDtoStatus>(); } },
                 { "traceId", n => { TraceId = n.GetStringValue(); } },
                 { "updatedAt", n => { UpdatedAt = n.GetStringValue(); } },
                 { "usageCount", n => { UsageCount = n.GetDoubleValue(); } },
@@ -177,17 +177,17 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("altId", AltId);
             writer.WriteStringValue("altType", AltType);
             writer.WriteBoolValue("applyToFuturePayments", ApplyToFuturePayments);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateCouponResponseDto_applyToFuturePaymentsConfig>("applyToFuturePaymentsConfig", ApplyToFuturePaymentsConfig);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateCouponResponseDtoApplyToFuturePaymentsConfig>("applyToFuturePaymentsConfig", ApplyToFuturePaymentsConfig);
             writer.WriteStringValue("code", Code);
             writer.WriteStringValue("createdAt", CreatedAt);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateCouponResponseDto_discountType>("discountType", DiscountType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateCouponResponseDtoDiscountType>("discountType", DiscountType);
             writer.WriteDoubleValue("discountValue", DiscountValue);
             writer.WriteStringValue("endDate", EndDate);
             writer.WriteStringValue("_id", Id);
             writer.WriteDoubleValue("limitPerCustomer", LimitPerCustomer);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("startDate", StartDate);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateCouponResponseDto_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateCouponResponseDtoStatus>("status", Status);
             writer.WriteStringValue("traceId", TraceId);
             writer.WriteStringValue("updatedAt", UpdatedAt);
             writer.WriteDoubleValue("usageCount", UsageCount);

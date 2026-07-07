@@ -31,7 +31,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public List<string> Followers { get; set; }
 #endif
         /// <summary>followers action type</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunityDto_followersActionType? FollowersActionType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunityDtoFollowersActionType? FollowersActionType { get; set; }
         /// <summary>opportunityId</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -61,10 +61,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The monetaryValue property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunityDto_monetaryValue? MonetaryValue { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunityDtoMonetaryValueProperty? MonetaryValue { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunityDto_monetaryValue MonetaryValue { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunityDtoMonetaryValueProperty MonetaryValue { get; set; }
 #endif
         /// <summary>name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -91,7 +91,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string PipelineStageId { get; set; }
 #endif
         /// <summary>The status property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunityDto_status? Status { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunityDtoStatus? Status { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunityDto"/> and sets the default values.
         /// </summary>
@@ -119,16 +119,16 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             {
                 { "assignedTo", n => { AssignedTo = n.GetStringValue(); } },
                 { "followers", n => { Followers = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "followersActionType", n => { FollowersActionType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunityDto_followersActionType>(); } },
+                { "followersActionType", n => { FollowersActionType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunityDtoFollowersActionType>(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "isRemoveAllFollowers", n => { IsRemoveAllFollowers = n.GetBoolValue(); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
                 { "lostReasonId", n => { LostReasonId = n.GetStringValue(); } },
-                { "monetaryValue", n => { MonetaryValue = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunityDto_monetaryValue>(global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunityDto_monetaryValue.CreateFromDiscriminatorValue); } },
+                { "monetaryValue", n => { MonetaryValue = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunityDtoMonetaryValueProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunityDtoMonetaryValueProperty.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "pipelineId", n => { PipelineId = n.GetStringValue(); } },
                 { "pipelineStageId", n => { PipelineStageId = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunityDto_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunityDtoStatus>(); } },
             };
         }
         /// <summary>
@@ -140,16 +140,16 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("assignedTo", AssignedTo);
             writer.WriteCollectionOfPrimitiveValues<string>("followers", Followers);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunityDto_followersActionType>("followersActionType", FollowersActionType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunityDtoFollowersActionType>("followersActionType", FollowersActionType);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("isRemoveAllFollowers", IsRemoveAllFollowers);
             writer.WriteStringValue("locationId", LocationId);
             writer.WriteStringValue("lostReasonId", LostReasonId);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunityDto_monetaryValue>("monetaryValue", MonetaryValue);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunityDtoMonetaryValueProperty>("monetaryValue", MonetaryValue);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("pipelineId", PipelineId);
             writer.WriteStringValue("pipelineStageId", PipelineStageId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunityDto_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunityDtoStatus>("status", Status);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

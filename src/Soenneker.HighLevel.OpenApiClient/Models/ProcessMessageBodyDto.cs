@@ -33,10 +33,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Phone call dialer and receiver information</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ProcessMessageBodyDto_call? Call { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ProcessMessageBodyDtoCall? Call { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ProcessMessageBodyDto_call Call { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ProcessMessageBodyDtoCall Call { get; set; }
 #endif
         /// <summary>Contact Id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -67,10 +67,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Message direction, if required can be set manually, default is outbound</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ProcessMessageBodyDto_direction? Direction { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ProcessMessageBodyDtoDirectionProperty? Direction { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ProcessMessageBodyDto_direction Direction { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ProcessMessageBodyDtoDirectionProperty Direction { get; set; }
 #endif
         /// <summary>List of email address to BCC</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -137,7 +137,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string Subject { get; set; }
 #endif
         /// <summary>Message Type</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ProcessMessageBodyDto_type? Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ProcessMessageBodyDtoType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.ProcessMessageBodyDto"/> and sets the default values.
         /// </summary>
@@ -165,12 +165,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             {
                 { "altId", n => { AltId = n.GetStringValue(); } },
                 { "attachments", n => { Attachments = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "call", n => { Call = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProcessMessageBodyDto_call>(global::Soenneker.HighLevel.OpenApiClient.Models.ProcessMessageBodyDto_call.CreateFromDiscriminatorValue); } },
+                { "call", n => { Call = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProcessMessageBodyDtoCall>(global::Soenneker.HighLevel.OpenApiClient.Models.ProcessMessageBodyDtoCall.CreateFromDiscriminatorValue); } },
                 { "contactId", n => { ContactId = n.GetStringValue(); } },
                 { "conversationId", n => { ConversationId = n.GetStringValue(); } },
                 { "conversationProviderId", n => { ConversationProviderId = n.GetStringValue(); } },
                 { "date", n => { Date = n.GetDateTimeOffsetValue(); } },
-                { "direction", n => { Direction = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProcessMessageBodyDto_direction>(global::Soenneker.HighLevel.OpenApiClient.Models.ProcessMessageBodyDto_direction.CreateFromDiscriminatorValue); } },
+                { "direction", n => { Direction = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProcessMessageBodyDtoDirectionProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.ProcessMessageBodyDtoDirectionProperty.CreateFromDiscriminatorValue); } },
                 { "emailBcc", n => { EmailBcc = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "emailCc", n => { EmailCc = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "emailFrom", n => { EmailFrom = n.GetStringValue(); } },
@@ -179,7 +179,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "html", n => { Html = n.GetStringValue(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "subject", n => { Subject = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProcessMessageBodyDto_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProcessMessageBodyDtoType>(); } },
             };
         }
         /// <summary>
@@ -191,12 +191,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("altId", AltId);
             writer.WriteCollectionOfPrimitiveValues<string>("attachments", Attachments);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProcessMessageBodyDto_call>("call", Call);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProcessMessageBodyDtoCall>("call", Call);
             writer.WriteStringValue("contactId", ContactId);
             writer.WriteStringValue("conversationId", ConversationId);
             writer.WriteStringValue("conversationProviderId", ConversationProviderId);
             writer.WriteDateTimeOffsetValue("date", Date);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProcessMessageBodyDto_direction>("direction", Direction);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProcessMessageBodyDtoDirectionProperty>("direction", Direction);
             writer.WriteCollectionOfPrimitiveValues<string>("emailBcc", EmailBcc);
             writer.WriteCollectionOfPrimitiveValues<string>("emailCc", EmailCc);
             writer.WriteStringValue("emailFrom", EmailFrom);
@@ -205,7 +205,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("html", Html);
             writer.WriteStringValue("message", Message);
             writer.WriteStringValue("subject", Subject);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProcessMessageBodyDto_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProcessMessageBodyDtoType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

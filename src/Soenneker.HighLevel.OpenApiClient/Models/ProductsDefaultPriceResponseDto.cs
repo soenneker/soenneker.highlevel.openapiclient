@@ -75,15 +75,15 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The recurring details of the price (if type is recurring).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ProductsDefaultPriceResponseDto_recurring? Recurring { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ProductsDefaultPriceResponseDtoRecurring? Recurring { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ProductsDefaultPriceResponseDto_recurring Recurring { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ProductsDefaultPriceResponseDtoRecurring Recurring { get; set; }
 #endif
         /// <summary>Indicates whether inventory tracking is enabled.</summary>
         public bool? TrackInventory { get; set; }
         /// <summary>The type of the price (e.g., one_time).</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ProductsDefaultPriceResponseDto_type? Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ProductsDefaultPriceResponseDtoType? Type { get; set; }
         /// <summary>The last update timestamp of the price.</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
         /// <summary>The unique identifier for the user.</summary>
@@ -138,9 +138,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "membershipOffers", n => { MembershipOffers = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ProductsMembershipOfferDto>(global::Soenneker.HighLevel.OpenApiClient.Models.ProductsMembershipOfferDto.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "product", n => { Product = n.GetStringValue(); } },
-                { "recurring", n => { Recurring = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProductsDefaultPriceResponseDto_recurring>(global::Soenneker.HighLevel.OpenApiClient.Models.ProductsDefaultPriceResponseDto_recurring.CreateFromDiscriminatorValue); } },
+                { "recurring", n => { Recurring = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProductsDefaultPriceResponseDtoRecurring>(global::Soenneker.HighLevel.OpenApiClient.Models.ProductsDefaultPriceResponseDtoRecurring.CreateFromDiscriminatorValue); } },
                 { "trackInventory", n => { TrackInventory = n.GetBoolValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProductsDefaultPriceResponseDto_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProductsDefaultPriceResponseDtoType>(); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
                 { "userId", n => { UserId = n.GetStringValue(); } },
                 { "variantOptionIds", n => { VariantOptionIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -164,9 +164,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ProductsMembershipOfferDto>("membershipOffers", MembershipOffers);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("product", Product);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProductsDefaultPriceResponseDto_recurring>("recurring", Recurring);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProductsDefaultPriceResponseDtoRecurring>("recurring", Recurring);
             writer.WriteBoolValue("trackInventory", TrackInventory);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProductsDefaultPriceResponseDto_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProductsDefaultPriceResponseDtoType>("type", Type);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
             writer.WriteStringValue("userId", UserId);
             writer.WriteCollectionOfPrimitiveValues<string>("variantOptionIds", VariantOptionIds);

@@ -15,9 +15,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The builderVersion property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateBuilderDto_builderVersion? BuilderVersion { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateBuilderDtoBuilderVersion? BuilderVersion { get; set; }
         /// <summary>The importProvider property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateBuilderDto_importProvider? ImportProvider { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateBuilderDtoImportProvider? ImportProvider { get; set; }
         /// <summary>The importURL property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -77,7 +77,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string Title { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateBuilderDto_type? Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateBuilderDtoType? Type { get; set; }
         /// <summary>The updatedBy property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -92,7 +92,6 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public CreateBuilderDto()
         {
             AdditionalData = new Dictionary<string, object>();
-            BuilderVersion = global::Soenneker.HighLevel.OpenApiClient.Models.CreateBuilderDto_builderVersion.Two;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -112,8 +111,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "builderVersion", n => { BuilderVersion = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateBuilderDto_builderVersion>(); } },
-                { "importProvider", n => { ImportProvider = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateBuilderDto_importProvider>(); } },
+                { "builderVersion", n => { BuilderVersion = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateBuilderDtoBuilderVersion>(); } },
+                { "importProvider", n => { ImportProvider = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateBuilderDtoImportProvider>(); } },
                 { "importURL", n => { ImportURL = n.GetStringValue(); } },
                 { "isPlainText", n => { IsPlainText = n.GetBoolValue(); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
@@ -122,7 +121,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "templateDataUrl", n => { TemplateDataUrl = n.GetStringValue(); } },
                 { "templateSource", n => { TemplateSource = n.GetStringValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateBuilderDto_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateBuilderDtoType>(); } },
                 { "updatedBy", n => { UpdatedBy = n.GetStringValue(); } },
             };
         }
@@ -133,8 +132,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateBuilderDto_builderVersion>("builderVersion", BuilderVersion);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateBuilderDto_importProvider>("importProvider", ImportProvider);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateBuilderDtoBuilderVersion>("builderVersion", BuilderVersion);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateBuilderDtoImportProvider>("importProvider", ImportProvider);
             writer.WriteStringValue("importURL", ImportURL);
             writer.WriteBoolValue("isPlainText", IsPlainText);
             writer.WriteStringValue("locationId", LocationId);
@@ -143,7 +142,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("templateDataUrl", TemplateDataUrl);
             writer.WriteStringValue("templateSource", TemplateSource);
             writer.WriteStringValue("title", Title);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateBuilderDto_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateBuilderDtoType>("type", Type);
             writer.WriteStringValue("updatedBy", UpdatedBy);
             writer.WriteAdditionalData(AdditionalData);
         }

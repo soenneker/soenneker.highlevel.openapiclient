@@ -57,10 +57,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Basic auth credentials as key/value pairs (supported when type is basic). Keys are validated against the app version externalAuthConfig.fields.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.MigrateConnectionDto_basicCredentials? BasicCredentials { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.MigrateConnectionDtoBasicCredentialsProperty? BasicCredentials { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.MigrateConnectionDto_basicCredentials BasicCredentials { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.MigrateConnectionDtoBasicCredentialsProperty BasicCredentials { get; set; }
 #endif
         /// <summary>Display name for the connection (optional, defaults to accountId)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -101,7 +101,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public List<string> Scopes { get; set; }
 #endif
         /// <summary>Type of authentication - basic or oauth2</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.MigrateConnectionDto_type? Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.MigrateConnectionDtoType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.MigrateConnectionDto"/> and sets the default values.
         /// </summary>
@@ -132,7 +132,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "apiKey", n => { ApiKey = n.GetStringValue(); } },
                 { "appId", n => { AppId = n.GetStringValue(); } },
                 { "appVersionId", n => { AppVersionId = n.GetStringValue(); } },
-                { "basicCredentials", n => { BasicCredentials = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.MigrateConnectionDto_basicCredentials>(global::Soenneker.HighLevel.OpenApiClient.Models.MigrateConnectionDto_basicCredentials.CreateFromDiscriminatorValue); } },
+                { "basicCredentials", n => { BasicCredentials = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.MigrateConnectionDtoBasicCredentialsProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.MigrateConnectionDtoBasicCredentialsProperty.CreateFromDiscriminatorValue); } },
                 { "displayName", n => { DisplayName = n.GetStringValue(); } },
                 { "expiryAt", n => { ExpiryAt = n.GetDoubleValue(); } },
                 { "expiryIn", n => { ExpiryIn = n.GetDoubleValue(); } },
@@ -140,7 +140,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
                 { "refreshToken", n => { RefreshToken = n.GetStringValue(); } },
                 { "scopes", n => { Scopes = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.MigrateConnectionDto_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.MigrateConnectionDtoType>(); } },
             };
         }
         /// <summary>
@@ -155,7 +155,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("apiKey", ApiKey);
             writer.WriteStringValue("appId", AppId);
             writer.WriteStringValue("appVersionId", AppVersionId);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.MigrateConnectionDto_basicCredentials>("basicCredentials", BasicCredentials);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.MigrateConnectionDtoBasicCredentialsProperty>("basicCredentials", BasicCredentials);
             writer.WriteStringValue("displayName", DisplayName);
             writer.WriteDoubleValue("expiryAt", ExpiryAt);
             writer.WriteDoubleValue("expiryIn", ExpiryIn);
@@ -163,7 +163,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("locationId", LocationId);
             writer.WriteStringValue("refreshToken", RefreshToken);
             writer.WriteCollectionOfPrimitiveValues<string>("scopes", Scopes);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.MigrateConnectionDto_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.MigrateConnectionDtoType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

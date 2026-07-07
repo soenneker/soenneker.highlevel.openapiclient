@@ -33,10 +33,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>User who is giving the review/reply</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ProductReviewDto_user? User { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ProductReviewDtoUser? User { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ProductReviewDto_user User { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ProductReviewDtoUser User { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.ProductReviewDto"/> and sets the default values.
@@ -65,7 +65,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             {
                 { "comment", n => { Comment = n.GetStringValue(); } },
                 { "headline", n => { Headline = n.GetStringValue(); } },
-                { "user", n => { User = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProductReviewDto_user>(global::Soenneker.HighLevel.OpenApiClient.Models.ProductReviewDto_user.CreateFromDiscriminatorValue); } },
+                { "user", n => { User = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProductReviewDtoUser>(global::Soenneker.HighLevel.OpenApiClient.Models.ProductReviewDtoUser.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -77,7 +77,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("comment", Comment);
             writer.WriteStringValue("headline", Headline);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProductReviewDto_user>("user", User);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProductReviewDtoUser>("user", User);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

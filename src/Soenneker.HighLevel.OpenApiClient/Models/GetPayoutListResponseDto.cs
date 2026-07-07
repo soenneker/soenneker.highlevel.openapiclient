@@ -17,10 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Pagination metadata</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPayoutListResponseDto_meta? Meta { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPayoutListResponseDtoMeta? Meta { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPayoutListResponseDto_meta Meta { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPayoutListResponseDtoMeta Meta { get; set; }
 #endif
         /// <summary>Payout list</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,7 +55,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPayoutListResponseDto_meta>(global::Soenneker.HighLevel.OpenApiClient.Models.GetPayoutListResponseDto_meta.CreateFromDiscriminatorValue); } },
+                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPayoutListResponseDtoMeta>(global::Soenneker.HighLevel.OpenApiClient.Models.GetPayoutListResponseDtoMeta.CreateFromDiscriminatorValue); } },
                 { "payouts", n => { Payouts = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.PayoutListItemResponseDto>(global::Soenneker.HighLevel.OpenApiClient.Models.PayoutListItemResponseDto.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -66,7 +66,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPayoutListResponseDto_meta>("meta", Meta);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPayoutListResponseDtoMeta>("meta", Meta);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.PayoutListItemResponseDto>("payouts", Payouts);
             writer.WriteAdditionalData(AdditionalData);
         }

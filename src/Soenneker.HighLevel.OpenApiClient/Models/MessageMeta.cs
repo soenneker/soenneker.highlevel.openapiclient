@@ -23,14 +23,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string CallDuration { get; set; }
 #endif
         /// <summary>Call status - can be pending, completed, answered, busy, no-answer, failed, canceled, or voicemail</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.MessageMeta_callStatus? CallStatus { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.MessageMetaCallStatus? CallStatus { get; set; }
         /// <summary>meta will contain email, for message type 3 (email). messageIds is list of all email message ids under the message thread</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.MessageMeta_email? Email { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.MessageMetaEmailProperty? Email { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.MessageMeta_email Email { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.MessageMetaEmailProperty Email { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.MessageMeta"/> and sets the default values.
@@ -58,8 +58,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "callDuration", n => { CallDuration = n.GetStringValue(); } },
-                { "callStatus", n => { CallStatus = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.MessageMeta_callStatus>(); } },
-                { "email", n => { Email = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.MessageMeta_email>(global::Soenneker.HighLevel.OpenApiClient.Models.MessageMeta_email.CreateFromDiscriminatorValue); } },
+                { "callStatus", n => { CallStatus = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.MessageMetaCallStatus>(); } },
+                { "email", n => { Email = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.MessageMetaEmailProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.MessageMetaEmailProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -70,8 +70,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("callDuration", CallDuration);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.MessageMeta_callStatus>("callStatus", CallStatus);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.MessageMeta_email>("email", Email);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.MessageMetaCallStatus>("callStatus", CallStatus);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.MessageMetaEmailProperty>("email", Email);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

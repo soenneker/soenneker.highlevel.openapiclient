@@ -17,13 +17,13 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The dnd property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDto_dnd? Dnd { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDtoDnd? Dnd { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDto_dnd Dnd { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDtoDnd Dnd { get; set; }
 #endif
         /// <summary>The editorType property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDto_editorType? EditorType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDtoEditorType? EditorType { get; set; }
         /// <summary>The html property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -91,8 +91,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "dnd", n => { Dnd = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDto_dnd>(global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDto_dnd.CreateFromDiscriminatorValue); } },
-                { "editorType", n => { EditorType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDto_editorType>(); } },
+                { "dnd", n => { Dnd = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDtoDnd>(global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDtoDnd.CreateFromDiscriminatorValue); } },
+                { "editorType", n => { EditorType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDtoEditorType>(); } },
                 { "html", n => { Html = n.GetStringValue(); } },
                 { "isPlainText", n => { IsPlainText = n.GetBoolValue(); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
@@ -108,8 +108,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDto_dnd>("dnd", Dnd);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDto_editorType>("editorType", EditorType);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDtoDnd>("dnd", Dnd);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDtoEditorType>("editorType", EditorType);
             writer.WriteStringValue("html", Html);
             writer.WriteBoolValue("isPlainText", IsPlainText);
             writer.WriteStringValue("locationId", LocationId);

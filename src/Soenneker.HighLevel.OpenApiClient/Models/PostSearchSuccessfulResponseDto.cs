@@ -17,10 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The aggregations property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PostSearchSuccessfulResponseDto_aggregations? Aggregations { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PostSearchSuccessfulResponseDtoAggregationsProperty? Aggregations { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PostSearchSuccessfulResponseDto_aggregations Aggregations { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PostSearchSuccessfulResponseDtoAggregationsProperty Aggregations { get; set; }
 #endif
         /// <summary>The opportunities property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -57,7 +57,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "aggregations", n => { Aggregations = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostSearchSuccessfulResponseDto_aggregations>(global::Soenneker.HighLevel.OpenApiClient.Models.PostSearchSuccessfulResponseDto_aggregations.CreateFromDiscriminatorValue); } },
+                { "aggregations", n => { Aggregations = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostSearchSuccessfulResponseDtoAggregationsProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.PostSearchSuccessfulResponseDtoAggregationsProperty.CreateFromDiscriminatorValue); } },
                 { "opportunities", n => { Opportunities = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.SearchOpportunitiesResponseSchema>(global::Soenneker.HighLevel.OpenApiClient.Models.SearchOpportunitiesResponseSchema.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "total", n => { Total = n.GetDoubleValue(); } },
             };
@@ -69,7 +69,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostSearchSuccessfulResponseDto_aggregations>("aggregations", Aggregations);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostSearchSuccessfulResponseDtoAggregationsProperty>("aggregations", Aggregations);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.SearchOpportunitiesResponseSchema>("opportunities", Opportunities);
             writer.WriteDoubleValue("total", Total);
             writer.WriteAdditionalData(AdditionalData);

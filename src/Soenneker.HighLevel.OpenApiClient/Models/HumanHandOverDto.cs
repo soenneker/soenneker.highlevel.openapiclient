@@ -43,7 +43,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string FinalMessage { get; set; }
 #endif
         /// <summary>Type of human handover detection</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.HumanHandOverDto_handoverType? HandoverType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.HumanHandOverDtoHandoverType? HandoverType { get; set; }
         /// <summary>Whether the agent can be reactivated after handover</summary>
         public bool? ReactivateEnabled { get; set; }
         /// <summary>Whether to skip assigning to a specific user</summary>
@@ -51,7 +51,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Time duration before reactivation (required when reactivateEnabled is true)</summary>
         public double? SleepTime { get; set; }
         /// <summary>Time unit for reactivation delay (required when reactivateEnabled is true)</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.HumanHandOverDto_sleepTimeUnit? SleepTimeUnit { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.HumanHandOverDtoSleepTimeUnit? SleepTimeUnit { get; set; }
         /// <summary>Tags to apply during handover</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -98,11 +98,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
                 { "examples", n => { Examples = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "finalMessage", n => { FinalMessage = n.GetStringValue(); } },
-                { "handoverType", n => { HandoverType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.HumanHandOverDto_handoverType>(); } },
+                { "handoverType", n => { HandoverType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.HumanHandOverDtoHandoverType>(); } },
                 { "reactivateEnabled", n => { ReactivateEnabled = n.GetBoolValue(); } },
                 { "skipAssignToUser", n => { SkipAssignToUser = n.GetBoolValue(); } },
                 { "sleepTime", n => { SleepTime = n.GetDoubleValue(); } },
-                { "sleepTimeUnit", n => { SleepTimeUnit = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.HumanHandOverDto_sleepTimeUnit>(); } },
+                { "sleepTimeUnit", n => { SleepTimeUnit = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.HumanHandOverDtoSleepTimeUnit>(); } },
                 { "tags", n => { Tags = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "triggerCondition", n => { TriggerCondition = n.GetStringValue(); } },
             };
@@ -119,11 +119,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteBoolValue("enabled", Enabled);
             writer.WriteCollectionOfPrimitiveValues<string>("examples", Examples);
             writer.WriteStringValue("finalMessage", FinalMessage);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.HumanHandOverDto_handoverType>("handoverType", HandoverType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.HumanHandOverDtoHandoverType>("handoverType", HandoverType);
             writer.WriteBoolValue("reactivateEnabled", ReactivateEnabled);
             writer.WriteBoolValue("skipAssignToUser", SkipAssignToUser);
             writer.WriteDoubleValue("sleepTime", SleepTime);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.HumanHandOverDto_sleepTimeUnit>("sleepTimeUnit", SleepTimeUnit);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.HumanHandOverDtoSleepTimeUnit>("sleepTimeUnit", SleepTimeUnit);
             writer.WriteCollectionOfPrimitiveValues<string>("tags", Tags);
             writer.WriteStringValue("triggerCondition", TriggerCondition);
             writer.WriteAdditionalData(AdditionalData);

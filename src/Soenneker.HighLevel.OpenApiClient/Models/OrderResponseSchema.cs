@@ -117,10 +117,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Meta content for the source of order.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.OrderResponseSchema_sourceMeta? SourceMeta { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.OrderResponseSchemaSourceMetaProperty? SourceMeta { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.OrderResponseSchema_sourceMeta SourceMeta { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.OrderResponseSchemaSourceMetaProperty SourceMeta { get; set; }
 #endif
         /// <summary>Source name for the order.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -202,7 +202,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "onetimeProducts", n => { OnetimeProducts = n.GetDoubleValue(); } },
                 { "recurringProducts", n => { RecurringProducts = n.GetDoubleValue(); } },
                 { "sourceId", n => { SourceId = n.GetStringValue(); } },
-                { "sourceMeta", n => { SourceMeta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.OrderResponseSchema_sourceMeta>(global::Soenneker.HighLevel.OpenApiClient.Models.OrderResponseSchema_sourceMeta.CreateFromDiscriminatorValue); } },
+                { "sourceMeta", n => { SourceMeta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.OrderResponseSchemaSourceMetaProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.OrderResponseSchemaSourceMetaProperty.CreateFromDiscriminatorValue); } },
                 { "sourceName", n => { SourceName = n.GetStringValue(); } },
                 { "sourceSubType", n => { SourceSubType = n.GetStringValue(); } },
                 { "sourceType", n => { SourceType = n.GetStringValue(); } },
@@ -236,7 +236,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteDoubleValue("onetimeProducts", OnetimeProducts);
             writer.WriteDoubleValue("recurringProducts", RecurringProducts);
             writer.WriteStringValue("sourceId", SourceId);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.OrderResponseSchema_sourceMeta>("sourceMeta", SourceMeta);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.OrderResponseSchemaSourceMetaProperty>("sourceMeta", SourceMeta);
             writer.WriteStringValue("sourceName", SourceName);
             writer.WriteStringValue("sourceSubType", SourceSubType);
             writer.WriteStringValue("sourceType", SourceType);

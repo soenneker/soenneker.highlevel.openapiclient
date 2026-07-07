@@ -39,7 +39,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string City { get; set; }
 #endif
         /// <summary>The countryCode property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.Address_countryCode? CountryCode { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AddressCountryCode? CountryCode { get; set; }
         /// <summary>The postalCode property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -84,7 +84,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "addressLine1", n => { AddressLine1 = n.GetStringValue(); } },
                 { "addressLine2", n => { AddressLine2 = n.GetStringValue(); } },
                 { "city", n => { City = n.GetStringValue(); } },
-                { "countryCode", n => { CountryCode = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.Address_countryCode>(); } },
+                { "countryCode", n => { CountryCode = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.AddressCountryCode>(); } },
                 { "postalCode", n => { PostalCode = n.GetStringValue(); } },
                 { "state", n => { State = n.GetStringValue(); } },
             };
@@ -99,7 +99,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("addressLine1", AddressLine1);
             writer.WriteStringValue("addressLine2", AddressLine2);
             writer.WriteStringValue("city", City);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.Address_countryCode>("countryCode", CountryCode);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.AddressCountryCode>("countryCode", CountryCode);
             writer.WriteStringValue("postalCode", PostalCode);
             writer.WriteStringValue("state", State);
             writer.WriteAdditionalData(AdditionalData);

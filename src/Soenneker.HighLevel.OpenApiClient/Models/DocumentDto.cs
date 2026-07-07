@@ -37,18 +37,18 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Fillable fields</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.FillableFieldsDTO>? FillableFields { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.FillableFieldsDto>? FillableFields { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.FillableFieldsDTO> FillableFields { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.FillableFieldsDto> FillableFields { get; set; }
 #endif
         /// <summary>Grand total object of the document</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DocumentDto_grandTotal? GrandTotal { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DocumentDtoGrandTotal? GrandTotal { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DocumentDto_grandTotal GrandTotal { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DocumentDtoGrandTotal GrandTotal { get; set; }
 #endif
         /// <summary>Unique identifier</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -95,10 +95,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Payment status</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.DocumentDto_paymentStatus?>? PaymentStatus { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.DocumentDtoPaymentStatusItem?>? PaymentStatus { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.DocumentDto_paymentStatus?> PaymentStatus { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.DocumentDtoPaymentStatusItem?> PaymentStatus { get; set; }
 #endif
         /// <summary>Recipients</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -111,10 +111,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Document status</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.DocumentDto_status?>? Status { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.DocumentDtoStatusItem?>? Status { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.DocumentDto_status?> Status { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.DocumentDtoStatusItem?> Status { get; set; }
 #endif
         /// <summary>Type of the document</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -161,17 +161,17 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "deleted", n => { Deleted = n.GetBoolValue(); } },
                 { "documentId", n => { DocumentId = n.GetStringValue(); } },
                 { "documentRevision", n => { DocumentRevision = n.GetDoubleValue(); } },
-                { "fillableFields", n => { FillableFields = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.FillableFieldsDTO>(global::Soenneker.HighLevel.OpenApiClient.Models.FillableFieldsDTO.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "grandTotal", n => { GrandTotal = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DocumentDto_grandTotal>(global::Soenneker.HighLevel.OpenApiClient.Models.DocumentDto_grandTotal.CreateFromDiscriminatorValue); } },
+                { "fillableFields", n => { FillableFields = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.FillableFieldsDto>(global::Soenneker.HighLevel.OpenApiClient.Models.FillableFieldsDto.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "grandTotal", n => { GrandTotal = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DocumentDtoGrandTotal>(global::Soenneker.HighLevel.OpenApiClient.Models.DocumentDtoGrandTotal.CreateFromDiscriminatorValue); } },
                 { "_id", n => { Id = n.GetStringValue(); } },
                 { "isExpired", n => { IsExpired = n.GetBoolValue(); } },
                 { "links", n => { Links = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ProposalEstimateLinksDto>(global::Soenneker.HighLevel.OpenApiClient.Models.ProposalEstimateLinksDto.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "locale", n => { Locale = n.GetStringValue(); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "paymentStatus", n => { PaymentStatus = n.GetCollectionOfEnumValues<global::Soenneker.HighLevel.OpenApiClient.Models.DocumentDto_paymentStatus>()?.AsList(); } },
+                { "paymentStatus", n => { PaymentStatus = n.GetCollectionOfEnumValues<global::Soenneker.HighLevel.OpenApiClient.Models.DocumentDtoPaymentStatusItem>()?.AsList(); } },
                 { "recipients", n => { Recipients = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.RecipientItem>(global::Soenneker.HighLevel.OpenApiClient.Models.RecipientItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "status", n => { Status = n.GetCollectionOfEnumValues<global::Soenneker.HighLevel.OpenApiClient.Models.DocumentDto_status>()?.AsList(); } },
+                { "status", n => { Status = n.GetCollectionOfEnumValues<global::Soenneker.HighLevel.OpenApiClient.Models.DocumentDtoStatusItem>()?.AsList(); } },
                 { "type", n => { Type = n.GetStringValue(); } },
                 { "updatedAt", n => { UpdatedAt = n.GetStringValue(); } },
             };
@@ -187,17 +187,17 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteBoolValue("deleted", Deleted);
             writer.WriteStringValue("documentId", DocumentId);
             writer.WriteDoubleValue("documentRevision", DocumentRevision);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.FillableFieldsDTO>("fillableFields", FillableFields);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DocumentDto_grandTotal>("grandTotal", GrandTotal);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.FillableFieldsDto>("fillableFields", FillableFields);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DocumentDtoGrandTotal>("grandTotal", GrandTotal);
             writer.WriteStringValue("_id", Id);
             writer.WriteBoolValue("isExpired", IsExpired);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ProposalEstimateLinksDto>("links", Links);
             writer.WriteStringValue("locale", Locale);
             writer.WriteStringValue("locationId", LocationId);
             writer.WriteStringValue("name", Name);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.HighLevel.OpenApiClient.Models.DocumentDto_paymentStatus>("paymentStatus", PaymentStatus);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.HighLevel.OpenApiClient.Models.DocumentDtoPaymentStatusItem>("paymentStatus", PaymentStatus);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.RecipientItem>("recipients", Recipients);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.HighLevel.OpenApiClient.Models.DocumentDto_status>("status", Status);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.HighLevel.OpenApiClient.Models.DocumentDtoStatusItem>("status", Status);
             writer.WriteStringValue("type", Type);
             writer.WriteStringValue("updatedAt", UpdatedAt);
             writer.WriteAdditionalData(AdditionalData);

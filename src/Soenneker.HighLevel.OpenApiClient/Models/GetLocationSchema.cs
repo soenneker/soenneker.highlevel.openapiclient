@@ -81,18 +81,18 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The default settings for location</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationSchema_settings? Settings { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationSchemaSettings? Settings { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationSchema_settings Settings { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationSchemaSettings Settings { get; set; }
 #endif
         /// <summary>The social media links for location</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationSchema_social? Social { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationSchemaSocial? Social { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationSchema_social Social { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationSchemaSocial Social { get; set; }
 #endif
         /// <summary>The state in which the business operates for which sub-account is created</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -151,8 +151,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "phone", n => { Phone = n.GetStringValue(); } },
                 { "postalCode", n => { PostalCode = n.GetStringValue(); } },
-                { "settings", n => { Settings = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationSchema_settings>(global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationSchema_settings.CreateFromDiscriminatorValue); } },
-                { "social", n => { Social = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationSchema_social>(global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationSchema_social.CreateFromDiscriminatorValue); } },
+                { "settings", n => { Settings = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationSchemaSettings>(global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationSchemaSettings.CreateFromDiscriminatorValue); } },
+                { "social", n => { Social = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationSchemaSocial>(global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationSchemaSocial.CreateFromDiscriminatorValue); } },
                 { "state", n => { State = n.GetStringValue(); } },
                 { "timezone", n => { Timezone = n.GetStringValue(); } },
                 { "website", n => { Website = n.GetStringValue(); } },
@@ -173,8 +173,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("phone", Phone);
             writer.WriteStringValue("postalCode", PostalCode);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationSchema_settings>("settings", Settings);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationSchema_social>("social", Social);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationSchemaSettings>("settings", Settings);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationSchemaSocial>("social", Social);
             writer.WriteStringValue("state", State);
             writer.WriteStringValue("timezone", Timezone);
             writer.WriteStringValue("website", Website);

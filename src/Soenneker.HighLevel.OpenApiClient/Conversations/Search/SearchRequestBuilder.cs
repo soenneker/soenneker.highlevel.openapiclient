@@ -39,8 +39,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Conversations.Search
         /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.SendConversationResponseDto"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasBadRequestDTO">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDTO">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasBadRequestDto">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDto">When receiving a 401 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.SendConversationResponseDto?> GetAsync(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Conversations.Search.SearchRequestBuilder.SearchRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -53,8 +53,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Conversations.Search
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasBadRequestDTO.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDTO.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.SendConversationResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.SendConversationResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -137,13 +137,13 @@ namespace Soenneker.HighLevel.OpenApiClient.Conversations.Search
 #endif
             /// <summary>Action of the last outbound message in the conversation as string.</summary>
             [QueryParameter("lastMessageAction")]
-            public global::Soenneker.HighLevel.OpenApiClient.Conversations.Search.GetLastMessageActionQueryParameterType? LastMessageAction { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.ConversationsSearchConversationLastMessageActionParameter? LastMessageAction { get; set; }
             /// <summary>Direction of the last message in the conversation as string.</summary>
             [QueryParameter("lastMessageDirection")]
-            public global::Soenneker.HighLevel.OpenApiClient.Conversations.Search.GetLastMessageDirectionQueryParameterType? LastMessageDirection { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.ConversationsSearchConversationLastMessageDirectionParameter? LastMessageDirection { get; set; }
             /// <summary>Type of the last message in the conversation as a string</summary>
             [QueryParameter("lastMessageType")]
-            public global::Soenneker.HighLevel.OpenApiClient.Conversations.Search.GetLastMessageTypeQueryParameterType? LastMessageType { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.ConversationsSearchConversationLastMessageTypeParameter? LastMessageType { get; set; }
             /// <summary>Limit of conversations - Default is 20</summary>
             [QueryParameter("limit")]
             public double? Limit { get; set; }
@@ -195,10 +195,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Conversations.Search
             public double? ScoreProfileMin { get; set; }
             /// <summary>Sort paramater - asc or desc</summary>
             [QueryParameter("sort")]
-            public global::Soenneker.HighLevel.OpenApiClient.Conversations.Search.GetSortQueryParameterType? Sort { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.ConversationsSearchConversationSortParameter? Sort { get; set; }
             /// <summary>The sorting of the conversation to be filtered as - manual messages or all messages</summary>
             [QueryParameter("sortBy")]
-            public global::Soenneker.HighLevel.OpenApiClient.Conversations.Search.GetSortByQueryParameterType? SortBy { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.ConversationsSearchConversationSortByParameter? SortBy { get; set; }
             /// <summary>Id of score profile on which sortBy.ScoreProfile should sort on</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -224,7 +224,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Conversations.Search
             public double? StartDate { get; set; }
             /// <summary>The status of the conversation to be filtered - all, read, unread, starred </summary>
             [QueryParameter("status")]
-            public global::Soenneker.HighLevel.OpenApiClient.Conversations.Search.GetStatusQueryParameterType? Status { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.ConversationsSearchConversationStatusParameter? Status { get; set; }
         }
     }
 }

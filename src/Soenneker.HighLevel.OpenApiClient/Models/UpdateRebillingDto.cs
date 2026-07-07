@@ -31,7 +31,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public List<string> LocationIds { get; set; }
 #endif
         /// <summary>The product to update rebilling for</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateRebillingDto_product? Product { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateRebillingDtoProduct? Product { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpdateRebillingDto"/> and sets the default values.
         /// </summary>
@@ -59,7 +59,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             {
                 { "config", n => { Config = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateRebillingDtoConfig>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateRebillingDtoConfig.CreateFromDiscriminatorValue); } },
                 { "locationIds", n => { LocationIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "product", n => { Product = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateRebillingDto_product>(); } },
+                { "product", n => { Product = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateRebillingDtoProduct>(); } },
             };
         }
         /// <summary>
@@ -71,7 +71,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateRebillingDtoConfig>("config", Config);
             writer.WriteCollectionOfPrimitiveValues<string>("locationIds", LocationIds);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateRebillingDto_product>("product", Product);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateRebillingDtoProduct>("product", Product);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

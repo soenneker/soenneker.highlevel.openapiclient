@@ -23,7 +23,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string AltId { get; set; }
 #endif
         /// <summary>The altType property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.BulkUpdateDto_altType? AltType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.BulkUpdateDtoAltType? AltType { get; set; }
         /// <summary>New availability status</summary>
         public bool? Availability { get; set; }
         /// <summary>Array of collection IDs</summary>
@@ -37,10 +37,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Compare at price update configuration</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.BulkUpdateDto_compareAtPrice? CompareAtPrice { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.BulkUpdateDtoCompareAtPrice? CompareAtPrice { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.BulkUpdateDto_compareAtPrice CompareAtPrice { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.BulkUpdateDtoCompareAtPrice CompareAtPrice { get; set; }
 #endif
         /// <summary>Currency code</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -53,18 +53,18 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Filters to apply when selectAll is true</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.BulkUpdateDto_filters? Filters { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.BulkUpdateDtoFilters? Filters { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.BulkUpdateDto_filters Filters { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.BulkUpdateDtoFilters Filters { get; set; }
 #endif
         /// <summary>Price update configuration</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.BulkUpdateDto_price? Price { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.BulkUpdateDtoPrice? Price { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.BulkUpdateDto_price Price { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.BulkUpdateDtoPrice Price { get; set; }
 #endif
         /// <summary>Array of product IDs</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -75,7 +75,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public List<string> ProductIds { get; set; }
 #endif
         /// <summary>Type of bulk update operation</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.BulkUpdateDto_type? Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.BulkUpdateDtoType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.BulkUpdateDto"/> and sets the default values.
         /// </summary>
@@ -102,15 +102,15 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "altId", n => { AltId = n.GetStringValue(); } },
-                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.BulkUpdateDto_altType>(); } },
+                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.BulkUpdateDtoAltType>(); } },
                 { "availability", n => { Availability = n.GetBoolValue(); } },
                 { "collectionIds", n => { CollectionIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "compareAtPrice", n => { CompareAtPrice = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BulkUpdateDto_compareAtPrice>(global::Soenneker.HighLevel.OpenApiClient.Models.BulkUpdateDto_compareAtPrice.CreateFromDiscriminatorValue); } },
+                { "compareAtPrice", n => { CompareAtPrice = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BulkUpdateDtoCompareAtPrice>(global::Soenneker.HighLevel.OpenApiClient.Models.BulkUpdateDtoCompareAtPrice.CreateFromDiscriminatorValue); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
-                { "filters", n => { Filters = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BulkUpdateDto_filters>(global::Soenneker.HighLevel.OpenApiClient.Models.BulkUpdateDto_filters.CreateFromDiscriminatorValue); } },
-                { "price", n => { Price = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BulkUpdateDto_price>(global::Soenneker.HighLevel.OpenApiClient.Models.BulkUpdateDto_price.CreateFromDiscriminatorValue); } },
+                { "filters", n => { Filters = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BulkUpdateDtoFilters>(global::Soenneker.HighLevel.OpenApiClient.Models.BulkUpdateDtoFilters.CreateFromDiscriminatorValue); } },
+                { "price", n => { Price = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BulkUpdateDtoPrice>(global::Soenneker.HighLevel.OpenApiClient.Models.BulkUpdateDtoPrice.CreateFromDiscriminatorValue); } },
                 { "productIds", n => { ProductIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.BulkUpdateDto_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.BulkUpdateDtoType>(); } },
             };
         }
         /// <summary>
@@ -121,15 +121,15 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("altId", AltId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.BulkUpdateDto_altType>("altType", AltType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.BulkUpdateDtoAltType>("altType", AltType);
             writer.WriteBoolValue("availability", Availability);
             writer.WriteCollectionOfPrimitiveValues<string>("collectionIds", CollectionIds);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BulkUpdateDto_compareAtPrice>("compareAtPrice", CompareAtPrice);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BulkUpdateDtoCompareAtPrice>("compareAtPrice", CompareAtPrice);
             writer.WriteStringValue("currency", Currency);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BulkUpdateDto_filters>("filters", Filters);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BulkUpdateDto_price>("price", Price);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BulkUpdateDtoFilters>("filters", Filters);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BulkUpdateDtoPrice>("price", Price);
             writer.WriteCollectionOfPrimitiveValues<string>("productIds", ProductIds);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.BulkUpdateDto_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.BulkUpdateDtoType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

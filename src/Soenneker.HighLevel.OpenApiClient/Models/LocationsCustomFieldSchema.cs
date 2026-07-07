@@ -53,7 +53,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The maxFileLimit property</summary>
         public double? MaxFileLimit { get; set; }
         /// <summary>Model of the custom field</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LocationsCustomFieldSchema_model? Model { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LocationsCustomFieldSchemaModel? Model { get; set; }
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -120,7 +120,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "isMultiFileAllowed", n => { IsMultiFileAllowed = n.GetBoolValue(); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
                 { "maxFileLimit", n => { MaxFileLimit = n.GetDoubleValue(); } },
-                { "model", n => { Model = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LocationsCustomFieldSchema_model>(); } },
+                { "model", n => { Model = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LocationsCustomFieldSchemaModel>(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "picklistImageOptions", n => { PicklistImageOptions = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "picklistOptions", n => { PicklistOptions = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -142,7 +142,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteBoolValue("isMultiFileAllowed", IsMultiFileAllowed);
             writer.WriteStringValue("locationId", LocationId);
             writer.WriteDoubleValue("maxFileLimit", MaxFileLimit);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LocationsCustomFieldSchema_model>("model", Model);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LocationsCustomFieldSchemaModel>("model", Model);
             writer.WriteStringValue("name", Name);
             writer.WriteCollectionOfPrimitiveValues<string>("picklistImageOptions", PicklistImageOptions);
             writer.WriteCollectionOfPrimitiveValues<string>("picklistOptions", PicklistOptions);

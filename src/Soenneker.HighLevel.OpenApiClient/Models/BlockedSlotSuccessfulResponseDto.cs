@@ -33,10 +33,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>End Time</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.BlockedSlotSuccessfulResponseDto_endTime? EndTime { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.BlockedSlotSuccessfulResponseDtoEndTimeProperty? EndTime { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.BlockedSlotSuccessfulResponseDto_endTime EndTime { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.BlockedSlotSuccessfulResponseDtoEndTimeProperty EndTime { get; set; }
 #endif
         /// <summary>Id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -57,10 +57,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Start Time</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.BlockedSlotSuccessfulResponseDto_startTime? StartTime { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.BlockedSlotSuccessfulResponseDtoStartTimeProperty? StartTime { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.BlockedSlotSuccessfulResponseDto_startTime StartTime { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.BlockedSlotSuccessfulResponseDtoStartTimeProperty StartTime { get; set; }
 #endif
         /// <summary>Title</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -97,10 +97,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             {
                 { "assignedUserId", n => { AssignedUserId = n.GetStringValue(); } },
                 { "calendarId", n => { CalendarId = n.GetStringValue(); } },
-                { "endTime", n => { EndTime = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BlockedSlotSuccessfulResponseDto_endTime>(global::Soenneker.HighLevel.OpenApiClient.Models.BlockedSlotSuccessfulResponseDto_endTime.CreateFromDiscriminatorValue); } },
+                { "endTime", n => { EndTime = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BlockedSlotSuccessfulResponseDtoEndTimeProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.BlockedSlotSuccessfulResponseDtoEndTimeProperty.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
-                { "startTime", n => { StartTime = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BlockedSlotSuccessfulResponseDto_startTime>(global::Soenneker.HighLevel.OpenApiClient.Models.BlockedSlotSuccessfulResponseDto_startTime.CreateFromDiscriminatorValue); } },
+                { "startTime", n => { StartTime = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BlockedSlotSuccessfulResponseDtoStartTimeProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.BlockedSlotSuccessfulResponseDtoStartTimeProperty.CreateFromDiscriminatorValue); } },
                 { "title", n => { Title = n.GetStringValue(); } },
             };
         }
@@ -113,10 +113,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("assignedUserId", AssignedUserId);
             writer.WriteStringValue("calendarId", CalendarId);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BlockedSlotSuccessfulResponseDto_endTime>("endTime", EndTime);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BlockedSlotSuccessfulResponseDtoEndTimeProperty>("endTime", EndTime);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("locationId", LocationId);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BlockedSlotSuccessfulResponseDto_startTime>("startTime", StartTime);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BlockedSlotSuccessfulResponseDtoStartTimeProperty>("startTime", StartTime);
             writer.WriteStringValue("title", Title);
             writer.WriteAdditionalData(AdditionalData);
         }

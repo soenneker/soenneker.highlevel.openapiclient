@@ -23,7 +23,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string AltId { get; set; }
 #endif
         /// <summary>Alt Type</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.RecordPaymentDto_altType? AltType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.RecordPaymentDtoAltType? AltType { get; set; }
         /// <summary>Amount to be paid against the invoice.</summary>
         public double? Amount { get; set; }
         /// <summary>The card property</summary>
@@ -53,13 +53,13 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The meta property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.RecordPaymentDto_meta? Meta { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.RecordPaymentDtoMetaProperty? Meta { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.RecordPaymentDto_meta Meta { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.RecordPaymentDtoMetaProperty Meta { get; set; }
 #endif
         /// <summary>manual payment method</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.RecordPaymentDto_mode? Mode { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.RecordPaymentDtoMode? Mode { get; set; }
         /// <summary>Any note to be recorded with the transaction</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -102,13 +102,13 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "altId", n => { AltId = n.GetStringValue(); } },
-                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.RecordPaymentDto_altType>(); } },
+                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.RecordPaymentDtoAltType>(); } },
                 { "amount", n => { Amount = n.GetDoubleValue(); } },
                 { "card", n => { Card = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CardDto>(global::Soenneker.HighLevel.OpenApiClient.Models.CardDto.CreateFromDiscriminatorValue); } },
                 { "cheque", n => { Cheque = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ChequeDto>(global::Soenneker.HighLevel.OpenApiClient.Models.ChequeDto.CreateFromDiscriminatorValue); } },
                 { "fulfilledAt", n => { FulfilledAt = n.GetStringValue(); } },
-                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.RecordPaymentDto_meta>(global::Soenneker.HighLevel.OpenApiClient.Models.RecordPaymentDto_meta.CreateFromDiscriminatorValue); } },
-                { "mode", n => { Mode = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.RecordPaymentDto_mode>(); } },
+                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.RecordPaymentDtoMetaProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.RecordPaymentDtoMetaProperty.CreateFromDiscriminatorValue); } },
+                { "mode", n => { Mode = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.RecordPaymentDtoMode>(); } },
                 { "notes", n => { Notes = n.GetStringValue(); } },
                 { "paymentScheduleIds", n => { PaymentScheduleIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
@@ -121,13 +121,13 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("altId", AltId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.RecordPaymentDto_altType>("altType", AltType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.RecordPaymentDtoAltType>("altType", AltType);
             writer.WriteDoubleValue("amount", Amount);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CardDto>("card", Card);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ChequeDto>("cheque", Cheque);
             writer.WriteStringValue("fulfilledAt", FulfilledAt);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.RecordPaymentDto_meta>("meta", Meta);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.RecordPaymentDto_mode>("mode", Mode);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.RecordPaymentDtoMetaProperty>("meta", Meta);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.RecordPaymentDtoMode>("mode", Mode);
             writer.WriteStringValue("notes", Notes);
             writer.WriteCollectionOfPrimitiveValues<string>("paymentScheduleIds", PaymentScheduleIds);
             writer.WriteAdditionalData(AdditionalData);

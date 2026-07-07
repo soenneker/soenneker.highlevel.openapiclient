@@ -55,10 +55,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Details for Product Label</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateProductDto_label? Label { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateProductDtoLabel? Label { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateProductDto_label Label { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateProductDtoLabel Label { get; set; }
 #endif
         /// <summary>The unique identifier for the location.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -85,14 +85,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string Name { get; set; }
 #endif
         /// <summary>The productType property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateProductDto_productType? ProductType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateProductDtoProductType? ProductType { get; set; }
         /// <summary>SEO data for the product that will be displayed in the preview</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateProductDto_seo? Seo { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateProductDtoSeo? Seo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateProductDto_seo Seo { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateProductDtoSeo Seo { get; set; }
 #endif
         /// <summary>The slug using which the product navigation will be handled</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -134,6 +134,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public CreateProductDto()
         {
             AdditionalData = new Dictionary<string, object>();
+            IsLabelEnabled = false;
+            IsTaxesEnabled = false;
+            TaxInclusive = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -160,12 +163,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "image", n => { Image = n.GetStringValue(); } },
                 { "isLabelEnabled", n => { IsLabelEnabled = n.GetBoolValue(); } },
                 { "isTaxesEnabled", n => { IsTaxesEnabled = n.GetBoolValue(); } },
-                { "label", n => { Label = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateProductDto_label>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateProductDto_label.CreateFromDiscriminatorValue); } },
+                { "label", n => { Label = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateProductDtoLabel>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateProductDtoLabel.CreateFromDiscriminatorValue); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
                 { "medias", n => { Medias = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ProductMediaDto>(global::Soenneker.HighLevel.OpenApiClient.Models.ProductMediaDto.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "productType", n => { ProductType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateProductDto_productType>(); } },
-                { "seo", n => { Seo = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateProductDto_seo>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateProductDto_seo.CreateFromDiscriminatorValue); } },
+                { "productType", n => { ProductType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateProductDtoProductType>(); } },
+                { "seo", n => { Seo = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateProductDtoSeo>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateProductDtoSeo.CreateFromDiscriminatorValue); } },
                 { "slug", n => { Slug = n.GetStringValue(); } },
                 { "statementDescriptor", n => { StatementDescriptor = n.GetStringValue(); } },
                 { "taxInclusive", n => { TaxInclusive = n.GetBoolValue(); } },
@@ -187,12 +190,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("image", Image);
             writer.WriteBoolValue("isLabelEnabled", IsLabelEnabled);
             writer.WriteBoolValue("isTaxesEnabled", IsTaxesEnabled);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateProductDto_label>("label", Label);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateProductDtoLabel>("label", Label);
             writer.WriteStringValue("locationId", LocationId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ProductMediaDto>("medias", Medias);
             writer.WriteStringValue("name", Name);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateProductDto_productType>("productType", ProductType);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateProductDto_seo>("seo", Seo);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateProductDtoProductType>("productType", ProductType);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateProductDtoSeo>("seo", Seo);
             writer.WriteStringValue("slug", Slug);
             writer.WriteStringValue("statementDescriptor", StatementDescriptor);
             writer.WriteCollectionOfPrimitiveValues<string>("taxes", Taxes);

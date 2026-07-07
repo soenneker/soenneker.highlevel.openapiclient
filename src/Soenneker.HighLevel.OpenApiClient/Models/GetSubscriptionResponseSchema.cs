@@ -25,20 +25,20 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>AltType is the type of identifier.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_altType? AltType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaAltTypeProperty? AltType { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_altType AltType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaAltTypeProperty AltType { get; set; }
 #endif
         /// <summary>Subscription value.</summary>
         public double? Amount { get; set; }
         /// <summary>Auto payment details of the subscription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_autoPayment? AutoPayment { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaAutoPaymentProperty? AutoPayment { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_autoPayment AutoPayment { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaAutoPaymentProperty AutoPayment { get; set; }
 #endif
         /// <summary>Cancellation timestamp of the subscription.</summary>
         public DateTimeOffset? CanceledAt { get; set; }
@@ -61,18 +61,18 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Contact details of the subscriber.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_contactSnapshot? ContactSnapshot { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaContactSnapshotProperty? ContactSnapshot { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_contactSnapshot ContactSnapshot { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaContactSnapshotProperty ContactSnapshot { get; set; }
 #endif
         /// <summary>Coupon details of the subscription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_coupon? Coupon { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaCouponProperty? Coupon { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_coupon Coupon { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaCouponProperty Coupon { get; set; }
 #endif
         /// <summary>The creation timestamp of the subscription.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
@@ -103,10 +103,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Entity source details for the subscription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_entitySource? EntitySource { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaEntitySource? EntitySource { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_entitySource EntitySource { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaEntitySource EntitySource { get; set; }
 #endif
         /// <summary>&quot;Entity type of subscription (eg: order).&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -139,42 +139,42 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Meta details of the subscription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_meta? Meta { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaMetaProperty? Meta { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_meta Meta { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaMetaProperty Meta { get; set; }
 #endif
         /// <summary>Payment provider details for the subscription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_paymentProvider? PaymentProvider { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaPaymentProviderProperty? PaymentProvider { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_paymentProvider PaymentProvider { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaPaymentProviderProperty PaymentProvider { get; set; }
 #endif
         /// <summary>Recurring product details of the subscription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_recurringProduct? RecurringProduct { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaRecurringProductProperty? RecurringProduct { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_recurringProduct RecurringProduct { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaRecurringProductProperty RecurringProduct { get; set; }
 #endif
         /// <summary>Scedule details for the subscription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_schedule? Schedule { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaSchedule? Schedule { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_schedule Schedule { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaSchedule Schedule { get; set; }
 #endif
         /// <summary>Subscription status.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_status? Status { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaStatusProperty? Status { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_status Status { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaStatusProperty Status { get; set; }
 #endif
         /// <summary>Subscription id for subscription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -187,10 +187,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Snapshot of subscription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_subscriptionSnapshot? SubscriptionSnapshot { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaSubscriptionSnapshotProperty? SubscriptionSnapshot { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_subscriptionSnapshot SubscriptionSnapshot { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaSubscriptionSnapshotProperty SubscriptionSnapshot { get; set; }
 #endif
         /// <summary>Trace id of the subscription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -228,31 +228,31 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "altId", n => { AltId = n.GetStringValue(); } },
-                { "altType", n => { AltType = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_altType>(global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_altType.CreateFromDiscriminatorValue); } },
+                { "altType", n => { AltType = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaAltTypeProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaAltTypeProperty.CreateFromDiscriminatorValue); } },
                 { "amount", n => { Amount = n.GetDoubleValue(); } },
-                { "autoPayment", n => { AutoPayment = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_autoPayment>(global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_autoPayment.CreateFromDiscriminatorValue); } },
+                { "autoPayment", n => { AutoPayment = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaAutoPaymentProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaAutoPaymentProperty.CreateFromDiscriminatorValue); } },
                 { "canceledAt", n => { CanceledAt = n.GetDateTimeOffsetValue(); } },
                 { "canceledBy", n => { CanceledBy = n.GetStringValue(); } },
                 { "contactId", n => { ContactId = n.GetStringValue(); } },
-                { "contactSnapshot", n => { ContactSnapshot = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_contactSnapshot>(global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_contactSnapshot.CreateFromDiscriminatorValue); } },
-                { "coupon", n => { Coupon = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_coupon>(global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_coupon.CreateFromDiscriminatorValue); } },
+                { "contactSnapshot", n => { ContactSnapshot = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaContactSnapshotProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaContactSnapshotProperty.CreateFromDiscriminatorValue); } },
+                { "coupon", n => { Coupon = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaCouponProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaCouponProperty.CreateFromDiscriminatorValue); } },
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "createdBy", n => { CreatedBy = n.GetStringValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "entityId", n => { EntityId = n.GetStringValue(); } },
-                { "entitySource", n => { EntitySource = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_entitySource>(global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_entitySource.CreateFromDiscriminatorValue); } },
+                { "entitySource", n => { EntitySource = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaEntitySource>(global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaEntitySource.CreateFromDiscriminatorValue); } },
                 { "entityType", n => { EntityType = n.GetStringValue(); } },
                 { "_id", n => { Id = n.GetStringValue(); } },
                 { "ipAddress", n => { IpAddress = n.GetStringValue(); } },
                 { "liveMode", n => { LiveMode = n.GetBoolValue(); } },
                 { "markAsTest", n => { MarkAsTest = n.GetBoolValue(); } },
-                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_meta>(global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_meta.CreateFromDiscriminatorValue); } },
-                { "paymentProvider", n => { PaymentProvider = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_paymentProvider>(global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_paymentProvider.CreateFromDiscriminatorValue); } },
-                { "recurringProduct", n => { RecurringProduct = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_recurringProduct>(global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_recurringProduct.CreateFromDiscriminatorValue); } },
-                { "schedule", n => { Schedule = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_schedule>(global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_schedule.CreateFromDiscriminatorValue); } },
-                { "status", n => { Status = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_status>(global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_status.CreateFromDiscriminatorValue); } },
+                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaMetaProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaMetaProperty.CreateFromDiscriminatorValue); } },
+                { "paymentProvider", n => { PaymentProvider = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaPaymentProviderProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaPaymentProviderProperty.CreateFromDiscriminatorValue); } },
+                { "recurringProduct", n => { RecurringProduct = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaRecurringProductProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaRecurringProductProperty.CreateFromDiscriminatorValue); } },
+                { "schedule", n => { Schedule = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaSchedule>(global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaSchedule.CreateFromDiscriminatorValue); } },
+                { "status", n => { Status = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaStatusProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaStatusProperty.CreateFromDiscriminatorValue); } },
                 { "subscriptionId", n => { SubscriptionId = n.GetStringValue(); } },
-                { "subscriptionSnapshot", n => { SubscriptionSnapshot = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_subscriptionSnapshot>(global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_subscriptionSnapshot.CreateFromDiscriminatorValue); } },
+                { "subscriptionSnapshot", n => { SubscriptionSnapshot = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaSubscriptionSnapshotProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaSubscriptionSnapshotProperty.CreateFromDiscriminatorValue); } },
                 { "traceId", n => { TraceId = n.GetStringValue(); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
             };
@@ -265,31 +265,31 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("altId", AltId);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_altType>("altType", AltType);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaAltTypeProperty>("altType", AltType);
             writer.WriteDoubleValue("amount", Amount);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_autoPayment>("autoPayment", AutoPayment);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaAutoPaymentProperty>("autoPayment", AutoPayment);
             writer.WriteDateTimeOffsetValue("canceledAt", CanceledAt);
             writer.WriteStringValue("canceledBy", CanceledBy);
             writer.WriteStringValue("contactId", ContactId);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_contactSnapshot>("contactSnapshot", ContactSnapshot);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_coupon>("coupon", Coupon);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaContactSnapshotProperty>("contactSnapshot", ContactSnapshot);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaCouponProperty>("coupon", Coupon);
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
             writer.WriteStringValue("createdBy", CreatedBy);
             writer.WriteStringValue("currency", Currency);
             writer.WriteStringValue("entityId", EntityId);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_entitySource>("entitySource", EntitySource);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaEntitySource>("entitySource", EntitySource);
             writer.WriteStringValue("entityType", EntityType);
             writer.WriteStringValue("_id", Id);
             writer.WriteStringValue("ipAddress", IpAddress);
             writer.WriteBoolValue("liveMode", LiveMode);
             writer.WriteBoolValue("markAsTest", MarkAsTest);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_meta>("meta", Meta);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_paymentProvider>("paymentProvider", PaymentProvider);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_recurringProduct>("recurringProduct", RecurringProduct);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_schedule>("schedule", Schedule);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_status>("status", Status);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaMetaProperty>("meta", Meta);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaPaymentProviderProperty>("paymentProvider", PaymentProvider);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaRecurringProductProperty>("recurringProduct", RecurringProduct);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaSchedule>("schedule", Schedule);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaStatusProperty>("status", Status);
             writer.WriteStringValue("subscriptionId", SubscriptionId);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchema_subscriptionSnapshot>("subscriptionSnapshot", SubscriptionSnapshot);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaSubscriptionSnapshotProperty>("subscriptionSnapshot", SubscriptionSnapshot);
             writer.WriteStringValue("traceId", TraceId);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
             writer.WriteAdditionalData(AdditionalData);

@@ -17,10 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The field_value property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.FileField_field_value? FieldValue { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.FileFieldFieldValueProperty? FieldValue { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.FileField_field_value FieldValue { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.FileFieldFieldValueProperty FieldValue { get; set; }
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -63,7 +63,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "field_value", n => { FieldValue = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.FileField_field_value>(global::Soenneker.HighLevel.OpenApiClient.Models.FileField_field_value.CreateFromDiscriminatorValue); } },
+                { "field_value", n => { FieldValue = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.FileFieldFieldValueProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.FileFieldFieldValueProperty.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "key", n => { Key = n.GetStringValue(); } },
             };
@@ -75,7 +75,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.FileField_field_value>("field_value", FieldValue);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.FileFieldFieldValueProperty>("field_value", FieldValue);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("key", Key);
             writer.WriteAdditionalData(AdditionalData);

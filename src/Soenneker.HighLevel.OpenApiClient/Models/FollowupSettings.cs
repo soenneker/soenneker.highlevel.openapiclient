@@ -19,7 +19,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Whether to respect working hours for followups</summary>
         public bool? FollowUpHours { get; set; }
         /// <summary>Timezone to use for followups, contact or location</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.FollowupSettings_timezoneToUse? TimezoneToUse { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.FollowupSettingsTimezoneToUse? TimezoneToUse { get; set; }
         /// <summary>Working hours configuration for followups</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -34,6 +34,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public FollowupSettings()
         {
             AdditionalData = new Dictionary<string, object>();
+            DynamicChannelSwitching = true;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -55,7 +56,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             {
                 { "dynamicChannelSwitching", n => { DynamicChannelSwitching = n.GetBoolValue(); } },
                 { "followUpHours", n => { FollowUpHours = n.GetBoolValue(); } },
-                { "timezoneToUse", n => { TimezoneToUse = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.FollowupSettings_timezoneToUse>(); } },
+                { "timezoneToUse", n => { TimezoneToUse = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.FollowupSettingsTimezoneToUse>(); } },
                 { "workingHours", n => { WorkingHours = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.WorkingHours>(global::Soenneker.HighLevel.OpenApiClient.Models.WorkingHours.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -68,7 +69,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("dynamicChannelSwitching", DynamicChannelSwitching);
             writer.WriteBoolValue("followUpHours", FollowUpHours);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.FollowupSettings_timezoneToUse>("timezoneToUse", TimezoneToUse);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.FollowupSettingsTimezoneToUse>("timezoneToUse", TimezoneToUse);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.WorkingHours>("workingHours", WorkingHours);
             writer.WriteAdditionalData(AdditionalData);
         }

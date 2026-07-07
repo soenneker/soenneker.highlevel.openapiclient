@@ -25,10 +25,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Uploaded files</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.FileUploadResponseDto_uploadedFiles? UploadedFiles { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.FileUploadResponseDtoUploadedFilesProperty? UploadedFiles { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.FileUploadResponseDto_uploadedFiles UploadedFiles { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.FileUploadResponseDtoUploadedFilesProperty UploadedFiles { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.FileUploadResponseDto"/> and sets the default values.
@@ -56,7 +56,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "meta", n => { Meta = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "uploadedFiles", n => { UploadedFiles = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.FileUploadResponseDto_uploadedFiles>(global::Soenneker.HighLevel.OpenApiClient.Models.FileUploadResponseDto_uploadedFiles.CreateFromDiscriminatorValue); } },
+                { "uploadedFiles", n => { UploadedFiles = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.FileUploadResponseDtoUploadedFilesProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.FileUploadResponseDtoUploadedFilesProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -67,7 +67,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("meta", Meta);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.FileUploadResponseDto_uploadedFiles>("uploadedFiles", UploadedFiles);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.FileUploadResponseDtoUploadedFilesProperty>("uploadedFiles", UploadedFiles);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

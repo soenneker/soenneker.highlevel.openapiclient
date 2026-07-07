@@ -35,10 +35,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Inbound call service configuration</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.NumberPoolDto_inboundCallService? InboundCallService { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.NumberPoolDtoInboundCallService? InboundCallService { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.NumberPoolDto_inboundCallService InboundCallService { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.NumberPoolDtoInboundCallService InboundCallService { get; set; }
 #endif
         /// <summary>Whether the number pool is active</summary>
         public bool? IsActive { get; set; }
@@ -61,10 +61,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Phone numbers in this pool</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.NumberPoolDto_numbers>? Numbers { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.NumberPoolDtoNumbersItem>? Numbers { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.NumberPoolDto_numbers> Numbers { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.NumberPoolDtoNumbersItem> Numbers { get; set; }
 #endif
         /// <summary>Whether whisper is enabled</summary>
         public bool? Whisper { get; set; }
@@ -104,11 +104,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "callRecording", n => { CallRecording = n.GetBoolValue(); } },
                 { "forwardingNumber", n => { ForwardingNumber = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "inboundCallService", n => { InboundCallService = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.NumberPoolDto_inboundCallService>(global::Soenneker.HighLevel.OpenApiClient.Models.NumberPoolDto_inboundCallService.CreateFromDiscriminatorValue); } },
+                { "inboundCallService", n => { InboundCallService = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.NumberPoolDtoInboundCallService>(global::Soenneker.HighLevel.OpenApiClient.Models.NumberPoolDtoInboundCallService.CreateFromDiscriminatorValue); } },
                 { "isActive", n => { IsActive = n.GetBoolValue(); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "numbers", n => { Numbers = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.NumberPoolDto_numbers>(global::Soenneker.HighLevel.OpenApiClient.Models.NumberPoolDto_numbers.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "numbers", n => { Numbers = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.NumberPoolDtoNumbersItem>(global::Soenneker.HighLevel.OpenApiClient.Models.NumberPoolDtoNumbersItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "whisper", n => { Whisper = n.GetBoolValue(); } },
                 { "whisperMessage", n => { WhisperMessage = n.GetStringValue(); } },
             };
@@ -123,11 +123,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteBoolValue("callRecording", CallRecording);
             writer.WriteStringValue("forwardingNumber", ForwardingNumber);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.NumberPoolDto_inboundCallService>("inboundCallService", InboundCallService);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.NumberPoolDtoInboundCallService>("inboundCallService", InboundCallService);
             writer.WriteBoolValue("isActive", IsActive);
             writer.WriteStringValue("locationId", LocationId);
             writer.WriteStringValue("name", Name);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.NumberPoolDto_numbers>("numbers", Numbers);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.NumberPoolDtoNumbersItem>("numbers", Numbers);
             writer.WriteBoolValue("whisper", Whisper);
             writer.WriteStringValue("whisperMessage", WhisperMessage);
             writer.WriteAdditionalData(AdditionalData);

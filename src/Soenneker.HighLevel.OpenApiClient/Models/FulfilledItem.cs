@@ -33,18 +33,18 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Price details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.FulfilledItem_price? Price { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.FulfilledItemPrice? Price { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.FulfilledItem_price Price { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.FulfilledItemPrice Price { get; set; }
 #endif
         /// <summary>Product details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.FulfilledItem_product? Product { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.FulfilledItemProduct? Product { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.FulfilledItem_product Product { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.FulfilledItemProduct Product { get; set; }
 #endif
         /// <summary>The no of quantity of the current fulfilled item</summary>
         public double? Qty { get; set; }
@@ -75,8 +75,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             {
                 { "_id", n => { Id = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "price", n => { Price = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.FulfilledItem_price>(global::Soenneker.HighLevel.OpenApiClient.Models.FulfilledItem_price.CreateFromDiscriminatorValue); } },
-                { "product", n => { Product = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.FulfilledItem_product>(global::Soenneker.HighLevel.OpenApiClient.Models.FulfilledItem_product.CreateFromDiscriminatorValue); } },
+                { "price", n => { Price = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.FulfilledItemPrice>(global::Soenneker.HighLevel.OpenApiClient.Models.FulfilledItemPrice.CreateFromDiscriminatorValue); } },
+                { "product", n => { Product = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.FulfilledItemProduct>(global::Soenneker.HighLevel.OpenApiClient.Models.FulfilledItemProduct.CreateFromDiscriminatorValue); } },
                 { "qty", n => { Qty = n.GetDoubleValue(); } },
             };
         }
@@ -89,8 +89,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("_id", Id);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.FulfilledItem_price>("price", Price);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.FulfilledItem_product>("product", Product);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.FulfilledItemPrice>("price", Price);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.FulfilledItemProduct>("product", Product);
             writer.WriteDoubleValue("qty", Qty);
             writer.WriteAdditionalData(AdditionalData);
         }

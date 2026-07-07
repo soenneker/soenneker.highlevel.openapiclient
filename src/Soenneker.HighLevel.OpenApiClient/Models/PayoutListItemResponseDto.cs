@@ -17,10 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Affiliate details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PayoutListItemResponseDto_affiliate? Affiliate { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PayoutListItemResponseDtoAffiliate? Affiliate { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PayoutListItemResponseDto_affiliate Affiliate { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PayoutListItemResponseDtoAffiliate Affiliate { get; set; }
 #endif
         /// <summary>Affiliate email</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -127,10 +127,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Payout metadata</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PayoutListItemResponseDto_paidMeta? PaidMeta { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PayoutListItemResponseDtoPaidMetaProperty? PaidMeta { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PayoutListItemResponseDto_paidMeta PaidMeta { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PayoutListItemResponseDtoPaidMetaProperty PaidMeta { get; set; }
 #endif
         /// <summary>Payout paid method</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -197,7 +197,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "affiliate", n => { Affiliate = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PayoutListItemResponseDto_affiliate>(global::Soenneker.HighLevel.OpenApiClient.Models.PayoutListItemResponseDto_affiliate.CreateFromDiscriminatorValue); } },
+                { "affiliate", n => { Affiliate = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PayoutListItemResponseDtoAffiliate>(global::Soenneker.HighLevel.OpenApiClient.Models.PayoutListItemResponseDtoAffiliate.CreateFromDiscriminatorValue); } },
                 { "affiliateEmail", n => { AffiliateEmail = n.GetStringValue(); } },
                 { "affiliateId", n => { AffiliateId = n.GetStringValue(); } },
                 { "affiliateName", n => { AffiliateName = n.GetStringValue(); } },
@@ -213,7 +213,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "isMigrated", n => { IsMigrated = n.GetBoolValue(); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
                 { "paidAt", n => { PaidAt = n.GetStringValue(); } },
-                { "paidMeta", n => { PaidMeta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PayoutListItemResponseDto_paidMeta>(global::Soenneker.HighLevel.OpenApiClient.Models.PayoutListItemResponseDto_paidMeta.CreateFromDiscriminatorValue); } },
+                { "paidMeta", n => { PaidMeta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PayoutListItemResponseDtoPaidMetaProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.PayoutListItemResponseDtoPaidMetaProperty.CreateFromDiscriminatorValue); } },
                 { "paidMethod", n => { PaidMethod = n.GetStringValue(); } },
                 { "payoutMethod", n => { PayoutMethod = n.GetStringValue(); } },
                 { "payoutMonth", n => { PayoutMonth = n.GetStringValue(); } },
@@ -228,7 +228,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PayoutListItemResponseDto_affiliate>("affiliate", Affiliate);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PayoutListItemResponseDtoAffiliate>("affiliate", Affiliate);
             writer.WriteStringValue("affiliateEmail", AffiliateEmail);
             writer.WriteStringValue("affiliateId", AffiliateId);
             writer.WriteStringValue("affiliateName", AffiliateName);
@@ -244,7 +244,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteBoolValue("isMigrated", IsMigrated);
             writer.WriteStringValue("locationId", LocationId);
             writer.WriteStringValue("paidAt", PaidAt);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PayoutListItemResponseDto_paidMeta>("paidMeta", PaidMeta);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PayoutListItemResponseDtoPaidMetaProperty>("paidMeta", PaidMeta);
             writer.WriteStringValue("paidMethod", PaidMethod);
             writer.WriteStringValue("payoutMethod", PayoutMethod);
             writer.WriteStringValue("payoutMonth", PayoutMonth);

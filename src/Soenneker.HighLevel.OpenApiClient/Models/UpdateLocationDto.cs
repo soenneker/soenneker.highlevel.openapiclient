@@ -39,14 +39,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string CompanyId { get; set; }
 #endif
         /// <summary>The country in which the business is present for which sub-account is created</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDto_country? Country { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDtoCountry? Country { get; set; }
         /// <summary>The mailgun credentials for location</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDto_mailgun? Mailgun { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDtoMailgun? Mailgun { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDto_mailgun Mailgun { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDtoMailgun Mailgun { get; set; }
 #endif
         /// <summary>The name for the sub-account/location</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -75,34 +75,34 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The prospectInfo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDto_prospectInfo? ProspectInfo { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDtoProspectInfo? ProspectInfo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDto_prospectInfo ProspectInfo { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDtoProspectInfo ProspectInfo { get; set; }
 #endif
         /// <summary>The default settings for location</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDto_settings? Settings { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDtoSettings? Settings { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDto_settings Settings { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDtoSettings Settings { get; set; }
 #endif
         /// <summary>The snapshot to be updated in the location.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDto_snapshot? Snapshot { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDtoSnapshot? Snapshot { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDto_snapshot Snapshot { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDtoSnapshot Snapshot { get; set; }
 #endif
         /// <summary>The social media links for location</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDto_social? Social { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDtoSocial? Social { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDto_social Social { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDtoSocial Social { get; set; }
 #endif
         /// <summary>The state in which the business operates for which sub-account is created</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -123,10 +123,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The twilio credentials for location</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDto_twilio? Twilio { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDtoTwilio? Twilio { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDto_twilio Twilio { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDtoTwilio Twilio { get; set; }
 #endif
         /// <summary>The website of the business for which sub-account is created</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -164,18 +164,18 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "address", n => { Address = n.GetStringValue(); } },
                 { "city", n => { City = n.GetStringValue(); } },
                 { "companyId", n => { CompanyId = n.GetStringValue(); } },
-                { "country", n => { Country = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDto_country>(); } },
-                { "mailgun", n => { Mailgun = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDto_mailgun>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDto_mailgun.CreateFromDiscriminatorValue); } },
+                { "country", n => { Country = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDtoCountry>(); } },
+                { "mailgun", n => { Mailgun = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDtoMailgun>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDtoMailgun.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "phone", n => { Phone = n.GetStringValue(); } },
                 { "postalCode", n => { PostalCode = n.GetStringValue(); } },
-                { "prospectInfo", n => { ProspectInfo = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDto_prospectInfo>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDto_prospectInfo.CreateFromDiscriminatorValue); } },
-                { "settings", n => { Settings = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDto_settings>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDto_settings.CreateFromDiscriminatorValue); } },
-                { "snapshot", n => { Snapshot = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDto_snapshot>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDto_snapshot.CreateFromDiscriminatorValue); } },
-                { "social", n => { Social = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDto_social>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDto_social.CreateFromDiscriminatorValue); } },
+                { "prospectInfo", n => { ProspectInfo = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDtoProspectInfo>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDtoProspectInfo.CreateFromDiscriminatorValue); } },
+                { "settings", n => { Settings = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDtoSettings>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDtoSettings.CreateFromDiscriminatorValue); } },
+                { "snapshot", n => { Snapshot = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDtoSnapshot>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDtoSnapshot.CreateFromDiscriminatorValue); } },
+                { "social", n => { Social = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDtoSocial>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDtoSocial.CreateFromDiscriminatorValue); } },
                 { "state", n => { State = n.GetStringValue(); } },
                 { "timezone", n => { Timezone = n.GetStringValue(); } },
-                { "twilio", n => { Twilio = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDto_twilio>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDto_twilio.CreateFromDiscriminatorValue); } },
+                { "twilio", n => { Twilio = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDtoTwilio>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDtoTwilio.CreateFromDiscriminatorValue); } },
                 { "website", n => { Website = n.GetStringValue(); } },
             };
         }
@@ -189,18 +189,18 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("address", Address);
             writer.WriteStringValue("city", City);
             writer.WriteStringValue("companyId", CompanyId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDto_country>("country", Country);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDto_mailgun>("mailgun", Mailgun);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDtoCountry>("country", Country);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDtoMailgun>("mailgun", Mailgun);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("phone", Phone);
             writer.WriteStringValue("postalCode", PostalCode);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDto_prospectInfo>("prospectInfo", ProspectInfo);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDto_settings>("settings", Settings);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDto_snapshot>("snapshot", Snapshot);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDto_social>("social", Social);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDtoProspectInfo>("prospectInfo", ProspectInfo);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDtoSettings>("settings", Settings);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDtoSnapshot>("snapshot", Snapshot);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDtoSocial>("social", Social);
             writer.WriteStringValue("state", State);
             writer.WriteStringValue("timezone", Timezone);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDto_twilio>("twilio", Twilio);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateLocationDtoTwilio>("twilio", Twilio);
             writer.WriteStringValue("website", Website);
             writer.WriteAdditionalData(AdditionalData);
         }

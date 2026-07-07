@@ -57,10 +57,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Subscription action details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UserSubscriptionChangeDto_subscription_action? SubscriptionAction { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UserSubscriptionChangeDtoSubscriptionAction? SubscriptionAction { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UserSubscriptionChangeDto_subscription_action SubscriptionAction { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UserSubscriptionChangeDtoSubscriptionAction SubscriptionAction { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UserSubscriptionChangeDto"/> and sets the default values.
@@ -92,7 +92,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "legal_description", n => { LegalDescription = n.GetStringValue(); } },
                 { "legal_reason", n => { LegalReason = n.GetStringValue(); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
-                { "subscription_action", n => { SubscriptionAction = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UserSubscriptionChangeDto_subscription_action>(global::Soenneker.HighLevel.OpenApiClient.Models.UserSubscriptionChangeDto_subscription_action.CreateFromDiscriminatorValue); } },
+                { "subscription_action", n => { SubscriptionAction = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UserSubscriptionChangeDtoSubscriptionAction>(global::Soenneker.HighLevel.OpenApiClient.Models.UserSubscriptionChangeDtoSubscriptionAction.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -107,7 +107,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("legal_description", LegalDescription);
             writer.WriteStringValue("legal_reason", LegalReason);
             writer.WriteStringValue("locationId", LocationId);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UserSubscriptionChangeDto_subscription_action>("subscription_action", SubscriptionAction);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UserSubscriptionChangeDtoSubscriptionAction>("subscription_action", SubscriptionAction);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

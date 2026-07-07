@@ -14,8 +14,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The success property</summary>
-        public bool? Success { get; set; }
+        /// <summary>The succeded property</summary>
+        public bool? Succeded { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.DeleteNoteSuccessfulResponseDto"/> and sets the default values.
         /// </summary>
@@ -41,7 +41,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "success", n => { Success = n.GetBoolValue(); } },
+                { "succeded", n => { Succeded = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -51,7 +51,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteBoolValue("success", Success);
+            writer.WriteBoolValue("succeded", Succeded);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -17,10 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Shipping carrier data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateShippingCarrierResponseDto_data? Data { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateShippingCarrierResponseDtoData? Data { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateShippingCarrierResponseDto_data Data { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateShippingCarrierResponseDtoData Data { get; set; }
 #endif
         /// <summary>Success message</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -57,7 +57,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "data", n => { Data = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateShippingCarrierResponseDto_data>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateShippingCarrierResponseDto_data.CreateFromDiscriminatorValue); } },
+                { "data", n => { Data = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateShippingCarrierResponseDtoData>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateShippingCarrierResponseDtoData.CreateFromDiscriminatorValue); } },
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetBoolValue(); } },
             };
@@ -69,7 +69,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateShippingCarrierResponseDto_data>("data", Data);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateShippingCarrierResponseDtoData>("data", Data);
             writer.WriteStringValue("message", Message);
             writer.WriteBoolValue("status", Status);
             writer.WriteAdditionalData(AdditionalData);

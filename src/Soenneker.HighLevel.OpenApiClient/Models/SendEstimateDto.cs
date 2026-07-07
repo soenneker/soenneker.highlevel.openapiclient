@@ -13,7 +13,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning restore CS1591
     {
         /// <summary>The action property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SendEstimateDto_action? Action { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SendEstimateDtoAction? Action { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Location Id or Agency Id</summary>
@@ -25,7 +25,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string AltId { get; set; }
 #endif
         /// <summary>The altType property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SendEstimateDto_altType? AltType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SendEstimateDtoAltType? AltType { get; set; }
         /// <summary>estimate name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -39,10 +39,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>sender details for invoice, valid only if invoice is not sent manually</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SendEstimateDto_sentFrom? SentFrom { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SendEstimateDtoSentFrom? SentFrom { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SendEstimateDto_sentFrom SentFrom { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SendEstimateDtoSentFrom SentFrom { get; set; }
 #endif
         /// <summary>Please ensure that the UserId corresponds to an authorized personnel, either by an employee ID or agency ID, to access this location. This account will serve as the primary channel for all future communications and updates.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -77,12 +77,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "action", n => { Action = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendEstimateDto_action>(); } },
+                { "action", n => { Action = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendEstimateDtoAction>(); } },
                 { "altId", n => { AltId = n.GetStringValue(); } },
-                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendEstimateDto_altType>(); } },
+                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendEstimateDtoAltType>(); } },
                 { "estimateName", n => { EstimateName = n.GetStringValue(); } },
                 { "liveMode", n => { LiveMode = n.GetBoolValue(); } },
-                { "sentFrom", n => { SentFrom = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendEstimateDto_sentFrom>(global::Soenneker.HighLevel.OpenApiClient.Models.SendEstimateDto_sentFrom.CreateFromDiscriminatorValue); } },
+                { "sentFrom", n => { SentFrom = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendEstimateDtoSentFrom>(global::Soenneker.HighLevel.OpenApiClient.Models.SendEstimateDtoSentFrom.CreateFromDiscriminatorValue); } },
                 { "userId", n => { UserId = n.GetStringValue(); } },
             };
         }
@@ -93,12 +93,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendEstimateDto_action>("action", Action);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendEstimateDtoAction>("action", Action);
             writer.WriteStringValue("altId", AltId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendEstimateDto_altType>("altType", AltType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendEstimateDtoAltType>("altType", AltType);
             writer.WriteStringValue("estimateName", EstimateName);
             writer.WriteBoolValue("liveMode", LiveMode);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendEstimateDto_sentFrom>("sentFrom", SentFrom);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendEstimateDtoSentFrom>("sentFrom", SentFrom);
             writer.WriteStringValue("userId", UserId);
             writer.WriteAdditionalData(AdditionalData);
         }

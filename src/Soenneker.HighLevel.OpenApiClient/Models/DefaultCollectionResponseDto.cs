@@ -17,10 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Collection Data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DefaultCollectionResponseDto_data? Data { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DefaultCollectionResponseDtoData? Data { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DefaultCollectionResponseDto_data Data { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DefaultCollectionResponseDtoData Data { get; set; }
 #endif
         /// <summary>Status of the operation</summary>
         public bool? Status { get; set; }
@@ -49,7 +49,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "data", n => { Data = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DefaultCollectionResponseDto_data>(global::Soenneker.HighLevel.OpenApiClient.Models.DefaultCollectionResponseDto_data.CreateFromDiscriminatorValue); } },
+                { "data", n => { Data = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DefaultCollectionResponseDtoData>(global::Soenneker.HighLevel.OpenApiClient.Models.DefaultCollectionResponseDtoData.CreateFromDiscriminatorValue); } },
                 { "status", n => { Status = n.GetBoolValue(); } },
             };
         }
@@ -60,7 +60,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DefaultCollectionResponseDto_data>("data", Data);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DefaultCollectionResponseDtoData>("data", Data);
             writer.WriteBoolValue("status", Status);
             writer.WriteAdditionalData(AdditionalData);
         }

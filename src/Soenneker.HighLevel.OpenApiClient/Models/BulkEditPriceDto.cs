@@ -49,20 +49,20 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Recurring details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditPriceDto_recurring? Recurring { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditPriceDtoRecurring? Recurring { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditPriceDto_recurring Recurring { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditPriceDtoRecurring Recurring { get; set; }
 #endif
         /// <summary>Setup fee</summary>
         public double? SetupFee { get; set; }
         /// <summary>Shipping options</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditPriceDto_shippingOptions? ShippingOptions { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditPriceDtoShippingOptions? ShippingOptions { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditPriceDto_shippingOptions ShippingOptions { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditPriceDtoShippingOptions ShippingOptions { get; set; }
 #endif
         /// <summary>SKU</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -110,9 +110,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "_id", n => { Id = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "recurring", n => { Recurring = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditPriceDto_recurring>(global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditPriceDto_recurring.CreateFromDiscriminatorValue); } },
+                { "recurring", n => { Recurring = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditPriceDtoRecurring>(global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditPriceDtoRecurring.CreateFromDiscriminatorValue); } },
                 { "setupFee", n => { SetupFee = n.GetDoubleValue(); } },
-                { "shippingOptions", n => { ShippingOptions = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditPriceDto_shippingOptions>(global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditPriceDto_shippingOptions.CreateFromDiscriminatorValue); } },
+                { "shippingOptions", n => { ShippingOptions = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditPriceDtoShippingOptions>(global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditPriceDtoShippingOptions.CreateFromDiscriminatorValue); } },
                 { "sku", n => { Sku = n.GetStringValue(); } },
                 { "totalCycles", n => { TotalCycles = n.GetDoubleValue(); } },
                 { "trackInventory", n => { TrackInventory = n.GetBoolValue(); } },
@@ -133,9 +133,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("currency", Currency);
             writer.WriteStringValue("_id", Id);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditPriceDto_recurring>("recurring", Recurring);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditPriceDtoRecurring>("recurring", Recurring);
             writer.WriteDoubleValue("setupFee", SetupFee);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditPriceDto_shippingOptions>("shippingOptions", ShippingOptions);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditPriceDtoShippingOptions>("shippingOptions", ShippingOptions);
             writer.WriteStringValue("sku", Sku);
             writer.WriteDoubleValue("totalCycles", TotalCycles);
             writer.WriteBoolValue("trackInventory", TrackInventory);

@@ -123,7 +123,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string PhoneNumber { get; set; }
 #endif
         /// <summary>Recipient role</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.RecipientItem_role? Role { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.RecipientItemRole? Role { get; set; }
         /// <summary>Share link</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -190,7 +190,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "lastViewedAt", n => { LastViewedAt = n.GetStringValue(); } },
                 { "phone", n => { Phone = n.GetStringValue(); } },
                 { "phoneNumber", n => { PhoneNumber = n.GetStringValue(); } },
-                { "role", n => { Role = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.RecipientItem_role>(); } },
+                { "role", n => { Role = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.RecipientItemRole>(); } },
                 { "shareLink", n => { ShareLink = n.GetStringValue(); } },
                 { "signedDate", n => { SignedDate = n.GetStringValue(); } },
                 { "signingOrder", n => { SigningOrder = n.GetDoubleValue(); } },
@@ -219,7 +219,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("lastViewedAt", LastViewedAt);
             writer.WriteStringValue("phone", Phone);
             writer.WriteStringValue("phoneNumber", PhoneNumber);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.RecipientItem_role>("role", Role);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.RecipientItemRole>("role", Role);
             writer.WriteStringValue("shareLink", ShareLink);
             writer.WriteStringValue("signedDate", SignedDate);
             writer.WriteDoubleValue("signingOrder", SigningOrder);

@@ -17,10 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The feedback property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateConversationDto_feedback? Feedback { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateConversationDtoFeedbackProperty? Feedback { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateConversationDto_feedback Feedback { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateConversationDtoFeedbackProperty Feedback { get; set; }
 #endif
         /// <summary>Location ID as string</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -59,7 +59,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "feedback", n => { Feedback = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateConversationDto_feedback>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateConversationDto_feedback.CreateFromDiscriminatorValue); } },
+                { "feedback", n => { Feedback = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateConversationDtoFeedbackProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateConversationDtoFeedbackProperty.CreateFromDiscriminatorValue); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
                 { "starred", n => { Starred = n.GetBoolValue(); } },
                 { "unreadCount", n => { UnreadCount = n.GetDoubleValue(); } },
@@ -72,7 +72,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateConversationDto_feedback>("feedback", Feedback);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateConversationDtoFeedbackProperty>("feedback", Feedback);
             writer.WriteStringValue("locationId", LocationId);
             writer.WriteBoolValue("starred", Starred);
             writer.WriteDoubleValue("unreadCount", UnreadCount);

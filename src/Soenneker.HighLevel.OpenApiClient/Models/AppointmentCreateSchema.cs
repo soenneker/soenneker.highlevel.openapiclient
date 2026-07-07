@@ -23,7 +23,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string Address { get; set; }
 #endif
         /// <summary>The appointmentStatus property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentCreateSchema_appointmentStatus? AppointmentStatus { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentCreateSchemaAppointmentStatus? AppointmentStatus { get; set; }
         /// <summary>Assigned User Id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -85,7 +85,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string MeetingLocationId { get; set; }
 #endif
         /// <summary>Meeting location type. - If `address` is provided in the request body, the `meetingLocationType` defaults to **custom**.</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentCreateSchema_meetingLocationType? MeetingLocationType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentCreateSchemaMeetingLocationType? MeetingLocationType { get; set; }
         /// <summary>Flag to override location config- **false** - If only `meetingLocationId` is provided- **true** - If only `meetingLocationType` is provided</summary>
         public bool? OverrideLocationConfig { get; set; }
         /// <summary>RRULE as per the iCalendar (RFC 5545) specification for recurring events. DTSTART is not required, instance ids are calculated on the basis of startTime of the event. The rrule only be applied if ignoreFreeSlotValidation is true.</summary>
@@ -141,7 +141,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "address", n => { Address = n.GetStringValue(); } },
-                { "appointmentStatus", n => { AppointmentStatus = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentCreateSchema_appointmentStatus>(); } },
+                { "appointmentStatus", n => { AppointmentStatus = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentCreateSchemaAppointmentStatus>(); } },
                 { "assignedUserId", n => { AssignedUserId = n.GetStringValue(); } },
                 { "calendarId", n => { CalendarId = n.GetStringValue(); } },
                 { "contactId", n => { ContactId = n.GetStringValue(); } },
@@ -151,7 +151,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "ignoreFreeSlotValidation", n => { IgnoreFreeSlotValidation = n.GetBoolValue(); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
                 { "meetingLocationId", n => { MeetingLocationId = n.GetStringValue(); } },
-                { "meetingLocationType", n => { MeetingLocationType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentCreateSchema_meetingLocationType>(); } },
+                { "meetingLocationType", n => { MeetingLocationType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentCreateSchemaMeetingLocationType>(); } },
                 { "overrideLocationConfig", n => { OverrideLocationConfig = n.GetBoolValue(); } },
                 { "rrule", n => { Rrule = n.GetStringValue(); } },
                 { "startTime", n => { StartTime = n.GetStringValue(); } },
@@ -167,7 +167,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("address", Address);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentCreateSchema_appointmentStatus>("appointmentStatus", AppointmentStatus);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentCreateSchemaAppointmentStatus>("appointmentStatus", AppointmentStatus);
             writer.WriteStringValue("assignedUserId", AssignedUserId);
             writer.WriteStringValue("calendarId", CalendarId);
             writer.WriteStringValue("contactId", ContactId);
@@ -177,7 +177,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteBoolValue("ignoreFreeSlotValidation", IgnoreFreeSlotValidation);
             writer.WriteStringValue("locationId", LocationId);
             writer.WriteStringValue("meetingLocationId", MeetingLocationId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentCreateSchema_meetingLocationType>("meetingLocationType", MeetingLocationType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentCreateSchemaMeetingLocationType>("meetingLocationType", MeetingLocationType);
             writer.WriteBoolValue("overrideLocationConfig", OverrideLocationConfig);
             writer.WriteStringValue("rrule", Rrule);
             writer.WriteStringValue("startTime", StartTime);

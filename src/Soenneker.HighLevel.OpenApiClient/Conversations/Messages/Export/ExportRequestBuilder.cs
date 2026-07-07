@@ -39,8 +39,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Export
         /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.ExportMessagesResponseDto"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasBadRequestDTO">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDTO">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasBadRequestDto">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDto">When receiving a 401 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.ExportMessagesResponseDto?> GetAsync(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Export.ExportRequestBuilder.ExportRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -53,8 +53,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Export
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasBadRequestDTO.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDTO.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.ExportMessagesResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.ExportMessagesResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -94,7 +94,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Export
         {
             /// <summary>Filter by message channel. If not provided, all non-email message types will be returned including activity messages (opportunity updates, appointments, etc.)</summary>
             [QueryParameter("channel")]
-            public global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Export.GetChannelQueryParameterType? Channel { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.ConversationsExportMessagesByLocationChannelParameter? Channel { get; set; }
             /// <summary>Filter messages by contact ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -150,10 +150,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Export
 #endif
             /// <summary>Field to sort by</summary>
             [QueryParameter("sortBy")]
-            public global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Export.GetSortByQueryParameterType? SortBy { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.ConversationsExportMessagesByLocationSortByParameter? SortBy { get; set; }
             /// <summary>Sort order</summary>
             [QueryParameter("sortOrder")]
-            public global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Export.GetSortOrderQueryParameterType? SortOrder { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.ConversationsExportMessagesByLocationSortOrderParameter? SortOrder { get; set; }
             /// <summary>Start date to filter messages by</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

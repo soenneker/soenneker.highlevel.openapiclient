@@ -17,18 +17,18 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>File metadata</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CompleteFileUploadResponseDto_metadata? Metadata { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CompleteFileUploadResponseDtoMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CompleteFileUploadResponseDto_metadata Metadata { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CompleteFileUploadResponseDtoMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>Map of filename to public URL</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CompleteFileUploadResponseDto_uploadedFiles? UploadedFiles { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CompleteFileUploadResponseDtoUploadedFilesProperty? UploadedFiles { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CompleteFileUploadResponseDto_uploadedFiles UploadedFiles { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CompleteFileUploadResponseDtoUploadedFilesProperty UploadedFiles { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CompleteFileUploadResponseDto"/> and sets the default values.
@@ -55,8 +55,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CompleteFileUploadResponseDto_metadata>(global::Soenneker.HighLevel.OpenApiClient.Models.CompleteFileUploadResponseDto_metadata.CreateFromDiscriminatorValue); } },
-                { "uploadedFiles", n => { UploadedFiles = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CompleteFileUploadResponseDto_uploadedFiles>(global::Soenneker.HighLevel.OpenApiClient.Models.CompleteFileUploadResponseDto_uploadedFiles.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CompleteFileUploadResponseDtoMetadataProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.CompleteFileUploadResponseDtoMetadataProperty.CreateFromDiscriminatorValue); } },
+                { "uploadedFiles", n => { UploadedFiles = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CompleteFileUploadResponseDtoUploadedFilesProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.CompleteFileUploadResponseDtoUploadedFilesProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -66,8 +66,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CompleteFileUploadResponseDto_metadata>("metadata", Metadata);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CompleteFileUploadResponseDto_uploadedFiles>("uploadedFiles", UploadedFiles);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CompleteFileUploadResponseDtoMetadataProperty>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CompleteFileUploadResponseDtoUploadedFilesProperty>("uploadedFiles", UploadedFiles);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

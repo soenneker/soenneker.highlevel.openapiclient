@@ -23,30 +23,30 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string AltId { get; set; }
 #endif
         /// <summary>The altType property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDto_altType? AltType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDtoAltType? AltType { get; set; }
         /// <summary>Shipping origin address</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDto_shippingOrigin? ShippingOrigin { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDtoShippingOrigin? ShippingOrigin { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDto_shippingOrigin ShippingOrigin { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDtoShippingOrigin ShippingOrigin { get; set; }
 #endif
         /// <summary>Store order fulfillment notification email</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDto_storeOrderFulfillmentNotification? StoreOrderFulfillmentNotification { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDtoStoreOrderFulfillmentNotification? StoreOrderFulfillmentNotification { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDto_storeOrderFulfillmentNotification StoreOrderFulfillmentNotification { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDtoStoreOrderFulfillmentNotification StoreOrderFulfillmentNotification { get; set; }
 #endif
         /// <summary>Store order notification email</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDto_storeOrderNotification? StoreOrderNotification { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDtoStoreOrderNotification? StoreOrderNotification { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDto_storeOrderNotification StoreOrderNotification { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDtoStoreOrderNotification StoreOrderNotification { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDto"/> and sets the default values.
@@ -74,10 +74,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "altId", n => { AltId = n.GetStringValue(); } },
-                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDto_altType>(); } },
-                { "shippingOrigin", n => { ShippingOrigin = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDto_shippingOrigin>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDto_shippingOrigin.CreateFromDiscriminatorValue); } },
-                { "storeOrderFulfillmentNotification", n => { StoreOrderFulfillmentNotification = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDto_storeOrderFulfillmentNotification>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDto_storeOrderFulfillmentNotification.CreateFromDiscriminatorValue); } },
-                { "storeOrderNotification", n => { StoreOrderNotification = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDto_storeOrderNotification>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDto_storeOrderNotification.CreateFromDiscriminatorValue); } },
+                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDtoAltType>(); } },
+                { "shippingOrigin", n => { ShippingOrigin = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDtoShippingOrigin>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDtoShippingOrigin.CreateFromDiscriminatorValue); } },
+                { "storeOrderFulfillmentNotification", n => { StoreOrderFulfillmentNotification = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDtoStoreOrderFulfillmentNotification>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDtoStoreOrderFulfillmentNotification.CreateFromDiscriminatorValue); } },
+                { "storeOrderNotification", n => { StoreOrderNotification = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDtoStoreOrderNotification>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDtoStoreOrderNotification.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -88,10 +88,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("altId", AltId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDto_altType>("altType", AltType);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDto_shippingOrigin>("shippingOrigin", ShippingOrigin);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDto_storeOrderFulfillmentNotification>("storeOrderFulfillmentNotification", StoreOrderFulfillmentNotification);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDto_storeOrderNotification>("storeOrderNotification", StoreOrderNotification);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDtoAltType>("altType", AltType);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDtoShippingOrigin>("shippingOrigin", ShippingOrigin);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDtoStoreOrderFulfillmentNotification>("storeOrderFulfillmentNotification", StoreOrderFulfillmentNotification);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDtoStoreOrderNotification>("storeOrderNotification", StoreOrderNotification);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

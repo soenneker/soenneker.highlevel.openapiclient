@@ -17,10 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>CC Recipient</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CCRecipientItem>? CcRecipients { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CcRecipientItem>? CcRecipients { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CCRecipientItem> CcRecipients { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CcRecipientItem> CcRecipients { get; set; }
 #endif
         /// <summary>Document Id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -47,14 +47,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string LocationId { get; set; }
 #endif
         /// <summary>Medium to be used for sending the document</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SendDocumentDto_medium? Medium { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SendDocumentDtoMedium? Medium { get; set; }
         /// <summary>The notificationSettings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SendDocumentDto_notificationSettings? NotificationSettings { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SendDocumentDtoNotificationSettings? NotificationSettings { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SendDocumentDto_notificationSettings NotificationSettings { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SendDocumentDtoNotificationSettings NotificationSettings { get; set; }
 #endif
         /// <summary>Sent ByUser Id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -89,12 +89,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "ccRecipients", n => { CcRecipients = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CCRecipientItem>(global::Soenneker.HighLevel.OpenApiClient.Models.CCRecipientItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "ccRecipients", n => { CcRecipients = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CcRecipientItem>(global::Soenneker.HighLevel.OpenApiClient.Models.CcRecipientItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "documentId", n => { DocumentId = n.GetStringValue(); } },
                 { "documentName", n => { DocumentName = n.GetStringValue(); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
-                { "medium", n => { Medium = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendDocumentDto_medium>(); } },
-                { "notificationSettings", n => { NotificationSettings = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendDocumentDto_notificationSettings>(global::Soenneker.HighLevel.OpenApiClient.Models.SendDocumentDto_notificationSettings.CreateFromDiscriminatorValue); } },
+                { "medium", n => { Medium = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendDocumentDtoMedium>(); } },
+                { "notificationSettings", n => { NotificationSettings = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendDocumentDtoNotificationSettings>(global::Soenneker.HighLevel.OpenApiClient.Models.SendDocumentDtoNotificationSettings.CreateFromDiscriminatorValue); } },
                 { "sentBy", n => { SentBy = n.GetStringValue(); } },
             };
         }
@@ -105,12 +105,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CCRecipientItem>("ccRecipients", CcRecipients);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CcRecipientItem>("ccRecipients", CcRecipients);
             writer.WriteStringValue("documentId", DocumentId);
             writer.WriteStringValue("documentName", DocumentName);
             writer.WriteStringValue("locationId", LocationId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendDocumentDto_medium>("medium", Medium);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendDocumentDto_notificationSettings>("notificationSettings", NotificationSettings);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendDocumentDtoMedium>("medium", Medium);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendDocumentDtoNotificationSettings>("notificationSettings", NotificationSettings);
             writer.WriteStringValue("sentBy", SentBy);
             writer.WriteAdditionalData(AdditionalData);
         }

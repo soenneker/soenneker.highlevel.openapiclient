@@ -39,14 +39,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string CompanyId { get; set; }
 #endif
         /// <summary>The 2 letter country-code in which the business is present for which sub-account is created</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDto_country? Country { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDtoCountry? Country { get; set; }
         /// <summary>The mailgun credentials for location</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDto_mailgun? Mailgun { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDtoMailgun? Mailgun { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDto_mailgun Mailgun { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDtoMailgun Mailgun { get; set; }
 #endif
         /// <summary>The name for the sub-account/location</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -75,18 +75,18 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The prospectInfo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDto_prospectInfo? ProspectInfo { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDtoProspectInfo? ProspectInfo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDto_prospectInfo ProspectInfo { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDtoProspectInfo ProspectInfo { get; set; }
 #endif
         /// <summary>The default settings for location</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDto_settings? Settings { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDtoSettings? Settings { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDto_settings Settings { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDtoSettings Settings { get; set; }
 #endif
         /// <summary>The snapshot ID to be loaded into the location.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -99,10 +99,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The social media links for location</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDto_social? Social { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDtoSocial? Social { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDto_social Social { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDtoSocial Social { get; set; }
 #endif
         /// <summary>The state in which the business operates for which sub-account is created</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -123,10 +123,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The twilio credentials for location</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDto_twilio? Twilio { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDtoTwilio? Twilio { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDto_twilio Twilio { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDtoTwilio Twilio { get; set; }
 #endif
         /// <summary>The website of the business for which sub-account is created</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -164,18 +164,18 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "address", n => { Address = n.GetStringValue(); } },
                 { "city", n => { City = n.GetStringValue(); } },
                 { "companyId", n => { CompanyId = n.GetStringValue(); } },
-                { "country", n => { Country = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDto_country>(); } },
-                { "mailgun", n => { Mailgun = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDto_mailgun>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDto_mailgun.CreateFromDiscriminatorValue); } },
+                { "country", n => { Country = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDtoCountry>(); } },
+                { "mailgun", n => { Mailgun = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDtoMailgun>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDtoMailgun.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "phone", n => { Phone = n.GetStringValue(); } },
                 { "postalCode", n => { PostalCode = n.GetStringValue(); } },
-                { "prospectInfo", n => { ProspectInfo = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDto_prospectInfo>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDto_prospectInfo.CreateFromDiscriminatorValue); } },
-                { "settings", n => { Settings = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDto_settings>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDto_settings.CreateFromDiscriminatorValue); } },
+                { "prospectInfo", n => { ProspectInfo = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDtoProspectInfo>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDtoProspectInfo.CreateFromDiscriminatorValue); } },
+                { "settings", n => { Settings = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDtoSettings>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDtoSettings.CreateFromDiscriminatorValue); } },
                 { "snapshotId", n => { SnapshotId = n.GetStringValue(); } },
-                { "social", n => { Social = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDto_social>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDto_social.CreateFromDiscriminatorValue); } },
+                { "social", n => { Social = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDtoSocial>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDtoSocial.CreateFromDiscriminatorValue); } },
                 { "state", n => { State = n.GetStringValue(); } },
                 { "timezone", n => { Timezone = n.GetStringValue(); } },
-                { "twilio", n => { Twilio = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDto_twilio>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDto_twilio.CreateFromDiscriminatorValue); } },
+                { "twilio", n => { Twilio = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDtoTwilio>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDtoTwilio.CreateFromDiscriminatorValue); } },
                 { "website", n => { Website = n.GetStringValue(); } },
             };
         }
@@ -189,18 +189,18 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("address", Address);
             writer.WriteStringValue("city", City);
             writer.WriteStringValue("companyId", CompanyId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDto_country>("country", Country);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDto_mailgun>("mailgun", Mailgun);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDtoCountry>("country", Country);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDtoMailgun>("mailgun", Mailgun);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("phone", Phone);
             writer.WriteStringValue("postalCode", PostalCode);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDto_prospectInfo>("prospectInfo", ProspectInfo);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDto_settings>("settings", Settings);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDtoProspectInfo>("prospectInfo", ProspectInfo);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDtoSettings>("settings", Settings);
             writer.WriteStringValue("snapshotId", SnapshotId);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDto_social>("social", Social);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDtoSocial>("social", Social);
             writer.WriteStringValue("state", State);
             writer.WriteStringValue("timezone", Timezone);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDto_twilio>("twilio", Twilio);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationDtoTwilio>("twilio", Twilio);
             writer.WriteStringValue("website", Website);
             writer.WriteAdditionalData(AdditionalData);
         }

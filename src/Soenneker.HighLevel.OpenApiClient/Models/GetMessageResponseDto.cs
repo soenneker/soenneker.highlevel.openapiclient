@@ -79,7 +79,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string DateAdded { get; set; }
 #endif
         /// <summary>The direction property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetMessageResponseDto_direction? Direction { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetMessageResponseDtoDirection? Direction { get; set; }
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -97,7 +97,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string LocationId { get; set; }
 #endif
         /// <summary>Type of the message as a string</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetMessageResponseDto_messageType? MessageType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetMessageResponseDtoMessageType? MessageType { get; set; }
         /// <summary>The meta property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -107,9 +107,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public global::Soenneker.HighLevel.OpenApiClient.Models.MessageMeta Meta { get; set; }
 #endif
         /// <summary>Message source</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetMessageResponseDto_source? Source { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetMessageResponseDtoSource? Source { get; set; }
         /// <summary>The status property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetMessageResponseDto_status? Status { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetMessageResponseDtoStatus? Status { get; set; }
         /// <summary>The type property</summary>
         public double? Type { get; set; }
         /// <summary>User Id</summary>
@@ -153,13 +153,13 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "conversationId", n => { ConversationId = n.GetStringValue(); } },
                 { "conversationProviderId", n => { ConversationProviderId = n.GetStringValue(); } },
                 { "dateAdded", n => { DateAdded = n.GetStringValue(); } },
-                { "direction", n => { Direction = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetMessageResponseDto_direction>(); } },
+                { "direction", n => { Direction = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetMessageResponseDtoDirection>(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
-                { "messageType", n => { MessageType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetMessageResponseDto_messageType>(); } },
+                { "messageType", n => { MessageType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetMessageResponseDtoMessageType>(); } },
                 { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.MessageMeta>(global::Soenneker.HighLevel.OpenApiClient.Models.MessageMeta.CreateFromDiscriminatorValue); } },
-                { "source", n => { Source = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetMessageResponseDto_source>(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetMessageResponseDto_status>(); } },
+                { "source", n => { Source = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetMessageResponseDtoSource>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetMessageResponseDtoStatus>(); } },
                 { "type", n => { Type = n.GetDoubleValue(); } },
                 { "userId", n => { UserId = n.GetStringValue(); } },
             };
@@ -179,13 +179,13 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("conversationId", ConversationId);
             writer.WriteStringValue("conversationProviderId", ConversationProviderId);
             writer.WriteStringValue("dateAdded", DateAdded);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetMessageResponseDto_direction>("direction", Direction);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetMessageResponseDtoDirection>("direction", Direction);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("locationId", LocationId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetMessageResponseDto_messageType>("messageType", MessageType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetMessageResponseDtoMessageType>("messageType", MessageType);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.MessageMeta>("meta", Meta);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetMessageResponseDto_source>("source", Source);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetMessageResponseDto_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetMessageResponseDtoSource>("source", Source);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetMessageResponseDtoStatus>("status", Status);
             writer.WriteDoubleValue("type", Type);
             writer.WriteStringValue("userId", UserId);
             writer.WriteAdditionalData(AdditionalData);

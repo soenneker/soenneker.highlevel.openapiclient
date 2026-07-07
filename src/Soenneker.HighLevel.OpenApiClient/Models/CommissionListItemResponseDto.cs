@@ -17,10 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Affiliate details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CommissionListItemResponseDto_affiliate? Affiliate { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CommissionListItemResponseDtoAffiliate? Affiliate { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CommissionListItemResponseDto_affiliate Affiliate { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CommissionListItemResponseDtoAffiliate Affiliate { get; set; }
 #endif
         /// <summary>Affiliate id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -35,10 +35,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Campaign details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CommissionListItemResponseDto_campaign? Campaign { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CommissionListItemResponseDtoCampaign? Campaign { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CommissionListItemResponseDto_campaign Campaign { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CommissionListItemResponseDtoCampaign Campaign { get; set; }
 #endif
         /// <summary>Campaign name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -79,10 +79,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Customer details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CommissionListItemResponseDto_customer? Customer { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CommissionListItemResponseDtoCustomer? Customer { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CommissionListItemResponseDto_customer Customer { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CommissionListItemResponseDtoCustomer Customer { get; set; }
 #endif
         /// <summary>Due date</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -193,17 +193,17 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "affiliate", n => { Affiliate = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CommissionListItemResponseDto_affiliate>(global::Soenneker.HighLevel.OpenApiClient.Models.CommissionListItemResponseDto_affiliate.CreateFromDiscriminatorValue); } },
+                { "affiliate", n => { Affiliate = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CommissionListItemResponseDtoAffiliate>(global::Soenneker.HighLevel.OpenApiClient.Models.CommissionListItemResponseDtoAffiliate.CreateFromDiscriminatorValue); } },
                 { "affiliateId", n => { AffiliateId = n.GetStringValue(); } },
                 { "amount", n => { Amount = n.GetDoubleValue(); } },
-                { "campaign", n => { Campaign = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CommissionListItemResponseDto_campaign>(global::Soenneker.HighLevel.OpenApiClient.Models.CommissionListItemResponseDto_campaign.CreateFromDiscriminatorValue); } },
+                { "campaign", n => { Campaign = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CommissionListItemResponseDtoCampaign>(global::Soenneker.HighLevel.OpenApiClient.Models.CommissionListItemResponseDtoCampaign.CreateFromDiscriminatorValue); } },
                 { "campaignName", n => { CampaignName = n.GetStringValue(); } },
                 { "commission", n => { Commission = n.GetDoubleValue(); } },
                 { "commissionAmount", n => { CommissionAmount = n.GetDoubleValue(); } },
                 { "commissionType", n => { CommissionType = n.GetStringValue(); } },
                 { "createdAt", n => { CreatedAt = n.GetStringValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
-                { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CommissionListItemResponseDto_customer>(global::Soenneker.HighLevel.OpenApiClient.Models.CommissionListItemResponseDto_customer.CreateFromDiscriminatorValue); } },
+                { "customer", n => { Customer = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CommissionListItemResponseDtoCustomer>(global::Soenneker.HighLevel.OpenApiClient.Models.CommissionListItemResponseDtoCustomer.CreateFromDiscriminatorValue); } },
                 { "dueAt", n => { DueAt = n.GetStringValue(); } },
                 { "eventId", n => { EventId = n.GetStringValue(); } },
                 { "_id", n => { Id = n.GetStringValue(); } },
@@ -228,17 +228,17 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CommissionListItemResponseDto_affiliate>("affiliate", Affiliate);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CommissionListItemResponseDtoAffiliate>("affiliate", Affiliate);
             writer.WriteStringValue("affiliateId", AffiliateId);
             writer.WriteDoubleValue("amount", Amount);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CommissionListItemResponseDto_campaign>("campaign", Campaign);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CommissionListItemResponseDtoCampaign>("campaign", Campaign);
             writer.WriteStringValue("campaignName", CampaignName);
             writer.WriteDoubleValue("commission", Commission);
             writer.WriteDoubleValue("commissionAmount", CommissionAmount);
             writer.WriteStringValue("commissionType", CommissionType);
             writer.WriteStringValue("createdAt", CreatedAt);
             writer.WriteStringValue("currency", Currency);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CommissionListItemResponseDto_customer>("customer", Customer);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CommissionListItemResponseDtoCustomer>("customer", Customer);
             writer.WriteStringValue("dueAt", DueAt);
             writer.WriteStringValue("eventId", EventId);
             writer.WriteStringValue("_id", Id);

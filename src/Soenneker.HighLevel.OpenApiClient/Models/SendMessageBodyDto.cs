@@ -79,7 +79,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string EmailFrom { get; set; }
 #endif
         /// <summary>Mode for email replies</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDto_emailReplyMode? EmailReplyMode { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDtoEmailReplyMode? EmailReplyMode { get; set; }
         /// <summary>Email address to send to, if different from contact&apos;s primary email. This should be a valid email address associated with the contact.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -91,10 +91,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Forwarding configuration for emails</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDto_forward? Forward { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDtoForward? Forward { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDto_forward Forward { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDtoForward Forward { get; set; }
 #endif
         /// <summary>Phone number used as the sender number for outbound messages</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -121,7 +121,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string Message { get; set; }
 #endif
         /// <summary>Optimization period in hours (24h, 48h, or 72h)</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDto_optimizationPeriod? OptimizationPeriod { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDtoOptimizationPeriod? OptimizationPeriod { get; set; }
         /// <summary>ID of message being replied to</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -133,7 +133,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>UTC Timestamp (in seconds) at which the message should be scheduled</summary>
         public double? ScheduledTimestamp { get; set; }
         /// <summary>Message status</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDto_status? Status { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDtoStatus? Status { get; set; }
         /// <summary>Subject line for email messages</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -145,10 +145,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Type of message being sent</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDto_subType? SubType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDtoSubTypeProperty? SubType { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDto_subType SubType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDtoSubTypeProperty SubType { get; set; }
 #endif
         /// <summary>ID of message template</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -175,7 +175,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string ToNumber { get; set; }
 #endif
         /// <summary>Type of message being sent</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDto_type? Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDtoType? Type { get; set; }
         /// <summary>Whether the scheduled email uses native AI for the email scheduling </summary>
         public bool? UsesNativeSchedulingAi { get; set; }
         /// <summary>
@@ -211,22 +211,22 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "emailBcc", n => { EmailBcc = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "emailCc", n => { EmailCc = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "emailFrom", n => { EmailFrom = n.GetStringValue(); } },
-                { "emailReplyMode", n => { EmailReplyMode = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDto_emailReplyMode>(); } },
+                { "emailReplyMode", n => { EmailReplyMode = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDtoEmailReplyMode>(); } },
                 { "emailTo", n => { EmailTo = n.GetStringValue(); } },
-                { "forward", n => { Forward = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDto_forward>(global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDto_forward.CreateFromDiscriminatorValue); } },
+                { "forward", n => { Forward = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDtoForward>(global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDtoForward.CreateFromDiscriminatorValue); } },
                 { "fromNumber", n => { FromNumber = n.GetStringValue(); } },
                 { "html", n => { Html = n.GetStringValue(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
-                { "optimizationPeriod", n => { OptimizationPeriod = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDto_optimizationPeriod>(); } },
+                { "optimizationPeriod", n => { OptimizationPeriod = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDtoOptimizationPeriod>(); } },
                 { "replyMessageId", n => { ReplyMessageId = n.GetStringValue(); } },
                 { "scheduledTimestamp", n => { ScheduledTimestamp = n.GetDoubleValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDto_status>(); } },
-                { "subType", n => { SubType = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDto_subType>(global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDto_subType.CreateFromDiscriminatorValue); } },
+                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDtoStatus>(); } },
+                { "subType", n => { SubType = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDtoSubTypeProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDtoSubTypeProperty.CreateFromDiscriminatorValue); } },
                 { "subject", n => { Subject = n.GetStringValue(); } },
                 { "templateId", n => { TemplateId = n.GetStringValue(); } },
                 { "threadId", n => { ThreadId = n.GetStringValue(); } },
                 { "toNumber", n => { ToNumber = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDto_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDtoType>(); } },
                 { "usesNativeSchedulingAi", n => { UsesNativeSchedulingAi = n.GetBoolValue(); } },
             };
         }
@@ -245,22 +245,22 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("emailBcc", EmailBcc);
             writer.WriteCollectionOfPrimitiveValues<string>("emailCc", EmailCc);
             writer.WriteStringValue("emailFrom", EmailFrom);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDto_emailReplyMode>("emailReplyMode", EmailReplyMode);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDtoEmailReplyMode>("emailReplyMode", EmailReplyMode);
             writer.WriteStringValue("emailTo", EmailTo);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDto_forward>("forward", Forward);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDtoForward>("forward", Forward);
             writer.WriteStringValue("fromNumber", FromNumber);
             writer.WriteStringValue("html", Html);
             writer.WriteStringValue("message", Message);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDto_optimizationPeriod>("optimizationPeriod", OptimizationPeriod);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDtoOptimizationPeriod>("optimizationPeriod", OptimizationPeriod);
             writer.WriteStringValue("replyMessageId", ReplyMessageId);
             writer.WriteDoubleValue("scheduledTimestamp", ScheduledTimestamp);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDto_status>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDtoStatus>("status", Status);
             writer.WriteStringValue("subject", Subject);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDto_subType>("subType", SubType);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDtoSubTypeProperty>("subType", SubType);
             writer.WriteStringValue("templateId", TemplateId);
             writer.WriteStringValue("threadId", ThreadId);
             writer.WriteStringValue("toNumber", ToNumber);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDto_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDtoType>("type", Type);
             writer.WriteBoolValue("usesNativeSchedulingAi", UsesNativeSchedulingAi);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -62,6 +62,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public FilterByEmailDto()
         {
             AdditionalData = new Dictionary<string, object>();
+            Deleted = false;
             Limit = "25";
             Skip = "0";
         }

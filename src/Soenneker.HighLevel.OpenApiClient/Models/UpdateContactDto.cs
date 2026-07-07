@@ -49,18 +49,18 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The customFields property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateContactDto.UpdateContactDto_customFields>? CustomFields { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateContactDtoCustomFieldsItem>? CustomFields { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateContactDto.UpdateContactDto_customFields> CustomFields { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateContactDtoCustomFieldsItem> CustomFields { get; set; }
 #endif
         /// <summary>&quot;The birth date of the contact. Supported formats: YYYY/MM/DD, MM/DD/YYYY, YYYY-MM-DD, MM-DD-YYYY, YYYY.MM.DD, MM.DD.YYYY, YYYY_MM_DD, MM_DD_YYYY&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateContactDto_dateOfBirth? DateOfBirth { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateContactDtoDateOfBirth? DateOfBirth { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateContactDto_dateOfBirth DateOfBirth { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateContactDtoDateOfBirth DateOfBirth { get; set; }
 #endif
         /// <summary>The dnd property</summary>
         public bool? Dnd { get; set; }
@@ -197,8 +197,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "assignedTo", n => { AssignedTo = n.GetStringValue(); } },
                 { "city", n => { City = n.GetStringValue(); } },
                 { "country", n => { Country = n.GetStringValue(); } },
-                { "customFields", n => { CustomFields = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateContactDto.UpdateContactDto_customFields>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateContactDto.UpdateContactDto_customFields.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "dateOfBirth", n => { DateOfBirth = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateContactDto_dateOfBirth>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateContactDto_dateOfBirth.CreateFromDiscriminatorValue); } },
+                { "customFields", n => { CustomFields = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateContactDtoCustomFieldsItem>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateContactDtoCustomFieldsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "dateOfBirth", n => { DateOfBirth = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateContactDtoDateOfBirth>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateContactDtoDateOfBirth.CreateFromDiscriminatorValue); } },
                 { "dnd", n => { Dnd = n.GetBoolValue(); } },
                 { "dndSettings", n => { DndSettings = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DndSettingsSchema>(global::Soenneker.HighLevel.OpenApiClient.Models.DndSettingsSchema.CreateFromDiscriminatorValue); } },
                 { "email", n => { Email = n.GetStringValue(); } },
@@ -226,8 +226,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("assignedTo", AssignedTo);
             writer.WriteStringValue("city", City);
             writer.WriteStringValue("country", Country);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateContactDto.UpdateContactDto_customFields>("customFields", CustomFields);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateContactDto_dateOfBirth>("dateOfBirth", DateOfBirth);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateContactDtoCustomFieldsItem>("customFields", CustomFields);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateContactDtoDateOfBirth>("dateOfBirth", DateOfBirth);
             writer.WriteBoolValue("dnd", Dnd);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DndSettingsSchema>("dndSettings", DndSettings);
             writer.WriteStringValue("email", Email);
@@ -243,126 +243,6 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("timezone", Timezone);
             writer.WriteStringValue("website", Website);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CheckboxField"/>, <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.FileField"/>, <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.LargeTextField"/>, <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.MonetoryField"/>, <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.MultiSelectField"/>, <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.NumericField"/>, <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.RadioField"/>, <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.SingleSelectField"/>, <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.TextField"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class UpdateContactDto_customFields : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CheckboxField"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HighLevel.OpenApiClient.Models.CheckboxField? CheckboxField { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HighLevel.OpenApiClient.Models.CheckboxField CheckboxField { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.FileField"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HighLevel.OpenApiClient.Models.FileField? FileField { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HighLevel.OpenApiClient.Models.FileField FileField { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.LargeTextField"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HighLevel.OpenApiClient.Models.LargeTextField? LargeTextField { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HighLevel.OpenApiClient.Models.LargeTextField LargeTextField { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.MonetoryField"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HighLevel.OpenApiClient.Models.MonetoryField? MonetoryField { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HighLevel.OpenApiClient.Models.MonetoryField MonetoryField { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.MultiSelectField"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HighLevel.OpenApiClient.Models.MultiSelectField? MultiSelectField { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HighLevel.OpenApiClient.Models.MultiSelectField MultiSelectField { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.NumericField"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HighLevel.OpenApiClient.Models.NumericField? NumericField { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HighLevel.OpenApiClient.Models.NumericField NumericField { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.RadioField"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HighLevel.OpenApiClient.Models.RadioField? RadioField { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HighLevel.OpenApiClient.Models.RadioField RadioField { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.SingleSelectField"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HighLevel.OpenApiClient.Models.SingleSelectField? SingleSelectField { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HighLevel.OpenApiClient.Models.SingleSelectField SingleSelectField { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.TextField"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.HighLevel.OpenApiClient.Models.TextField? TextField { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.HighLevel.OpenApiClient.Models.TextField TextField { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpdateContactDto.UpdateContactDto_customFields"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.HighLevel.OpenApiClient.Models.UpdateContactDto.UpdateContactDto_customFields CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.HighLevel.OpenApiClient.Models.UpdateContactDto.UpdateContactDto_customFields();
-                result.CheckboxField = new global::Soenneker.HighLevel.OpenApiClient.Models.CheckboxField();
-                result.FileField = new global::Soenneker.HighLevel.OpenApiClient.Models.FileField();
-                result.LargeTextField = new global::Soenneker.HighLevel.OpenApiClient.Models.LargeTextField();
-                result.MonetoryField = new global::Soenneker.HighLevel.OpenApiClient.Models.MonetoryField();
-                result.MultiSelectField = new global::Soenneker.HighLevel.OpenApiClient.Models.MultiSelectField();
-                result.NumericField = new global::Soenneker.HighLevel.OpenApiClient.Models.NumericField();
-                result.RadioField = new global::Soenneker.HighLevel.OpenApiClient.Models.RadioField();
-                result.SingleSelectField = new global::Soenneker.HighLevel.OpenApiClient.Models.SingleSelectField();
-                result.TextField = new global::Soenneker.HighLevel.OpenApiClient.Models.TextField();
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(CheckboxField != null || FileField != null || LargeTextField != null || MonetoryField != null || MultiSelectField != null || NumericField != null || RadioField != null || SingleSelectField != null || TextField != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(CheckboxField, FileField, LargeTextField, MonetoryField, MultiSelectField, NumericField, RadioField, SingleSelectField, TextField);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CheckboxField>(null, CheckboxField, FileField, LargeTextField, MonetoryField, MultiSelectField, NumericField, RadioField, SingleSelectField, TextField);
-            }
         }
     }
 }

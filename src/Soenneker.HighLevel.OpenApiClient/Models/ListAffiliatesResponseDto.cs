@@ -25,10 +25,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Pagination metadata</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ListAffiliatesResponseDto_meta? Meta { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ListAffiliatesResponseDtoMeta? Meta { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ListAffiliatesResponseDto_meta Meta { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ListAffiliatesResponseDtoMeta Meta { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.ListAffiliatesResponseDto"/> and sets the default values.
@@ -56,7 +56,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "affiliates", n => { Affiliates = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.OAuthAffiliateListItemResponseDto>(global::Soenneker.HighLevel.OpenApiClient.Models.OAuthAffiliateListItemResponseDto.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ListAffiliatesResponseDto_meta>(global::Soenneker.HighLevel.OpenApiClient.Models.ListAffiliatesResponseDto_meta.CreateFromDiscriminatorValue); } },
+                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ListAffiliatesResponseDtoMeta>(global::Soenneker.HighLevel.OpenApiClient.Models.ListAffiliatesResponseDtoMeta.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -67,7 +67,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.OAuthAffiliateListItemResponseDto>("affiliates", Affiliates);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ListAffiliatesResponseDto_meta>("meta", Meta);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ListAffiliatesResponseDtoMeta>("meta", Meta);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

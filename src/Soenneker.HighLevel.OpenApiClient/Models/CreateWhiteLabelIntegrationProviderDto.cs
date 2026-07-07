@@ -23,7 +23,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string AltId { get; set; }
 #endif
         /// <summary>Alt Type</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateWhiteLabelIntegrationProviderDto_altType? AltType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateWhiteLabelIntegrationProviderDtoAltType? AltType { get; set; }
         /// <summary>A brief description providing additional information about the integration provider.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -41,7 +41,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string ImageUrl { get; set; }
 #endif
         /// <summary>The type of payment provider associated with the integration provider.</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateWhiteLabelIntegrationProviderDto_provider? Provider { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateWhiteLabelIntegrationProviderDtoProvider? Provider { get; set; }
         /// <summary>The title or name of the integration provider.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -84,10 +84,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "altId", n => { AltId = n.GetStringValue(); } },
-                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateWhiteLabelIntegrationProviderDto_altType>(); } },
+                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateWhiteLabelIntegrationProviderDtoAltType>(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "imageUrl", n => { ImageUrl = n.GetStringValue(); } },
-                { "provider", n => { Provider = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateWhiteLabelIntegrationProviderDto_provider>(); } },
+                { "provider", n => { Provider = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateWhiteLabelIntegrationProviderDtoProvider>(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
                 { "uniqueName", n => { UniqueName = n.GetStringValue(); } },
             };
@@ -100,10 +100,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("altId", AltId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateWhiteLabelIntegrationProviderDto_altType>("altType", AltType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateWhiteLabelIntegrationProviderDtoAltType>("altType", AltType);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("imageUrl", ImageUrl);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateWhiteLabelIntegrationProviderDto_provider>("provider", Provider);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateWhiteLabelIntegrationProviderDtoProvider>("provider", Provider);
             writer.WriteStringValue("title", Title);
             writer.WriteStringValue("uniqueName", UniqueName);
             writer.WriteAdditionalData(AdditionalData);

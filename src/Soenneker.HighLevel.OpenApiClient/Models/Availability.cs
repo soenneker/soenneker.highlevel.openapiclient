@@ -38,6 +38,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public Availability()
         {
             AdditionalData = new Dictionary<string, object>();
+            Deleted = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

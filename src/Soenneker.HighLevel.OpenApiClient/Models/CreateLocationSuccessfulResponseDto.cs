@@ -39,7 +39,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string CompanyId { get; set; }
 #endif
         /// <summary>The country in which the business is present for which sub-account is created</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationSuccessfulResponseDto_country? Country { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationSuccessfulResponseDtoCountry? Country { get; set; }
         /// <summary>The domain property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -91,18 +91,18 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The default settings for location</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationSuccessfulResponseDto_settings? Settings { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationSuccessfulResponseDtoSettings? Settings { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationSuccessfulResponseDto_settings Settings { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationSuccessfulResponseDtoSettings Settings { get; set; }
 #endif
         /// <summary>The social media links for location</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationSuccessfulResponseDto_social? Social { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationSuccessfulResponseDtoSocial? Social { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationSuccessfulResponseDto_social Social { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationSuccessfulResponseDtoSocial Social { get; set; }
 #endif
         /// <summary>The state in which the business operates for which sub-account is created</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -156,15 +156,15 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "address", n => { Address = n.GetStringValue(); } },
                 { "city", n => { City = n.GetStringValue(); } },
                 { "companyId", n => { CompanyId = n.GetStringValue(); } },
-                { "country", n => { Country = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationSuccessfulResponseDto_country>(); } },
+                { "country", n => { Country = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationSuccessfulResponseDtoCountry>(); } },
                 { "domain", n => { Domain = n.GetStringValue(); } },
                 { "email", n => { Email = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "phone", n => { Phone = n.GetStringValue(); } },
                 { "postalCode", n => { PostalCode = n.GetStringValue(); } },
-                { "settings", n => { Settings = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationSuccessfulResponseDto_settings>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationSuccessfulResponseDto_settings.CreateFromDiscriminatorValue); } },
-                { "social", n => { Social = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationSuccessfulResponseDto_social>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationSuccessfulResponseDto_social.CreateFromDiscriminatorValue); } },
+                { "settings", n => { Settings = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationSuccessfulResponseDtoSettings>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationSuccessfulResponseDtoSettings.CreateFromDiscriminatorValue); } },
+                { "social", n => { Social = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationSuccessfulResponseDtoSocial>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationSuccessfulResponseDtoSocial.CreateFromDiscriminatorValue); } },
                 { "state", n => { State = n.GetStringValue(); } },
                 { "timezone", n => { Timezone = n.GetStringValue(); } },
                 { "website", n => { Website = n.GetStringValue(); } },
@@ -180,15 +180,15 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("address", Address);
             writer.WriteStringValue("city", City);
             writer.WriteStringValue("companyId", CompanyId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationSuccessfulResponseDto_country>("country", Country);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationSuccessfulResponseDtoCountry>("country", Country);
             writer.WriteStringValue("domain", Domain);
             writer.WriteStringValue("email", Email);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("phone", Phone);
             writer.WriteStringValue("postalCode", PostalCode);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationSuccessfulResponseDto_settings>("settings", Settings);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationSuccessfulResponseDto_social>("social", Social);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationSuccessfulResponseDtoSettings>("settings", Settings);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationSuccessfulResponseDtoSocial>("social", Social);
             writer.WriteStringValue("state", State);
             writer.WriteStringValue("timezone", Timezone);
             writer.WriteStringValue("website", Website);

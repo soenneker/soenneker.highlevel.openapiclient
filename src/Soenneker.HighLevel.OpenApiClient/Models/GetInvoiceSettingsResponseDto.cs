@@ -23,14 +23,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string AltId { get; set; }
 #endif
         /// <summary>Alt Type</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDto_altType? AltType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDtoAltType? AltType { get; set; }
         /// <summary>Business details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDto_businessDetails? BusinessDetails { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDtoBusinessDetails? BusinessDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDto_businessDetails BusinessDetails { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDtoBusinessDetails BusinessDetails { get; set; }
 #endif
         /// <summary>Custom fields array</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -43,10 +43,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Custom notification settings</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDto_customNotification? CustomNotification { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDtoCustomNotification? CustomNotification { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDto_customNotification CustomNotification { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDtoCustomNotification CustomNotification { get; set; }
 #endif
         /// <summary>Number of days after which invoice is due</summary>
         public double? DueAfterXDays { get; set; }
@@ -87,44 +87,44 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Late fees configuration</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDto_lateFeesConfiguration? LateFeesConfiguration { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDtoLateFeesConfiguration? LateFeesConfiguration { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDto_lateFeesConfiguration LateFeesConfiguration { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDtoLateFeesConfiguration LateFeesConfiguration { get; set; }
 #endif
         /// <summary>Minimum percentage for partial payment</summary>
         public double? MinimumPercentagePartialPayment { get; set; }
         /// <summary>Payment methods configuration</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDto_paymentMethods? PaymentMethods { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDtoPaymentMethods? PaymentMethods { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDto_paymentMethods PaymentMethods { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDtoPaymentMethods PaymentMethods { get; set; }
 #endif
         /// <summary>Product settings</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDto_productSettings? ProductSettings { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDtoProductSettings? ProductSettings { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDto_productSettings ProductSettings { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDtoProductSettings ProductSettings { get; set; }
 #endif
         /// <summary>Reminder settings</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDto_reminderSettings? ReminderSettings { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDtoReminderSettings? ReminderSettings { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDto_reminderSettings ReminderSettings { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDtoReminderSettings ReminderSettings { get; set; }
 #endif
         /// <summary>Sender configuration</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDto_senderConfiguration? SenderConfiguration { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDtoSenderConfiguration? SenderConfiguration { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDto_senderConfiguration SenderConfiguration { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDtoSenderConfiguration SenderConfiguration { get; set; }
 #endif
         /// <summary>Terms and conditions for invoices</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -137,10 +137,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Tips configuration</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDto_tipsConfiguration? TipsConfiguration { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDtoTipsConfiguration? TipsConfiguration { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDto_tipsConfiguration TipsConfiguration { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDtoTipsConfiguration TipsConfiguration { get; set; }
 #endif
         /// <summary>Title for invoices</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -176,24 +176,24 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "altId", n => { AltId = n.GetStringValue(); } },
-                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDto_altType>(); } },
-                { "businessDetails", n => { BusinessDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDto_businessDetails>(global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDto_businessDetails.CreateFromDiscriminatorValue); } },
+                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDtoAltType>(); } },
+                { "businessDetails", n => { BusinessDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDtoBusinessDetails>(global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDtoBusinessDetails.CreateFromDiscriminatorValue); } },
                 { "customFields", n => { CustomFields = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "customNotification", n => { CustomNotification = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDto_customNotification>(global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDto_customNotification.CreateFromDiscriminatorValue); } },
+                { "customNotification", n => { CustomNotification = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDtoCustomNotification>(global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDtoCustomNotification.CreateFromDiscriminatorValue); } },
                 { "dueAfterXDays", n => { DueAfterXDays = n.GetDoubleValue(); } },
                 { "estimateNumberPrefix", n => { EstimateNumberPrefix = n.GetStringValue(); } },
                 { "estimatesExpireAfterXDays", n => { EstimatesExpireAfterXDays = n.GetDoubleValue(); } },
                 { "estimatesTermsNote", n => { EstimatesTermsNote = n.GetStringValue(); } },
                 { "estimatesTitle", n => { EstimatesTitle = n.GetStringValue(); } },
                 { "invoiceNumberPrefix", n => { InvoiceNumberPrefix = n.GetStringValue(); } },
-                { "lateFeesConfiguration", n => { LateFeesConfiguration = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDto_lateFeesConfiguration>(global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDto_lateFeesConfiguration.CreateFromDiscriminatorValue); } },
+                { "lateFeesConfiguration", n => { LateFeesConfiguration = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDtoLateFeesConfiguration>(global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDtoLateFeesConfiguration.CreateFromDiscriminatorValue); } },
                 { "minimumPercentagePartialPayment", n => { MinimumPercentagePartialPayment = n.GetDoubleValue(); } },
-                { "paymentMethods", n => { PaymentMethods = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDto_paymentMethods>(global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDto_paymentMethods.CreateFromDiscriminatorValue); } },
-                { "productSettings", n => { ProductSettings = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDto_productSettings>(global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDto_productSettings.CreateFromDiscriminatorValue); } },
-                { "reminderSettings", n => { ReminderSettings = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDto_reminderSettings>(global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDto_reminderSettings.CreateFromDiscriminatorValue); } },
-                { "senderConfiguration", n => { SenderConfiguration = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDto_senderConfiguration>(global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDto_senderConfiguration.CreateFromDiscriminatorValue); } },
+                { "paymentMethods", n => { PaymentMethods = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDtoPaymentMethods>(global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDtoPaymentMethods.CreateFromDiscriminatorValue); } },
+                { "productSettings", n => { ProductSettings = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDtoProductSettings>(global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDtoProductSettings.CreateFromDiscriminatorValue); } },
+                { "reminderSettings", n => { ReminderSettings = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDtoReminderSettings>(global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDtoReminderSettings.CreateFromDiscriminatorValue); } },
+                { "senderConfiguration", n => { SenderConfiguration = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDtoSenderConfiguration>(global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDtoSenderConfiguration.CreateFromDiscriminatorValue); } },
                 { "termsNote", n => { TermsNote = n.GetStringValue(); } },
-                { "tipsConfiguration", n => { TipsConfiguration = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDto_tipsConfiguration>(global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDto_tipsConfiguration.CreateFromDiscriminatorValue); } },
+                { "tipsConfiguration", n => { TipsConfiguration = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDtoTipsConfiguration>(global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDtoTipsConfiguration.CreateFromDiscriminatorValue); } },
                 { "title", n => { Title = n.GetStringValue(); } },
             };
         }
@@ -205,24 +205,24 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("altId", AltId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDto_altType>("altType", AltType);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDto_businessDetails>("businessDetails", BusinessDetails);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDtoAltType>("altType", AltType);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDtoBusinessDetails>("businessDetails", BusinessDetails);
             writer.WriteCollectionOfPrimitiveValues<string>("customFields", CustomFields);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDto_customNotification>("customNotification", CustomNotification);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDtoCustomNotification>("customNotification", CustomNotification);
             writer.WriteDoubleValue("dueAfterXDays", DueAfterXDays);
             writer.WriteStringValue("estimateNumberPrefix", EstimateNumberPrefix);
             writer.WriteDoubleValue("estimatesExpireAfterXDays", EstimatesExpireAfterXDays);
             writer.WriteStringValue("estimatesTermsNote", EstimatesTermsNote);
             writer.WriteStringValue("estimatesTitle", EstimatesTitle);
             writer.WriteStringValue("invoiceNumberPrefix", InvoiceNumberPrefix);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDto_lateFeesConfiguration>("lateFeesConfiguration", LateFeesConfiguration);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDtoLateFeesConfiguration>("lateFeesConfiguration", LateFeesConfiguration);
             writer.WriteDoubleValue("minimumPercentagePartialPayment", MinimumPercentagePartialPayment);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDto_paymentMethods>("paymentMethods", PaymentMethods);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDto_productSettings>("productSettings", ProductSettings);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDto_reminderSettings>("reminderSettings", ReminderSettings);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDto_senderConfiguration>("senderConfiguration", SenderConfiguration);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDtoPaymentMethods>("paymentMethods", PaymentMethods);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDtoProductSettings>("productSettings", ProductSettings);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDtoReminderSettings>("reminderSettings", ReminderSettings);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDtoSenderConfiguration>("senderConfiguration", SenderConfiguration);
             writer.WriteStringValue("termsNote", TermsNote);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDto_tipsConfiguration>("tipsConfiguration", TipsConfiguration);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDtoTipsConfiguration>("tipsConfiguration", TipsConfiguration);
             writer.WriteStringValue("title", Title);
             writer.WriteAdditionalData(AdditionalData);
         }

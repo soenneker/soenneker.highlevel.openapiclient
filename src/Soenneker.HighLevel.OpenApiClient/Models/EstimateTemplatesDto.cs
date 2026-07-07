@@ -23,7 +23,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string AltId { get; set; }
 #endif
         /// <summary>The altType property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDto_altType? AltType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDtoAltType? AltType { get; set; }
         /// <summary>attachments for the invoice</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -53,10 +53,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The discount property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto? Discount { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesDiscountDto? Discount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto Discount { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesDiscountDto Discount { get; set; }
 #endif
         /// <summary>Prefix for the estimate number</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -79,18 +79,18 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Meta data for the estimate</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDto_meta? Meta { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDtoMetaProperty? Meta { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDto_meta Meta { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDtoMetaProperty Meta { get; set; }
 #endif
         /// <summary>miscellaneous charges for the estimate</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDto_miscellaneousCharges? MiscellaneousCharges { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDtoMiscellaneousCharges? MiscellaneousCharges { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDto_miscellaneousCharges MiscellaneousCharges { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDtoMiscellaneousCharges MiscellaneousCharges { get; set; }
 #endif
         /// <summary>Estimate Name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -103,10 +103,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>When sending estimate directly while saving</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDto_sendEstimateDetails? SendEstimateDetails { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDtoSendEstimateDetails? SendEstimateDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDto_sendEstimateDetails SendEstimateDetails { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDtoSendEstimateDetails SendEstimateDetails { get; set; }
 #endif
         /// <summary>Terms notes, Also supports HTML markups</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -130,7 +130,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public EstimateTemplatesDto()
         {
             AdditionalData = new Dictionary<string, object>();
+            AutomaticTaxesEnabled = false;
             EstimateNumberPrefix = "EST-";
+            LiveMode = true;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -151,19 +153,19 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "altId", n => { AltId = n.GetStringValue(); } },
-                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDto_altType>(); } },
+                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDtoAltType>(); } },
                 { "attachments", n => { Attachments = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.AttachmentsDto>(global::Soenneker.HighLevel.OpenApiClient.Models.AttachmentsDto.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "automaticTaxesEnabled", n => { AutomaticTaxesEnabled = n.GetBoolValue(); } },
                 { "businessDetails", n => { BusinessDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BusinessDetailsDto>(global::Soenneker.HighLevel.OpenApiClient.Models.BusinessDetailsDto.CreateFromDiscriminatorValue); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
-                { "discount", n => { Discount = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto>(global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto.CreateFromDiscriminatorValue); } },
+                { "discount", n => { Discount = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesDiscountDto>(global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesDiscountDto.CreateFromDiscriminatorValue); } },
                 { "estimateNumberPrefix", n => { EstimateNumberPrefix = n.GetStringValue(); } },
                 { "items", n => { Items = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "liveMode", n => { LiveMode = n.GetBoolValue(); } },
-                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDto_meta>(global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDto_meta.CreateFromDiscriminatorValue); } },
-                { "miscellaneousCharges", n => { MiscellaneousCharges = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDto_miscellaneousCharges>(global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDto_miscellaneousCharges.CreateFromDiscriminatorValue); } },
+                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDtoMetaProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDtoMetaProperty.CreateFromDiscriminatorValue); } },
+                { "miscellaneousCharges", n => { MiscellaneousCharges = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDtoMiscellaneousCharges>(global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDtoMiscellaneousCharges.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "sendEstimateDetails", n => { SendEstimateDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDto_sendEstimateDetails>(global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDto_sendEstimateDetails.CreateFromDiscriminatorValue); } },
+                { "sendEstimateDetails", n => { SendEstimateDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDtoSendEstimateDetails>(global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDtoSendEstimateDetails.CreateFromDiscriminatorValue); } },
                 { "termsNotes", n => { TermsNotes = n.GetStringValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
             };
@@ -176,19 +178,19 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("altId", AltId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDto_altType>("altType", AltType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDtoAltType>("altType", AltType);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.AttachmentsDto>("attachments", Attachments);
             writer.WriteBoolValue("automaticTaxesEnabled", AutomaticTaxesEnabled);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BusinessDetailsDto>("businessDetails", BusinessDetails);
             writer.WriteStringValue("currency", Currency);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto>("discount", Discount);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesDiscountDto>("discount", Discount);
             writer.WriteStringValue("estimateNumberPrefix", EstimateNumberPrefix);
             writer.WriteObjectValue<UntypedNode>("items", Items);
             writer.WriteBoolValue("liveMode", LiveMode);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDto_meta>("meta", Meta);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDto_miscellaneousCharges>("miscellaneousCharges", MiscellaneousCharges);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDtoMetaProperty>("meta", Meta);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDtoMiscellaneousCharges>("miscellaneousCharges", MiscellaneousCharges);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDto_sendEstimateDetails>("sendEstimateDetails", SendEstimateDetails);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDtoSendEstimateDetails>("sendEstimateDetails", SendEstimateDetails);
             writer.WriteStringValue("termsNotes", TermsNotes);
             writer.WriteStringValue("title", Title);
             writer.WriteAdditionalData(AdditionalData);

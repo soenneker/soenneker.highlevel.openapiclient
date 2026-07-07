@@ -63,10 +63,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The Product label details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ProductsDefaultProductResponseDto_label? Label { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ProductsDefaultProductResponseDtoLabel? Label { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ProductsDefaultProductResponseDto_label Label { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ProductsDefaultProductResponseDtoLabel Label { get; set; }
 #endif
         /// <summary>The unique identifier for the location.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -132,6 +132,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public ProductsDefaultProductResponseDto()
         {
             AdditionalData = new Dictionary<string, object>();
+            IsTaxesEnabled = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -159,7 +160,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "_id", n => { Id = n.GetStringValue(); } },
                 { "image", n => { Image = n.GetStringValue(); } },
                 { "isTaxesEnabled", n => { IsTaxesEnabled = n.GetBoolValue(); } },
-                { "label", n => { Label = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProductsDefaultProductResponseDto_label>(global::Soenneker.HighLevel.OpenApiClient.Models.ProductsDefaultProductResponseDto_label.CreateFromDiscriminatorValue); } },
+                { "label", n => { Label = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProductsDefaultProductResponseDtoLabel>(global::Soenneker.HighLevel.OpenApiClient.Models.ProductsDefaultProductResponseDtoLabel.CreateFromDiscriminatorValue); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "productType", n => { ProductType = n.GetStringValue(); } },
@@ -185,7 +186,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("_id", Id);
             writer.WriteStringValue("image", Image);
             writer.WriteBoolValue("isTaxesEnabled", IsTaxesEnabled);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProductsDefaultProductResponseDto_label>("label", Label);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProductsDefaultProductResponseDtoLabel>("label", Label);
             writer.WriteStringValue("locationId", LocationId);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("productType", ProductType);
