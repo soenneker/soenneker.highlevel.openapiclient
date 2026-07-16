@@ -16,9 +16,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Source subtype of order</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.StoreOrderSourceSubType? SubType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.OrderSourceSubType? SubType { get; set; }
         /// <summary>Source of order</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.StoreOrderSourceType? Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.OrderSourceType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GetAvailableShippingRatesSource"/> and sets the default values.
         /// </summary>
@@ -44,8 +44,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "subType", n => { SubType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.StoreOrderSourceSubType>(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.StoreOrderSourceType>(); } },
+                { "subType", n => { SubType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.OrderSourceSubType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.OrderSourceType>(); } },
             };
         }
         /// <summary>
@@ -55,8 +55,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.StoreOrderSourceSubType>("subType", SubType);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.StoreOrderSourceType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.OrderSourceSubType>("subType", SubType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.OrderSourceType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

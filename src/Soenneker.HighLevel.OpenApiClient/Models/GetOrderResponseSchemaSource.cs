@@ -40,9 +40,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string Name { get; set; }
 #endif
         /// <summary>The subType property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.OrderSourceSubType? SubType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsOrderSourceSubType? SubType { get; set; }
         /// <summary>The type property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.OrderSourceType? Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsOrderSourceType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchemaSource"/> and sets the default values.
         /// </summary>
@@ -71,8 +71,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchemaSourceMeta>(global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchemaSourceMeta.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "subType", n => { SubType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.OrderSourceSubType>(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.OrderSourceType>(); } },
+                { "subType", n => { SubType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsOrderSourceSubType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsOrderSourceType>(); } },
             };
         }
         /// <summary>
@@ -85,8 +85,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetOrderResponseSchemaSourceMeta>("meta", Meta);
             writer.WriteStringValue("name", Name);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.OrderSourceSubType>("subType", SubType);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.OrderSourceType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsOrderSourceSubType>("subType", SubType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsOrderSourceType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
