@@ -49,7 +49,7 @@ namespace Soenneker.HighLevel.OpenApiClient.VoiceAi.Actions
         /// <summary>
         /// Create a new action for a voice AI agent. Actions define specific behaviors and capabilities for the agent during calls.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CreateActionResponseDto2"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CreateActionResponseDto"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -58,11 +58,11 @@ namespace Soenneker.HighLevel.OpenApiClient.VoiceAi.Actions
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnprocessableDto">When receiving a 422 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.CreateActionResponseDto2?> PostAsync(global::Soenneker.HighLevel.OpenApiClient.Models.CreateSingleActionDto body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.CreateActionResponseDto?> PostAsync(global::Soenneker.HighLevel.OpenApiClient.Models.CreateSingleActionDto body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.CreateActionResponseDto2> PostAsync(global::Soenneker.HighLevel.OpenApiClient.Models.CreateSingleActionDto body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.CreateActionResponseDto> PostAsync(global::Soenneker.HighLevel.OpenApiClient.Models.CreateSingleActionDto body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -73,7 +73,7 @@ namespace Soenneker.HighLevel.OpenApiClient.VoiceAi.Actions
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.CreateActionResponseDto2>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.CreateActionResponseDto2.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.CreateActionResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.CreateActionResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Create a new action for a voice AI agent. Actions define specific behaviors and capabilities for the agent during calls.

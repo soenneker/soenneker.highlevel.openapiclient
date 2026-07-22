@@ -12,34 +12,18 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     public partial class CreateActionResponseDto2 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>Action parameters - structure varies by actionType</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateActionResponseDto2ActionParameters? ActionParameters { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateActionResponseDto2ActionParameters ActionParameters { get; set; }
-#endif
-        /// <summary>Type of action</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateActionResponseDto2ActionType? ActionType { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Unique identifier for the created action</summary>
+        /// <summary>Created action details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateActionResponseDto2Data? Data { get; set; }
 #nullable restore
 #else
-        public string Id { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateActionResponseDto2Data Data { get; set; }
 #endif
-        /// <summary>Human-readable name for this action</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Name { get; set; }
-#nullable restore
-#else
-        public string Name { get; set; }
-#endif
+        /// <summary>Success status of the request</summary>
+        public bool? Success { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CreateActionResponseDto2"/> and sets the default values.
         /// </summary>
@@ -65,10 +49,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "actionParameters", n => { ActionParameters = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateActionResponseDto2ActionParameters>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateActionResponseDto2ActionParameters.CreateFromDiscriminatorValue); } },
-                { "actionType", n => { ActionType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateActionResponseDto2ActionType>(); } },
-                { "id", n => { Id = n.GetStringValue(); } },
-                { "name", n => { Name = n.GetStringValue(); } },
+                { "data", n => { Data = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateActionResponseDto2Data>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateActionResponseDto2Data.CreateFromDiscriminatorValue); } },
+                { "success", n => { Success = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -78,10 +60,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateActionResponseDto2ActionParameters>("actionParameters", ActionParameters);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateActionResponseDto2ActionType>("actionType", ActionType);
-            writer.WriteStringValue("id", Id);
-            writer.WriteStringValue("name", Name);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateActionResponseDto2Data>("data", Data);
+            writer.WriteBoolValue("success", Success);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

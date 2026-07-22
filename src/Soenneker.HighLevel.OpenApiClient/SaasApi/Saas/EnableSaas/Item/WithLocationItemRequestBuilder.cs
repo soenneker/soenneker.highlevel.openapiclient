@@ -36,22 +36,22 @@ namespace Soenneker.HighLevel.OpenApiClient.SaasApi.Saas.EnableSaas.Item
         /// <summary>
         /// &quot;&lt;div&gt;                  &lt;p&gt;Enable SaaS for Sub-Account (Formerly Location) based on the data provided&lt;/p&gt;                  &lt;div&gt;                    &lt;span style= \&quot;display: inline-block;                                width: 25px; height: 25px;                                background-color: yellow;                                color: black;                                font-weight: bold;                                font-size: 24px;                                text-align: center;                                line-height: 22px;                                border: 2px solid black;                                border-radius: 10%;                                margin-right: 10px;\&quot;&gt;                                !                      &lt;/span&gt;                      &lt;span&gt;                        &lt;strong&gt;                          This feature is only available on Agency Pro ($497) plan.                        &lt;/strong&gt;                      &lt;/span&gt;                  &lt;/div&gt;                &lt;/div&gt;    &quot;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.DefaultResponseResponseJson4"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.DefaultResponseResponseJson3"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.DefaultResponseResponseJson4?> PostAsync(global::Soenneker.HighLevel.OpenApiClient.Models.EnableSaasDto body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.DefaultResponseResponseJson3?> PostAsync(global::Soenneker.HighLevel.OpenApiClient.Models.EnableSaasDto body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.DefaultResponseResponseJson4> PostAsync(global::Soenneker.HighLevel.OpenApiClient.Models.EnableSaasDto body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.DefaultResponseResponseJson3> PostAsync(global::Soenneker.HighLevel.OpenApiClient.Models.EnableSaasDto body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.DefaultResponseResponseJson4>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.DefaultResponseResponseJson4.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.DefaultResponseResponseJson3>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.DefaultResponseResponseJson3.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &quot;&lt;div&gt;                  &lt;p&gt;Enable SaaS for Sub-Account (Formerly Location) based on the data provided&lt;/p&gt;                  &lt;div&gt;                    &lt;span style= \&quot;display: inline-block;                                width: 25px; height: 25px;                                background-color: yellow;                                color: black;                                font-weight: bold;                                font-size: 24px;                                text-align: center;                                line-height: 22px;                                border: 2px solid black;                                border-radius: 10%;                                margin-right: 10px;\&quot;&gt;                                !                      &lt;/span&gt;                      &lt;span&gt;                        &lt;strong&gt;                          This feature is only available on Agency Pro ($497) plan.                        &lt;/strong&gt;                      &lt;/span&gt;                  &lt;/div&gt;                &lt;/div&gt;    &quot;
