@@ -2953,7 +2953,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponse"
+                  "$ref": "#/components/schemas/SaasApiLocations200Response"
                 }
               }
             }
@@ -3009,7 +3009,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson"
+                  "$ref": "#/components/schemas/SaasApiGeneratePaymentLink200Response"
                 }
               }
             }
@@ -3065,7 +3065,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson2"
+                  "$ref": "#/components/schemas/SaasApiBulkDisableSaas201Response"
                 }
               }
             }
@@ -3121,7 +3121,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson3"
+                  "$ref": "#/components/schemas/SaasApiEnableSaasLocation201Response"
                 }
               }
             }
@@ -3177,7 +3177,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson4"
+                  "$ref": "#/components/schemas/SaasApiPauseLocation201Response"
                 }
               }
             }
@@ -3233,7 +3233,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson5"
+                  "$ref": "#/components/schemas/SaasApiUpdateRebilling201Response"
                 }
               }
             }
@@ -3280,7 +3280,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson6"
+                  "$ref": "#/components/schemas/SaasApiGetAgencyPlans200Response"
                 }
               }
             }
@@ -3335,7 +3335,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson7"
+                  "$ref": "#/components/schemas/SaasApiGetLocationSubscription200Response"
                 }
               }
             }
@@ -3391,7 +3391,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson8"
+                  "$ref": "#/components/schemas/SaasApiBulkEnableSaas201Response"
                 }
               }
             }
@@ -3446,7 +3446,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson9"
+                  "$ref": "#/components/schemas/SaasApiGetSaasLocations200Response"
                 }
               }
             }
@@ -3501,7 +3501,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson10"
+                  "$ref": "#/components/schemas/SaasApiGetSaasPlan200Response"
                 }
               }
             }
@@ -4335,7 +4335,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson11"
+                  "$ref": "#/components/schemas/MediasDeleteMediaContent204Response"
                 }
               }
             }
@@ -4392,7 +4392,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/MediasUpdateMediaObject200ResponseResponseJson"
+                  "$ref": "#/components/schemas/MediasUpdateMediaObject200ResponseSchema"
                 }
               }
             }
@@ -4486,7 +4486,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/MediasBulkUpdateMediaObjects200ResponseResponseJson"
+                  "$ref": "#/components/schemas/MediasBulkUpdateMediaObjects200ResponseSchema"
                 }
               }
             }
@@ -4533,7 +4533,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/MediasBulkDeleteMediaObjects200ResponseResponseJson"
+                  "$ref": "#/components/schemas/MediasBulkDeleteMediaObjects200ResponseSchema"
                 }
               }
             }
@@ -4963,7 +4963,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson12"
+                  "$ref": "#/components/schemas/ContactsSearchContactsAdvanced201Response"
                 }
               }
             }
@@ -13102,7 +13102,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson13"
+                  "$ref": "#/components/schemas/CoursesImportCourses201Response"
                 }
               }
             }
@@ -29604,7 +29604,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CalendarsGetSlots200ResponseResponseJson"
+                  "$ref": "#/components/schemas/CalendarsGetSlots200ResponseSchema"
                 }
               }
             }
@@ -30551,7 +30551,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CalendarsFetchCalendarResources200ResponseResponseJson"
+                  "$ref": "#/components/schemas/CalendarsFetchCalendarResources200ResponseSchema"
                 }
               }
             }
@@ -30727,7 +30727,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CalendarsGetEventNotification200ResponseResponseJson"
+                  "$ref": "#/components/schemas/CalendarsGetEventNotification200ResponseSchema"
                 }
               }
             }
@@ -30802,7 +30802,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CalendarsCreateEventNotification200ResponseResponseJson"
+                  "$ref": "#/components/schemas/CalendarsCreateEventNotification200ResponseSchema"
                 }
               }
             }
@@ -104132,57 +104132,57 @@
         "type": "object",
         "description": "Placeholder schema for path example refs"
       },
-      "DefaultResponse": {
+      "SaasApiLocations200Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson": {
+      "SaasApiGeneratePaymentLink200Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson2": {
+      "SaasApiBulkDisableSaas201Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson3": {
+      "SaasApiEnableSaasLocation201Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson4": {
+      "SaasApiPauseLocation201Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson5": {
+      "SaasApiUpdateRebilling201Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson6": {
+      "SaasApiGetAgencyPlans200Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson7": {
+      "SaasApiGetLocationSubscription200Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson8": {
+      "SaasApiBulkEnableSaas201Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson9": {
+      "SaasApiGetSaasLocations200Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson10": {
+      "SaasApiGetSaasPlan200Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
@@ -104249,24 +104249,24 @@
           }
         }
       },
-      "DefaultResponseResponseJson11": {
+      "MediasDeleteMediaContent204Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "MediasUpdateMediaObject200ResponseResponseJson": {
+      "MediasUpdateMediaObject200ResponseSchema": {
         "type": "object"
       },
-      "MediasBulkUpdateMediaObjects200ResponseResponseJson": {
+      "MediasBulkUpdateMediaObjects200ResponseSchema": {
         "type": "object"
       },
-      "MediasBulkDeleteMediaObjects200ResponseResponseJson": {
+      "MediasBulkDeleteMediaObjects200ResponseSchema": {
         "type": "object"
       },
       "ContactsSearchContactsAdvancedRequest": {
         "type": "object"
       },
-      "DefaultResponseResponseJson12": {
+      "ContactsSearchContactsAdvanced201Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
@@ -104274,12 +104274,12 @@
       "ContactsAddContactToCampaignRequest": {
         "type": "object"
       },
-      "DefaultResponseResponseJson13": {
+      "CoursesImportCourses201Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "CalendarsGetSlots200ResponseResponseJson": {
+      "CalendarsGetSlots200ResponseSchema": {
         "type": "object",
         "additionalProperties": {
           "$ref": "#/components/schemas/SlotsSchema"
@@ -104288,13 +104288,13 @@
       "CalendarsDeleteEventRequest": {
         "type": "object"
       },
-      "CalendarsFetchCalendarResources200ResponseResponseJson": {
+      "CalendarsFetchCalendarResources200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/CalendarResourceByIdResponseDto"
         }
       },
-      "CalendarsGetEventNotification200ResponseResponseJson": {
+      "CalendarsGetEventNotification200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/CalendarNotificationResponseDto"
@@ -104306,7 +104306,7 @@
           "$ref": "#/components/schemas/CreateCalendarNotificationDto"
         }
       },
-      "CalendarsCreateEventNotification200ResponseResponseJson": {
+      "CalendarsCreateEventNotification200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/CalendarNotificationResponseDto"
