@@ -34,10 +34,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The card property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CardDto? Card { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCardDto? Card { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CardDto Card { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCardDto Card { get; set; }
 #endif
         /// <summary>The cardId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -124,7 +124,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             {
                 { "bacsDirectDebit", n => { BacsDirectDebit = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BacsDirectDebitDto>(global::Soenneker.HighLevel.OpenApiClient.Models.BacsDirectDebitDto.CreateFromDiscriminatorValue); } },
                 { "becsDirectDebit", n => { BecsDirectDebit = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BecsDirectDebitDto>(global::Soenneker.HighLevel.OpenApiClient.Models.BecsDirectDebitDto.CreateFromDiscriminatorValue); } },
-                { "card", n => { Card = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CardDto>(global::Soenneker.HighLevel.OpenApiClient.Models.CardDto.CreateFromDiscriminatorValue); } },
+                { "card", n => { Card = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCardDto>(global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCardDto.CreateFromDiscriminatorValue); } },
                 { "cardId", n => { CardId = n.GetStringValue(); } },
                 { "customerId", n => { CustomerId = n.GetStringValue(); } },
                 { "enable", n => { Enable = n.GetBoolValue(); } },
@@ -144,7 +144,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BacsDirectDebitDto>("bacsDirectDebit", BacsDirectDebit);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BecsDirectDebitDto>("becsDirectDebit", BecsDirectDebit);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CardDto>("card", Card);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCardDto>("card", Card);
             writer.WriteStringValue("cardId", CardId);
             writer.WriteStringValue("customerId", CustomerId);
             writer.WriteBoolValue("enable", Enable);

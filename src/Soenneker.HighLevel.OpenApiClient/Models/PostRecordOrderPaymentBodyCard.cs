@@ -24,7 +24,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string Last4 { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsCardDtoType? Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CardDtoType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyCard"/> and sets the default values.
         /// </summary>
@@ -51,7 +51,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "last4", n => { Last4 = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsCardDtoType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CardDtoType>(); } },
             };
         }
         /// <summary>
@@ -62,7 +62,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("last4", Last4);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsCardDtoType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CardDtoType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
