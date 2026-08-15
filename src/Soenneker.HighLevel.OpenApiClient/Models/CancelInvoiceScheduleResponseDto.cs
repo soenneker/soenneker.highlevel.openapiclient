@@ -22,8 +22,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string AltId { get; set; }
 #endif
-        /// <summary>The altType property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CancelInvoiceScheduleResponseDtoAltType? AltType { get; set; }
+        /// <summary>Alt Type</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
         /// <summary>Business Details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -174,7 +174,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "altId", n => { AltId = n.GetStringValue(); } },
-                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CancelInvoiceScheduleResponseDtoAltType>(); } },
+                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType>(); } },
                 { "businessDetails", n => { BusinessDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CancelInvoiceScheduleResponseDtoBusinessDetails>(global::Soenneker.HighLevel.OpenApiClient.Models.CancelInvoiceScheduleResponseDtoBusinessDetails.CreateFromDiscriminatorValue); } },
                 { "compiledTermsNotes", n => { CompiledTermsNotes = n.GetStringValue(); } },
                 { "contactDetails", n => { ContactDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CancelInvoiceScheduleResponseDtoContactDetails>(global::Soenneker.HighLevel.OpenApiClient.Models.CancelInvoiceScheduleResponseDtoContactDetails.CreateFromDiscriminatorValue); } },
@@ -202,7 +202,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("altId", AltId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CancelInvoiceScheduleResponseDtoAltType>("altType", AltType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType>("altType", AltType);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CancelInvoiceScheduleResponseDtoBusinessDetails>("businessDetails", BusinessDetails);
             writer.WriteStringValue("compiledTermsNotes", CompiledTermsNotes);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CancelInvoiceScheduleResponseDtoContactDetails>("contactDetails", ContactDetails);

@@ -170,7 +170,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Invoices.Schedule
 #endif
             /// <summary>Alt Type</summary>
             [QueryParameter("altType")]
-            public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesListInvoiceSchedulesAltTypeParameter? AltType { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
             /// <summary>endAt in YYYY-MM-DD format</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

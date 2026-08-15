@@ -105,7 +105,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Invoices.Estimate.Template.Preview
             public string AltId { get; set; }
 #endif
             [QueryParameter("altType")]
-            public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesPreviewEstimateTemplateAltTypeParameter? AltType { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
             /// <summary>Template Id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

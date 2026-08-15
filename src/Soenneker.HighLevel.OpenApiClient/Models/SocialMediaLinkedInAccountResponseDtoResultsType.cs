@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.HighLevel.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;type must be one of the following values: page, profile&quot;
+    /// type must be one of the following values: page, profile
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SocialMediaLinkedInAccountResponseDtoResultsType : IAdditionalDataHolder, IParsable

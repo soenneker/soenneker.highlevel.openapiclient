@@ -8,6 +8,7 @@ using Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Oauth.Item.Instagram;
 using Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Oauth.Item.Linkedin;
 using Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Oauth.Item.Tiktok;
 using Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Oauth.Item.TiktokBusiness;
+using Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Oauth.Item.Twitter;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -49,6 +50,11 @@ namespace Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Oauth.Item
         public global::Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Oauth.Item.TiktokBusiness.TiktokBusinessRequestBuilder TiktokBusiness
         {
             get => new global::Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Oauth.Item.TiktokBusiness.TiktokBusinessRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The twitter property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Oauth.Item.Twitter.TwitterRequestBuilder Twitter
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Oauth.Item.Twitter.TwitterRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Oauth.Item.WithLocationItemRequestBuilder"/> and sets the default values.

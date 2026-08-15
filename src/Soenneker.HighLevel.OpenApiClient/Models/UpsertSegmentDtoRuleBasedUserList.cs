@@ -24,7 +24,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public global::Soenneker.HighLevel.OpenApiClient.Models.RuleBasedUserListDtoFlexibleRuleUserList FlexibleRuleUserList { get; set; }
 #endif
         /// <summary>Prepopulation status</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.RuleBasedUserListDtoPrepopulationStatus? PrepopulationStatus { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.RequestedPrepopulationStatus? PrepopulationStatus { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpsertSegmentDtoRuleBasedUserList"/> and sets the default values.
         /// </summary>
@@ -51,7 +51,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "flexibleRuleUserList", n => { FlexibleRuleUserList = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.RuleBasedUserListDtoFlexibleRuleUserList>(global::Soenneker.HighLevel.OpenApiClient.Models.RuleBasedUserListDtoFlexibleRuleUserList.CreateFromDiscriminatorValue); } },
-                { "prepopulationStatus", n => { PrepopulationStatus = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.RuleBasedUserListDtoPrepopulationStatus>(); } },
+                { "prepopulationStatus", n => { PrepopulationStatus = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.RequestedPrepopulationStatus>(); } },
             };
         }
         /// <summary>
@@ -62,7 +62,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.RuleBasedUserListDtoFlexibleRuleUserList>("flexibleRuleUserList", FlexibleRuleUserList);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.RuleBasedUserListDtoPrepopulationStatus>("prepopulationStatus", PrepopulationStatus);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.RequestedPrepopulationStatus>("prepopulationStatus", PrepopulationStatus);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

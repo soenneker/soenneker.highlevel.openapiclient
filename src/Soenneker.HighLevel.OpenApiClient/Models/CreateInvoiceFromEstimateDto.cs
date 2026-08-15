@@ -22,8 +22,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string AltId { get; set; }
 #endif
-        /// <summary>The altType property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceFromEstimateDtoAltType? AltType { get; set; }
+        /// <summary>Alt Type</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
         /// <summary>Mark Estimate as Invoiced</summary>
         public bool? MarkAsInvoiced { get; set; }
         /// <summary>Version of the update request</summary>
@@ -54,7 +54,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "altId", n => { AltId = n.GetStringValue(); } },
-                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceFromEstimateDtoAltType>(); } },
+                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType>(); } },
                 { "markAsInvoiced", n => { MarkAsInvoiced = n.GetBoolValue(); } },
                 { "version", n => { Version = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceFromEstimateDtoVersion>(); } },
             };
@@ -67,7 +67,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("altId", AltId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceFromEstimateDtoAltType>("altType", AltType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType>("altType", AltType);
             writer.WriteBoolValue("markAsInvoiced", MarkAsInvoiced);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceFromEstimateDtoVersion>("version", Version);
             writer.WriteAdditionalData(AdditionalData);

@@ -23,8 +23,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string AltId { get; set; }
 #endif
-        /// <summary>The altType property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.StoreSettingSchemaAltType? AltType { get; set; }
+        /// <summary>Alt Type</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
         /// <summary>created at</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -99,7 +99,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "altId", n => { AltId = n.GetStringValue(); } },
-                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.StoreSettingSchemaAltType>(); } },
+                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType>(); } },
                 { "createdAt", n => { CreatedAt = n.GetStringValue(); } },
                 { "_id", n => { Id = n.GetStringValue(); } },
                 { "shippingOrigin", n => { ShippingOrigin = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.StoreSettingSchemaShippingOrigin>(global::Soenneker.HighLevel.OpenApiClient.Models.StoreSettingSchemaShippingOrigin.CreateFromDiscriminatorValue); } },
@@ -116,7 +116,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("altId", AltId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.StoreSettingSchemaAltType>("altType", AltType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType>("altType", AltType);
             writer.WriteStringValue("createdAt", CreatedAt);
             writer.WriteStringValue("_id", Id);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.StoreSettingSchemaShippingOrigin>("shippingOrigin", ShippingOrigin);

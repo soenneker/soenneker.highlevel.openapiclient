@@ -53,17 +53,17 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValue CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
+            var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValue();
-            if("CustomFieldResponseSchemaFieldValue_1".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            if("CustomFieldResponseSchemaFieldValueBranch1".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.CustomFieldResponseSchemaFieldValueBranch1 = new global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValueBranch1();
             }
-            else if("CustomFieldResponseSchemaFieldValue_3".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("CustomFieldResponseSchemaFieldValueBranch3".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.CustomFieldResponseSchemaFieldValueBranch3 = new global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValueBranch3();
             }
-            else if("CustomFieldResponseSchemaFieldValue_4".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("CustomFieldResponseSchemaFieldValueBranch4".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.CustomFieldResponseSchemaFieldValueBranch4 = new global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValueBranch4();
             }

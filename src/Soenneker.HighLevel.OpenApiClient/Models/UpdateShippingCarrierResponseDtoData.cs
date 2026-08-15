@@ -25,8 +25,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string AltId { get; set; }
 #endif
-        /// <summary>The altType property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ShippingCarrierSchemaAltType? AltType { get; set; }
+        /// <summary>Alt Type</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
         /// <summary>The URL endpoint that GHL needs to retrieve shipping rates. This must be a public URL.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -110,7 +110,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             {
                 { "allowsMultipleServiceSelection", n => { AllowsMultipleServiceSelection = n.GetBoolValue(); } },
                 { "altId", n => { AltId = n.GetStringValue(); } },
-                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ShippingCarrierSchemaAltType>(); } },
+                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType>(); } },
                 { "callbackUrl", n => { CallbackUrl = n.GetStringValue(); } },
                 { "createdAt", n => { CreatedAt = n.GetStringValue(); } },
                 { "_id", n => { Id = n.GetStringValue(); } },
@@ -129,7 +129,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("allowsMultipleServiceSelection", AllowsMultipleServiceSelection);
             writer.WriteStringValue("altId", AltId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ShippingCarrierSchemaAltType>("altType", AltType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType>("altType", AltType);
             writer.WriteStringValue("callbackUrl", CallbackUrl);
             writer.WriteStringValue("createdAt", CreatedAt);
             writer.WriteStringValue("_id", Id);

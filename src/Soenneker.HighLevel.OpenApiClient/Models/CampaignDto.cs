@@ -39,7 +39,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public global::Soenneker.HighLevel.OpenApiClient.Models.CampaignDtoAdvancedOptionsProperty AdvancedOptions { get; set; }
 #endif
         /// <summary>Channel sub type</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CampaignDtoAdvertisingChannelSubType? AdvertisingChannelSubType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DemandGenAdvertisingChannelSubType? AdvertisingChannelSubType { get; set; }
         /// <summary>Advertising channel</summary>
         public global::Soenneker.HighLevel.OpenApiClient.Models.CampaignDtoAdvertisingChannelType? AdvertisingChannelType { get; set; }
         /// <summary>Campaign assets</summary>
@@ -176,7 +176,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "adGroups", n => { AdGroups = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdGroupDto>(global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdGroupDto.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "adSchedule", n => { AdSchedule = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdScheduleDto>(global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdScheduleDto.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "advancedOptions", n => { AdvancedOptions = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CampaignDtoAdvancedOptionsProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.CampaignDtoAdvancedOptionsProperty.CreateFromDiscriminatorValue); } },
-                { "advertisingChannelSubType", n => { AdvertisingChannelSubType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CampaignDtoAdvertisingChannelSubType>(); } },
+                { "advertisingChannelSubType", n => { AdvertisingChannelSubType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.DemandGenAdvertisingChannelSubType>(); } },
                 { "advertisingChannelType", n => { AdvertisingChannelType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CampaignDtoAdvertisingChannelType>(); } },
                 { "assets", n => { Assets = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CampaignDtoAssets>(global::Soenneker.HighLevel.OpenApiClient.Models.CampaignDtoAssets.CreateFromDiscriminatorValue); } },
                 { "audience", n => { Audience = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CampaignDtoAudience>(global::Soenneker.HighLevel.OpenApiClient.Models.CampaignDtoAudience.CreateFromDiscriminatorValue); } },
@@ -207,7 +207,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdGroupDto>("adGroups", AdGroups);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdScheduleDto>("adSchedule", AdSchedule);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CampaignDtoAdvancedOptionsProperty>("advancedOptions", AdvancedOptions);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CampaignDtoAdvertisingChannelSubType>("advertisingChannelSubType", AdvertisingChannelSubType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.DemandGenAdvertisingChannelSubType>("advertisingChannelSubType", AdvertisingChannelSubType);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CampaignDtoAdvertisingChannelType>("advertisingChannelType", AdvertisingChannelType);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CampaignDtoAssets>("assets", Assets);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CampaignDtoAudience>("audience", Audience);

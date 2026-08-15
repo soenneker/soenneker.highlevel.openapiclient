@@ -170,7 +170,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Products.Collections
 #endif
             /// <summary>The type of alt. For now it is only LOCATION</summary>
             [QueryParameter("altType")]
-            public global::Soenneker.HighLevel.OpenApiClient.Models.ProductsGetProductCollectionAltTypeParameter? AltType { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
             /// <summary>Ids of the collections separated by comma(,) for search purposes</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

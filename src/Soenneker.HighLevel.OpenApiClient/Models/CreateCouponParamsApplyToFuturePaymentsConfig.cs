@@ -18,7 +18,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Duration the coupon to be applied in a subscription</summary>
         public double? Duration { get; set; }
         /// <summary>Type of the duration</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ApplyToFuturePaymentsConfigDurationType? DurationType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.MonthsDurationType? DurationType { get; set; }
         /// <summary>Type of the config</summary>
         public global::Soenneker.HighLevel.OpenApiClient.Models.ApplyToFuturePaymentsConfigType? Type { get; set; }
         /// <summary>
@@ -47,7 +47,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "duration", n => { Duration = n.GetDoubleValue(); } },
-                { "durationType", n => { DurationType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ApplyToFuturePaymentsConfigDurationType>(); } },
+                { "durationType", n => { DurationType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.MonthsDurationType>(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ApplyToFuturePaymentsConfigType>(); } },
             };
         }
@@ -59,7 +59,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDoubleValue("duration", Duration);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ApplyToFuturePaymentsConfigDurationType>("durationType", DurationType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.MonthsDurationType>("durationType", DurationType);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ApplyToFuturePaymentsConfigType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

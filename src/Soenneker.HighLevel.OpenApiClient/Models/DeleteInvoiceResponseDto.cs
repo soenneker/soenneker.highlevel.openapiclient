@@ -22,8 +22,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string AltId { get; set; }
 #endif
-        /// <summary>The altType property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoiceResponseDtoAltType? AltType { get; set; }
+        /// <summary>Alt Type</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
         /// <summary>Total Amount Due</summary>
         public double? AmountDue { get; set; }
         /// <summary>Amount Paid</summary>
@@ -170,7 +170,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "altId", n => { AltId = n.GetStringValue(); } },
-                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoiceResponseDtoAltType>(); } },
+                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType>(); } },
                 { "amountDue", n => { AmountDue = n.GetDoubleValue(); } },
                 { "amountPaid", n => { AmountPaid = n.GetDoubleValue(); } },
                 { "automaticTaxesCalculated", n => { AutomaticTaxesCalculated = n.GetBoolValue(); } },
@@ -202,7 +202,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("altId", AltId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoiceResponseDtoAltType>("altType", AltType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType>("altType", AltType);
             writer.WriteDoubleValue("amountDue", AmountDue);
             writer.WriteDoubleValue("amountPaid", AmountPaid);
             writer.WriteBoolValue("automaticTaxesCalculated", AutomaticTaxesCalculated);

@@ -59,7 +59,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Contacts
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ContactsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/contacts", pathParameters)
+        public ContactsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/contacts{?limit*,query*,startAfter*,startAfterId*}", pathParameters)
         {
         }
         /// <summary>
@@ -67,8 +67,36 @@ namespace Soenneker.HighLevel.OpenApiClient.Contacts
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ContactsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/contacts", rawUrl)
+        public ContactsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/contacts{?limit*,query*,startAfter*,startAfterId*}", rawUrl)
         {
+        }
+        /// <summary>
+        /// Get Contacts **Note:** This API endpoint is deprecated. Please use the [Search Contacts](https://marketplace.gohighlevel.com/docs/ghl/contacts/search-contacts-advanced) endpoint instead.
+        /// </summary>
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.ContactsSearchSuccessfulResponseDto"/></returns>
+        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
+        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasBadRequestDto">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDto">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnprocessableDto">When receiving a 422 status code</exception>
+        [Obsolete("")]
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.ContactsSearchSuccessfulResponseDto?> GetAsync(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Contacts.ContactsRequestBuilder.ContactsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        {
+#nullable restore
+#else
+        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.ContactsSearchSuccessfulResponseDto> GetAsync(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Contacts.ContactsRequestBuilder.ContactsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        {
+#endif
+            var requestInfo = ToGetRequestInformation(requestConfiguration);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "400", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
+                { "422", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.ContactsSearchSuccessfulResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.ContactsSearchSuccessfulResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Please find the list of acceptable values for the `country` field  &lt;a href=&quot;https://highlevel.stoplight.io/docs/integrations/ZG9jOjI4MzUzNDIy-country-list&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;
@@ -100,6 +128,26 @@ namespace Soenneker.HighLevel.OpenApiClient.Contacts
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.CreateContactsSuccessfulResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.CreateContactsSuccessfulResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
+        /// Get Contacts **Note:** This API endpoint is deprecated. Please use the [Search Contacts](https://marketplace.gohighlevel.com/docs/ghl/contacts/search-contacts-advanced) endpoint instead.
+        /// </summary>
+        /// <returns>A <see cref="RequestInformation"/></returns>
+        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        [Obsolete("")]
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Contacts.ContactsRequestBuilder.ContactsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        {
+#nullable restore
+#else
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Contacts.ContactsRequestBuilder.ContactsRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        {
+#endif
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/contacts?locationId={locationId}{&limit*,query*,startAfter*,startAfterId*}", PathParameters);
+            requestInfo.Configure(requestConfiguration);
+            requestInfo.Headers.TryAdd("Accept", "application/json");
+            return requestInfo;
+        }
+        /// <summary>
         /// Please find the list of acceptable values for the `country` field  &lt;a href=&quot;https://highlevel.stoplight.io/docs/integrations/ZG9jOjI4MzUzNDIy-country-list&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
@@ -129,6 +177,49 @@ namespace Soenneker.HighLevel.OpenApiClient.Contacts
         public global::Soenneker.HighLevel.OpenApiClient.Contacts.ContactsRequestBuilder WithUrl(string rawUrl)
         {
             return new global::Soenneker.HighLevel.OpenApiClient.Contacts.ContactsRequestBuilder(rawUrl, RequestAdapter);
+        }
+        /// <summary>
+        /// Get Contacts **Note:** This API endpoint is deprecated. Please use the [Search Contacts](https://marketplace.gohighlevel.com/docs/ghl/contacts/search-contacts-advanced) endpoint instead.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class ContactsRequestBuilderGetQueryParameters 
+        {
+            /// <summary>Limit Per Page records count. will allow maximum up to 100 and default will be 20</summary>
+            [QueryParameter("limit")]
+            public double? Limit { get; set; }
+            /// <summary>Location Id</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("locationId")]
+            public string? LocationId { get; set; }
+#nullable restore
+#else
+            [QueryParameter("locationId")]
+            public string LocationId { get; set; }
+#endif
+            /// <summary>Contact Query</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("query")]
+            public string? Query { get; set; }
+#nullable restore
+#else
+            [QueryParameter("query")]
+            public string Query { get; set; }
+#endif
+            /// <summary>Start Afte</summary>
+            [QueryParameter("startAfter")]
+            public double? StartAfter { get; set; }
+            /// <summary>Start After Id</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("startAfterId")]
+            public string? StartAfterId { get; set; }
+#nullable restore
+#else
+            [QueryParameter("startAfterId")]
+            public string StartAfterId { get; set; }
+#endif
         }
     }
 }

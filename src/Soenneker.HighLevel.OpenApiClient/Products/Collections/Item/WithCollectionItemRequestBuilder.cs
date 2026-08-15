@@ -203,7 +203,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Products.Collections.Item
 #endif
             /// <summary>The type of alt. For now it is only LOCATION</summary>
             [QueryParameter("altType")]
-            public global::Soenneker.HighLevel.OpenApiClient.Models.ProductsDeleteProductCollectionAltTypeParameter? AltType { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
         }
         /// <summary>
         /// Get Details about individual product collection

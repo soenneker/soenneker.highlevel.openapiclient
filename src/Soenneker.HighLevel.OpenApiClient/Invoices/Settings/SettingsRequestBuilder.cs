@@ -105,7 +105,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Invoices.Settings
             public string AltId { get; set; }
 #endif
             [QueryParameter("altType")]
-            public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesGetInvoiceSettingsAltTypeParameter? AltType { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
         }
     }
 }

@@ -59,7 +59,7 @@ namespace Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Item.Posts
         {
         }
         /// <summary>
-        /// &quot;Create posts for all supported platforms. It is possible to create customized posts per channel by using the same platform account IDs in a request and hitting the create post API multiple times with different summaries and account IDs per platform.The content and media limitations, as well as platform rate limiters corresponding to the respective platforms, are provided in the following reference link:  Link: [Platform Limitations](https://help.leadconnectorhq.com/support/solutions/articles/48001240003-social-planner-image-video-content-and-api-limitations \&quot;Social Planner Help\&quot;)&quot;
+        /// Create posts for all supported platforms. It is possible to create customized posts per channel by using the same platform account IDs in a request and hitting the create post API multiple times with different summaries and account IDs per platform.The content and media limitations, as well as platform rate limiters corresponding to the respective platforms, are provided in the following reference link:  Link: [Platform Limitations](https://help.leadconnectorhq.com/support/solutions/articles/48001240003-social-planner-image-video-content-and-api-limitations &quot;Social Planner Help&quot;)
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostSuccessfulResponseDto"/></returns>
         /// <param name="body">The request body</param>
@@ -88,7 +88,7 @@ namespace Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Item.Posts
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostSuccessfulResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostSuccessfulResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Create posts for all supported platforms. It is possible to create customized posts per channel by using the same platform account IDs in a request and hitting the create post API multiple times with different summaries and account IDs per platform.The content and media limitations, as well as platform rate limiters corresponding to the respective platforms, are provided in the following reference link:  Link: [Platform Limitations](https://help.leadconnectorhq.com/support/solutions/articles/48001240003-social-planner-image-video-content-and-api-limitations \&quot;Social Planner Help\&quot;)&quot;
+        /// Create posts for all supported platforms. It is possible to create customized posts per channel by using the same platform account IDs in a request and hitting the create post API multiple times with different summaries and account IDs per platform.The content and media limitations, as well as platform rate limiters corresponding to the respective platforms, are provided in the following reference link:  Link: [Platform Limitations](https://help.leadconnectorhq.com/support/solutions/articles/48001240003-social-planner-image-video-content-and-api-limitations &quot;Social Planner Help&quot;)
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

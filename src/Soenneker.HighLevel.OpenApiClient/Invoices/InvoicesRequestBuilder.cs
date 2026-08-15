@@ -212,7 +212,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Invoices
 #endif
             /// <summary>Alt Type</summary>
             [QueryParameter("altType")]
-            public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesListInvoicesAltTypeParameter? AltType { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
             /// <summary>Contact ID for the invoice</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -268,7 +268,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Invoices
 #endif
             /// <summary>The field on which sorting should be applied</summary>
             [QueryParameter("sortField")]
-            public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesListInvoicesSortFieldParameter? SortField { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.IssueDateSortField? SortField { get; set; }
             /// <summary>The order of sort which should be applied for the sortField</summary>
             [QueryParameter("sortOrder")]
             public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesListInvoicesSortOrderParameter? SortOrder { get; set; }

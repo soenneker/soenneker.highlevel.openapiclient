@@ -26,7 +26,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string CustomMessage { get; set; }
 #endif
-        /// <summary>&quot;Time duration before followup (max: 60 minutes, 24 hours, or 180 days depending on unit)&quot;</summary>
+        /// <summary>Time duration before followup (max: 60 minutes, 24 hours, or 180 days depending on unit)</summary>
         public double? FollowupTime { get; set; }
         /// <summary>Time unit for followup delay</summary>
         public global::Soenneker.HighLevel.OpenApiClient.Models.FollowupSequenceFollowupTimeUnit? FollowupTimeUnit { get; set; }

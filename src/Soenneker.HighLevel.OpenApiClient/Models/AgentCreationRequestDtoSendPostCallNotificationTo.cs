@@ -8,20 +8,20 @@ using System;
 namespace Soenneker.HighLevel.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;Configuration for post-call email notifications to various recipients. Default: []&quot;
+    /// Configuration for post-call email notifications to various recipients. Default: []
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AgentCreationRequestDtoSendPostCallNotificationTo : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Enables post-call notifications to all admin users in the location. Default: true&quot;</summary>
+        /// <summary>Enables post-call notifications to all admin users in the location. Default: true</summary>
         public bool? Admins { get; set; }
-        /// <summary>&quot;Enables post-call notifications to all users in the location. Default: false&quot;</summary>
+        /// <summary>Enables post-call notifications to all users in the location. Default: false</summary>
         public bool? AllUsers { get; set; }
-        /// <summary>&quot;Enables post-call notifications to the user assigned to the contact. Default: false&quot;</summary>
+        /// <summary>Enables post-call notifications to the user assigned to the contact. Default: false</summary>
         public bool? ContactAssignedUser { get; set; }
-        /// <summary>&quot;Array of custom email addresses to receive post-call notifications. Default: []&quot;</summary>
+        /// <summary>Array of custom email addresses to receive post-call notifications. Default: []</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? CustomEmails { get; set; }
@@ -29,7 +29,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public List<string> CustomEmails { get; set; }
 #endif
-        /// <summary>&quot;Array of specific user IDs to receive post-call notifications. Default: []&quot;</summary>
+        /// <summary>Array of specific user IDs to receive post-call notifications. Default: []</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? SpecificUsers { get; set; }

@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.HighLevel.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;Approval Status must be one of the following values: pending, approved, rejected, not_required&quot;
+    /// Approval Status must be one of the following values: pending, approved, rejected, not_required
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostCreateRequestPostApprovalDetailsApprovalStatus : IAdditionalDataHolder, IParsable

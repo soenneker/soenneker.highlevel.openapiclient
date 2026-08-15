@@ -16,7 +16,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The type property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LateFeesMaxFeesDtoType? Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.FixedValueType? Type { get; set; }
         /// <summary>Max late fees to pay</summary>
         public double? Value { get; set; }
         /// <summary>
@@ -44,7 +44,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LateFeesMaxFeesDtoType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.FixedValueType>(); } },
                 { "value", n => { Value = n.GetDoubleValue(); } },
             };
         }
@@ -55,7 +55,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LateFeesMaxFeesDtoType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.FixedValueType>("type", Type);
             writer.WriteDoubleValue("value", Value);
             writer.WriteAdditionalData(AdditionalData);
         }

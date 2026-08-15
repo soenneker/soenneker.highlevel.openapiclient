@@ -23,7 +23,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string AltId { get; set; }
 #endif
         /// <summary>Alt Type</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateCouponParamsAltType? AltType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
         /// <summary>Is Coupon applicable on upcoming subscription transactions</summary>
         public bool? ApplyToFuturePayments { get; set; }
         /// <summary>If coupon is applicable on upcoming subscription transactions, how many months should it be applicable for a subscription</summary>
@@ -110,7 +110,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "altId", n => { AltId = n.GetStringValue(); } },
-                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateCouponParamsAltType>(); } },
+                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType>(); } },
                 { "applyToFuturePayments", n => { ApplyToFuturePayments = n.GetBoolValue(); } },
                 { "applyToFuturePaymentsConfig", n => { ApplyToFuturePaymentsConfig = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateCouponParamsApplyToFuturePaymentsConfig>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateCouponParamsApplyToFuturePaymentsConfig.CreateFromDiscriminatorValue); } },
                 { "code", n => { Code = n.GetStringValue(); } },
@@ -132,7 +132,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("altId", AltId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateCouponParamsAltType>("altType", AltType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType>("altType", AltType);
             writer.WriteBoolValue("applyToFuturePayments", ApplyToFuturePayments);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateCouponParamsApplyToFuturePaymentsConfig>("applyToFuturePaymentsConfig", ApplyToFuturePaymentsConfig);
             writer.WriteStringValue("code", Code);

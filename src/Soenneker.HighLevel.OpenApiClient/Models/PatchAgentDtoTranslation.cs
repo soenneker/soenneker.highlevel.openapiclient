@@ -8,14 +8,14 @@ using System;
 namespace Soenneker.HighLevel.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;Language translation settings including enablement flag and target language code. Rules: (1) translation.enabled can only be true if the agent&apos;s language is not en-US; (2) when enabled, translation.language must be either the agent&apos;s language or en-US; (3) when enabled, translation.language is required.&quot;
+    /// Language translation settings including enablement flag and target language code. Rules: (1) translation.enabled can only be true if the agent&apos;s language is not en-US; (2) when enabled, translation.language must be either the agent&apos;s language or en-US; (3) when enabled, translation.language is required.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PatchAgentDtoTranslation : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Enables language translation for agent conversations. Default: false&quot;</summary>
+        /// <summary>Enables language translation for agent conversations. Default: false</summary>
         public bool? Enabled { get; set; }
         /// <summary>Target language code for translation (e.g., &quot;es&quot; for Spanish, &quot;fr&quot; for French).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HighLevel.OpenApiClient.Models
 {
-    /// <summary>&quot;Language code for the agent&apos;s speech and understanding. Default: \&quot;en-US\&quot;&quot;</summary>
+    /// <summary>Language code for the agent&apos;s speech and understanding. Default: &quot;en-US&quot;</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum VoiceAiLanguage
     {

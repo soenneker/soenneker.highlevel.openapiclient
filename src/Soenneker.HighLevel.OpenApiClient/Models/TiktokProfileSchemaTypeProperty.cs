@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.HighLevel.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;Tiktok Account Type must be one of the following values: business, profile&quot;
+    /// Tiktok Account Type must be one of the following values: business, profile
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TiktokProfileSchemaTypeProperty : IAdditionalDataHolder, IParsable

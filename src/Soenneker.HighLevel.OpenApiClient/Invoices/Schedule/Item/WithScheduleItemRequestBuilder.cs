@@ -227,7 +227,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Invoices.Schedule.Item
 #endif
             /// <summary>Alt Type</summary>
             [QueryParameter("altType")]
-            public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesDeleteInvoiceScheduleAltTypeParameter? AltType { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
         }
         /// <summary>
         /// API to get an schedule by schedule id
@@ -247,7 +247,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Invoices.Schedule.Item
 #endif
             /// <summary>Alt Type</summary>
             [QueryParameter("altType")]
-            public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesGetInvoiceScheduleAltTypeParameter? AltType { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
         }
     }
 }

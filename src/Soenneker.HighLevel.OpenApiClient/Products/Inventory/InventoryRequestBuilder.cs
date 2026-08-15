@@ -156,7 +156,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Products.Inventory
             public string AltId { get; set; }
 #endif
             [QueryParameter("altType")]
-            public global::Soenneker.HighLevel.OpenApiClient.Models.ProductsGetListInventoryAltTypeParameter? AltType { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
             /// <summary>The maximum number of items to be included in a single page of results</summary>
             [QueryParameter("limit")]
             public double? Limit { get; set; }

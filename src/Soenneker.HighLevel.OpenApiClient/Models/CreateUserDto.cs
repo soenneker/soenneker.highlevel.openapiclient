@@ -112,7 +112,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public List<global::Soenneker.HighLevel.OpenApiClient.Models.CreateUserDtoScopesAssignedToOnlyItem?> ScopesAssignedToOnly { get; set; }
 #endif
-        /// <summary>&quot;Per-location inbound Twilio number in E.164 format, keyed by location id (Call and Voicemail Inbound Number for direct Twilio, not LC Phone). Replacement semantics: if you send twilioPhone in the request body, the stored map is replaced entirely with this object (not merged). Any location id omitted from the object is removed from the saved map. Omit the twilioPhone property entirely to leave existing numbers unchanged. Send an empty object {} to clear all per-location numbers. To clear a single location only, set that location id to an empty string \&quot;\&quot;.&quot;</summary>
+        /// <summary>Per-location inbound Twilio number in E.164 format, keyed by location id (Call and Voicemail Inbound Number for direct Twilio, not LC Phone). Replacement semantics: if you send twilioPhone in the request body, the stored map is replaced entirely with this object (not merged). Any location id omitted from the object is removed from the saved map. Omit the twilioPhone property entirely to leave existing numbers unchanged. Send an empty object {} to clear all per-location numbers. To clear a single location only, set that location id to an empty string &quot;&quot;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HighLevel.OpenApiClient.Models.CreateUserDtoTwilioPhoneProperty? TwilioPhone { get; set; }

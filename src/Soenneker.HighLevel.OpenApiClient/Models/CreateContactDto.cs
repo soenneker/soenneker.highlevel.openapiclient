@@ -62,7 +62,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public List<global::Soenneker.HighLevel.OpenApiClient.Models.CreateContactDtoCustomFieldsItem> CustomFields { get; set; }
 #endif
-        /// <summary>&quot;The birth date of the contact. Supported formats: YYYY/MM/DD, MM/DD/YYYY, YYYY-MM-DD, MM-DD-YYYY, YYYY.MM.DD, MM.DD.YYYY, YYYY_MM_DD, MM_DD_YYYY&quot;</summary>
+        /// <summary>The birth date of the contact. Supported formats: YYYY/MM/DD, MM/DD/YYYY, YYYY-MM-DD, MM-DD-YYYY, YYYY.MM.DD, MM.DD.YYYY, YYYY_MM_DD, MM_DD_YYYY</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HighLevel.OpenApiClient.Models.CreateContactDtoDateOfBirthProperty? DateOfBirth { get; set; }

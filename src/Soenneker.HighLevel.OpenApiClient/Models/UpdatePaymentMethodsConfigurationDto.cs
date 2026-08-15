@@ -23,7 +23,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string AltId { get; set; }
 #endif
         /// <summary>Alt Type</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePaymentMethodsConfigurationDtoAltType? AltType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
         /// <summary>Payment Methods for Invoices</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -58,7 +58,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "altId", n => { AltId = n.GetStringValue(); } },
-                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePaymentMethodsConfigurationDtoAltType>(); } },
+                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType>(); } },
                 { "paymentMethods", n => { PaymentMethods = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePaymentMethodsConfigurationDtoPaymentMethods>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePaymentMethodsConfigurationDtoPaymentMethods.CreateFromDiscriminatorValue); } },
             };
         }
@@ -70,7 +70,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("altId", AltId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePaymentMethodsConfigurationDtoAltType>("altType", AltType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType>("altType", AltType);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePaymentMethodsConfigurationDtoPaymentMethods>("paymentMethods", PaymentMethods);
             writer.WriteAdditionalData(AdditionalData);
         }

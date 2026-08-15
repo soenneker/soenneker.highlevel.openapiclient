@@ -97,7 +97,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Medias.Files
 #endif
             /// <summary>AltType</summary>
             [QueryParameter("altType")]
-            public global::Soenneker.HighLevel.OpenApiClient.Models.MediasFetchMediaContentAltTypeParameter? AltType { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
             /// <summary>Fetch all files or folders</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

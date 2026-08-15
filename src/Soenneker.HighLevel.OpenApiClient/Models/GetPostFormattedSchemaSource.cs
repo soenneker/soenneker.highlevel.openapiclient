@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HighLevel.OpenApiClient.Models
 {
-    /// <summary>&quot;source must be one of the following values: composer, recurring, csv&quot;</summary>
+    /// <summary>source must be one of the following values: composer, recurring, csv</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum GetPostFormattedSchemaSource
     {

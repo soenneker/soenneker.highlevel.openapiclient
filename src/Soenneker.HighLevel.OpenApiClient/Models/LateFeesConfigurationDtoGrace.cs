@@ -16,7 +16,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Late fees grace interval</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LateFeesGraceDtoInterval? Interval { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DayInterval? Interval { get; set; }
         /// <summary>Late fees grace interval count</summary>
         public double? IntervalCount { get; set; }
         /// <summary>
@@ -44,7 +44,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "interval", n => { Interval = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LateFeesGraceDtoInterval>(); } },
+                { "interval", n => { Interval = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.DayInterval>(); } },
                 { "intervalCount", n => { IntervalCount = n.GetDoubleValue(); } },
             };
         }
@@ -55,7 +55,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LateFeesGraceDtoInterval>("interval", Interval);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.DayInterval>("interval", Interval);
             writer.WriteDoubleValue("intervalCount", IntervalCount);
             writer.WriteAdditionalData(AdditionalData);
         }

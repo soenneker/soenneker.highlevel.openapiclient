@@ -157,7 +157,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Payments.Integrations.Provider.White
 #endif
             /// <summary>Alt Type</summary>
             [QueryParameter("altType")]
-            public global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsListIntegrationProvidersAltTypeParameter? AltType { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
             /// <summary>The maximum number of items to be included in a single page of results</summary>
             [QueryParameter("limit")]
             public double? Limit { get; set; }

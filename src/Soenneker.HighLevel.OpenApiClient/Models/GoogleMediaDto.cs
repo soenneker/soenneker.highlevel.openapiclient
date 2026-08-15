@@ -41,7 +41,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string Src { get; set; }
 #endif
         /// <summary>Media type</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GoogleMediaDtoType? Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ImageType? Type { get; set; }
         /// <summary>Public URL of the media</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -79,7 +79,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "imageType", n => { ImageType = n.GetStringValue(); } },
                 { "isLogo", n => { IsLogo = n.GetBoolValue(); } },
                 { "src", n => { Src = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleMediaDtoType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ImageType>(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
         }
@@ -94,7 +94,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("imageType", ImageType);
             writer.WriteBoolValue("isLogo", IsLogo);
             writer.WriteStringValue("src", Src);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleMediaDtoType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ImageType>("type", Type);
             writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -73,7 +73,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string OriginId { get; set; }
 #endif
-        /// <summary>&quot;status must be one of the following values: pending, in_progress, completed, failed, in_review, importing, deleted&quot;</summary>
+        /// <summary>status must be one of the following values: pending, in_progress, completed, failed, in_review, importing, deleted</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HighLevel.OpenApiClient.Models.CsvResponseSchemaCsvStatus? Status { get; set; }

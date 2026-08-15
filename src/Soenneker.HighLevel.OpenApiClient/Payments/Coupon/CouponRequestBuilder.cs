@@ -249,7 +249,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Payments.Coupon
 #endif
             /// <summary>Alt Type</summary>
             [QueryParameter("altType")]
-            public global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsGetCouponAltTypeParameter? AltType { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
             /// <summary>Coupon code</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

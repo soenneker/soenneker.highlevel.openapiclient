@@ -175,7 +175,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Invoices.Estimate.Template
             public string AltId { get; set; }
 #endif
             [QueryParameter("altType")]
-            public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesListEstimateTemplatesAltTypeParameter? AltType { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
             /// <summary>Limit the number of items to return</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

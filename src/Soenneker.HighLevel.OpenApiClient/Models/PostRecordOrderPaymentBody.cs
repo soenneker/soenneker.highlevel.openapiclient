@@ -23,7 +23,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string AltId { get; set; }
 #endif
         /// <summary>Alt Type</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyAltType? AltType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
         /// <summary>Amount to be paid against the invoice.</summary>
         public double? Amount { get; set; }
         /// <summary>Details of Card if used for payment</summary>
@@ -88,7 +88,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "altId", n => { AltId = n.GetStringValue(); } },
-                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyAltType>(); } },
+                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType>(); } },
                 { "amount", n => { Amount = n.GetDoubleValue(); } },
                 { "card", n => { Card = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyCard>(global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyCard.CreateFromDiscriminatorValue); } },
                 { "cheque", n => { Cheque = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyCheque>(global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyCheque.CreateFromDiscriminatorValue); } },
@@ -106,7 +106,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("altId", AltId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyAltType>("altType", AltType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType>("altType", AltType);
             writer.WriteDoubleValue("amount", Amount);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyCard>("card", Card);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyCheque>("cheque", Cheque);

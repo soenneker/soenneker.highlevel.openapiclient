@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.HighLevel.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;Action Type must be one of the following values: none, order, book, shop, learn_more, call, sign_up&quot;
+    /// Action Type must be one of the following values: none, order, book, shop, learn_more, call, sign_up
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CsvPostSchemaGmbPostDetailsActionType : IAdditionalDataHolder, IParsable

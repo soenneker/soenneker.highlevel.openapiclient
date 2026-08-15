@@ -53,6 +53,32 @@ namespace Soenneker.HighLevel.OpenApiClient.Users
         {
         }
         /// <summary>
+        /// Deprecated. Use `GET /users/search` instead. Pass `locationId` as a query parameter to filter results by location, along with the required `companyId` and other search filters as needed.
+        /// </summary>
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.LocationSuccessfulResponseDto"/></returns>
+        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
+        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasBadRequestDto">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDto">When receiving a 401 status code</exception>
+        [Obsolete("")]
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.LocationSuccessfulResponseDto?> GetAsync(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Users.UsersRequestBuilder.UsersRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        {
+#nullable restore
+#else
+        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.LocationSuccessfulResponseDto> GetAsync(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Users.UsersRequestBuilder.UsersRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        {
+#endif
+            var requestInfo = ToGetRequestInformation(requestConfiguration);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "400", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.LocationSuccessfulResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.LocationSuccessfulResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        }
+        /// <summary>
         /// Create User
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UserSuccessfulResponseDto"/></returns>
@@ -80,6 +106,26 @@ namespace Soenneker.HighLevel.OpenApiClient.Users
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.UserSuccessfulResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.UserSuccessfulResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        }
+        /// <summary>
+        /// Deprecated. Use `GET /users/search` instead. Pass `locationId` as a query parameter to filter results by location, along with the required `companyId` and other search filters as needed.
+        /// </summary>
+        /// <returns>A <see cref="RequestInformation"/></returns>
+        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        [Obsolete("")]
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Users.UsersRequestBuilder.UsersRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        {
+#nullable restore
+#else
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Users.UsersRequestBuilder.UsersRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        {
+#endif
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/users?locationId={locationId}", PathParameters);
+            requestInfo.Configure(requestConfiguration);
+            requestInfo.Headers.TryAdd("Accept", "application/json");
+            return requestInfo;
         }
         /// <summary>
         /// Create User
@@ -111,6 +157,22 @@ namespace Soenneker.HighLevel.OpenApiClient.Users
         public global::Soenneker.HighLevel.OpenApiClient.Users.UsersRequestBuilder WithUrl(string rawUrl)
         {
             return new global::Soenneker.HighLevel.OpenApiClient.Users.UsersRequestBuilder(rawUrl, RequestAdapter);
+        }
+        /// <summary>
+        /// Deprecated. Use `GET /users/search` instead. Pass `locationId` as a query parameter to filter results by location, along with the required `companyId` and other search filters as needed.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class UsersRequestBuilderGetQueryParameters 
+        {
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("locationId")]
+            public string? LocationId { get; set; }
+#nullable restore
+#else
+            [QueryParameter("locationId")]
+            public string LocationId { get; set; }
+#endif
         }
     }
 }

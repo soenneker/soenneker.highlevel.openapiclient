@@ -159,7 +159,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Proposals.Templates
             [QueryParameter("skip")]
             public string Skip { get; set; }
 #endif
-            /// <summary>&quot;Comma-separated template types. Valid values: proposal, estimate, contentLibrary&quot;</summary>
+            /// <summary>Comma-separated template types. Valid values: proposal, estimate, contentLibrary</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("type")]

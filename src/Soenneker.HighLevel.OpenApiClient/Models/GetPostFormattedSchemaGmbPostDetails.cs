@@ -13,7 +13,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GetPostFormattedSchemaGmbPostDetails : IAdditionalDataHolder, IParsable
     {
-        /// <summary>&quot;Action Type must be one of the following values: none, order, book, shop, learn_more, call, sign_up&quot;</summary>
+        /// <summary>Action Type must be one of the following values: none, order, book, shop, learn_more, call, sign_up</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaGmbPostDetailsActionType? ActionType { get; set; }
@@ -39,7 +39,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public global::Soenneker.HighLevel.OpenApiClient.Models.GmbPostSchemaEndDate EndDate { get; set; }
 #endif
-        /// <summary>&quot;gmbEventType must be one of the following values: STANDARD, EVENT, OFFER&quot;</summary>
+        /// <summary>gmbEventType must be one of the following values: STANDARD, EVENT, OFFER</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? GmbEventType { get; set; }

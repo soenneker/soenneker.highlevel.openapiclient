@@ -30,7 +30,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>&quot;The key for your custom object. This key uniquely identifies the custom object. Example: \&quot;custom_object.pet\&quot; for a custom object related to pets.&quot;</summary>
+        /// <summary>The key for your custom object. This key uniquely identifies the custom object. Example: &quot;custom_object.pet&quot; for a custom object related to pets.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ObjectKey { get; set; }

@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.HighLevel.OpenApiClient.AgentStudio.Agent;
+using Soenneker.HighLevel.OpenApiClient.AgentStudio.PublicApi;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -19,6 +20,11 @@ namespace Soenneker.HighLevel.OpenApiClient.AgentStudio
         public global::Soenneker.HighLevel.OpenApiClient.AgentStudio.Agent.AgentRequestBuilder Agent
         {
             get => new global::Soenneker.HighLevel.OpenApiClient.AgentStudio.Agent.AgentRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The publicApi property</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.AgentStudio.PublicApi.PublicApiRequestBuilder PublicApi
+        {
+            get => new global::Soenneker.HighLevel.OpenApiClient.AgentStudio.PublicApi.PublicApiRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.AgentStudio.AgentStudioRequestBuilder"/> and sets the default values.

@@ -47,7 +47,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Objects
         {
         }
         /// <summary>
-        /// &quot;Get all objects for a location. Supported Objects are contact, opportunity, business and custom objects.To understand objects and records, please have a look at the documentation here : https://doc.clickup.com/8631005/d/h/87cpx-277156/93bf0c2e23177b0&quot;
+        /// Get all objects for a location. Supported Objects are contact, opportunity, business and custom objects.To understand objects and records, please have a look at the documentation here : https://doc.clickup.com/8631005/d/h/87cpx-277156/93bf0c2e23177b0
         /// To understand objects and records, please have a look the documentation. <see href="https://doc.clickup.com/8631005/d/h/87cpx-277156/93bf0c2e23177b0" />
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomObjectListResponseDto"/></returns>
@@ -75,7 +75,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Objects
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.CustomObjectListResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.CustomObjectListResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Allows you to create a custom object schema. To understand objects and records, please have a look at the documentation here : https://doc.clickup.com/8631005/d/h/87cpx-277156/93bf0c2e23177b0&quot;
+        /// Allows you to create a custom object schema. To understand objects and records, please have a look at the documentation here : https://doc.clickup.com/8631005/d/h/87cpx-277156/93bf0c2e23177b0
         /// To understand objects and records, please have a look at the documentation here  <see href="https://doc.clickup.com/8631005/d/h/87cpx-277156/93bf0c2e23177b0" />
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomObjectResponseDto"/></returns>
@@ -105,7 +105,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Objects
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.CustomObjectResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.CustomObjectResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Get all objects for a location. Supported Objects are contact, opportunity, business and custom objects.To understand objects and records, please have a look at the documentation here : https://doc.clickup.com/8631005/d/h/87cpx-277156/93bf0c2e23177b0&quot;
+        /// Get all objects for a location. Supported Objects are contact, opportunity, business and custom objects.To understand objects and records, please have a look at the documentation here : https://doc.clickup.com/8631005/d/h/87cpx-277156/93bf0c2e23177b0
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -124,7 +124,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Objects
             return requestInfo;
         }
         /// <summary>
-        /// &quot;Allows you to create a custom object schema. To understand objects and records, please have a look at the documentation here : https://doc.clickup.com/8631005/d/h/87cpx-277156/93bf0c2e23177b0&quot;
+        /// Allows you to create a custom object schema. To understand objects and records, please have a look at the documentation here : https://doc.clickup.com/8631005/d/h/87cpx-277156/93bf0c2e23177b0
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -155,7 +155,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Objects
             return new global::Soenneker.HighLevel.OpenApiClient.Objects.ObjectsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &quot;Get all objects for a location. Supported Objects are contact, opportunity, business and custom objects.To understand objects and records, please have a look at the documentation here : https://doc.clickup.com/8631005/d/h/87cpx-277156/93bf0c2e23177b0&quot;
+        /// Get all objects for a location. Supported Objects are contact, opportunity, business and custom objects.To understand objects and records, please have a look at the documentation here : https://doc.clickup.com/8631005/d/h/87cpx-277156/93bf0c2e23177b0
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ObjectsRequestBuilderGetQueryParameters 

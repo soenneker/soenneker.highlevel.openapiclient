@@ -94,7 +94,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Payments.Transactions.Item
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithTransactionItemRequestBuilderGetQueryParameters 
         {
-            /// <summary>&quot;AltId is the unique identifier e.g: location id.&quot;</summary>
+            /// <summary>AltId is the unique identifier e.g: location id.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("altId")]

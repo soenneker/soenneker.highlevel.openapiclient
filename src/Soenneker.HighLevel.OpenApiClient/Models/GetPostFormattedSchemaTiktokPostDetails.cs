@@ -21,7 +21,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public bool? EnableDuet { get; set; }
         /// <summary>enable stitch</summary>
         public bool? EnableStitch { get; set; }
-        /// <summary>&quot;privacy level is an enum and must be one of the following values: PUBLIC_TO_EVERYONE, MUTUAL_FOLLOW_FRIENDS, SELF_ONLY&quot;</summary>
+        /// <summary>privacy level is an enum and must be one of the following values: PUBLIC_TO_EVERYONE, MUTUAL_FOLLOW_FRIENDS, SELF_ONLY</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaTiktokPostDetailsPrivacyLevel? PrivacyLevel { get; set; }

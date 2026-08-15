@@ -105,7 +105,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Products.Store.Item.Stats
             public string AltId { get; set; }
 #endif
             [QueryParameter("altType")]
-            public global::Soenneker.HighLevel.OpenApiClient.Models.ProductsGetProductStoreStatsAltTypeParameter? AltType { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
             /// <summary>Filter by product collection Ids. Supports comma separated values</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

@@ -14,7 +14,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;AltId is the unique identifier eg: location id.&quot;</summary>
+        /// <summary>AltId is the unique identifier eg: location id.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AltId { get; set; }
@@ -22,8 +22,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string AltId { get; set; }
 #endif
-        /// <summary>AltType is the type of identifier.</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SubscriptionResponseSchemaAltType? AltType { get; set; }
+        /// <summary>Alt Type</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
         /// <summary>Subscription value.</summary>
         public double? Amount { get; set; }
         /// <summary>Contact email corresponding to the subscription.</summary>
@@ -68,7 +68,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string Currency { get; set; }
 #endif
-        /// <summary>&quot;Entity id for the subscription. e.g: order id&quot;</summary>
+        /// <summary>Entity id for the subscription. e.g: order id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EntityId { get; set; }
@@ -100,7 +100,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string EntitySourceName { get; set; }
 #endif
-        /// <summary>&quot;Entity source type of subscription (eg: funnel).&quot;</summary>
+        /// <summary>Entity source type of subscription (eg: funnel).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EntitySourceType { get; set; }
@@ -108,7 +108,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string EntitySourceType { get; set; }
 #endif
-        /// <summary>&quot;Entity type of subscription (eg: order).&quot;</summary>
+        /// <summary>Entity type of subscription (eg: order).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EntityType { get; set; }
@@ -202,7 +202,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "altId", n => { AltId = n.GetStringValue(); } },
-                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SubscriptionResponseSchemaAltType>(); } },
+                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType>(); } },
                 { "amount", n => { Amount = n.GetDoubleValue(); } },
                 { "contactEmail", n => { ContactEmail = n.GetStringValue(); } },
                 { "contactId", n => { ContactId = n.GetStringValue(); } },
@@ -235,7 +235,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("altId", AltId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SubscriptionResponseSchemaAltType>("altType", AltType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType>("altType", AltType);
             writer.WriteDoubleValue("amount", Amount);
             writer.WriteStringValue("contactEmail", ContactEmail);
             writer.WriteStringValue("contactId", ContactId);

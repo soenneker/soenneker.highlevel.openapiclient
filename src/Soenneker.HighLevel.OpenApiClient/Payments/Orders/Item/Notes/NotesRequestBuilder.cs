@@ -105,7 +105,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Payments.Orders.Item.Notes
             public string AltId { get; set; }
 #endif
             [QueryParameter("altType")]
-            public global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsListOrderNotesAltTypeParameter? AltType { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
         }
     }
 }

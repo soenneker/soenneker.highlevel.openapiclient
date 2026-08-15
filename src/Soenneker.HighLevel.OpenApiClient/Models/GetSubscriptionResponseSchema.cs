@@ -14,7 +14,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;AltId is the unique identifier eg: location id.&quot;</summary>
+        /// <summary>AltId is the unique identifier eg: location id.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AltId { get; set; }
@@ -92,7 +92,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string Currency { get; set; }
 #endif
-        /// <summary>&quot;Entity id for the subscription. e.g: order id&quot;</summary>
+        /// <summary>Entity id for the subscription. e.g: order id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EntityId { get; set; }
@@ -108,7 +108,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaEntitySource EntitySource { get; set; }
 #endif
-        /// <summary>&quot;Entity type of subscription (eg: order).&quot;</summary>
+        /// <summary>Entity type of subscription (eg: order).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EntityType { get; set; }

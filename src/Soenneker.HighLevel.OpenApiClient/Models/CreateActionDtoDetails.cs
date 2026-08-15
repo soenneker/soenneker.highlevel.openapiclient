@@ -77,7 +77,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.CreateActionDtoDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
+            var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.HighLevel.OpenApiClient.Models.CreateActionDtoDetails();
             if("AdvancedFollowupDto".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {

@@ -55,7 +55,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDtoOwner Owner { get; set; }
 #endif
         /// <summary>Form state</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDtoState? State { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PublishedState? State { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDto"/> and sets the default values.
         /// </summary>
@@ -86,7 +86,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "hiddenFields", n => { HiddenFields = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.HiddenFieldDto>(global::Soenneker.HighLevel.OpenApiClient.Models.HiddenFieldDto.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "owner", n => { Owner = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDtoOwner>(global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDtoOwner.CreateFromDiscriminatorValue); } },
-                { "state", n => { State = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDtoState>(); } },
+                { "state", n => { State = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PublishedState>(); } },
             };
         }
         /// <summary>
@@ -101,7 +101,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.HiddenFieldDto>("hiddenFields", HiddenFields);
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDtoOwner>("owner", Owner);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDtoState>("state", State);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PublishedState>("state", State);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

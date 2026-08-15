@@ -46,7 +46,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string Limit { get; set; }
 #endif
-        /// <summary>&quot;Post Type must be one of the following values: - post, story, reel&quot;</summary>
+        /// <summary>Post Type must be one of the following values: - post, story, reel</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HighLevel.OpenApiClient.Models.SearchPostDtoPostTypeProperty? PostType { get; set; }
@@ -70,7 +70,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string ToDate { get; set; }
 #endif
-        /// <summary>&quot;type must be one of the following values: recent, all, scheduled, draft, failed, in_review, published, in_progress and deleted&quot;</summary>
+        /// <summary>type must be one of the following values: recent, all, scheduled, draft, failed, in_review, published, in_progress and deleted</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Type { get; set; }

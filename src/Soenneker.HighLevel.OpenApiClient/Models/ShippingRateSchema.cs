@@ -22,8 +22,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string AltId { get; set; }
 #endif
-        /// <summary>The altType property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ShippingRateSchemaAltType? AltType { get; set; }
+        /// <summary>Alt Type</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
         /// <summary>The amount of the shipping rate if it is normal rate (0 means free ). Fixed Handling fee if it is a carrier rate (it will add to the carrier rate).</summary>
         public double? Amount { get; set; }
         /// <summary>Type of condition to provide the conditional pricing</summary>
@@ -134,7 +134,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "altId", n => { AltId = n.GetStringValue(); } },
-                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ShippingRateSchemaAltType>(); } },
+                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType>(); } },
                 { "amount", n => { Amount = n.GetDoubleValue(); } },
                 { "conditionType", n => { ConditionType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ShippingRateSchemaConditionType>(); } },
                 { "createdAt", n => { CreatedAt = n.GetStringValue(); } },
@@ -160,7 +160,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("altId", AltId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ShippingRateSchemaAltType>("altType", AltType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType>("altType", AltType);
             writer.WriteDoubleValue("amount", Amount);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ShippingRateSchemaConditionType>("conditionType", ConditionType);
             writer.WriteStringValue("createdAt", CreatedAt);

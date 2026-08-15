@@ -215,7 +215,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Invoices.Template.Item
 #endif
             /// <summary>Alt Type</summary>
             [QueryParameter("altType")]
-            public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesDeleteInvoiceTemplateAltTypeParameter? AltType { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
         }
         /// <summary>
         /// API to get an template by template id
@@ -235,7 +235,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Invoices.Template.Item
 #endif
             /// <summary>Alt Type</summary>
             [QueryParameter("altType")]
-            public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesGetInvoiceTemplateAltTypeParameter? AltType { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
         }
     }
 }

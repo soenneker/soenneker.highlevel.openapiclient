@@ -91,7 +91,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaOgTagsDetails OgTagsDetails { get; set; }
 #endif
-        /// <summary>&quot;platform must be one of the following values: google, facebook, instagram, linkedin, twitter, tiktok&quot;</summary>
+        /// <summary>platform must be one of the following values: google, facebook, instagram, linkedin, twitter, tiktok</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Platform { get; set; }
@@ -123,9 +123,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string PublishedAt { get; set; }
 #endif
-        /// <summary>&quot;source must be one of the following values: composer, recurring, csv&quot;</summary>
+        /// <summary>source must be one of the following values: composer, recurring, csv</summary>
         public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaSource? Source { get; set; }
-        /// <summary>&quot;Status must be one of the following values: in_progress, draft, failed, published, scheduled, in_review, notification_sent, deleted&quot;</summary>
+        /// <summary>Status must be one of the following values: in_progress, draft, failed, published, scheduled, in_review, notification_sent, deleted</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostSuccessfulResponseSchemaPostStatus? Status { get; set; }
@@ -157,7 +157,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaTiktokPostDetails TiktokPostDetails { get; set; }
 #endif
-        /// <summary>&quot;Post Type must be one of the following values: - post, story, reel&quot;</summary>
+        /// <summary>Post Type must be one of the following values: - post, story, reel</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostSuccessfulResponseSchemaPostType? Type { get; set; }

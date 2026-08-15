@@ -14,7 +14,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Display name for the voice AI agent, between 1-40 characters. Default: \&quot;My Agent {random 3 digit number}\&quot;&quot;</summary>
+        /// <summary>Display name for the voice AI agent, between 1-40 characters. Default: &quot;My Agent {random 3 digit number}&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AgentName { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string AgentName { get; set; }
 #endif
-        /// <summary>&quot;Custom instructions defining the agent&apos;s behavior and personality. Default: Basic prompt generated automatically&quot;</summary>
+        /// <summary>Custom instructions defining the agent&apos;s behavior and personality. Default: Basic prompt generated automatically</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AgentPrompt { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string AgentPrompt { get; set; }
 #endif
-        /// <summary>&quot;Time intervals defining when the agent accepts calls, organized by day of week. Default: [] (available 24/7)&quot;</summary>
+        /// <summary>Time intervals defining when the agent accepts calls, organized by day of week. Default: [] (available 24/7)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.HighLevel.OpenApiClient.Models.AgentWorkingHoursDto>? AgentWorkingHours { get; set; }
@@ -38,7 +38,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public List<global::Soenneker.HighLevel.OpenApiClient.Models.AgentWorkingHoursDto> AgentWorkingHours { get; set; }
 #endif
-        /// <summary>&quot;Name of the business this agent represents. Default: Uses location name&quot;</summary>
+        /// <summary>Name of the business this agent represents. Default: Uses location name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? BusinessName { get; set; }
@@ -46,7 +46,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string BusinessName { get; set; }
 #endif
-        /// <summary>&quot;Array of workflow IDs to trigger automatically when calls end. Default: []&quot;</summary>
+        /// <summary>Array of workflow IDs to trigger automatically when calls end. Default: []</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? CallEndWorkflowIds { get; set; }
@@ -54,7 +54,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public List<string> CallEndWorkflowIds { get; set; }
 #endif
-        /// <summary>&quot;Phone number for receiving inbound calls to this agent. Default: null&quot;</summary>
+        /// <summary>Phone number for receiving inbound calls to this agent. Default: null</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? InboundNumber { get; set; }
@@ -62,13 +62,13 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string InboundNumber { get; set; }
 #endif
-        /// <summary>&quot;Prevents this agent from being used as a fallback option. Default: false (Available as backup agent)&quot;</summary>
+        /// <summary>Prevents this agent from being used as a fallback option. Default: false (Available as backup agent)</summary>
         public bool? IsAgentAsBackupDisabled { get; set; }
-        /// <summary>&quot;Language code for the agent&apos;s speech and understanding. Default: \&quot;en-US\&quot;&quot;</summary>
+        /// <summary>Language code for the agent&apos;s speech and understanding. Default: &quot;en-US&quot;</summary>
         public global::Soenneker.HighLevel.OpenApiClient.Models.VoiceAiLanguage? Language { get; set; }
-        /// <summary>&quot;Maximum call duration in seconds, between 180-900 (3-15 minutes). Default: 300 seconds (5 minutes)&quot;</summary>
+        /// <summary>Maximum call duration in seconds, between 180-900 (3-15 minutes). Default: 300 seconds (5 minutes)</summary>
         public double? MaxCallDuration { get; set; }
-        /// <summary>&quot;Identifier for the number pool managing phone number allocation. Default: null&quot;</summary>
+        /// <summary>Identifier for the number pool managing phone number allocation. Default: null</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? NumberPoolId { get; set; }
@@ -76,11 +76,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string NumberPoolId { get; set; }
 #endif
-        /// <summary>&quot;Tolerance level for caller response delays. Default: \&quot;high\&quot;&quot;</summary>
+        /// <summary>Tolerance level for caller response delays. Default: &quot;high&quot;</summary>
         public global::Soenneker.HighLevel.OpenApiClient.Models.PatienceLevel? PatienceLevel { get; set; }
-        /// <summary>&quot;Seconds to wait before sending idle reminders, between 1-20. Default: 8 seconds&quot;</summary>
+        /// <summary>Seconds to wait before sending idle reminders, between 1-20. Default: 8 seconds</summary>
         public double? ReminderAfterIdleTimeSeconds { get; set; }
-        /// <summary>&quot;Configuration for post-call email notifications to various recipients. Default: []&quot;</summary>
+        /// <summary>Configuration for post-call email notifications to various recipients. Default: []</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HighLevel.OpenApiClient.Models.PatchAgentDtoSendPostCallNotificationTo? SendPostCallNotificationTo { get; set; }
@@ -88,9 +88,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public global::Soenneker.HighLevel.OpenApiClient.Models.PatchAgentDtoSendPostCallNotificationTo SendPostCallNotificationTo { get; set; }
 #endif
-        /// <summary>&quot;Enables automatic reminders when callers are silent. Default: true&quot;</summary>
+        /// <summary>Enables automatic reminders when callers are silent. Default: true</summary>
         public bool? SendUserIdleReminders { get; set; }
-        /// <summary>&quot;IANA timezone identifier affecting working hours and scheduling. Default: Location timezone&quot;</summary>
+        /// <summary>IANA timezone identifier affecting working hours and scheduling. Default: Location timezone</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Timezone { get; set; }
@@ -98,7 +98,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string Timezone { get; set; }
 #endif
-        /// <summary>&quot;Language translation settings including enablement flag and target language code. Rules: (1) translation.enabled can only be true if the agent&apos;s language is not en-US; (2) when enabled, translation.language must be either the agent&apos;s language or en-US; (3) when enabled, translation.language is required.&quot;</summary>
+        /// <summary>Language translation settings including enablement flag and target language code. Rules: (1) translation.enabled can only be true if the agent&apos;s language is not en-US; (2) when enabled, translation.language must be either the agent&apos;s language or en-US; (3) when enabled, translation.language is required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HighLevel.OpenApiClient.Models.PatchAgentDtoTranslation? Translation { get; set; }
@@ -106,7 +106,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public global::Soenneker.HighLevel.OpenApiClient.Models.PatchAgentDtoTranslation Translation { get; set; }
 #endif
-        /// <summary>&quot;Identifier for the speech synthesis voice from available voice options. Default: Auto generated&quot;</summary>
+        /// <summary>Identifier for the speech synthesis voice from available voice options. Default: Auto generated</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? VoiceId { get; set; }
@@ -114,7 +114,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string VoiceId { get; set; }
 #endif
-        /// <summary>&quot;Initial greeting spoken when the agent answers calls. Default: Auto generated&quot;</summary>
+        /// <summary>Initial greeting spoken when the agent answers calls. Default: Auto generated</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? WelcomeMessage { get; set; }

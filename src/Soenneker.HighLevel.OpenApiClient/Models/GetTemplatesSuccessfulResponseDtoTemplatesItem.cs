@@ -37,7 +37,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.GetTemplatesSuccessfulResponseDtoTemplatesItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
+            var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.HighLevel.OpenApiClient.Models.GetTemplatesSuccessfulResponseDtoTemplatesItem();
             if("GetEmailTemplateResponseSchema".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {

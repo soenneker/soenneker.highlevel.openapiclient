@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.HighLevel.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;Post Type must be one of the following values: - post, story, reel&quot;
+    /// Post Type must be one of the following values: - post, story, reel
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SearchPostDtoPostTypeProperty : IAdditionalDataHolder, IParsable

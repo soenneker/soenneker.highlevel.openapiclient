@@ -202,7 +202,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Store.ShippingCarrier.Item
             public string AltId { get; set; }
 #endif
             [QueryParameter("altType")]
-            public global::Soenneker.HighLevel.OpenApiClient.Models.StoreDeleteShippingCarrierAltTypeParameter? AltType { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
         }
         /// <summary>
         /// The &quot;List Shipping Carrier&quot; API allows to retrieve a paginated list of shipping carrier.
@@ -221,7 +221,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Store.ShippingCarrier.Item
             public string AltId { get; set; }
 #endif
             [QueryParameter("altType")]
-            public global::Soenneker.HighLevel.OpenApiClient.Models.StoreGetShippingCarriersAltTypeParameter? AltType { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
         }
     }
 }

@@ -30,8 +30,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string AltId { get; set; }
 #endif
-        /// <summary>The altType property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetAvailableShippingRatesAltType? AltType { get; set; }
+        /// <summary>Alt Type</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
         /// <summary>it will not calculate the order amount form backend if it is true</summary>
         public global::Soenneker.HighLevel.OpenApiClient.Models.GetAvailableShippingRatesAmountAvailable? AmountAvailable { get; set; }
         /// <summary>Country code of the customer</summary>
@@ -60,7 +60,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public global::Soenneker.HighLevel.OpenApiClient.Models.GetAvailableShippingRatesSource Source { get; set; }
 #endif
-        /// <summary>&quot;The amount of the price. ( min: 0.01 )&quot;</summary>
+        /// <summary>The amount of the price. ( min: 0.01 )</summary>
         public double? TotalOrderAmount { get; set; }
         /// <summary>Estimated weight of the order calculated from the order creation side in kg(s)</summary>
         public double? TotalOrderWeight { get; set; }
@@ -93,7 +93,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             {
                 { "address", n => { Address = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetAvailableShippingRatesAddress>(global::Soenneker.HighLevel.OpenApiClient.Models.GetAvailableShippingRatesAddress.CreateFromDiscriminatorValue); } },
                 { "altId", n => { AltId = n.GetStringValue(); } },
-                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetAvailableShippingRatesAltType>(); } },
+                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType>(); } },
                 { "amountAvailable", n => { AmountAvailable = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetAvailableShippingRatesAmountAvailable>(); } },
                 { "country", n => { Country = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetAvailableShippingRatesCountry>(); } },
                 { "couponCode", n => { CouponCode = n.GetStringValue(); } },
@@ -113,7 +113,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetAvailableShippingRatesAddress>("address", Address);
             writer.WriteStringValue("altId", AltId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetAvailableShippingRatesAltType>("altType", AltType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType>("altType", AltType);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetAvailableShippingRatesAmountAvailable>("amountAvailable", AmountAvailable);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetAvailableShippingRatesCountry>("country", Country);
             writer.WriteStringValue("couponCode", CouponCode);

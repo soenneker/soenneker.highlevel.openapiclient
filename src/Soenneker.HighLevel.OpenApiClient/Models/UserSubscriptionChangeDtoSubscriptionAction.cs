@@ -23,8 +23,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string SubtypeId { get; set; }
 #endif
-        /// <summary>&quot;Subscription type name (required for default types: \&quot;One on One\&quot;)&quot;</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SubscriptionActionDtoSubtypeName? SubtypeName { get; set; }
+        /// <summary>Subscription type name (required for default types: &quot;One on One&quot;)</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Models.OneOnOneSubtypeName? SubtypeName { get; set; }
         /// <summary>Subscription status</summary>
         public global::Soenneker.HighLevel.OpenApiClient.Models.SubscriptionActionDtoSubtypeStatus? SubtypeStatus { get; set; }
         /// <summary>Type of subscription action</summary>
@@ -55,7 +55,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "subtype_id", n => { SubtypeId = n.GetStringValue(); } },
-                { "subtype_name", n => { SubtypeName = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SubscriptionActionDtoSubtypeName>(); } },
+                { "subtype_name", n => { SubtypeName = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.OneOnOneSubtypeName>(); } },
                 { "subtype_status", n => { SubtypeStatus = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SubscriptionActionDtoSubtypeStatus>(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SubscriptionActionDtoType>(); } },
             };
@@ -68,7 +68,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("subtype_id", SubtypeId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SubscriptionActionDtoSubtypeName>("subtype_name", SubtypeName);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.OneOnOneSubtypeName>("subtype_name", SubtypeName);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SubscriptionActionDtoSubtypeStatus>("subtype_status", SubtypeStatus);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SubscriptionActionDtoType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);

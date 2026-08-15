@@ -107,7 +107,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Payments.Subscriptions
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class SubscriptionsRequestBuilderGetQueryParameters 
         {
-            /// <summary>&quot;AltId is the unique identifier e.g: location id.&quot;</summary>
+            /// <summary>AltId is the unique identifier e.g: location id.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("altId")]
@@ -119,7 +119,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Payments.Subscriptions
 #endif
             /// <summary>AltType is the type of identifier.</summary>
             [QueryParameter("altType")]
-            public global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsListSubscriptionsAltTypeParameter? AltType { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
             /// <summary>Contact ID for the subscription</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

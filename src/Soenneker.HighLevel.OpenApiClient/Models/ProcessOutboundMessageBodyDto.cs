@@ -57,7 +57,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Date of the outbound message</summary>
         public DateTimeOffset? Date { get; set; }
         /// <summary>Message Type</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ProcessOutboundMessageBodyDtoType? Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CallType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.ProcessOutboundMessageBodyDto"/> and sets the default values.
         /// </summary>
@@ -89,7 +89,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "conversationId", n => { ConversationId = n.GetStringValue(); } },
                 { "conversationProviderId", n => { ConversationProviderId = n.GetStringValue(); } },
                 { "date", n => { Date = n.GetDateTimeOffsetValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProcessOutboundMessageBodyDtoType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CallType>(); } },
             };
         }
         /// <summary>
@@ -105,7 +105,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("conversationId", ConversationId);
             writer.WriteStringValue("conversationProviderId", ConversationProviderId);
             writer.WriteDateTimeOffsetValue("date", Date);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProcessOutboundMessageBodyDtoType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CallType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -14,7 +14,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Maximum number of messages in auto-pilot mode before requiring human intervention. (max: 100, min: 1)&quot;</summary>
+        /// <summary>Maximum number of messages in auto-pilot mode before requiring human intervention. (max: 100, min: 1)</summary>
         public double? AutoPilotMaxMessages { get; set; }
         /// <summary>Name of the business the agent represents.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

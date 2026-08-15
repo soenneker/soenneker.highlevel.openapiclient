@@ -34,21 +34,21 @@ namespace Soenneker.HighLevel.OpenApiClient.Forms.UploadCustomFiles
         {
         }
         /// <summary>
-        /// &quot;Post the necessary fields for the API to upload files. The files need to be a buffer with the key \&quot;&lt; custom_field_id &gt;_&lt; file_id &gt;\&quot;. &lt;br /&gt; Here custom field id is the ID of your custom field and file id is a randomly generated id (or uuid) &lt;br /&gt; There is support for multiple file uploads as well. Have multiple fields in the format mentioned.&lt;br /&gt;File size is limited to 50 MB.&lt;br /&gt;&lt;br /&gt; The allowed file types are: &lt;br/&gt; &lt;ul&gt;&lt;li&gt;PDF&lt;/li&gt;&lt;li&gt;DOCX&lt;/li&gt;&lt;li&gt;DOC&lt;/li&gt;&lt;li&gt;JPG&lt;/li&gt;&lt;li&gt;JPEG&lt;/li&gt;&lt;li&gt;PNG&lt;/li&gt;&lt;li&gt;GIF&lt;/li&gt;&lt;li&gt;CSV&lt;/li&gt;&lt;li&gt;XLSX&lt;/li&gt;&lt;li&gt;XLS&lt;/li&gt;&lt;li&gt;MP4&lt;/li&gt;&lt;li&gt;MPEG&lt;/li&gt;&lt;li&gt;ZIP&lt;/li&gt;&lt;li&gt;RAR&lt;/li&gt;&lt;li&gt;TXT&lt;/li&gt;&lt;li&gt;SVG&lt;/li&gt;&lt;/ul&gt; &lt;br /&gt;&lt;br /&gt; The API will return the updated contact object.&quot;
+        /// Post the necessary fields for the API to upload files. The files need to be a buffer with the key &quot;&lt; custom_field_id &gt;_&lt; file_id &gt;&quot;. &lt;br /&gt; Here custom field id is the ID of your custom field and file id is a randomly generated id (or uuid) &lt;br /&gt; There is support for multiple file uploads as well. Have multiple fields in the format mentioned.&lt;br /&gt;File size is limited to 50 MB.&lt;br /&gt;&lt;br /&gt; The allowed file types are: &lt;br/&gt; &lt;ul&gt;&lt;li&gt;PDF&lt;/li&gt;&lt;li&gt;DOCX&lt;/li&gt;&lt;li&gt;DOC&lt;/li&gt;&lt;li&gt;JPG&lt;/li&gt;&lt;li&gt;JPEG&lt;/li&gt;&lt;li&gt;PNG&lt;/li&gt;&lt;li&gt;GIF&lt;/li&gt;&lt;li&gt;CSV&lt;/li&gt;&lt;li&gt;XLSX&lt;/li&gt;&lt;li&gt;XLS&lt;/li&gt;&lt;li&gt;MP4&lt;/li&gt;&lt;li&gt;MPEG&lt;/li&gt;&lt;li&gt;ZIP&lt;/li&gt;&lt;li&gt;RAR&lt;/li&gt;&lt;li&gt;TXT&lt;/li&gt;&lt;li&gt;SVG&lt;/li&gt;&lt;/ul&gt; &lt;br /&gt;&lt;br /&gt; The API will return the updated contact object.
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
-        /// <param name="body">The request body</param>
+        /// <param name="body">Fallback media schema</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasBadRequestDto">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDto">When receiving a 401 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<Stream?> PostAsync(global::Soenneker.HighLevel.OpenApiClient.Models.FormsUploadToCustomFieldsRequest body, Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Forms.UploadCustomFiles.UploadCustomFilesRequestBuilder.UploadCustomFilesRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<Stream?> PostAsync(global::Soenneker.HighLevel.OpenApiClient.Forms.UploadCustomFiles.UploadCustomFilesPostRequestBody body, Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Forms.UploadCustomFiles.UploadCustomFilesRequestBuilder.UploadCustomFilesRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<Stream> PostAsync(global::Soenneker.HighLevel.OpenApiClient.Models.FormsUploadToCustomFieldsRequest body, Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Forms.UploadCustomFiles.UploadCustomFilesRequestBuilder.UploadCustomFilesRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<Stream> PostAsync(global::Soenneker.HighLevel.OpenApiClient.Forms.UploadCustomFiles.UploadCustomFilesPostRequestBody body, Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Forms.UploadCustomFiles.UploadCustomFilesRequestBuilder.UploadCustomFilesRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -61,25 +61,25 @@ namespace Soenneker.HighLevel.OpenApiClient.Forms.UploadCustomFiles
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Post the necessary fields for the API to upload files. The files need to be a buffer with the key \&quot;&lt; custom_field_id &gt;_&lt; file_id &gt;\&quot;. &lt;br /&gt; Here custom field id is the ID of your custom field and file id is a randomly generated id (or uuid) &lt;br /&gt; There is support for multiple file uploads as well. Have multiple fields in the format mentioned.&lt;br /&gt;File size is limited to 50 MB.&lt;br /&gt;&lt;br /&gt; The allowed file types are: &lt;br/&gt; &lt;ul&gt;&lt;li&gt;PDF&lt;/li&gt;&lt;li&gt;DOCX&lt;/li&gt;&lt;li&gt;DOC&lt;/li&gt;&lt;li&gt;JPG&lt;/li&gt;&lt;li&gt;JPEG&lt;/li&gt;&lt;li&gt;PNG&lt;/li&gt;&lt;li&gt;GIF&lt;/li&gt;&lt;li&gt;CSV&lt;/li&gt;&lt;li&gt;XLSX&lt;/li&gt;&lt;li&gt;XLS&lt;/li&gt;&lt;li&gt;MP4&lt;/li&gt;&lt;li&gt;MPEG&lt;/li&gt;&lt;li&gt;ZIP&lt;/li&gt;&lt;li&gt;RAR&lt;/li&gt;&lt;li&gt;TXT&lt;/li&gt;&lt;li&gt;SVG&lt;/li&gt;&lt;/ul&gt; &lt;br /&gt;&lt;br /&gt; The API will return the updated contact object.&quot;
+        /// Post the necessary fields for the API to upload files. The files need to be a buffer with the key &quot;&lt; custom_field_id &gt;_&lt; file_id &gt;&quot;. &lt;br /&gt; Here custom field id is the ID of your custom field and file id is a randomly generated id (or uuid) &lt;br /&gt; There is support for multiple file uploads as well. Have multiple fields in the format mentioned.&lt;br /&gt;File size is limited to 50 MB.&lt;br /&gt;&lt;br /&gt; The allowed file types are: &lt;br/&gt; &lt;ul&gt;&lt;li&gt;PDF&lt;/li&gt;&lt;li&gt;DOCX&lt;/li&gt;&lt;li&gt;DOC&lt;/li&gt;&lt;li&gt;JPG&lt;/li&gt;&lt;li&gt;JPEG&lt;/li&gt;&lt;li&gt;PNG&lt;/li&gt;&lt;li&gt;GIF&lt;/li&gt;&lt;li&gt;CSV&lt;/li&gt;&lt;li&gt;XLSX&lt;/li&gt;&lt;li&gt;XLS&lt;/li&gt;&lt;li&gt;MP4&lt;/li&gt;&lt;li&gt;MPEG&lt;/li&gt;&lt;li&gt;ZIP&lt;/li&gt;&lt;li&gt;RAR&lt;/li&gt;&lt;li&gt;TXT&lt;/li&gt;&lt;li&gt;SVG&lt;/li&gt;&lt;/ul&gt; &lt;br /&gt;&lt;br /&gt; The API will return the updated contact object.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
-        /// <param name="body">The request body</param>
+        /// <param name="body">Fallback media schema</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HighLevel.OpenApiClient.Models.FormsUploadToCustomFieldsRequest body, Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Forms.UploadCustomFiles.UploadCustomFilesRequestBuilder.UploadCustomFilesRequestBuilderPostQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HighLevel.OpenApiClient.Forms.UploadCustomFiles.UploadCustomFilesPostRequestBody body, Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Forms.UploadCustomFiles.UploadCustomFilesRequestBuilder.UploadCustomFilesRequestBuilderPostQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HighLevel.OpenApiClient.Models.FormsUploadToCustomFieldsRequest body, Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Forms.UploadCustomFiles.UploadCustomFilesRequestBuilder.UploadCustomFilesRequestBuilderPostQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HighLevel.OpenApiClient.Forms.UploadCustomFiles.UploadCustomFilesPostRequestBody body, Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Forms.UploadCustomFiles.UploadCustomFilesRequestBuilder.UploadCustomFilesRequestBuilderPostQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
+            requestInfo.SetContentFromParsable(RequestAdapter, "multipart/form-data", body);
             return requestInfo;
         }
         /// <summary>
@@ -92,7 +92,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Forms.UploadCustomFiles
             return new global::Soenneker.HighLevel.OpenApiClient.Forms.UploadCustomFiles.UploadCustomFilesRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &quot;Post the necessary fields for the API to upload files. The files need to be a buffer with the key \&quot;&lt; custom_field_id &gt;_&lt; file_id &gt;\&quot;. &lt;br /&gt; Here custom field id is the ID of your custom field and file id is a randomly generated id (or uuid) &lt;br /&gt; There is support for multiple file uploads as well. Have multiple fields in the format mentioned.&lt;br /&gt;File size is limited to 50 MB.&lt;br /&gt;&lt;br /&gt; The allowed file types are: &lt;br/&gt; &lt;ul&gt;&lt;li&gt;PDF&lt;/li&gt;&lt;li&gt;DOCX&lt;/li&gt;&lt;li&gt;DOC&lt;/li&gt;&lt;li&gt;JPG&lt;/li&gt;&lt;li&gt;JPEG&lt;/li&gt;&lt;li&gt;PNG&lt;/li&gt;&lt;li&gt;GIF&lt;/li&gt;&lt;li&gt;CSV&lt;/li&gt;&lt;li&gt;XLSX&lt;/li&gt;&lt;li&gt;XLS&lt;/li&gt;&lt;li&gt;MP4&lt;/li&gt;&lt;li&gt;MPEG&lt;/li&gt;&lt;li&gt;ZIP&lt;/li&gt;&lt;li&gt;RAR&lt;/li&gt;&lt;li&gt;TXT&lt;/li&gt;&lt;li&gt;SVG&lt;/li&gt;&lt;/ul&gt; &lt;br /&gt;&lt;br /&gt; The API will return the updated contact object.&quot;
+        /// Post the necessary fields for the API to upload files. The files need to be a buffer with the key &quot;&lt; custom_field_id &gt;_&lt; file_id &gt;&quot;. &lt;br /&gt; Here custom field id is the ID of your custom field and file id is a randomly generated id (or uuid) &lt;br /&gt; There is support for multiple file uploads as well. Have multiple fields in the format mentioned.&lt;br /&gt;File size is limited to 50 MB.&lt;br /&gt;&lt;br /&gt; The allowed file types are: &lt;br/&gt; &lt;ul&gt;&lt;li&gt;PDF&lt;/li&gt;&lt;li&gt;DOCX&lt;/li&gt;&lt;li&gt;DOC&lt;/li&gt;&lt;li&gt;JPG&lt;/li&gt;&lt;li&gt;JPEG&lt;/li&gt;&lt;li&gt;PNG&lt;/li&gt;&lt;li&gt;GIF&lt;/li&gt;&lt;li&gt;CSV&lt;/li&gt;&lt;li&gt;XLSX&lt;/li&gt;&lt;li&gt;XLS&lt;/li&gt;&lt;li&gt;MP4&lt;/li&gt;&lt;li&gt;MPEG&lt;/li&gt;&lt;li&gt;ZIP&lt;/li&gt;&lt;li&gt;RAR&lt;/li&gt;&lt;li&gt;TXT&lt;/li&gt;&lt;li&gt;SVG&lt;/li&gt;&lt;/ul&gt; &lt;br /&gt;&lt;br /&gt; The API will return the updated contact object.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class UploadCustomFilesRequestBuilderPostQueryParameters 
