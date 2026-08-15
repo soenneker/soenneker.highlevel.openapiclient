@@ -82727,7 +82727,7 @@
             "example": "public api"
           },
           "dateOfBirth": {
-            "$ref": "#/components/schemas/CreateContactDtoDateOfBirth"
+            "$ref": "#/components/schemas/CreateContactDtoDateOfBirthProperty"
           },
           "country": {
             "type": "string",
@@ -82998,7 +82998,7 @@
             "example": "public api"
           },
           "dateOfBirth": {
-            "$ref": "#/components/schemas/UpdateContactDtoDateOfBirth"
+            "$ref": "#/components/schemas/UpdateContactDtoDateOfBirthProperty"
           },
           "country": {
             "type": "string",
@@ -83120,7 +83120,7 @@
             "example": "public api"
           },
           "dateOfBirth": {
-            "$ref": "#/components/schemas/UpsertContactDtoDateOfBirth"
+            "$ref": "#/components/schemas/UpsertContactDtoDateOfBirthProperty"
           },
           "country": {
             "type": "string",
@@ -104936,6 +104936,18 @@
       },
       "FileFieldFieldValueProperty": {
         "type": "object"
+      },
+      "CreateContactDtoDateOfBirthProperty": {
+        "type": "object",
+        "description": "\u0022The birth date of the contact. Supported formats: YYYY/MM/DD, MM/DD/YYYY, YYYY-MM-DD, MM-DD-YYYY, YYYY.MM.DD, MM.DD.YYYY, YYYY_MM_DD, MM_DD_YYYY\u0022"
+      },
+      "UpdateContactDtoDateOfBirthProperty": {
+        "type": "object",
+        "description": "\u0022The birth date of the contact. Supported formats: YYYY/MM/DD, MM/DD/YYYY, YYYY-MM-DD, MM-DD-YYYY, YYYY.MM.DD, MM.DD.YYYY, YYYY_MM_DD, MM_DD_YYYY\u0022"
+      },
+      "UpsertContactDtoDateOfBirthProperty": {
+        "type": "object",
+        "description": "\u0022The birth date of the contact. Supported formats: YYYY/MM/DD, MM/DD/YYYY, YYYY-MM-DD, MM-DD-YYYY, YYYY.MM.DD, MM.DD.YYYY, YYYY_MM_DD, MM_DD_YYYY\u0022"
       },
       "CreatePublicAgentDtoVersionProperty": {
         "type": "object",
