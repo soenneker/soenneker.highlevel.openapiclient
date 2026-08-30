@@ -21850,7 +21850,6 @@
             "in": "query",
             "description": "Search to begin after the specified date - should contain the sort value of the last document",
             "schema": {
-              "type": "object",
               "example": 1600854
             }
           },
