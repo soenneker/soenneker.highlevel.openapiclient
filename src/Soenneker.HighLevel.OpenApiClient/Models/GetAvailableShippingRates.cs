@@ -30,7 +30,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string AltId { get; set; }
 #endif
-        /// <summary>Alt Type</summary>
+        /// <summary>The altType property</summary>
         public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
         /// <summary>it will not calculate the order amount form backend if it is true</summary>
         public global::Soenneker.HighLevel.OpenApiClient.Models.GetAvailableShippingRatesAmountAvailable? AmountAvailable { get; set; }

@@ -22,7 +22,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string AltId { get; set; }
 #endif
-        /// <summary>Alt Type</summary>
+        /// <summary>The altType property</summary>
         public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
         /// <summary>attachments for the invoice</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -93,10 +93,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The schedule property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesScheduleOptionsDto? Schedule { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleOptionsDto? Schedule { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesScheduleOptionsDto Schedule { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleOptionsDto Schedule { get; set; }
 #endif
         /// <summary>The termsNotes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -150,7 +150,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "liveMode", n => { LiveMode = n.GetBoolValue(); } },
                 { "miscellaneousCharges", n => { MiscellaneousCharges = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceScheduleDtoMiscellaneousCharges>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceScheduleDtoMiscellaneousCharges.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "schedule", n => { Schedule = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesScheduleOptionsDto>(global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesScheduleOptionsDto.CreateFromDiscriminatorValue); } },
+                { "schedule", n => { Schedule = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleOptionsDto>(global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleOptionsDto.CreateFromDiscriminatorValue); } },
                 { "termsNotes", n => { TermsNotes = n.GetStringValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
             };
@@ -173,7 +173,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteBoolValue("liveMode", LiveMode);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceScheduleDtoMiscellaneousCharges>("miscellaneousCharges", MiscellaneousCharges);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesScheduleOptionsDto>("schedule", Schedule);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleOptionsDto>("schedule", Schedule);
             writer.WriteStringValue("termsNotes", TermsNotes);
             writer.WriteStringValue("title", Title);
             writer.WriteAdditionalData(AdditionalData);

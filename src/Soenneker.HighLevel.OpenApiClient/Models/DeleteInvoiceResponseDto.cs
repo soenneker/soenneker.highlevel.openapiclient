@@ -22,7 +22,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string AltId { get; set; }
 #endif
-        /// <summary>Alt Type</summary>
+        /// <summary>The altType property</summary>
         public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
         /// <summary>Total Amount Due</summary>
         public double? AmountDue { get; set; }

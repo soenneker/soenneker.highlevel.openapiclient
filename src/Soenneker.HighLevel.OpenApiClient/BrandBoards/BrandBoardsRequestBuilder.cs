@@ -55,7 +55,7 @@ namespace Soenneker.HighLevel.OpenApiClient.BrandBoards
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasBadRequestDto">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDto">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.BrandBoardsInvalidLocationDto">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.InvalidLocationDto">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnprocessableDto">When receiving a 422 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -72,7 +72,7 @@ namespace Soenneker.HighLevel.OpenApiClient.BrandBoards
             {
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.HighLevel.OpenApiClient.Models.BrandBoardsInvalidLocationDto.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.HighLevel.OpenApiClient.Models.InvalidLocationDto.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.GetBrandBoardSuccessDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.GetBrandBoardSuccessDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);

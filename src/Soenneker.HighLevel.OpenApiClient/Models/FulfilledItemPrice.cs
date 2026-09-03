@@ -52,10 +52,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>An array of membership offers associated with the price.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.MembershipOfferDto>? MembershipOffers { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsMembershipOfferDto>? MembershipOffers { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.MembershipOfferDto> MembershipOffers { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsMembershipOfferDto> MembershipOffers { get; set; }
 #endif
         /// <summary>The name of the price.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -76,15 +76,15 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The recurring details of the price (if type is recurring).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DefaultPriceResponseDtoRecurring? Recurring { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsDefaultPriceResponseDtoRecurring? Recurring { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DefaultPriceResponseDtoRecurring Recurring { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsDefaultPriceResponseDtoRecurring Recurring { get; set; }
 #endif
         /// <summary>Indicates whether inventory tracking is enabled.</summary>
         public bool? TrackInventory { get; set; }
         /// <summary>The type of the price (e.g., one_time).</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DefaultPriceResponseDtoType? Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsDefaultPriceResponseDtoType? Type { get; set; }
         /// <summary>The last update timestamp of the price.</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
         /// <summary>The unique identifier for the user.</summary>
@@ -136,12 +136,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "_id", n => { Id = n.GetStringValue(); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
-                { "membershipOffers", n => { MembershipOffers = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.MembershipOfferDto>(global::Soenneker.HighLevel.OpenApiClient.Models.MembershipOfferDto.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "membershipOffers", n => { MembershipOffers = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsMembershipOfferDto>(global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsMembershipOfferDto.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "product", n => { Product = n.GetStringValue(); } },
-                { "recurring", n => { Recurring = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DefaultPriceResponseDtoRecurring>(global::Soenneker.HighLevel.OpenApiClient.Models.DefaultPriceResponseDtoRecurring.CreateFromDiscriminatorValue); } },
+                { "recurring", n => { Recurring = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsDefaultPriceResponseDtoRecurring>(global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsDefaultPriceResponseDtoRecurring.CreateFromDiscriminatorValue); } },
                 { "trackInventory", n => { TrackInventory = n.GetBoolValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.DefaultPriceResponseDtoType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsDefaultPriceResponseDtoType>(); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
                 { "userId", n => { UserId = n.GetStringValue(); } },
                 { "variantOptionIds", n => { VariantOptionIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -162,12 +162,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("currency", Currency);
             writer.WriteStringValue("_id", Id);
             writer.WriteStringValue("locationId", LocationId);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.MembershipOfferDto>("membershipOffers", MembershipOffers);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsMembershipOfferDto>("membershipOffers", MembershipOffers);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("product", Product);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DefaultPriceResponseDtoRecurring>("recurring", Recurring);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsDefaultPriceResponseDtoRecurring>("recurring", Recurring);
             writer.WriteBoolValue("trackInventory", TrackInventory);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.DefaultPriceResponseDtoType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsDefaultPriceResponseDtoType>("type", Type);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
             writer.WriteStringValue("userId", UserId);
             writer.WriteCollectionOfPrimitiveValues<string>("variantOptionIds", VariantOptionIds);

@@ -23,7 +23,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string AltId { get; set; }
 #endif
-        /// <summary>Alt Type</summary>
+        /// <summary>The altType property</summary>
         public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
         /// <summary>created at</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

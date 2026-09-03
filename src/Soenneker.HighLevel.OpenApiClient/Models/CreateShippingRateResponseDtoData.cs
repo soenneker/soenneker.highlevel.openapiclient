@@ -23,7 +23,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string AltId { get; set; }
 #endif
-        /// <summary>Alt Type</summary>
+        /// <summary>The altType property</summary>
         public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
         /// <summary>The amount of the shipping rate if it is normal rate (0 means free ). Fixed Handling fee if it is a carrier rate (it will add to the carrier rate).</summary>
         public double? Amount { get; set; }

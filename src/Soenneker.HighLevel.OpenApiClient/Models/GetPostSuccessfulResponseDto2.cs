@@ -14,70 +14,26 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Association Type can be USER_DEFINED or SYSTEM_DEFINED</summary>
+        /// <summary>Message</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDto2AssociationTypeProperty? AssociationType { get; set; }
+        public string? Message { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDto2AssociationTypeProperty AssociationType { get; set; }
+        public string Message { get; set; }
 #endif
-        /// <summary>First Objects Key</summary>
+        /// <summary>Requested Results</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDto2FirstObjectKeyProperty? FirstObjectKey { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDto2Results? Results { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDto2FirstObjectKeyProperty FirstObjectKey { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDto2Results Results { get; set; }
 #endif
-        /// <summary>First Objects Association Label (custom_objects.children)</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDto2FirstObjectLabelProperty? FirstObjectLabel { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDto2FirstObjectLabelProperty FirstObjectLabel { get; set; }
-#endif
-        /// <summary>The id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Id { get; set; }
-#nullable restore
-#else
-        public string Id { get; set; }
-#endif
-        /// <summary>First Objects Association Label (custom_objects.children)</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Key { get; set; }
-#nullable restore
-#else
-        public string Key { get; set; }
-#endif
-        /// <summary>The locationId property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? LocationId { get; set; }
-#nullable restore
-#else
-        public string LocationId { get; set; }
-#endif
-        /// <summary>Second Objects Key</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDto2SecondObjectKeyProperty? SecondObjectKey { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDto2SecondObjectKeyProperty SecondObjectKey { get; set; }
-#endif
-        /// <summary>Second Object Association Label (contact)</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDto2SecondObjectLabelProperty? SecondObjectLabel { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDto2SecondObjectLabelProperty SecondObjectLabel { get; set; }
-#endif
+        /// <summary>Status Code</summary>
+        public double? StatusCode { get; set; }
+        /// <summary>Success or Failure</summary>
+        public bool? Success { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDto2"/> and sets the default values.
         /// </summary>
@@ -103,14 +59,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "associationType", n => { AssociationType = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDto2AssociationTypeProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDto2AssociationTypeProperty.CreateFromDiscriminatorValue); } },
-                { "firstObjectKey", n => { FirstObjectKey = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDto2FirstObjectKeyProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDto2FirstObjectKeyProperty.CreateFromDiscriminatorValue); } },
-                { "firstObjectLabel", n => { FirstObjectLabel = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDto2FirstObjectLabelProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDto2FirstObjectLabelProperty.CreateFromDiscriminatorValue); } },
-                { "id", n => { Id = n.GetStringValue(); } },
-                { "key", n => { Key = n.GetStringValue(); } },
-                { "locationId", n => { LocationId = n.GetStringValue(); } },
-                { "secondObjectKey", n => { SecondObjectKey = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDto2SecondObjectKeyProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDto2SecondObjectKeyProperty.CreateFromDiscriminatorValue); } },
-                { "secondObjectLabel", n => { SecondObjectLabel = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDto2SecondObjectLabelProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDto2SecondObjectLabelProperty.CreateFromDiscriminatorValue); } },
+                { "message", n => { Message = n.GetStringValue(); } },
+                { "results", n => { Results = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDto2Results>(global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDto2Results.CreateFromDiscriminatorValue); } },
+                { "statusCode", n => { StatusCode = n.GetDoubleValue(); } },
+                { "success", n => { Success = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -120,14 +72,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDto2AssociationTypeProperty>("associationType", AssociationType);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDto2FirstObjectKeyProperty>("firstObjectKey", FirstObjectKey);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDto2FirstObjectLabelProperty>("firstObjectLabel", FirstObjectLabel);
-            writer.WriteStringValue("id", Id);
-            writer.WriteStringValue("key", Key);
-            writer.WriteStringValue("locationId", LocationId);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDto2SecondObjectKeyProperty>("secondObjectKey", SecondObjectKey);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDto2SecondObjectLabelProperty>("secondObjectLabel", SecondObjectLabel);
+            writer.WriteStringValue("message", Message);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDto2Results>("results", Results);
+            writer.WriteDoubleValue("statusCode", StatusCode);
+            writer.WriteBoolValue("success", Success);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
