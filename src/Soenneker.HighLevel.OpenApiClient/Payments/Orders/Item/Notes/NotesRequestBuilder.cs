@@ -104,8 +104,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Payments.Orders.Item.Notes
             [QueryParameter("altId")]
             public string AltId { get; set; }
 #endif
+            #pragma warning disable CS1591
             [QueryParameter("altType")]
             public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

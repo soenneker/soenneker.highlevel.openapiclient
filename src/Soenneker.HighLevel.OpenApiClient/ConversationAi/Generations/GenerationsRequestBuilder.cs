@@ -104,8 +104,10 @@ namespace Soenneker.HighLevel.OpenApiClient.ConversationAi.Generations
             [QueryParameter("messageId")]
             public string MessageId { get; set; }
 #endif
+            #pragma warning disable CS1591
             [QueryParameter("source")]
             public global::Soenneker.HighLevel.OpenApiClient.Models.ConversationAiGetGenerationDetailsSourceParameter? Source { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

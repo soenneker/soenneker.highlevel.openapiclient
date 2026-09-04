@@ -150,8 +150,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Opportunities.Item.Followers
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class FollowersRequestBuilderDeleteQueryParameters 
         {
+            #pragma warning disable CS1591
             [QueryParameter("isRemoveAllFollowers")]
             public bool? IsRemoveAllFollowers { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

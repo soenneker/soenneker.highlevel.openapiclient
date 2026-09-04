@@ -148,12 +148,16 @@ namespace Soenneker.HighLevel.OpenApiClient.Opportunities.Search
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("assigned_to")]
             public string? AssignedTo { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("assigned_to")]
             public string AssignedTo { get; set; }
+            #pragma warning restore CS1591
 #endif
             /// <summary>Campaign Id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -177,12 +181,16 @@ namespace Soenneker.HighLevel.OpenApiClient.Opportunities.Search
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("country")]
             public string? Country { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("country")]
             public string Country { get; set; }
+            #pragma warning restore CS1591
 #endif
             /// <summary>Start date</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -238,15 +246,21 @@ namespace Soenneker.HighLevel.OpenApiClient.Opportunities.Search
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("order")]
             public string? Order { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("order")]
             public string Order { get; set; }
+            #pragma warning restore CS1591
 #endif
+            #pragma warning disable CS1591
             [QueryParameter("page")]
             public double? Page { get; set; }
+            #pragma warning restore CS1591
             /// <summary>Pipeline Id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -269,12 +283,16 @@ namespace Soenneker.HighLevel.OpenApiClient.Opportunities.Search
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("q")]
             public string? Q { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("q")]
             public string Q { get; set; }
+            #pragma warning restore CS1591
 #endif
             /// <summary>Start After</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -296,8 +314,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Opportunities.Search
             [QueryParameter("startAfterId")]
             public string StartAfterId { get; set; }
 #endif
+            #pragma warning disable CS1591
             [QueryParameter("status")]
             public global::Soenneker.HighLevel.OpenApiClient.Models.OpportunitiesSearchOpportunityStatusParameter? Status { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

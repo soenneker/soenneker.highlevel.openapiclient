@@ -116,15 +116,21 @@ namespace Soenneker.HighLevel.OpenApiClient.AffiliateManager.Item.Payouts
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("end")]
             public string? End { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("end")]
             public string End { get; set; }
+            #pragma warning restore CS1591
 #endif
+            #pragma warning disable CS1591
             [QueryParameter("limit")]
             public double? Limit { get; set; }
+            #pragma warning restore CS1591
             /// <summary>query</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -135,16 +141,22 @@ namespace Soenneker.HighLevel.OpenApiClient.AffiliateManager.Item.Payouts
             [QueryParameter("query")]
             public string Query { get; set; }
 #endif
+            #pragma warning disable CS1591
             [QueryParameter("skip")]
             public double? Skip { get; set; }
+            #pragma warning restore CS1591
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("start")]
             public string? Start { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("start")]
             public string Start { get; set; }
+            #pragma warning restore CS1591
 #endif
             /// <summary>Payout status</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

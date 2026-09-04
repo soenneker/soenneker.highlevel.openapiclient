@@ -94,16 +94,22 @@ namespace Soenneker.HighLevel.OpenApiClient.Blogs.Site.All
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class AllRequestBuilderGetQueryParameters 
         {
+            #pragma warning disable CS1591
             [QueryParameter("limit")]
             public double? Limit { get; set; }
+            #pragma warning restore CS1591
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("locationId")]
             public string? LocationId { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("locationId")]
             public string LocationId { get; set; }
+            #pragma warning restore CS1591
 #endif
             /// <summary>search for any post by name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -115,8 +121,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Blogs.Site.All
             [QueryParameter("searchTerm")]
             public string SearchTerm { get; set; }
 #endif
+            #pragma warning disable CS1591
             [QueryParameter("skip")]
             public double? Skip { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

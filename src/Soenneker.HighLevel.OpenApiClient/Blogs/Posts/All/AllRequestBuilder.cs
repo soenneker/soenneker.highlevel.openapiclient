@@ -96,26 +96,38 @@ namespace Soenneker.HighLevel.OpenApiClient.Blogs.Posts.All
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("blogId")]
             public string? BlogId { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("blogId")]
             public string BlogId { get; set; }
+            #pragma warning restore CS1591
 #endif
+            #pragma warning disable CS1591
             [QueryParameter("limit")]
             public double? Limit { get; set; }
+            #pragma warning restore CS1591
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("locationId")]
             public string? LocationId { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("locationId")]
             public string LocationId { get; set; }
+            #pragma warning restore CS1591
 #endif
+            #pragma warning disable CS1591
             [QueryParameter("offset")]
             public double? Offset { get; set; }
+            #pragma warning restore CS1591
             /// <summary>search for any post by name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -126,8 +138,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Blogs.Posts.All
             [QueryParameter("searchTerm")]
             public string SearchTerm { get; set; }
 #endif
+            #pragma warning disable CS1591
             [QueryParameter("status")]
             public global::Soenneker.HighLevel.OpenApiClient.Models.BlogsGetBlogPostStatusParameter? Status { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

@@ -167,8 +167,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Associations.Relations.Item
             [QueryParameter("associationIds")]
             public string[] AssociationIds { get; set; }
 #endif
+            #pragma warning disable CS1591
             [QueryParameter("limit")]
             public double? Limit { get; set; }
+            #pragma warning restore CS1591
             /// <summary>Your Sub Account&apos;s ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -179,8 +181,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Associations.Relations.Item
             [QueryParameter("locationId")]
             public string LocationId { get; set; }
 #endif
+            #pragma warning disable CS1591
             [QueryParameter("skip")]
             public double? Skip { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

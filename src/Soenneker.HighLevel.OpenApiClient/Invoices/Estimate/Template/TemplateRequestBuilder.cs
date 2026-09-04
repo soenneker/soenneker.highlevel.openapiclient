@@ -174,8 +174,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Invoices.Estimate.Template
             [QueryParameter("altId")]
             public string AltId { get; set; }
 #endif
+            #pragma warning disable CS1591
             [QueryParameter("altType")]
             public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
+            #pragma warning restore CS1591
             /// <summary>Limit the number of items to return</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

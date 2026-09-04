@@ -156,10 +156,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Calendars.Item.Notifications
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class NotificationsRequestBuilderGetQueryParameters 
         {
+            #pragma warning disable CS1591
             [QueryParameter("deleted")]
             public bool? Deleted { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("isActive")]
             public bool? IsActive { get; set; }
+            #pragma warning restore CS1591
             /// <summary>Number of records to return</summary>
             [QueryParameter("limit")]
             public double? Limit { get; set; }

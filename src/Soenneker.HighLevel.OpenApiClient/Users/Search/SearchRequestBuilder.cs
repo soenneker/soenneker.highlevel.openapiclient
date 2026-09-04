@@ -110,8 +110,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Users.Search
             [QueryParameter("companyId")]
             public string CompanyId { get; set; }
 #endif
+            #pragma warning disable CS1591
             [QueryParameter("enabled2waySync")]
             public bool? Enabled2waySync { get; set; }
+            #pragma warning restore CS1591
             /// <summary>List of User IDs to be filtered in the search</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

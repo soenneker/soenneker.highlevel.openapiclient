@@ -83,8 +83,10 @@ namespace Soenneker.HighLevel.OpenApiClient.SaasApi.Saas.SaasLocations.Item
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithCompanyItemRequestBuilderGetQueryParameters 
         {
+            #pragma warning disable CS1591
             [QueryParameter("page")]
             public double? Page { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

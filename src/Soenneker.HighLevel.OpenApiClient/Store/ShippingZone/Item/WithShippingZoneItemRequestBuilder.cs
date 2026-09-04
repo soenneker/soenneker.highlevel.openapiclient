@@ -207,8 +207,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Store.ShippingZone.Item
             [QueryParameter("altId")]
             public string AltId { get; set; }
 #endif
+            #pragma warning disable CS1591
             [QueryParameter("altType")]
             public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
+            #pragma warning restore CS1591
         }
         /// <summary>
         /// The &quot;List Shipping Zone&quot; API allows to retrieve a paginated list of shipping zone.
@@ -226,8 +228,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Store.ShippingZone.Item
             [QueryParameter("altId")]
             public string AltId { get; set; }
 #endif
+            #pragma warning disable CS1591
             [QueryParameter("altType")]
             public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
+            #pragma warning restore CS1591
             /// <summary>Include shipping rates array</summary>
             [QueryParameter("withShippingRate")]
             public bool? WithShippingRate { get; set; }

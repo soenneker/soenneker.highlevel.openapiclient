@@ -201,8 +201,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Store.ShippingZone.Item.ShippingRate
             [QueryParameter("altId")]
             public string AltId { get; set; }
 #endif
+            #pragma warning disable CS1591
             [QueryParameter("altType")]
             public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
+            #pragma warning restore CS1591
         }
         /// <summary>
         /// The &quot;List Shipping Rate&quot; API allows to retrieve a paginated list of shipping rate.
@@ -220,8 +222,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Store.ShippingZone.Item.ShippingRate
             [QueryParameter("altId")]
             public string AltId { get; set; }
 #endif
+            #pragma warning disable CS1591
             [QueryParameter("altType")]
             public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

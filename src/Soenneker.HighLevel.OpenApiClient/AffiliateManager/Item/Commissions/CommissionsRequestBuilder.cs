@@ -116,12 +116,16 @@ namespace Soenneker.HighLevel.OpenApiClient.AffiliateManager.Item.Commissions
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("fromDate")]
             public string? FromDate { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("fromDate")]
             public string FromDate { get; set; }
+            #pragma warning restore CS1591
 #endif
             /// <summary>Maximum number of records to return. Maximum allowed value is 100.</summary>
             [QueryParameter("limit")]
@@ -136,8 +140,10 @@ namespace Soenneker.HighLevel.OpenApiClient.AffiliateManager.Item.Commissions
             [QueryParameter("query")]
             public string Query { get; set; }
 #endif
+            #pragma warning disable CS1591
             [QueryParameter("skip")]
             public double? Skip { get; set; }
+            #pragma warning restore CS1591
             /// <summary>Status</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -150,12 +156,16 @@ namespace Soenneker.HighLevel.OpenApiClient.AffiliateManager.Item.Commissions
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("toDate")]
             public string? ToDate { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("toDate")]
             public string ToDate { get; set; }
+            #pragma warning restore CS1591
 #endif
         }
     }
