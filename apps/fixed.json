@@ -365,6 +365,14 @@
             "schema": {
               "$ref": "#/components/schemas/Value20210728Version"
             }
+          },
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
@@ -447,6 +455,14 @@
             "required": true,
             "schema": {
               "$ref": "#/components/schemas/Value20210728Version"
+            }
+          },
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
             }
           }
         ],
@@ -7350,6 +7366,14 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "noteId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
@@ -7423,6 +7447,14 @@
             "name": "appointmentId",
             "in": "path",
             "description": "Appointment ID",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "noteId",
+            "in": "path",
             "required": true,
             "schema": {
               "type": "string"
@@ -23109,6 +23141,14 @@
             "schema": {
               "$ref": "#/components/schemas/Value20210728Version"
             }
+          },
+          {
+            "name": "locationId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -31032,6 +31072,14 @@
               "type": "string",
               "example": "HChooFuiyPpVYzeJ4HMe"
             }
+          },
+          {
+            "name": "accountId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "requestBody": {
@@ -32913,6 +32961,14 @@
             "required": true,
             "schema": {
               "$ref": "#/components/schemas/Value20210728Version"
+            }
+          },
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
             }
           }
         ],
@@ -35451,6 +35507,14 @@
             "required": true,
             "schema": {
               "$ref": "#/components/schemas/Value20210728Version"
+            }
+          },
+          {
+            "name": "locationId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
             }
           }
         ],
@@ -42261,6 +42325,16 @@
         "summary": "Get email by Id",
         "description": "Get email by Id",
         "operationId": "ConversationsGetEmailById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "Email object for the id given.",
@@ -42470,6 +42544,14 @@
             "required": true,
             "schema": {
               "$ref": "#/components/schemas/Value20210415Version"
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
             }
           }
         ],
@@ -44906,6 +44988,14 @@
             "required": true,
             "schema": {
               "$ref": "#/components/schemas/Value20210728Version"
+            }
+          },
+          {
+            "name": "postId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
             }
           }
         ],
