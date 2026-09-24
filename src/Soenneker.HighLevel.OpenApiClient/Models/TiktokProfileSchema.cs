@@ -43,10 +43,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Tiktok Account Type must be one of the following values: business, profile</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.TiktokProfileSchemaTypeProperty? Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.TiktokProfileSchemaTypeProperty2? Type { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.TiktokProfileSchemaTypeProperty Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.TiktokProfileSchemaTypeProperty2 Type { get; set; }
 #endif
         /// <summary>Username of account</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -87,7 +87,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "isConnected", n => { IsConnected = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.TiktokProfileSchemaTypeProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.TiktokProfileSchemaTypeProperty.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.TiktokProfileSchemaTypeProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.TiktokProfileSchemaTypeProperty2.CreateFromDiscriminatorValue); } },
                 { "username", n => { Username = n.GetStringValue(); } },
                 { "verified", n => { Verified = n.GetBoolValue(); } },
             };
@@ -103,7 +103,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("isConnected", IsConnected);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.TiktokProfileSchemaTypeProperty>("type", Type);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.TiktokProfileSchemaTypeProperty2>("type", Type);
             writer.WriteStringValue("username", Username);
             writer.WriteBoolValue("verified", Verified);
             writer.WriteAdditionalData(AdditionalData);

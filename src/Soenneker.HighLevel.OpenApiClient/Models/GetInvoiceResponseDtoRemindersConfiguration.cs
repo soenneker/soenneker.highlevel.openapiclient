@@ -18,10 +18,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>List of reminders</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.RemindersConfigurationDtoReminderExecutionDetailsList? ReminderExecutionDetailsList { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceResponseDtoRemindersConfigurationReminderExecutionDetailsList? ReminderExecutionDetailsList { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.RemindersConfigurationDtoReminderExecutionDetailsList ReminderExecutionDetailsList { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceResponseDtoRemindersConfigurationReminderExecutionDetailsList ReminderExecutionDetailsList { get; set; }
 #endif
         /// <summary>Reminder settings</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -56,7 +56,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "reminderExecutionDetailsList", n => { ReminderExecutionDetailsList = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.RemindersConfigurationDtoReminderExecutionDetailsList>(global::Soenneker.HighLevel.OpenApiClient.Models.RemindersConfigurationDtoReminderExecutionDetailsList.CreateFromDiscriminatorValue); } },
+                { "reminderExecutionDetailsList", n => { ReminderExecutionDetailsList = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceResponseDtoRemindersConfigurationReminderExecutionDetailsList>(global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceResponseDtoRemindersConfigurationReminderExecutionDetailsList.CreateFromDiscriminatorValue); } },
                 { "reminderSettings", n => { ReminderSettings = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.RemindersConfigurationDtoReminderSettings>(global::Soenneker.HighLevel.OpenApiClient.Models.RemindersConfigurationDtoReminderSettings.CreateFromDiscriminatorValue); } },
             };
         }
@@ -67,7 +67,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.RemindersConfigurationDtoReminderExecutionDetailsList>("reminderExecutionDetailsList", ReminderExecutionDetailsList);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceResponseDtoRemindersConfigurationReminderExecutionDetailsList>("reminderExecutionDetailsList", ReminderExecutionDetailsList);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.RemindersConfigurationDtoReminderSettings>("reminderSettings", ReminderSettings);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -48,10 +48,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The meta property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaLinkedInAccountResponseDtoResultsMeta? Meta { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaLinkedInAccountResponseDtoResultsMetaProperty? Meta { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaLinkedInAccountResponseDtoResultsMeta Meta { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaLinkedInAccountResponseDtoResultsMetaProperty Meta { get; set; }
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -88,18 +88,18 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The platform property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaLinkedInAccountResponseDtoResultsPlatform? Platform { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaLinkedInAccountResponseDtoResultsPlatformProperty? Platform { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaLinkedInAccountResponseDtoResultsPlatform Platform { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaLinkedInAccountResponseDtoResultsPlatformProperty Platform { get; set; }
 #endif
         /// <summary>type must be one of the following values: page, profile</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaLinkedInAccountResponseDtoResultsType? Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaLinkedInAccountResponseDtoResultsTypeProperty? Type { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaLinkedInAccountResponseDtoResultsType Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaLinkedInAccountResponseDtoResultsTypeProperty Type { get; set; }
 #endif
         /// <summary>updated date</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
@@ -134,13 +134,13 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "deleted", n => { Deleted = n.GetBoolValue(); } },
                 { "_id", n => { Id = n.GetStringValue(); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
-                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaLinkedInAccountResponseDtoResultsMeta>(global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaLinkedInAccountResponseDtoResultsMeta.CreateFromDiscriminatorValue); } },
+                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaLinkedInAccountResponseDtoResultsMetaProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaLinkedInAccountResponseDtoResultsMetaProperty.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "oAuthId", n => { OAuthId = n.GetStringValue(); } },
                 { "oldId", n => { OldId = n.GetStringValue(); } },
                 { "originId", n => { OriginId = n.GetStringValue(); } },
-                { "platform", n => { Platform = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaLinkedInAccountResponseDtoResultsPlatform>(global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaLinkedInAccountResponseDtoResultsPlatform.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaLinkedInAccountResponseDtoResultsType>(global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaLinkedInAccountResponseDtoResultsType.CreateFromDiscriminatorValue); } },
+                { "platform", n => { Platform = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaLinkedInAccountResponseDtoResultsPlatformProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaLinkedInAccountResponseDtoResultsPlatformProperty.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaLinkedInAccountResponseDtoResultsTypeProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaLinkedInAccountResponseDtoResultsTypeProperty.CreateFromDiscriminatorValue); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
             };
         }
@@ -157,13 +157,13 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteBoolValue("deleted", Deleted);
             writer.WriteStringValue("_id", Id);
             writer.WriteStringValue("locationId", LocationId);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaLinkedInAccountResponseDtoResultsMeta>("meta", Meta);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaLinkedInAccountResponseDtoResultsMetaProperty>("meta", Meta);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("oAuthId", OAuthId);
             writer.WriteStringValue("oldId", OldId);
             writer.WriteStringValue("originId", OriginId);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaLinkedInAccountResponseDtoResultsPlatform>("platform", Platform);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaLinkedInAccountResponseDtoResultsType>("type", Type);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaLinkedInAccountResponseDtoResultsPlatformProperty>("platform", Platform);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaLinkedInAccountResponseDtoResultsTypeProperty>("type", Type);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -71,10 +71,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Object`s Type</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ICustomObjectSchemaTypeProperty? Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ICustomObjectSchemaTypeProperty2? Type { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ICustomObjectSchemaTypeProperty Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ICustomObjectSchemaTypeProperty2 Type { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.ICustomObjectSchema"/> and sets the default values.
@@ -110,7 +110,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
                 { "primaryDisplayProperty", n => { PrimaryDisplayProperty = n.GetStringValue(); } },
                 { "standard", n => { Standard = n.GetBoolValue(); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ICustomObjectSchemaTypeProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.ICustomObjectSchemaTypeProperty.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ICustomObjectSchemaTypeProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.ICustomObjectSchemaTypeProperty2.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -129,7 +129,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("locationId", LocationId);
             writer.WriteStringValue("primaryDisplayProperty", PrimaryDisplayProperty);
             writer.WriteBoolValue("standard", Standard);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ICustomObjectSchemaTypeProperty>("type", Type);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ICustomObjectSchemaTypeProperty2>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

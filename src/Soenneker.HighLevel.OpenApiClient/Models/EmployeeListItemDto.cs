@@ -15,10 +15,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>List of actions associated with this agent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.EmployeeListItemDtoActionsItemProperty>? Actions { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.EmployeeListItemDtoActionsItemProperty2>? Actions { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.EmployeeListItemDtoActionsItemProperty> Actions { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.EmployeeListItemDtoActionsItemProperty2> Actions { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -51,10 +51,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Goal configuration for the agent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.EmployeeListItemDtoGoalProperty? Goal { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.EmployeeListItemDtoGoalProperty2? Goal { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.EmployeeListItemDtoGoalProperty Goal { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.EmployeeListItemDtoGoalProperty2 Goal { get; set; }
 #endif
         /// <summary>Unique identifier for the agent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -132,12 +132,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "actions", n => { Actions = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.EmployeeListItemDtoActionsItemProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.EmployeeListItemDtoActionsItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "actions", n => { Actions = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.EmployeeListItemDtoActionsItemProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.EmployeeListItemDtoActionsItemProperty2.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "autoPilotMaxMessages", n => { AutoPilotMaxMessages = n.GetDoubleValue(); } },
                 { "businessName", n => { BusinessName = n.GetStringValue(); } },
                 { "channels", n => { Channels = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "createdAt", n => { CreatedAt = n.GetStringValue(); } },
-                { "goal", n => { Goal = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EmployeeListItemDtoGoalProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.EmployeeListItemDtoGoalProperty.CreateFromDiscriminatorValue); } },
+                { "goal", n => { Goal = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EmployeeListItemDtoGoalProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.EmployeeListItemDtoGoalProperty2.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "isPrimary", n => { IsPrimary = n.GetBoolValue(); } },
                 { "knowledgeBaseIds", n => { KnowledgeBaseIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -160,12 +160,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.EmployeeListItemDtoActionsItemProperty>("actions", Actions);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.EmployeeListItemDtoActionsItemProperty2>("actions", Actions);
             writer.WriteDoubleValue("autoPilotMaxMessages", AutoPilotMaxMessages);
             writer.WriteStringValue("businessName", BusinessName);
             writer.WriteCollectionOfPrimitiveValues<string>("channels", Channels);
             writer.WriteStringValue("createdAt", CreatedAt);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EmployeeListItemDtoGoalProperty>("goal", Goal);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EmployeeListItemDtoGoalProperty2>("goal", Goal);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("isPrimary", IsPrimary);
             writer.WriteCollectionOfPrimitiveValues<string>("knowledgeBaseIds", KnowledgeBaseIds);

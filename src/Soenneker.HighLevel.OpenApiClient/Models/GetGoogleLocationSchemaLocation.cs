@@ -24,10 +24,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Meta data not related to User</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocationMetadata? Metadata { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocationMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocationMetadata Metadata { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocationMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -40,10 +40,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>All locations and chain related to this one</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocationRelationshipData? RelationshipData { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocationRelationshipDataProperty? RelationshipData { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocationRelationshipData RelationshipData { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocationRelationshipDataProperty RelationshipData { get; set; }
 #endif
         /// <summary>The storeCode property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -56,10 +56,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Store front address</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocationStorefrontAddress? StorefrontAddress { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocationStorefrontAddressProperty? StorefrontAddress { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocationStorefrontAddress StorefrontAddress { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocationStorefrontAddressProperty StorefrontAddress { get; set; }
 #endif
         /// <summary>The title property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -97,11 +97,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "isConnected", n => { IsConnected = n.GetBoolValue(); } },
                 { "isVerified", n => { IsVerified = n.GetBoolValue(); } },
                 { "maxLocation", n => { MaxLocation = n.GetBoolValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocationMetadata>(global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocationMetadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocationMetadataProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocationMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "relationshipData", n => { RelationshipData = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocationRelationshipData>(global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocationRelationshipData.CreateFromDiscriminatorValue); } },
+                { "relationshipData", n => { RelationshipData = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocationRelationshipDataProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocationRelationshipDataProperty.CreateFromDiscriminatorValue); } },
                 { "storeCode", n => { StoreCode = n.GetStringValue(); } },
-                { "storefrontAddress", n => { StorefrontAddress = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocationStorefrontAddress>(global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocationStorefrontAddress.CreateFromDiscriminatorValue); } },
+                { "storefrontAddress", n => { StorefrontAddress = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocationStorefrontAddressProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocationStorefrontAddressProperty.CreateFromDiscriminatorValue); } },
                 { "title", n => { Title = n.GetStringValue(); } },
             };
         }
@@ -115,11 +115,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteBoolValue("isConnected", IsConnected);
             writer.WriteBoolValue("isVerified", IsVerified);
             writer.WriteBoolValue("maxLocation", MaxLocation);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocationMetadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocationMetadataProperty>("metadata", Metadata);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocationRelationshipData>("relationshipData", RelationshipData);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocationRelationshipDataProperty>("relationshipData", RelationshipData);
             writer.WriteStringValue("storeCode", StoreCode);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocationStorefrontAddress>("storefrontAddress", StorefrontAddress);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocationStorefrontAddressProperty>("storefrontAddress", StorefrontAddress);
             writer.WriteStringValue("title", Title);
             writer.WriteAdditionalData(AdditionalData);
         }

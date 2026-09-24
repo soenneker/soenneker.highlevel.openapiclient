@@ -91,10 +91,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Version data for the agent including nodes, edges, and configuration</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentDtoVersionProperty? Version { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentDtoVersionProperty2? Version { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentDtoVersionProperty Version { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentDtoVersionProperty2 Version { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentDto"/> and sets the default values.
@@ -131,7 +131,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "nodes", n => { Nodes = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentDtoStatus>(); } },
-                { "version", n => { Version = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentDtoVersionProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentDtoVersionProperty.CreateFromDiscriminatorValue); } },
+                { "version", n => { Version = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentDtoVersionProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentDtoVersionProperty2.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -151,7 +151,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteCollectionOfPrimitiveValues<string>("nodes", Nodes);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentDtoStatus>("status", Status);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentDtoVersionProperty>("version", Version);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentDtoVersionProperty2>("version", Version);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -128,10 +128,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Status must be one of the following values: in_progress, draft, failed, published, scheduled, in_review, notification_sent, deleted</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseSchemaPostStatus? Status { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseSchemaPostStatusProperty? Status { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseSchemaPostStatus Status { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseSchemaPostStatusProperty Status { get; set; }
 #endif
         /// <summary>The summary property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -160,10 +160,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Post Type must be one of the following values: - post, story, reel</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseSchemaPostType? Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseSchemaPostTypeProperty? Type { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseSchemaPostType Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseSchemaPostTypeProperty Type { get; set; }
 #endif
         /// <summary>The updatedAt property</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
@@ -216,11 +216,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "postId", n => { PostId = n.GetStringValue(); } },
                 { "publishedAt", n => { PublishedAt = n.GetStringValue(); } },
                 { "source", n => { Source = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaSource>(); } },
-                { "status", n => { Status = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseSchemaPostStatus>(global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseSchemaPostStatus.CreateFromDiscriminatorValue); } },
+                { "status", n => { Status = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseSchemaPostStatusProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseSchemaPostStatusProperty.CreateFromDiscriminatorValue); } },
                 { "summary", n => { Summary = n.GetStringValue(); } },
                 { "tags", n => { Tags = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "tiktokPostDetails", n => { TiktokPostDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaTiktokPostDetails>(global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaTiktokPostDetails.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseSchemaPostType>(global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseSchemaPostType.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseSchemaPostTypeProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseSchemaPostTypeProperty.CreateFromDiscriminatorValue); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
                 { "user", n => { User = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaUser>(global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaUser.CreateFromDiscriminatorValue); } },
             };
@@ -248,11 +248,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("postId", PostId);
             writer.WriteStringValue("publishedAt", PublishedAt);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaSource>("source", Source);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseSchemaPostStatus>("status", Status);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseSchemaPostStatusProperty>("status", Status);
             writer.WriteStringValue("summary", Summary);
             writer.WriteCollectionOfPrimitiveValues<string>("tags", Tags);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaTiktokPostDetails>("tiktokPostDetails", TiktokPostDetails);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseSchemaPostType>("type", Type);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseSchemaPostTypeProperty>("type", Type);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaUser>("user", User);
             writer.WriteAdditionalData(AdditionalData);

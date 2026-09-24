@@ -49,10 +49,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Post Type must be one of the following values: - post, story, reel</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SearchPostDtoPostTypeProperty? PostType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SearchPostDtoPostTypeProperty2? PostType { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SearchPostDtoPostTypeProperty PostType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SearchPostDtoPostTypeProperty2 PostType { get; set; }
 #endif
         /// <summary>The skip property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -110,7 +110,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "fromDate", n => { FromDate = n.GetStringValue(); } },
                 { "includeUsers", n => { IncludeUsers = n.GetStringValue(); } },
                 { "limit", n => { Limit = n.GetStringValue(); } },
-                { "postType", n => { PostType = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SearchPostDtoPostTypeProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.SearchPostDtoPostTypeProperty.CreateFromDiscriminatorValue); } },
+                { "postType", n => { PostType = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SearchPostDtoPostTypeProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.SearchPostDtoPostTypeProperty2.CreateFromDiscriminatorValue); } },
                 { "skip", n => { Skip = n.GetStringValue(); } },
                 { "toDate", n => { ToDate = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetStringValue(); } },
@@ -127,7 +127,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("fromDate", FromDate);
             writer.WriteStringValue("includeUsers", IncludeUsers);
             writer.WriteStringValue("limit", Limit);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SearchPostDtoPostTypeProperty>("postType", PostType);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SearchPostDtoPostTypeProperty2>("postType", PostType);
             writer.WriteStringValue("skip", Skip);
             writer.WriteStringValue("toDate", ToDate);
             writer.WriteStringValue("type", Type);

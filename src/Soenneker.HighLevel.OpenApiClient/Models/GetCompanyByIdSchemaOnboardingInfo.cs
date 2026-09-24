@@ -55,10 +55,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>metaData for onboarding</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetCompanyByIdSchemaOnboardingInfoMetaData? MetaData { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetCompanyByIdSchemaOnboardingInfoMetaDataProperty? MetaData { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetCompanyByIdSchemaOnboardingInfoMetaData MetaData { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetCompanyByIdSchemaOnboardingInfoMetaDataProperty MetaData { get; set; }
 #endif
         /// <summary>The pending property</summary>
         public bool? Pending { get; set; }
@@ -137,7 +137,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "kickoffActionTaken", n => { KickoffActionTaken = n.GetBoolValue(); } },
                 { "location", n => { Location = n.GetBoolValue(); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
-                { "metaData", n => { MetaData = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetCompanyByIdSchemaOnboardingInfoMetaData>(global::Soenneker.HighLevel.OpenApiClient.Models.GetCompanyByIdSchemaOnboardingInfoMetaData.CreateFromDiscriminatorValue); } },
+                { "metaData", n => { MetaData = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetCompanyByIdSchemaOnboardingInfoMetaDataProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.GetCompanyByIdSchemaOnboardingInfoMetaDataProperty.CreateFromDiscriminatorValue); } },
                 { "pending", n => { Pending = n.GetBoolValue(); } },
                 { "planId", n => { PlanId = n.GetStringValue(); } },
                 { "snapshotId", n => { SnapshotId = n.GetStringValue(); } },
@@ -163,7 +163,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteBoolValue("kickoffActionTaken", KickoffActionTaken);
             writer.WriteBoolValue("location", Location);
             writer.WriteStringValue("locationId", LocationId);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetCompanyByIdSchemaOnboardingInfoMetaData>("metaData", MetaData);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetCompanyByIdSchemaOnboardingInfoMetaDataProperty>("metaData", MetaData);
             writer.WriteBoolValue("pending", Pending);
             writer.WriteStringValue("planId", PlanId);
             writer.WriteStringValue("snapshotId", SnapshotId);

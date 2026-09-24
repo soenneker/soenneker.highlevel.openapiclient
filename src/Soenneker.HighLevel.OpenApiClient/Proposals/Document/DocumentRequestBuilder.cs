@@ -131,7 +131,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Proposals.Document
 #endif
             /// <summary>Payment status, pass as comma separated values</summary>
             [QueryParameter("paymentStatus")]
-            public global::Soenneker.HighLevel.OpenApiClient.Models.ProposalsListDocumentsContractsPaymentStatusParameter? PaymentStatus { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.ListDocumentsContractsPaymentStatusParameter? PaymentStatus { get; set; }
             /// <summary>Search string</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -147,7 +147,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Proposals.Document
             public double? Skip { get; set; }
             /// <summary>Document status, pass as comma separated values</summary>
             [QueryParameter("status")]
-            public global::Soenneker.HighLevel.OpenApiClient.Models.ProposalsListDocumentsContractsStatusParameter? Status { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.ListDocumentsContractsStatusParameter? Status { get; set; }
         }
     }
 }

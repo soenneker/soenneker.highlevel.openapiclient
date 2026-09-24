@@ -18,10 +18,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Approval Status must be one of the following values: pending, approved, rejected, not_required</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaPostApprovalDetailsApprovalStatus? ApprovalStatus { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaPostApprovalDetailsApprovalStatusProperty? ApprovalStatus { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaPostApprovalDetailsApprovalStatus ApprovalStatus { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaPostApprovalDetailsApprovalStatusProperty ApprovalStatus { get; set; }
 #endif
         /// <summary>Approver</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -80,7 +80,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "approvalStatus", n => { ApprovalStatus = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaPostApprovalDetailsApprovalStatus>(global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaPostApprovalDetailsApprovalStatus.CreateFromDiscriminatorValue); } },
+                { "approvalStatus", n => { ApprovalStatus = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaPostApprovalDetailsApprovalStatusProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaPostApprovalDetailsApprovalStatusProperty.CreateFromDiscriminatorValue); } },
                 { "approver", n => { Approver = n.GetStringValue(); } },
                 { "approverNote", n => { ApproverNote = n.GetStringValue(); } },
                 { "approverUser", n => { ApproverUser = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.FormatedApprovalDetailsApproverUser>(global::Soenneker.HighLevel.OpenApiClient.Models.FormatedApprovalDetailsApproverUser.CreateFromDiscriminatorValue); } },
@@ -94,7 +94,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaPostApprovalDetailsApprovalStatus>("approvalStatus", ApprovalStatus);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostFormattedSchemaPostApprovalDetailsApprovalStatusProperty>("approvalStatus", ApprovalStatus);
             writer.WriteStringValue("approver", Approver);
             writer.WriteStringValue("approverNote", ApproverNote);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.FormatedApprovalDetailsApproverUser>("approverUser", ApproverUser);

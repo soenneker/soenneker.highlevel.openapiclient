@@ -91,10 +91,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Status must be one of the following values: null, in_progress, draft, failed, published, scheduled, in_review, notification_sent, deleted</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoStatusProperty? Status { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoStatusProperty2? Status { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoStatusProperty Status { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoStatusProperty2 Status { get; set; }
 #endif
         /// <summary>Post Content  The limitations of content as per the platforms is provided through the reference link in API description. The summary will be trimmed based on the limit</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -123,10 +123,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Post Type must be one of the following values: - post, story, reel</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoTypeProperty? Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoTypeProperty2? Type { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoTypeProperty Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoTypeProperty2 Type { get; set; }
 #endif
         /// <summary>User ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -171,11 +171,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "postApprovalDetails", n => { PostApprovalDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoPostApprovalDetails>(global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoPostApprovalDetails.CreateFromDiscriminatorValue); } },
                 { "scheduleDate", n => { ScheduleDate = n.GetStringValue(); } },
                 { "scheduleTimeUpdated", n => { ScheduleTimeUpdated = n.GetBoolValue(); } },
-                { "status", n => { Status = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoStatusProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoStatusProperty.CreateFromDiscriminatorValue); } },
+                { "status", n => { Status = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoStatusProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoStatusProperty2.CreateFromDiscriminatorValue); } },
                 { "summary", n => { Summary = n.GetStringValue(); } },
                 { "tags", n => { Tags = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "tiktokPostDetails", n => { TiktokPostDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoTiktokPostDetails>(global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoTiktokPostDetails.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoTypeProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoTypeProperty.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoTypeProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoTypeProperty2.CreateFromDiscriminatorValue); } },
                 { "userId", n => { UserId = n.GetStringValue(); } },
             };
         }
@@ -196,11 +196,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoPostApprovalDetails>("postApprovalDetails", PostApprovalDetails);
             writer.WriteStringValue("scheduleDate", ScheduleDate);
             writer.WriteBoolValue("scheduleTimeUpdated", ScheduleTimeUpdated);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoStatusProperty>("status", Status);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoStatusProperty2>("status", Status);
             writer.WriteStringValue("summary", Summary);
             writer.WriteCollectionOfPrimitiveValues<string>("tags", Tags);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoTiktokPostDetails>("tiktokPostDetails", TiktokPostDetails);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoTypeProperty>("type", Type);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoTypeProperty2>("type", Type);
             writer.WriteStringValue("userId", UserId);
             writer.WriteAdditionalData(AdditionalData);
         }

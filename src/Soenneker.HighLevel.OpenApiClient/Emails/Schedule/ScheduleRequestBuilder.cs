@@ -39,11 +39,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Emails.Schedule
         /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleFetchSuccessfulDto"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasBadRequestDto">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDto">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.EmailsInvalidLocationDto">When receiving a 403 status code</exception>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.EmailsNotFoundDto">When receiving a 404 status code</exception>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnprocessableDto">When receiving a 422 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.EmailsCommonSchemasBadRequestDto">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.EmailsCommonSchemasUnauthorizedDto">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.InvalidLocationDto">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.NotFoundDto">When receiving a 404 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.EmailsCommonSchemasUnprocessableDto">When receiving a 422 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleFetchSuccessfulDto?> GetAsync(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Emails.Schedule.ScheduleRequestBuilder.ScheduleRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -56,11 +56,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Emails.Schedule
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.HighLevel.OpenApiClient.Models.EmailsInvalidLocationDto.CreateFromDiscriminatorValue },
-                { "404", global::Soenneker.HighLevel.OpenApiClient.Models.EmailsNotFoundDto.CreateFromDiscriminatorValue },
-                { "422", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.HighLevel.OpenApiClient.Models.EmailsCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.HighLevel.OpenApiClient.Models.EmailsCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.HighLevel.OpenApiClient.Models.InvalidLocationDto.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.HighLevel.OpenApiClient.Models.NotFoundDto.CreateFromDiscriminatorValue },
+                { "422", global::Soenneker.HighLevel.OpenApiClient.Models.EmailsCommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleFetchSuccessfulDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleFetchSuccessfulDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -106,7 +106,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Emails.Schedule
             public bool? CampaignsOnly { get; set; }
             /// <summary>Filter by email delivery status</summary>
             [QueryParameter("emailStatus")]
-            public global::Soenneker.HighLevel.OpenApiClient.Models.EmailsFetchCampaignsEmailStatusParameter? EmailStatus { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.FetchCampaignsEmailStatusParameter? EmailStatus { get; set; }
             /// <summary>Maximum number of campaigns to return. Defaults to 10, maximum is 100</summary>
             [QueryParameter("limit")]
             public double? Limit { get; set; }
@@ -151,7 +151,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Emails.Schedule
             public bool? ShowStats { get; set; }
             /// <summary>Filter by schedule status</summary>
             [QueryParameter("status")]
-            public global::Soenneker.HighLevel.OpenApiClient.Models.EmailsFetchCampaignsStatusParameter? Status { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.FetchCampaignsStatusParameter? Status { get; set; }
         }
     }
 }

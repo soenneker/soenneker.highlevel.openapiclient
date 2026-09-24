@@ -17,10 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Result data with production and new draft version details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PromoteAndPublishResponseDtoDataProperty? Data { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PromoteAndPublishResponseDtoDataProperty2? Data { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PromoteAndPublishResponseDtoDataProperty Data { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PromoteAndPublishResponseDtoDataProperty2 Data { get; set; }
 #endif
         /// <summary>Response message</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -57,7 +57,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "data", n => { Data = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PromoteAndPublishResponseDtoDataProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.PromoteAndPublishResponseDtoDataProperty.CreateFromDiscriminatorValue); } },
+                { "data", n => { Data = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PromoteAndPublishResponseDtoDataProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.PromoteAndPublishResponseDtoDataProperty2.CreateFromDiscriminatorValue); } },
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "success", n => { Success = n.GetBoolValue(); } },
             };
@@ -69,7 +69,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PromoteAndPublishResponseDtoDataProperty>("data", Data);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PromoteAndPublishResponseDtoDataProperty2>("data", Data);
             writer.WriteStringValue("message", Message);
             writer.WriteBoolValue("success", Success);
             writer.WriteAdditionalData(AdditionalData);

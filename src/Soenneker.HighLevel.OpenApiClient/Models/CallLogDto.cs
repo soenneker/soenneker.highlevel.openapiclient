@@ -45,10 +45,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Dynamic data extracted from the call based on agent configuration</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CallLogDtoExtractedData? ExtractedData { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CallLogDtoExtractedDataProperty? ExtractedData { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CallLogDtoExtractedData ExtractedData { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CallLogDtoExtractedDataProperty ExtractedData { get; set; }
 #endif
         /// <summary>Caller phone number</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -132,7 +132,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "duration", n => { Duration = n.GetDoubleValue(); } },
                 { "executedCallActions", n => { ExecutedCallActions = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CallActionSchema>(global::Soenneker.HighLevel.OpenApiClient.Models.CallActionSchema.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "extractedData", n => { ExtractedData = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CallLogDtoExtractedData>(global::Soenneker.HighLevel.OpenApiClient.Models.CallLogDtoExtractedData.CreateFromDiscriminatorValue); } },
+                { "extractedData", n => { ExtractedData = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CallLogDtoExtractedDataProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.CallLogDtoExtractedDataProperty.CreateFromDiscriminatorValue); } },
                 { "fromNumber", n => { FromNumber = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "isAgentDeleted", n => { IsAgentDeleted = n.GetBoolValue(); } },
@@ -155,7 +155,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
             writer.WriteDoubleValue("duration", Duration);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CallActionSchema>("executedCallActions", ExecutedCallActions);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CallLogDtoExtractedData>("extractedData", ExtractedData);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CallLogDtoExtractedDataProperty>("extractedData", ExtractedData);
             writer.WriteStringValue("fromNumber", FromNumber);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("isAgentDeleted", IsAgentDeleted);

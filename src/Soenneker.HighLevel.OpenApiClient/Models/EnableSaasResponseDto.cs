@@ -17,10 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Response data from the enable SaaS operation</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.EnableSaasResponseDtoDataProperty? Data { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.EnableSaasResponseDtoDataProperty2? Data { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.EnableSaasResponseDtoDataProperty Data { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.EnableSaasResponseDtoDataProperty2 Data { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.EnableSaasResponseDto"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "data", n => { Data = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EnableSaasResponseDtoDataProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.EnableSaasResponseDtoDataProperty.CreateFromDiscriminatorValue); } },
+                { "data", n => { Data = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EnableSaasResponseDtoDataProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.EnableSaasResponseDtoDataProperty2.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EnableSaasResponseDtoDataProperty>("data", Data);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EnableSaasResponseDtoDataProperty2>("data", Data);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

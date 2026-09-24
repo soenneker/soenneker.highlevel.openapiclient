@@ -83,10 +83,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Subscription information</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SaasLocationDtoSubscriptionInfoProperty? SubscriptionInfo { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SaasLocationDtoSubscriptionInfoProperty2? SubscriptionInfo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SaasLocationDtoSubscriptionInfoProperty SubscriptionInfo { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SaasLocationDtoSubscriptionInfoProperty2 SubscriptionInfo { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.SaasLocationDto"/> and sets the default values.
@@ -122,7 +122,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "providerLocationId", n => { ProviderLocationId = n.GetStringValue(); } },
                 { "saasMode", n => { SaasMode = n.GetStringValue(); } },
                 { "subscriptionId", n => { SubscriptionId = n.GetStringValue(); } },
-                { "subscriptionInfo", n => { SubscriptionInfo = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SaasLocationDtoSubscriptionInfoProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.SaasLocationDtoSubscriptionInfoProperty.CreateFromDiscriminatorValue); } },
+                { "subscriptionInfo", n => { SubscriptionInfo = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SaasLocationDtoSubscriptionInfoProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.SaasLocationDtoSubscriptionInfoProperty2.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -141,7 +141,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("providerLocationId", ProviderLocationId);
             writer.WriteStringValue("saasMode", SaasMode);
             writer.WriteStringValue("subscriptionId", SubscriptionId);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SaasLocationDtoSubscriptionInfoProperty>("subscriptionInfo", SubscriptionInfo);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SaasLocationDtoSubscriptionInfoProperty2>("subscriptionInfo", SubscriptionInfo);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

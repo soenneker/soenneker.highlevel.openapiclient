@@ -68,10 +68,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The provider property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AutoPaymentScheduleDtoAutoPaymentProvider? Provider { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AutoPaymentScheduleDtoAutoPaymentProviderProperty? Provider { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AutoPaymentScheduleDtoAutoPaymentProvider Provider { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AutoPaymentScheduleDtoAutoPaymentProviderProperty Provider { get; set; }
 #endif
         /// <summary>The sepaDirectDebit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -129,7 +129,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "customerId", n => { CustomerId = n.GetStringValue(); } },
                 { "enable", n => { Enable = n.GetBoolValue(); } },
                 { "paymentMethodId", n => { PaymentMethodId = n.GetStringValue(); } },
-                { "provider", n => { Provider = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AutoPaymentScheduleDtoAutoPaymentProvider>(global::Soenneker.HighLevel.OpenApiClient.Models.AutoPaymentScheduleDtoAutoPaymentProvider.CreateFromDiscriminatorValue); } },
+                { "provider", n => { Provider = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AutoPaymentScheduleDtoAutoPaymentProviderProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.AutoPaymentScheduleDtoAutoPaymentProviderProperty.CreateFromDiscriminatorValue); } },
                 { "sepaDirectDebit", n => { SepaDirectDebit = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SepaDirectDebitDto>(global::Soenneker.HighLevel.OpenApiClient.Models.SepaDirectDebitDto.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
                 { "usBankAccount", n => { UsBankAccount = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UsBankAccountDto>(global::Soenneker.HighLevel.OpenApiClient.Models.UsBankAccountDto.CreateFromDiscriminatorValue); } },
@@ -149,7 +149,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("customerId", CustomerId);
             writer.WriteBoolValue("enable", Enable);
             writer.WriteStringValue("paymentMethodId", PaymentMethodId);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AutoPaymentScheduleDtoAutoPaymentProvider>("provider", Provider);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AutoPaymentScheduleDtoAutoPaymentProviderProperty>("provider", Provider);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SepaDirectDebitDto>("sepaDirectDebit", SepaDirectDebit);
             writer.WriteStringValue("type", Type);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UsBankAccountDto>("usBankAccount", UsBankAccount);

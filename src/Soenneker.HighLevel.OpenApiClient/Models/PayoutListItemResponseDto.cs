@@ -127,10 +127,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Payout metadata</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PayoutListItemResponseDtoPaidMetaProperty? PaidMeta { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PayoutListItemResponseDtoPaidMetaProperty2? PaidMeta { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PayoutListItemResponseDtoPaidMetaProperty PaidMeta { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PayoutListItemResponseDtoPaidMetaProperty2 PaidMeta { get; set; }
 #endif
         /// <summary>Payout paid method</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -213,7 +213,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "isMigrated", n => { IsMigrated = n.GetBoolValue(); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
                 { "paidAt", n => { PaidAt = n.GetStringValue(); } },
-                { "paidMeta", n => { PaidMeta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PayoutListItemResponseDtoPaidMetaProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.PayoutListItemResponseDtoPaidMetaProperty.CreateFromDiscriminatorValue); } },
+                { "paidMeta", n => { PaidMeta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PayoutListItemResponseDtoPaidMetaProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.PayoutListItemResponseDtoPaidMetaProperty2.CreateFromDiscriminatorValue); } },
                 { "paidMethod", n => { PaidMethod = n.GetStringValue(); } },
                 { "payoutMethod", n => { PayoutMethod = n.GetStringValue(); } },
                 { "payoutMonth", n => { PayoutMonth = n.GetStringValue(); } },
@@ -244,7 +244,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteBoolValue("isMigrated", IsMigrated);
             writer.WriteStringValue("locationId", LocationId);
             writer.WriteStringValue("paidAt", PaidAt);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PayoutListItemResponseDtoPaidMetaProperty>("paidMeta", PaidMeta);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PayoutListItemResponseDtoPaidMetaProperty2>("paidMeta", PaidMeta);
             writer.WriteStringValue("paidMethod", PaidMethod);
             writer.WriteStringValue("payoutMethod", PayoutMethod);
             writer.WriteStringValue("payoutMonth", PayoutMonth);

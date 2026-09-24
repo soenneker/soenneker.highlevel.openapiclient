@@ -16,10 +16,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Action Type must be one of the following values: none, order, book, shop, learn_more, call, sign_up</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaGmbPostDetailsActionType? ActionType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaGmbPostDetailsActionTypeProperty? ActionType { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaGmbPostDetailsActionType ActionType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaGmbPostDetailsActionTypeProperty ActionType { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -120,7 +120,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "actionType", n => { ActionType = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaGmbPostDetailsActionType>(global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaGmbPostDetailsActionType.CreateFromDiscriminatorValue); } },
+                { "actionType", n => { ActionType = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaGmbPostDetailsActionTypeProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaGmbPostDetailsActionTypeProperty.CreateFromDiscriminatorValue); } },
                 { "couponCode", n => { CouponCode = n.GetStringValue(); } },
                 { "endDate", n => { EndDate = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GmbPostSchemaEndDate>(global::Soenneker.HighLevel.OpenApiClient.Models.GmbPostSchemaEndDate.CreateFromDiscriminatorValue); } },
                 { "gmbEventType", n => { GmbEventType = n.GetStringValue(); } },
@@ -139,7 +139,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaGmbPostDetailsActionType>("actionType", ActionType);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaGmbPostDetailsActionTypeProperty>("actionType", ActionType);
             writer.WriteStringValue("couponCode", CouponCode);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GmbPostSchemaEndDate>("endDate", EndDate);
             writer.WriteStringValue("gmbEventType", GmbEventType);

@@ -75,10 +75,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The meta property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignGroupDataDtoMetaProperty? Meta { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignGroupDataDtoMetaProperty2? Meta { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignGroupDataDtoMetaProperty Meta { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignGroupDataDtoMetaProperty2 Meta { get; set; }
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -127,7 +127,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "linkedInAdAccountId", n => { LinkedInAdAccountId = n.GetStringValue(); } },
                 { "linkedInError", n => { LinkedInError = n.GetStringValue(); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
-                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignGroupDataDtoMetaProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignGroupDataDtoMetaProperty.CreateFromDiscriminatorValue); } },
+                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignGroupDataDtoMetaProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignGroupDataDtoMetaProperty2.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "objectiveType", n => { ObjectiveType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignGroupDataDtoObjectiveType>(); } },
                 { "publishingStatus", n => { PublishingStatus = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignGroupDataDtoPublishingStatus>(); } },
@@ -149,7 +149,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("linkedInAdAccountId", LinkedInAdAccountId);
             writer.WriteStringValue("linkedInError", LinkedInError);
             writer.WriteStringValue("locationId", LocationId);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignGroupDataDtoMetaProperty>("meta", Meta);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignGroupDataDtoMetaProperty2>("meta", Meta);
             writer.WriteStringValue("name", Name);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignGroupDataDtoObjectiveType>("objectiveType", ObjectiveType);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignGroupDataDtoPublishingStatus>("publishingStatus", PublishingStatus);

@@ -22,8 +22,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string AltId { get; set; }
 #endif
-        /// <summary>The altType property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
+        /// <summary>Type of entity that owns the folder</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Models.MediasLocationAltType? AltType { get; set; }
         /// <summary>Whether this is a system-generated application folder</summary>
         public bool? AppFolder { get; set; }
         /// <summary>Primary category of content stored in the folder</summary>
@@ -120,7 +120,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "altId", n => { AltId = n.GetStringValue(); } },
-                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType>(); } },
+                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.MediasLocationAltType>(); } },
                 { "appFolder", n => { AppFolder = n.GetBoolValue(); } },
                 { "category", n => { Category = n.GetStringValue(); } },
                 { "deleted", n => { Deleted = n.GetBoolValue(); } },
@@ -145,7 +145,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("altId", AltId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType>("altType", AltType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.MediasLocationAltType>("altType", AltType);
             writer.WriteBoolValue("appFolder", AppFolder);
             writer.WriteStringValue("category", Category);
             writer.WriteBoolValue("deleted", Deleted);

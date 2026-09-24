@@ -19,10 +19,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The funnels property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.FunnelListResponseDtoFunnelsProperty? Funnels { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.FunnelListResponseDtoFunnelsProperty2? Funnels { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.FunnelListResponseDtoFunnelsProperty Funnels { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.FunnelListResponseDtoFunnelsProperty2 Funnels { get; set; }
 #endif
         /// <summary>The traceId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -58,7 +58,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "count", n => { Count = n.GetDoubleValue(); } },
-                { "funnels", n => { Funnels = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.FunnelListResponseDtoFunnelsProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.FunnelListResponseDtoFunnelsProperty.CreateFromDiscriminatorValue); } },
+                { "funnels", n => { Funnels = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.FunnelListResponseDtoFunnelsProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.FunnelListResponseDtoFunnelsProperty2.CreateFromDiscriminatorValue); } },
                 { "traceId", n => { TraceId = n.GetStringValue(); } },
             };
         }
@@ -70,7 +70,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDoubleValue("count", Count);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.FunnelListResponseDtoFunnelsProperty>("funnels", Funnels);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.FunnelListResponseDtoFunnelsProperty2>("funnels", Funnels);
             writer.WriteStringValue("traceId", TraceId);
             writer.WriteAdditionalData(AdditionalData);
         }

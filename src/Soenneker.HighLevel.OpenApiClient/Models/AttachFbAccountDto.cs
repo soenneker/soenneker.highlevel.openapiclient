@@ -49,10 +49,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AttachFbAccountDtoTypeProperty? Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AttachFbAccountDtoTypeProperty2? Type { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AttachFbAccountDtoTypeProperty Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AttachFbAccountDtoTypeProperty2 Type { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.AttachFbAccountDto"/> and sets the default values.
@@ -83,7 +83,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "companyId", n => { CompanyId = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "originId", n => { OriginId = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AttachFbAccountDtoTypeProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.AttachFbAccountDtoTypeProperty.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AttachFbAccountDtoTypeProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.AttachFbAccountDtoTypeProperty2.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -97,7 +97,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("companyId", CompanyId);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("originId", OriginId);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AttachFbAccountDtoTypeProperty>("type", Type);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AttachFbAccountDtoTypeProperty2>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

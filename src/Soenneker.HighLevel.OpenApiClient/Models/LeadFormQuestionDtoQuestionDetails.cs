@@ -26,10 +26,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Text question details (empty object for text questions)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormQuestionDtoQuestionDetailsTextQuestionDetails? TextQuestionDetails { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormQuestionDtoQuestionDetailsTextQuestionDetailsProperty? TextQuestionDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormQuestionDtoQuestionDetailsTextQuestionDetails TextQuestionDetails { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormQuestionDtoQuestionDetailsTextQuestionDetailsProperty TextQuestionDetails { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormQuestionDtoQuestionDetails"/> and sets the default values.
@@ -57,7 +57,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "multipleChoiceQuestionDetails", n => { MultipleChoiceQuestionDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.QuestionDetailsDtoMultipleChoiceQuestionDetails>(global::Soenneker.HighLevel.OpenApiClient.Models.QuestionDetailsDtoMultipleChoiceQuestionDetails.CreateFromDiscriminatorValue); } },
-                { "textQuestionDetails", n => { TextQuestionDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormQuestionDtoQuestionDetailsTextQuestionDetails>(global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormQuestionDtoQuestionDetailsTextQuestionDetails.CreateFromDiscriminatorValue); } },
+                { "textQuestionDetails", n => { TextQuestionDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormQuestionDtoQuestionDetailsTextQuestionDetailsProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormQuestionDtoQuestionDetailsTextQuestionDetailsProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -68,7 +68,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.QuestionDetailsDtoMultipleChoiceQuestionDetails>("multipleChoiceQuestionDetails", MultipleChoiceQuestionDetails);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormQuestionDtoQuestionDetailsTextQuestionDetails>("textQuestionDetails", TextQuestionDetails);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormQuestionDtoQuestionDetailsTextQuestionDetailsProperty>("textQuestionDetails", TextQuestionDetails);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

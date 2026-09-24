@@ -24,10 +24,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>privacy level is an enum and must be one of the following values: PUBLIC_TO_EVERYONE, MUTUAL_FOLLOW_FRIENDS, SELF_ONLY</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequestTiktokPostDetailsPrivacyLevel? PrivacyLevel { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequestTiktokPostDetailsPrivacyLevelProperty? PrivacyLevel { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequestTiktokPostDetailsPrivacyLevel PrivacyLevel { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequestTiktokPostDetailsPrivacyLevelProperty PrivacyLevel { get; set; }
 #endif
         /// <summary>promote other brand</summary>
         public bool? PromoteOtherBrand { get; set; }
@@ -63,7 +63,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "enableComment", n => { EnableComment = n.GetBoolValue(); } },
                 { "enableDuet", n => { EnableDuet = n.GetBoolValue(); } },
                 { "enableStitch", n => { EnableStitch = n.GetBoolValue(); } },
-                { "privacyLevel", n => { PrivacyLevel = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequestTiktokPostDetailsPrivacyLevel>(global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequestTiktokPostDetailsPrivacyLevel.CreateFromDiscriminatorValue); } },
+                { "privacyLevel", n => { PrivacyLevel = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequestTiktokPostDetailsPrivacyLevelProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequestTiktokPostDetailsPrivacyLevelProperty.CreateFromDiscriminatorValue); } },
                 { "promoteOtherBrand", n => { PromoteOtherBrand = n.GetBoolValue(); } },
                 { "promoteYourBrand", n => { PromoteYourBrand = n.GetBoolValue(); } },
                 { "videoDisclosure", n => { VideoDisclosure = n.GetBoolValue(); } },
@@ -79,7 +79,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteBoolValue("enableComment", EnableComment);
             writer.WriteBoolValue("enableDuet", EnableDuet);
             writer.WriteBoolValue("enableStitch", EnableStitch);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequestTiktokPostDetailsPrivacyLevel>("privacyLevel", PrivacyLevel);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostCreateRequestTiktokPostDetailsPrivacyLevelProperty>("privacyLevel", PrivacyLevel);
             writer.WriteBoolValue("promoteOtherBrand", PromoteOtherBrand);
             writer.WriteBoolValue("promoteYourBrand", PromoteYourBrand);
             writer.WriteBoolValue("videoDisclosure", VideoDisclosure);

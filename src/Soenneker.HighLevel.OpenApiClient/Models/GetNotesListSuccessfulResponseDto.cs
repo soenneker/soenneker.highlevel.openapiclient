@@ -14,8 +14,6 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The hasMore property</summary>
-        public bool? HasMore { get; set; }
         /// <summary>The notes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -49,7 +47,6 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "hasMore", n => { HasMore = n.GetBoolValue(); } },
                 { "notes", n => { Notes = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.GetNoteSchema>(global::Soenneker.HighLevel.OpenApiClient.Models.GetNoteSchema.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -60,7 +57,6 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteBoolValue("hasMore", HasMore);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.GetNoteSchema>("notes", Notes);
             writer.WriteAdditionalData(AdditionalData);
         }

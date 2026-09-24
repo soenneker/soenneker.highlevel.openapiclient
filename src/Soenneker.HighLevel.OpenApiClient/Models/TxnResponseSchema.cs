@@ -45,10 +45,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Charge snapshot of transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.TxnResponseSchemaChargeSnapshotProperty? ChargeSnapshot { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.TxnResponseSchemaChargeSnapshotProperty2? ChargeSnapshot { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.TxnResponseSchemaChargeSnapshotProperty ChargeSnapshot { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.TxnResponseSchemaChargeSnapshotProperty2 ChargeSnapshot { get; set; }
 #endif
         /// <summary>Contact email corresponding to the transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -111,10 +111,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Meta content for the entity source of transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.TxnResponseSchemaEntitySourceMetaProperty? EntitySourceMeta { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.TxnResponseSchemaEntitySourceMetaProperty2? EntitySourceMeta { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.TxnResponseSchemaEntitySourceMetaProperty EntitySourceMeta { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.TxnResponseSchemaEntitySourceMetaProperty2 EntitySourceMeta { get; set; }
 #endif
         /// <summary>Entity source name for the transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -179,10 +179,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Transaction payment method details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.TxnResponseSchemaPaymentMethodProperty? PaymentMethod { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.TxnResponseSchemaPaymentMethodProperty2? PaymentMethod { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.TxnResponseSchemaPaymentMethodProperty PaymentMethod { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.TxnResponseSchemaPaymentMethodProperty2 PaymentMethod { get; set; }
 #endif
         /// <summary>Payment provider  account id for transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -203,10 +203,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The status of the transaction (e.g., succeeded).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.TxnResponseSchemaStatusProperty? Status { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.TxnResponseSchemaStatusProperty2? Status { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.TxnResponseSchemaStatusProperty Status { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.TxnResponseSchemaStatusProperty2 Status { get; set; }
 #endif
         /// <summary>Subscription id for transaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -248,7 +248,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "amount", n => { Amount = n.GetDoubleValue(); } },
                 { "amountRefunded", n => { AmountRefunded = n.GetDoubleValue(); } },
                 { "chargeId", n => { ChargeId = n.GetStringValue(); } },
-                { "chargeSnapshot", n => { ChargeSnapshot = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.TxnResponseSchemaChargeSnapshotProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.TxnResponseSchemaChargeSnapshotProperty.CreateFromDiscriminatorValue); } },
+                { "chargeSnapshot", n => { ChargeSnapshot = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.TxnResponseSchemaChargeSnapshotProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.TxnResponseSchemaChargeSnapshotProperty2.CreateFromDiscriminatorValue); } },
                 { "contactEmail", n => { ContactEmail = n.GetStringValue(); } },
                 { "contactId", n => { ContactId = n.GetStringValue(); } },
                 { "contactName", n => { ContactName = n.GetStringValue(); } },
@@ -257,7 +257,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "entityId", n => { EntityId = n.GetStringValue(); } },
                 { "entitySourceId", n => { EntitySourceId = n.GetStringValue(); } },
-                { "entitySourceMeta", n => { EntitySourceMeta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.TxnResponseSchemaEntitySourceMetaProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.TxnResponseSchemaEntitySourceMetaProperty.CreateFromDiscriminatorValue); } },
+                { "entitySourceMeta", n => { EntitySourceMeta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.TxnResponseSchemaEntitySourceMetaProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.TxnResponseSchemaEntitySourceMetaProperty2.CreateFromDiscriminatorValue); } },
                 { "entitySourceName", n => { EntitySourceName = n.GetStringValue(); } },
                 { "entitySourceSubType", n => { EntitySourceSubType = n.GetStringValue(); } },
                 { "entitySourceType", n => { EntitySourceType = n.GetStringValue(); } },
@@ -267,10 +267,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "ipAddress", n => { IpAddress = n.GetStringValue(); } },
                 { "liveMode", n => { LiveMode = n.GetBoolValue(); } },
                 { "mergedFromContactId", n => { MergedFromContactId = n.GetStringValue(); } },
-                { "paymentMethod", n => { PaymentMethod = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.TxnResponseSchemaPaymentMethodProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.TxnResponseSchemaPaymentMethodProperty.CreateFromDiscriminatorValue); } },
+                { "paymentMethod", n => { PaymentMethod = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.TxnResponseSchemaPaymentMethodProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.TxnResponseSchemaPaymentMethodProperty2.CreateFromDiscriminatorValue); } },
                 { "paymentProviderConnectedAccount", n => { PaymentProviderConnectedAccount = n.GetStringValue(); } },
                 { "paymentProviderType", n => { PaymentProviderType = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.TxnResponseSchemaStatusProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.TxnResponseSchemaStatusProperty.CreateFromDiscriminatorValue); } },
+                { "status", n => { Status = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.TxnResponseSchemaStatusProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.TxnResponseSchemaStatusProperty2.CreateFromDiscriminatorValue); } },
                 { "subscriptionId", n => { SubscriptionId = n.GetStringValue(); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
             };
@@ -287,7 +287,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteDoubleValue("amount", Amount);
             writer.WriteDoubleValue("amountRefunded", AmountRefunded);
             writer.WriteStringValue("chargeId", ChargeId);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.TxnResponseSchemaChargeSnapshotProperty>("chargeSnapshot", ChargeSnapshot);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.TxnResponseSchemaChargeSnapshotProperty2>("chargeSnapshot", ChargeSnapshot);
             writer.WriteStringValue("contactEmail", ContactEmail);
             writer.WriteStringValue("contactId", ContactId);
             writer.WriteStringValue("contactName", ContactName);
@@ -296,7 +296,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("currency", Currency);
             writer.WriteStringValue("entityId", EntityId);
             writer.WriteStringValue("entitySourceId", EntitySourceId);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.TxnResponseSchemaEntitySourceMetaProperty>("entitySourceMeta", EntitySourceMeta);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.TxnResponseSchemaEntitySourceMetaProperty2>("entitySourceMeta", EntitySourceMeta);
             writer.WriteStringValue("entitySourceName", EntitySourceName);
             writer.WriteStringValue("entitySourceSubType", EntitySourceSubType);
             writer.WriteStringValue("entitySourceType", EntitySourceType);
@@ -306,10 +306,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("ipAddress", IpAddress);
             writer.WriteBoolValue("liveMode", LiveMode);
             writer.WriteStringValue("mergedFromContactId", MergedFromContactId);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.TxnResponseSchemaPaymentMethodProperty>("paymentMethod", PaymentMethod);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.TxnResponseSchemaPaymentMethodProperty2>("paymentMethod", PaymentMethod);
             writer.WriteStringValue("paymentProviderConnectedAccount", PaymentProviderConnectedAccount);
             writer.WriteStringValue("paymentProviderType", PaymentProviderType);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.TxnResponseSchemaStatusProperty>("status", Status);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.TxnResponseSchemaStatusProperty2>("status", Status);
             writer.WriteStringValue("subscriptionId", SubscriptionId);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
             writer.WriteAdditionalData(AdditionalData);

@@ -18,10 +18,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Locale-keyed string map</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoHeadlineLocalized? Localized { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoHeadlineLocalizedProperty? Localized { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoHeadlineLocalized Localized { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoHeadlineLocalizedProperty Localized { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoHeadline"/> and sets the default values.
@@ -48,7 +48,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "localized", n => { Localized = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoHeadlineLocalized>(global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoHeadlineLocalized.CreateFromDiscriminatorValue); } },
+                { "localized", n => { Localized = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoHeadlineLocalizedProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoHeadlineLocalizedProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -58,7 +58,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoHeadlineLocalized>("localized", Localized);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoHeadlineLocalizedProperty>("localized", Localized);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -17,10 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Response attachments</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentResponseDto_attachments>? Attachments { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentResponseDtoAttachmentsItemProperty>? Attachments { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentResponseDto_attachments> Attachments { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentResponseDtoAttachmentsItemProperty> Attachments { get; set; }
 #endif
         /// <summary>Unique session identifier that maintains conversational context across multiple interactions within the same agent session. Use this ID in subsequent requests to continue the conversation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -43,10 +43,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Generated outputs</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentResponseDto_generativeOutputs>? GenerativeOutputs { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentResponseDtoGenerativeOutputsItemProperty>? GenerativeOutputs { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentResponseDto_generativeOutputs> GenerativeOutputs { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentResponseDtoGenerativeOutputsItemProperty> GenerativeOutputs { get; set; }
 #endif
         /// <summary>When end node is added in the graph, this will be true if the agent reached the end node in the graph</summary>
         public bool? GoalCompletion { get; set; }
@@ -109,11 +109,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "attachments", n => { Attachments = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentResponseDto_attachments>(global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentResponseDto_attachments.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "attachments", n => { Attachments = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentResponseDtoAttachmentsItemProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentResponseDtoAttachmentsItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "executionId", n => { ExecutionId = n.GetStringValue(); } },
                 { "executionStatus", n => { ExecutionStatus = n.GetStringValue(); } },
                 { "flowSwitch", n => { FlowSwitch = n.GetBoolValue(); } },
-                { "generativeOutputs", n => { GenerativeOutputs = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentResponseDto_generativeOutputs>(global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentResponseDto_generativeOutputs.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "generativeOutputs", n => { GenerativeOutputs = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentResponseDtoGenerativeOutputsItemProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentResponseDtoGenerativeOutputsItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "goalCompletion", n => { GoalCompletion = n.GetBoolValue(); } },
                 { "interactionId", n => { InteractionId = n.GetStringValue(); } },
                 { "nextExpectedInput", n => { NextExpectedInput = n.GetStringValue(); } },
@@ -129,11 +129,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentResponseDto_attachments>("attachments", Attachments);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentResponseDtoAttachmentsItemProperty>("attachments", Attachments);
             writer.WriteStringValue("executionId", ExecutionId);
             writer.WriteStringValue("executionStatus", ExecutionStatus);
             writer.WriteBoolValue("flowSwitch", FlowSwitch);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentResponseDto_generativeOutputs>("generativeOutputs", GenerativeOutputs);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentResponseDtoGenerativeOutputsItemProperty>("generativeOutputs", GenerativeOutputs);
             writer.WriteBoolValue("goalCompletion", GoalCompletion);
             writer.WriteStringValue("interactionId", InteractionId);
             writer.WriteStringValue("nextExpectedInput", NextExpectedInput);

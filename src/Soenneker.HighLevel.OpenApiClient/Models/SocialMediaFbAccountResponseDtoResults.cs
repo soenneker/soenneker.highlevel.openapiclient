@@ -48,10 +48,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The meta property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaFbAccountResponseDtoResultsMeta? Meta { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaFbAccountResponseDtoResultsMetaProperty? Meta { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaFbAccountResponseDtoResultsMeta Meta { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaFbAccountResponseDtoResultsMetaProperty Meta { get; set; }
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -88,18 +88,18 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The platform property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaFbAccountResponseDtoResultsPlatform? Platform { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaFbAccountResponseDtoResultsPlatformProperty? Platform { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaFbAccountResponseDtoResultsPlatform Platform { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaFbAccountResponseDtoResultsPlatformProperty Platform { get; set; }
 #endif
         /// <summary>type value must be page</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaFbAccountResponseDtoResultsType? Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaFbAccountResponseDtoResultsTypeProperty? Type { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaFbAccountResponseDtoResultsType Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaFbAccountResponseDtoResultsTypeProperty Type { get; set; }
 #endif
         /// <summary>updated date</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
@@ -134,13 +134,13 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "deleted", n => { Deleted = n.GetBoolValue(); } },
                 { "_id", n => { Id = n.GetStringValue(); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
-                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaFbAccountResponseDtoResultsMeta>(global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaFbAccountResponseDtoResultsMeta.CreateFromDiscriminatorValue); } },
+                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaFbAccountResponseDtoResultsMetaProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaFbAccountResponseDtoResultsMetaProperty.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "oAuthId", n => { OAuthId = n.GetStringValue(); } },
                 { "oldId", n => { OldId = n.GetStringValue(); } },
                 { "originId", n => { OriginId = n.GetStringValue(); } },
-                { "platform", n => { Platform = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaFbAccountResponseDtoResultsPlatform>(global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaFbAccountResponseDtoResultsPlatform.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaFbAccountResponseDtoResultsType>(global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaFbAccountResponseDtoResultsType.CreateFromDiscriminatorValue); } },
+                { "platform", n => { Platform = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaFbAccountResponseDtoResultsPlatformProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaFbAccountResponseDtoResultsPlatformProperty.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaFbAccountResponseDtoResultsTypeProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaFbAccountResponseDtoResultsTypeProperty.CreateFromDiscriminatorValue); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
             };
         }
@@ -157,13 +157,13 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteBoolValue("deleted", Deleted);
             writer.WriteStringValue("_id", Id);
             writer.WriteStringValue("locationId", LocationId);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaFbAccountResponseDtoResultsMeta>("meta", Meta);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaFbAccountResponseDtoResultsMetaProperty>("meta", Meta);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("oAuthId", OAuthId);
             writer.WriteStringValue("oldId", OldId);
             writer.WriteStringValue("originId", OriginId);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaFbAccountResponseDtoResultsPlatform>("platform", Platform);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaFbAccountResponseDtoResultsType>("type", Type);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaFbAccountResponseDtoResultsPlatformProperty>("platform", Platform);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaFbAccountResponseDtoResultsTypeProperty>("type", Type);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
             writer.WriteAdditionalData(AdditionalData);
         }

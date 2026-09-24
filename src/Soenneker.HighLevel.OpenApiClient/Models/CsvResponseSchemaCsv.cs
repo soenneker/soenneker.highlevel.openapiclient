@@ -76,10 +76,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>status must be one of the following values: pending, in_progress, completed, failed, in_review, importing, deleted</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CsvResponseSchemaCsvStatus? Status { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CsvResponseSchemaCsvStatusProperty? Status { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CsvResponseSchemaCsvStatus Status { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CsvResponseSchemaCsvStatusProperty Status { get; set; }
 #endif
         /// <summary>The traceId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -122,7 +122,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "fileName", n => { FileName = n.GetStringValue(); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
                 { "originId", n => { OriginId = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CsvResponseSchemaCsvStatus>(global::Soenneker.HighLevel.OpenApiClient.Models.CsvResponseSchemaCsvStatus.CreateFromDiscriminatorValue); } },
+                { "status", n => { Status = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CsvResponseSchemaCsvStatusProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.CsvResponseSchemaCsvStatusProperty.CreateFromDiscriminatorValue); } },
                 { "traceId", n => { TraceId = n.GetStringValue(); } },
             };
         }
@@ -141,7 +141,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("fileName", FileName);
             writer.WriteStringValue("locationId", LocationId);
             writer.WriteStringValue("originId", OriginId);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CsvResponseSchemaCsvStatus>("status", Status);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CsvResponseSchemaCsvStatusProperty>("status", Status);
             writer.WriteStringValue("traceId", TraceId);
             writer.WriteAdditionalData(AdditionalData);
         }

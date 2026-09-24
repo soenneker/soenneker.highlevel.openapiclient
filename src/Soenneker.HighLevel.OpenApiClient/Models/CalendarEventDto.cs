@@ -73,18 +73,18 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Date Added</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDtoDateAddedProperty? DateAdded { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDtoDateAddedProperty2? DateAdded { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDtoDateAddedProperty DateAdded { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDtoDateAddedProperty2 DateAdded { get; set; }
 #endif
         /// <summary>Date Updated</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDtoDateUpdatedProperty? DateUpdated { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDtoDateUpdatedProperty2? DateUpdated { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDtoDateUpdatedProperty DateUpdated { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDtoDateUpdatedProperty2 DateUpdated { get; set; }
 #endif
         /// <summary>Description</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -97,10 +97,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>End Time</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDtoEndTimeProperty? EndTime { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDtoEndTimeProperty2? EndTime { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDtoEndTimeProperty EndTime { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDtoEndTimeProperty2 EndTime { get; set; }
 #endif
         /// <summary>Group ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -155,10 +155,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Start Time</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDtoStartTimeProperty? StartTime { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDtoStartTimeProperty2? StartTime { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDtoStartTimeProperty StartTime { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDtoStartTimeProperty2 StartTime { get; set; }
 #endif
         /// <summary>Calendar Event title</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -208,10 +208,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "calendarId", n => { CalendarId = n.GetStringValue(); } },
                 { "contactId", n => { ContactId = n.GetStringValue(); } },
                 { "createdBy", n => { CreatedBy = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDtoCreatedBy>(global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDtoCreatedBy.CreateFromDiscriminatorValue); } },
-                { "dateAdded", n => { DateAdded = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDtoDateAddedProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDtoDateAddedProperty.CreateFromDiscriminatorValue); } },
-                { "dateUpdated", n => { DateUpdated = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDtoDateUpdatedProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDtoDateUpdatedProperty.CreateFromDiscriminatorValue); } },
+                { "dateAdded", n => { DateAdded = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDtoDateAddedProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDtoDateAddedProperty2.CreateFromDiscriminatorValue); } },
+                { "dateUpdated", n => { DateUpdated = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDtoDateUpdatedProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDtoDateUpdatedProperty2.CreateFromDiscriminatorValue); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "endTime", n => { EndTime = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDtoEndTimeProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDtoEndTimeProperty.CreateFromDiscriminatorValue); } },
+                { "endTime", n => { EndTime = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDtoEndTimeProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDtoEndTimeProperty2.CreateFromDiscriminatorValue); } },
                 { "groupId", n => { GroupId = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "isRecurring", n => { IsRecurring = n.GetBoolValue(); } },
@@ -219,7 +219,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "masterEventId", n => { MasterEventId = n.GetStringValue(); } },
                 { "notes", n => { Notes = n.GetStringValue(); } },
                 { "rrule", n => { Rrule = n.GetStringValue(); } },
-                { "startTime", n => { StartTime = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDtoStartTimeProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDtoStartTimeProperty.CreateFromDiscriminatorValue); } },
+                { "startTime", n => { StartTime = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDtoStartTimeProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDtoStartTimeProperty2.CreateFromDiscriminatorValue); } },
                 { "title", n => { Title = n.GetStringValue(); } },
                 { "users", n => { Users = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
@@ -238,10 +238,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("calendarId", CalendarId);
             writer.WriteStringValue("contactId", ContactId);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDtoCreatedBy>("createdBy", CreatedBy);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDtoDateAddedProperty>("dateAdded", DateAdded);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDtoDateUpdatedProperty>("dateUpdated", DateUpdated);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDtoDateAddedProperty2>("dateAdded", DateAdded);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDtoDateUpdatedProperty2>("dateUpdated", DateUpdated);
             writer.WriteStringValue("description", Description);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDtoEndTimeProperty>("endTime", EndTime);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDtoEndTimeProperty2>("endTime", EndTime);
             writer.WriteStringValue("groupId", GroupId);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("isRecurring", IsRecurring);
@@ -249,7 +249,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("masterEventId", MasterEventId);
             writer.WriteStringValue("notes", Notes);
             writer.WriteStringValue("rrule", Rrule);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDtoStartTimeProperty>("startTime", StartTime);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CalendarEventDtoStartTimeProperty2>("startTime", StartTime);
             writer.WriteStringValue("title", Title);
             writer.WriteCollectionOfPrimitiveValues<string>("users", Users);
             writer.WriteAdditionalData(AdditionalData);

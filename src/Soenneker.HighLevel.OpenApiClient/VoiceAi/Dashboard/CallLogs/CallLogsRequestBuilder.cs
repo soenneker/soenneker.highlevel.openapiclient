@@ -52,8 +52,8 @@ namespace Soenneker.HighLevel.OpenApiClient.VoiceAi.Dashboard.CallLogs
         /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CallLogsResponseDto"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasBadRequestDto">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDto">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.VoiceAiCommonSchemasBadRequestDto">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.VoiceAiCommonSchemasUnauthorizedDto">When receiving a 401 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.CallLogsResponseDto?> GetAsync(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.VoiceAi.Dashboard.CallLogs.CallLogsRequestBuilder.CallLogsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -66,8 +66,8 @@ namespace Soenneker.HighLevel.OpenApiClient.VoiceAi.Dashboard.CallLogs
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.HighLevel.OpenApiClient.Models.VoiceAiCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.HighLevel.OpenApiClient.Models.VoiceAiCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.CallLogsResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.CallLogsResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -107,7 +107,7 @@ namespace Soenneker.HighLevel.OpenApiClient.VoiceAi.Dashboard.CallLogs
         {
             /// <summary>Action type filter for call logs (comma-separated ACTION_TYPE values)</summary>
             [QueryParameter("actionType")]
-            public global::Soenneker.HighLevel.OpenApiClient.Models.VoiceAiGetCallLogsActionTypeParameter? ActionType { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.GetCallLogsActionTypeParameter? ActionType { get; set; }
             /// <summary>Agent identifier. When provided, returns logs for this agent only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -120,7 +120,7 @@ namespace Soenneker.HighLevel.OpenApiClient.VoiceAi.Dashboard.CallLogs
 #endif
             /// <summary>Call type filter.</summary>
             [QueryParameter("callType")]
-            public global::Soenneker.HighLevel.OpenApiClient.Models.VoiceAiGetCallLogsCallTypeParameter? CallType { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.GetCallLogsCallTypeParameter? CallType { get; set; }
             /// <summary>Contact IDs (comma-separated) to filter by.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -152,10 +152,10 @@ namespace Soenneker.HighLevel.OpenApiClient.VoiceAi.Dashboard.CallLogs
             public double? PageSize { get; set; }
             /// <summary>Sort direction. Applies only when sortBy is provided.</summary>
             [QueryParameter("sort")]
-            public global::Soenneker.HighLevel.OpenApiClient.Models.VoiceAiGetCallLogsSortParameter? Sort { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.GetCallLogsSortParameter? Sort { get; set; }
             /// <summary>Field to sort by. Defaults to newest if omitted.</summary>
             [QueryParameter("sortBy")]
-            public global::Soenneker.HighLevel.OpenApiClient.Models.VoiceAiGetCallLogsSortByParameter? SortBy { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.GetCallLogsSortByParameter? SortBy { get; set; }
             /// <summary>Start date filter (Unix timestamp). Must be less than endDate. Both startDate and endDate must be provided together.</summary>
             [QueryParameter("startDate")]
             public double? StartDate { get; set; }

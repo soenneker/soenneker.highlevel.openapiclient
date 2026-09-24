@@ -89,10 +89,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaTypeProperty? Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaTypeProperty2? Type { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaTypeProperty Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaTypeProperty2 Type { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchema"/> and sets the default values.
@@ -128,7 +128,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "scheduleDate", n => { ScheduleDate = n.GetStringValue(); } },
                 { "summary", n => { Summary = n.GetStringValue(); } },
                 { "tiktokPostDetails", n => { TiktokPostDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaTiktokPostDetails>(global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaTiktokPostDetails.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaTypeProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaTypeProperty.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaTypeProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaTypeProperty2.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -147,7 +147,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("scheduleDate", ScheduleDate);
             writer.WriteStringValue("summary", Summary);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaTiktokPostDetails>("tiktokPostDetails", TiktokPostDetails);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaTypeProperty>("type", Type);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaTypeProperty2>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

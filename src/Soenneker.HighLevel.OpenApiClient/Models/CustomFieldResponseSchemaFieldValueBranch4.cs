@@ -17,10 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The value property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValueBranch4ValueItem>? Value { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValueBranch4ValueItemProperty>? Value { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValueBranch4ValueItem> Value { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValueBranch4ValueItemProperty> Value { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValueBranch4"/> and sets the default values.
@@ -47,7 +47,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "value", n => { Value = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValueBranch4ValueItem>(global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValueBranch4ValueItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "value", n => { Value = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValueBranch4ValueItemProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValueBranch4ValueItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValueBranch4ValueItem>("value", Value);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValueBranch4ValueItemProperty>("value", Value);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

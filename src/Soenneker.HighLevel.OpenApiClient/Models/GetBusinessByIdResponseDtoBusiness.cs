@@ -44,10 +44,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Created By</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.BusinessDtoCreatedBy? CreatedBy { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetBusinessByIdResponseDtoBusinessCreatedBy? CreatedBy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.BusinessDtoCreatedBy CreatedBy { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetBusinessByIdResponseDtoBusinessCreatedBy CreatedBy { get; set; }
 #endif
         /// <summary>description</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -118,10 +118,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>updated By</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.BusinessDtoUpdatedBy? UpdatedBy { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetBusinessByIdResponseDtoBusinessUpdatedBy? UpdatedBy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.BusinessDtoUpdatedBy UpdatedBy { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetBusinessByIdResponseDtoBusinessUpdatedBy UpdatedBy { get; set; }
 #endif
         /// <summary>website</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -160,7 +160,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "city", n => { City = n.GetStringValue(); } },
                 { "country", n => { Country = n.GetStringValue(); } },
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
-                { "createdBy", n => { CreatedBy = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BusinessDtoCreatedBy>(global::Soenneker.HighLevel.OpenApiClient.Models.BusinessDtoCreatedBy.CreateFromDiscriminatorValue); } },
+                { "createdBy", n => { CreatedBy = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetBusinessByIdResponseDtoBusinessCreatedBy>(global::Soenneker.HighLevel.OpenApiClient.Models.GetBusinessByIdResponseDtoBusinessCreatedBy.CreateFromDiscriminatorValue); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "email", n => { Email = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
@@ -170,7 +170,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "postalCode", n => { PostalCode = n.GetStringValue(); } },
                 { "state", n => { State = n.GetStringValue(); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
-                { "updatedBy", n => { UpdatedBy = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BusinessDtoUpdatedBy>(global::Soenneker.HighLevel.OpenApiClient.Models.BusinessDtoUpdatedBy.CreateFromDiscriminatorValue); } },
+                { "updatedBy", n => { UpdatedBy = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetBusinessByIdResponseDtoBusinessUpdatedBy>(global::Soenneker.HighLevel.OpenApiClient.Models.GetBusinessByIdResponseDtoBusinessUpdatedBy.CreateFromDiscriminatorValue); } },
                 { "website", n => { Website = n.GetStringValue(); } },
             };
         }
@@ -185,7 +185,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("city", City);
             writer.WriteStringValue("country", Country);
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BusinessDtoCreatedBy>("createdBy", CreatedBy);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetBusinessByIdResponseDtoBusinessCreatedBy>("createdBy", CreatedBy);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("email", Email);
             writer.WriteStringValue("id", Id);
@@ -195,7 +195,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("postalCode", PostalCode);
             writer.WriteStringValue("state", State);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BusinessDtoUpdatedBy>("updatedBy", UpdatedBy);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetBusinessByIdResponseDtoBusinessUpdatedBy>("updatedBy", UpdatedBy);
             writer.WriteStringValue("website", Website);
             writer.WriteAdditionalData(AdditionalData);
         }

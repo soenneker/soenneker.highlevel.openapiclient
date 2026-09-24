@@ -145,10 +145,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Type of message being sent</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDtoSubTypeProperty? SubType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDtoSubTypeProperty2? SubType { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDtoSubTypeProperty SubType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDtoSubTypeProperty2 SubType { get; set; }
 #endif
         /// <summary>ID of message template</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -221,7 +221,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "replyMessageId", n => { ReplyMessageId = n.GetStringValue(); } },
                 { "scheduledTimestamp", n => { ScheduledTimestamp = n.GetDoubleValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDtoStatus>(); } },
-                { "subType", n => { SubType = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDtoSubTypeProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDtoSubTypeProperty.CreateFromDiscriminatorValue); } },
+                { "subType", n => { SubType = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDtoSubTypeProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDtoSubTypeProperty2.CreateFromDiscriminatorValue); } },
                 { "subject", n => { Subject = n.GetStringValue(); } },
                 { "templateId", n => { TemplateId = n.GetStringValue(); } },
                 { "threadId", n => { ThreadId = n.GetStringValue(); } },
@@ -256,7 +256,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteDoubleValue("scheduledTimestamp", ScheduledTimestamp);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDtoStatus>("status", Status);
             writer.WriteStringValue("subject", Subject);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDtoSubTypeProperty>("subType", SubType);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageBodyDtoSubTypeProperty2>("subType", SubType);
             writer.WriteStringValue("templateId", TemplateId);
             writer.WriteStringValue("threadId", ThreadId);
             writer.WriteStringValue("toNumber", ToNumber);

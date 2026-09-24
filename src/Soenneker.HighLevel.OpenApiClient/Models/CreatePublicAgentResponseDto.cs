@@ -17,10 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Created agent data with metadata</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentResponseDtoAgentProperty? Agent { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentResponseDtoAgentProperty2? Agent { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentResponseDtoAgentProperty Agent { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentResponseDtoAgentProperty2 Agent { get; set; }
 #endif
         /// <summary>Response message</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -35,10 +35,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Created versions array (initial staging version)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentResponseDto_versions>? Versions { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentResponseDtoVersionsItemProperty>? Versions { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentResponseDto_versions> Versions { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentResponseDtoVersionsItemProperty> Versions { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentResponseDto"/> and sets the default values.
@@ -65,10 +65,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "agent", n => { Agent = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentResponseDtoAgentProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentResponseDtoAgentProperty.CreateFromDiscriminatorValue); } },
+                { "agent", n => { Agent = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentResponseDtoAgentProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentResponseDtoAgentProperty2.CreateFromDiscriminatorValue); } },
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "success", n => { Success = n.GetBoolValue(); } },
-                { "versions", n => { Versions = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentResponseDto_versions>(global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentResponseDto_versions.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "versions", n => { Versions = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentResponseDtoVersionsItemProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentResponseDtoVersionsItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -78,10 +78,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentResponseDtoAgentProperty>("agent", Agent);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentResponseDtoAgentProperty2>("agent", Agent);
             writer.WriteStringValue("message", Message);
             writer.WriteBoolValue("success", Success);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentResponseDto_versions>("versions", Versions);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentResponseDtoVersionsItemProperty>("versions", Versions);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

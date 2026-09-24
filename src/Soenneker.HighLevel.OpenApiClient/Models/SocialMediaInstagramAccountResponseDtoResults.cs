@@ -48,10 +48,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The meta property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaInstagramAccountResponseDtoResultsMeta? Meta { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaInstagramAccountResponseDtoResultsMetaProperty? Meta { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaInstagramAccountResponseDtoResultsMeta Meta { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaInstagramAccountResponseDtoResultsMetaProperty Meta { get; set; }
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -88,18 +88,18 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The platform property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaInstagramAccountResponseDtoResultsPlatform? Platform { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaInstagramAccountResponseDtoResultsPlatformProperty? Platform { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaInstagramAccountResponseDtoResultsPlatform Platform { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaInstagramAccountResponseDtoResultsPlatformProperty Platform { get; set; }
 #endif
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaInstagramAccountResponseDtoResultsType? Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaInstagramAccountResponseDtoResultsTypeProperty? Type { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaInstagramAccountResponseDtoResultsType Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaInstagramAccountResponseDtoResultsTypeProperty Type { get; set; }
 #endif
         /// <summary>updated date</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
@@ -134,13 +134,13 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "deleted", n => { Deleted = n.GetBoolValue(); } },
                 { "_id", n => { Id = n.GetStringValue(); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
-                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaInstagramAccountResponseDtoResultsMeta>(global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaInstagramAccountResponseDtoResultsMeta.CreateFromDiscriminatorValue); } },
+                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaInstagramAccountResponseDtoResultsMetaProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaInstagramAccountResponseDtoResultsMetaProperty.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "oAuthId", n => { OAuthId = n.GetStringValue(); } },
                 { "oldId", n => { OldId = n.GetStringValue(); } },
                 { "originId", n => { OriginId = n.GetStringValue(); } },
-                { "platform", n => { Platform = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaInstagramAccountResponseDtoResultsPlatform>(global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaInstagramAccountResponseDtoResultsPlatform.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaInstagramAccountResponseDtoResultsType>(global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaInstagramAccountResponseDtoResultsType.CreateFromDiscriminatorValue); } },
+                { "platform", n => { Platform = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaInstagramAccountResponseDtoResultsPlatformProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaInstagramAccountResponseDtoResultsPlatformProperty.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaInstagramAccountResponseDtoResultsTypeProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaInstagramAccountResponseDtoResultsTypeProperty.CreateFromDiscriminatorValue); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
             };
         }
@@ -157,13 +157,13 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteBoolValue("deleted", Deleted);
             writer.WriteStringValue("_id", Id);
             writer.WriteStringValue("locationId", LocationId);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaInstagramAccountResponseDtoResultsMeta>("meta", Meta);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaInstagramAccountResponseDtoResultsMetaProperty>("meta", Meta);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("oAuthId", OAuthId);
             writer.WriteStringValue("oldId", OldId);
             writer.WriteStringValue("originId", OriginId);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaInstagramAccountResponseDtoResultsPlatform>("platform", Platform);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaInstagramAccountResponseDtoResultsType>("type", Type);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaInstagramAccountResponseDtoResultsPlatformProperty>("platform", Platform);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaInstagramAccountResponseDtoResultsTypeProperty>("type", Type);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
             writer.WriteAdditionalData(AdditionalData);
         }

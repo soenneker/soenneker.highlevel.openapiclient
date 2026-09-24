@@ -41,10 +41,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Input variables to pass to the agent. These should match the input variables defined in the agent configuration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentDtoInputVariablesProperty? InputVariables { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentDtoInputVariablesProperty2? InputVariables { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentDtoInputVariablesProperty InputVariables { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentDtoInputVariablesProperty2 InputVariables { get; set; }
 #endif
         /// <summary>Location ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -98,7 +98,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "attachments", n => { Attachments = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.PublicAttachmentSchema>(global::Soenneker.HighLevel.OpenApiClient.Models.PublicAttachmentSchema.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "contactId", n => { ContactId = n.GetStringValue(); } },
                 { "executionId", n => { ExecutionId = n.GetStringValue(); } },
-                { "inputVariables", n => { InputVariables = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentDtoInputVariablesProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentDtoInputVariablesProperty.CreateFromDiscriminatorValue); } },
+                { "inputVariables", n => { InputVariables = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentDtoInputVariablesProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentDtoInputVariablesProperty2.CreateFromDiscriminatorValue); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "versionId", n => { VersionId = n.GetStringValue(); } },
@@ -114,7 +114,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.PublicAttachmentSchema>("attachments", Attachments);
             writer.WriteStringValue("contactId", ContactId);
             writer.WriteStringValue("executionId", ExecutionId);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentDtoInputVariablesProperty>("inputVariables", InputVariables);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentDtoInputVariablesProperty2>("inputVariables", InputVariables);
             writer.WriteStringValue("locationId", LocationId);
             writer.WriteStringValue("message", Message);
             writer.WriteStringValue("versionId", VersionId);

@@ -36,10 +36,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Knowledge base metadata</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateKnowledgeBaseResponseDtoDataKbMetadata? KbMetadata { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateKnowledgeBaseResponseDtoDataKbMetadataProperty? KbMetadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateKnowledgeBaseResponseDtoDataKbMetadata KbMetadata { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateKnowledgeBaseResponseDtoDataKbMetadataProperty KbMetadata { get; set; }
 #endif
         /// <summary>Location ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -101,7 +101,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "createdAt", n => { CreatedAt = n.GetStringValue(); } },
                 { "deleted", n => { Deleted = n.GetBoolValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "kbMetadata", n => { KbMetadata = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateKnowledgeBaseResponseDtoDataKbMetadata>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateKnowledgeBaseResponseDtoDataKbMetadata.CreateFromDiscriminatorValue); } },
+                { "kbMetadata", n => { KbMetadata = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateKnowledgeBaseResponseDtoDataKbMetadataProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateKnowledgeBaseResponseDtoDataKbMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "nameLowerCase", n => { NameLowerCase = n.GetStringValue(); } },
@@ -118,7 +118,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("createdAt", CreatedAt);
             writer.WriteBoolValue("deleted", Deleted);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateKnowledgeBaseResponseDtoDataKbMetadata>("kbMetadata", KbMetadata);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateKnowledgeBaseResponseDtoDataKbMetadataProperty>("kbMetadata", KbMetadata);
             writer.WriteStringValue("locationId", LocationId);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("nameLowerCase", NameLowerCase);

@@ -17,10 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Agent metadata with all active versions</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetAgentByIdResponseDtoAgentProperty? Agent { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetAgentByIdResponseDtoAgentProperty2? Agent { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetAgentByIdResponseDtoAgentProperty Agent { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetAgentByIdResponseDtoAgentProperty2 Agent { get; set; }
 #endif
         /// <summary>Response message</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -65,7 +65,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "agent", n => { Agent = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetAgentByIdResponseDtoAgentProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.GetAgentByIdResponseDtoAgentProperty.CreateFromDiscriminatorValue); } },
+                { "agent", n => { Agent = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetAgentByIdResponseDtoAgentProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.GetAgentByIdResponseDtoAgentProperty2.CreateFromDiscriminatorValue); } },
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "success", n => { Success = n.GetBoolValue(); } },
                 { "traceId", n => { TraceId = n.GetStringValue(); } },
@@ -78,7 +78,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetAgentByIdResponseDtoAgentProperty>("agent", Agent);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetAgentByIdResponseDtoAgentProperty2>("agent", Agent);
             writer.WriteStringValue("message", Message);
             writer.WriteBoolValue("success", Success);
             writer.WriteStringValue("traceId", TraceId);

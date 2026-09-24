@@ -22,8 +22,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string AltId { get; set; }
 #endif
-        /// <summary>The altType property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
+        /// <summary>Alt Type</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsLocationAltType? AltType { get; set; }
         /// <summary>Amount to be paid against the invoice.</summary>
         public double? Amount { get; set; }
         /// <summary>Details of Card if used for payment</summary>
@@ -47,10 +47,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Meta data to be recorded with the transaction</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyMetaProperty? Meta { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyMetaProperty2? Meta { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyMetaProperty Meta { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyMetaProperty2 Meta { get; set; }
 #endif
         /// <summary>manual payment method</summary>
         public global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyMode? Mode { get; set; }
@@ -88,12 +88,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "altId", n => { AltId = n.GetStringValue(); } },
-                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType>(); } },
+                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsLocationAltType>(); } },
                 { "amount", n => { Amount = n.GetDoubleValue(); } },
                 { "card", n => { Card = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyCard>(global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyCard.CreateFromDiscriminatorValue); } },
                 { "cheque", n => { Cheque = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyCheque>(global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyCheque.CreateFromDiscriminatorValue); } },
                 { "isPartialPayment", n => { IsPartialPayment = n.GetBoolValue(); } },
-                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyMetaProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyMetaProperty.CreateFromDiscriminatorValue); } },
+                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyMetaProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyMetaProperty2.CreateFromDiscriminatorValue); } },
                 { "mode", n => { Mode = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyMode>(); } },
                 { "notes", n => { Notes = n.GetStringValue(); } },
             };
@@ -106,12 +106,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("altId", AltId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType>("altType", AltType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsLocationAltType>("altType", AltType);
             writer.WriteDoubleValue("amount", Amount);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyCard>("card", Card);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyCheque>("cheque", Cheque);
             writer.WriteBoolValue("isPartialPayment", IsPartialPayment);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyMetaProperty>("meta", Meta);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyMetaProperty2>("meta", Meta);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyMode>("mode", Mode);
             writer.WriteStringValue("notes", Notes);
             writer.WriteAdditionalData(AdditionalData);

@@ -34,10 +34,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Additional options (nullable)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CrawlingRecordDtoErrorOptions? Options { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CrawlingRecordDtoErrorOptionsProperty? Options { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CrawlingRecordDtoErrorOptions Options { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CrawlingRecordDtoErrorOptionsProperty Options { get; set; }
 #endif
         /// <summary>Error response message</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -84,7 +84,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             {
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "options", n => { Options = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CrawlingRecordDtoErrorOptions>(global::Soenneker.HighLevel.OpenApiClient.Models.CrawlingRecordDtoErrorOptions.CreateFromDiscriminatorValue); } },
+                { "options", n => { Options = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CrawlingRecordDtoErrorOptionsProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.CrawlingRecordDtoErrorOptionsProperty.CreateFromDiscriminatorValue); } },
                 { "response", n => { Response = n.GetStringValue(); } },
                 { "stack", n => { Stack = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetDoubleValue(); } },
@@ -99,7 +99,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("message", Message);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CrawlingRecordDtoErrorOptions>("options", Options);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CrawlingRecordDtoErrorOptionsProperty>("options", Options);
             writer.WriteStringValue("response", Response);
             writer.WriteStringValue("stack", Stack);
             writer.WriteDoubleValue("status", Status);

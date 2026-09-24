@@ -22,7 +22,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string AltId { get; set; }
 #endif
-        /// <summary>The altType property</summary>
+        /// <summary>Alt Type</summary>
         public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
         /// <summary>attachments for the invoice</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -183,10 +183,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The xeroDetails property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoXeroDetailsProperty? XeroDetails { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoXeroDetailsProperty2? XeroDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoXeroDetailsProperty XeroDetails { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoXeroDetailsProperty2 XeroDetails { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDto"/> and sets the default values.
@@ -236,7 +236,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "termsNotes", n => { TermsNotes = n.GetStringValue(); } },
                 { "tipsConfiguration", n => { TipsConfiguration = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoTipsConfiguration>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoTipsConfiguration.CreateFromDiscriminatorValue); } },
                 { "title", n => { Title = n.GetStringValue(); } },
-                { "xeroDetails", n => { XeroDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoXeroDetailsProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoXeroDetailsProperty.CreateFromDiscriminatorValue); } },
+                { "xeroDetails", n => { XeroDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoXeroDetailsProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoXeroDetailsProperty2.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -269,7 +269,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("termsNotes", TermsNotes);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoTipsConfiguration>("tipsConfiguration", TipsConfiguration);
             writer.WriteStringValue("title", Title);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoXeroDetailsProperty>("xeroDetails", XeroDetails);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoXeroDetailsProperty2>("xeroDetails", XeroDetails);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

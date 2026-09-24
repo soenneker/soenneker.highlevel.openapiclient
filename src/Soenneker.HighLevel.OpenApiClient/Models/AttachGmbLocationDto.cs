@@ -15,10 +15,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The account property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AttachGmbLocationDtoAccountProperty? Account { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AttachGmbLocationDtoAccountProperty2? Account { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AttachGmbLocationDtoAccountProperty Account { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AttachGmbLocationDtoAccountProperty2 Account { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -33,10 +33,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The location property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AttachGmbLocationDtoLocationProperty? Location { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AttachGmbLocationDtoLocationProperty2? Location { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AttachGmbLocationDtoLocationProperty Location { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AttachGmbLocationDtoLocationProperty2 Location { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.AttachGmbLocationDto"/> and sets the default values.
@@ -63,9 +63,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "account", n => { Account = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AttachGmbLocationDtoAccountProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.AttachGmbLocationDtoAccountProperty.CreateFromDiscriminatorValue); } },
+                { "account", n => { Account = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AttachGmbLocationDtoAccountProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.AttachGmbLocationDtoAccountProperty2.CreateFromDiscriminatorValue); } },
                 { "companyId", n => { CompanyId = n.GetStringValue(); } },
-                { "location", n => { Location = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AttachGmbLocationDtoLocationProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.AttachGmbLocationDtoLocationProperty.CreateFromDiscriminatorValue); } },
+                { "location", n => { Location = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AttachGmbLocationDtoLocationProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.AttachGmbLocationDtoLocationProperty2.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -75,9 +75,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AttachGmbLocationDtoAccountProperty>("account", Account);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AttachGmbLocationDtoAccountProperty2>("account", Account);
             writer.WriteStringValue("companyId", CompanyId);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AttachGmbLocationDtoLocationProperty>("location", Location);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AttachGmbLocationDtoLocationProperty2>("location", Location);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

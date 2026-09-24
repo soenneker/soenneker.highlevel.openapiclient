@@ -22,7 +22,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string AltId { get; set; }
 #endif
-        /// <summary>The altType property</summary>
+        /// <summary>Alt Type</summary>
         public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
         /// <summary>Total Amount Due</summary>
         public double? AmountDue { get; set; }
@@ -35,18 +35,18 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Business Details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoiceResponseDtoBusinessDetailsProperty? BusinessDetails { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoiceResponseDtoBusinessDetailsProperty2? BusinessDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoiceResponseDtoBusinessDetailsProperty BusinessDetails { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoiceResponseDtoBusinessDetailsProperty2 BusinessDetails { get; set; }
 #endif
         /// <summary>Contact Details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoiceResponseDtoContactDetailsProperty? ContactDetails { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoiceResponseDtoContactDetailsProperty2? ContactDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoiceResponseDtoContactDetailsProperty ContactDetails { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoiceResponseDtoContactDetailsProperty2 ContactDetails { get; set; }
 #endif
         /// <summary>created at</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -67,10 +67,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Discount</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoiceResponseDtoDiscountProperty? Discount { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoiceResponseDtoDiscountProperty2? Discount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoiceResponseDtoDiscountProperty Discount { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoiceResponseDtoDiscountProperty2 Discount { get; set; }
 #endif
         /// <summary>Due date in YYYY-MM-DD format</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -119,10 +119,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>split invoice into payment schedule summing up to full invoice amount</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoiceResponseDtoPaymentScheduleProperty? PaymentSchedule { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoiceResponseDtoPaymentScheduleProperty2? PaymentSchedule { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoiceResponseDtoPaymentScheduleProperty PaymentSchedule { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoiceResponseDtoPaymentScheduleProperty2 PaymentSchedule { get; set; }
 #endif
         /// <summary>Invoice Status</summary>
         public global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoiceResponseDtoStatus? Status { get; set; }
@@ -175,11 +175,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "amountPaid", n => { AmountPaid = n.GetDoubleValue(); } },
                 { "automaticTaxesCalculated", n => { AutomaticTaxesCalculated = n.GetBoolValue(); } },
                 { "automaticTaxesEnabled", n => { AutomaticTaxesEnabled = n.GetBoolValue(); } },
-                { "businessDetails", n => { BusinessDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoiceResponseDtoBusinessDetailsProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoiceResponseDtoBusinessDetailsProperty.CreateFromDiscriminatorValue); } },
-                { "contactDetails", n => { ContactDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoiceResponseDtoContactDetailsProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoiceResponseDtoContactDetailsProperty.CreateFromDiscriminatorValue); } },
+                { "businessDetails", n => { BusinessDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoiceResponseDtoBusinessDetailsProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoiceResponseDtoBusinessDetailsProperty2.CreateFromDiscriminatorValue); } },
+                { "contactDetails", n => { ContactDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoiceResponseDtoContactDetailsProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoiceResponseDtoContactDetailsProperty2.CreateFromDiscriminatorValue); } },
                 { "createdAt", n => { CreatedAt = n.GetStringValue(); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
-                { "discount", n => { Discount = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoiceResponseDtoDiscountProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoiceResponseDtoDiscountProperty.CreateFromDiscriminatorValue); } },
+                { "discount", n => { Discount = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoiceResponseDtoDiscountProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoiceResponseDtoDiscountProperty2.CreateFromDiscriminatorValue); } },
                 { "dueDate", n => { DueDate = n.GetStringValue(); } },
                 { "_id", n => { Id = n.GetStringValue(); } },
                 { "invoiceItems", n => { InvoiceItems = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -187,7 +187,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "issueDate", n => { IssueDate = n.GetStringValue(); } },
                 { "liveMode", n => { LiveMode = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "paymentSchedule", n => { PaymentSchedule = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoiceResponseDtoPaymentScheduleProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoiceResponseDtoPaymentScheduleProperty.CreateFromDiscriminatorValue); } },
+                { "paymentSchedule", n => { PaymentSchedule = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoiceResponseDtoPaymentScheduleProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoiceResponseDtoPaymentScheduleProperty2.CreateFromDiscriminatorValue); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoiceResponseDtoStatus>(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
                 { "total", n => { Total = n.GetDoubleValue(); } },
@@ -207,11 +207,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteDoubleValue("amountPaid", AmountPaid);
             writer.WriteBoolValue("automaticTaxesCalculated", AutomaticTaxesCalculated);
             writer.WriteBoolValue("automaticTaxesEnabled", AutomaticTaxesEnabled);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoiceResponseDtoBusinessDetailsProperty>("businessDetails", BusinessDetails);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoiceResponseDtoContactDetailsProperty>("contactDetails", ContactDetails);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoiceResponseDtoBusinessDetailsProperty2>("businessDetails", BusinessDetails);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoiceResponseDtoContactDetailsProperty2>("contactDetails", ContactDetails);
             writer.WriteStringValue("createdAt", CreatedAt);
             writer.WriteStringValue("currency", Currency);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoiceResponseDtoDiscountProperty>("discount", Discount);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoiceResponseDtoDiscountProperty2>("discount", Discount);
             writer.WriteStringValue("dueDate", DueDate);
             writer.WriteStringValue("_id", Id);
             writer.WriteCollectionOfPrimitiveValues<string>("invoiceItems", InvoiceItems);
@@ -219,7 +219,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("issueDate", IssueDate);
             writer.WriteBoolValue("liveMode", LiveMode);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoiceResponseDtoPaymentScheduleProperty>("paymentSchedule", PaymentSchedule);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoiceResponseDtoPaymentScheduleProperty2>("paymentSchedule", PaymentSchedule);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoiceResponseDtoStatus>("status", Status);
             writer.WriteStringValue("title", Title);
             writer.WriteDoubleValue("total", Total);

@@ -17,18 +17,18 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>First Objects Key</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoFirstObjectKeyProperty? FirstObjectKey { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoFirstObjectKeyProperty2? FirstObjectKey { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoFirstObjectKeyProperty FirstObjectKey { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoFirstObjectKeyProperty2 FirstObjectKey { get; set; }
 #endif
         /// <summary>First Objects Association Label (custom_objects.children)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoFirstObjectLabelProperty? FirstObjectLabel { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoFirstObjectLabelProperty2? FirstObjectLabel { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoFirstObjectLabelProperty FirstObjectLabel { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoFirstObjectLabelProperty2 FirstObjectLabel { get; set; }
 #endif
         /// <summary>Association&apos;s Unique key</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -49,18 +49,18 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Second Objects Key</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoSecondObjectKeyProperty? SecondObjectKey { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoSecondObjectKeyProperty2? SecondObjectKey { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoSecondObjectKeyProperty SecondObjectKey { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoSecondObjectKeyProperty2 SecondObjectKey { get; set; }
 #endif
         /// <summary>Second Object Association Label (contact)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoSecondObjectLabelProperty? SecondObjectLabel { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoSecondObjectLabelProperty2? SecondObjectLabel { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoSecondObjectLabelProperty SecondObjectLabel { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoSecondObjectLabelProperty2 SecondObjectLabel { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDto"/> and sets the default values.
@@ -87,12 +87,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "firstObjectKey", n => { FirstObjectKey = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoFirstObjectKeyProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoFirstObjectKeyProperty.CreateFromDiscriminatorValue); } },
-                { "firstObjectLabel", n => { FirstObjectLabel = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoFirstObjectLabelProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoFirstObjectLabelProperty.CreateFromDiscriminatorValue); } },
+                { "firstObjectKey", n => { FirstObjectKey = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoFirstObjectKeyProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoFirstObjectKeyProperty2.CreateFromDiscriminatorValue); } },
+                { "firstObjectLabel", n => { FirstObjectLabel = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoFirstObjectLabelProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoFirstObjectLabelProperty2.CreateFromDiscriminatorValue); } },
                 { "key", n => { Key = n.GetStringValue(); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
-                { "secondObjectKey", n => { SecondObjectKey = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoSecondObjectKeyProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoSecondObjectKeyProperty.CreateFromDiscriminatorValue); } },
-                { "secondObjectLabel", n => { SecondObjectLabel = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoSecondObjectLabelProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoSecondObjectLabelProperty.CreateFromDiscriminatorValue); } },
+                { "secondObjectKey", n => { SecondObjectKey = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoSecondObjectKeyProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoSecondObjectKeyProperty2.CreateFromDiscriminatorValue); } },
+                { "secondObjectLabel", n => { SecondObjectLabel = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoSecondObjectLabelProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoSecondObjectLabelProperty2.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -102,12 +102,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoFirstObjectKeyProperty>("firstObjectKey", FirstObjectKey);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoFirstObjectLabelProperty>("firstObjectLabel", FirstObjectLabel);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoFirstObjectKeyProperty2>("firstObjectKey", FirstObjectKey);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoFirstObjectLabelProperty2>("firstObjectLabel", FirstObjectLabel);
             writer.WriteStringValue("key", Key);
             writer.WriteStringValue("locationId", LocationId);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoSecondObjectKeyProperty>("secondObjectKey", SecondObjectKey);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoSecondObjectLabelProperty>("secondObjectLabel", SecondObjectLabel);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoSecondObjectKeyProperty2>("secondObjectKey", SecondObjectKey);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoSecondObjectLabelProperty2>("secondObjectLabel", SecondObjectLabel);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

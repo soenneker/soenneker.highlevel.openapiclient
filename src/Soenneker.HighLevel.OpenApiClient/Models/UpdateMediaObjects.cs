@@ -22,15 +22,15 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string AltId { get; set; }
 #endif
-        /// <summary>The altType property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
+        /// <summary>Type of entity that owns the folder</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Models.MediasLocationAltType? AltType { get; set; }
         /// <summary>Array of file objects to be updated</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateMediaObject>? FilesToBeUpdated { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateMediaObjectBody>? FilesToBeUpdated { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateMediaObject> FilesToBeUpdated { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateMediaObjectBody> FilesToBeUpdated { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpdateMediaObjects"/> and sets the default values.
@@ -58,8 +58,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "altId", n => { AltId = n.GetStringValue(); } },
-                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType>(); } },
-                { "filesToBeUpdated", n => { FilesToBeUpdated = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateMediaObject>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateMediaObject.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.MediasLocationAltType>(); } },
+                { "filesToBeUpdated", n => { FilesToBeUpdated = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateMediaObjectBody>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateMediaObjectBody.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -70,8 +70,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("altId", AltId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType>("altType", AltType);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateMediaObject>("filesToBeUpdated", FilesToBeUpdated);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.MediasLocationAltType>("altType", AltType);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateMediaObjectBody>("filesToBeUpdated", FilesToBeUpdated);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

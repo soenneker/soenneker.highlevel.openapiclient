@@ -83,10 +83,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The meta property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignDtoMetaProperty? Meta { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignDtoMetaProperty2? Meta { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignDtoMetaProperty Meta { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignDtoMetaProperty2 Meta { get; set; }
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -140,7 +140,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "linkedInError", n => { LinkedInError = n.GetStringValue(); } },
                 { "locale", n => { Locale = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignDtoLocale>(global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignDtoLocale.CreateFromDiscriminatorValue); } },
                 { "mediaType", n => { MediaType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignDtoMediaType>(); } },
-                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignDtoMetaProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignDtoMetaProperty.CreateFromDiscriminatorValue); } },
+                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignDtoMetaProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignDtoMetaProperty2.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "publishingStatus", n => { PublishingStatus = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignDtoPublishingStatus>(); } },
                 { "unitCost", n => { UnitCost = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignDtoUnitCost>(global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignDtoUnitCost.CreateFromDiscriminatorValue); } },
@@ -162,7 +162,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("linkedInError", LinkedInError);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignDtoLocale>("locale", Locale);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignDtoMediaType>("mediaType", MediaType);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignDtoMetaProperty>("meta", Meta);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignDtoMetaProperty2>("meta", Meta);
             writer.WriteStringValue("name", Name);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignDtoPublishingStatus>("publishingStatus", PublishingStatus);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignDtoUnitCost>("unitCost", UnitCost);

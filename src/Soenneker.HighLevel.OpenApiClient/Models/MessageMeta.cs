@@ -27,10 +27,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>meta will contain email, for message type 3 (email). messageIds is list of all email message ids under the message thread</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.MessageMetaEmailProperty? Email { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.MessageMetaEmailProperty2? Email { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.MessageMetaEmailProperty Email { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.MessageMetaEmailProperty2 Email { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.MessageMeta"/> and sets the default values.
@@ -59,7 +59,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             {
                 { "callDuration", n => { CallDuration = n.GetStringValue(); } },
                 { "callStatus", n => { CallStatus = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.MessageMetaCallStatus>(); } },
-                { "email", n => { Email = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.MessageMetaEmailProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.MessageMetaEmailProperty.CreateFromDiscriminatorValue); } },
+                { "email", n => { Email = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.MessageMetaEmailProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.MessageMetaEmailProperty2.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -71,7 +71,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("callDuration", CallDuration);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.MessageMetaCallStatus>("callStatus", CallStatus);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.MessageMetaEmailProperty>("email", Email);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.MessageMetaEmailProperty2>("email", Email);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

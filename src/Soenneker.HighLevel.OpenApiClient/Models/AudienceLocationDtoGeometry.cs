@@ -18,10 +18,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Geographic coordinates</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AudienceLocationDtoGeometryLocation? Location { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AudienceLocationDtoGeometryLocationProperty? Location { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AudienceLocationDtoGeometryLocation Location { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AudienceLocationDtoGeometryLocationProperty Location { get; set; }
 #endif
         /// <summary>Geocoding result type</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -56,7 +56,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "location", n => { Location = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AudienceLocationDtoGeometryLocation>(global::Soenneker.HighLevel.OpenApiClient.Models.AudienceLocationDtoGeometryLocation.CreateFromDiscriminatorValue); } },
+                { "location", n => { Location = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AudienceLocationDtoGeometryLocationProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.AudienceLocationDtoGeometryLocationProperty.CreateFromDiscriminatorValue); } },
                 { "location_type", n => { LocationType = n.GetStringValue(); } },
             };
         }
@@ -67,7 +67,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AudienceLocationDtoGeometryLocation>("location", Location);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AudienceLocationDtoGeometryLocationProperty>("location", Location);
             writer.WriteStringValue("location_type", LocationType);
             writer.WriteAdditionalData(AdditionalData);
         }

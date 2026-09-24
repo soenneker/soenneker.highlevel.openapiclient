@@ -121,10 +121,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The meta property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInAdDtoMetaProperty? Meta { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInAdDtoMetaProperty2? Meta { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInAdDtoMetaProperty Meta { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInAdDtoMetaProperty2 Meta { get; set; }
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -174,7 +174,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "introductoryText", n => { IntroductoryText = n.GetStringValue(); } },
                 { "linkedInError", n => { LinkedInError = n.GetStringValue(); } },
                 { "media", n => { Media = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInMediaDto>(global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInMediaDto.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInAdDtoMetaProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInAdDtoMetaProperty.CreateFromDiscriminatorValue); } },
+                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInAdDtoMetaProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInAdDtoMetaProperty2.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "publishingStatus", n => { PublishingStatus = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInAdDtoPublishingStatus>(); } },
             };
@@ -199,7 +199,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("introductoryText", IntroductoryText);
             writer.WriteStringValue("linkedInError", LinkedInError);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInMediaDto>("media", Media);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInAdDtoMetaProperty>("meta", Meta);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInAdDtoMetaProperty2>("meta", Meta);
             writer.WriteStringValue("name", Name);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInAdDtoPublishingStatus>("publishingStatus", PublishingStatus);
             writer.WriteAdditionalData(AdditionalData);
