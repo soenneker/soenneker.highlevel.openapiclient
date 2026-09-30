@@ -25,7 +25,7 @@ public sealed class HighLevelOpenApiClientTests : HostedUnitTest
     }
 
     [LocalOnly]
-    public async Task UpsertContact_WithRequiredFields_ShouldSucceed()
+    public async ValueTask UpsertContact_WithRequiredFields_ShouldSucceed()
     {
         // Arrange
         string apiKey = _config["HighLevel:ApiKey"]!;
