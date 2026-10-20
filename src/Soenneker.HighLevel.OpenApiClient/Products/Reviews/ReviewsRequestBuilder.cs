@@ -131,7 +131,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Products.Reviews
 #endif
             #pragma warning disable CS1591
             [QueryParameter("altType")]
-            public global::Soenneker.HighLevel.OpenApiClient.Models.ProductsLocationAltType? AltType { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
             #pragma warning restore CS1591
             /// <summary>The end date for filtering reviews</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

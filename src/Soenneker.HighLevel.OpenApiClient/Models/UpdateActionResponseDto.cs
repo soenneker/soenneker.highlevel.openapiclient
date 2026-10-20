@@ -12,18 +12,34 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     public partial class UpdateActionResponseDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Updated action details</summary>
+        /// <summary>Action parameters - structure varies by actionType</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateActionResponseDtoData? Data { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateActionResponseDtoActionParameters? ActionParameters { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateActionResponseDtoData Data { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateActionResponseDtoActionParameters ActionParameters { get; set; }
 #endif
-        /// <summary>Success status of the request</summary>
-        public bool? Success { get; set; }
+        /// <summary>Type of action</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateActionResponseDtoActionType? ActionType { get; set; }
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Unique identifier for the created action</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Id { get; set; }
+#nullable restore
+#else
+        public string Id { get; set; }
+#endif
+        /// <summary>Human-readable name for this action</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Name { get; set; }
+#nullable restore
+#else
+        public string Name { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpdateActionResponseDto"/> and sets the default values.
         /// </summary>
@@ -49,8 +65,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "data", n => { Data = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateActionResponseDtoData>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateActionResponseDtoData.CreateFromDiscriminatorValue); } },
-                { "success", n => { Success = n.GetBoolValue(); } },
+                { "actionParameters", n => { ActionParameters = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateActionResponseDtoActionParameters>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateActionResponseDtoActionParameters.CreateFromDiscriminatorValue); } },
+                { "actionType", n => { ActionType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateActionResponseDtoActionType>(); } },
+                { "id", n => { Id = n.GetStringValue(); } },
+                { "name", n => { Name = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -60,8 +78,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateActionResponseDtoData>("data", Data);
-            writer.WriteBoolValue("success", Success);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateActionResponseDtoActionParameters>("actionParameters", ActionParameters);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateActionResponseDtoActionType>("actionType", ActionType);
+            writer.WriteStringValue("id", Id);
+            writer.WriteStringValue("name", Name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -106,7 +106,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Invoices.Estimate.List
 #endif
             #pragma warning disable CS1591
             [QueryParameter("altType")]
-            public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesLocationAltType? AltType { get; set; }
             #pragma warning restore CS1591
             /// <summary>Contact ID for the estimate</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

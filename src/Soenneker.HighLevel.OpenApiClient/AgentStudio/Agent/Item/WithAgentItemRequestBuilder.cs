@@ -48,7 +48,7 @@ namespace Soenneker.HighLevel.OpenApiClient.AgentStudio.Agent.Item
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.AgentStudioCommonSchemasBadRequestDto">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.AgentStudioCommonSchemasUnauthorizedDto">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.AgentStudioCommonSchemasUnprocessableDto">When receiving a 422 status code</exception>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.InternalServerErrorDto">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.AgentStudioInternalServerErrorDto">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.DeletePublicAgentResponseDto?> DeleteAsync(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.AgentStudio.Agent.Item.WithAgentItemRequestBuilder.WithAgentItemRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -64,7 +64,7 @@ namespace Soenneker.HighLevel.OpenApiClient.AgentStudio.Agent.Item
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.AgentStudioCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.AgentStudioCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.AgentStudioCommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.HighLevel.OpenApiClient.Models.InternalServerErrorDto.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.HighLevel.OpenApiClient.Models.AgentStudioInternalServerErrorDto.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.DeletePublicAgentResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.DeletePublicAgentResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -77,7 +77,7 @@ namespace Soenneker.HighLevel.OpenApiClient.AgentStudio.Agent.Item
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.AgentStudioCommonSchemasBadRequestDto">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.AgentStudioCommonSchemasUnauthorizedDto">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.AgentStudioCommonSchemasUnprocessableDto">When receiving a 422 status code</exception>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.InternalServerErrorDto">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.AgentStudioInternalServerErrorDto">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.GetAgentByIdResponseDto?> GetAsync(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.AgentStudio.Agent.Item.WithAgentItemRequestBuilder.WithAgentItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -93,7 +93,7 @@ namespace Soenneker.HighLevel.OpenApiClient.AgentStudio.Agent.Item
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.AgentStudioCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.AgentStudioCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.AgentStudioCommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.HighLevel.OpenApiClient.Models.InternalServerErrorDto.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.HighLevel.OpenApiClient.Models.AgentStudioInternalServerErrorDto.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.GetAgentByIdResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.GetAgentByIdResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -107,7 +107,7 @@ namespace Soenneker.HighLevel.OpenApiClient.AgentStudio.Agent.Item
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.AgentStudioCommonSchemasBadRequestDto">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.AgentStudioCommonSchemasUnauthorizedDto">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.AgentStudioCommonSchemasUnprocessableDto">When receiving a 422 status code</exception>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.InternalServerErrorDto">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.AgentStudioInternalServerErrorDto">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentResponseDto?> PatchAsync(global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentMetadataDto body, Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.AgentStudio.Agent.Item.WithAgentItemRequestBuilder.WithAgentItemRequestBuilderPatchQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -124,7 +124,7 @@ namespace Soenneker.HighLevel.OpenApiClient.AgentStudio.Agent.Item
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.AgentStudioCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.AgentStudioCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.AgentStudioCommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.HighLevel.OpenApiClient.Models.InternalServerErrorDto.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.HighLevel.OpenApiClient.Models.AgentStudioInternalServerErrorDto.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

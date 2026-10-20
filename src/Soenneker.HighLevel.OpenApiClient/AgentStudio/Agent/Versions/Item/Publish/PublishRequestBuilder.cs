@@ -42,7 +42,7 @@ namespace Soenneker.HighLevel.OpenApiClient.AgentStudio.Agent.Versions.Item.Publ
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.AgentStudioCommonSchemasUnauthorizedDto">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.AgentStudioCommonSchemasUnprocessableDto">When receiving a 422 status code</exception>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.InternalServerErrorDto">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.AgentStudioInternalServerErrorDto">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.PromoteAndPublishResponseDto?> PostAsync(global::Soenneker.HighLevel.OpenApiClient.Models.PromoteAndPublishDto body, Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.AgentStudio.Agent.Versions.Item.Publish.PublishRequestBuilder.PublishRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -58,7 +58,7 @@ namespace Soenneker.HighLevel.OpenApiClient.AgentStudio.Agent.Versions.Item.Publ
             {
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.AgentStudioCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.AgentStudioCommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.HighLevel.OpenApiClient.Models.InternalServerErrorDto.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.HighLevel.OpenApiClient.Models.AgentStudioInternalServerErrorDto.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.PromoteAndPublishResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.PromoteAndPublishResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

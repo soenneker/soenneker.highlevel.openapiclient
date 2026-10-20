@@ -106,7 +106,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Products.Store.Item.Stats
 #endif
             #pragma warning disable CS1591
             [QueryParameter("altType")]
-            public global::Soenneker.HighLevel.OpenApiClient.Models.ProductsLocationAltType? AltType { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
             #pragma warning restore CS1591
             /// <summary>Filter by product collection Ids. Supports comma separated values</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
