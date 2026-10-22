@@ -23,7 +23,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string AltId { get; set; }
 #endif
         /// <summary>The altType property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ProductsLocationAltType? AltType { get; set; }
         /// <summary>New availability status</summary>
         public bool? Availability { get; set; }
         /// <summary>Array of collection IDs</summary>
@@ -102,7 +102,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "altId", n => { AltId = n.GetStringValue(); } },
-                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType>(); } },
+                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProductsLocationAltType>(); } },
                 { "availability", n => { Availability = n.GetBoolValue(); } },
                 { "collectionIds", n => { CollectionIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "compareAtPrice", n => { CompareAtPrice = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BulkUpdateDtoCompareAtPrice>(global::Soenneker.HighLevel.OpenApiClient.Models.BulkUpdateDtoCompareAtPrice.CreateFromDiscriminatorValue); } },
@@ -121,7 +121,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("altId", AltId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType>("altType", AltType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProductsLocationAltType>("altType", AltType);
             writer.WriteBoolValue("availability", Availability);
             writer.WriteCollectionOfPrimitiveValues<string>("collectionIds", CollectionIds);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BulkUpdateDtoCompareAtPrice>("compareAtPrice", CompareAtPrice);

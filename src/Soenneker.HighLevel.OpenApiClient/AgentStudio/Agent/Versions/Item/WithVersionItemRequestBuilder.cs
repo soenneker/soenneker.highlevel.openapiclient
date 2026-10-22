@@ -49,7 +49,7 @@ namespace Soenneker.HighLevel.OpenApiClient.AgentStudio.Agent.Versions.Item
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.AgentStudioCommonSchemasBadRequestDto">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.AgentStudioCommonSchemasUnauthorizedDto">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.AgentStudioCommonSchemasUnprocessableDto">When receiving a 422 status code</exception>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.AgentStudioInternalServerErrorDto">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.InternalServerErrorDto">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentResponseDto?> PatchAsync(global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentVersionDto body, Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.AgentStudio.Agent.Versions.Item.WithVersionItemRequestBuilder.WithVersionItemRequestBuilderPatchQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -66,7 +66,7 @@ namespace Soenneker.HighLevel.OpenApiClient.AgentStudio.Agent.Versions.Item
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.AgentStudioCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.AgentStudioCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.AgentStudioCommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.HighLevel.OpenApiClient.Models.AgentStudioInternalServerErrorDto.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.HighLevel.OpenApiClient.Models.InternalServerErrorDto.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

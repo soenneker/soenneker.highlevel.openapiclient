@@ -23,7 +23,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string AltId { get; set; }
 #endif
         /// <summary>Alt Type</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesLocationAltType? AltType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
         /// <summary>attachments for the invoice</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -69,10 +69,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The discount property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesDiscountDto? Discount { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto? Discount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesDiscountDto Discount { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto Discount { get; set; }
 #endif
         /// <summary>Estimate Number, if not specified will take in the next valid estimate number</summary>
         public double? EstimateNumber { get; set; }
@@ -221,14 +221,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "altId", n => { AltId = n.GetStringValue(); } },
-                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesLocationAltType>(); } },
+                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType>(); } },
                 { "attachments", n => { Attachments = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.AttachmentsDto>(global::Soenneker.HighLevel.OpenApiClient.Models.AttachmentsDto.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "autoInvoice", n => { AutoInvoice = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateEstimateDtoAutoInvoice>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateEstimateDtoAutoInvoice.CreateFromDiscriminatorValue); } },
                 { "automaticTaxesEnabled", n => { AutomaticTaxesEnabled = n.GetBoolValue(); } },
                 { "businessDetails", n => { BusinessDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BusinessDetailsDto>(global::Soenneker.HighLevel.OpenApiClient.Models.BusinessDetailsDto.CreateFromDiscriminatorValue); } },
                 { "contactDetails", n => { ContactDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateEstimateDtoContactDetails>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateEstimateDtoContactDetails.CreateFromDiscriminatorValue); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
-                { "discount", n => { Discount = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesDiscountDto>(global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesDiscountDto.CreateFromDiscriminatorValue); } },
+                { "discount", n => { Discount = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto>(global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto.CreateFromDiscriminatorValue); } },
                 { "estimateNumber", n => { EstimateNumber = n.GetDoubleValue(); } },
                 { "estimateNumberPrefix", n => { EstimateNumberPrefix = n.GetStringValue(); } },
                 { "estimateStatus", n => { EstimateStatus = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateEstimateDtoEstimateStatus>(); } },
@@ -256,14 +256,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("altId", AltId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesLocationAltType>("altType", AltType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType>("altType", AltType);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.AttachmentsDto>("attachments", Attachments);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateEstimateDtoAutoInvoice>("autoInvoice", AutoInvoice);
             writer.WriteBoolValue("automaticTaxesEnabled", AutomaticTaxesEnabled);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BusinessDetailsDto>("businessDetails", BusinessDetails);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateEstimateDtoContactDetails>("contactDetails", ContactDetails);
             writer.WriteStringValue("currency", Currency);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesDiscountDto>("discount", Discount);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto>("discount", Discount);
             writer.WriteDoubleValue("estimateNumber", EstimateNumber);
             writer.WriteStringValue("estimateNumberPrefix", EstimateNumberPrefix);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateEstimateDtoEstimateStatus>("estimateStatus", EstimateStatus);

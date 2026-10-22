@@ -26,7 +26,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string AltId { get; set; }
 #endif
         /// <summary>Alt Type</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesLocationAltType? AltType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
         /// <summary>estimate name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -80,7 +80,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             {
                 { "action", n => { Action = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendEstimateDtoAction>(); } },
                 { "altId", n => { AltId = n.GetStringValue(); } },
-                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesLocationAltType>(); } },
+                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType>(); } },
                 { "estimateName", n => { EstimateName = n.GetStringValue(); } },
                 { "liveMode", n => { LiveMode = n.GetBoolValue(); } },
                 { "sentFrom", n => { SentFrom = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendEstimateDtoSentFrom>(global::Soenneker.HighLevel.OpenApiClient.Models.SendEstimateDtoSentFrom.CreateFromDiscriminatorValue); } },
@@ -96,7 +96,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendEstimateDtoAction>("action", Action);
             writer.WriteStringValue("altId", AltId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesLocationAltType>("altType", AltType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType>("altType", AltType);
             writer.WriteStringValue("estimateName", EstimateName);
             writer.WriteBoolValue("liveMode", LiveMode);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendEstimateDtoSentFrom>("sentFrom", SentFrom);

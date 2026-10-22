@@ -106,7 +106,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Invoices.GenerateInvoiceNumber
 #endif
             #pragma warning disable CS1591
             [QueryParameter("altType")]
-            public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesLocationAltType? AltType { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
             #pragma warning restore CS1591
         }
     }
