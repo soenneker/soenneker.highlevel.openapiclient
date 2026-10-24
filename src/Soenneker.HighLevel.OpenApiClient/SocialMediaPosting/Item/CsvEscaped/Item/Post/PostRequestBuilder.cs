@@ -10,7 +10,7 @@ using System;
 namespace Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Item.CsvEscaped.Item.Post
 {
     /// <summary>
-    /// Builds and executes requests for operations under \social-media-posting\{locationId}\csv\{csv-id}\post
+    /// Builds and executes requests for operations under \social-media-posting\{locationId}\csv\{id}\post
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostRequestBuilder : BaseRequestBuilder
@@ -32,7 +32,7 @@ namespace Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Item.CsvEscaped.I
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PostRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/social-media-posting/{locationId}/csv/{csv%2Did}/post", pathParameters)
+        public PostRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/social-media-posting/{locationId}/csv/{id}/post", pathParameters)
         {
         }
         /// <summary>
@@ -40,7 +40,7 @@ namespace Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Item.CsvEscaped.I
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PostRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/social-media-posting/{locationId}/csv/{csv%2Did}/post", rawUrl)
+        public PostRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/social-media-posting/{locationId}/csv/{id}/post", rawUrl)
         {
         }
     }

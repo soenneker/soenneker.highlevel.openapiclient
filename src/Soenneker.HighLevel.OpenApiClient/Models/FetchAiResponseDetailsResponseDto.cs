@@ -15,10 +15,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>List of actions taken during this interaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.FetchAiResponseDetailsResponseDtoActionLogsItemProperty>? ActionLogs { get; set; }
+        public UntypedNode? ActionLogs { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.FetchAiResponseDetailsResponseDtoActionLogsItemProperty> ActionLogs { get; set; }
+        public UntypedNode ActionLogs { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -33,18 +33,18 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>FAQ chunks used in generating the response from fine-tuned data.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.FetchAiResponseDetailsResponseDtoFaqsItemProperty>? Faqs { get; set; }
+        public UntypedNode? Faqs { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.FetchAiResponseDetailsResponseDtoFaqsItemProperty> Faqs { get; set; }
+        public UntypedNode Faqs { get; set; }
 #endif
         /// <summary>Conversation history leading up to this response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.FetchAiResponseDetailsResponseDtoHistoryItemProperty>? History { get; set; }
+        public UntypedNode? History { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.FetchAiResponseDetailsResponseDtoHistoryItemProperty> History { get; set; }
+        public UntypedNode History { get; set; }
 #endif
         /// <summary>The original input message that triggered this response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -89,10 +89,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Website content chunks used in generating the response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.FetchAiResponseDetailsResponseDtoWebsiteItemProperty>? Website { get; set; }
+        public UntypedNode? Website { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.FetchAiResponseDetailsResponseDtoWebsiteItemProperty> Website { get; set; }
+        public UntypedNode Website { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.FetchAiResponseDetailsResponseDto"/> and sets the default values.
@@ -119,16 +119,16 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "actionLogs", n => { ActionLogs = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.FetchAiResponseDetailsResponseDtoActionLogsItemProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.FetchAiResponseDetailsResponseDtoActionLogsItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "actionLogs", n => { ActionLogs = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "agentId", n => { AgentId = n.GetStringValue(); } },
-                { "faqs", n => { Faqs = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.FetchAiResponseDetailsResponseDtoFaqsItemProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.FetchAiResponseDetailsResponseDtoFaqsItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "history", n => { History = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.FetchAiResponseDetailsResponseDtoHistoryItemProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.FetchAiResponseDetailsResponseDtoHistoryItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "faqs", n => { Faqs = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "history", n => { History = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "input", n => { Input = n.GetStringValue(); } },
                 { "intent", n => { Intent = n.GetStringValue(); } },
                 { "mode", n => { Mode = n.GetStringValue(); } },
                 { "prompt", n => { Prompt = n.GetStringValue(); } },
                 { "responseMessage", n => { ResponseMessage = n.GetStringValue(); } },
-                { "website", n => { Website = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.FetchAiResponseDetailsResponseDtoWebsiteItemProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.FetchAiResponseDetailsResponseDtoWebsiteItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "website", n => { Website = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -138,16 +138,16 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.FetchAiResponseDetailsResponseDtoActionLogsItemProperty>("actionLogs", ActionLogs);
+            writer.WriteObjectValue<UntypedNode>("actionLogs", ActionLogs);
             writer.WriteStringValue("agentId", AgentId);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.FetchAiResponseDetailsResponseDtoFaqsItemProperty>("faqs", Faqs);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.FetchAiResponseDetailsResponseDtoHistoryItemProperty>("history", History);
+            writer.WriteObjectValue<UntypedNode>("faqs", Faqs);
+            writer.WriteObjectValue<UntypedNode>("history", History);
             writer.WriteStringValue("input", Input);
             writer.WriteStringValue("intent", Intent);
             writer.WriteStringValue("mode", Mode);
             writer.WriteStringValue("prompt", Prompt);
             writer.WriteStringValue("responseMessage", ResponseMessage);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.FetchAiResponseDetailsResponseDtoWebsiteItemProperty>("website", Website);
+            writer.WriteObjectValue<UntypedNode>("website", Website);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

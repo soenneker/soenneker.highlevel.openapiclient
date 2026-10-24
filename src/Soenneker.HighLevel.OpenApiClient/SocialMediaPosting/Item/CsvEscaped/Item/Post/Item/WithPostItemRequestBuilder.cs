@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Item.CsvEscaped.Item.Post.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \social-media-posting\{locationId}\csv\{csv-id}\post\{postId}
+    /// Builds and executes requests for operations under \social-media-posting\{locationId}\csv\{id}\post\{postId}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithPostItemRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Item.CsvEscaped.I
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithPostItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/social-media-posting/{locationId}/csv/{csv%2Did}/post/{postId}", pathParameters)
+        public WithPostItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/social-media-posting/{locationId}/csv/{id}/post/{postId}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Item.CsvEscaped.I
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithPostItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/social-media-posting/{locationId}/csv/{csv%2Did}/post/{postId}", rawUrl)
+        public WithPostItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/social-media-posting/{locationId}/csv/{id}/post/{postId}", rawUrl)
         {
         }
         /// <summary>

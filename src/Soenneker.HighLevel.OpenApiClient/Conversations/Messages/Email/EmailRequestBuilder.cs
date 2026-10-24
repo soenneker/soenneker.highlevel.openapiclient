@@ -17,14 +17,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Email
     {
         /// <summary>Gets an item from the Soenneker.HighLevel.OpenApiClient.conversations.messages.email.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Email.Item.EmailMessageItemRequestBuilder"/></returns>
-        public global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Email.Item.EmailMessageItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Email.Item.EmailItemRequestBuilder"/></returns>
+        public global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Email.Item.EmailItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("emailMessage%2Did", position);
-                return new global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Email.Item.EmailMessageItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("id", position);
+                return new global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Email.Item.EmailItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

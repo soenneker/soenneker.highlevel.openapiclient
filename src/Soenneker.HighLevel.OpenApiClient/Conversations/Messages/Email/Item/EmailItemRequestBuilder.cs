@@ -13,10 +13,10 @@ using System;
 namespace Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Email.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \conversations\messages\email\{emailMessage-id}
+    /// Builds and executes requests for operations under \conversations\messages\email\{id}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class EmailMessageItemRequestBuilder : BaseRequestBuilder
+    public partial class EmailItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The schedule property</summary>
         public global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Email.Item.Schedule.ScheduleRequestBuilder Schedule
@@ -24,19 +24,19 @@ namespace Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Email.Item
             get => new global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Email.Item.Schedule.ScheduleRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Email.Item.EmailMessageItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Email.Item.EmailItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public EmailMessageItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/conversations/messages/email/{emailMessage%2Did}", pathParameters)
+        public EmailItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/conversations/messages/email/{id}", pathParameters)
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Email.Item.EmailMessageItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Email.Item.EmailItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public EmailMessageItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/conversations/messages/email/{emailMessage%2Did}", rawUrl)
+        public EmailItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/conversations/messages/email/{id}", rawUrl)
         {
         }
         /// <summary>
@@ -79,11 +79,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Email.Item
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Email.Item.EmailMessageItemRequestBuilder"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Email.Item.EmailItemRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Email.Item.EmailMessageItemRequestBuilder WithUrl(string rawUrl)
+        public global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Email.Item.EmailItemRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Email.Item.EmailMessageItemRequestBuilder(rawUrl, RequestAdapter);
+            return new global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Email.Item.EmailItemRequestBuilder(rawUrl, RequestAdapter);
         }
     }
 }

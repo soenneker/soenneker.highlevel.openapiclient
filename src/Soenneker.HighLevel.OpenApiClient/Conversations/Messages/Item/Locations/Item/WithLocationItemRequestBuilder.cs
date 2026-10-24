@@ -10,7 +10,7 @@ using System;
 namespace Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Item.Locations.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \conversations\messages\{-id}\locations\{locationId}
+    /// Builds and executes requests for operations under \conversations\messages\{id}\locations\{locationId}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithLocationItemRequestBuilder : BaseRequestBuilder
@@ -25,7 +25,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Item.Location
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithLocationItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/conversations/messages/{%2Did}/locations/{locationId}", pathParameters)
+        public WithLocationItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/conversations/messages/{id}/locations/{locationId}", pathParameters)
         {
         }
         /// <summary>
@@ -33,7 +33,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Item.Location
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithLocationItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/conversations/messages/{%2Did}/locations/{locationId}", rawUrl)
+        public WithLocationItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/conversations/messages/{id}/locations/{locationId}", rawUrl)
         {
         }
     }

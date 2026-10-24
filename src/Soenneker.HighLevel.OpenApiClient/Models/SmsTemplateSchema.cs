@@ -17,10 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The attachments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Attachments { get; set; }
+        public List<UntypedNode>? Attachments { get; set; }
 #nullable restore
 #else
-        public UntypedNode Attachments { get; set; }
+        public List<UntypedNode> Attachments { get; set; }
 #endif
         /// <summary>The body property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,7 +55,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "attachments", n => { Attachments = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "attachments", n => { Attachments = n.GetCollectionOfPrimitiveValues<UntypedNode>()?.AsList(); } },
                 { "body", n => { Body = n.GetStringValue(); } },
             };
         }
@@ -66,7 +66,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<UntypedNode>("attachments", Attachments);
+            writer.WriteCollectionOfPrimitiveValues<UntypedNode>("attachments", Attachments);
             writer.WriteStringValue("body", Body);
             writer.WriteAdditionalData(AdditionalData);
         }

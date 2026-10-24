@@ -35,10 +35,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Created versions array (initial staging version)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentResponseDtoVersionsItemProperty>? Versions { get; set; }
+        public UntypedNode? Versions { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentResponseDtoVersionsItemProperty> Versions { get; set; }
+        public UntypedNode Versions { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentResponseDto"/> and sets the default values.
@@ -68,7 +68,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "agent", n => { Agent = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentResponseDtoAgentProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentResponseDtoAgentProperty2.CreateFromDiscriminatorValue); } },
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "success", n => { Success = n.GetBoolValue(); } },
-                { "versions", n => { Versions = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentResponseDtoVersionsItemProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentResponseDtoVersionsItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "versions", n => { Versions = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -81,7 +81,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentResponseDtoAgentProperty2>("agent", Agent);
             writer.WriteStringValue("message", Message);
             writer.WriteBoolValue("success", Success);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentResponseDtoVersionsItemProperty>("versions", Versions);
+            writer.WriteObjectValue<UntypedNode>("versions", Versions);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

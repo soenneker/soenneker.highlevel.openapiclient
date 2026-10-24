@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Item.Attachments
 {
     /// <summary>
-    /// Builds and executes requests for operations under \conversations\messages\{-id}\attachments
+    /// Builds and executes requests for operations under \conversations\messages\{id}\attachments
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AttachmentsRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Item.Attachme
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AttachmentsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/conversations/messages/{%2Did}/attachments", pathParameters)
+        public AttachmentsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/conversations/messages/{id}/attachments", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Item.Attachme
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AttachmentsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/conversations/messages/{%2Did}/attachments", rawUrl)
+        public AttachmentsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/conversations/messages/{id}/attachments", rawUrl)
         {
         }
         /// <summary>

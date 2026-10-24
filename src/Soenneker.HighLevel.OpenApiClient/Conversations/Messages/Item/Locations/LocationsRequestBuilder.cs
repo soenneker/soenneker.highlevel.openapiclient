@@ -10,7 +10,7 @@ using System;
 namespace Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Item.Locations
 {
     /// <summary>
-    /// Builds and executes requests for operations under \conversations\messages\{-id}\locations
+    /// Builds and executes requests for operations under \conversations\messages\{id}\locations
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class LocationsRequestBuilder : BaseRequestBuilder
@@ -32,7 +32,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Item.Location
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public LocationsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/conversations/messages/{%2Did}/locations", pathParameters)
+        public LocationsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/conversations/messages/{id}/locations", pathParameters)
         {
         }
         /// <summary>
@@ -40,7 +40,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Item.Location
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public LocationsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/conversations/messages/{%2Did}/locations", rawUrl)
+        public LocationsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/conversations/messages/{id}/locations", rawUrl)
         {
         }
     }

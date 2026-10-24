@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Item.Locations.Item.Recording
 {
     /// <summary>
-    /// Builds and executes requests for operations under \conversations\messages\{-id}\locations\{locationId}\recording
+    /// Builds and executes requests for operations under \conversations\messages\{id}\locations\{locationId}\recording
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RecordingRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Item.Location
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RecordingRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/conversations/messages/{%2Did}/locations/{locationId}/recording", pathParameters)
+        public RecordingRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/conversations/messages/{id}/locations/{locationId}/recording", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Item.Location
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RecordingRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/conversations/messages/{%2Did}/locations/{locationId}/recording", rawUrl)
+        public RecordingRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/conversations/messages/{id}/locations/{locationId}/recording", rawUrl)
         {
         }
         /// <summary>

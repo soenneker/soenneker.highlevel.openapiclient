@@ -59,14 +59,14 @@ namespace Soenneker.HighLevel.OpenApiClient.AdManager.AdPublishing.Linkedin
         }
         /// <summary>Gets an item from the Soenneker.HighLevel.OpenApiClient.adManager.adPublishing.linkedin.item collection</summary>
         /// <param name="position">Account identifier</param>
-        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.AdManager.AdPublishing.Linkedin.Item.AccountItemRequestBuilder"/></returns>
-        public global::Soenneker.HighLevel.OpenApiClient.AdManager.AdPublishing.Linkedin.Item.AccountItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.AdManager.AdPublishing.Linkedin.Item.WithAccountItemRequestBuilder"/></returns>
+        public global::Soenneker.HighLevel.OpenApiClient.AdManager.AdPublishing.Linkedin.Item.WithAccountItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("account%2Did", position);
-                return new global::Soenneker.HighLevel.OpenApiClient.AdManager.AdPublishing.Linkedin.Item.AccountItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("accountId", position);
+                return new global::Soenneker.HighLevel.OpenApiClient.AdManager.AdPublishing.Linkedin.Item.WithAccountItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

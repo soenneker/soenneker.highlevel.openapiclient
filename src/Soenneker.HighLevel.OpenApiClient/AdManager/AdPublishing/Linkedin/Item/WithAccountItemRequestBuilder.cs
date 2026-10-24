@@ -12,10 +12,10 @@ using System;
 namespace Soenneker.HighLevel.OpenApiClient.AdManager.AdPublishing.Linkedin.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \ad-manager\ad-publishing\linkedin\{account-id}
+    /// Builds and executes requests for operations under \ad-manager\ad-publishing\linkedin\{accountId}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class AccountItemRequestBuilder : BaseRequestBuilder
+    public partial class WithAccountItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The form property</summary>
         public global::Soenneker.HighLevel.OpenApiClient.AdManager.AdPublishing.Linkedin.Item.Form.FormRequestBuilder Form
@@ -33,19 +33,19 @@ namespace Soenneker.HighLevel.OpenApiClient.AdManager.AdPublishing.Linkedin.Item
             get => new global::Soenneker.HighLevel.OpenApiClient.AdManager.AdPublishing.Linkedin.Item.Status.StatusRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.AdManager.AdPublishing.Linkedin.Item.AccountItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.AdManager.AdPublishing.Linkedin.Item.WithAccountItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AccountItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/ad-manager/ad-publishing/linkedin/{account%2Did}", pathParameters)
+        public WithAccountItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/ad-manager/ad-publishing/linkedin/{accountId}", pathParameters)
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.AdManager.AdPublishing.Linkedin.Item.AccountItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.AdManager.AdPublishing.Linkedin.Item.WithAccountItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AccountItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/ad-manager/ad-publishing/linkedin/{account%2Did}", rawUrl)
+        public WithAccountItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/ad-manager/ad-publishing/linkedin/{accountId}", rawUrl)
         {
         }
     }

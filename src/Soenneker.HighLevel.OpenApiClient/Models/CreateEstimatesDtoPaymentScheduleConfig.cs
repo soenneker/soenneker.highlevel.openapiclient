@@ -26,10 +26,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Payment Schedule Items</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Schedules { get; set; }
+        public List<UntypedNode>? Schedules { get; set; }
 #nullable restore
 #else
-        public UntypedNode Schedules { get; set; }
+        public List<UntypedNode> Schedules { get; set; }
 #endif
         /// <summary>Payment Schedule Type</summary>
         public global::Soenneker.HighLevel.OpenApiClient.Models.PaymentScheduleConfigDtoType? Type { get; set; }
@@ -59,7 +59,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "dateConfig", n => { DateConfig = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentScheduleConfigDtoDateConfig>(global::Soenneker.HighLevel.OpenApiClient.Models.PaymentScheduleConfigDtoDateConfig.CreateFromDiscriminatorValue); } },
-                { "schedules", n => { Schedules = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "schedules", n => { Schedules = n.GetCollectionOfPrimitiveValues<UntypedNode>()?.AsList(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentScheduleConfigDtoType>(); } },
             };
         }
@@ -71,7 +71,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentScheduleConfigDtoDateConfig>("dateConfig", DateConfig);
-            writer.WriteObjectValue<UntypedNode>("schedules", Schedules);
+            writer.WriteCollectionOfPrimitiveValues<UntypedNode>("schedules", Schedules);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentScheduleConfigDtoType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

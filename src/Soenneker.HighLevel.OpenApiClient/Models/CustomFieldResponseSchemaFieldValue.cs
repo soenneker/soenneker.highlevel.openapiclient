@@ -8,35 +8,11 @@ using System;
 namespace Soenneker.HighLevel.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValueBranch1"/>, <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValueBranch3"/>, <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValueBranch4"/>, <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValueMember1"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValueMember1"/>, <see cref="string"/>, List&lt;global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValueMember2&gt;, List&lt;string&gt;
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CustomFieldResponseSchemaFieldValue : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValueBranch1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValueBranch1? CustomFieldResponseSchemaFieldValueBranch1 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValueBranch1 CustomFieldResponseSchemaFieldValueBranch1 { get; set; }
-#endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValueBranch3"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValueBranch3? CustomFieldResponseSchemaFieldValueBranch3 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValueBranch3 CustomFieldResponseSchemaFieldValueBranch3 { get; set; }
-#endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValueBranch4"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValueBranch4? CustomFieldResponseSchemaFieldValueBranch4 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValueBranch4 CustomFieldResponseSchemaFieldValueBranch4 { get; set; }
-#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValueMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -44,6 +20,30 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValueMember1 CustomFieldResponseSchemaFieldValueMember1 { get; set; }
+#endif
+        /// <summary>Composed type representation for type List&lt;global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValueMember2&gt;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValueMember2>? CustomFieldResponseSchemaFieldValueMember2 { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValueMember2> CustomFieldResponseSchemaFieldValueMember2 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CustomFieldResponseSchemaFieldValueString { get; set; }
+#nullable restore
+#else
+        public string CustomFieldResponseSchemaFieldValueString { get; set; }
+#endif
+        /// <summary>Composed type representation for type List&lt;string&gt;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? String { get; set; }
+#nullable restore
+#else
+        public List<string> String { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -55,17 +55,17 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValue();
-            if("CustomFieldResponseSchemaFieldValueBranch1".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            if(parseNode.GetStringValue() is string customFieldResponseSchemaFieldValueStringValue)
             {
-                result.CustomFieldResponseSchemaFieldValueBranch1 = new global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValueBranch1();
+                result.CustomFieldResponseSchemaFieldValueString = customFieldResponseSchemaFieldValueStringValue;
             }
-            else if("CustomFieldResponseSchemaFieldValueBranch3".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if(parseNode.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValueMember2>(global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValueMember2.CreateFromDiscriminatorValue)?.AsList() is List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValueMember2> customFieldResponseSchemaFieldValueMember2Value)
             {
-                result.CustomFieldResponseSchemaFieldValueBranch3 = new global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValueBranch3();
+                result.CustomFieldResponseSchemaFieldValueMember2 = customFieldResponseSchemaFieldValueMember2Value;
             }
-            else if("CustomFieldResponseSchemaFieldValueBranch4".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if(parseNode.GetCollectionOfPrimitiveValues<string>()?.AsList() is List<string> stringValue)
             {
-                result.CustomFieldResponseSchemaFieldValueBranch4 = new global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValueBranch4();
+                result.String = stringValue;
             }
             return result;
         }
@@ -75,19 +75,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(CustomFieldResponseSchemaFieldValueBranch1 != null)
-            {
-                return CustomFieldResponseSchemaFieldValueBranch1.GetFieldDeserializers();
-            }
-            else if(CustomFieldResponseSchemaFieldValueBranch3 != null)
-            {
-                return CustomFieldResponseSchemaFieldValueBranch3.GetFieldDeserializers();
-            }
-            else if(CustomFieldResponseSchemaFieldValueBranch4 != null)
-            {
-                return CustomFieldResponseSchemaFieldValueBranch4.GetFieldDeserializers();
-            }
-            else if(CustomFieldResponseSchemaFieldValueMember1 != null)
+            if(CustomFieldResponseSchemaFieldValueMember1 != null)
             {
                 return CustomFieldResponseSchemaFieldValueMember1.GetFieldDeserializers();
             }
@@ -100,21 +88,21 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            if(CustomFieldResponseSchemaFieldValueBranch1 != null)
-            {
-                writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValueBranch1>(null, CustomFieldResponseSchemaFieldValueBranch1);
-            }
-            else if(CustomFieldResponseSchemaFieldValueBranch3 != null)
-            {
-                writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValueBranch3>(null, CustomFieldResponseSchemaFieldValueBranch3);
-            }
-            else if(CustomFieldResponseSchemaFieldValueBranch4 != null)
-            {
-                writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValueBranch4>(null, CustomFieldResponseSchemaFieldValueBranch4);
-            }
-            else if(CustomFieldResponseSchemaFieldValueMember1 != null)
+            if(CustomFieldResponseSchemaFieldValueMember1 != null)
             {
                 writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValueMember1>(null, CustomFieldResponseSchemaFieldValueMember1);
+            }
+            else if(CustomFieldResponseSchemaFieldValueString != null)
+            {
+                writer.WriteStringValue(null, CustomFieldResponseSchemaFieldValueString);
+            }
+            else if(CustomFieldResponseSchemaFieldValueMember2 != null)
+            {
+                writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldResponseSchemaFieldValueMember2>(null, CustomFieldResponseSchemaFieldValueMember2);
+            }
+            else if(String != null)
+            {
+                writer.WriteCollectionOfPrimitiveValues<string>(null, String);
             }
         }
     }

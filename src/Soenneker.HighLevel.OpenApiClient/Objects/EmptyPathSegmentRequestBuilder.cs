@@ -4,46 +4,40 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.HighLevel.OpenApiClient.Models;
-using Soenneker.HighLevel.OpenApiClient.Objects.Item.Records;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 using System.Threading;
 using System;
-namespace Soenneker.HighLevel.OpenApiClient.Objects.Item
+namespace Soenneker.HighLevel.OpenApiClient.Objects
 {
     /// <summary>
-    /// Builds and executes requests for operations under \objects\{key-id}
+    /// Builds and executes requests for operations under \objects\
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class KeyItemRequestBuilder : BaseRequestBuilder
+    public partial class EmptyPathSegmentRequestBuilder : BaseRequestBuilder
     {
-        /// <summary>The records property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Objects.Item.Records.RecordsRequestBuilder Records
-        {
-            get => new global::Soenneker.HighLevel.OpenApiClient.Objects.Item.Records.RecordsRequestBuilder(PathParameters, RequestAdapter);
-        }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Objects.Item.KeyItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Objects.EmptyPathSegmentRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public KeyItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/objects/{key%2Did}{?fetchProperties*}", pathParameters)
+        public EmptyPathSegmentRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/objects/", pathParameters)
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Objects.Item.KeyItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Objects.EmptyPathSegmentRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public KeyItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/objects/{key%2Did}{?fetchProperties*}", rawUrl)
+        public EmptyPathSegmentRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/objects/", rawUrl)
         {
         }
         /// <summary>
-        /// Retrieve Object Schema by key or ID. This will return the schema of the custom object, including all its fields and properties. Supported objects include contact, opportunity, business and custom objects.To understand objects and records, please have a look the documentation here : https://doc.clickup.com/8631005/d/h/87cpx-277156/93bf0c2e23177b0
+        /// Get all objects for a location. Supported Objects are contact, opportunity, business and custom objects.To understand objects and records, please have a look at the documentation here : https://doc.clickup.com/8631005/d/h/87cpx-277156/93bf0c2e23177b0
         /// To understand objects and records, please have a look the documentation. <see href="https://doc.clickup.com/8631005/d/h/87cpx-277156/93bf0c2e23177b0" />
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomObjectByIdResponseDto"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomObjectListResponseDto"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.ObjectsCommonSchemasBadRequestDto">When receiving a 400 status code</exception>
@@ -51,11 +45,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Objects.Item
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.ObjectsCommonSchemasUnprocessableDto">When receiving a 422 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.CustomObjectByIdResponseDto?> GetAsync(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Objects.Item.KeyItemRequestBuilder.KeyItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.CustomObjectListResponseDto?> GetAsync(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Objects.EmptyPathSegmentRequestBuilder.EmptyPathSegmentRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.CustomObjectByIdResponseDto> GetAsync(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Objects.Item.KeyItemRequestBuilder.KeyItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.CustomObjectListResponseDto> GetAsync(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Objects.EmptyPathSegmentRequestBuilder.EmptyPathSegmentRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -65,10 +59,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Objects.Item
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.ObjectsCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.ObjectsCommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.CustomObjectByIdResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.CustomObjectByIdResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.CustomObjectListResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.CustomObjectListResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Update Custom Object Schema  or standard object&apos;s like contact, opportunity, business searchable fields. To understand objects and records, please have a look at the documentation here : https://doc.clickup.com/8631005/d/h/87cpx-277156/93bf0c2e23177b0
+        /// Allows you to create a custom object schema. To understand objects and records, please have a look at the documentation here : https://doc.clickup.com/8631005/d/h/87cpx-277156/93bf0c2e23177b0
         /// To understand objects and records, please have a look at the documentation here  <see href="https://doc.clickup.com/8631005/d/h/87cpx-277156/93bf0c2e23177b0" />
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomObjectResponseDto"/></returns>
@@ -80,15 +74,15 @@ namespace Soenneker.HighLevel.OpenApiClient.Objects.Item
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.ObjectsCommonSchemasUnprocessableDto">When receiving a 422 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.CustomObjectResponseDto?> PutAsync(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomObjectSchemaDto body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.CustomObjectResponseDto?> PostAsync(global::Soenneker.HighLevel.OpenApiClient.Models.CreateCustomObjectSchemaDto body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.CustomObjectResponseDto> PutAsync(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomObjectSchemaDto body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.CustomObjectResponseDto> PostAsync(global::Soenneker.HighLevel.OpenApiClient.Models.CreateCustomObjectSchemaDto body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = ToPutRequestInformation(body, requestConfiguration);
+            var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.ObjectsCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
@@ -98,41 +92,41 @@ namespace Soenneker.HighLevel.OpenApiClient.Objects.Item
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.CustomObjectResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.CustomObjectResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieve Object Schema by key or ID. This will return the schema of the custom object, including all its fields and properties. Supported objects include contact, opportunity, business and custom objects.To understand objects and records, please have a look the documentation here : https://doc.clickup.com/8631005/d/h/87cpx-277156/93bf0c2e23177b0
+        /// Get all objects for a location. Supported Objects are contact, opportunity, business and custom objects.To understand objects and records, please have a look at the documentation here : https://doc.clickup.com/8631005/d/h/87cpx-277156/93bf0c2e23177b0
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Objects.Item.KeyItemRequestBuilder.KeyItemRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Objects.EmptyPathSegmentRequestBuilder.EmptyPathSegmentRequestBuilderGetQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Objects.Item.KeyItemRequestBuilder.KeyItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Objects.EmptyPathSegmentRequestBuilder.EmptyPathSegmentRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/objects/{key%2Did}?locationId={locationId}{&fetchProperties*}", PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/objects/?locationId={locationId}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
         }
         /// <summary>
-        /// Update Custom Object Schema  or standard object&apos;s like contact, opportunity, business searchable fields. To understand objects and records, please have a look at the documentation here : https://doc.clickup.com/8631005/d/h/87cpx-277156/93bf0c2e23177b0
+        /// Allows you to create a custom object schema. To understand objects and records, please have a look at the documentation here : https://doc.clickup.com/8631005/d/h/87cpx-277156/93bf0c2e23177b0
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPutRequestInformation(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomObjectSchemaDto body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HighLevel.OpenApiClient.Models.CreateCustomObjectSchemaDto body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPutRequestInformation(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomObjectSchemaDto body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HighLevel.OpenApiClient.Models.CreateCustomObjectSchemaDto body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.PUT, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
@@ -141,29 +135,19 @@ namespace Soenneker.HighLevel.OpenApiClient.Objects.Item
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Objects.Item.KeyItemRequestBuilder"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Objects.EmptyPathSegmentRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::Soenneker.HighLevel.OpenApiClient.Objects.Item.KeyItemRequestBuilder WithUrl(string rawUrl)
+        public global::Soenneker.HighLevel.OpenApiClient.Objects.EmptyPathSegmentRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::Soenneker.HighLevel.OpenApiClient.Objects.Item.KeyItemRequestBuilder(rawUrl, RequestAdapter);
+            return new global::Soenneker.HighLevel.OpenApiClient.Objects.EmptyPathSegmentRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Retrieve Object Schema by key or ID. This will return the schema of the custom object, including all its fields and properties. Supported objects include contact, opportunity, business and custom objects.To understand objects and records, please have a look the documentation here : https://doc.clickup.com/8631005/d/h/87cpx-277156/93bf0c2e23177b0
+        /// Get all objects for a location. Supported Objects are contact, opportunity, business and custom objects.To understand objects and records, please have a look at the documentation here : https://doc.clickup.com/8631005/d/h/87cpx-277156/93bf0c2e23177b0
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class KeyItemRequestBuilderGetQueryParameters 
+        public partial class EmptyPathSegmentRequestBuilderGetQueryParameters 
         {
-            /// <summary>Fetch Properties , Fetches all the standard / custom fields of the object when set to true</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            [QueryParameter("fetchProperties")]
-            public string? FetchProperties { get; set; }
-#nullable restore
-#else
-            [QueryParameter("fetchProperties")]
-            public string FetchProperties { get; set; }
-#endif
-            /// <summary>location id of the sub account</summary>
+            /// <summary>location id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("locationId")]

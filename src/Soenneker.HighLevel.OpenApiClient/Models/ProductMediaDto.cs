@@ -27,10 +27,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Mongo ObjectIds of the prices for which the media is assigned</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? PriceIds { get; set; }
+        public List<UntypedNode>? PriceIds { get; set; }
 #nullable restore
 #else
-        public UntypedNode PriceIds { get; set; }
+        public List<UntypedNode> PriceIds { get; set; }
 #endif
         /// <summary>The title of the media file.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -77,7 +77,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             {
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "isFeatured", n => { IsFeatured = n.GetBoolValue(); } },
-                { "priceIds", n => { PriceIds = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "priceIds", n => { PriceIds = n.GetCollectionOfPrimitiveValues<UntypedNode>()?.AsList(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProductMediaDtoType>(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
@@ -92,7 +92,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("isFeatured", IsFeatured);
-            writer.WriteObjectValue<UntypedNode>("priceIds", PriceIds);
+            writer.WriteCollectionOfPrimitiveValues<UntypedNode>("priceIds", PriceIds);
             writer.WriteStringValue("title", Title);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProductMediaDtoType>("type", Type);
             writer.WriteStringValue("url", Url);

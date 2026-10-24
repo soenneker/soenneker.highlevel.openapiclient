@@ -24,14 +24,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string Error { get; set; }
 #endif
         /// <summary>The primary error message.</summary>
-        public override string Message { get => MessageEscaped ?? string.Empty; }
+        public override string Message { get => MessageEscaped is null ? string.Empty : string.Join("; ", MessageEscaped); }
         /// <summary>The message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MessageEscaped { get; set; }
+        public List<string>? MessageEscaped { get; set; }
 #nullable restore
 #else
-        public string MessageEscaped { get; set; }
+        public List<string> MessageEscaped { get; set; }
 #endif
         /// <summary>The statusCode property</summary>
         public double? StatusCode { get; set; }
@@ -61,7 +61,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "error", n => { Error = n.GetStringValue(); } },
-                { "message", n => { MessageEscaped = n.GetStringValue(); } },
+                { "message", n => { MessageEscaped = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "statusCode", n => { StatusCode = n.GetDoubleValue(); } },
             };
         }
@@ -73,7 +73,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("error", Error);
-            writer.WriteStringValue("message", MessageEscaped);
+            writer.WriteCollectionOfPrimitiveValues<string>("message", MessageEscaped);
             writer.WriteDoubleValue("statusCode", StatusCode);
             writer.WriteAdditionalData(AdditionalData);
         }

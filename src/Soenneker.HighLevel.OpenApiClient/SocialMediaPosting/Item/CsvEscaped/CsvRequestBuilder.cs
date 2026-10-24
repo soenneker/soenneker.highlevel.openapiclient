@@ -26,7 +26,7 @@ namespace Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Item.CsvEscaped
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("csv%2Did", position);
+                urlTplParams.Add("id", position);
                 return new global::Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Item.CsvEscaped.Item.CsvItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }

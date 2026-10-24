@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.HighLevel.OpenApiClient.AdManager.AdPublishing.Linkedin.Item.Status
 {
     /// <summary>
-    /// Builds and executes requests for operations under \ad-manager\ad-publishing\linkedin\{account-id}\status
+    /// Builds and executes requests for operations under \ad-manager\ad-publishing\linkedin\{accountId}\status
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class StatusRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.HighLevel.OpenApiClient.AdManager.AdPublishing.Linkedin.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public StatusRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/ad-manager/ad-publishing/linkedin/{account%2Did}/status?locationId={locationId}", pathParameters)
+        public StatusRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/ad-manager/ad-publishing/linkedin/{accountId}/status?locationId={locationId}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.HighLevel.OpenApiClient.AdManager.AdPublishing.Linkedin.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public StatusRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/ad-manager/ad-publishing/linkedin/{account%2Did}/status?locationId={locationId}", rawUrl)
+        public StatusRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/ad-manager/ad-publishing/linkedin/{accountId}/status?locationId={locationId}", rawUrl)
         {
         }
         /// <summary>

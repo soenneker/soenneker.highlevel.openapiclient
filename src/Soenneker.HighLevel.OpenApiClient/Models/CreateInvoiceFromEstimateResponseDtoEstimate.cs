@@ -128,10 +128,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>An array of items</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Items { get; set; }
+        public List<UntypedNode>? Items { get; set; }
 #nullable restore
 #else
-        public UntypedNode Items { get; set; }
+        public List<UntypedNode> Items { get; set; }
 #endif
         /// <summary>Timestamp when the estimate was last visited</summary>
         public DateTimeOffset? LastVisitedAt { get; set; }
@@ -253,7 +253,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "frequencySettings", n => { FrequencySettings = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoFrequencySettings>(global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoFrequencySettings.CreateFromDiscriminatorValue); } },
                 { "_id", n => { Id = n.GetStringValue(); } },
                 { "issueDate", n => { IssueDate = n.GetDateTimeOffsetValue(); } },
-                { "items", n => { Items = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "items", n => { Items = n.GetCollectionOfPrimitiveValues<UntypedNode>()?.AsList(); } },
                 { "lastVisitedAt", n => { LastVisitedAt = n.GetDateTimeOffsetValue(); } },
                 { "liveMode", n => { LiveMode = n.GetBoolValue(); } },
                 { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceFromEstimateResponseDtoEstimateMetaProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceFromEstimateResponseDtoEstimateMetaProperty.CreateFromDiscriminatorValue); } },
@@ -296,7 +296,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoFrequencySettings>("frequencySettings", FrequencySettings);
             writer.WriteStringValue("_id", Id);
             writer.WriteDateTimeOffsetValue("issueDate", IssueDate);
-            writer.WriteObjectValue<UntypedNode>("items", Items);
+            writer.WriteCollectionOfPrimitiveValues<UntypedNode>("items", Items);
             writer.WriteDateTimeOffsetValue("lastVisitedAt", LastVisitedAt);
             writer.WriteBoolValue("liveMode", LiveMode);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceFromEstimateResponseDtoEstimateMetaProperty>("meta", Meta);

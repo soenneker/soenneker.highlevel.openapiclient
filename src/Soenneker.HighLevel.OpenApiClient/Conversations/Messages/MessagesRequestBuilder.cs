@@ -56,14 +56,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Conversations.Messages
         }
         /// <summary>Gets an item from the Soenneker.HighLevel.OpenApiClient.conversations.messages.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Item.ItemRequestBuilder"/></returns>
-        public global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Item.ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Item.MessagesItemRequestBuilder"/></returns>
+        public global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Item.MessagesItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("%2Did", position);
-                return new global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Item.ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("id", position);
+                return new global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Item.MessagesItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

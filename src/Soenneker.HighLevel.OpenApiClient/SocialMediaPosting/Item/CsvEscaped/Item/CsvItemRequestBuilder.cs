@@ -13,7 +13,7 @@ using System;
 namespace Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Item.CsvEscaped.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \social-media-posting\{locationId}\csv\{csv-id}
+    /// Builds and executes requests for operations under \social-media-posting\{locationId}\csv\{id}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CsvItemRequestBuilder : BaseRequestBuilder
@@ -28,7 +28,7 @@ namespace Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Item.CsvEscaped.I
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CsvItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/social-media-posting/{locationId}/csv/{csv%2Did}{?limit*,skip*}", pathParameters)
+        public CsvItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/social-media-posting/{locationId}/csv/{id}{?limit*,skip*}", pathParameters)
         {
         }
         /// <summary>
@@ -36,7 +36,7 @@ namespace Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Item.CsvEscaped.I
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CsvItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/social-media-posting/{locationId}/csv/{csv%2Did}{?limit*,skip*}", rawUrl)
+        public CsvItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/social-media-posting/{locationId}/csv/{id}{?limit*,skip*}", rawUrl)
         {
         }
         /// <summary>

@@ -81,10 +81,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>An array of items</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Items { get; set; }
+        public List<UntypedNode>? Items { get; set; }
 #nullable restore
 #else
-        public UntypedNode Items { get; set; }
+        public List<UntypedNode> Items { get; set; }
 #endif
         /// <summary>Indicates if it is in live mode</summary>
         public bool? LiveMode { get; set; }
@@ -162,7 +162,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "discount", n => { Discount = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplateResponseDtoDiscount>(global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplateResponseDtoDiscount.CreateFromDiscriminatorValue); } },
                 { "estimateNumberPrefix", n => { EstimateNumberPrefix = n.GetStringValue(); } },
                 { "_id", n => { Id = n.GetStringValue(); } },
-                { "items", n => { Items = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "items", n => { Items = n.GetCollectionOfPrimitiveValues<UntypedNode>()?.AsList(); } },
                 { "liveMode", n => { LiveMode = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "termsNotes", n => { TermsNotes = n.GetStringValue(); } },
@@ -191,7 +191,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplateResponseDtoDiscount>("discount", Discount);
             writer.WriteStringValue("estimateNumberPrefix", EstimateNumberPrefix);
             writer.WriteStringValue("_id", Id);
-            writer.WriteObjectValue<UntypedNode>("items", Items);
+            writer.WriteCollectionOfPrimitiveValues<UntypedNode>("items", Items);
             writer.WriteBoolValue("liveMode", LiveMode);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("termsNotes", TermsNotes);

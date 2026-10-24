@@ -69,10 +69,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>An array of items for the estimate.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Items { get; set; }
+        public List<UntypedNode>? Items { get; set; }
 #nullable restore
 #else
-        public UntypedNode Items { get; set; }
+        public List<UntypedNode> Items { get; set; }
 #endif
         /// <summary>livemode for estimate</summary>
         public bool? LiveMode { get; set; }
@@ -160,7 +160,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "discount", n => { Discount = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto>(global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto.CreateFromDiscriminatorValue); } },
                 { "estimateNumberPrefix", n => { EstimateNumberPrefix = n.GetStringValue(); } },
-                { "items", n => { Items = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "items", n => { Items = n.GetCollectionOfPrimitiveValues<UntypedNode>()?.AsList(); } },
                 { "liveMode", n => { LiveMode = n.GetBoolValue(); } },
                 { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDtoMetaProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDtoMetaProperty2.CreateFromDiscriminatorValue); } },
                 { "miscellaneousCharges", n => { MiscellaneousCharges = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDtoMiscellaneousCharges>(global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDtoMiscellaneousCharges.CreateFromDiscriminatorValue); } },
@@ -185,7 +185,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("currency", Currency);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DiscountDto>("discount", Discount);
             writer.WriteStringValue("estimateNumberPrefix", EstimateNumberPrefix);
-            writer.WriteObjectValue<UntypedNode>("items", Items);
+            writer.WriteCollectionOfPrimitiveValues<UntypedNode>("items", Items);
             writer.WriteBoolValue("liveMode", LiveMode);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDtoMetaProperty2>("meta", Meta);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDtoMiscellaneousCharges>("miscellaneousCharges", MiscellaneousCharges);

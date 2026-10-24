@@ -16,10 +16,10 @@ using System;
 namespace Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \conversations\messages\{-id}
+    /// Builds and executes requests for operations under \conversations\messages\{id}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class ItemRequestBuilder : BaseRequestBuilder
+    public partial class MessagesItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The attachments property</summary>
         public global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Item.Attachments.AttachmentsRequestBuilder Attachments
@@ -42,19 +42,19 @@ namespace Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Item
             get => new global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Item.Status.StatusRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Item.ItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Item.MessagesItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/conversations/messages/{%2Did}", pathParameters)
+        public MessagesItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/conversations/messages/{id}", pathParameters)
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Item.ItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Item.MessagesItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/conversations/messages/{%2Did}", rawUrl)
+        public MessagesItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/conversations/messages/{id}", rawUrl)
         {
         }
         /// <summary>
@@ -104,11 +104,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Item
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Item.ItemRequestBuilder"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Item.MessagesItemRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Item.ItemRequestBuilder WithUrl(string rawUrl)
+        public global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Item.MessagesItemRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Item.ItemRequestBuilder(rawUrl, RequestAdapter);
+            return new global::Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Item.MessagesItemRequestBuilder(rawUrl, RequestAdapter);
         }
     }
 }
