@@ -5,7 +5,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 {
     /// <summary>Allowed file formats for uploads. Options include: .pdf, .docx, .doc, .jpg, .jpeg, .png, .gif, .csv, .xlsx, .xls, all</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum ObjectsICustomFieldAcceptedFormats
+    public enum CustomFieldsICustomFieldAcceptedFormats
     {
         [EnumMember(Value = ".pdf")]
         #pragma warning disable CS1591

@@ -9,7 +9,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class PaymentsCustomRRuleOptionsDto : IAdditionalDataHolder, IParsable
+    public partial class InvoicesCustomRRuleOptionsDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -19,7 +19,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>-1, 1, 2, 3, ..., 27, 28</summary>
         public double? DayOfMonth { get; set; }
         /// <summary>The dayOfWeek property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsCustomRRuleOptionsDtoDayOfWeek? DayOfWeek { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCustomRRuleOptionsDtoDayOfWeek? DayOfWeek { get; set; }
         /// <summary>Execute task number of days before</summary>
         public double? DaysBefore { get; set; }
         /// <summary>End date in YYYY-MM-DD format</summary>
@@ -38,12 +38,20 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string EndTime { get; set; }
 #endif
+        /// <summary>End type like after, by, count</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? EndType { get; set; }
+#nullable restore
+#else
+        public string EndType { get; set; }
+#endif
         /// <summary>The interval property</summary>
         public double? Interval { get; set; }
         /// <summary>The intervalType property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsCustomRRuleOptionsDtoIntervalType? IntervalType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCustomRRuleOptionsDtoIntervalType? IntervalType { get; set; }
         /// <summary>The monthOfYear property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsCustomRRuleOptionsDtoMonthOfYear? MonthOfYear { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCustomRRuleOptionsDtoMonthOfYear? MonthOfYear { get; set; }
         /// <summary>-1, 1, 2, 3, 4</summary>
         public double? NumOfWeek { get; set; }
         /// <summary>Start date in YYYY-MM-DD format</summary>
@@ -62,22 +70,24 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string StartTime { get; set; }
 #endif
+        /// <summary>Start as primary user accepted date</summary>
+        public bool? UseStartAsPrimaryUserAccepted { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsCustomRRuleOptionsDto"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCustomRRuleOptionsDto"/> and sets the default values.
         /// </summary>
-        public PaymentsCustomRRuleOptionsDto()
+        public InvoicesCustomRRuleOptionsDto()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsCustomRRuleOptionsDto"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCustomRRuleOptionsDto"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsCustomRRuleOptionsDto CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCustomRRuleOptionsDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsCustomRRuleOptionsDto();
+            return new global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCustomRRuleOptionsDto();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -89,16 +99,18 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             {
                 { "count", n => { Count = n.GetDoubleValue(); } },
                 { "dayOfMonth", n => { DayOfMonth = n.GetDoubleValue(); } },
-                { "dayOfWeek", n => { DayOfWeek = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsCustomRRuleOptionsDtoDayOfWeek>(); } },
+                { "dayOfWeek", n => { DayOfWeek = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCustomRRuleOptionsDtoDayOfWeek>(); } },
                 { "daysBefore", n => { DaysBefore = n.GetDoubleValue(); } },
                 { "endDate", n => { EndDate = n.GetStringValue(); } },
                 { "endTime", n => { EndTime = n.GetStringValue(); } },
+                { "endType", n => { EndType = n.GetStringValue(); } },
                 { "interval", n => { Interval = n.GetDoubleValue(); } },
-                { "intervalType", n => { IntervalType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsCustomRRuleOptionsDtoIntervalType>(); } },
-                { "monthOfYear", n => { MonthOfYear = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsCustomRRuleOptionsDtoMonthOfYear>(); } },
+                { "intervalType", n => { IntervalType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCustomRRuleOptionsDtoIntervalType>(); } },
+                { "monthOfYear", n => { MonthOfYear = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCustomRRuleOptionsDtoMonthOfYear>(); } },
                 { "numOfWeek", n => { NumOfWeek = n.GetDoubleValue(); } },
                 { "startDate", n => { StartDate = n.GetStringValue(); } },
                 { "startTime", n => { StartTime = n.GetStringValue(); } },
+                { "useStartAsPrimaryUserAccepted", n => { UseStartAsPrimaryUserAccepted = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -110,16 +122,18 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDoubleValue("count", Count);
             writer.WriteDoubleValue("dayOfMonth", DayOfMonth);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsCustomRRuleOptionsDtoDayOfWeek>("dayOfWeek", DayOfWeek);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCustomRRuleOptionsDtoDayOfWeek>("dayOfWeek", DayOfWeek);
             writer.WriteDoubleValue("daysBefore", DaysBefore);
             writer.WriteStringValue("endDate", EndDate);
             writer.WriteStringValue("endTime", EndTime);
+            writer.WriteStringValue("endType", EndType);
             writer.WriteDoubleValue("interval", Interval);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsCustomRRuleOptionsDtoIntervalType>("intervalType", IntervalType);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsCustomRRuleOptionsDtoMonthOfYear>("monthOfYear", MonthOfYear);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCustomRRuleOptionsDtoIntervalType>("intervalType", IntervalType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCustomRRuleOptionsDtoMonthOfYear>("monthOfYear", MonthOfYear);
             writer.WriteDoubleValue("numOfWeek", NumOfWeek);
             writer.WriteStringValue("startDate", StartDate);
             writer.WriteStringValue("startTime", StartTime);
+            writer.WriteBoolValue("useStartAsPrimaryUserAccepted", UseStartAsPrimaryUserAccepted);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

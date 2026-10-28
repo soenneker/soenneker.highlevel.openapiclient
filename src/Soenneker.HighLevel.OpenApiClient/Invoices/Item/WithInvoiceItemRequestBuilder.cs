@@ -227,7 +227,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Invoices.Item
 #endif
             /// <summary>Alt Type</summary>
             [QueryParameter("altType")]
-            public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesLocationAltType? AltType { get; set; }
         }
         /// <summary>
         /// API to get invoice by invoice id
@@ -247,7 +247,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Invoices.Item
 #endif
             /// <summary>Alt Type</summary>
             [QueryParameter("altType")]
-            public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesLocationAltType? AltType { get; set; }
         }
     }
 }
