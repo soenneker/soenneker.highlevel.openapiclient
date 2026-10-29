@@ -5,16 +5,16 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public enum ProductsListInvoicesSortOrderParameter
+    public enum InvoicesListInvoicesSortOrderParameter
     #pragma warning restore CS1591
     {
-        [EnumMember(Value = "asc")]
+        [EnumMember(Value = "ascend")]
         #pragma warning disable CS1591
-        Asc,
+        Ascend,
         #pragma warning restore CS1591
-        [EnumMember(Value = "desc")]
+        [EnumMember(Value = "descend")]
         #pragma warning disable CS1591
-        Desc,
+        Descend,
         #pragma warning restore CS1591
     }
 }

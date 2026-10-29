@@ -138,7 +138,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Medias.Item
 #endif
             /// <summary>AltType</summary>
             [QueryParameter("altType")]
-            public global::Soenneker.HighLevel.OpenApiClient.Models.MediasLocationAltType? AltType { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
         }
     }
 }

@@ -41,7 +41,7 @@ namespace Soenneker.HighLevel.OpenApiClient.ConversationAi.Generations
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.ConversationAiCommonSchemasBadRequestDto">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.ConversationAiCommonSchemasUnauthorizedDto">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.ConversationAiCommonSchemasUnprocessableDto">When receiving a 422 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnprocessableDto">When receiving a 422 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.FetchAiResponseDetailsResponseDto?> GetAsync(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.ConversationAi.Generations.GenerationsRequestBuilder.GenerationsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -56,7 +56,7 @@ namespace Soenneker.HighLevel.OpenApiClient.ConversationAi.Generations
             {
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.ConversationAiCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.ConversationAiCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
-                { "422", global::Soenneker.HighLevel.OpenApiClient.Models.ConversationAiCommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
+                { "422", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.FetchAiResponseDetailsResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.FetchAiResponseDetailsResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

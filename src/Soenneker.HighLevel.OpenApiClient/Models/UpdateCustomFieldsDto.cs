@@ -45,10 +45,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Options for the field. Important: Providing options will completely replace the existing options array. You must include all existing options alongside any new options you wish to add. Removal of options is not supported through this update. Applicable only for SINGLE_OPTIONS, MULTIPLE_OPTIONS, RADIO, CHECKBOX, TEXTBOX_LIST types.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsOptionDto>? Options { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.OptionDto>? Options { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsOptionDto> Options { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.OptionDto> Options { get; set; }
 #endif
         /// <summary>Placeholder text for the field</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -90,7 +90,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
                 { "maxFileLimit", n => { MaxFileLimit = n.GetDoubleValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsOptionDto>(global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsOptionDto.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.OptionDto>(global::Soenneker.HighLevel.OpenApiClient.Models.OptionDto.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "placeholder", n => { Placeholder = n.GetStringValue(); } },
                 { "showInForms", n => { ShowInForms = n.GetBoolValue(); } },
             };
@@ -107,7 +107,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("locationId", LocationId);
             writer.WriteDoubleValue("maxFileLimit", MaxFileLimit);
             writer.WriteStringValue("name", Name);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsOptionDto>("options", Options);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.OptionDto>("options", Options);
             writer.WriteStringValue("placeholder", Placeholder);
             writer.WriteBoolValue("showInForms", ShowInForms);
             writer.WriteAdditionalData(AdditionalData);

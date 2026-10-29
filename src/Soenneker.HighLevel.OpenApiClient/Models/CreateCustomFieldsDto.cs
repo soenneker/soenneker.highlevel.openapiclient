@@ -65,10 +65,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Options for the field (Optional, valid only for SINGLE_OPTIONS, MULTIPLE_OPTIONS, RADIO, CHECKBOX, TEXTBOX_LIST type)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsOptionDto>? Options { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.OptionDto>? Options { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsOptionDto> Options { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.OptionDto> Options { get; set; }
 #endif
         /// <summary>ID of the parent folder</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -122,7 +122,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "maxFileLimit", n => { MaxFileLimit = n.GetDoubleValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "objectKey", n => { ObjectKey = n.GetStringValue(); } },
-                { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsOptionDto>(global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsOptionDto.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.OptionDto>(global::Soenneker.HighLevel.OpenApiClient.Models.OptionDto.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "parentId", n => { ParentId = n.GetStringValue(); } },
                 { "placeholder", n => { Placeholder = n.GetStringValue(); } },
                 { "showInForms", n => { ShowInForms = n.GetBoolValue(); } },
@@ -144,7 +144,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteDoubleValue("maxFileLimit", MaxFileLimit);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("objectKey", ObjectKey);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsOptionDto>("options", Options);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.OptionDto>("options", Options);
             writer.WriteStringValue("parentId", ParentId);
             writer.WriteStringValue("placeholder", Placeholder);
             writer.WriteBoolValue("showInForms", ShowInForms);

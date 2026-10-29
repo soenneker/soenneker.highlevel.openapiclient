@@ -216,7 +216,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Invoices
             public global::Soenneker.HighLevel.OpenApiClient.Models.IssueDateSortField? SortField { get; set; }
             /// <summary>The order of sort which should be applied for the sortField</summary>
             [QueryParameter("sortOrder")]
-            public global::Soenneker.HighLevel.OpenApiClient.Models.ListInvoicesSortOrderParameter? SortOrder { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesListInvoicesSortOrderParameter? SortOrder { get; set; }
             /// <summary>startAt in YYYY-MM-DD format</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

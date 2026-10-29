@@ -8,13 +8,13 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     public enum ListInvoicesSortOrderParameter
     #pragma warning restore CS1591
     {
-        [EnumMember(Value = "ascend")]
+        [EnumMember(Value = "asc")]
         #pragma warning disable CS1591
-        Ascend,
+        Asc,
         #pragma warning restore CS1591
-        [EnumMember(Value = "descend")]
+        [EnumMember(Value = "desc")]
         #pragma warning disable CS1591
-        Descend,
+        Desc,
         #pragma warning restore CS1591
     }
 }

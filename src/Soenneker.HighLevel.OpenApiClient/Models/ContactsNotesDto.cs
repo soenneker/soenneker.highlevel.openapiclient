@@ -9,7 +9,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class CalendarsGetNoteSchema : IAdditionalDataHolder, IParsable
+    public partial class ContactsNotesDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -22,37 +22,23 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 #else
         public string Body { get; set; }
 #endif
-        /// <summary>The contactId property</summary>
+        /// <summary>The color property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ContactId { get; set; }
+        public string? Color { get; set; }
 #nullable restore
 #else
-        public string ContactId { get; set; }
+        public string Color { get; set; }
 #endif
-        /// <summary>The createdBy property</summary>
+        /// <summary>The pinned property</summary>
+        public bool? Pinned { get; set; }
+        /// <summary>The title property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.NoteCreatedBySchema? CreatedBy { get; set; }
+        public string? Title { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.NoteCreatedBySchema CreatedBy { get; set; }
-#endif
-        /// <summary>The dateAdded property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? DateAdded { get; set; }
-#nullable restore
-#else
-        public string DateAdded { get; set; }
-#endif
-        /// <summary>The id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Id { get; set; }
-#nullable restore
-#else
-        public string Id { get; set; }
+        public string Title { get; set; }
 #endif
         /// <summary>The userId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -63,21 +49,21 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string UserId { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CalendarsGetNoteSchema"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.ContactsNotesDto"/> and sets the default values.
         /// </summary>
-        public CalendarsGetNoteSchema()
+        public ContactsNotesDto()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CalendarsGetNoteSchema"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.ContactsNotesDto"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.HighLevel.OpenApiClient.Models.CalendarsGetNoteSchema CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.HighLevel.OpenApiClient.Models.ContactsNotesDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.CalendarsGetNoteSchema();
+            return new global::Soenneker.HighLevel.OpenApiClient.Models.ContactsNotesDto();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,10 +74,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "body", n => { Body = n.GetStringValue(); } },
-                { "contactId", n => { ContactId = n.GetStringValue(); } },
-                { "createdBy", n => { CreatedBy = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.NoteCreatedBySchema>(global::Soenneker.HighLevel.OpenApiClient.Models.NoteCreatedBySchema.CreateFromDiscriminatorValue); } },
-                { "dateAdded", n => { DateAdded = n.GetStringValue(); } },
-                { "id", n => { Id = n.GetStringValue(); } },
+                { "color", n => { Color = n.GetStringValue(); } },
+                { "pinned", n => { Pinned = n.GetBoolValue(); } },
+                { "title", n => { Title = n.GetStringValue(); } },
                 { "userId", n => { UserId = n.GetStringValue(); } },
             };
         }
@@ -103,10 +88,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("body", Body);
-            writer.WriteStringValue("contactId", ContactId);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.NoteCreatedBySchema>("createdBy", CreatedBy);
-            writer.WriteStringValue("dateAdded", DateAdded);
-            writer.WriteStringValue("id", Id);
+            writer.WriteStringValue("color", Color);
+            writer.WriteBoolValue("pinned", Pinned);
+            writer.WriteStringValue("title", Title);
             writer.WriteStringValue("userId", UserId);
             writer.WriteAdditionalData(AdditionalData);
         }

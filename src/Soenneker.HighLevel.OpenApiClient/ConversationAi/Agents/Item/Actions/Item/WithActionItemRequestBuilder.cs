@@ -41,7 +41,7 @@ namespace Soenneker.HighLevel.OpenApiClient.ConversationAi.Agents.Item.Actions.I
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.ConversationAiCommonSchemasBadRequestDto">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.ConversationAiCommonSchemasUnauthorizedDto">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.ConversationAiCommonSchemasUnprocessableDto">When receiving a 422 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnprocessableDto">When receiving a 422 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteActionResponseDto?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -56,7 +56,7 @@ namespace Soenneker.HighLevel.OpenApiClient.ConversationAi.Agents.Item.Actions.I
             {
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.ConversationAiCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.ConversationAiCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
-                { "422", global::Soenneker.HighLevel.OpenApiClient.Models.ConversationAiCommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
+                { "422", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteActionResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.DeleteActionResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -68,7 +68,7 @@ namespace Soenneker.HighLevel.OpenApiClient.ConversationAi.Agents.Item.Actions.I
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.ConversationAiCommonSchemasBadRequestDto">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.ConversationAiCommonSchemasUnauthorizedDto">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.ConversationAiCommonSchemasUnprocessableDto">When receiving a 422 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnprocessableDto">When receiving a 422 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.FetchActionDetailsResponseDto?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -83,7 +83,7 @@ namespace Soenneker.HighLevel.OpenApiClient.ConversationAi.Agents.Item.Actions.I
             {
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.ConversationAiCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.ConversationAiCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
-                { "422", global::Soenneker.HighLevel.OpenApiClient.Models.ConversationAiCommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
+                { "422", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.FetchActionDetailsResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.FetchActionDetailsResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -96,7 +96,7 @@ namespace Soenneker.HighLevel.OpenApiClient.ConversationAi.Agents.Item.Actions.I
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.ConversationAiCommonSchemasBadRequestDto">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.ConversationAiCommonSchemasUnauthorizedDto">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.ConversationAiCommonSchemasUnprocessableDto">When receiving a 422 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnprocessableDto">When receiving a 422 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateActionResponseDto?> PutAsync(global::Soenneker.HighLevel.OpenApiClient.Models.CreateActionDto body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -112,7 +112,7 @@ namespace Soenneker.HighLevel.OpenApiClient.ConversationAi.Agents.Item.Actions.I
             {
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.ConversationAiCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.ConversationAiCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
-                { "422", global::Soenneker.HighLevel.OpenApiClient.Models.ConversationAiCommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
+                { "422", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateActionResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.UpdateActionResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

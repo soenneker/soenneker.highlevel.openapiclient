@@ -23,7 +23,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string AltId { get; set; }
 #endif
         /// <summary>Alt Type</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsLocationAltType? AltType { get; set; }
         /// <summary>Subscription value.</summary>
         public double? Amount { get; set; }
         /// <summary>Contact email corresponding to the subscription.</summary>
@@ -202,7 +202,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "altId", n => { AltId = n.GetStringValue(); } },
-                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType>(); } },
+                { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsLocationAltType>(); } },
                 { "amount", n => { Amount = n.GetDoubleValue(); } },
                 { "contactEmail", n => { ContactEmail = n.GetStringValue(); } },
                 { "contactId", n => { ContactId = n.GetStringValue(); } },
@@ -235,7 +235,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("altId", AltId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType>("altType", AltType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsLocationAltType>("altType", AltType);
             writer.WriteDoubleValue("amount", Amount);
             writer.WriteStringValue("contactEmail", ContactEmail);
             writer.WriteStringValue("contactId", ContactId);
