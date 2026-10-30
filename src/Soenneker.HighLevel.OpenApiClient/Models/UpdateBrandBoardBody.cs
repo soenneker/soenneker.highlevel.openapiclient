@@ -11,50 +11,74 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class UpdateBrandBoardBody : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("colors") is { } nullNodeColors && nullNodeColors.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Colors = null;
+            if (parseNode.GetChildNode("default") is { } nullNodeDefault && nullNodeDefault.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Default = null;
+            if (parseNode.GetChildNode("fonts") is { } nullNodeFonts && nullNodeFonts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fonts = null;
+            if (parseNode.GetChildNode("logos") is { } nullNodeLogos && nullNodeLogos.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Logos = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("parentId") is { } nullNodeParentId && nullNodeParentId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParentId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Array of colors for the brand board</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.Color>? Colors { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.Color>? Colors { get => _explicitNullValueColors; set { _explicitNullValueColors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("colors"); else _explicitNullProperties?.Remove("colors"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.Color>? _explicitNullValueColors = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.Color> Colors { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.Color> Colors { get => _explicitNullValueColors; set { _explicitNullValueColors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("colors"); else _explicitNullProperties?.Remove("colors"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.Color> _explicitNullValueColors = default!;
 #endif
         /// <summary>Set as the default brand board for this location</summary>
-        public bool? Default { get; set; }
+        public bool? Default { get => _explicitNullValueDefault; set { _explicitNullValueDefault = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default"); else _explicitNullProperties?.Remove("default"); } }
+        private bool? _explicitNullValueDefault = default!;
         /// <summary>Array of fonts for the brand board</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.Font>? Fonts { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.Font>? Fonts { get => _explicitNullValueFonts; set { _explicitNullValueFonts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fonts"); else _explicitNullProperties?.Remove("fonts"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.Font>? _explicitNullValueFonts = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.Font> Fonts { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.Font> Fonts { get => _explicitNullValueFonts; set { _explicitNullValueFonts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fonts"); else _explicitNullProperties?.Remove("fonts"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.Font> _explicitNullValueFonts = default!;
 #endif
         /// <summary>Array of logos for the brand board</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.Logo>? Logos { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.Logo>? Logos { get => _explicitNullValueLogos; set { _explicitNullValueLogos = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("logos"); else _explicitNullProperties?.Remove("logos"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.Logo>? _explicitNullValueLogos = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.Logo> Logos { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.Logo> Logos { get => _explicitNullValueLogos; set { _explicitNullValueLogos = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("logos"); else _explicitNullProperties?.Remove("logos"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.Logo> _explicitNullValueLogos = default!;
 #endif
         /// <summary>Name of the brand board</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>Parent folder ID in media library (reserved for future use)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ParentId { get; set; }
+        public string? ParentId { get => _explicitNullValueParentId; set { _explicitNullValueParentId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parentId"); else _explicitNullProperties?.Remove("parentId"); } }
+        private string? _explicitNullValueParentId = default!;
 #nullable restore
 #else
-        public string ParentId { get; set; }
+        public string ParentId { get => _explicitNullValueParentId; set { _explicitNullValueParentId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parentId"); else _explicitNullProperties?.Remove("parentId"); } }
+        private string _explicitNullValueParentId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpdateBrandBoardBody"/> and sets the default values.
@@ -71,7 +95,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.UpdateBrandBoardBody CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.UpdateBrandBoardBody();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.UpdateBrandBoardBody(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -102,6 +126,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.Logo>("logos", Logos);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("parentId", ParentId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

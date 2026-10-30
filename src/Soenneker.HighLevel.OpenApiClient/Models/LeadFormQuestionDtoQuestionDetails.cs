@@ -12,24 +12,37 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class LeadFormQuestionDtoQuestionDetails : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("multipleChoiceQuestionDetails") is { } nullNodeMultipleChoiceQuestionDetails && nullNodeMultipleChoiceQuestionDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MultipleChoiceQuestionDetails = null;
+            if (parseNode.GetChildNode("textQuestionDetails") is { } nullNodeTextQuestionDetails && nullNodeTextQuestionDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextQuestionDetails = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Multiple choice question details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.QuestionDetailsDtoMultipleChoiceQuestionDetails? MultipleChoiceQuestionDetails { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.QuestionDetailsDtoMultipleChoiceQuestionDetails? MultipleChoiceQuestionDetails { get => _explicitNullValueMultipleChoiceQuestionDetails; set { _explicitNullValueMultipleChoiceQuestionDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multipleChoiceQuestionDetails"); else _explicitNullProperties?.Remove("multipleChoiceQuestionDetails"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.QuestionDetailsDtoMultipleChoiceQuestionDetails? _explicitNullValueMultipleChoiceQuestionDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.QuestionDetailsDtoMultipleChoiceQuestionDetails MultipleChoiceQuestionDetails { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.QuestionDetailsDtoMultipleChoiceQuestionDetails MultipleChoiceQuestionDetails { get => _explicitNullValueMultipleChoiceQuestionDetails; set { _explicitNullValueMultipleChoiceQuestionDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multipleChoiceQuestionDetails"); else _explicitNullProperties?.Remove("multipleChoiceQuestionDetails"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.QuestionDetailsDtoMultipleChoiceQuestionDetails _explicitNullValueMultipleChoiceQuestionDetails = default!;
 #endif
         /// <summary>Text question details (empty object for text questions)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormQuestionDtoQuestionDetailsTextQuestionDetailsProperty? TextQuestionDetails { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormQuestionDtoQuestionDetailsTextQuestionDetailsProperty? TextQuestionDetails { get => _explicitNullValueTextQuestionDetails; set { _explicitNullValueTextQuestionDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("textQuestionDetails"); else _explicitNullProperties?.Remove("textQuestionDetails"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormQuestionDtoQuestionDetailsTextQuestionDetailsProperty? _explicitNullValueTextQuestionDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormQuestionDtoQuestionDetailsTextQuestionDetailsProperty TextQuestionDetails { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormQuestionDtoQuestionDetailsTextQuestionDetailsProperty TextQuestionDetails { get => _explicitNullValueTextQuestionDetails; set { _explicitNullValueTextQuestionDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("textQuestionDetails"); else _explicitNullProperties?.Remove("textQuestionDetails"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormQuestionDtoQuestionDetailsTextQuestionDetailsProperty _explicitNullValueTextQuestionDetails = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormQuestionDtoQuestionDetails"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormQuestionDtoQuestionDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormQuestionDtoQuestionDetails();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormQuestionDtoQuestionDetails(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.QuestionDetailsDtoMultipleChoiceQuestionDetails>("multipleChoiceQuestionDetails", MultipleChoiceQuestionDetails);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormQuestionDtoQuestionDetailsTextQuestionDetailsProperty>("textQuestionDetails", TextQuestionDetails);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

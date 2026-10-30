@@ -11,83 +11,124 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CustomFieldSchema : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("dataType") is { } nullNodeDataType && nullNodeDataType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DataType = null;
+            if (parseNode.GetChildNode("fieldKey") is { } nullNodeFieldKey && nullNodeFieldKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldKey = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("isAllowedCustomOption") is { } nullNodeIsAllowedCustomOption && nullNodeIsAllowedCustomOption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAllowedCustomOption = null;
+            if (parseNode.GetChildNode("isMultiFileAllowed") is { } nullNodeIsMultiFileAllowed && nullNodeIsMultiFileAllowed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsMultiFileAllowed = null;
+            if (parseNode.GetChildNode("locationId") is { } nullNodeLocationId && nullNodeLocationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationId = null;
+            if (parseNode.GetChildNode("maxFileLimit") is { } nullNodeMaxFileLimit && nullNodeMaxFileLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxFileLimit = null;
+            if (parseNode.GetChildNode("model") is { } nullNodeModel && nullNodeModel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Model = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("picklistImageOptions") is { } nullNodePicklistImageOptions && nullNodePicklistImageOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PicklistImageOptions = null;
+            if (parseNode.GetChildNode("picklistOptions") is { } nullNodePicklistOptions && nullNodePicklistOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PicklistOptions = null;
+            if (parseNode.GetChildNode("placeholder") is { } nullNodePlaceholder && nullNodePlaceholder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Placeholder = null;
+            if (parseNode.GetChildNode("position") is { } nullNodePosition && nullNodePosition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Position = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The dataType property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DataType { get; set; }
+        public string? DataType { get => _explicitNullValueDataType; set { _explicitNullValueDataType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dataType"); else _explicitNullProperties?.Remove("dataType"); } }
+        private string? _explicitNullValueDataType = default!;
 #nullable restore
 #else
-        public string DataType { get; set; }
+        public string DataType { get => _explicitNullValueDataType; set { _explicitNullValueDataType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dataType"); else _explicitNullProperties?.Remove("dataType"); } }
+        private string _explicitNullValueDataType = default!;
 #endif
         /// <summary>The fieldKey property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FieldKey { get; set; }
+        public string? FieldKey { get => _explicitNullValueFieldKey; set { _explicitNullValueFieldKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldKey"); else _explicitNullProperties?.Remove("fieldKey"); } }
+        private string? _explicitNullValueFieldKey = default!;
 #nullable restore
 #else
-        public string FieldKey { get; set; }
+        public string FieldKey { get => _explicitNullValueFieldKey; set { _explicitNullValueFieldKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldKey"); else _explicitNullProperties?.Remove("fieldKey"); } }
+        private string _explicitNullValueFieldKey = default!;
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The isAllowedCustomOption property</summary>
-        public bool? IsAllowedCustomOption { get; set; }
+        public bool? IsAllowedCustomOption { get => _explicitNullValueIsAllowedCustomOption; set { _explicitNullValueIsAllowedCustomOption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isAllowedCustomOption"); else _explicitNullProperties?.Remove("isAllowedCustomOption"); } }
+        private bool? _explicitNullValueIsAllowedCustomOption = default!;
         /// <summary>The isMultiFileAllowed property</summary>
-        public bool? IsMultiFileAllowed { get; set; }
+        public bool? IsMultiFileAllowed { get => _explicitNullValueIsMultiFileAllowed; set { _explicitNullValueIsMultiFileAllowed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isMultiFileAllowed"); else _explicitNullProperties?.Remove("isMultiFileAllowed"); } }
+        private bool? _explicitNullValueIsMultiFileAllowed = default!;
         /// <summary>The locationId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LocationId { get; set; }
+        public string? LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
+        private string? _explicitNullValueLocationId = default!;
 #nullable restore
 #else
-        public string LocationId { get; set; }
+        public string LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
+        private string _explicitNullValueLocationId = default!;
 #endif
         /// <summary>The maxFileLimit property</summary>
-        public double? MaxFileLimit { get; set; }
+        public double? MaxFileLimit { get => _explicitNullValueMaxFileLimit; set { _explicitNullValueMaxFileLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxFileLimit"); else _explicitNullProperties?.Remove("maxFileLimit"); } }
+        private double? _explicitNullValueMaxFileLimit = default!;
         /// <summary>Model of the custom field</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldSchemaModel? Model { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldSchemaModel? Model { get => _explicitNullValueModel; set { _explicitNullValueModel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("model"); else _explicitNullProperties?.Remove("model"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldSchemaModel? _explicitNullValueModel = default!;
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The picklistImageOptions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? PicklistImageOptions { get; set; }
+        public List<string>? PicklistImageOptions { get => _explicitNullValuePicklistImageOptions; set { _explicitNullValuePicklistImageOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("picklistImageOptions"); else _explicitNullProperties?.Remove("picklistImageOptions"); } }
+        private List<string>? _explicitNullValuePicklistImageOptions = default!;
 #nullable restore
 #else
-        public List<string> PicklistImageOptions { get; set; }
+        public List<string> PicklistImageOptions { get => _explicitNullValuePicklistImageOptions; set { _explicitNullValuePicklistImageOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("picklistImageOptions"); else _explicitNullProperties?.Remove("picklistImageOptions"); } }
+        private List<string> _explicitNullValuePicklistImageOptions = default!;
 #endif
         /// <summary>The picklistOptions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? PicklistOptions { get; set; }
+        public List<string>? PicklistOptions { get => _explicitNullValuePicklistOptions; set { _explicitNullValuePicklistOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("picklistOptions"); else _explicitNullProperties?.Remove("picklistOptions"); } }
+        private List<string>? _explicitNullValuePicklistOptions = default!;
 #nullable restore
 #else
-        public List<string> PicklistOptions { get; set; }
+        public List<string> PicklistOptions { get => _explicitNullValuePicklistOptions; set { _explicitNullValuePicklistOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("picklistOptions"); else _explicitNullProperties?.Remove("picklistOptions"); } }
+        private List<string> _explicitNullValuePicklistOptions = default!;
 #endif
         /// <summary>The placeholder property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Placeholder { get; set; }
+        public string? Placeholder { get => _explicitNullValuePlaceholder; set { _explicitNullValuePlaceholder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("placeholder"); else _explicitNullProperties?.Remove("placeholder"); } }
+        private string? _explicitNullValuePlaceholder = default!;
 #nullable restore
 #else
-        public string Placeholder { get; set; }
+        public string Placeholder { get => _explicitNullValuePlaceholder; set { _explicitNullValuePlaceholder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("placeholder"); else _explicitNullProperties?.Remove("placeholder"); } }
+        private string _explicitNullValuePlaceholder = default!;
 #endif
         /// <summary>The position property</summary>
-        public double? Position { get; set; }
+        public double? Position { get => _explicitNullValuePosition; set { _explicitNullValuePosition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("position"); else _explicitNullProperties?.Remove("position"); } }
+        private double? _explicitNullValuePosition = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldSchema"/> and sets the default values.
         /// </summary>
@@ -103,7 +144,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldSchema CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldSchema();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldSchema(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -148,6 +189,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("picklistOptions", PicklistOptions);
             writer.WriteStringValue("placeholder", Placeholder);
             writer.WriteDoubleValue("position", Position);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

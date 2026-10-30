@@ -11,32 +11,48 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class UpdateContactFieldDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("contactFieldId") is { } nullNodeContactFieldId && nullNodeContactFieldId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactFieldId = null;
+            if (parseNode.GetChildNode("contactUpdateExamples") is { } nullNodeContactUpdateExamples && nullNodeContactUpdateExamples.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactUpdateExamples = null;
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>ID of the contact field in Contacts Table</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ContactFieldId { get; set; }
+        public string? ContactFieldId { get => _explicitNullValueContactFieldId; set { _explicitNullValueContactFieldId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactFieldId"); else _explicitNullProperties?.Remove("contactFieldId"); } }
+        private string? _explicitNullValueContactFieldId = default!;
 #nullable restore
 #else
-        public string ContactFieldId { get; set; }
+        public string ContactFieldId { get => _explicitNullValueContactFieldId; set { _explicitNullValueContactFieldId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactFieldId"); else _explicitNullProperties?.Remove("contactFieldId"); } }
+        private string _explicitNullValueContactFieldId = default!;
 #endif
         /// <summary>Contact update examples in Contacts Table. Not required when using standard fields, Monetory or Date Custom fields.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ContactUpdateExamples { get; set; }
+        public List<string>? ContactUpdateExamples { get => _explicitNullValueContactUpdateExamples; set { _explicitNullValueContactUpdateExamples = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactUpdateExamples"); else _explicitNullProperties?.Remove("contactUpdateExamples"); } }
+        private List<string>? _explicitNullValueContactUpdateExamples = default!;
 #nullable restore
 #else
-        public List<string> ContactUpdateExamples { get; set; }
+        public List<string> ContactUpdateExamples { get => _explicitNullValueContactUpdateExamples; set { _explicitNullValueContactUpdateExamples = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactUpdateExamples"); else _explicitNullProperties?.Remove("contactUpdateExamples"); } }
+        private List<string> _explicitNullValueContactUpdateExamples = default!;
 #endif
         /// <summary>Description of the contact field in Contacts Table</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpdateContactFieldDto"/> and sets the default values.
@@ -53,7 +69,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.UpdateContactFieldDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.UpdateContactFieldDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.UpdateContactFieldDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +94,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("contactFieldId", ContactFieldId);
             writer.WriteCollectionOfPrimitiveValues<string>("contactUpdateExamples", ContactUpdateExamples);
             writer.WriteStringValue("description", Description);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

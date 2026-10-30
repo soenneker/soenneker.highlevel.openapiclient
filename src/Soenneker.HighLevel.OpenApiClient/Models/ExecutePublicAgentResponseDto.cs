@@ -11,78 +11,115 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ExecutePublicAgentResponseDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("attachments") is { } nullNodeAttachments && nullNodeAttachments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Attachments = null;
+            if (parseNode.GetChildNode("executionId") is { } nullNodeExecutionId && nullNodeExecutionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExecutionId = null;
+            if (parseNode.GetChildNode("executionStatus") is { } nullNodeExecutionStatus && nullNodeExecutionStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExecutionStatus = null;
+            if (parseNode.GetChildNode("flowSwitch") is { } nullNodeFlowSwitch && nullNodeFlowSwitch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FlowSwitch = null;
+            if (parseNode.GetChildNode("generativeOutputs") is { } nullNodeGenerativeOutputs && nullNodeGenerativeOutputs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GenerativeOutputs = null;
+            if (parseNode.GetChildNode("goalCompletion") is { } nullNodeGoalCompletion && nullNodeGoalCompletion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GoalCompletion = null;
+            if (parseNode.GetChildNode("interactionId") is { } nullNodeInteractionId && nullNodeInteractionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InteractionId = null;
+            if (parseNode.GetChildNode("nextExpectedInput") is { } nullNodeNextExpectedInput && nullNodeNextExpectedInput.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextExpectedInput = null;
+            if (parseNode.GetChildNode("response") is { } nullNodeResponse && nullNodeResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Response = null;
+            if (parseNode.GetChildNode("success") is { } nullNodeSuccess && nullNodeSuccess.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Success = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Response attachments</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Attachments { get; set; }
+        public UntypedNode? Attachments { get => _explicitNullValueAttachments; set { _explicitNullValueAttachments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attachments"); else _explicitNullProperties?.Remove("attachments"); } }
+        private UntypedNode? _explicitNullValueAttachments = default!;
 #nullable restore
 #else
-        public UntypedNode Attachments { get; set; }
+        public UntypedNode Attachments { get => _explicitNullValueAttachments; set { _explicitNullValueAttachments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attachments"); else _explicitNullProperties?.Remove("attachments"); } }
+        private UntypedNode _explicitNullValueAttachments = default!;
 #endif
         /// <summary>Unique session identifier that maintains conversational context across multiple interactions within the same agent session. Use this ID in subsequent requests to continue the conversation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExecutionId { get; set; }
+        public string? ExecutionId { get => _explicitNullValueExecutionId; set { _explicitNullValueExecutionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("executionId"); else _explicitNullProperties?.Remove("executionId"); } }
+        private string? _explicitNullValueExecutionId = default!;
 #nullable restore
 #else
-        public string ExecutionId { get; set; }
+        public string ExecutionId { get => _explicitNullValueExecutionId; set { _explicitNullValueExecutionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("executionId"); else _explicitNullProperties?.Remove("executionId"); } }
+        private string _explicitNullValueExecutionId = default!;
 #endif
         /// <summary>Execution status</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExecutionStatus { get; set; }
+        public string? ExecutionStatus { get => _explicitNullValueExecutionStatus; set { _explicitNullValueExecutionStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("executionStatus"); else _explicitNullProperties?.Remove("executionStatus"); } }
+        private string? _explicitNullValueExecutionStatus = default!;
 #nullable restore
 #else
-        public string ExecutionStatus { get; set; }
+        public string ExecutionStatus { get => _explicitNullValueExecutionStatus; set { _explicitNullValueExecutionStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("executionStatus"); else _explicitNullProperties?.Remove("executionStatus"); } }
+        private string _explicitNullValueExecutionStatus = default!;
 #endif
         /// <summary>Whether flow was switched</summary>
-        public bool? FlowSwitch { get; set; }
+        public bool? FlowSwitch { get => _explicitNullValueFlowSwitch; set { _explicitNullValueFlowSwitch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flowSwitch"); else _explicitNullProperties?.Remove("flowSwitch"); } }
+        private bool? _explicitNullValueFlowSwitch = default!;
         /// <summary>Generated outputs</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? GenerativeOutputs { get; set; }
+        public UntypedNode? GenerativeOutputs { get => _explicitNullValueGenerativeOutputs; set { _explicitNullValueGenerativeOutputs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("generativeOutputs"); else _explicitNullProperties?.Remove("generativeOutputs"); } }
+        private UntypedNode? _explicitNullValueGenerativeOutputs = default!;
 #nullable restore
 #else
-        public UntypedNode GenerativeOutputs { get; set; }
+        public UntypedNode GenerativeOutputs { get => _explicitNullValueGenerativeOutputs; set { _explicitNullValueGenerativeOutputs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("generativeOutputs"); else _explicitNullProperties?.Remove("generativeOutputs"); } }
+        private UntypedNode _explicitNullValueGenerativeOutputs = default!;
 #endif
         /// <summary>When end node is added in the graph, this will be true if the agent reached the end node in the graph</summary>
-        public bool? GoalCompletion { get; set; }
+        public bool? GoalCompletion { get => _explicitNullValueGoalCompletion; set { _explicitNullValueGoalCompletion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("goalCompletion"); else _explicitNullProperties?.Remove("goalCompletion"); } }
+        private bool? _explicitNullValueGoalCompletion = default!;
         /// <summary>Unique identifier for a single interaction cycle, consisting of one user input and the corresponding agent response. Each message exchange generates a new interactionId.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InteractionId { get; set; }
+        public string? InteractionId { get => _explicitNullValueInteractionId; set { _explicitNullValueInteractionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interactionId"); else _explicitNullProperties?.Remove("interactionId"); } }
+        private string? _explicitNullValueInteractionId = default!;
 #nullable restore
 #else
-        public string InteractionId { get; set; }
+        public string InteractionId { get => _explicitNullValueInteractionId; set { _explicitNullValueInteractionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interactionId"); else _explicitNullProperties?.Remove("interactionId"); } }
+        private string _explicitNullValueInteractionId = default!;
 #endif
         /// <summary>Expected input type for next interaction</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NextExpectedInput { get; set; }
+        public string? NextExpectedInput { get => _explicitNullValueNextExpectedInput; set { _explicitNullValueNextExpectedInput = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nextExpectedInput"); else _explicitNullProperties?.Remove("nextExpectedInput"); } }
+        private string? _explicitNullValueNextExpectedInput = default!;
 #nullable restore
 #else
-        public string NextExpectedInput { get; set; }
+        public string NextExpectedInput { get => _explicitNullValueNextExpectedInput; set { _explicitNullValueNextExpectedInput = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nextExpectedInput"); else _explicitNullProperties?.Remove("nextExpectedInput"); } }
+        private string _explicitNullValueNextExpectedInput = default!;
 #endif
         /// <summary>Agent response text</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Response { get; set; }
+        public string? Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("response"); else _explicitNullProperties?.Remove("response"); } }
+        private string? _explicitNullValueResponse = default!;
 #nullable restore
 #else
-        public string Response { get; set; }
+        public string Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("response"); else _explicitNullProperties?.Remove("response"); } }
+        private string _explicitNullValueResponse = default!;
 #endif
         /// <summary>Success status</summary>
-        public bool? Success { get; set; }
+        public bool? Success { get => _explicitNullValueSuccess; set { _explicitNullValueSuccess = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("success"); else _explicitNullProperties?.Remove("success"); } }
+        private bool? _explicitNullValueSuccess = default!;
         /// <summary>Response type</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Type { get; set; }
+        public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private string? _explicitNullValueType = default!;
 #nullable restore
 #else
-        public string Type { get; set; }
+        public string Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private string _explicitNullValueType = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentResponseDto"/> and sets the default values.
@@ -99,7 +136,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentResponseDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentResponseDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentResponseDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -140,6 +177,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("response", Response);
             writer.WriteBoolValue("success", Success);
             writer.WriteStringValue("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

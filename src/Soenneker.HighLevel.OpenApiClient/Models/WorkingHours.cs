@@ -11,18 +11,30 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class WorkingHours : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("dayOfTheWeek") is { } nullNodeDayOfTheWeek && nullNodeDayOfTheWeek.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DayOfTheWeek = null;
+            if (parseNode.GetChildNode("intervals") is { } nullNodeIntervals && nullNodeIntervals.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Intervals = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Day of the week (0=Sunday, 1=Monday, etc.)</summary>
-        public double? DayOfTheWeek { get; set; }
+        public double? DayOfTheWeek { get => _explicitNullValueDayOfTheWeek; set { _explicitNullValueDayOfTheWeek = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dayOfTheWeek"); else _explicitNullProperties?.Remove("dayOfTheWeek"); } }
+        private double? _explicitNullValueDayOfTheWeek = default!;
         /// <summary>Time intervals for this day</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.Interval>? Intervals { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.Interval>? Intervals { get => _explicitNullValueIntervals; set { _explicitNullValueIntervals = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intervals"); else _explicitNullProperties?.Remove("intervals"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.Interval>? _explicitNullValueIntervals = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.Interval> Intervals { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.Interval> Intervals { get => _explicitNullValueIntervals; set { _explicitNullValueIntervals = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intervals"); else _explicitNullProperties?.Remove("intervals"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.Interval> _explicitNullValueIntervals = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.WorkingHours"/> and sets the default values.
@@ -39,7 +51,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.WorkingHours CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.WorkingHours();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.WorkingHours(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -62,6 +74,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDoubleValue("dayOfTheWeek", DayOfTheWeek);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.Interval>("intervals", Intervals);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

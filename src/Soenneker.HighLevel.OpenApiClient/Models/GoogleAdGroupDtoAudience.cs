@@ -12,24 +12,37 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GoogleAdGroupDtoAudience : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("geo_locations") is { } nullNodeGeoLocations && nullNodeGeoLocations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GeoLocations = null;
+            if (parseNode.GetChildNode("locales") is { } nullNodeLocales && nullNodeLocales.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locales = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Geo-location targeting</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleGeoLocationDto>? GeoLocations { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleGeoLocationDto>? GeoLocations { get => _explicitNullValueGeoLocations; set { _explicitNullValueGeoLocations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("geo_locations"); else _explicitNullProperties?.Remove("geo_locations"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleGeoLocationDto>? _explicitNullValueGeoLocations = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleGeoLocationDto> GeoLocations { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleGeoLocationDto> GeoLocations { get => _explicitNullValueGeoLocations; set { _explicitNullValueGeoLocations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("geo_locations"); else _explicitNullProperties?.Remove("geo_locations"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleGeoLocationDto> _explicitNullValueGeoLocations = default!;
 #endif
         /// <summary>Language/locale targeting</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleLocaleDto>? Locales { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleLocaleDto>? Locales { get => _explicitNullValueLocales; set { _explicitNullValueLocales = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locales"); else _explicitNullProperties?.Remove("locales"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleLocaleDto>? _explicitNullValueLocales = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleLocaleDto> Locales { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleLocaleDto> Locales { get => _explicitNullValueLocales; set { _explicitNullValueLocales = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locales"); else _explicitNullProperties?.Remove("locales"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleLocaleDto> _explicitNullValueLocales = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdGroupDtoAudience"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdGroupDtoAudience CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdGroupDtoAudience();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdGroupDtoAudience(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleGeoLocationDto>("geo_locations", GeoLocations);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleLocaleDto>("locales", Locales);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

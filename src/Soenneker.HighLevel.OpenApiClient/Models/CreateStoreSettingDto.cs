@@ -11,42 +11,63 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CreateStoreSettingDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("altId") is { } nullNodeAltId && nullNodeAltId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AltId = null;
+            if (parseNode.GetChildNode("altType") is { } nullNodeAltType && nullNodeAltType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AltType = null;
+            if (parseNode.GetChildNode("shippingOrigin") is { } nullNodeShippingOrigin && nullNodeShippingOrigin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingOrigin = null;
+            if (parseNode.GetChildNode("storeOrderFulfillmentNotification") is { } nullNodeStoreOrderFulfillmentNotification && nullNodeStoreOrderFulfillmentNotification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StoreOrderFulfillmentNotification = null;
+            if (parseNode.GetChildNode("storeOrderNotification") is { } nullNodeStoreOrderNotification && nullNodeStoreOrderNotification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StoreOrderNotification = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Location Id or Agency Id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AltId { get; set; }
+        public string? AltId { get => _explicitNullValueAltId; set { _explicitNullValueAltId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("altId"); else _explicitNullProperties?.Remove("altId"); } }
+        private string? _explicitNullValueAltId = default!;
 #nullable restore
 #else
-        public string AltId { get; set; }
+        public string AltId { get => _explicitNullValueAltId; set { _explicitNullValueAltId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("altId"); else _explicitNullProperties?.Remove("altId"); } }
+        private string _explicitNullValueAltId = default!;
 #endif
         /// <summary>The altType property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.StoreLocationAltType? AltType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.StoreLocationAltType? AltType { get => _explicitNullValueAltType; set { _explicitNullValueAltType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("altType"); else _explicitNullProperties?.Remove("altType"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.StoreLocationAltType? _explicitNullValueAltType = default!;
         /// <summary>Shipping origin address</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDtoShippingOrigin? ShippingOrigin { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDtoShippingOrigin? ShippingOrigin { get => _explicitNullValueShippingOrigin; set { _explicitNullValueShippingOrigin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shippingOrigin"); else _explicitNullProperties?.Remove("shippingOrigin"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDtoShippingOrigin? _explicitNullValueShippingOrigin = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDtoShippingOrigin ShippingOrigin { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDtoShippingOrigin ShippingOrigin { get => _explicitNullValueShippingOrigin; set { _explicitNullValueShippingOrigin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shippingOrigin"); else _explicitNullProperties?.Remove("shippingOrigin"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDtoShippingOrigin _explicitNullValueShippingOrigin = default!;
 #endif
         /// <summary>Store order fulfillment notification email</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDtoStoreOrderFulfillmentNotification? StoreOrderFulfillmentNotification { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDtoStoreOrderFulfillmentNotification? StoreOrderFulfillmentNotification { get => _explicitNullValueStoreOrderFulfillmentNotification; set { _explicitNullValueStoreOrderFulfillmentNotification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("storeOrderFulfillmentNotification"); else _explicitNullProperties?.Remove("storeOrderFulfillmentNotification"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDtoStoreOrderFulfillmentNotification? _explicitNullValueStoreOrderFulfillmentNotification = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDtoStoreOrderFulfillmentNotification StoreOrderFulfillmentNotification { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDtoStoreOrderFulfillmentNotification StoreOrderFulfillmentNotification { get => _explicitNullValueStoreOrderFulfillmentNotification; set { _explicitNullValueStoreOrderFulfillmentNotification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("storeOrderFulfillmentNotification"); else _explicitNullProperties?.Remove("storeOrderFulfillmentNotification"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDtoStoreOrderFulfillmentNotification _explicitNullValueStoreOrderFulfillmentNotification = default!;
 #endif
         /// <summary>Store order notification email</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDtoStoreOrderNotification? StoreOrderNotification { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDtoStoreOrderNotification? StoreOrderNotification { get => _explicitNullValueStoreOrderNotification; set { _explicitNullValueStoreOrderNotification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("storeOrderNotification"); else _explicitNullProperties?.Remove("storeOrderNotification"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDtoStoreOrderNotification? _explicitNullValueStoreOrderNotification = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDtoStoreOrderNotification StoreOrderNotification { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDtoStoreOrderNotification StoreOrderNotification { get => _explicitNullValueStoreOrderNotification; set { _explicitNullValueStoreOrderNotification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("storeOrderNotification"); else _explicitNullProperties?.Remove("storeOrderNotification"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDtoStoreOrderNotification _explicitNullValueStoreOrderNotification = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDto"/> and sets the default values.
@@ -63,7 +84,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -92,6 +113,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDtoShippingOrigin>("shippingOrigin", ShippingOrigin);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDtoStoreOrderFulfillmentNotification>("storeOrderFulfillmentNotification", StoreOrderFulfillmentNotification);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateStoreSettingDtoStoreOrderNotification>("storeOrderNotification", StoreOrderNotification);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

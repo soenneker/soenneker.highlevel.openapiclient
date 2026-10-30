@@ -12,19 +12,36 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GetSocialMediaStatistics201ResponseResultsTotals : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("comments") is { } nullNodeComments && nullNodeComments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Comments = null;
+            if (parseNode.GetChildNode("followers") is { } nullNodeFollowers && nullNodeFollowers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Followers = null;
+            if (parseNode.GetChildNode("impressions") is { } nullNodeImpressions && nullNodeImpressions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Impressions = null;
+            if (parseNode.GetChildNode("likes") is { } nullNodeLikes && nullNodeLikes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Likes = null;
+            if (parseNode.GetChildNode("posts") is { } nullNodePosts && nullNodePosts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Posts = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The comments property</summary>
-        public double? Comments { get; set; }
+        public double? Comments { get => _explicitNullValueComments; set { _explicitNullValueComments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comments"); else _explicitNullProperties?.Remove("comments"); } }
+        private double? _explicitNullValueComments = default!;
         /// <summary>The followers property</summary>
-        public double? Followers { get; set; }
+        public double? Followers { get => _explicitNullValueFollowers; set { _explicitNullValueFollowers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("followers"); else _explicitNullProperties?.Remove("followers"); } }
+        private double? _explicitNullValueFollowers = default!;
         /// <summary>The impressions property</summary>
-        public double? Impressions { get; set; }
+        public double? Impressions { get => _explicitNullValueImpressions; set { _explicitNullValueImpressions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("impressions"); else _explicitNullProperties?.Remove("impressions"); } }
+        private double? _explicitNullValueImpressions = default!;
         /// <summary>The likes property</summary>
-        public double? Likes { get; set; }
+        public double? Likes { get => _explicitNullValueLikes; set { _explicitNullValueLikes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("likes"); else _explicitNullProperties?.Remove("likes"); } }
+        private double? _explicitNullValueLikes = default!;
         /// <summary>The posts property</summary>
-        public double? Posts { get; set; }
+        public double? Posts { get => _explicitNullValuePosts; set { _explicitNullValuePosts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("posts"); else _explicitNullProperties?.Remove("posts"); } }
+        private double? _explicitNullValuePosts = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsTotals"/> and sets the default values.
         /// </summary>
@@ -40,7 +57,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsTotals CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsTotals();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsTotals(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +86,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteDoubleValue("impressions", Impressions);
             writer.WriteDoubleValue("likes", Likes);
             writer.WriteDoubleValue("posts", Posts);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

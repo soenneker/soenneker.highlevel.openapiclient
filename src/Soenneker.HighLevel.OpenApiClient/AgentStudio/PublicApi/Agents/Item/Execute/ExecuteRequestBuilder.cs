@@ -60,6 +60,8 @@ namespace Soenneker.HighLevel.OpenApiClient.AgentStudio.PublicApi.Agents.Item.Ex
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.AgentStudioCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.AgentStudioCommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.HighLevel.OpenApiClient.Models.AgentStudioInternalServerErrorDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

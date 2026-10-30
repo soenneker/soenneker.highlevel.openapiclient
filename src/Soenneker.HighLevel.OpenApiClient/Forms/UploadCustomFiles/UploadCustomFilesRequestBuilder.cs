@@ -44,11 +44,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Forms.UploadCustomFiles
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.FormsCommonSchemasUnauthorizedDto">When receiving a 401 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<Stream?> PostAsync(UntypedNode body, Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Forms.UploadCustomFiles.UploadCustomFilesRequestBuilder.UploadCustomFilesRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<Stream?> PostAsync(global::Microsoft.Kiota.Abstractions.MultipartBody body, Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Forms.UploadCustomFiles.UploadCustomFilesRequestBuilder.UploadCustomFilesRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<Stream> PostAsync(UntypedNode body, Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Forms.UploadCustomFiles.UploadCustomFilesRequestBuilder.UploadCustomFilesRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<Stream> PostAsync(global::Microsoft.Kiota.Abstractions.MultipartBody body, Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Forms.UploadCustomFiles.UploadCustomFilesRequestBuilder.UploadCustomFilesRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -57,6 +57,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Forms.UploadCustomFiles
             {
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.FormsCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.FormsCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -68,11 +70,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Forms.UploadCustomFiles
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(UntypedNode body, Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Forms.UploadCustomFiles.UploadCustomFilesRequestBuilder.UploadCustomFilesRequestBuilderPostQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Microsoft.Kiota.Abstractions.MultipartBody body, Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Forms.UploadCustomFiles.UploadCustomFilesRequestBuilder.UploadCustomFilesRequestBuilderPostQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(UntypedNode body, Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Forms.UploadCustomFiles.UploadCustomFilesRequestBuilder.UploadCustomFilesRequestBuilderPostQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Microsoft.Kiota.Abstractions.MultipartBody body, Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Forms.UploadCustomFiles.UploadCustomFilesRequestBuilder.UploadCustomFilesRequestBuilderPostQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

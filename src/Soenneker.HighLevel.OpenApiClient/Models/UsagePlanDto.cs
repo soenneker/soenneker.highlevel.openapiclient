@@ -11,70 +11,104 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class UsagePlanDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("executionLimitPerCycle") is { } nullNodeExecutionLimitPerCycle && nullNodeExecutionLimitPerCycle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExecutionLimitPerCycle = null;
+            if (parseNode.GetChildNode("fixedPricePerUnit") is { } nullNodeFixedPricePerUnit && nullNodeFixedPricePerUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FixedPricePerUnit = null;
+            if (parseNode.GetChildNode("maxPricePerUnit") is { } nullNodeMaxPricePerUnit && nullNodeMaxPricePerUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxPricePerUnit = null;
+            if (parseNode.GetChildNode("meterId") is { } nullNodeMeterId && nullNodeMeterId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MeterId = null;
+            if (parseNode.GetChildNode("meterName") is { } nullNodeMeterName && nullNodeMeterName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MeterName = null;
+            if (parseNode.GetChildNode("minPricePerUnit") is { } nullNodeMinPricePerUnit && nullNodeMinPricePerUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinPricePerUnit = null;
+            if (parseNode.GetChildNode("priceType") is { } nullNodePriceType && nullNodePriceType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PriceType = null;
+            if (parseNode.GetChildNode("productName") is { } nullNodeProductName && nullNodeProductName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductName = null;
+            if (parseNode.GetChildNode("productType") is { } nullNodeProductType && nullNodeProductType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductType = null;
+            if (parseNode.GetChildNode("usageUnit") is { } nullNodeUsageUnit && nullNodeUsageUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UsageUnit = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The execution limit per cycle</summary>
-        public double? ExecutionLimitPerCycle { get; set; }
+        public double? ExecutionLimitPerCycle { get => _explicitNullValueExecutionLimitPerCycle; set { _explicitNullValueExecutionLimitPerCycle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("executionLimitPerCycle"); else _explicitNullProperties?.Remove("executionLimitPerCycle"); } }
+        private double? _explicitNullValueExecutionLimitPerCycle = default!;
         /// <summary>The fixed price per unit, applicable for fixed price type</summary>
-        public double? FixedPricePerUnit { get; set; }
+        public double? FixedPricePerUnit { get => _explicitNullValueFixedPricePerUnit; set { _explicitNullValueFixedPricePerUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fixedPricePerUnit"); else _explicitNullProperties?.Remove("fixedPricePerUnit"); } }
+        private double? _explicitNullValueFixedPricePerUnit = default!;
         /// <summary>The max price per unit, applicable for dynamic price type</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MaxPricePerUnit { get; set; }
+        public string? MaxPricePerUnit { get => _explicitNullValueMaxPricePerUnit; set { _explicitNullValueMaxPricePerUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxPricePerUnit"); else _explicitNullProperties?.Remove("maxPricePerUnit"); } }
+        private string? _explicitNullValueMaxPricePerUnit = default!;
 #nullable restore
 #else
-        public string MaxPricePerUnit { get; set; }
+        public string MaxPricePerUnit { get => _explicitNullValueMaxPricePerUnit; set { _explicitNullValueMaxPricePerUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxPricePerUnit"); else _explicitNullProperties?.Remove("maxPricePerUnit"); } }
+        private string _explicitNullValueMaxPricePerUnit = default!;
 #endif
         /// <summary>The meter id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MeterId { get; set; }
+        public string? MeterId { get => _explicitNullValueMeterId; set { _explicitNullValueMeterId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meterId"); else _explicitNullProperties?.Remove("meterId"); } }
+        private string? _explicitNullValueMeterId = default!;
 #nullable restore
 #else
-        public string MeterId { get; set; }
+        public string MeterId { get => _explicitNullValueMeterId; set { _explicitNullValueMeterId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meterId"); else _explicitNullProperties?.Remove("meterId"); } }
+        private string _explicitNullValueMeterId = default!;
 #endif
         /// <summary>The meter name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MeterName { get; set; }
+        public string? MeterName { get => _explicitNullValueMeterName; set { _explicitNullValueMeterName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meterName"); else _explicitNullProperties?.Remove("meterName"); } }
+        private string? _explicitNullValueMeterName = default!;
 #nullable restore
 #else
-        public string MeterName { get; set; }
+        public string MeterName { get => _explicitNullValueMeterName; set { _explicitNullValueMeterName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meterName"); else _explicitNullProperties?.Remove("meterName"); } }
+        private string _explicitNullValueMeterName = default!;
 #endif
         /// <summary>The min price per unit, applicable for dynamic price type</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MinPricePerUnit { get; set; }
+        public string? MinPricePerUnit { get => _explicitNullValueMinPricePerUnit; set { _explicitNullValueMinPricePerUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minPricePerUnit"); else _explicitNullProperties?.Remove("minPricePerUnit"); } }
+        private string? _explicitNullValueMinPricePerUnit = default!;
 #nullable restore
 #else
-        public string MinPricePerUnit { get; set; }
+        public string MinPricePerUnit { get => _explicitNullValueMinPricePerUnit; set { _explicitNullValueMinPricePerUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minPricePerUnit"); else _explicitNullProperties?.Remove("minPricePerUnit"); } }
+        private string _explicitNullValueMinPricePerUnit = default!;
 #endif
         /// <summary>The price type</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UsagePlanDtoPriceType? PriceType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UsagePlanDtoPriceType? PriceType { get => _explicitNullValuePriceType; set { _explicitNullValuePriceType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("priceType"); else _explicitNullProperties?.Remove("priceType"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.UsagePlanDtoPriceType? _explicitNullValuePriceType = default!;
         /// <summary>The product name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProductName { get; set; }
+        public string? ProductName { get => _explicitNullValueProductName; set { _explicitNullValueProductName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("productName"); else _explicitNullProperties?.Remove("productName"); } }
+        private string? _explicitNullValueProductName = default!;
 #nullable restore
 #else
-        public string ProductName { get; set; }
+        public string ProductName { get => _explicitNullValueProductName; set { _explicitNullValueProductName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("productName"); else _explicitNullProperties?.Remove("productName"); } }
+        private string _explicitNullValueProductName = default!;
 #endif
         /// <summary>The product type</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProductType { get; set; }
+        public string? ProductType { get => _explicitNullValueProductType; set { _explicitNullValueProductType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("productType"); else _explicitNullProperties?.Remove("productType"); } }
+        private string? _explicitNullValueProductType = default!;
 #nullable restore
 #else
-        public string ProductType { get; set; }
+        public string ProductType { get => _explicitNullValueProductType; set { _explicitNullValueProductType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("productType"); else _explicitNullProperties?.Remove("productType"); } }
+        private string _explicitNullValueProductType = default!;
 #endif
         /// <summary>The usage unit for the meter</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UsageUnit { get; set; }
+        public string? UsageUnit { get => _explicitNullValueUsageUnit; set { _explicitNullValueUsageUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usageUnit"); else _explicitNullProperties?.Remove("usageUnit"); } }
+        private string? _explicitNullValueUsageUnit = default!;
 #nullable restore
 #else
-        public string UsageUnit { get; set; }
+        public string UsageUnit { get => _explicitNullValueUsageUnit; set { _explicitNullValueUsageUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usageUnit"); else _explicitNullProperties?.Remove("usageUnit"); } }
+        private string _explicitNullValueUsageUnit = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UsagePlanDto"/> and sets the default values.
@@ -91,7 +125,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.UsagePlanDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.UsagePlanDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.UsagePlanDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -130,6 +164,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("productName", ProductName);
             writer.WriteStringValue("productType", ProductType);
             writer.WriteStringValue("usageUnit", UsageUnit);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

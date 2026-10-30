@@ -11,60 +11,89 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class SaveBuilderDataDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("dnd") is { } nullNodeDnd && nullNodeDnd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Dnd = null;
+            if (parseNode.GetChildNode("editorType") is { } nullNodeEditorType && nullNodeEditorType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EditorType = null;
+            if (parseNode.GetChildNode("html") is { } nullNodeHtml && nullNodeHtml.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Html = null;
+            if (parseNode.GetChildNode("isPlainText") is { } nullNodeIsPlainText && nullNodeIsPlainText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsPlainText = null;
+            if (parseNode.GetChildNode("locationId") is { } nullNodeLocationId && nullNodeLocationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationId = null;
+            if (parseNode.GetChildNode("previewText") is { } nullNodePreviewText && nullNodePreviewText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreviewText = null;
+            if (parseNode.GetChildNode("templateId") is { } nullNodeTemplateId && nullNodeTemplateId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TemplateId = null;
+            if (parseNode.GetChildNode("updatedBy") is { } nullNodeUpdatedBy && nullNodeUpdatedBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdatedBy = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The dnd property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDtoDnd? Dnd { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDtoDnd? Dnd { get => _explicitNullValueDnd; set { _explicitNullValueDnd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dnd"); else _explicitNullProperties?.Remove("dnd"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDtoDnd? _explicitNullValueDnd = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDtoDnd Dnd { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDtoDnd Dnd { get => _explicitNullValueDnd; set { _explicitNullValueDnd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dnd"); else _explicitNullProperties?.Remove("dnd"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDtoDnd _explicitNullValueDnd = default!;
 #endif
         /// <summary>The editorType property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDtoEditorType? EditorType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDtoEditorType? EditorType { get => _explicitNullValueEditorType; set { _explicitNullValueEditorType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("editorType"); else _explicitNullProperties?.Remove("editorType"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDtoEditorType? _explicitNullValueEditorType = default!;
         /// <summary>The html property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Html { get; set; }
+        public string? Html { get => _explicitNullValueHtml; set { _explicitNullValueHtml = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("html"); else _explicitNullProperties?.Remove("html"); } }
+        private string? _explicitNullValueHtml = default!;
 #nullable restore
 #else
-        public string Html { get; set; }
+        public string Html { get => _explicitNullValueHtml; set { _explicitNullValueHtml = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("html"); else _explicitNullProperties?.Remove("html"); } }
+        private string _explicitNullValueHtml = default!;
 #endif
         /// <summary>The isPlainText property</summary>
-        public bool? IsPlainText { get; set; }
+        public bool? IsPlainText { get => _explicitNullValueIsPlainText; set { _explicitNullValueIsPlainText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isPlainText"); else _explicitNullProperties?.Remove("isPlainText"); } }
+        private bool? _explicitNullValueIsPlainText = default!;
         /// <summary>The locationId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LocationId { get; set; }
+        public string? LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
+        private string? _explicitNullValueLocationId = default!;
 #nullable restore
 #else
-        public string LocationId { get; set; }
+        public string LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
+        private string _explicitNullValueLocationId = default!;
 #endif
         /// <summary>The previewText property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PreviewText { get; set; }
+        public string? PreviewText { get => _explicitNullValuePreviewText; set { _explicitNullValuePreviewText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previewText"); else _explicitNullProperties?.Remove("previewText"); } }
+        private string? _explicitNullValuePreviewText = default!;
 #nullable restore
 #else
-        public string PreviewText { get; set; }
+        public string PreviewText { get => _explicitNullValuePreviewText; set { _explicitNullValuePreviewText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previewText"); else _explicitNullProperties?.Remove("previewText"); } }
+        private string _explicitNullValuePreviewText = default!;
 #endif
         /// <summary>The templateId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TemplateId { get; set; }
+        public string? TemplateId { get => _explicitNullValueTemplateId; set { _explicitNullValueTemplateId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("templateId"); else _explicitNullProperties?.Remove("templateId"); } }
+        private string? _explicitNullValueTemplateId = default!;
 #nullable restore
 #else
-        public string TemplateId { get; set; }
+        public string TemplateId { get => _explicitNullValueTemplateId; set { _explicitNullValueTemplateId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("templateId"); else _explicitNullProperties?.Remove("templateId"); } }
+        private string _explicitNullValueTemplateId = default!;
 #endif
         /// <summary>The updatedBy property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UpdatedBy { get; set; }
+        public string? UpdatedBy { get => _explicitNullValueUpdatedBy; set { _explicitNullValueUpdatedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updatedBy"); else _explicitNullProperties?.Remove("updatedBy"); } }
+        private string? _explicitNullValueUpdatedBy = default!;
 #nullable restore
 #else
-        public string UpdatedBy { get; set; }
+        public string UpdatedBy { get => _explicitNullValueUpdatedBy; set { _explicitNullValueUpdatedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updatedBy"); else _explicitNullProperties?.Remove("updatedBy"); } }
+        private string _explicitNullValueUpdatedBy = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDto"/> and sets the default values.
@@ -81,7 +110,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -116,6 +145,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("previewText", PreviewText);
             writer.WriteStringValue("templateId", TemplateId);
             writer.WriteStringValue("updatedBy", UpdatedBy);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

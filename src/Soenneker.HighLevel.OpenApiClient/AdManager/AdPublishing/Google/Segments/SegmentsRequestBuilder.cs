@@ -76,6 +76,8 @@ namespace Soenneker.HighLevel.OpenApiClient.AdManager.AdPublishing.Google.Segmen
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.AdManagerCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.AdManagerCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.AdManagerCommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -105,6 +107,8 @@ namespace Soenneker.HighLevel.OpenApiClient.AdManager.AdPublishing.Google.Segmen
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.AdManagerCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.AdManagerCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.AdManagerCommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }

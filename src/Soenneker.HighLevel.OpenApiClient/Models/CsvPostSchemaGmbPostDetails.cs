@@ -12,88 +12,125 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CsvPostSchemaGmbPostDetails : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("actionType") is { } nullNodeActionType && nullNodeActionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionType = null;
+            if (parseNode.GetChildNode("couponCode") is { } nullNodeCouponCode && nullNodeCouponCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CouponCode = null;
+            if (parseNode.GetChildNode("endDate") is { } nullNodeEndDate && nullNodeEndDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndDate = null;
+            if (parseNode.GetChildNode("gmbEventType") is { } nullNodeGmbEventType && nullNodeGmbEventType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GmbEventType = null;
+            if (parseNode.GetChildNode("offerTitle") is { } nullNodeOfferTitle && nullNodeOfferTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OfferTitle = null;
+            if (parseNode.GetChildNode("redeemOnlineUrl") is { } nullNodeRedeemOnlineUrl && nullNodeRedeemOnlineUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RedeemOnlineUrl = null;
+            if (parseNode.GetChildNode("startDate") is { } nullNodeStartDate && nullNodeStartDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartDate = null;
+            if (parseNode.GetChildNode("termsConditions") is { } nullNodeTermsConditions && nullNodeTermsConditions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TermsConditions = null;
+            if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
+            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+        }
+
         /// <summary>Action Type must be one of the following values: none, order, book, shop, learn_more, call, sign_up</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaGmbPostDetailsActionTypeProperty? ActionType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaGmbPostDetailsActionType? ActionType { get => _explicitNullValueActionType; set { _explicitNullValueActionType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionType"); else _explicitNullProperties?.Remove("actionType"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaGmbPostDetailsActionType? _explicitNullValueActionType = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaGmbPostDetailsActionTypeProperty ActionType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaGmbPostDetailsActionType ActionType { get => _explicitNullValueActionType; set { _explicitNullValueActionType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionType"); else _explicitNullProperties?.Remove("actionType"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaGmbPostDetailsActionType _explicitNullValueActionType = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Coupon Code</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CouponCode { get; set; }
+        public string? CouponCode { get => _explicitNullValueCouponCode; set { _explicitNullValueCouponCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("couponCode"); else _explicitNullProperties?.Remove("couponCode"); } }
+        private string? _explicitNullValueCouponCode = default!;
 #nullable restore
 #else
-        public string CouponCode { get; set; }
+        public string CouponCode { get => _explicitNullValueCouponCode; set { _explicitNullValueCouponCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("couponCode"); else _explicitNullProperties?.Remove("couponCode"); } }
+        private string _explicitNullValueCouponCode = default!;
 #endif
         /// <summary>End Date</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GmbPostSchemaEndDate? EndDate { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GmbPostSchemaEndDate? EndDate { get => _explicitNullValueEndDate; set { _explicitNullValueEndDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endDate"); else _explicitNullProperties?.Remove("endDate"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GmbPostSchemaEndDate? _explicitNullValueEndDate = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GmbPostSchemaEndDate EndDate { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GmbPostSchemaEndDate EndDate { get => _explicitNullValueEndDate; set { _explicitNullValueEndDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endDate"); else _explicitNullProperties?.Remove("endDate"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GmbPostSchemaEndDate _explicitNullValueEndDate = default!;
 #endif
         /// <summary>gmbEventType must be one of the following values: STANDARD, EVENT, OFFER</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GmbEventType { get; set; }
+        public string? GmbEventType { get => _explicitNullValueGmbEventType; set { _explicitNullValueGmbEventType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gmbEventType"); else _explicitNullProperties?.Remove("gmbEventType"); } }
+        private string? _explicitNullValueGmbEventType = default!;
 #nullable restore
 #else
-        public string GmbEventType { get; set; }
+        public string GmbEventType { get => _explicitNullValueGmbEventType; set { _explicitNullValueGmbEventType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gmbEventType"); else _explicitNullProperties?.Remove("gmbEventType"); } }
+        private string _explicitNullValueGmbEventType = default!;
 #endif
         /// <summary>Offer Title</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OfferTitle { get; set; }
+        public string? OfferTitle { get => _explicitNullValueOfferTitle; set { _explicitNullValueOfferTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offerTitle"); else _explicitNullProperties?.Remove("offerTitle"); } }
+        private string? _explicitNullValueOfferTitle = default!;
 #nullable restore
 #else
-        public string OfferTitle { get; set; }
+        public string OfferTitle { get => _explicitNullValueOfferTitle; set { _explicitNullValueOfferTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offerTitle"); else _explicitNullProperties?.Remove("offerTitle"); } }
+        private string _explicitNullValueOfferTitle = default!;
 #endif
         /// <summary>Redeem Online Url</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RedeemOnlineUrl { get; set; }
+        public string? RedeemOnlineUrl { get => _explicitNullValueRedeemOnlineUrl; set { _explicitNullValueRedeemOnlineUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redeemOnlineUrl"); else _explicitNullProperties?.Remove("redeemOnlineUrl"); } }
+        private string? _explicitNullValueRedeemOnlineUrl = default!;
 #nullable restore
 #else
-        public string RedeemOnlineUrl { get; set; }
+        public string RedeemOnlineUrl { get => _explicitNullValueRedeemOnlineUrl; set { _explicitNullValueRedeemOnlineUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redeemOnlineUrl"); else _explicitNullProperties?.Remove("redeemOnlineUrl"); } }
+        private string _explicitNullValueRedeemOnlineUrl = default!;
 #endif
         /// <summary>Start Date</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GmbPostSchemaStartDate? StartDate { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GmbPostSchemaStartDate? StartDate { get => _explicitNullValueStartDate; set { _explicitNullValueStartDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startDate"); else _explicitNullProperties?.Remove("startDate"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GmbPostSchemaStartDate? _explicitNullValueStartDate = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GmbPostSchemaStartDate StartDate { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GmbPostSchemaStartDate StartDate { get => _explicitNullValueStartDate; set { _explicitNullValueStartDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startDate"); else _explicitNullProperties?.Remove("startDate"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GmbPostSchemaStartDate _explicitNullValueStartDate = default!;
 #endif
         /// <summary>Terms Condition Url</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TermsConditions { get; set; }
+        public string? TermsConditions { get => _explicitNullValueTermsConditions; set { _explicitNullValueTermsConditions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("termsConditions"); else _explicitNullProperties?.Remove("termsConditions"); } }
+        private string? _explicitNullValueTermsConditions = default!;
 #nullable restore
 #else
-        public string TermsConditions { get; set; }
+        public string TermsConditions { get => _explicitNullValueTermsConditions; set { _explicitNullValueTermsConditions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("termsConditions"); else _explicitNullProperties?.Remove("termsConditions"); } }
+        private string _explicitNullValueTermsConditions = default!;
 #endif
         /// <summary>Title</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Title { get; set; }
+        public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        private string? _explicitNullValueTitle = default!;
 #nullable restore
 #else
-        public string Title { get; set; }
+        public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        private string _explicitNullValueTitle = default!;
 #endif
         /// <summary>Url</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get; set; }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get; set; }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaGmbPostDetails"/> and sets the default values.
@@ -110,7 +147,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaGmbPostDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaGmbPostDetails();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaGmbPostDetails(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -120,7 +157,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "actionType", n => { ActionType = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaGmbPostDetailsActionTypeProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaGmbPostDetailsActionTypeProperty.CreateFromDiscriminatorValue); } },
+                { "actionType", n => { ActionType = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaGmbPostDetailsActionType>(global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaGmbPostDetailsActionType.CreateFromDiscriminatorValue); } },
                 { "couponCode", n => { CouponCode = n.GetStringValue(); } },
                 { "endDate", n => { EndDate = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GmbPostSchemaEndDate>(global::Soenneker.HighLevel.OpenApiClient.Models.GmbPostSchemaEndDate.CreateFromDiscriminatorValue); } },
                 { "gmbEventType", n => { GmbEventType = n.GetStringValue(); } },
@@ -139,7 +176,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaGmbPostDetailsActionTypeProperty>("actionType", ActionType);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaGmbPostDetailsActionType>("actionType", ActionType);
             writer.WriteStringValue("couponCode", CouponCode);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GmbPostSchemaEndDate>("endDate", EndDate);
             writer.WriteStringValue("gmbEventType", GmbEventType);
@@ -149,6 +186,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("termsConditions", TermsConditions);
             writer.WriteStringValue("title", Title);
             writer.WriteStringValue("url", Url);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

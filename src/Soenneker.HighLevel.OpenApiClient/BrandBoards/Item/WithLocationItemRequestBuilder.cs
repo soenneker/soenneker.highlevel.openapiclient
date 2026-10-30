@@ -72,6 +72,8 @@ namespace Soenneker.HighLevel.OpenApiClient.BrandBoards.Item
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.BrandBoardsCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.HighLevel.OpenApiClient.Models.BrandBoardsInvalidLocationDto.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.BrandBoardsCommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.GetBrandBoardsByLocationSuccessDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.GetBrandBoardsByLocationSuccessDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

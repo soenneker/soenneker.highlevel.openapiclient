@@ -81,6 +81,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Invoices.Item
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoice400Response.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoiceResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.DeleteInvoiceResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -108,6 +110,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Invoices.Item
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -137,6 +141,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Invoices.Item
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

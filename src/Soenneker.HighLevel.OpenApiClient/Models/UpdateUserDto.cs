@@ -11,123 +11,174 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class UpdateUserDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("companyId") is { } nullNodeCompanyId && nullNodeCompanyId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CompanyId = null;
+            if (parseNode.GetChildNode("email") is { } nullNodeEmail && nullNodeEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Email = null;
+            if (parseNode.GetChildNode("firstName") is { } nullNodeFirstName && nullNodeFirstName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstName = null;
+            if (parseNode.GetChildNode("lastName") is { } nullNodeLastName && nullNodeLastName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastName = null;
+            if (parseNode.GetChildNode("locationIds") is { } nullNodeLocationIds && nullNodeLocationIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationIds = null;
+            if (parseNode.GetChildNode("password") is { } nullNodePassword && nullNodePassword.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Password = null;
+            if (parseNode.GetChildNode("permissions") is { } nullNodePermissions && nullNodePermissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Permissions = null;
+            if (parseNode.GetChildNode("phone") is { } nullNodePhone && nullNodePhone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Phone = null;
+            if (parseNode.GetChildNode("platformLanguage") is { } nullNodePlatformLanguage && nullNodePlatformLanguage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlatformLanguage = null;
+            if (parseNode.GetChildNode("profilePhoto") is { } nullNodeProfilePhoto && nullNodeProfilePhoto.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProfilePhoto = null;
+            if (parseNode.GetChildNode("role") is { } nullNodeRole && nullNodeRole.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Role = null;
+            if (parseNode.GetChildNode("scopes") is { } nullNodeScopes && nullNodeScopes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Scopes = null;
+            if (parseNode.GetChildNode("scopesAssignedToOnly") is { } nullNodeScopesAssignedToOnly && nullNodeScopesAssignedToOnly.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScopesAssignedToOnly = null;
+            if (parseNode.GetChildNode("twilioPhone") is { } nullNodeTwilioPhone && nullNodeTwilioPhone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TwilioPhone = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Company/Agency Id. Required for Agency Level access</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CompanyId { get; set; }
+        public string? CompanyId { get => _explicitNullValueCompanyId; set { _explicitNullValueCompanyId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("companyId"); else _explicitNullProperties?.Remove("companyId"); } }
+        private string? _explicitNullValueCompanyId = default!;
 #nullable restore
 #else
-        public string CompanyId { get; set; }
+        public string CompanyId { get => _explicitNullValueCompanyId; set { _explicitNullValueCompanyId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("companyId"); else _explicitNullProperties?.Remove("companyId"); } }
+        private string _explicitNullValueCompanyId = default!;
 #endif
         /// <summary>Email update is no longer supported due to security reasons.</summary>
         [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Email { get; set; }
+        public string? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        private string? _explicitNullValueEmail = default!;
 #nullable restore
 #else
-        public string Email { get; set; }
+        public string Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        private string _explicitNullValueEmail = default!;
 #endif
         /// <summary>The firstName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FirstName { get; set; }
+        public string? FirstName { get => _explicitNullValueFirstName; set { _explicitNullValueFirstName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("firstName"); else _explicitNullProperties?.Remove("firstName"); } }
+        private string? _explicitNullValueFirstName = default!;
 #nullable restore
 #else
-        public string FirstName { get; set; }
+        public string FirstName { get => _explicitNullValueFirstName; set { _explicitNullValueFirstName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("firstName"); else _explicitNullProperties?.Remove("firstName"); } }
+        private string _explicitNullValueFirstName = default!;
 #endif
         /// <summary>The lastName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LastName { get; set; }
+        public string? LastName { get => _explicitNullValueLastName; set { _explicitNullValueLastName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastName"); else _explicitNullProperties?.Remove("lastName"); } }
+        private string? _explicitNullValueLastName = default!;
 #nullable restore
 #else
-        public string LastName { get; set; }
+        public string LastName { get => _explicitNullValueLastName; set { _explicitNullValueLastName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastName"); else _explicitNullProperties?.Remove("lastName"); } }
+        private string _explicitNullValueLastName = default!;
 #endif
         /// <summary>The locationIds property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? LocationIds { get; set; }
+        public List<string>? LocationIds { get => _explicitNullValueLocationIds; set { _explicitNullValueLocationIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationIds"); else _explicitNullProperties?.Remove("locationIds"); } }
+        private List<string>? _explicitNullValueLocationIds = default!;
 #nullable restore
 #else
-        public List<string> LocationIds { get; set; }
+        public List<string> LocationIds { get => _explicitNullValueLocationIds; set { _explicitNullValueLocationIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationIds"); else _explicitNullProperties?.Remove("locationIds"); } }
+        private List<string> _explicitNullValueLocationIds = default!;
 #endif
         /// <summary>The password property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Password { get; set; }
+        public string? Password { get => _explicitNullValuePassword; set { _explicitNullValuePassword = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("password"); else _explicitNullProperties?.Remove("password"); } }
+        private string? _explicitNullValuePassword = default!;
 #nullable restore
 #else
-        public string Password { get; set; }
+        public string Password { get => _explicitNullValuePassword; set { _explicitNullValuePassword = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("password"); else _explicitNullProperties?.Remove("password"); } }
+        private string _explicitNullValuePassword = default!;
 #endif
         /// <summary>The permissions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PermissionsDto? Permissions { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PermissionsDto? Permissions { get => _explicitNullValuePermissions; set { _explicitNullValuePermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissions"); else _explicitNullProperties?.Remove("permissions"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.PermissionsDto? _explicitNullValuePermissions = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PermissionsDto Permissions { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PermissionsDto Permissions { get => _explicitNullValuePermissions; set { _explicitNullValuePermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissions"); else _explicitNullProperties?.Remove("permissions"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.PermissionsDto _explicitNullValuePermissions = default!;
 #endif
         /// <summary>The phone property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Phone { get; set; }
+        public string? Phone { get => _explicitNullValuePhone; set { _explicitNullValuePhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone"); else _explicitNullProperties?.Remove("phone"); } }
+        private string? _explicitNullValuePhone = default!;
 #nullable restore
 #else
-        public string Phone { get; set; }
+        public string Phone { get => _explicitNullValuePhone; set { _explicitNullValuePhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone"); else _explicitNullProperties?.Remove("phone"); } }
+        private string _explicitNullValuePhone = default!;
 #endif
         /// <summary>Platform language preference for the user</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateUserDtoPlatformLanguage? PlatformLanguage { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateUserDtoPlatformLanguage? PlatformLanguage { get => _explicitNullValuePlatformLanguage; set { _explicitNullValuePlatformLanguage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platformLanguage"); else _explicitNullProperties?.Remove("platformLanguage"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.UpdateUserDtoPlatformLanguage? _explicitNullValuePlatformLanguage = default!;
         /// <summary>The profilePhoto property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProfilePhoto { get; set; }
+        public string? ProfilePhoto { get => _explicitNullValueProfilePhoto; set { _explicitNullValueProfilePhoto = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("profilePhoto"); else _explicitNullProperties?.Remove("profilePhoto"); } }
+        private string? _explicitNullValueProfilePhoto = default!;
 #nullable restore
 #else
-        public string ProfilePhoto { get; set; }
+        public string ProfilePhoto { get => _explicitNullValueProfilePhoto; set { _explicitNullValueProfilePhoto = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("profilePhoto"); else _explicitNullProperties?.Remove("profilePhoto"); } }
+        private string _explicitNullValueProfilePhoto = default!;
 #endif
         /// <summary>The role property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Role { get; set; }
+        public string? Role { get => _explicitNullValueRole; set { _explicitNullValueRole = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("role"); else _explicitNullProperties?.Remove("role"); } }
+        private string? _explicitNullValueRole = default!;
 #nullable restore
 #else
-        public string Role { get; set; }
+        public string Role { get => _explicitNullValueRole; set { _explicitNullValueRole = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("role"); else _explicitNullProperties?.Remove("role"); } }
+        private string _explicitNullValueRole = default!;
 #endif
         /// <summary>Scopes allowed for users. Only scopes that have been passed will be enabled. If passed empty all the scopes will be get disabled</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateUserDtoScopesItem?>? Scopes { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateUserDtoScopesItem?>? Scopes { get => _explicitNullValueScopes; set { _explicitNullValueScopes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scopes"); else _explicitNullProperties?.Remove("scopes"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateUserDtoScopesItem?>? _explicitNullValueScopes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateUserDtoScopesItem?> Scopes { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateUserDtoScopesItem?> Scopes { get => _explicitNullValueScopes; set { _explicitNullValueScopes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scopes"); else _explicitNullProperties?.Remove("scopes"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateUserDtoScopesItem?> _explicitNullValueScopes = default!;
 #endif
         /// <summary>Assigned Scopes allowed for users. Only scopes that have been passed will be enabled. If passed empty all the assigned scopes will be get disabled</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateUserDtoScopesAssignedToOnlyItem?>? ScopesAssignedToOnly { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateUserDtoScopesAssignedToOnlyItem?>? ScopesAssignedToOnly { get => _explicitNullValueScopesAssignedToOnly; set { _explicitNullValueScopesAssignedToOnly = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scopesAssignedToOnly"); else _explicitNullProperties?.Remove("scopesAssignedToOnly"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateUserDtoScopesAssignedToOnlyItem?>? _explicitNullValueScopesAssignedToOnly = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateUserDtoScopesAssignedToOnlyItem?> ScopesAssignedToOnly { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateUserDtoScopesAssignedToOnlyItem?> ScopesAssignedToOnly { get => _explicitNullValueScopesAssignedToOnly; set { _explicitNullValueScopesAssignedToOnly = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scopesAssignedToOnly"); else _explicitNullProperties?.Remove("scopesAssignedToOnly"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateUserDtoScopesAssignedToOnlyItem?> _explicitNullValueScopesAssignedToOnly = default!;
 #endif
         /// <summary>Per-location inbound Twilio number in E.164 format, keyed by location id (Call and Voicemail Inbound Number for direct Twilio, not LC Phone). Replacement semantics: if you send twilioPhone in the request body, the stored map is replaced entirely with this object (not merged). Any location id omitted from the object is removed from the saved map. Omit the twilioPhone property entirely to leave existing numbers unchanged. Send an empty object {} to clear all per-location numbers. To clear a single location only, set that location id to an empty string &quot;&quot;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateUserDtoTwilioPhoneProperty2? TwilioPhone { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateUserDtoTwilioPhoneProperty2? TwilioPhone { get => _explicitNullValueTwilioPhone; set { _explicitNullValueTwilioPhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilioPhone"); else _explicitNullProperties?.Remove("twilioPhone"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.UpdateUserDtoTwilioPhoneProperty2? _explicitNullValueTwilioPhone = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateUserDtoTwilioPhoneProperty2 TwilioPhone { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateUserDtoTwilioPhoneProperty2 TwilioPhone { get => _explicitNullValueTwilioPhone; set { _explicitNullValueTwilioPhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilioPhone"); else _explicitNullProperties?.Remove("twilioPhone"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.UpdateUserDtoTwilioPhoneProperty2 _explicitNullValueTwilioPhone = default!;
 #endif
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Type { get; set; }
+        public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private string? _explicitNullValueType = default!;
 #nullable restore
 #else
-        public string Type { get; set; }
+        public string Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private string _explicitNullValueType = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpdateUserDto"/> and sets the default values.
@@ -144,7 +195,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.UpdateUserDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.UpdateUserDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.UpdateUserDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -193,6 +244,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteCollectionOfEnumValues<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateUserDtoScopesAssignedToOnlyItem>("scopesAssignedToOnly", ScopesAssignedToOnly);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateUserDtoTwilioPhoneProperty2>("twilioPhone", TwilioPhone);
             writer.WriteStringValue("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

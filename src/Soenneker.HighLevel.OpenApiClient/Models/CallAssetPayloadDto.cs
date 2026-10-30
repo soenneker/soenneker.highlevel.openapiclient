@@ -11,48 +11,70 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CallAssetPayloadDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("adScheduleTargets") is { } nullNodeAdScheduleTargets && nullNodeAdScheduleTargets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdScheduleTargets = null;
+            if (parseNode.GetChildNode("callConversionAction") is { } nullNodeCallConversionAction && nullNodeCallConversionAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallConversionAction = null;
+            if (parseNode.GetChildNode("countryCode") is { } nullNodeCountryCode && nullNodeCountryCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CountryCode = null;
+            if (parseNode.GetChildNode("phoneNumber") is { } nullNodePhoneNumber && nullNodePhoneNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhoneNumber = null;
+            if (parseNode.GetChildNode("resourceName") is { } nullNodeResourceName && nullNodeResourceName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResourceName = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Ad schedule targets restricting when the call asset is shown</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.AdScheduleTargetDto>? AdScheduleTargets { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.AdScheduleTargetDto>? AdScheduleTargets { get => _explicitNullValueAdScheduleTargets; set { _explicitNullValueAdScheduleTargets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adScheduleTargets"); else _explicitNullProperties?.Remove("adScheduleTargets"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.AdScheduleTargetDto>? _explicitNullValueAdScheduleTargets = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.AdScheduleTargetDto> AdScheduleTargets { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.AdScheduleTargetDto> AdScheduleTargets { get => _explicitNullValueAdScheduleTargets; set { _explicitNullValueAdScheduleTargets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adScheduleTargets"); else _explicitNullProperties?.Remove("adScheduleTargets"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.AdScheduleTargetDto> _explicitNullValueAdScheduleTargets = default!;
 #endif
         /// <summary>Call conversion action resource name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CallConversionAction { get; set; }
+        public string? CallConversionAction { get => _explicitNullValueCallConversionAction; set { _explicitNullValueCallConversionAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callConversionAction"); else _explicitNullProperties?.Remove("callConversionAction"); } }
+        private string? _explicitNullValueCallConversionAction = default!;
 #nullable restore
 #else
-        public string CallConversionAction { get; set; }
+        public string CallConversionAction { get => _explicitNullValueCallConversionAction; set { _explicitNullValueCallConversionAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callConversionAction"); else _explicitNullProperties?.Remove("callConversionAction"); } }
+        private string _explicitNullValueCallConversionAction = default!;
 #endif
         /// <summary>Two-letter ISO country code</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CountryCode { get; set; }
+        public string? CountryCode { get => _explicitNullValueCountryCode; set { _explicitNullValueCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("countryCode"); else _explicitNullProperties?.Remove("countryCode"); } }
+        private string? _explicitNullValueCountryCode = default!;
 #nullable restore
 #else
-        public string CountryCode { get; set; }
+        public string CountryCode { get => _explicitNullValueCountryCode; set { _explicitNullValueCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("countryCode"); else _explicitNullProperties?.Remove("countryCode"); } }
+        private string _explicitNullValueCountryCode = default!;
 #endif
         /// <summary>Phone number for call ads</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PhoneNumber { get; set; }
+        public string? PhoneNumber { get => _explicitNullValuePhoneNumber; set { _explicitNullValuePhoneNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phoneNumber"); else _explicitNullProperties?.Remove("phoneNumber"); } }
+        private string? _explicitNullValuePhoneNumber = default!;
 #nullable restore
 #else
-        public string PhoneNumber { get; set; }
+        public string PhoneNumber { get => _explicitNullValuePhoneNumber; set { _explicitNullValuePhoneNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phoneNumber"); else _explicitNullProperties?.Remove("phoneNumber"); } }
+        private string _explicitNullValuePhoneNumber = default!;
 #endif
         /// <summary>Google Ads resource name for an existing call asset</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ResourceName { get; set; }
+        public string? ResourceName { get => _explicitNullValueResourceName; set { _explicitNullValueResourceName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resourceName"); else _explicitNullProperties?.Remove("resourceName"); } }
+        private string? _explicitNullValueResourceName = default!;
 #nullable restore
 #else
-        public string ResourceName { get; set; }
+        public string ResourceName { get => _explicitNullValueResourceName; set { _explicitNullValueResourceName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resourceName"); else _explicitNullProperties?.Remove("resourceName"); } }
+        private string _explicitNullValueResourceName = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CallAssetPayloadDto"/> and sets the default values.
@@ -69,7 +91,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.CallAssetPayloadDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.CallAssetPayloadDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.CallAssetPayloadDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -98,6 +120,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("countryCode", CountryCode);
             writer.WriteStringValue("phoneNumber", PhoneNumber);
             writer.WriteStringValue("resourceName", ResourceName);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

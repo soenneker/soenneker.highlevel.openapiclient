@@ -57,6 +57,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Opportunities.Search
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.OpportunitiesCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.OpportunitiesCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.OpportunitiesCommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.SearchSuccessfulResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.SearchSuccessfulResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -87,6 +89,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Opportunities.Search
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.OpportunitiesCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.OpportunitiesCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.OpportunitiesCommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.PostSearchSuccessfulResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.PostSearchSuccessfulResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

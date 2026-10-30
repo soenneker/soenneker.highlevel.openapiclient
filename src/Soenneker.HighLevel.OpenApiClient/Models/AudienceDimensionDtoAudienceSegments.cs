@@ -12,32 +12,48 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AudienceDimensionDtoAudienceSegments : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("customAudiences") is { } nullNodeCustomAudiences && nullNodeCustomAudiences.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomAudiences = null;
+            if (parseNode.GetChildNode("userInterests") is { } nullNodeUserInterests && nullNodeUserInterests.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserInterests = null;
+            if (parseNode.GetChildNode("userLists") is { } nullNodeUserLists && nullNodeUserLists.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserLists = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Resource names of custom audience segments</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? CustomAudiences { get; set; }
+        public List<string>? CustomAudiences { get => _explicitNullValueCustomAudiences; set { _explicitNullValueCustomAudiences = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customAudiences"); else _explicitNullProperties?.Remove("customAudiences"); } }
+        private List<string>? _explicitNullValueCustomAudiences = default!;
 #nullable restore
 #else
-        public List<string> CustomAudiences { get; set; }
+        public List<string> CustomAudiences { get => _explicitNullValueCustomAudiences; set { _explicitNullValueCustomAudiences = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customAudiences"); else _explicitNullProperties?.Remove("customAudiences"); } }
+        private List<string> _explicitNullValueCustomAudiences = default!;
 #endif
         /// <summary>Resource names of user interest segments (in-market or affinity audiences)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? UserInterests { get; set; }
+        public List<string>? UserInterests { get => _explicitNullValueUserInterests; set { _explicitNullValueUserInterests = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userInterests"); else _explicitNullProperties?.Remove("userInterests"); } }
+        private List<string>? _explicitNullValueUserInterests = default!;
 #nullable restore
 #else
-        public List<string> UserInterests { get; set; }
+        public List<string> UserInterests { get => _explicitNullValueUserInterests; set { _explicitNullValueUserInterests = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userInterests"); else _explicitNullProperties?.Remove("userInterests"); } }
+        private List<string> _explicitNullValueUserInterests = default!;
 #endif
         /// <summary>Resource names of user lists (remarketing lists, customer match lists, etc.)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? UserLists { get; set; }
+        public List<string>? UserLists { get => _explicitNullValueUserLists; set { _explicitNullValueUserLists = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userLists"); else _explicitNullProperties?.Remove("userLists"); } }
+        private List<string>? _explicitNullValueUserLists = default!;
 #nullable restore
 #else
-        public List<string> UserLists { get; set; }
+        public List<string> UserLists { get => _explicitNullValueUserLists; set { _explicitNullValueUserLists = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userLists"); else _explicitNullProperties?.Remove("userLists"); } }
+        private List<string> _explicitNullValueUserLists = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.AudienceDimensionDtoAudienceSegments"/> and sets the default values.
@@ -54,7 +70,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.AudienceDimensionDtoAudienceSegments CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.AudienceDimensionDtoAudienceSegments();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.AudienceDimensionDtoAudienceSegments(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +95,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("customAudiences", CustomAudiences);
             writer.WriteCollectionOfPrimitiveValues<string>("userInterests", UserInterests);
             writer.WriteCollectionOfPrimitiveValues<string>("userLists", UserLists);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

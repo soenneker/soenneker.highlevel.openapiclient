@@ -55,6 +55,8 @@ namespace Soenneker.HighLevel.OpenApiClient.CustomMenus.Item
             {
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenusCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenusCommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteCustomMenuSuccessfulResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.DeleteCustomMenuSuccessfulResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -80,6 +82,8 @@ namespace Soenneker.HighLevel.OpenApiClient.CustomMenus.Item
             {
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenusCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenusCommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.GetSingleCustomMenusSuccessfulResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.GetSingleCustomMenusSuccessfulResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -107,6 +111,8 @@ namespace Soenneker.HighLevel.OpenApiClient.CustomMenus.Item
             {
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenusCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenusCommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomMenuLinkResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomMenuLinkResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

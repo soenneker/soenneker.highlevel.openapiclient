@@ -12,24 +12,37 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GoogleAdGroupDtoKeywords : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("negatives") is { } nullNodeNegatives && nullNodeNegatives.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Negatives = null;
+            if (parseNode.GetChildNode("positives") is { } nullNodePositives && nullNodePositives.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Positives = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Negative keywords</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleKeywordItemDto>? Negatives { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleKeywordItemDto>? Negatives { get => _explicitNullValueNegatives; set { _explicitNullValueNegatives = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("negatives"); else _explicitNullProperties?.Remove("negatives"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleKeywordItemDto>? _explicitNullValueNegatives = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleKeywordItemDto> Negatives { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleKeywordItemDto> Negatives { get => _explicitNullValueNegatives; set { _explicitNullValueNegatives = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("negatives"); else _explicitNullProperties?.Remove("negatives"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleKeywordItemDto> _explicitNullValueNegatives = default!;
 #endif
         /// <summary>Positive keywords</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleKeywordItemDto>? Positives { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleKeywordItemDto>? Positives { get => _explicitNullValuePositives; set { _explicitNullValuePositives = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("positives"); else _explicitNullProperties?.Remove("positives"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleKeywordItemDto>? _explicitNullValuePositives = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleKeywordItemDto> Positives { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleKeywordItemDto> Positives { get => _explicitNullValuePositives; set { _explicitNullValuePositives = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("positives"); else _explicitNullProperties?.Remove("positives"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleKeywordItemDto> _explicitNullValuePositives = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdGroupDtoKeywords"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdGroupDtoKeywords CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdGroupDtoKeywords();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdGroupDtoKeywords(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleKeywordItemDto>("negatives", Negatives);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleKeywordItemDto>("positives", Positives);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

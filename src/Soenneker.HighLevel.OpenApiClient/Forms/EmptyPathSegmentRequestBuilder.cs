@@ -55,6 +55,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Forms
             {
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.FormsCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.FormsCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.FormsSuccessfulResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.FormsSuccessfulResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

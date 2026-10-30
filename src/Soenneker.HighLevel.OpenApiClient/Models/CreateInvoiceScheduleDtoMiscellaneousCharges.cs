@@ -12,26 +12,41 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CreateInvoiceScheduleDtoMiscellaneousCharges : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("charges") is { } nullNodeCharges && nullNodeCharges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Charges = null;
+            if (parseNode.GetChildNode("collectedMiscellaneousCharges") is { } nullNodeCollectedMiscellaneousCharges && nullNodeCollectedMiscellaneousCharges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CollectedMiscellaneousCharges = null;
+            if (parseNode.GetChildNode("paidCharges") is { } nullNodePaidCharges && nullNodePaidCharges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaidCharges = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>charges for the processing fee</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<UntypedNode>? Charges { get; set; }
+        public List<UntypedNode>? Charges { get => _explicitNullValueCharges; set { _explicitNullValueCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("charges"); else _explicitNullProperties?.Remove("charges"); } }
+        private List<UntypedNode>? _explicitNullValueCharges = default!;
 #nullable restore
 #else
-        public List<UntypedNode> Charges { get; set; }
+        public List<UntypedNode> Charges { get => _explicitNullValueCharges; set { _explicitNullValueCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("charges"); else _explicitNullProperties?.Remove("charges"); } }
+        private List<UntypedNode> _explicitNullValueCharges = default!;
 #endif
         /// <summary>collected miscellaneous charges</summary>
-        public double? CollectedMiscellaneousCharges { get; set; }
+        public double? CollectedMiscellaneousCharges { get => _explicitNullValueCollectedMiscellaneousCharges; set { _explicitNullValueCollectedMiscellaneousCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collectedMiscellaneousCharges"); else _explicitNullProperties?.Remove("collectedMiscellaneousCharges"); } }
+        private double? _explicitNullValueCollectedMiscellaneousCharges = default!;
         /// <summary>paid miscellaneous charges</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ProcessingFeePaidChargeDto>? PaidCharges { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ProcessingFeePaidChargeDto>? PaidCharges { get => _explicitNullValuePaidCharges; set { _explicitNullValuePaidCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paidCharges"); else _explicitNullProperties?.Remove("paidCharges"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.ProcessingFeePaidChargeDto>? _explicitNullValuePaidCharges = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ProcessingFeePaidChargeDto> PaidCharges { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ProcessingFeePaidChargeDto> PaidCharges { get => _explicitNullValuePaidCharges; set { _explicitNullValuePaidCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paidCharges"); else _explicitNullProperties?.Remove("paidCharges"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.ProcessingFeePaidChargeDto> _explicitNullValuePaidCharges = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceScheduleDtoMiscellaneousCharges"/> and sets the default values.
@@ -48,7 +63,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceScheduleDtoMiscellaneousCharges CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceScheduleDtoMiscellaneousCharges();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceScheduleDtoMiscellaneousCharges(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -58,7 +73,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "charges", n => { Charges = n.GetCollectionOfPrimitiveValues<UntypedNode>()?.AsList(); } },
+                { "charges", n => { Charges = n.GetCollectionOfObjectValues<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "collectedMiscellaneousCharges", n => { CollectedMiscellaneousCharges = n.GetDoubleValue(); } },
                 { "paidCharges", n => { PaidCharges = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ProcessingFeePaidChargeDto>(global::Soenneker.HighLevel.OpenApiClient.Models.ProcessingFeePaidChargeDto.CreateFromDiscriminatorValue)?.AsList(); } },
             };
@@ -73,6 +88,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<UntypedNode>("charges", Charges);
             writer.WriteDoubleValue("collectedMiscellaneousCharges", CollectedMiscellaneousCharges);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ProcessingFeePaidChargeDto>("paidCharges", PaidCharges);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

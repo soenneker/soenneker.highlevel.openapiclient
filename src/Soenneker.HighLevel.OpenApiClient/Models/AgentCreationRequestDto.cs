@@ -11,124 +11,182 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AgentCreationRequestDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("agentName") is { } nullNodeAgentName && nullNodeAgentName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgentName = null;
+            if (parseNode.GetChildNode("agentPrompt") is { } nullNodeAgentPrompt && nullNodeAgentPrompt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgentPrompt = null;
+            if (parseNode.GetChildNode("agentWorkingHours") is { } nullNodeAgentWorkingHours && nullNodeAgentWorkingHours.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgentWorkingHours = null;
+            if (parseNode.GetChildNode("businessName") is { } nullNodeBusinessName && nullNodeBusinessName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BusinessName = null;
+            if (parseNode.GetChildNode("callEndWorkflowIds") is { } nullNodeCallEndWorkflowIds && nullNodeCallEndWorkflowIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallEndWorkflowIds = null;
+            if (parseNode.GetChildNode("inboundNumber") is { } nullNodeInboundNumber && nullNodeInboundNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InboundNumber = null;
+            if (parseNode.GetChildNode("isAgentAsBackupDisabled") is { } nullNodeIsAgentAsBackupDisabled && nullNodeIsAgentAsBackupDisabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAgentAsBackupDisabled = null;
+            if (parseNode.GetChildNode("language") is { } nullNodeLanguage && nullNodeLanguage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Language = null;
+            if (parseNode.GetChildNode("locationId") is { } nullNodeLocationId && nullNodeLocationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationId = null;
+            if (parseNode.GetChildNode("maxCallDuration") is { } nullNodeMaxCallDuration && nullNodeMaxCallDuration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxCallDuration = null;
+            if (parseNode.GetChildNode("numberPoolId") is { } nullNodeNumberPoolId && nullNodeNumberPoolId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumberPoolId = null;
+            if (parseNode.GetChildNode("patienceLevel") is { } nullNodePatienceLevel && nullNodePatienceLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PatienceLevel = null;
+            if (parseNode.GetChildNode("reminderAfterIdleTimeSeconds") is { } nullNodeReminderAfterIdleTimeSeconds && nullNodeReminderAfterIdleTimeSeconds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReminderAfterIdleTimeSeconds = null;
+            if (parseNode.GetChildNode("sendPostCallNotificationTo") is { } nullNodeSendPostCallNotificationTo && nullNodeSendPostCallNotificationTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SendPostCallNotificationTo = null;
+            if (parseNode.GetChildNode("sendUserIdleReminders") is { } nullNodeSendUserIdleReminders && nullNodeSendUserIdleReminders.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SendUserIdleReminders = null;
+            if (parseNode.GetChildNode("timezone") is { } nullNodeTimezone && nullNodeTimezone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Timezone = null;
+            if (parseNode.GetChildNode("translation") is { } nullNodeTranslation && nullNodeTranslation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Translation = null;
+            if (parseNode.GetChildNode("voiceId") is { } nullNodeVoiceId && nullNodeVoiceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VoiceId = null;
+            if (parseNode.GetChildNode("welcomeMessage") is { } nullNodeWelcomeMessage && nullNodeWelcomeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WelcomeMessage = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Display name for the voice AI agent, between 1-40 characters. Default: &quot;My Agent {random 3 digit number}&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AgentName { get; set; }
+        public string? AgentName { get => _explicitNullValueAgentName; set { _explicitNullValueAgentName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agentName"); else _explicitNullProperties?.Remove("agentName"); } }
+        private string? _explicitNullValueAgentName = default!;
 #nullable restore
 #else
-        public string AgentName { get; set; }
+        public string AgentName { get => _explicitNullValueAgentName; set { _explicitNullValueAgentName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agentName"); else _explicitNullProperties?.Remove("agentName"); } }
+        private string _explicitNullValueAgentName = default!;
 #endif
         /// <summary>Custom instructions defining the agent&apos;s behavior and personality. Default: Basic prompt generated automatically</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AgentPrompt { get; set; }
+        public string? AgentPrompt { get => _explicitNullValueAgentPrompt; set { _explicitNullValueAgentPrompt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agentPrompt"); else _explicitNullProperties?.Remove("agentPrompt"); } }
+        private string? _explicitNullValueAgentPrompt = default!;
 #nullable restore
 #else
-        public string AgentPrompt { get; set; }
+        public string AgentPrompt { get => _explicitNullValueAgentPrompt; set { _explicitNullValueAgentPrompt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agentPrompt"); else _explicitNullProperties?.Remove("agentPrompt"); } }
+        private string _explicitNullValueAgentPrompt = default!;
 #endif
         /// <summary>Time intervals defining when the agent accepts calls, organized by day of week. Default: [] (available 24/7)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.AgentWorkingHoursDto>? AgentWorkingHours { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.AgentWorkingHoursDto>? AgentWorkingHours { get => _explicitNullValueAgentWorkingHours; set { _explicitNullValueAgentWorkingHours = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agentWorkingHours"); else _explicitNullProperties?.Remove("agentWorkingHours"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.AgentWorkingHoursDto>? _explicitNullValueAgentWorkingHours = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.AgentWorkingHoursDto> AgentWorkingHours { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.AgentWorkingHoursDto> AgentWorkingHours { get => _explicitNullValueAgentWorkingHours; set { _explicitNullValueAgentWorkingHours = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agentWorkingHours"); else _explicitNullProperties?.Remove("agentWorkingHours"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.AgentWorkingHoursDto> _explicitNullValueAgentWorkingHours = default!;
 #endif
         /// <summary>Name of the business this agent represents. Default: Uses location name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BusinessName { get; set; }
+        public string? BusinessName { get => _explicitNullValueBusinessName; set { _explicitNullValueBusinessName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("businessName"); else _explicitNullProperties?.Remove("businessName"); } }
+        private string? _explicitNullValueBusinessName = default!;
 #nullable restore
 #else
-        public string BusinessName { get; set; }
+        public string BusinessName { get => _explicitNullValueBusinessName; set { _explicitNullValueBusinessName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("businessName"); else _explicitNullProperties?.Remove("businessName"); } }
+        private string _explicitNullValueBusinessName = default!;
 #endif
         /// <summary>Array of workflow IDs to trigger automatically when calls end. Default: []</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? CallEndWorkflowIds { get; set; }
+        public List<string>? CallEndWorkflowIds { get => _explicitNullValueCallEndWorkflowIds; set { _explicitNullValueCallEndWorkflowIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callEndWorkflowIds"); else _explicitNullProperties?.Remove("callEndWorkflowIds"); } }
+        private List<string>? _explicitNullValueCallEndWorkflowIds = default!;
 #nullable restore
 #else
-        public List<string> CallEndWorkflowIds { get; set; }
+        public List<string> CallEndWorkflowIds { get => _explicitNullValueCallEndWorkflowIds; set { _explicitNullValueCallEndWorkflowIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callEndWorkflowIds"); else _explicitNullProperties?.Remove("callEndWorkflowIds"); } }
+        private List<string> _explicitNullValueCallEndWorkflowIds = default!;
 #endif
         /// <summary>Phone number for receiving inbound calls to this agent. Default: null</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InboundNumber { get; set; }
+        public string? InboundNumber { get => _explicitNullValueInboundNumber; set { _explicitNullValueInboundNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inboundNumber"); else _explicitNullProperties?.Remove("inboundNumber"); } }
+        private string? _explicitNullValueInboundNumber = default!;
 #nullable restore
 #else
-        public string InboundNumber { get; set; }
+        public string InboundNumber { get => _explicitNullValueInboundNumber; set { _explicitNullValueInboundNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inboundNumber"); else _explicitNullProperties?.Remove("inboundNumber"); } }
+        private string _explicitNullValueInboundNumber = default!;
 #endif
         /// <summary>Prevents this agent from being used as a fallback option. Default: false (Available as backup agent)</summary>
-        public bool? IsAgentAsBackupDisabled { get; set; }
+        public bool? IsAgentAsBackupDisabled { get => _explicitNullValueIsAgentAsBackupDisabled; set { _explicitNullValueIsAgentAsBackupDisabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isAgentAsBackupDisabled"); else _explicitNullProperties?.Remove("isAgentAsBackupDisabled"); } }
+        private bool? _explicitNullValueIsAgentAsBackupDisabled = default!;
         /// <summary>Language code for the agent&apos;s speech and understanding. Default: &quot;en-US&quot;</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.VoiceAiLanguage? Language { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.VoiceAiLanguage? Language { get => _explicitNullValueLanguage; set { _explicitNullValueLanguage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("language"); else _explicitNullProperties?.Remove("language"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.VoiceAiLanguage? _explicitNullValueLanguage = default!;
         /// <summary>Unique identifier for the location where this agent will operate</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LocationId { get; set; }
+        public string? LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
+        private string? _explicitNullValueLocationId = default!;
 #nullable restore
 #else
-        public string LocationId { get; set; }
+        public string LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
+        private string _explicitNullValueLocationId = default!;
 #endif
         /// <summary>Maximum call duration in seconds, between 180-900 (3-15 minutes). Default: 300 seconds (5 minutes)</summary>
-        public double? MaxCallDuration { get; set; }
+        public double? MaxCallDuration { get => _explicitNullValueMaxCallDuration; set { _explicitNullValueMaxCallDuration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxCallDuration"); else _explicitNullProperties?.Remove("maxCallDuration"); } }
+        private double? _explicitNullValueMaxCallDuration = default!;
         /// <summary>Identifier for the number pool managing phone number allocation. Default: null</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NumberPoolId { get; set; }
+        public string? NumberPoolId { get => _explicitNullValueNumberPoolId; set { _explicitNullValueNumberPoolId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("numberPoolId"); else _explicitNullProperties?.Remove("numberPoolId"); } }
+        private string? _explicitNullValueNumberPoolId = default!;
 #nullable restore
 #else
-        public string NumberPoolId { get; set; }
+        public string NumberPoolId { get => _explicitNullValueNumberPoolId; set { _explicitNullValueNumberPoolId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("numberPoolId"); else _explicitNullProperties?.Remove("numberPoolId"); } }
+        private string _explicitNullValueNumberPoolId = default!;
 #endif
         /// <summary>Tolerance level for caller response delays. Default: &quot;high&quot;</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PatienceLevel? PatienceLevel { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PatienceLevel? PatienceLevel { get => _explicitNullValuePatienceLevel; set { _explicitNullValuePatienceLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("patienceLevel"); else _explicitNullProperties?.Remove("patienceLevel"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.PatienceLevel? _explicitNullValuePatienceLevel = default!;
         /// <summary>Seconds to wait before sending idle reminders, between 1-20. Default: 8 seconds</summary>
-        public double? ReminderAfterIdleTimeSeconds { get; set; }
+        public double? ReminderAfterIdleTimeSeconds { get => _explicitNullValueReminderAfterIdleTimeSeconds; set { _explicitNullValueReminderAfterIdleTimeSeconds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reminderAfterIdleTimeSeconds"); else _explicitNullProperties?.Remove("reminderAfterIdleTimeSeconds"); } }
+        private double? _explicitNullValueReminderAfterIdleTimeSeconds = default!;
         /// <summary>Configuration for post-call email notifications to various recipients. Default: []</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AgentCreationRequestDtoSendPostCallNotificationTo? SendPostCallNotificationTo { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AgentCreationRequestDtoSendPostCallNotificationTo? SendPostCallNotificationTo { get => _explicitNullValueSendPostCallNotificationTo; set { _explicitNullValueSendPostCallNotificationTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sendPostCallNotificationTo"); else _explicitNullProperties?.Remove("sendPostCallNotificationTo"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.AgentCreationRequestDtoSendPostCallNotificationTo? _explicitNullValueSendPostCallNotificationTo = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AgentCreationRequestDtoSendPostCallNotificationTo SendPostCallNotificationTo { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AgentCreationRequestDtoSendPostCallNotificationTo SendPostCallNotificationTo { get => _explicitNullValueSendPostCallNotificationTo; set { _explicitNullValueSendPostCallNotificationTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sendPostCallNotificationTo"); else _explicitNullProperties?.Remove("sendPostCallNotificationTo"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.AgentCreationRequestDtoSendPostCallNotificationTo _explicitNullValueSendPostCallNotificationTo = default!;
 #endif
         /// <summary>Enables automatic reminders when callers are silent. Default: true</summary>
-        public bool? SendUserIdleReminders { get; set; }
+        public bool? SendUserIdleReminders { get => _explicitNullValueSendUserIdleReminders; set { _explicitNullValueSendUserIdleReminders = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sendUserIdleReminders"); else _explicitNullProperties?.Remove("sendUserIdleReminders"); } }
+        private bool? _explicitNullValueSendUserIdleReminders = default!;
         /// <summary>IANA timezone identifier affecting working hours and scheduling. Default: Location timezone</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Timezone { get; set; }
+        public string? Timezone { get => _explicitNullValueTimezone; set { _explicitNullValueTimezone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timezone"); else _explicitNullProperties?.Remove("timezone"); } }
+        private string? _explicitNullValueTimezone = default!;
 #nullable restore
 #else
-        public string Timezone { get; set; }
+        public string Timezone { get => _explicitNullValueTimezone; set { _explicitNullValueTimezone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timezone"); else _explicitNullProperties?.Remove("timezone"); } }
+        private string _explicitNullValueTimezone = default!;
 #endif
         /// <summary>Language translation settings including enablement flag and target language code. Rules: (1) translation.enabled can only be true if the agent&apos;s language is not en-US; (2) when enabled, translation.language must be either the agent&apos;s language or en-US; (3) when enabled, translation.language is required.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AgentCreationRequestDtoTranslation? Translation { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AgentCreationRequestDtoTranslation? Translation { get => _explicitNullValueTranslation; set { _explicitNullValueTranslation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("translation"); else _explicitNullProperties?.Remove("translation"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.AgentCreationRequestDtoTranslation? _explicitNullValueTranslation = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AgentCreationRequestDtoTranslation Translation { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AgentCreationRequestDtoTranslation Translation { get => _explicitNullValueTranslation; set { _explicitNullValueTranslation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("translation"); else _explicitNullProperties?.Remove("translation"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.AgentCreationRequestDtoTranslation _explicitNullValueTranslation = default!;
 #endif
         /// <summary>Identifier for the speech synthesis voice from available voice options. Default: Auto generated</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VoiceId { get; set; }
+        public string? VoiceId { get => _explicitNullValueVoiceId; set { _explicitNullValueVoiceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("voiceId"); else _explicitNullProperties?.Remove("voiceId"); } }
+        private string? _explicitNullValueVoiceId = default!;
 #nullable restore
 #else
-        public string VoiceId { get; set; }
+        public string VoiceId { get => _explicitNullValueVoiceId; set { _explicitNullValueVoiceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("voiceId"); else _explicitNullProperties?.Remove("voiceId"); } }
+        private string _explicitNullValueVoiceId = default!;
 #endif
         /// <summary>Initial greeting spoken when the agent answers calls. Default: Auto generated</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WelcomeMessage { get; set; }
+        public string? WelcomeMessage { get => _explicitNullValueWelcomeMessage; set { _explicitNullValueWelcomeMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("welcomeMessage"); else _explicitNullProperties?.Remove("welcomeMessage"); } }
+        private string? _explicitNullValueWelcomeMessage = default!;
 #nullable restore
 #else
-        public string WelcomeMessage { get; set; }
+        public string WelcomeMessage { get => _explicitNullValueWelcomeMessage; set { _explicitNullValueWelcomeMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("welcomeMessage"); else _explicitNullProperties?.Remove("welcomeMessage"); } }
+        private string _explicitNullValueWelcomeMessage = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.AgentCreationRequestDto"/> and sets the default values.
@@ -145,7 +203,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.AgentCreationRequestDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.AgentCreationRequestDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.AgentCreationRequestDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -202,6 +260,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AgentCreationRequestDtoTranslation>("translation", Translation);
             writer.WriteStringValue("voiceId", VoiceId);
             writer.WriteStringValue("welcomeMessage", WelcomeMessage);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

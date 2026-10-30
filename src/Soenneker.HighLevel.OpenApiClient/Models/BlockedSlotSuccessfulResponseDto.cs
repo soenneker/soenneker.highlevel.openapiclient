@@ -11,64 +11,92 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class BlockedSlotSuccessfulResponseDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("assignedUserId") is { } nullNodeAssignedUserId && nullNodeAssignedUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssignedUserId = null;
+            if (parseNode.GetChildNode("calendarId") is { } nullNodeCalendarId && nullNodeCalendarId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CalendarId = null;
+            if (parseNode.GetChildNode("endTime") is { } nullNodeEndTime && nullNodeEndTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndTime = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("locationId") is { } nullNodeLocationId && nullNodeLocationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationId = null;
+            if (parseNode.GetChildNode("startTime") is { } nullNodeStartTime && nullNodeStartTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartTime = null;
+            if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Assigned User Id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AssignedUserId { get; set; }
+        public string? AssignedUserId { get => _explicitNullValueAssignedUserId; set { _explicitNullValueAssignedUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assignedUserId"); else _explicitNullProperties?.Remove("assignedUserId"); } }
+        private string? _explicitNullValueAssignedUserId = default!;
 #nullable restore
 #else
-        public string AssignedUserId { get; set; }
+        public string AssignedUserId { get => _explicitNullValueAssignedUserId; set { _explicitNullValueAssignedUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assignedUserId"); else _explicitNullProperties?.Remove("assignedUserId"); } }
+        private string _explicitNullValueAssignedUserId = default!;
 #endif
         /// <summary>Calendar id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CalendarId { get; set; }
+        public string? CalendarId { get => _explicitNullValueCalendarId; set { _explicitNullValueCalendarId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calendarId"); else _explicitNullProperties?.Remove("calendarId"); } }
+        private string? _explicitNullValueCalendarId = default!;
 #nullable restore
 #else
-        public string CalendarId { get; set; }
+        public string CalendarId { get => _explicitNullValueCalendarId; set { _explicitNullValueCalendarId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calendarId"); else _explicitNullProperties?.Remove("calendarId"); } }
+        private string _explicitNullValueCalendarId = default!;
 #endif
         /// <summary>End Time</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.BlockedSlotSuccessfulResponseDtoEndTimeProperty2? EndTime { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.BlockedSlotSuccessfulResponseDtoEndTimeProperty? EndTime { get => _explicitNullValueEndTime; set { _explicitNullValueEndTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endTime"); else _explicitNullProperties?.Remove("endTime"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.BlockedSlotSuccessfulResponseDtoEndTimeProperty? _explicitNullValueEndTime = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.BlockedSlotSuccessfulResponseDtoEndTimeProperty2 EndTime { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.BlockedSlotSuccessfulResponseDtoEndTimeProperty EndTime { get => _explicitNullValueEndTime; set { _explicitNullValueEndTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endTime"); else _explicitNullProperties?.Remove("endTime"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.BlockedSlotSuccessfulResponseDtoEndTimeProperty _explicitNullValueEndTime = default!;
 #endif
         /// <summary>Id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>Location Id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LocationId { get; set; }
+        public string? LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
+        private string? _explicitNullValueLocationId = default!;
 #nullable restore
 #else
-        public string LocationId { get; set; }
+        public string LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
+        private string _explicitNullValueLocationId = default!;
 #endif
         /// <summary>Start Time</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.BlockedSlotSuccessfulResponseDtoStartTimeProperty2? StartTime { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.BlockedSlotSuccessfulResponseDtoStartTimeProperty? StartTime { get => _explicitNullValueStartTime; set { _explicitNullValueStartTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startTime"); else _explicitNullProperties?.Remove("startTime"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.BlockedSlotSuccessfulResponseDtoStartTimeProperty? _explicitNullValueStartTime = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.BlockedSlotSuccessfulResponseDtoStartTimeProperty2 StartTime { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.BlockedSlotSuccessfulResponseDtoStartTimeProperty StartTime { get => _explicitNullValueStartTime; set { _explicitNullValueStartTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startTime"); else _explicitNullProperties?.Remove("startTime"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.BlockedSlotSuccessfulResponseDtoStartTimeProperty _explicitNullValueStartTime = default!;
 #endif
         /// <summary>Title</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Title { get; set; }
+        public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        private string? _explicitNullValueTitle = default!;
 #nullable restore
 #else
-        public string Title { get; set; }
+        public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        private string _explicitNullValueTitle = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.BlockedSlotSuccessfulResponseDto"/> and sets the default values.
@@ -85,7 +113,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.BlockedSlotSuccessfulResponseDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.BlockedSlotSuccessfulResponseDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.BlockedSlotSuccessfulResponseDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -97,10 +125,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             {
                 { "assignedUserId", n => { AssignedUserId = n.GetStringValue(); } },
                 { "calendarId", n => { CalendarId = n.GetStringValue(); } },
-                { "endTime", n => { EndTime = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BlockedSlotSuccessfulResponseDtoEndTimeProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.BlockedSlotSuccessfulResponseDtoEndTimeProperty2.CreateFromDiscriminatorValue); } },
+                { "endTime", n => { EndTime = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BlockedSlotSuccessfulResponseDtoEndTimeProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.BlockedSlotSuccessfulResponseDtoEndTimeProperty.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
-                { "startTime", n => { StartTime = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BlockedSlotSuccessfulResponseDtoStartTimeProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.BlockedSlotSuccessfulResponseDtoStartTimeProperty2.CreateFromDiscriminatorValue); } },
+                { "startTime", n => { StartTime = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BlockedSlotSuccessfulResponseDtoStartTimeProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.BlockedSlotSuccessfulResponseDtoStartTimeProperty.CreateFromDiscriminatorValue); } },
                 { "title", n => { Title = n.GetStringValue(); } },
             };
         }
@@ -113,11 +141,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("assignedUserId", AssignedUserId);
             writer.WriteStringValue("calendarId", CalendarId);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BlockedSlotSuccessfulResponseDtoEndTimeProperty2>("endTime", EndTime);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BlockedSlotSuccessfulResponseDtoEndTimeProperty>("endTime", EndTime);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("locationId", LocationId);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BlockedSlotSuccessfulResponseDtoStartTimeProperty2>("startTime", StartTime);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BlockedSlotSuccessfulResponseDtoStartTimeProperty>("startTime", StartTime);
             writer.WriteStringValue("title", Title);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

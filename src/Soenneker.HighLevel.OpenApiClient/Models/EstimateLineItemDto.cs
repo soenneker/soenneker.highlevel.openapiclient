@@ -11,83 +11,124 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class EstimateLineItemDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
+            if (parseNode.GetChildNode("attachments") is { } nullNodeAttachments && nullNodeAttachments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Attachments = null;
+            if (parseNode.GetChildNode("automaticTaxCategoryId") is { } nullNodeAutomaticTaxCategoryId && nullNodeAutomaticTaxCategoryId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutomaticTaxCategoryId = null;
+            if (parseNode.GetChildNode("currency") is { } nullNodeCurrency && nullNodeCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Currency = null;
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("isSetupFeeItem") is { } nullNodeIsSetupFeeItem && nullNodeIsSetupFeeItem.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsSetupFeeItem = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("priceId") is { } nullNodePriceId && nullNodePriceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PriceId = null;
+            if (parseNode.GetChildNode("productId") is { } nullNodeProductId && nullNodeProductId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductId = null;
+            if (parseNode.GetChildNode("qty") is { } nullNodeQty && nullNodeQty.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Qty = null;
+            if (parseNode.GetChildNode("taxes") is { } nullNodeTaxes && nullNodeTaxes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Taxes = null;
+            if (parseNode.GetChildNode("taxInclusive") is { } nullNodeTaxInclusive && nullNodeTaxInclusive.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxInclusive = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Product amount</summary>
-        public double? Amount { get; set; }
+        public double? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
+        private double? _explicitNullValueAmount = default!;
         /// <summary>Attachments for the line item</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Attachments { get; set; }
+        public List<string>? Attachments { get => _explicitNullValueAttachments; set { _explicitNullValueAttachments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attachments"); else _explicitNullProperties?.Remove("attachments"); } }
+        private List<string>? _explicitNullValueAttachments = default!;
 #nullable restore
 #else
-        public List<string> Attachments { get; set; }
+        public List<string> Attachments { get => _explicitNullValueAttachments; set { _explicitNullValueAttachments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attachments"); else _explicitNullProperties?.Remove("attachments"); } }
+        private List<string> _explicitNullValueAttachments = default!;
 #endif
         /// <summary>Tax category id for calculating automatic tax</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AutomaticTaxCategoryId { get; set; }
+        public string? AutomaticTaxCategoryId { get => _explicitNullValueAutomaticTaxCategoryId; set { _explicitNullValueAutomaticTaxCategoryId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("automaticTaxCategoryId"); else _explicitNullProperties?.Remove("automaticTaxCategoryId"); } }
+        private string? _explicitNullValueAutomaticTaxCategoryId = default!;
 #nullable restore
 #else
-        public string AutomaticTaxCategoryId { get; set; }
+        public string AutomaticTaxCategoryId { get => _explicitNullValueAutomaticTaxCategoryId; set { _explicitNullValueAutomaticTaxCategoryId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("automaticTaxCategoryId"); else _explicitNullProperties?.Remove("automaticTaxCategoryId"); } }
+        private string _explicitNullValueAutomaticTaxCategoryId = default!;
 #endif
         /// <summary>Currency</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Currency { get; set; }
+        public string? Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        private string? _explicitNullValueCurrency = default!;
 #nullable restore
 #else
-        public string Currency { get; set; }
+        public string Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        private string _explicitNullValueCurrency = default!;
 #endif
         /// <summary>Invoice descriptions</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>Setupfee item, only created when 1st invoice of recurring schedule is generated</summary>
-        public bool? IsSetupFeeItem { get; set; }
+        public bool? IsSetupFeeItem { get => _explicitNullValueIsSetupFeeItem; set { _explicitNullValueIsSetupFeeItem = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isSetupFeeItem"); else _explicitNullProperties?.Remove("isSetupFeeItem"); } }
+        private bool? _explicitNullValueIsSetupFeeItem = default!;
         /// <summary>Invoice Item Name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>Price Id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PriceId { get; set; }
+        public string? PriceId { get => _explicitNullValuePriceId; set { _explicitNullValuePriceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("priceId"); else _explicitNullProperties?.Remove("priceId"); } }
+        private string? _explicitNullValuePriceId = default!;
 #nullable restore
 #else
-        public string PriceId { get; set; }
+        public string PriceId { get => _explicitNullValuePriceId; set { _explicitNullValuePriceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("priceId"); else _explicitNullProperties?.Remove("priceId"); } }
+        private string _explicitNullValuePriceId = default!;
 #endif
         /// <summary>Product Id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProductId { get; set; }
+        public string? ProductId { get => _explicitNullValueProductId; set { _explicitNullValueProductId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("productId"); else _explicitNullProperties?.Remove("productId"); } }
+        private string? _explicitNullValueProductId = default!;
 #nullable restore
 #else
-        public string ProductId { get; set; }
+        public string ProductId { get => _explicitNullValueProductId; set { _explicitNullValueProductId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("productId"); else _explicitNullProperties?.Remove("productId"); } }
+        private string _explicitNullValueProductId = default!;
 #endif
         /// <summary>Product Quantity</summary>
-        public double? Qty { get; set; }
+        public double? Qty { get => _explicitNullValueQty; set { _explicitNullValueQty = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("qty"); else _explicitNullProperties?.Remove("qty"); } }
+        private double? _explicitNullValueQty = default!;
         /// <summary>Tax</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ItemTaxDto>? Taxes { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ItemTaxDto>? Taxes { get => _explicitNullValueTaxes; set { _explicitNullValueTaxes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taxes"); else _explicitNullProperties?.Remove("taxes"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.ItemTaxDto>? _explicitNullValueTaxes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ItemTaxDto> Taxes { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ItemTaxDto> Taxes { get => _explicitNullValueTaxes; set { _explicitNullValueTaxes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taxes"); else _explicitNullProperties?.Remove("taxes"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.ItemTaxDto> _explicitNullValueTaxes = default!;
 #endif
         /// <summary>true if item amount is tax inclusive</summary>
-        public bool? TaxInclusive { get; set; }
+        public bool? TaxInclusive { get => _explicitNullValueTaxInclusive; set { _explicitNullValueTaxInclusive = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taxInclusive"); else _explicitNullProperties?.Remove("taxInclusive"); } }
+        private bool? _explicitNullValueTaxInclusive = default!;
         /// <summary>Price type of the item</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateLineItemDtoType? Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateLineItemDtoType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.EstimateLineItemDtoType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.EstimateLineItemDto"/> and sets the default values.
         /// </summary>
@@ -104,7 +145,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.EstimateLineItemDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.EstimateLineItemDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.EstimateLineItemDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -149,6 +190,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ItemTaxDto>("taxes", Taxes);
             writer.WriteBoolValue("taxInclusive", TaxInclusive);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateLineItemDtoType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

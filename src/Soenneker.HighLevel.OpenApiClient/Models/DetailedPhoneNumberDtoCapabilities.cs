@@ -12,17 +12,32 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class DetailedPhoneNumberDtoCapabilities : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("fax") is { } nullNodeFax && nullNodeFax.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fax = null;
+            if (parseNode.GetChildNode("mms") is { } nullNodeMms && nullNodeMms.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mms = null;
+            if (parseNode.GetChildNode("sms") is { } nullNodeSms && nullNodeSms.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sms = null;
+            if (parseNode.GetChildNode("voice") is { } nullNodeVoice && nullNodeVoice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Voice = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether the number supports fax transmission</summary>
-        public bool? Fax { get; set; }
+        public bool? Fax { get => _explicitNullValueFax; set { _explicitNullValueFax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fax"); else _explicitNullProperties?.Remove("fax"); } }
+        private bool? _explicitNullValueFax = default!;
         /// <summary>Whether the number supports MMS messaging</summary>
-        public bool? Mms { get; set; }
+        public bool? Mms { get => _explicitNullValueMms; set { _explicitNullValueMms = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mms"); else _explicitNullProperties?.Remove("mms"); } }
+        private bool? _explicitNullValueMms = default!;
         /// <summary>Whether the number supports SMS messaging</summary>
-        public bool? Sms { get; set; }
+        public bool? Sms { get => _explicitNullValueSms; set { _explicitNullValueSms = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sms"); else _explicitNullProperties?.Remove("sms"); } }
+        private bool? _explicitNullValueSms = default!;
         /// <summary>Whether the number supports voice calls</summary>
-        public bool? Voice { get; set; }
+        public bool? Voice { get => _explicitNullValueVoice; set { _explicitNullValueVoice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("voice"); else _explicitNullProperties?.Remove("voice"); } }
+        private bool? _explicitNullValueVoice = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDtoCapabilities"/> and sets the default values.
         /// </summary>
@@ -38,7 +53,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDtoCapabilities CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDtoCapabilities();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDtoCapabilities(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -65,6 +80,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteBoolValue("mms", Mms);
             writer.WriteBoolValue("sms", Sms);
             writer.WriteBoolValue("voice", Voice);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

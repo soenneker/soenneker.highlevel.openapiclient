@@ -11,70 +11,104 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class NumberPoolDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("callRecording") is { } nullNodeCallRecording && nullNodeCallRecording.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallRecording = null;
+            if (parseNode.GetChildNode("forwardingNumber") is { } nullNodeForwardingNumber && nullNodeForwardingNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ForwardingNumber = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("inboundCallService") is { } nullNodeInboundCallService && nullNodeInboundCallService.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InboundCallService = null;
+            if (parseNode.GetChildNode("isActive") is { } nullNodeIsActive && nullNodeIsActive.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsActive = null;
+            if (parseNode.GetChildNode("locationId") is { } nullNodeLocationId && nullNodeLocationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationId = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("numbers") is { } nullNodeNumbers && nullNodeNumbers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Numbers = null;
+            if (parseNode.GetChildNode("whisper") is { } nullNodeWhisper && nullNodeWhisper.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Whisper = null;
+            if (parseNode.GetChildNode("whisperMessage") is { } nullNodeWhisperMessage && nullNodeWhisperMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WhisperMessage = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether call recording is enabled</summary>
-        public bool? CallRecording { get; set; }
+        public bool? CallRecording { get => _explicitNullValueCallRecording; set { _explicitNullValueCallRecording = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callRecording"); else _explicitNullProperties?.Remove("callRecording"); } }
+        private bool? _explicitNullValueCallRecording = default!;
         /// <summary>Number to forward calls to</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ForwardingNumber { get; set; }
+        public string? ForwardingNumber { get => _explicitNullValueForwardingNumber; set { _explicitNullValueForwardingNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("forwardingNumber"); else _explicitNullProperties?.Remove("forwardingNumber"); } }
+        private string? _explicitNullValueForwardingNumber = default!;
 #nullable restore
 #else
-        public string ForwardingNumber { get; set; }
+        public string ForwardingNumber { get => _explicitNullValueForwardingNumber; set { _explicitNullValueForwardingNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("forwardingNumber"); else _explicitNullProperties?.Remove("forwardingNumber"); } }
+        private string _explicitNullValueForwardingNumber = default!;
 #endif
         /// <summary>Unique identifier for the number pool</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>Inbound call service configuration</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.NumberPoolDtoInboundCallService? InboundCallService { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.NumberPoolDtoInboundCallService? InboundCallService { get => _explicitNullValueInboundCallService; set { _explicitNullValueInboundCallService = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inboundCallService"); else _explicitNullProperties?.Remove("inboundCallService"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.NumberPoolDtoInboundCallService? _explicitNullValueInboundCallService = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.NumberPoolDtoInboundCallService InboundCallService { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.NumberPoolDtoInboundCallService InboundCallService { get => _explicitNullValueInboundCallService; set { _explicitNullValueInboundCallService = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inboundCallService"); else _explicitNullProperties?.Remove("inboundCallService"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.NumberPoolDtoInboundCallService _explicitNullValueInboundCallService = default!;
 #endif
         /// <summary>Whether the number pool is active</summary>
-        public bool? IsActive { get; set; }
+        public bool? IsActive { get => _explicitNullValueIsActive; set { _explicitNullValueIsActive = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isActive"); else _explicitNullProperties?.Remove("isActive"); } }
+        private bool? _explicitNullValueIsActive = default!;
         /// <summary>Location ID this pool belongs to</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LocationId { get; set; }
+        public string? LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
+        private string? _explicitNullValueLocationId = default!;
 #nullable restore
 #else
-        public string LocationId { get; set; }
+        public string LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
+        private string _explicitNullValueLocationId = default!;
 #endif
         /// <summary>Human-readable name of the number pool</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>Phone numbers in this pool</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.NumberPoolDtoNumbersItem>? Numbers { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.NumberPoolDtoNumbersItem>? Numbers { get => _explicitNullValueNumbers; set { _explicitNullValueNumbers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("numbers"); else _explicitNullProperties?.Remove("numbers"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.NumberPoolDtoNumbersItem>? _explicitNullValueNumbers = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.NumberPoolDtoNumbersItem> Numbers { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.NumberPoolDtoNumbersItem> Numbers { get => _explicitNullValueNumbers; set { _explicitNullValueNumbers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("numbers"); else _explicitNullProperties?.Remove("numbers"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.NumberPoolDtoNumbersItem> _explicitNullValueNumbers = default!;
 #endif
         /// <summary>Whether whisper is enabled</summary>
-        public bool? Whisper { get; set; }
+        public bool? Whisper { get => _explicitNullValueWhisper; set { _explicitNullValueWhisper = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whisper"); else _explicitNullProperties?.Remove("whisper"); } }
+        private bool? _explicitNullValueWhisper = default!;
         /// <summary>Message played during whisper</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WhisperMessage { get; set; }
+        public string? WhisperMessage { get => _explicitNullValueWhisperMessage; set { _explicitNullValueWhisperMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whisperMessage"); else _explicitNullProperties?.Remove("whisperMessage"); } }
+        private string? _explicitNullValueWhisperMessage = default!;
 #nullable restore
 #else
-        public string WhisperMessage { get; set; }
+        public string WhisperMessage { get => _explicitNullValueWhisperMessage; set { _explicitNullValueWhisperMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whisperMessage"); else _explicitNullProperties?.Remove("whisperMessage"); } }
+        private string _explicitNullValueWhisperMessage = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.NumberPoolDto"/> and sets the default values.
@@ -91,7 +125,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.NumberPoolDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.NumberPoolDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.NumberPoolDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -130,6 +164,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.NumberPoolDtoNumbersItem>("numbers", Numbers);
             writer.WriteBoolValue("whisper", Whisper);
             writer.WriteStringValue("whisperMessage", WhisperMessage);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

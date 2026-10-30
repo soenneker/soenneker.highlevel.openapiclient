@@ -11,29 +11,46 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ScheduleRuleDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("date") is { } nullNodeDate && nullNodeDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Date = null;
+            if (parseNode.GetChildNode("day") is { } nullNodeDay && nullNodeDay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Day = null;
+            if (parseNode.GetChildNode("intervals") is { } nullNodeIntervals && nullNodeIntervals.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Intervals = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Specific date in YYYY-MM-DD format (only for date-type rules)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Date { get; set; }
+        public string? Date { get => _explicitNullValueDate; set { _explicitNullValueDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date"); else _explicitNullProperties?.Remove("date"); } }
+        private string? _explicitNullValueDate = default!;
 #nullable restore
 #else
-        public string Date { get; set; }
+        public string Date { get => _explicitNullValueDate; set { _explicitNullValueDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date"); else _explicitNullProperties?.Remove("date"); } }
+        private string _explicitNullValueDate = default!;
 #endif
         /// <summary>Day of week (only for weekday-type rules)</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleRuleDtoDay? Day { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleRuleDtoDay? Day { get => _explicitNullValueDay; set { _explicitNullValueDay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("day"); else _explicitNullProperties?.Remove("day"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleRuleDtoDay? _explicitNullValueDay = default!;
         /// <summary>Time intervals for the rule (e.g., 9 AM to 5 PM)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleIntervalDto>? Intervals { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleIntervalDto>? Intervals { get => _explicitNullValueIntervals; set { _explicitNullValueIntervals = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intervals"); else _explicitNullProperties?.Remove("intervals"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleIntervalDto>? _explicitNullValueIntervals = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleIntervalDto> Intervals { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleIntervalDto> Intervals { get => _explicitNullValueIntervals; set { _explicitNullValueIntervals = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intervals"); else _explicitNullProperties?.Remove("intervals"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleIntervalDto> _explicitNullValueIntervals = default!;
 #endif
         /// <summary>Type of schedule rule - weekday (recurring) or date (specific date)</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleRuleDtoType? Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleRuleDtoType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleRuleDtoType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleRuleDto"/> and sets the default values.
         /// </summary>
@@ -49,7 +66,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleRuleDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleRuleDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleRuleDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -76,6 +93,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleRuleDtoDay>("day", Day);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleIntervalDto>("intervals", Intervals);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleRuleDtoType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

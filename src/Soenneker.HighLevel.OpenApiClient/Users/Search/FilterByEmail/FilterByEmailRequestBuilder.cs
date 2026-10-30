@@ -59,6 +59,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Users.Search.FilterByEmail
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.UsersCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.UsersCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.UsersCommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.SearchUserSuccessfulResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.SearchUserSuccessfulResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

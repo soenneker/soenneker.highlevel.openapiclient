@@ -12,16 +12,26 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class LeadFormContentDtoDescription : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("localized") is { } nullNodeLocalized && nullNodeLocalized.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Localized = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Locale-keyed string map</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoDescriptionLocalizedProperty? Localized { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoDescriptionLocalizedProperty? Localized { get => _explicitNullValueLocalized; set { _explicitNullValueLocalized = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("localized"); else _explicitNullProperties?.Remove("localized"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoDescriptionLocalizedProperty? _explicitNullValueLocalized = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoDescriptionLocalizedProperty Localized { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoDescriptionLocalizedProperty Localized { get => _explicitNullValueLocalized; set { _explicitNullValueLocalized = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("localized"); else _explicitNullProperties?.Remove("localized"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoDescriptionLocalizedProperty _explicitNullValueLocalized = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoDescription"/> and sets the default values.
@@ -38,7 +48,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoDescription CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoDescription();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoDescription(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -59,6 +69,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoDescriptionLocalizedProperty>("localized", Localized);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

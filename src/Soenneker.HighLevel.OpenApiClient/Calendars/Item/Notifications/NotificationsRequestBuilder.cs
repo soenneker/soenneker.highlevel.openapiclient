@@ -68,6 +68,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Calendars.Item.Notifications
             {
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.CalendarsCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.CalendarsCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.HighLevel.OpenApiClient.Models.CalendarNotificationResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.CalendarNotificationResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
             return collectionResult?.AsList();
@@ -96,6 +98,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Calendars.Item.Notifications
             {
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.CalendarsCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.CalendarsCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.HighLevel.OpenApiClient.Models.CalendarNotificationResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.CalendarNotificationResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
             return collectionResult?.AsList();

@@ -11,35 +11,53 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class UpdateMessageStatusDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("emailMessageId") is { } nullNodeEmailMessageId && nullNodeEmailMessageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailMessageId = null;
+            if (parseNode.GetChildNode("error") is { } nullNodeError && nullNodeError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Error = null;
+            if (parseNode.GetChildNode("recipients") is { } nullNodeRecipients && nullNodeRecipients.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Recipients = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Email message Id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmailMessageId { get; set; }
+        public string? EmailMessageId { get => _explicitNullValueEmailMessageId; set { _explicitNullValueEmailMessageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailMessageId"); else _explicitNullProperties?.Remove("emailMessageId"); } }
+        private string? _explicitNullValueEmailMessageId = default!;
 #nullable restore
 #else
-        public string EmailMessageId { get; set; }
+        public string EmailMessageId { get => _explicitNullValueEmailMessageId; set { _explicitNullValueEmailMessageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailMessageId"); else _explicitNullProperties?.Remove("emailMessageId"); } }
+        private string _explicitNullValueEmailMessageId = default!;
 #endif
         /// <summary>Error object from the conversation provider</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateMessageStatusDtoError? Error { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateMessageStatusDtoError? Error { get => _explicitNullValueError; set { _explicitNullValueError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.UpdateMessageStatusDtoError? _explicitNullValueError = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateMessageStatusDtoError Error { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateMessageStatusDtoError Error { get => _explicitNullValueError; set { _explicitNullValueError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.UpdateMessageStatusDtoError _explicitNullValueError = default!;
 #endif
         /// <summary>Email delivery status for additional email recipients.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Recipients { get; set; }
+        public List<string>? Recipients { get => _explicitNullValueRecipients; set { _explicitNullValueRecipients = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipients"); else _explicitNullProperties?.Remove("recipients"); } }
+        private List<string>? _explicitNullValueRecipients = default!;
 #nullable restore
 #else
-        public List<string> Recipients { get; set; }
+        public List<string> Recipients { get => _explicitNullValueRecipients; set { _explicitNullValueRecipients = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipients"); else _explicitNullProperties?.Remove("recipients"); } }
+        private List<string> _explicitNullValueRecipients = default!;
 #endif
         /// <summary>Message status</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateMessageStatusDtoStatus? Status { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateMessageStatusDtoStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.UpdateMessageStatusDtoStatus? _explicitNullValueStatus = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpdateMessageStatusDto"/> and sets the default values.
         /// </summary>
@@ -55,7 +73,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.UpdateMessageStatusDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.UpdateMessageStatusDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.UpdateMessageStatusDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -82,6 +100,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateMessageStatusDtoError>("error", Error);
             writer.WriteCollectionOfPrimitiveValues<string>("recipients", Recipients);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateMessageStatusDtoStatus>("status", Status);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

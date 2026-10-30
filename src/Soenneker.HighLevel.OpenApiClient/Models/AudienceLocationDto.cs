@@ -11,41 +11,65 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AudienceLocationDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("geometry") is { } nullNodeGeometry && nullNodeGeometry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Geometry = null;
+            if (parseNode.GetChildNode("key") is { } nullNodeKey && nullNodeKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Key = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("radius") is { } nullNodeRadius && nullNodeRadius.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Radius = null;
+            if (parseNode.GetChildNode("radiusUnit") is { } nullNodeRadiusUnit && nullNodeRadiusUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RadiusUnit = null;
+            if (parseNode.GetChildNode("selectionType") is { } nullNodeSelectionType && nullNodeSelectionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SelectionType = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Geometry data for address-based targeting</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AudienceLocationDtoGeometry? Geometry { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AudienceLocationDtoGeometry? Geometry { get => _explicitNullValueGeometry; set { _explicitNullValueGeometry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("geometry"); else _explicitNullProperties?.Remove("geometry"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.AudienceLocationDtoGeometry? _explicitNullValueGeometry = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AudienceLocationDtoGeometry Geometry { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AudienceLocationDtoGeometry Geometry { get => _explicitNullValueGeometry; set { _explicitNullValueGeometry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("geometry"); else _explicitNullProperties?.Remove("geometry"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.AudienceLocationDtoGeometry _explicitNullValueGeometry = default!;
 #endif
         /// <summary>Facebook location key</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Key { get; set; }
+        public string? Key { get => _explicitNullValueKey; set { _explicitNullValueKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("key"); else _explicitNullProperties?.Remove("key"); } }
+        private string? _explicitNullValueKey = default!;
 #nullable restore
 #else
-        public string Key { get; set; }
+        public string Key { get => _explicitNullValueKey; set { _explicitNullValueKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("key"); else _explicitNullProperties?.Remove("key"); } }
+        private string _explicitNullValueKey = default!;
 #endif
         /// <summary>Location display name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>Targeting radius around the location (for city/address types)</summary>
-        public double? Radius { get; set; }
+        public double? Radius { get => _explicitNullValueRadius; set { _explicitNullValueRadius = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("radius"); else _explicitNullProperties?.Remove("radius"); } }
+        private double? _explicitNullValueRadius = default!;
         /// <summary>Unit for the targeting radius</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AudienceLocationDtoRadiusUnit? RadiusUnit { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AudienceLocationDtoRadiusUnit? RadiusUnit { get => _explicitNullValueRadiusUnit; set { _explicitNullValueRadiusUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("radiusUnit"); else _explicitNullProperties?.Remove("radiusUnit"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.AudienceLocationDtoRadiusUnit? _explicitNullValueRadiusUnit = default!;
         /// <summary>Whether the location is included or excluded from targeting</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AudienceLocationDtoSelectionType? SelectionType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AudienceLocationDtoSelectionType? SelectionType { get => _explicitNullValueSelectionType; set { _explicitNullValueSelectionType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selectionType"); else _explicitNullProperties?.Remove("selectionType"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.AudienceLocationDtoSelectionType? _explicitNullValueSelectionType = default!;
         /// <summary>Geographic location type</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AudienceLocationDtoType? Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AudienceLocationDtoType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.AudienceLocationDtoType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.AudienceLocationDto"/> and sets the default values.
         /// </summary>
@@ -61,7 +85,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.AudienceLocationDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.AudienceLocationDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.AudienceLocationDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -94,6 +118,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.AudienceLocationDtoRadiusUnit>("radiusUnit", RadiusUnit);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.AudienceLocationDtoSelectionType>("selectionType", SelectionType);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.AudienceLocationDtoType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

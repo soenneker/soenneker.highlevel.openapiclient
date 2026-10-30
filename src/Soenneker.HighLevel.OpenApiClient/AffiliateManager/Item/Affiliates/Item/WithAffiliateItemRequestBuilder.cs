@@ -57,6 +57,8 @@ namespace Soenneker.HighLevel.OpenApiClient.AffiliateManager.Item.Affiliates.Ite
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.AffiliateManagerCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.AffiliateManagerCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.AffiliateManagerCommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.GetAffiliateResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.GetAffiliateResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

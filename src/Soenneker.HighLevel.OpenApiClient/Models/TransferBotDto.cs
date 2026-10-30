@@ -11,36 +11,56 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TransferBotDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("enabled") is { } nullNodeEnabled && nullNodeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enabled = null;
+            if (parseNode.GetChildNode("transferBotExamples") is { } nullNodeTransferBotExamples && nullNodeTransferBotExamples.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransferBotExamples = null;
+            if (parseNode.GetChildNode("transferBotTriggerCondition") is { } nullNodeTransferBotTriggerCondition && nullNodeTransferBotTriggerCondition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransferBotTriggerCondition = null;
+            if (parseNode.GetChildNode("transferBotType") is { } nullNodeTransferBotType && nullNodeTransferBotType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransferBotType = null;
+            if (parseNode.GetChildNode("transferToBot") is { } nullNodeTransferToBot && nullNodeTransferToBot.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransferToBot = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether this transfer action is enabled</summary>
-        public bool? Enabled { get; set; }
+        public bool? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled"); else _explicitNullProperties?.Remove("enabled"); } }
+        private bool? _explicitNullValueEnabled = default!;
         /// <summary>Example phrases that trigger transfer (required for Custom type, minimum 2)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? TransferBotExamples { get; set; }
+        public List<string>? TransferBotExamples { get => _explicitNullValueTransferBotExamples; set { _explicitNullValueTransferBotExamples = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transferBotExamples"); else _explicitNullProperties?.Remove("transferBotExamples"); } }
+        private List<string>? _explicitNullValueTransferBotExamples = default!;
 #nullable restore
 #else
-        public List<string> TransferBotExamples { get; set; }
+        public List<string> TransferBotExamples { get => _explicitNullValueTransferBotExamples; set { _explicitNullValueTransferBotExamples = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transferBotExamples"); else _explicitNullProperties?.Remove("transferBotExamples"); } }
+        private List<string> _explicitNullValueTransferBotExamples = default!;
 #endif
         /// <summary>Condition that triggers the transfer (required for Custom type)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TransferBotTriggerCondition { get; set; }
+        public string? TransferBotTriggerCondition { get => _explicitNullValueTransferBotTriggerCondition; set { _explicitNullValueTransferBotTriggerCondition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transferBotTriggerCondition"); else _explicitNullProperties?.Remove("transferBotTriggerCondition"); } }
+        private string? _explicitNullValueTransferBotTriggerCondition = default!;
 #nullable restore
 #else
-        public string TransferBotTriggerCondition { get; set; }
+        public string TransferBotTriggerCondition { get => _explicitNullValueTransferBotTriggerCondition; set { _explicitNullValueTransferBotTriggerCondition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transferBotTriggerCondition"); else _explicitNullProperties?.Remove("transferBotTriggerCondition"); } }
+        private string _explicitNullValueTransferBotTriggerCondition = default!;
 #endif
         /// <summary>Type of transfer - Default or Custom</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.TransferBotDtoTransferBotType? TransferBotType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.TransferBotDtoTransferBotType? TransferBotType { get => _explicitNullValueTransferBotType; set { _explicitNullValueTransferBotType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transferBotType"); else _explicitNullProperties?.Remove("transferBotType"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.TransferBotDtoTransferBotType? _explicitNullValueTransferBotType = default!;
         /// <summary>ID of the bot/agent to transfer to</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TransferToBot { get; set; }
+        public string? TransferToBot { get => _explicitNullValueTransferToBot; set { _explicitNullValueTransferToBot = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transferToBot"); else _explicitNullProperties?.Remove("transferToBot"); } }
+        private string? _explicitNullValueTransferToBot = default!;
 #nullable restore
 #else
-        public string TransferToBot { get; set; }
+        public string TransferToBot { get => _explicitNullValueTransferToBot; set { _explicitNullValueTransferToBot = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transferToBot"); else _explicitNullProperties?.Remove("transferToBot"); } }
+        private string _explicitNullValueTransferToBot = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.TransferBotDto"/> and sets the default values.
@@ -57,7 +77,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.TransferBotDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.TransferBotDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.TransferBotDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -86,6 +106,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("transferBotTriggerCondition", TransferBotTriggerCondition);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.TransferBotDtoTransferBotType>("transferBotType", TransferBotType);
             writer.WriteStringValue("transferToBot", TransferToBot);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

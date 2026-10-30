@@ -11,50 +11,74 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class RecurringTaskUpdateDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("contactIds") is { } nullNodeContactIds && nullNodeContactIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactIds = null;
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("ignoreTaskCreation") is { } nullNodeIgnoreTaskCreation && nullNodeIgnoreTaskCreation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IgnoreTaskCreation = null;
+            if (parseNode.GetChildNode("owners") is { } nullNodeOwners && nullNodeOwners.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Owners = null;
+            if (parseNode.GetChildNode("rruleOptions") is { } nullNodeRruleOptions && nullNodeRruleOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RruleOptions = null;
+            if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Contact Id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ContactIds { get; set; }
+        public List<string>? ContactIds { get => _explicitNullValueContactIds; set { _explicitNullValueContactIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactIds"); else _explicitNullProperties?.Remove("contactIds"); } }
+        private List<string>? _explicitNullValueContactIds = default!;
 #nullable restore
 #else
-        public List<string> ContactIds { get; set; }
+        public List<string> ContactIds { get => _explicitNullValueContactIds; set { _explicitNullValueContactIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactIds"); else _explicitNullProperties?.Remove("contactIds"); } }
+        private List<string> _explicitNullValueContactIds = default!;
 #endif
         /// <summary>Description of the task</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>Create initial task or not</summary>
-        public bool? IgnoreTaskCreation { get; set; }
+        public bool? IgnoreTaskCreation { get => _explicitNullValueIgnoreTaskCreation; set { _explicitNullValueIgnoreTaskCreation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ignoreTaskCreation"); else _explicitNullProperties?.Remove("ignoreTaskCreation"); } }
+        private bool? _explicitNullValueIgnoreTaskCreation = default!;
         /// <summary>Assigned To</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Owners { get; set; }
+        public List<string>? Owners { get => _explicitNullValueOwners; set { _explicitNullValueOwners = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owners"); else _explicitNullProperties?.Remove("owners"); } }
+        private List<string>? _explicitNullValueOwners = default!;
 #nullable restore
 #else
-        public List<string> Owners { get; set; }
+        public List<string> Owners { get => _explicitNullValueOwners; set { _explicitNullValueOwners = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owners"); else _explicitNullProperties?.Remove("owners"); } }
+        private List<string> _explicitNullValueOwners = default!;
 #endif
         /// <summary>Recurring rules</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.RecurringTaskUpdateDtoRruleOptions? RruleOptions { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.RecurringTaskUpdateDtoRruleOptions? RruleOptions { get => _explicitNullValueRruleOptions; set { _explicitNullValueRruleOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rruleOptions"); else _explicitNullProperties?.Remove("rruleOptions"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.RecurringTaskUpdateDtoRruleOptions? _explicitNullValueRruleOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.RecurringTaskUpdateDtoRruleOptions RruleOptions { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.RecurringTaskUpdateDtoRruleOptions RruleOptions { get => _explicitNullValueRruleOptions; set { _explicitNullValueRruleOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rruleOptions"); else _explicitNullProperties?.Remove("rruleOptions"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.RecurringTaskUpdateDtoRruleOptions _explicitNullValueRruleOptions = default!;
 #endif
         /// <summary>Name of the task</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Title { get; set; }
+        public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        private string? _explicitNullValueTitle = default!;
 #nullable restore
 #else
-        public string Title { get; set; }
+        public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        private string _explicitNullValueTitle = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.RecurringTaskUpdateDto"/> and sets the default values.
@@ -71,7 +95,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.RecurringTaskUpdateDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.RecurringTaskUpdateDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.RecurringTaskUpdateDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -102,6 +126,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("owners", Owners);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.RecurringTaskUpdateDtoRruleOptions>("rruleOptions", RruleOptions);
             writer.WriteStringValue("title", Title);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

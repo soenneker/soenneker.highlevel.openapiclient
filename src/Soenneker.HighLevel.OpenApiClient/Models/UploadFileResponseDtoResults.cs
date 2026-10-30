@@ -12,27 +12,42 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UploadFileResponseDtoResults : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("fileName") is { } nullNodeFileName && nullNodeFileName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileName = null;
+            if (parseNode.GetChildNode("filePath") is { } nullNodeFilePath && nullNodeFilePath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FilePath = null;
+            if (parseNode.GetChildNode("rowsCount") is { } nullNodeRowsCount && nullNodeRowsCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RowsCount = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The fileName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FileName { get; set; }
+        public string? FileName { get => _explicitNullValueFileName; set { _explicitNullValueFileName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fileName"); else _explicitNullProperties?.Remove("fileName"); } }
+        private string? _explicitNullValueFileName = default!;
 #nullable restore
 #else
-        public string FileName { get; set; }
+        public string FileName { get => _explicitNullValueFileName; set { _explicitNullValueFileName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fileName"); else _explicitNullProperties?.Remove("fileName"); } }
+        private string _explicitNullValueFileName = default!;
 #endif
         /// <summary>The filePath property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FilePath { get; set; }
+        public string? FilePath { get => _explicitNullValueFilePath; set { _explicitNullValueFilePath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filePath"); else _explicitNullProperties?.Remove("filePath"); } }
+        private string? _explicitNullValueFilePath = default!;
 #nullable restore
 #else
-        public string FilePath { get; set; }
+        public string FilePath { get => _explicitNullValueFilePath; set { _explicitNullValueFilePath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filePath"); else _explicitNullProperties?.Remove("filePath"); } }
+        private string _explicitNullValueFilePath = default!;
 #endif
         /// <summary>The rowsCount property</summary>
-        public double? RowsCount { get; set; }
+        public double? RowsCount { get => _explicitNullValueRowsCount; set { _explicitNullValueRowsCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rowsCount"); else _explicitNullProperties?.Remove("rowsCount"); } }
+        private double? _explicitNullValueRowsCount = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UploadFileResponseDtoResults"/> and sets the default values.
         /// </summary>
@@ -48,7 +63,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.UploadFileResponseDtoResults CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.UploadFileResponseDtoResults();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.UploadFileResponseDtoResults(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -73,6 +88,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("fileName", FileName);
             writer.WriteStringValue("filePath", FilePath);
             writer.WriteDoubleValue("rowsCount", RowsCount);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

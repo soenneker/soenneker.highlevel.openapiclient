@@ -11,70 +11,109 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class UpdateShippingRateDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("altId") is { } nullNodeAltId && nullNodeAltId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AltId = null;
+            if (parseNode.GetChildNode("altType") is { } nullNodeAltType && nullNodeAltType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AltType = null;
+            if (parseNode.GetChildNode("amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
+            if (parseNode.GetChildNode("conditionType") is { } nullNodeConditionType && nullNodeConditionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConditionType = null;
+            if (parseNode.GetChildNode("currency") is { } nullNodeCurrency && nullNodeCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Currency = null;
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("isCarrierRate") is { } nullNodeIsCarrierRate && nullNodeIsCarrierRate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsCarrierRate = null;
+            if (parseNode.GetChildNode("maxCondition") is { } nullNodeMaxCondition && nullNodeMaxCondition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxCondition = null;
+            if (parseNode.GetChildNode("minCondition") is { } nullNodeMinCondition && nullNodeMinCondition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinCondition = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("percentageOfRateFee") is { } nullNodePercentageOfRateFee && nullNodePercentageOfRateFee.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PercentageOfRateFee = null;
+            if (parseNode.GetChildNode("shippingCarrierId") is { } nullNodeShippingCarrierId && nullNodeShippingCarrierId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingCarrierId = null;
+            if (parseNode.GetChildNode("shippingCarrierServices") is { } nullNodeShippingCarrierServices && nullNodeShippingCarrierServices.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingCarrierServices = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Location Id or Agency Id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AltId { get; set; }
+        public string? AltId { get => _explicitNullValueAltId; set { _explicitNullValueAltId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("altId"); else _explicitNullProperties?.Remove("altId"); } }
+        private string? _explicitNullValueAltId = default!;
 #nullable restore
 #else
-        public string AltId { get; set; }
+        public string AltId { get => _explicitNullValueAltId; set { _explicitNullValueAltId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("altId"); else _explicitNullProperties?.Remove("altId"); } }
+        private string _explicitNullValueAltId = default!;
 #endif
         /// <summary>The altType property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.StoreLocationAltType? AltType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.StoreLocationAltType? AltType { get => _explicitNullValueAltType; set { _explicitNullValueAltType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("altType"); else _explicitNullProperties?.Remove("altType"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.StoreLocationAltType? _explicitNullValueAltType = default!;
         /// <summary>The amount of the shipping rate if it is normal rate (0 means free ). Fixed Handling fee if it is a carrier rate (it will add to the carrier rate).</summary>
-        public double? Amount { get; set; }
+        public double? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
+        private double? _explicitNullValueAmount = default!;
         /// <summary>Type of condition to provide the conditional pricing</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateShippingRateDtoConditionType? ConditionType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateShippingRateDtoConditionType? ConditionType { get => _explicitNullValueConditionType; set { _explicitNullValueConditionType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conditionType"); else _explicitNullProperties?.Remove("conditionType"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.UpdateShippingRateDtoConditionType? _explicitNullValueConditionType = default!;
         /// <summary>The currency of the amount of the rate / handling fee</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Currency { get; set; }
+        public string? Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        private string? _explicitNullValueCurrency = default!;
 #nullable restore
 #else
-        public string Currency { get; set; }
+        public string Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        private string _explicitNullValueCurrency = default!;
 #endif
         /// <summary>Delivery description</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>is this a carrier rate</summary>
-        public bool? IsCarrierRate { get; set; }
+        public bool? IsCarrierRate { get => _explicitNullValueIsCarrierRate; set { _explicitNullValueIsCarrierRate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isCarrierRate"); else _explicitNullProperties?.Remove("isCarrierRate"); } }
+        private bool? _explicitNullValueIsCarrierRate = default!;
         /// <summary>Maximum condition for applying this price. set 0 or null if there is no maximum</summary>
-        public double? MaxCondition { get; set; }
+        public double? MaxCondition { get => _explicitNullValueMaxCondition; set { _explicitNullValueMaxCondition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxCondition"); else _explicitNullProperties?.Remove("maxCondition"); } }
+        private double? _explicitNullValueMaxCondition = default!;
         /// <summary>Minimum condition for applying this price. set 0 or null if there is no minimum</summary>
-        public double? MinCondition { get; set; }
+        public double? MinCondition { get => _explicitNullValueMinCondition; set { _explicitNullValueMinCondition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minCondition"); else _explicitNullProperties?.Remove("minCondition"); } }
+        private double? _explicitNullValueMinCondition = default!;
         /// <summary>Name of the shipping zone</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>Percentage of rate fee if it is a carrier rate.</summary>
-        public double? PercentageOfRateFee { get; set; }
+        public double? PercentageOfRateFee { get => _explicitNullValuePercentageOfRateFee; set { _explicitNullValuePercentageOfRateFee = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("percentageOfRateFee"); else _explicitNullProperties?.Remove("percentageOfRateFee"); } }
+        private double? _explicitNullValuePercentageOfRateFee = default!;
         /// <summary>Shipping carrier id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShippingCarrierId { get; set; }
+        public string? ShippingCarrierId { get => _explicitNullValueShippingCarrierId; set { _explicitNullValueShippingCarrierId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shippingCarrierId"); else _explicitNullProperties?.Remove("shippingCarrierId"); } }
+        private string? _explicitNullValueShippingCarrierId = default!;
 #nullable restore
 #else
-        public string ShippingCarrierId { get; set; }
+        public string ShippingCarrierId { get => _explicitNullValueShippingCarrierId; set { _explicitNullValueShippingCarrierId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shippingCarrierId"); else _explicitNullProperties?.Remove("shippingCarrierId"); } }
+        private string _explicitNullValueShippingCarrierId = default!;
 #endif
         /// <summary>An array of items</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ShippingCarrierServiceDto>? ShippingCarrierServices { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ShippingCarrierServiceDto>? ShippingCarrierServices { get => _explicitNullValueShippingCarrierServices; set { _explicitNullValueShippingCarrierServices = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shippingCarrierServices"); else _explicitNullProperties?.Remove("shippingCarrierServices"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.ShippingCarrierServiceDto>? _explicitNullValueShippingCarrierServices = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ShippingCarrierServiceDto> ShippingCarrierServices { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ShippingCarrierServiceDto> ShippingCarrierServices { get => _explicitNullValueShippingCarrierServices; set { _explicitNullValueShippingCarrierServices = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shippingCarrierServices"); else _explicitNullProperties?.Remove("shippingCarrierServices"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.ShippingCarrierServiceDto> _explicitNullValueShippingCarrierServices = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpdateShippingRateDto"/> and sets the default values.
@@ -91,7 +130,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.UpdateShippingRateDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.UpdateShippingRateDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.UpdateShippingRateDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -136,6 +175,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteDoubleValue("percentageOfRateFee", PercentageOfRateFee);
             writer.WriteStringValue("shippingCarrierId", ShippingCarrierId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ShippingCarrierServiceDto>("shippingCarrierServices", ShippingCarrierServices);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

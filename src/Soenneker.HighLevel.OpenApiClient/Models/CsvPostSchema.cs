@@ -11,88 +11,125 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CsvPostSchema : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("accountIds") is { } nullNodeAccountIds && nullNodeAccountIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountIds = null;
+            if (parseNode.GetChildNode("errorMessage") is { } nullNodeErrorMessage && nullNodeErrorMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorMessage = null;
+            if (parseNode.GetChildNode("followUpComment") is { } nullNodeFollowUpComment && nullNodeFollowUpComment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FollowUpComment = null;
+            if (parseNode.GetChildNode("gmbPostDetails") is { } nullNodeGmbPostDetails && nullNodeGmbPostDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GmbPostDetails = null;
+            if (parseNode.GetChildNode("link") is { } nullNodeLink && nullNodeLink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Link = null;
+            if (parseNode.GetChildNode("medias") is { } nullNodeMedias && nullNodeMedias.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Medias = null;
+            if (parseNode.GetChildNode("scheduleDate") is { } nullNodeScheduleDate && nullNodeScheduleDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduleDate = null;
+            if (parseNode.GetChildNode("summary") is { } nullNodeSummary && nullNodeSummary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Summary = null;
+            if (parseNode.GetChildNode("tiktokPostDetails") is { } nullNodeTiktokPostDetails && nullNodeTiktokPostDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TiktokPostDetails = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Account Ids</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AccountIds { get; set; }
+        public List<string>? AccountIds { get => _explicitNullValueAccountIds; set { _explicitNullValueAccountIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accountIds"); else _explicitNullProperties?.Remove("accountIds"); } }
+        private List<string>? _explicitNullValueAccountIds = default!;
 #nullable restore
 #else
-        public List<string> AccountIds { get; set; }
+        public List<string> AccountIds { get => _explicitNullValueAccountIds; set { _explicitNullValueAccountIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accountIds"); else _explicitNullProperties?.Remove("accountIds"); } }
+        private List<string> _explicitNullValueAccountIds = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Error Description</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ErrorMessage { get; set; }
+        public string? ErrorMessage { get => _explicitNullValueErrorMessage; set { _explicitNullValueErrorMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errorMessage"); else _explicitNullProperties?.Remove("errorMessage"); } }
+        private string? _explicitNullValueErrorMessage = default!;
 #nullable restore
 #else
-        public string ErrorMessage { get; set; }
+        public string ErrorMessage { get => _explicitNullValueErrorMessage; set { _explicitNullValueErrorMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errorMessage"); else _explicitNullProperties?.Remove("errorMessage"); } }
+        private string _explicitNullValueErrorMessage = default!;
 #endif
         /// <summary>The followUpComment property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FollowUpComment { get; set; }
+        public string? FollowUpComment { get => _explicitNullValueFollowUpComment; set { _explicitNullValueFollowUpComment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("followUpComment"); else _explicitNullProperties?.Remove("followUpComment"); } }
+        private string? _explicitNullValueFollowUpComment = default!;
 #nullable restore
 #else
-        public string FollowUpComment { get; set; }
+        public string FollowUpComment { get => _explicitNullValueFollowUpComment; set { _explicitNullValueFollowUpComment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("followUpComment"); else _explicitNullProperties?.Remove("followUpComment"); } }
+        private string _explicitNullValueFollowUpComment = default!;
 #endif
         /// <summary>GMB Post Details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaGmbPostDetails? GmbPostDetails { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaGmbPostDetails? GmbPostDetails { get => _explicitNullValueGmbPostDetails; set { _explicitNullValueGmbPostDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gmbPostDetails"); else _explicitNullProperties?.Remove("gmbPostDetails"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaGmbPostDetails? _explicitNullValueGmbPostDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaGmbPostDetails GmbPostDetails { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaGmbPostDetails GmbPostDetails { get => _explicitNullValueGmbPostDetails; set { _explicitNullValueGmbPostDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gmbPostDetails"); else _explicitNullProperties?.Remove("gmbPostDetails"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaGmbPostDetails _explicitNullValueGmbPostDetails = default!;
 #endif
         /// <summary>OG Tag</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaLink? Link { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaLink? Link { get => _explicitNullValueLink; set { _explicitNullValueLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link"); else _explicitNullProperties?.Remove("link"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaLink? _explicitNullValueLink = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaLink Link { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaLink Link { get => _explicitNullValueLink; set { _explicitNullValueLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link"); else _explicitNullProperties?.Remove("link"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaLink _explicitNullValueLink = default!;
 #endif
         /// <summary>Post Media List</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CsvMediaResponseSchema>? Medias { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CsvMediaResponseSchema>? Medias { get => _explicitNullValueMedias; set { _explicitNullValueMedias = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("medias"); else _explicitNullProperties?.Remove("medias"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.CsvMediaResponseSchema>? _explicitNullValueMedias = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CsvMediaResponseSchema> Medias { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CsvMediaResponseSchema> Medias { get => _explicitNullValueMedias; set { _explicitNullValueMedias = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("medias"); else _explicitNullProperties?.Remove("medias"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.CsvMediaResponseSchema> _explicitNullValueMedias = default!;
 #endif
         /// <summary>The scheduleDate property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ScheduleDate { get; set; }
+        public string? ScheduleDate { get => _explicitNullValueScheduleDate; set { _explicitNullValueScheduleDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduleDate"); else _explicitNullProperties?.Remove("scheduleDate"); } }
+        private string? _explicitNullValueScheduleDate = default!;
 #nullable restore
 #else
-        public string ScheduleDate { get; set; }
+        public string ScheduleDate { get => _explicitNullValueScheduleDate; set { _explicitNullValueScheduleDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduleDate"); else _explicitNullProperties?.Remove("scheduleDate"); } }
+        private string _explicitNullValueScheduleDate = default!;
 #endif
         /// <summary>The summary property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Summary { get; set; }
+        public string? Summary { get => _explicitNullValueSummary; set { _explicitNullValueSummary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("summary"); else _explicitNullProperties?.Remove("summary"); } }
+        private string? _explicitNullValueSummary = default!;
 #nullable restore
 #else
-        public string Summary { get; set; }
+        public string Summary { get => _explicitNullValueSummary; set { _explicitNullValueSummary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("summary"); else _explicitNullProperties?.Remove("summary"); } }
+        private string _explicitNullValueSummary = default!;
 #endif
         /// <summary>Tiktok Post Details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaTiktokPostDetails? TiktokPostDetails { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaTiktokPostDetails? TiktokPostDetails { get => _explicitNullValueTiktokPostDetails; set { _explicitNullValueTiktokPostDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tiktokPostDetails"); else _explicitNullProperties?.Remove("tiktokPostDetails"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaTiktokPostDetails? _explicitNullValueTiktokPostDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaTiktokPostDetails TiktokPostDetails { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaTiktokPostDetails TiktokPostDetails { get => _explicitNullValueTiktokPostDetails; set { _explicitNullValueTiktokPostDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tiktokPostDetails"); else _explicitNullProperties?.Remove("tiktokPostDetails"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaTiktokPostDetails _explicitNullValueTiktokPostDetails = default!;
 #endif
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaTypeProperty2? Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaTypeProperty? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaTypeProperty? _explicitNullValueType = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaTypeProperty2 Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaTypeProperty Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaTypeProperty _explicitNullValueType = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchema"/> and sets the default values.
@@ -109,7 +146,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchema CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchema();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchema(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -128,7 +165,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "scheduleDate", n => { ScheduleDate = n.GetStringValue(); } },
                 { "summary", n => { Summary = n.GetStringValue(); } },
                 { "tiktokPostDetails", n => { TiktokPostDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaTiktokPostDetails>(global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaTiktokPostDetails.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaTypeProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaTypeProperty2.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaTypeProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaTypeProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -147,7 +184,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("scheduleDate", ScheduleDate);
             writer.WriteStringValue("summary", Summary);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaTiktokPostDetails>("tiktokPostDetails", TiktokPostDetails);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaTypeProperty2>("type", Type);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaTypeProperty>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -61,6 +61,8 @@ namespace Soenneker.HighLevel.OpenApiClient.KnowledgeBase.KnowledgeBases.Crawler
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.KnowledgeBaseUnauthorizedDto.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.UnprocessableDto.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.HighLevel.OpenApiClient.Models.KnowledgeBaseInternalServerErrorDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.TrainDiscoveredUrlsResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.TrainDiscoveredUrlsResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

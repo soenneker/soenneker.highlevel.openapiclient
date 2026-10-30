@@ -63,6 +63,8 @@ namespace Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Item.CsvEscaped.I
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaPostingCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaPostingCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaPostingCommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteCsvResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.DeleteCsvResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -90,6 +92,8 @@ namespace Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Item.CsvEscaped.I
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaPostingCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaPostingCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaPostingCommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.GetCsvPostResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.GetCsvPostResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -119,6 +123,8 @@ namespace Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Item.CsvEscaped.I
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaPostingCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaPostingCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaPostingCommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostStatusResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostStatusResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

@@ -59,6 +59,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Payments.CustomProvider.Capabilities
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsCommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomProviderCapabilitiesResponseSchema>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomProviderCapabilitiesResponseSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

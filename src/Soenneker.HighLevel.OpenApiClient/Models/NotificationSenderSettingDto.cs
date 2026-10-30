@@ -11,24 +11,37 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class NotificationSenderSettingDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("fromEmail") is { } nullNodeFromEmail && nullNodeFromEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FromEmail = null;
+            if (parseNode.GetChildNode("fromName") is { } nullNodeFromName && nullNodeFromName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FromName = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The fromEmail property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FromEmail { get; set; }
+        public string? FromEmail { get => _explicitNullValueFromEmail; set { _explicitNullValueFromEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fromEmail"); else _explicitNullProperties?.Remove("fromEmail"); } }
+        private string? _explicitNullValueFromEmail = default!;
 #nullable restore
 #else
-        public string FromEmail { get; set; }
+        public string FromEmail { get => _explicitNullValueFromEmail; set { _explicitNullValueFromEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fromEmail"); else _explicitNullProperties?.Remove("fromEmail"); } }
+        private string _explicitNullValueFromEmail = default!;
 #endif
         /// <summary>The fromName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FromName { get; set; }
+        public string? FromName { get => _explicitNullValueFromName; set { _explicitNullValueFromName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fromName"); else _explicitNullProperties?.Remove("fromName"); } }
+        private string? _explicitNullValueFromName = default!;
 #nullable restore
 #else
-        public string FromName { get; set; }
+        public string FromName { get => _explicitNullValueFromName; set { _explicitNullValueFromName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fromName"); else _explicitNullProperties?.Remove("fromName"); } }
+        private string _explicitNullValueFromName = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.NotificationSenderSettingDto"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.NotificationSenderSettingDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.NotificationSenderSettingDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.NotificationSenderSettingDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("fromEmail", FromEmail);
             writer.WriteStringValue("fromName", FromName);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

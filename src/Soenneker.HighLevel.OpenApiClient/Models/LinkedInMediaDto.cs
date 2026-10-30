@@ -11,63 +11,94 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class LinkedInMediaDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("destinationUrl") is { } nullNodeDestinationUrl && nullNodeDestinationUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DestinationUrl = null;
+            if (parseNode.GetChildNode("fileSizeBytes") is { } nullNodeFileSizeBytes && nullNodeFileSizeBytes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileSizeBytes = null;
+            if (parseNode.GetChildNode("frames") is { } nullNodeFrames && nullNodeFrames.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Frames = null;
+            if (parseNode.GetChildNode("headline") is { } nullNodeHeadline && nullNodeHeadline.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Headline = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("selectedPoster") is { } nullNodeSelectedPoster && nullNodeSelectedPoster.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SelectedPoster = null;
+            if (parseNode.GetChildNode("src") is { } nullNodeSrc && nullNodeSrc.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Src = null;
+            if (parseNode.GetChildNode("thumbnailUrl") is { } nullNodeThumbnailUrl && nullNodeThumbnailUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThumbnailUrl = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Click-through destination URL</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DestinationUrl { get; set; }
+        public string? DestinationUrl { get => _explicitNullValueDestinationUrl; set { _explicitNullValueDestinationUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destinationUrl"); else _explicitNullProperties?.Remove("destinationUrl"); } }
+        private string? _explicitNullValueDestinationUrl = default!;
 #nullable restore
 #else
-        public string DestinationUrl { get; set; }
+        public string DestinationUrl { get => _explicitNullValueDestinationUrl; set { _explicitNullValueDestinationUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destinationUrl"); else _explicitNullProperties?.Remove("destinationUrl"); } }
+        private string _explicitNullValueDestinationUrl = default!;
 #endif
         /// <summary>File size in bytes</summary>
-        public double? FileSizeBytes { get; set; }
+        public double? FileSizeBytes { get => _explicitNullValueFileSizeBytes; set { _explicitNullValueFileSizeBytes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fileSizeBytes"); else _explicitNullProperties?.Remove("fileSizeBytes"); } }
+        private double? _explicitNullValueFileSizeBytes = default!;
         /// <summary>Video frame URLs</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Frames { get; set; }
+        public List<string>? Frames { get => _explicitNullValueFrames; set { _explicitNullValueFrames = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("frames"); else _explicitNullProperties?.Remove("frames"); } }
+        private List<string>? _explicitNullValueFrames = default!;
 #nullable restore
 #else
-        public List<string> Frames { get; set; }
+        public List<string> Frames { get => _explicitNullValueFrames; set { _explicitNullValueFrames = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("frames"); else _explicitNullProperties?.Remove("frames"); } }
+        private List<string> _explicitNullValueFrames = default!;
 #endif
         /// <summary>Media headline</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Headline { get; set; }
+        public string? Headline { get => _explicitNullValueHeadline; set { _explicitNullValueHeadline = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("headline"); else _explicitNullProperties?.Remove("headline"); } }
+        private string? _explicitNullValueHeadline = default!;
 #nullable restore
 #else
-        public string Headline { get; set; }
+        public string Headline { get => _explicitNullValueHeadline; set { _explicitNullValueHeadline = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("headline"); else _explicitNullProperties?.Remove("headline"); } }
+        private string _explicitNullValueHeadline = default!;
 #endif
         /// <summary>Media name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>Selected poster frame index</summary>
-        public double? SelectedPoster { get; set; }
+        public double? SelectedPoster { get => _explicitNullValueSelectedPoster; set { _explicitNullValueSelectedPoster = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selectedPoster"); else _explicitNullProperties?.Remove("selectedPoster"); } }
+        private double? _explicitNullValueSelectedPoster = default!;
         /// <summary>Media source URL</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Src { get; set; }
+        public string? Src { get => _explicitNullValueSrc; set { _explicitNullValueSrc = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("src"); else _explicitNullProperties?.Remove("src"); } }
+        private string? _explicitNullValueSrc = default!;
 #nullable restore
 #else
-        public string Src { get; set; }
+        public string Src { get => _explicitNullValueSrc; set { _explicitNullValueSrc = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("src"); else _explicitNullProperties?.Remove("src"); } }
+        private string _explicitNullValueSrc = default!;
 #endif
         /// <summary>Thumbnail URL</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ThumbnailUrl { get; set; }
+        public string? ThumbnailUrl { get => _explicitNullValueThumbnailUrl; set { _explicitNullValueThumbnailUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumbnailUrl"); else _explicitNullProperties?.Remove("thumbnailUrl"); } }
+        private string? _explicitNullValueThumbnailUrl = default!;
 #nullable restore
 #else
-        public string ThumbnailUrl { get; set; }
+        public string ThumbnailUrl { get => _explicitNullValueThumbnailUrl; set { _explicitNullValueThumbnailUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumbnailUrl"); else _explicitNullProperties?.Remove("thumbnailUrl"); } }
+        private string _explicitNullValueThumbnailUrl = default!;
 #endif
         /// <summary>Media type</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInMediaDtoType? Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInMediaDtoType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInMediaDtoType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInMediaDto"/> and sets the default values.
         /// </summary>
@@ -83,7 +114,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInMediaDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInMediaDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInMediaDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -120,6 +151,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("src", Src);
             writer.WriteStringValue("thumbnailUrl", ThumbnailUrl);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInMediaDtoType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

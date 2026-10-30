@@ -11,29 +11,46 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ScheduleInvoiceScheduleDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("altId") is { } nullNodeAltId && nullNodeAltId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AltId = null;
+            if (parseNode.GetChildNode("altType") is { } nullNodeAltType && nullNodeAltType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AltType = null;
+            if (parseNode.GetChildNode("autoPayment") is { } nullNodeAutoPayment && nullNodeAutoPayment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoPayment = null;
+            if (parseNode.GetChildNode("liveMode") is { } nullNodeLiveMode && nullNodeLiveMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LiveMode = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>location Id / company Id based on altType</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AltId { get; set; }
+        public string? AltId { get => _explicitNullValueAltId; set { _explicitNullValueAltId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("altId"); else _explicitNullProperties?.Remove("altId"); } }
+        private string? _explicitNullValueAltId = default!;
 #nullable restore
 #else
-        public string AltId { get; set; }
+        public string AltId { get => _explicitNullValueAltId; set { _explicitNullValueAltId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("altId"); else _explicitNullProperties?.Remove("altId"); } }
+        private string _explicitNullValueAltId = default!;
 #endif
         /// <summary>Alt Type</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesLocationAltType? AltType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesLocationAltType? AltType { get => _explicitNullValueAltType; set { _explicitNullValueAltType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("altType"); else _explicitNullProperties?.Remove("altType"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesLocationAltType? _explicitNullValueAltType = default!;
         /// <summary>auto-payment configuration</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleInvoiceScheduleDtoAutoPayment? AutoPayment { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleInvoiceScheduleDtoAutoPayment? AutoPayment { get => _explicitNullValueAutoPayment; set { _explicitNullValueAutoPayment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("autoPayment"); else _explicitNullProperties?.Remove("autoPayment"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleInvoiceScheduleDtoAutoPayment? _explicitNullValueAutoPayment = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleInvoiceScheduleDtoAutoPayment AutoPayment { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleInvoiceScheduleDtoAutoPayment AutoPayment { get => _explicitNullValueAutoPayment; set { _explicitNullValueAutoPayment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("autoPayment"); else _explicitNullProperties?.Remove("autoPayment"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleInvoiceScheduleDtoAutoPayment _explicitNullValueAutoPayment = default!;
 #endif
         /// <summary>The liveMode property</summary>
-        public bool? LiveMode { get; set; }
+        public bool? LiveMode { get => _explicitNullValueLiveMode; set { _explicitNullValueLiveMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("liveMode"); else _explicitNullProperties?.Remove("liveMode"); } }
+        private bool? _explicitNullValueLiveMode = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleInvoiceScheduleDto"/> and sets the default values.
         /// </summary>
@@ -49,7 +66,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleInvoiceScheduleDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleInvoiceScheduleDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleInvoiceScheduleDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -76,6 +93,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesLocationAltType>("altType", AltType);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleInvoiceScheduleDtoAutoPayment>("autoPayment", AutoPayment);
             writer.WriteBoolValue("liveMode", LiveMode);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

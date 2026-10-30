@@ -12,44 +12,67 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CustomActionParametersApiDetails : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("authenticationRequired") is { } nullNodeAuthenticationRequired && nullNodeAuthenticationRequired.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthenticationRequired = null;
+            if (parseNode.GetChildNode("authenticationValue") is { } nullNodeAuthenticationValue && nullNodeAuthenticationValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthenticationValue = null;
+            if (parseNode.GetChildNode("headers") is { } nullNodeHeaders && nullNodeHeaders.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Headers = null;
+            if (parseNode.GetChildNode("method") is { } nullNodeMethod && nullNodeMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Method = null;
+            if (parseNode.GetChildNode("parameters") is { } nullNodeParameters && nullNodeParameters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameters = null;
+            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether authentication is required</summary>
-        public bool? AuthenticationRequired { get; set; }
+        public bool? AuthenticationRequired { get => _explicitNullValueAuthenticationRequired; set { _explicitNullValueAuthenticationRequired = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authenticationRequired"); else _explicitNullProperties?.Remove("authenticationRequired"); } }
+        private bool? _explicitNullValueAuthenticationRequired = default!;
         /// <summary>Authentication token or API key (required if authenticationRequired is true)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AuthenticationValue { get; set; }
+        public string? AuthenticationValue { get => _explicitNullValueAuthenticationValue; set { _explicitNullValueAuthenticationValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authenticationValue"); else _explicitNullProperties?.Remove("authenticationValue"); } }
+        private string? _explicitNullValueAuthenticationValue = default!;
 #nullable restore
 #else
-        public string AuthenticationValue { get; set; }
+        public string AuthenticationValue { get => _explicitNullValueAuthenticationValue; set { _explicitNullValueAuthenticationValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authenticationValue"); else _explicitNullProperties?.Remove("authenticationValue"); } }
+        private string _explicitNullValueAuthenticationValue = default!;
 #endif
         /// <summary>HTTP headers to include</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionHeaderDto>? Headers { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionHeaderDto>? Headers { get => _explicitNullValueHeaders; set { _explicitNullValueHeaders = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("headers"); else _explicitNullProperties?.Remove("headers"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionHeaderDto>? _explicitNullValueHeaders = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionHeaderDto> Headers { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionHeaderDto> Headers { get => _explicitNullValueHeaders; set { _explicitNullValueHeaders = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("headers"); else _explicitNullProperties?.Remove("headers"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionHeaderDto> _explicitNullValueHeaders = default!;
 #endif
         /// <summary>HTTP method</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionApiDetailsDtoMethod? Method { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionApiDetailsDtoMethod? Method { get => _explicitNullValueMethod; set { _explicitNullValueMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("method"); else _explicitNullProperties?.Remove("method"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionApiDetailsDtoMethod? _explicitNullValueMethod = default!;
         /// <summary>API parameters to send</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParameterDto>? Parameters { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParameterDto>? Parameters { get => _explicitNullValueParameters; set { _explicitNullValueParameters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parameters"); else _explicitNullProperties?.Remove("parameters"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParameterDto>? _explicitNullValueParameters = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParameterDto> Parameters { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParameterDto> Parameters { get => _explicitNullValueParameters; set { _explicitNullValueParameters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parameters"); else _explicitNullProperties?.Remove("parameters"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParameterDto> _explicitNullValueParameters = default!;
 #endif
         /// <summary>API endpoint URL</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get; set; }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get; set; }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParametersApiDetails"/> and sets the default values.
@@ -66,7 +89,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParametersApiDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParametersApiDetails();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParametersApiDetails(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -97,6 +120,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionApiDetailsDtoMethod>("method", Method);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParameterDto>("parameters", Parameters);
             writer.WriteStringValue("url", Url);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

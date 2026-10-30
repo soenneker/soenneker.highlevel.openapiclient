@@ -11,32 +11,48 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class FulfillmentTracking : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("shippingCarrier") is { } nullNodeShippingCarrier && nullNodeShippingCarrier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingCarrier = null;
+            if (parseNode.GetChildNode("trackingNumber") is { } nullNodeTrackingNumber && nullNodeTrackingNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackingNumber = null;
+            if (parseNode.GetChildNode("trackingUrl") is { } nullNodeTrackingUrl && nullNodeTrackingUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackingUrl = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Shipping carrier name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShippingCarrier { get; set; }
+        public string? ShippingCarrier { get => _explicitNullValueShippingCarrier; set { _explicitNullValueShippingCarrier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shippingCarrier"); else _explicitNullProperties?.Remove("shippingCarrier"); } }
+        private string? _explicitNullValueShippingCarrier = default!;
 #nullable restore
 #else
-        public string ShippingCarrier { get; set; }
+        public string ShippingCarrier { get => _explicitNullValueShippingCarrier; set { _explicitNullValueShippingCarrier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shippingCarrier"); else _explicitNullProperties?.Remove("shippingCarrier"); } }
+        private string _explicitNullValueShippingCarrier = default!;
 #endif
         /// <summary>Tracking number provided by the shipping carrier</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TrackingNumber { get; set; }
+        public string? TrackingNumber { get => _explicitNullValueTrackingNumber; set { _explicitNullValueTrackingNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trackingNumber"); else _explicitNullProperties?.Remove("trackingNumber"); } }
+        private string? _explicitNullValueTrackingNumber = default!;
 #nullable restore
 #else
-        public string TrackingNumber { get; set; }
+        public string TrackingNumber { get => _explicitNullValueTrackingNumber; set { _explicitNullValueTrackingNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trackingNumber"); else _explicitNullProperties?.Remove("trackingNumber"); } }
+        private string _explicitNullValueTrackingNumber = default!;
 #endif
         /// <summary>Tracking URL</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TrackingUrl { get; set; }
+        public string? TrackingUrl { get => _explicitNullValueTrackingUrl; set { _explicitNullValueTrackingUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trackingUrl"); else _explicitNullProperties?.Remove("trackingUrl"); } }
+        private string? _explicitNullValueTrackingUrl = default!;
 #nullable restore
 #else
-        public string TrackingUrl { get; set; }
+        public string TrackingUrl { get => _explicitNullValueTrackingUrl; set { _explicitNullValueTrackingUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trackingUrl"); else _explicitNullProperties?.Remove("trackingUrl"); } }
+        private string _explicitNullValueTrackingUrl = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.FulfillmentTracking"/> and sets the default values.
@@ -53,7 +69,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.FulfillmentTracking CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.FulfillmentTracking();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.FulfillmentTracking(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +94,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("shippingCarrier", ShippingCarrier);
             writer.WriteStringValue("trackingNumber", TrackingNumber);
             writer.WriteStringValue("trackingUrl", TrackingUrl);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -12,15 +12,28 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AvailablePhoneNumberDtoCapabilities : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("MMS") is { } nullNodeMMS && nullNodeMMS.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MMS = null;
+            if (parseNode.GetChildNode("SMS") is { } nullNodeSMS && nullNodeSMS.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SMS = null;
+            if (parseNode.GetChildNode("voice") is { } nullNodeVoice && nullNodeVoice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Voice = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The MMS property</summary>
-        public bool? MMS { get; set; }
+        public bool? MMS { get => _explicitNullValueMMS; set { _explicitNullValueMMS = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MMS"); else _explicitNullProperties?.Remove("MMS"); } }
+        private bool? _explicitNullValueMMS = default!;
         /// <summary>The SMS property</summary>
-        public bool? SMS { get; set; }
+        public bool? SMS { get => _explicitNullValueSMS; set { _explicitNullValueSMS = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SMS"); else _explicitNullProperties?.Remove("SMS"); } }
+        private bool? _explicitNullValueSMS = default!;
         /// <summary>The voice property</summary>
-        public bool? Voice { get; set; }
+        public bool? Voice { get => _explicitNullValueVoice; set { _explicitNullValueVoice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("voice"); else _explicitNullProperties?.Remove("voice"); } }
+        private bool? _explicitNullValueVoice = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.AvailablePhoneNumberDtoCapabilities"/> and sets the default values.
         /// </summary>
@@ -36,7 +49,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.AvailablePhoneNumberDtoCapabilities CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.AvailablePhoneNumberDtoCapabilities();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.AvailablePhoneNumberDtoCapabilities(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -61,6 +74,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteBoolValue("MMS", MMS);
             writer.WriteBoolValue("SMS", SMS);
             writer.WriteBoolValue("voice", Voice);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

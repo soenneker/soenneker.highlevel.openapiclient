@@ -11,24 +11,37 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class LeadFormFieldDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("inputType") is { } nullNodeInputType && nullNodeInputType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InputType = null;
+            if (parseNode.GetChildNode("singleChoiceAnswers") is { } nullNodeSingleChoiceAnswers && nullNodeSingleChoiceAnswers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SingleChoiceAnswers = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Field input type from Google Ads LeadFormFieldUserInputType</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InputType { get; set; }
+        public string? InputType { get => _explicitNullValueInputType; set { _explicitNullValueInputType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputType"); else _explicitNullProperties?.Remove("inputType"); } }
+        private string? _explicitNullValueInputType = default!;
 #nullable restore
 #else
-        public string InputType { get; set; }
+        public string InputType { get => _explicitNullValueInputType; set { _explicitNullValueInputType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputType"); else _explicitNullProperties?.Remove("inputType"); } }
+        private string _explicitNullValueInputType = default!;
 #endif
         /// <summary>Single-choice answer options for the field</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? SingleChoiceAnswers { get; set; }
+        public List<string>? SingleChoiceAnswers { get => _explicitNullValueSingleChoiceAnswers; set { _explicitNullValueSingleChoiceAnswers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("singleChoiceAnswers"); else _explicitNullProperties?.Remove("singleChoiceAnswers"); } }
+        private List<string>? _explicitNullValueSingleChoiceAnswers = default!;
 #nullable restore
 #else
-        public List<string> SingleChoiceAnswers { get; set; }
+        public List<string> SingleChoiceAnswers { get => _explicitNullValueSingleChoiceAnswers; set { _explicitNullValueSingleChoiceAnswers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("singleChoiceAnswers"); else _explicitNullProperties?.Remove("singleChoiceAnswers"); } }
+        private List<string> _explicitNullValueSingleChoiceAnswers = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormFieldDto"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormFieldDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormFieldDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormFieldDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("inputType", InputType);
             writer.WriteCollectionOfPrimitiveValues<string>("singleChoiceAnswers", SingleChoiceAnswers);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

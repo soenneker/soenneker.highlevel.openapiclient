@@ -84,6 +84,8 @@ namespace Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Item.Posts
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaPostingCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaPostingCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaPostingCommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostSuccessfulResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostSuccessfulResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

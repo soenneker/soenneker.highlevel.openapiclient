@@ -11,56 +11,81 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class UserSubscriptionChangeDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("contactId") is { } nullNodeContactId && nullNodeContactId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactId = null;
+            if (parseNode.GetChildNode("email") is { } nullNodeEmail && nullNodeEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Email = null;
+            if (parseNode.GetChildNode("legal_description") is { } nullNodeLegalDescription && nullNodeLegalDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LegalDescription = null;
+            if (parseNode.GetChildNode("legal_reason") is { } nullNodeLegalReason && nullNodeLegalReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LegalReason = null;
+            if (parseNode.GetChildNode("locationId") is { } nullNodeLocationId && nullNodeLocationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationId = null;
+            if (parseNode.GetChildNode("subscription_action") is { } nullNodeSubscriptionAction && nullNodeSubscriptionAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriptionAction = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Contact Id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ContactId { get; set; }
+        public string? ContactId { get => _explicitNullValueContactId; set { _explicitNullValueContactId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactId"); else _explicitNullProperties?.Remove("contactId"); } }
+        private string? _explicitNullValueContactId = default!;
 #nullable restore
 #else
-        public string ContactId { get; set; }
+        public string ContactId { get => _explicitNullValueContactId; set { _explicitNullValueContactId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactId"); else _explicitNullProperties?.Remove("contactId"); } }
+        private string _explicitNullValueContactId = default!;
 #endif
         /// <summary>Email address</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Email { get; set; }
+        public string? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        private string? _explicitNullValueEmail = default!;
 #nullable restore
 #else
-        public string Email { get; set; }
+        public string Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        private string _explicitNullValueEmail = default!;
 #endif
         /// <summary>Legal description/details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LegalDescription { get; set; }
+        public string? LegalDescription { get => _explicitNullValueLegalDescription; set { _explicitNullValueLegalDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("legal_description"); else _explicitNullProperties?.Remove("legal_description"); } }
+        private string? _explicitNullValueLegalDescription = default!;
 #nullable restore
 #else
-        public string LegalDescription { get; set; }
+        public string LegalDescription { get => _explicitNullValueLegalDescription; set { _explicitNullValueLegalDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("legal_description"); else _explicitNullProperties?.Remove("legal_description"); } }
+        private string _explicitNullValueLegalDescription = default!;
 #endif
         /// <summary>Legal reason for the change (required only for resubscribe and resub_all actions)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LegalReason { get; set; }
+        public string? LegalReason { get => _explicitNullValueLegalReason; set { _explicitNullValueLegalReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("legal_reason"); else _explicitNullProperties?.Remove("legal_reason"); } }
+        private string? _explicitNullValueLegalReason = default!;
 #nullable restore
 #else
-        public string LegalReason { get; set; }
+        public string LegalReason { get => _explicitNullValueLegalReason; set { _explicitNullValueLegalReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("legal_reason"); else _explicitNullProperties?.Remove("legal_reason"); } }
+        private string _explicitNullValueLegalReason = default!;
 #endif
         /// <summary>Location Id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LocationId { get; set; }
+        public string? LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
+        private string? _explicitNullValueLocationId = default!;
 #nullable restore
 #else
-        public string LocationId { get; set; }
+        public string LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
+        private string _explicitNullValueLocationId = default!;
 #endif
         /// <summary>Subscription action details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UserSubscriptionChangeDtoSubscriptionAction? SubscriptionAction { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UserSubscriptionChangeDtoSubscriptionAction? SubscriptionAction { get => _explicitNullValueSubscriptionAction; set { _explicitNullValueSubscriptionAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_action"); else _explicitNullProperties?.Remove("subscription_action"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.UserSubscriptionChangeDtoSubscriptionAction? _explicitNullValueSubscriptionAction = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UserSubscriptionChangeDtoSubscriptionAction SubscriptionAction { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UserSubscriptionChangeDtoSubscriptionAction SubscriptionAction { get => _explicitNullValueSubscriptionAction; set { _explicitNullValueSubscriptionAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_action"); else _explicitNullProperties?.Remove("subscription_action"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.UserSubscriptionChangeDtoSubscriptionAction _explicitNullValueSubscriptionAction = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UserSubscriptionChangeDto"/> and sets the default values.
@@ -77,7 +102,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.UserSubscriptionChangeDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.UserSubscriptionChangeDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.UserSubscriptionChangeDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -108,6 +133,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("legal_reason", LegalReason);
             writer.WriteStringValue("locationId", LocationId);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UserSubscriptionChangeDtoSubscriptionAction>("subscription_action", SubscriptionAction);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

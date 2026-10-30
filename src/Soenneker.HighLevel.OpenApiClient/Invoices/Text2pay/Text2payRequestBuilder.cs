@@ -59,6 +59,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Invoices.Text2pay
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.Text2PayInvoiceResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.Text2PayInvoiceResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

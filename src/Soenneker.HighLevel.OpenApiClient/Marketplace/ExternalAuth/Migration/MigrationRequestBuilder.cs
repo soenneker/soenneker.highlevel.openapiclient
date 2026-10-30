@@ -59,6 +59,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Marketplace.ExternalAuth.Migration
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.MarketplaceCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.MarketplaceCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.HighLevel.OpenApiClient.Models.MarketplaceInternalServerErrorDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.MigrateConnectionResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.MigrateConnectionResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

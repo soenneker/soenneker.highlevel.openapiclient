@@ -11,29 +11,46 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class DeleteMediaObjectsBodyParams : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("altId") is { } nullNodeAltId && nullNodeAltId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AltId = null;
+            if (parseNode.GetChildNode("altType") is { } nullNodeAltType && nullNodeAltType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AltType = null;
+            if (parseNode.GetChildNode("filesToBeDeleted") is { } nullNodeFilesToBeDeleted && nullNodeFilesToBeDeleted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FilesToBeDeleted = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Location identifier</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AltId { get; set; }
+        public string? AltId { get => _explicitNullValueAltId; set { _explicitNullValueAltId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("altId"); else _explicitNullProperties?.Remove("altId"); } }
+        private string? _explicitNullValueAltId = default!;
 #nullable restore
 #else
-        public string AltId { get; set; }
+        public string AltId { get => _explicitNullValueAltId; set { _explicitNullValueAltId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("altId"); else _explicitNullProperties?.Remove("altId"); } }
+        private string _explicitNullValueAltId = default!;
 #endif
         /// <summary>Type of entity that owns the folder</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get => _explicitNullValueAltType; set { _explicitNullValueAltType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("altType"); else _explicitNullProperties?.Remove("altType"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? _explicitNullValueAltType = default!;
         /// <summary>Array of file objects to be deleted or trashed</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteMediaObjectItem>? FilesToBeDeleted { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteMediaObjectItem>? FilesToBeDeleted { get => _explicitNullValueFilesToBeDeleted; set { _explicitNullValueFilesToBeDeleted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filesToBeDeleted"); else _explicitNullProperties?.Remove("filesToBeDeleted"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteMediaObjectItem>? _explicitNullValueFilesToBeDeleted = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteMediaObjectItem> FilesToBeDeleted { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteMediaObjectItem> FilesToBeDeleted { get => _explicitNullValueFilesToBeDeleted; set { _explicitNullValueFilesToBeDeleted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filesToBeDeleted"); else _explicitNullProperties?.Remove("filesToBeDeleted"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteMediaObjectItem> _explicitNullValueFilesToBeDeleted = default!;
 #endif
         /// <summary>Status to set for the files (deleted or trashed)</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DeleteMediaObjectsBodyParamsStatus? Status { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DeleteMediaObjectsBodyParamsStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.DeleteMediaObjectsBodyParamsStatus? _explicitNullValueStatus = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.DeleteMediaObjectsBodyParams"/> and sets the default values.
         /// </summary>
@@ -49,7 +66,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.DeleteMediaObjectsBodyParams CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.DeleteMediaObjectsBodyParams();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.DeleteMediaObjectsBodyParams(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -76,6 +93,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType>("altType", AltType);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteMediaObjectItem>("filesToBeDeleted", FilesToBeDeleted);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteMediaObjectsBodyParamsStatus>("status", Status);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,36 +11,61 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class FollowupSequence : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("aiEnabledMessage") is { } nullNodeAiEnabledMessage && nullNodeAiEnabledMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AiEnabledMessage = null;
+            if (parseNode.GetChildNode("contactRequested") is { } nullNodeContactRequested && nullNodeContactRequested.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactRequested = null;
+            if (parseNode.GetChildNode("customMessage") is { } nullNodeCustomMessage && nullNodeCustomMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomMessage = null;
+            if (parseNode.GetChildNode("followupTime") is { } nullNodeFollowupTime && nullNodeFollowupTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FollowupTime = null;
+            if (parseNode.GetChildNode("followupTimeUnit") is { } nullNodeFollowupTimeUnit && nullNodeFollowupTimeUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FollowupTimeUnit = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("triggerWorkflow") is { } nullNodeTriggerWorkflow && nullNodeTriggerWorkflow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TriggerWorkflow = null;
+            if (parseNode.GetChildNode("workflowId") is { } nullNodeWorkflowId && nullNodeWorkflowId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether to use AI to generate the followup message</summary>
-        public bool? AiEnabledMessage { get; set; }
+        public bool? AiEnabledMessage { get => _explicitNullValueAiEnabledMessage; set { _explicitNullValueAiEnabledMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aiEnabledMessage"); else _explicitNullProperties?.Remove("aiEnabledMessage"); } }
+        private bool? _explicitNullValueAiEnabledMessage = default!;
         /// <summary>Whether contact was requested in this followup</summary>
-        public bool? ContactRequested { get; set; }
+        public bool? ContactRequested { get => _explicitNullValueContactRequested; set { _explicitNullValueContactRequested = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactRequested"); else _explicitNullProperties?.Remove("contactRequested"); } }
+        private bool? _explicitNullValueContactRequested = default!;
         /// <summary>Custom message to send (when aiEnabledMessage is false)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomMessage { get; set; }
+        public string? CustomMessage { get => _explicitNullValueCustomMessage; set { _explicitNullValueCustomMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customMessage"); else _explicitNullProperties?.Remove("customMessage"); } }
+        private string? _explicitNullValueCustomMessage = default!;
 #nullable restore
 #else
-        public string CustomMessage { get; set; }
+        public string CustomMessage { get => _explicitNullValueCustomMessage; set { _explicitNullValueCustomMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customMessage"); else _explicitNullProperties?.Remove("customMessage"); } }
+        private string _explicitNullValueCustomMessage = default!;
 #endif
         /// <summary>Time duration before followup (max: 60 minutes, 24 hours, or 180 days depending on unit)</summary>
-        public double? FollowupTime { get; set; }
+        public double? FollowupTime { get => _explicitNullValueFollowupTime; set { _explicitNullValueFollowupTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("followupTime"); else _explicitNullProperties?.Remove("followupTime"); } }
+        private double? _explicitNullValueFollowupTime = default!;
         /// <summary>Time unit for followup delay</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.FollowupSequenceFollowupTimeUnit? FollowupTimeUnit { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.FollowupSequenceFollowupTimeUnit? FollowupTimeUnit { get => _explicitNullValueFollowupTimeUnit; set { _explicitNullValueFollowupTimeUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("followupTimeUnit"); else _explicitNullProperties?.Remove("followupTimeUnit"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.FollowupSequenceFollowupTimeUnit? _explicitNullValueFollowupTimeUnit = default!;
         /// <summary>Unique identifier for this followup step</summary>
-        public double? Id { get; set; }
+        public double? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private double? _explicitNullValueId = default!;
         /// <summary>Whether to trigger a workflow during this followup</summary>
-        public bool? TriggerWorkflow { get; set; }
+        public bool? TriggerWorkflow { get => _explicitNullValueTriggerWorkflow; set { _explicitNullValueTriggerWorkflow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggerWorkflow"); else _explicitNullProperties?.Remove("triggerWorkflow"); } }
+        private bool? _explicitNullValueTriggerWorkflow = default!;
         /// <summary>Workflow ID to trigger (when triggerWorkflow is true)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WorkflowId { get; set; }
+        public string? WorkflowId { get => _explicitNullValueWorkflowId; set { _explicitNullValueWorkflowId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowId"); else _explicitNullProperties?.Remove("workflowId"); } }
+        private string? _explicitNullValueWorkflowId = default!;
 #nullable restore
 #else
-        public string WorkflowId { get; set; }
+        public string WorkflowId { get => _explicitNullValueWorkflowId; set { _explicitNullValueWorkflowId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowId"); else _explicitNullProperties?.Remove("workflowId"); } }
+        private string _explicitNullValueWorkflowId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.FollowupSequence"/> and sets the default values.
@@ -59,7 +84,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.FollowupSequence CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.FollowupSequence();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.FollowupSequence(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -94,6 +119,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteDoubleValue("id", Id);
             writer.WriteBoolValue("triggerWorkflow", TriggerWorkflow);
             writer.WriteStringValue("workflowId", WorkflowId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

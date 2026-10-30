@@ -11,18 +11,30 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class UpsertOpportunitySuccessfulResponseDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("new") is { } nullNodeNew && nullNodeNew.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) New = null;
+            if (parseNode.GetChildNode("opportunity") is { } nullNodeOpportunity && nullNodeOpportunity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Opportunity = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The new property</summary>
-        public bool? New { get; set; }
+        public bool? New { get => _explicitNullValueNew; set { _explicitNullValueNew = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new"); else _explicitNullProperties?.Remove("new"); } }
+        private bool? _explicitNullValueNew = default!;
         /// <summary>Updated / New Opportunity</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunitySuccessfulResponseDtoOpportunityProperty2? Opportunity { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunitySuccessfulResponseDtoOpportunityProperty2? Opportunity { get => _explicitNullValueOpportunity; set { _explicitNullValueOpportunity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opportunity"); else _explicitNullProperties?.Remove("opportunity"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunitySuccessfulResponseDtoOpportunityProperty2? _explicitNullValueOpportunity = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunitySuccessfulResponseDtoOpportunityProperty2 Opportunity { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunitySuccessfulResponseDtoOpportunityProperty2 Opportunity { get => _explicitNullValueOpportunity; set { _explicitNullValueOpportunity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opportunity"); else _explicitNullProperties?.Remove("opportunity"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunitySuccessfulResponseDtoOpportunityProperty2 _explicitNullValueOpportunity = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunitySuccessfulResponseDto"/> and sets the default values.
@@ -39,7 +51,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunitySuccessfulResponseDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunitySuccessfulResponseDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunitySuccessfulResponseDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -62,6 +74,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("new", New);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunitySuccessfulResponseDtoOpportunityProperty2>("opportunity", Opportunity);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

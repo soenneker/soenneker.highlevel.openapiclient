@@ -11,24 +11,37 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetInventoryResponseDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("inventory") is { } nullNodeInventory && nullNodeInventory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Inventory = null;
+            if (parseNode.GetChildNode("total") is { } nullNodeTotal && nullNodeTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Total = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>List of inventory items</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.InventoryItemDto>? Inventory { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.InventoryItemDto>? Inventory { get => _explicitNullValueInventory; set { _explicitNullValueInventory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inventory"); else _explicitNullProperties?.Remove("inventory"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.InventoryItemDto>? _explicitNullValueInventory = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.InventoryItemDto> Inventory { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.InventoryItemDto> Inventory { get => _explicitNullValueInventory; set { _explicitNullValueInventory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inventory"); else _explicitNullProperties?.Remove("inventory"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.InventoryItemDto> _explicitNullValueInventory = default!;
 #endif
         /// <summary>Total count of inventory items</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInventoryResponseDtoTotalProperty2? Total { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInventoryResponseDtoTotalProperty2? Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total"); else _explicitNullProperties?.Remove("total"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GetInventoryResponseDtoTotalProperty2? _explicitNullValueTotal = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInventoryResponseDtoTotalProperty2 Total { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInventoryResponseDtoTotalProperty2 Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total"); else _explicitNullProperties?.Remove("total"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GetInventoryResponseDtoTotalProperty2 _explicitNullValueTotal = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GetInventoryResponseDto"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.GetInventoryResponseDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.GetInventoryResponseDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.GetInventoryResponseDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.InventoryItemDto>("inventory", Inventory);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetInventoryResponseDtoTotalProperty2>("total", Total);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

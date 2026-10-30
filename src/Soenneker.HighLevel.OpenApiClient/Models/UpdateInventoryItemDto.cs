@@ -11,20 +11,34 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class UpdateInventoryItemDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("allowOutOfStockPurchases") is { } nullNodeAllowOutOfStockPurchases && nullNodeAllowOutOfStockPurchases.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowOutOfStockPurchases = null;
+            if (parseNode.GetChildNode("availableQuantity") is { } nullNodeAvailableQuantity && nullNodeAvailableQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AvailableQuantity = null;
+            if (parseNode.GetChildNode("priceId") is { } nullNodePriceId && nullNodePriceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PriceId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether to continue selling the item when out of stock.</summary>
-        public bool? AllowOutOfStockPurchases { get; set; }
+        public bool? AllowOutOfStockPurchases { get => _explicitNullValueAllowOutOfStockPurchases; set { _explicitNullValueAllowOutOfStockPurchases = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowOutOfStockPurchases"); else _explicitNullProperties?.Remove("allowOutOfStockPurchases"); } }
+        private bool? _explicitNullValueAllowOutOfStockPurchases = default!;
         /// <summary>The available quantity of the item.</summary>
-        public double? AvailableQuantity { get; set; }
+        public double? AvailableQuantity { get => _explicitNullValueAvailableQuantity; set { _explicitNullValueAvailableQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("availableQuantity"); else _explicitNullProperties?.Remove("availableQuantity"); } }
+        private double? _explicitNullValueAvailableQuantity = default!;
         /// <summary>The unique identifier for the price, in MongoDB ID format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PriceId { get; set; }
+        public string? PriceId { get => _explicitNullValuePriceId; set { _explicitNullValuePriceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("priceId"); else _explicitNullProperties?.Remove("priceId"); } }
+        private string? _explicitNullValuePriceId = default!;
 #nullable restore
 #else
-        public string PriceId { get; set; }
+        public string PriceId { get => _explicitNullValuePriceId; set { _explicitNullValuePriceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("priceId"); else _explicitNullProperties?.Remove("priceId"); } }
+        private string _explicitNullValuePriceId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInventoryItemDto"/> and sets the default values.
@@ -41,7 +55,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInventoryItemDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInventoryItemDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInventoryItemDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -66,6 +80,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteBoolValue("allowOutOfStockPurchases", AllowOutOfStockPurchases);
             writer.WriteDoubleValue("availableQuantity", AvailableQuantity);
             writer.WriteStringValue("priceId", PriceId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

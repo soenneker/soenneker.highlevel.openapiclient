@@ -11,72 +11,103 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetPostSuccessfulResponseDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("associationType") is { } nullNodeAssociationType && nullNodeAssociationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssociationType = null;
+            if (parseNode.GetChildNode("firstObjectKey") is { } nullNodeFirstObjectKey && nullNodeFirstObjectKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstObjectKey = null;
+            if (parseNode.GetChildNode("firstObjectLabel") is { } nullNodeFirstObjectLabel && nullNodeFirstObjectLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstObjectLabel = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("key") is { } nullNodeKey && nullNodeKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Key = null;
+            if (parseNode.GetChildNode("locationId") is { } nullNodeLocationId && nullNodeLocationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationId = null;
+            if (parseNode.GetChildNode("secondObjectKey") is { } nullNodeSecondObjectKey && nullNodeSecondObjectKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecondObjectKey = null;
+            if (parseNode.GetChildNode("secondObjectLabel") is { } nullNodeSecondObjectLabel && nullNodeSecondObjectLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecondObjectLabel = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Association Type can be USER_DEFINED or SYSTEM_DEFINED</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoAssociationTypeProperty2? AssociationType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoAssociationTypeProperty? AssociationType { get => _explicitNullValueAssociationType; set { _explicitNullValueAssociationType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("associationType"); else _explicitNullProperties?.Remove("associationType"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoAssociationTypeProperty? _explicitNullValueAssociationType = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoAssociationTypeProperty2 AssociationType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoAssociationTypeProperty AssociationType { get => _explicitNullValueAssociationType; set { _explicitNullValueAssociationType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("associationType"); else _explicitNullProperties?.Remove("associationType"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoAssociationTypeProperty _explicitNullValueAssociationType = default!;
 #endif
         /// <summary>First Objects Key</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoFirstObjectKeyProperty2? FirstObjectKey { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoFirstObjectKeyProperty? FirstObjectKey { get => _explicitNullValueFirstObjectKey; set { _explicitNullValueFirstObjectKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("firstObjectKey"); else _explicitNullProperties?.Remove("firstObjectKey"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoFirstObjectKeyProperty? _explicitNullValueFirstObjectKey = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoFirstObjectKeyProperty2 FirstObjectKey { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoFirstObjectKeyProperty FirstObjectKey { get => _explicitNullValueFirstObjectKey; set { _explicitNullValueFirstObjectKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("firstObjectKey"); else _explicitNullProperties?.Remove("firstObjectKey"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoFirstObjectKeyProperty _explicitNullValueFirstObjectKey = default!;
 #endif
         /// <summary>First Objects Association Label (custom_objects.children)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoFirstObjectLabelProperty2? FirstObjectLabel { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoFirstObjectLabelProperty? FirstObjectLabel { get => _explicitNullValueFirstObjectLabel; set { _explicitNullValueFirstObjectLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("firstObjectLabel"); else _explicitNullProperties?.Remove("firstObjectLabel"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoFirstObjectLabelProperty? _explicitNullValueFirstObjectLabel = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoFirstObjectLabelProperty2 FirstObjectLabel { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoFirstObjectLabelProperty FirstObjectLabel { get => _explicitNullValueFirstObjectLabel; set { _explicitNullValueFirstObjectLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("firstObjectLabel"); else _explicitNullProperties?.Remove("firstObjectLabel"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoFirstObjectLabelProperty _explicitNullValueFirstObjectLabel = default!;
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>First Objects Association Label (custom_objects.children)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Key { get; set; }
+        public string? Key { get => _explicitNullValueKey; set { _explicitNullValueKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("key"); else _explicitNullProperties?.Remove("key"); } }
+        private string? _explicitNullValueKey = default!;
 #nullable restore
 #else
-        public string Key { get; set; }
+        public string Key { get => _explicitNullValueKey; set { _explicitNullValueKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("key"); else _explicitNullProperties?.Remove("key"); } }
+        private string _explicitNullValueKey = default!;
 #endif
         /// <summary>The locationId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LocationId { get; set; }
+        public string? LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
+        private string? _explicitNullValueLocationId = default!;
 #nullable restore
 #else
-        public string LocationId { get; set; }
+        public string LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
+        private string _explicitNullValueLocationId = default!;
 #endif
         /// <summary>Second Objects Key</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoSecondObjectKeyProperty2? SecondObjectKey { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoSecondObjectKeyProperty? SecondObjectKey { get => _explicitNullValueSecondObjectKey; set { _explicitNullValueSecondObjectKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondObjectKey"); else _explicitNullProperties?.Remove("secondObjectKey"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoSecondObjectKeyProperty? _explicitNullValueSecondObjectKey = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoSecondObjectKeyProperty2 SecondObjectKey { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoSecondObjectKeyProperty SecondObjectKey { get => _explicitNullValueSecondObjectKey; set { _explicitNullValueSecondObjectKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondObjectKey"); else _explicitNullProperties?.Remove("secondObjectKey"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoSecondObjectKeyProperty _explicitNullValueSecondObjectKey = default!;
 #endif
         /// <summary>Second Object Association Label (contact)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoSecondObjectLabelProperty2? SecondObjectLabel { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoSecondObjectLabelProperty? SecondObjectLabel { get => _explicitNullValueSecondObjectLabel; set { _explicitNullValueSecondObjectLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondObjectLabel"); else _explicitNullProperties?.Remove("secondObjectLabel"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoSecondObjectLabelProperty? _explicitNullValueSecondObjectLabel = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoSecondObjectLabelProperty2 SecondObjectLabel { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoSecondObjectLabelProperty SecondObjectLabel { get => _explicitNullValueSecondObjectLabel; set { _explicitNullValueSecondObjectLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondObjectLabel"); else _explicitNullProperties?.Remove("secondObjectLabel"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoSecondObjectLabelProperty _explicitNullValueSecondObjectLabel = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDto"/> and sets the default values.
@@ -93,7 +124,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -103,14 +134,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "associationType", n => { AssociationType = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoAssociationTypeProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoAssociationTypeProperty2.CreateFromDiscriminatorValue); } },
-                { "firstObjectKey", n => { FirstObjectKey = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoFirstObjectKeyProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoFirstObjectKeyProperty2.CreateFromDiscriminatorValue); } },
-                { "firstObjectLabel", n => { FirstObjectLabel = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoFirstObjectLabelProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoFirstObjectLabelProperty2.CreateFromDiscriminatorValue); } },
+                { "associationType", n => { AssociationType = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoAssociationTypeProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoAssociationTypeProperty.CreateFromDiscriminatorValue); } },
+                { "firstObjectKey", n => { FirstObjectKey = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoFirstObjectKeyProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoFirstObjectKeyProperty.CreateFromDiscriminatorValue); } },
+                { "firstObjectLabel", n => { FirstObjectLabel = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoFirstObjectLabelProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoFirstObjectLabelProperty.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "key", n => { Key = n.GetStringValue(); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
-                { "secondObjectKey", n => { SecondObjectKey = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoSecondObjectKeyProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoSecondObjectKeyProperty2.CreateFromDiscriminatorValue); } },
-                { "secondObjectLabel", n => { SecondObjectLabel = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoSecondObjectLabelProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoSecondObjectLabelProperty2.CreateFromDiscriminatorValue); } },
+                { "secondObjectKey", n => { SecondObjectKey = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoSecondObjectKeyProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoSecondObjectKeyProperty.CreateFromDiscriminatorValue); } },
+                { "secondObjectLabel", n => { SecondObjectLabel = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoSecondObjectLabelProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoSecondObjectLabelProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -120,14 +151,15 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoAssociationTypeProperty2>("associationType", AssociationType);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoFirstObjectKeyProperty2>("firstObjectKey", FirstObjectKey);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoFirstObjectLabelProperty2>("firstObjectLabel", FirstObjectLabel);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoAssociationTypeProperty>("associationType", AssociationType);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoFirstObjectKeyProperty>("firstObjectKey", FirstObjectKey);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoFirstObjectLabelProperty>("firstObjectLabel", FirstObjectLabel);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("key", Key);
             writer.WriteStringValue("locationId", LocationId);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoSecondObjectKeyProperty2>("secondObjectKey", SecondObjectKey);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoSecondObjectLabelProperty2>("secondObjectLabel", SecondObjectLabel);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoSecondObjectKeyProperty>("secondObjectKey", SecondObjectKey);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoSecondObjectLabelProperty>("secondObjectLabel", SecondObjectLabel);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

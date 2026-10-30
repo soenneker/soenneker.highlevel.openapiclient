@@ -57,6 +57,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Conversations
             {
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.ConversationsCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.ConversationsCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.CreateConversationSuccessResponse>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.CreateConversationSuccessResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

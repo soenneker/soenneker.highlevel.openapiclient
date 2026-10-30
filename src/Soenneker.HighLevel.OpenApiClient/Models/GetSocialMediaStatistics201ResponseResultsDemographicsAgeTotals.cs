@@ -11,23 +11,44 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetSocialMediaStatistics201ResponseResultsDemographicsAgeTotals : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("55-64") is { } nullNodeFiveFiveSixFour && nullNodeFiveFiveSixFour.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FiveFiveSixFour = null;
+            if (parseNode.GetChildNode("45-54") is { } nullNodeFourFiveFiveFour && nullNodeFourFiveFiveFour.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FourFiveFiveFour = null;
+            if (parseNode.GetChildNode("18-24") is { } nullNodeOneEightTwoFour && nullNodeOneEightTwoFour.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OneEightTwoFour = null;
+            if (parseNode.GetChildNode("13-17") is { } nullNodeOneThreeOneSeven && nullNodeOneThreeOneSeven.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OneThreeOneSeven = null;
+            if (parseNode.GetChildNode("65+") is { } nullNodeSixFivePlus && nullNodeSixFivePlus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SixFivePlus = null;
+            if (parseNode.GetChildNode("35-44") is { } nullNodeThreeFiveFourFour && nullNodeThreeFiveFourFour.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThreeFiveFourFour = null;
+            if (parseNode.GetChildNode("25-34") is { } nullNodeTwoFiveThreeFour && nullNodeTwoFiveThreeFour.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TwoFiveThreeFour = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The FiveFiveSixFour property</summary>
-        public double? FiveFiveSixFour { get; set; }
+        public double? FiveFiveSixFour { get => _explicitNullValueFiveFiveSixFour; set { _explicitNullValueFiveFiveSixFour = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("55-64"); else _explicitNullProperties?.Remove("55-64"); } }
+        private double? _explicitNullValueFiveFiveSixFour = default!;
         /// <summary>The FourFiveFiveFour property</summary>
-        public double? FourFiveFiveFour { get; set; }
+        public double? FourFiveFiveFour { get => _explicitNullValueFourFiveFiveFour; set { _explicitNullValueFourFiveFiveFour = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("45-54"); else _explicitNullProperties?.Remove("45-54"); } }
+        private double? _explicitNullValueFourFiveFiveFour = default!;
         /// <summary>The OneEightTwoFour property</summary>
-        public double? OneEightTwoFour { get; set; }
+        public double? OneEightTwoFour { get => _explicitNullValueOneEightTwoFour; set { _explicitNullValueOneEightTwoFour = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("18-24"); else _explicitNullProperties?.Remove("18-24"); } }
+        private double? _explicitNullValueOneEightTwoFour = default!;
         /// <summary>The OneThreeOneSeven property</summary>
-        public double? OneThreeOneSeven { get; set; }
+        public double? OneThreeOneSeven { get => _explicitNullValueOneThreeOneSeven; set { _explicitNullValueOneThreeOneSeven = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("13-17"); else _explicitNullProperties?.Remove("13-17"); } }
+        private double? _explicitNullValueOneThreeOneSeven = default!;
         /// <summary>The SixFive_plus property</summary>
-        public double? SixFivePlus { get; set; }
+        public double? SixFivePlus { get => _explicitNullValueSixFivePlus; set { _explicitNullValueSixFivePlus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("65+"); else _explicitNullProperties?.Remove("65+"); } }
+        private double? _explicitNullValueSixFivePlus = default!;
         /// <summary>The ThreeFiveFourFour property</summary>
-        public double? ThreeFiveFourFour { get; set; }
+        public double? ThreeFiveFourFour { get => _explicitNullValueThreeFiveFourFour; set { _explicitNullValueThreeFiveFourFour = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("35-44"); else _explicitNullProperties?.Remove("35-44"); } }
+        private double? _explicitNullValueThreeFiveFourFour = default!;
         /// <summary>The TwoFiveThreeFour property</summary>
-        public double? TwoFiveThreeFour { get; set; }
+        public double? TwoFiveThreeFour { get => _explicitNullValueTwoFiveThreeFour; set { _explicitNullValueTwoFiveThreeFour = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("25-34"); else _explicitNullProperties?.Remove("25-34"); } }
+        private double? _explicitNullValueTwoFiveThreeFour = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsDemographicsAgeTotals"/> and sets the default values.
         /// </summary>
@@ -43,7 +64,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsDemographicsAgeTotals CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsDemographicsAgeTotals();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsDemographicsAgeTotals(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -76,6 +97,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteDoubleValue("65+", SixFivePlus);
             writer.WriteDoubleValue("35-44", ThreeFiveFourFour);
             writer.WriteDoubleValue("25-34", TwoFiveThreeFour);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

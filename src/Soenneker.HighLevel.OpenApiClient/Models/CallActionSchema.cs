@@ -11,39 +11,61 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CallActionSchema : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("actionId") is { } nullNodeActionId && nullNodeActionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionId = null;
+            if (parseNode.GetChildNode("actionName") is { } nullNodeActionName && nullNodeActionName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionName = null;
+            if (parseNode.GetChildNode("actionParameters") is { } nullNodeActionParameters && nullNodeActionParameters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionParameters = null;
+            if (parseNode.GetChildNode("actionType") is { } nullNodeActionType && nullNodeActionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionType = null;
+            if (parseNode.GetChildNode("executedAt") is { } nullNodeExecutedAt && nullNodeExecutedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExecutedAt = null;
+            if (parseNode.GetChildNode("triggerReceivedAt") is { } nullNodeTriggerReceivedAt && nullNodeTriggerReceivedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TriggerReceivedAt = null;
+        }
+
         /// <summary>Action ID reference</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ActionId { get; set; }
+        public string? ActionId { get => _explicitNullValueActionId; set { _explicitNullValueActionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionId"); else _explicitNullProperties?.Remove("actionId"); } }
+        private string? _explicitNullValueActionId = default!;
 #nullable restore
 #else
-        public string ActionId { get; set; }
+        public string ActionId { get => _explicitNullValueActionId; set { _explicitNullValueActionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionId"); else _explicitNullProperties?.Remove("actionId"); } }
+        private string _explicitNullValueActionId = default!;
 #endif
         /// <summary>Action name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ActionName { get; set; }
+        public string? ActionName { get => _explicitNullValueActionName; set { _explicitNullValueActionName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionName"); else _explicitNullProperties?.Remove("actionName"); } }
+        private string? _explicitNullValueActionName = default!;
 #nullable restore
 #else
-        public string ActionName { get; set; }
+        public string ActionName { get => _explicitNullValueActionName; set { _explicitNullValueActionName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionName"); else _explicitNullProperties?.Remove("actionName"); } }
+        private string _explicitNullValueActionName = default!;
 #endif
         /// <summary>Action parameters - structure varies by actionType</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CallActionSchemaActionParameters? ActionParameters { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CallActionSchemaActionParameters? ActionParameters { get => _explicitNullValueActionParameters; set { _explicitNullValueActionParameters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionParameters"); else _explicitNullProperties?.Remove("actionParameters"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CallActionSchemaActionParameters? _explicitNullValueActionParameters = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CallActionSchemaActionParameters ActionParameters { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CallActionSchemaActionParameters ActionParameters { get => _explicitNullValueActionParameters; set { _explicitNullValueActionParameters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionParameters"); else _explicitNullProperties?.Remove("actionParameters"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CallActionSchemaActionParameters _explicitNullValueActionParameters = default!;
 #endif
         /// <summary>Action type</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CallActionSchemaActionType? ActionType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CallActionSchemaActionType? ActionType { get => _explicitNullValueActionType; set { _explicitNullValueActionType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionType"); else _explicitNullProperties?.Remove("actionType"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CallActionSchemaActionType? _explicitNullValueActionType = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>When the action was executed</summary>
-        public DateTimeOffset? ExecutedAt { get; set; }
+        public DateTimeOffset? ExecutedAt { get => _explicitNullValueExecutedAt; set { _explicitNullValueExecutedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("executedAt"); else _explicitNullProperties?.Remove("executedAt"); } }
+        private DateTimeOffset? _explicitNullValueExecutedAt = default!;
         /// <summary>When the trigger was received</summary>
-        public DateTimeOffset? TriggerReceivedAt { get; set; }
+        public DateTimeOffset? TriggerReceivedAt { get => _explicitNullValueTriggerReceivedAt; set { _explicitNullValueTriggerReceivedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggerReceivedAt"); else _explicitNullProperties?.Remove("triggerReceivedAt"); } }
+        private DateTimeOffset? _explicitNullValueTriggerReceivedAt = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CallActionSchema"/> and sets the default values.
         /// </summary>
@@ -59,7 +81,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.CallActionSchema CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.CallActionSchema();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.CallActionSchema(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -90,6 +112,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CallActionSchemaActionType>("actionType", ActionType);
             writer.WriteDateTimeOffsetValue("executedAt", ExecutedAt);
             writer.WriteDateTimeOffsetValue("triggerReceivedAt", TriggerReceivedAt);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

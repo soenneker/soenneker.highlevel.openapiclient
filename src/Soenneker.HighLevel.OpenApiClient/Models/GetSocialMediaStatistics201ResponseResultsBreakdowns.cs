@@ -12,40 +12,59 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GetSocialMediaStatistics201ResponseResultsBreakdowns : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("engagement") is { } nullNodeEngagement && nullNodeEngagement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Engagement = null;
+            if (parseNode.GetChildNode("impressions") is { } nullNodeImpressions && nullNodeImpressions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Impressions = null;
+            if (parseNode.GetChildNode("posts") is { } nullNodePosts && nullNodePosts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Posts = null;
+            if (parseNode.GetChildNode("reach") is { } nullNodeReach && nullNodeReach.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reach = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The engagement property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsBreakdownsEngagementProperty? Engagement { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsBreakdownsEngagementProperty? Engagement { get => _explicitNullValueEngagement; set { _explicitNullValueEngagement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("engagement"); else _explicitNullProperties?.Remove("engagement"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsBreakdownsEngagementProperty? _explicitNullValueEngagement = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsBreakdownsEngagementProperty Engagement { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsBreakdownsEngagementProperty Engagement { get => _explicitNullValueEngagement; set { _explicitNullValueEngagement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("engagement"); else _explicitNullProperties?.Remove("engagement"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsBreakdownsEngagementProperty _explicitNullValueEngagement = default!;
 #endif
         /// <summary>The impressions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsBreakdownsImpressions? Impressions { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsBreakdownsImpressions? Impressions { get => _explicitNullValueImpressions; set { _explicitNullValueImpressions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("impressions"); else _explicitNullProperties?.Remove("impressions"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsBreakdownsImpressions? _explicitNullValueImpressions = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsBreakdownsImpressions Impressions { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsBreakdownsImpressions Impressions { get => _explicitNullValueImpressions; set { _explicitNullValueImpressions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("impressions"); else _explicitNullProperties?.Remove("impressions"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsBreakdownsImpressions _explicitNullValueImpressions = default!;
 #endif
         /// <summary>The posts property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsBreakdownsPosts? Posts { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsBreakdownsPosts? Posts { get => _explicitNullValuePosts; set { _explicitNullValuePosts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("posts"); else _explicitNullProperties?.Remove("posts"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsBreakdownsPosts? _explicitNullValuePosts = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsBreakdownsPosts Posts { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsBreakdownsPosts Posts { get => _explicitNullValuePosts; set { _explicitNullValuePosts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("posts"); else _explicitNullProperties?.Remove("posts"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsBreakdownsPosts _explicitNullValuePosts = default!;
 #endif
         /// <summary>The reach property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsBreakdownsReach? Reach { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsBreakdownsReach? Reach { get => _explicitNullValueReach; set { _explicitNullValueReach = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reach"); else _explicitNullProperties?.Remove("reach"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsBreakdownsReach? _explicitNullValueReach = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsBreakdownsReach Reach { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsBreakdownsReach Reach { get => _explicitNullValueReach; set { _explicitNullValueReach = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reach"); else _explicitNullProperties?.Remove("reach"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsBreakdownsReach _explicitNullValueReach = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsBreakdowns"/> and sets the default values.
@@ -62,7 +81,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsBreakdowns CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsBreakdowns();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsBreakdowns(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -89,6 +108,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsBreakdownsImpressions>("impressions", Impressions);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsBreakdownsPosts>("posts", Posts);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsBreakdownsReach>("reach", Reach);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

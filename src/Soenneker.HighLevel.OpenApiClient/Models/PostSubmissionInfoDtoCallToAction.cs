@@ -12,18 +12,30 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostSubmissionInfoDtoCallToAction : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("callToActionLabel") is { } nullNodeCallToActionLabel && nullNodeCallToActionLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallToActionLabel = null;
+            if (parseNode.GetChildNode("callToActionTarget") is { } nullNodeCallToActionTarget && nullNodeCallToActionTarget.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallToActionTarget = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Call to action label</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PostSubmissionCallToActionDtoCallToActionLabel? CallToActionLabel { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PostSubmissionCallToActionDtoCallToActionLabel? CallToActionLabel { get => _explicitNullValueCallToActionLabel; set { _explicitNullValueCallToActionLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callToActionLabel"); else _explicitNullProperties?.Remove("callToActionLabel"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.PostSubmissionCallToActionDtoCallToActionLabel? _explicitNullValueCallToActionLabel = default!;
         /// <summary>Call to action target</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PostSubmissionCallToActionDtoCallToActionTarget? CallToActionTarget { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PostSubmissionCallToActionDtoCallToActionTarget? CallToActionTarget { get => _explicitNullValueCallToActionTarget; set { _explicitNullValueCallToActionTarget = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callToActionTarget"); else _explicitNullProperties?.Remove("callToActionTarget"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.PostSubmissionCallToActionDtoCallToActionTarget? _explicitNullValueCallToActionTarget = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PostSubmissionCallToActionDtoCallToActionTarget CallToActionTarget { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PostSubmissionCallToActionDtoCallToActionTarget CallToActionTarget { get => _explicitNullValueCallToActionTarget; set { _explicitNullValueCallToActionTarget = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callToActionTarget"); else _explicitNullProperties?.Remove("callToActionTarget"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.PostSubmissionCallToActionDtoCallToActionTarget _explicitNullValueCallToActionTarget = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.PostSubmissionInfoDtoCallToAction"/> and sets the default values.
@@ -40,7 +52,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.PostSubmissionInfoDtoCallToAction CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.PostSubmissionInfoDtoCallToAction();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.PostSubmissionInfoDtoCallToAction(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -63,6 +75,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostSubmissionCallToActionDtoCallToActionLabel>("callToActionLabel", CallToActionLabel);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostSubmissionCallToActionDtoCallToActionTarget>("callToActionTarget", CallToActionTarget);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

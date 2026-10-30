@@ -11,23 +11,39 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class DocumentListResponseDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("documents") is { } nullNodeDocuments && nullNodeDocuments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Documents = null;
+            if (parseNode.GetChildNode("total") is { } nullNodeTotal && nullNodeTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Total = null;
+            if (parseNode.GetChildNode("whiteLabelBaseUrl") is { } nullNodeWhiteLabelBaseUrl && nullNodeWhiteLabelBaseUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WhiteLabelBaseUrl = null;
+            if (parseNode.GetChildNode("whiteLabelBaseUrlForInvoice") is { } nullNodeWhiteLabelBaseUrlForInvoice && nullNodeWhiteLabelBaseUrlForInvoice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WhiteLabelBaseUrlForInvoice = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>List of documents</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.DocumentDto>? Documents { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.DocumentDto>? Documents { get => _explicitNullValueDocuments; set { _explicitNullValueDocuments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("documents"); else _explicitNullProperties?.Remove("documents"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.DocumentDto>? _explicitNullValueDocuments = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.DocumentDto> Documents { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.DocumentDto> Documents { get => _explicitNullValueDocuments; set { _explicitNullValueDocuments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("documents"); else _explicitNullProperties?.Remove("documents"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.DocumentDto> _explicitNullValueDocuments = default!;
 #endif
         /// <summary>Total records available</summary>
-        public double? Total { get; set; }
+        public double? Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total"); else _explicitNullProperties?.Remove("total"); } }
+        private double? _explicitNullValueTotal = default!;
         /// <summary>WhiteLabel url for document</summary>
-        public double? WhiteLabelBaseUrl { get; set; }
+        public double? WhiteLabelBaseUrl { get => _explicitNullValueWhiteLabelBaseUrl; set { _explicitNullValueWhiteLabelBaseUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whiteLabelBaseUrl"); else _explicitNullProperties?.Remove("whiteLabelBaseUrl"); } }
+        private double? _explicitNullValueWhiteLabelBaseUrl = default!;
         /// <summary>WhiteLabel url for invoice</summary>
-        public double? WhiteLabelBaseUrlForInvoice { get; set; }
+        public double? WhiteLabelBaseUrlForInvoice { get => _explicitNullValueWhiteLabelBaseUrlForInvoice; set { _explicitNullValueWhiteLabelBaseUrlForInvoice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whiteLabelBaseUrlForInvoice"); else _explicitNullProperties?.Remove("whiteLabelBaseUrlForInvoice"); } }
+        private double? _explicitNullValueWhiteLabelBaseUrlForInvoice = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.DocumentListResponseDto"/> and sets the default values.
         /// </summary>
@@ -43,7 +59,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.DocumentListResponseDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.DocumentListResponseDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.DocumentListResponseDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -70,6 +86,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteDoubleValue("total", Total);
             writer.WriteDoubleValue("whiteLabelBaseUrl", WhiteLabelBaseUrl);
             writer.WriteDoubleValue("whiteLabelBaseUrlForInvoice", WhiteLabelBaseUrlForInvoice);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

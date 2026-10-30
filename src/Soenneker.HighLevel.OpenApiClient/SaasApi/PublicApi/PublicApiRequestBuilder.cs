@@ -51,6 +51,7 @@ namespace Soenneker.HighLevel.OpenApiClient.SaasApi.PublicApi
             get => new global::Soenneker.HighLevel.OpenApiClient.SaasApi.PublicApi.GetSaasSubscription.GetSaasSubscriptionRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The locations property</summary>
+        [Obsolete("")]
         public global::Soenneker.HighLevel.OpenApiClient.SaasApi.PublicApi.Locations.LocationsRequestBuilder Locations
         {
             get => new global::Soenneker.HighLevel.OpenApiClient.SaasApi.PublicApi.Locations.LocationsRequestBuilder(PathParameters, RequestAdapter);

@@ -11,58 +11,85 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class SendDocumentDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("ccRecipients") is { } nullNodeCcRecipients && nullNodeCcRecipients.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CcRecipients = null;
+            if (parseNode.GetChildNode("documentId") is { } nullNodeDocumentId && nullNodeDocumentId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DocumentId = null;
+            if (parseNode.GetChildNode("documentName") is { } nullNodeDocumentName && nullNodeDocumentName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DocumentName = null;
+            if (parseNode.GetChildNode("locationId") is { } nullNodeLocationId && nullNodeLocationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationId = null;
+            if (parseNode.GetChildNode("medium") is { } nullNodeMedium && nullNodeMedium.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Medium = null;
+            if (parseNode.GetChildNode("notificationSettings") is { } nullNodeNotificationSettings && nullNodeNotificationSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationSettings = null;
+            if (parseNode.GetChildNode("sentBy") is { } nullNodeSentBy && nullNodeSentBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SentBy = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>CC Recipient</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CcRecipientItem>? CcRecipients { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CcRecipientItem>? CcRecipients { get => _explicitNullValueCcRecipients; set { _explicitNullValueCcRecipients = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ccRecipients"); else _explicitNullProperties?.Remove("ccRecipients"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.CcRecipientItem>? _explicitNullValueCcRecipients = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CcRecipientItem> CcRecipients { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CcRecipientItem> CcRecipients { get => _explicitNullValueCcRecipients; set { _explicitNullValueCcRecipients = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ccRecipients"); else _explicitNullProperties?.Remove("ccRecipients"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.CcRecipientItem> _explicitNullValueCcRecipients = default!;
 #endif
         /// <summary>Document Id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DocumentId { get; set; }
+        public string? DocumentId { get => _explicitNullValueDocumentId; set { _explicitNullValueDocumentId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("documentId"); else _explicitNullProperties?.Remove("documentId"); } }
+        private string? _explicitNullValueDocumentId = default!;
 #nullable restore
 #else
-        public string DocumentId { get; set; }
+        public string DocumentId { get => _explicitNullValueDocumentId; set { _explicitNullValueDocumentId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("documentId"); else _explicitNullProperties?.Remove("documentId"); } }
+        private string _explicitNullValueDocumentId = default!;
 #endif
         /// <summary>Document Name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DocumentName { get; set; }
+        public string? DocumentName { get => _explicitNullValueDocumentName; set { _explicitNullValueDocumentName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("documentName"); else _explicitNullProperties?.Remove("documentName"); } }
+        private string? _explicitNullValueDocumentName = default!;
 #nullable restore
 #else
-        public string DocumentName { get; set; }
+        public string DocumentName { get => _explicitNullValueDocumentName; set { _explicitNullValueDocumentName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("documentName"); else _explicitNullProperties?.Remove("documentName"); } }
+        private string _explicitNullValueDocumentName = default!;
 #endif
         /// <summary>Location Id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LocationId { get; set; }
+        public string? LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
+        private string? _explicitNullValueLocationId = default!;
 #nullable restore
 #else
-        public string LocationId { get; set; }
+        public string LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
+        private string _explicitNullValueLocationId = default!;
 #endif
         /// <summary>Medium to be used for sending the document</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SendDocumentDtoMedium? Medium { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SendDocumentDtoMedium? Medium { get => _explicitNullValueMedium; set { _explicitNullValueMedium = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("medium"); else _explicitNullProperties?.Remove("medium"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.SendDocumentDtoMedium? _explicitNullValueMedium = default!;
         /// <summary>The notificationSettings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SendDocumentDtoNotificationSettings? NotificationSettings { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SendDocumentDtoNotificationSettings? NotificationSettings { get => _explicitNullValueNotificationSettings; set { _explicitNullValueNotificationSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notificationSettings"); else _explicitNullProperties?.Remove("notificationSettings"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.SendDocumentDtoNotificationSettings? _explicitNullValueNotificationSettings = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SendDocumentDtoNotificationSettings NotificationSettings { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SendDocumentDtoNotificationSettings NotificationSettings { get => _explicitNullValueNotificationSettings; set { _explicitNullValueNotificationSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notificationSettings"); else _explicitNullProperties?.Remove("notificationSettings"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.SendDocumentDtoNotificationSettings _explicitNullValueNotificationSettings = default!;
 #endif
         /// <summary>Sent ByUser Id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SentBy { get; set; }
+        public string? SentBy { get => _explicitNullValueSentBy; set { _explicitNullValueSentBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sentBy"); else _explicitNullProperties?.Remove("sentBy"); } }
+        private string? _explicitNullValueSentBy = default!;
 #nullable restore
 #else
-        public string SentBy { get; set; }
+        public string SentBy { get => _explicitNullValueSentBy; set { _explicitNullValueSentBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sentBy"); else _explicitNullProperties?.Remove("sentBy"); } }
+        private string _explicitNullValueSentBy = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.SendDocumentDto"/> and sets the default values.
@@ -79,7 +106,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.SendDocumentDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.SendDocumentDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.SendDocumentDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -112,6 +139,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendDocumentDtoMedium>("medium", Medium);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendDocumentDtoNotificationSettings>("notificationSettings", NotificationSettings);
             writer.WriteStringValue("sentBy", SentBy);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

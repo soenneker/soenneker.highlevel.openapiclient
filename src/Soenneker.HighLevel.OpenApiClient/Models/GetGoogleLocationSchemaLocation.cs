@@ -12,62 +12,93 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GetGoogleLocationSchemaLocation : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("isConnected") is { } nullNodeIsConnected && nullNodeIsConnected.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsConnected = null;
+            if (parseNode.GetChildNode("isVerified") is { } nullNodeIsVerified && nullNodeIsVerified.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsVerified = null;
+            if (parseNode.GetChildNode("maxLocation") is { } nullNodeMaxLocation && nullNodeMaxLocation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxLocation = null;
+            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("relationshipData") is { } nullNodeRelationshipData && nullNodeRelationshipData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RelationshipData = null;
+            if (parseNode.GetChildNode("storeCode") is { } nullNodeStoreCode && nullNodeStoreCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StoreCode = null;
+            if (parseNode.GetChildNode("storefrontAddress") is { } nullNodeStorefrontAddress && nullNodeStorefrontAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StorefrontAddress = null;
+            if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The isConnected property</summary>
-        public bool? IsConnected { get; set; }
+        public bool? IsConnected { get => _explicitNullValueIsConnected; set { _explicitNullValueIsConnected = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isConnected"); else _explicitNullProperties?.Remove("isConnected"); } }
+        private bool? _explicitNullValueIsConnected = default!;
         /// <summary>The isVerified property</summary>
-        public bool? IsVerified { get; set; }
+        public bool? IsVerified { get => _explicitNullValueIsVerified; set { _explicitNullValueIsVerified = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isVerified"); else _explicitNullProperties?.Remove("isVerified"); } }
+        private bool? _explicitNullValueIsVerified = default!;
         /// <summary>The maxLocation property</summary>
-        public bool? MaxLocation { get; set; }
+        public bool? MaxLocation { get => _explicitNullValueMaxLocation; set { _explicitNullValueMaxLocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxLocation"); else _explicitNullProperties?.Remove("maxLocation"); } }
+        private bool? _explicitNullValueMaxLocation = default!;
         /// <summary>Meta data not related to User</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocationMetadataProperty? Metadata { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocationMetadataProperty? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocationMetadataProperty? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocationMetadataProperty Metadata { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocationMetadataProperty Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocationMetadataProperty _explicitNullValueMetadata = default!;
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>All locations and chain related to this one</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocationRelationshipDataProperty? RelationshipData { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocationRelationshipDataProperty? RelationshipData { get => _explicitNullValueRelationshipData; set { _explicitNullValueRelationshipData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("relationshipData"); else _explicitNullProperties?.Remove("relationshipData"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocationRelationshipDataProperty? _explicitNullValueRelationshipData = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocationRelationshipDataProperty RelationshipData { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocationRelationshipDataProperty RelationshipData { get => _explicitNullValueRelationshipData; set { _explicitNullValueRelationshipData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("relationshipData"); else _explicitNullProperties?.Remove("relationshipData"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocationRelationshipDataProperty _explicitNullValueRelationshipData = default!;
 #endif
         /// <summary>The storeCode property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StoreCode { get; set; }
+        public string? StoreCode { get => _explicitNullValueStoreCode; set { _explicitNullValueStoreCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("storeCode"); else _explicitNullProperties?.Remove("storeCode"); } }
+        private string? _explicitNullValueStoreCode = default!;
 #nullable restore
 #else
-        public string StoreCode { get; set; }
+        public string StoreCode { get => _explicitNullValueStoreCode; set { _explicitNullValueStoreCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("storeCode"); else _explicitNullProperties?.Remove("storeCode"); } }
+        private string _explicitNullValueStoreCode = default!;
 #endif
         /// <summary>Store front address</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocationStorefrontAddressProperty? StorefrontAddress { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocationStorefrontAddressProperty? StorefrontAddress { get => _explicitNullValueStorefrontAddress; set { _explicitNullValueStorefrontAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("storefrontAddress"); else _explicitNullProperties?.Remove("storefrontAddress"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocationStorefrontAddressProperty? _explicitNullValueStorefrontAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocationStorefrontAddressProperty StorefrontAddress { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocationStorefrontAddressProperty StorefrontAddress { get => _explicitNullValueStorefrontAddress; set { _explicitNullValueStorefrontAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("storefrontAddress"); else _explicitNullProperties?.Remove("storefrontAddress"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocationStorefrontAddressProperty _explicitNullValueStorefrontAddress = default!;
 #endif
         /// <summary>The title property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Title { get; set; }
+        public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        private string? _explicitNullValueTitle = default!;
 #nullable restore
 #else
-        public string Title { get; set; }
+        public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        private string _explicitNullValueTitle = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocation"/> and sets the default values.
@@ -84,7 +115,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocation CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocation();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocation(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -121,6 +152,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("storeCode", StoreCode);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationSchemaLocationStorefrontAddressProperty>("storefrontAddress", StorefrontAddress);
             writer.WriteStringValue("title", Title);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

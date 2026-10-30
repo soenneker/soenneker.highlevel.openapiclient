@@ -59,6 +59,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Marketplace.App.Item.Installations
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.MarketplaceCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.MarketplaceCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.MarketplaceCommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteIntegrationResponse>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.DeleteIntegrationResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -78,7 +80,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Marketplace.App.Item.Installations
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.GetInstallerDetailsResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.GetInstallerDetailsResponseDto.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.GetInstallerDetailsResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.GetInstallerDetailsResponseDto.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Uninstalls an application from your company or a specific location. This will remove the application`s access and stop all its functionalities

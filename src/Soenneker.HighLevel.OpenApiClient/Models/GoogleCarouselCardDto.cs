@@ -11,40 +11,59 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GoogleCarouselCardDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("callToActionLabel") is { } nullNodeCallToActionLabel && nullNodeCallToActionLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallToActionLabel = null;
+            if (parseNode.GetChildNode("finalUrl") is { } nullNodeFinalUrl && nullNodeFinalUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FinalUrl = null;
+            if (parseNode.GetChildNode("headline") is { } nullNodeHeadline && nullNodeHeadline.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Headline = null;
+            if (parseNode.GetChildNode("media") is { } nullNodeMedia && nullNodeMedia.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Media = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Call to action label</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CallToActionLabel { get; set; }
+        public string? CallToActionLabel { get => _explicitNullValueCallToActionLabel; set { _explicitNullValueCallToActionLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callToActionLabel"); else _explicitNullProperties?.Remove("callToActionLabel"); } }
+        private string? _explicitNullValueCallToActionLabel = default!;
 #nullable restore
 #else
-        public string CallToActionLabel { get; set; }
+        public string CallToActionLabel { get => _explicitNullValueCallToActionLabel; set { _explicitNullValueCallToActionLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callToActionLabel"); else _explicitNullProperties?.Remove("callToActionLabel"); } }
+        private string _explicitNullValueCallToActionLabel = default!;
 #endif
         /// <summary>Card final URL</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FinalUrl { get; set; }
+        public string? FinalUrl { get => _explicitNullValueFinalUrl; set { _explicitNullValueFinalUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("finalUrl"); else _explicitNullProperties?.Remove("finalUrl"); } }
+        private string? _explicitNullValueFinalUrl = default!;
 #nullable restore
 #else
-        public string FinalUrl { get; set; }
+        public string FinalUrl { get => _explicitNullValueFinalUrl; set { _explicitNullValueFinalUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("finalUrl"); else _explicitNullProperties?.Remove("finalUrl"); } }
+        private string _explicitNullValueFinalUrl = default!;
 #endif
         /// <summary>Card headline</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Headline { get; set; }
+        public string? Headline { get => _explicitNullValueHeadline; set { _explicitNullValueHeadline = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("headline"); else _explicitNullProperties?.Remove("headline"); } }
+        private string? _explicitNullValueHeadline = default!;
 #nullable restore
 #else
-        public string Headline { get; set; }
+        public string Headline { get => _explicitNullValueHeadline; set { _explicitNullValueHeadline = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("headline"); else _explicitNullProperties?.Remove("headline"); } }
+        private string _explicitNullValueHeadline = default!;
 #endif
         /// <summary>Card media items</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleMediaDto>? Media { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleMediaDto>? Media { get => _explicitNullValueMedia; set { _explicitNullValueMedia = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("media"); else _explicitNullProperties?.Remove("media"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleMediaDto>? _explicitNullValueMedia = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleMediaDto> Media { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleMediaDto> Media { get => _explicitNullValueMedia; set { _explicitNullValueMedia = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("media"); else _explicitNullProperties?.Remove("media"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleMediaDto> _explicitNullValueMedia = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GoogleCarouselCardDto"/> and sets the default values.
@@ -61,7 +80,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.GoogleCarouselCardDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.GoogleCarouselCardDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.GoogleCarouselCardDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,6 +107,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("finalUrl", FinalUrl);
             writer.WriteStringValue("headline", Headline);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleMediaDto>("media", Media);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

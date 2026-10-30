@@ -16,6 +16,7 @@ namespace Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Oauth.Twitter
     public partial class TwitterRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The start property</summary>
+        [Obsolete("")]
         public global::Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Oauth.Twitter.Start.StartRequestBuilder Start
         {
             get => new global::Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Oauth.Twitter.Start.StartRequestBuilder(PathParameters, RequestAdapter);

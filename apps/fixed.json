@@ -61609,7 +61609,7 @@
             "example": "kDj7BHej9Zyyq3QakJmz"
           },
           "sourceMeta": {
-            "$ref": "#/components/schemas/OrderResponseSchemaSourceMetaProperty2"
+            "$ref": "#/components/schemas/OrderResponseSchemaSourceMetaProperty"
           },
           "couponCode": {
             "type": "string",
@@ -61786,7 +61786,7 @@
             "example": "unfulfilled"
           },
           "contactSnapshot": {
-            "$ref": "#/components/schemas/GetOrderResponseSchemaContactSnapshotProperty2"
+            "$ref": "#/components/schemas/GetOrderResponseSchemaContactSnapshotProperty"
           },
           "amountSummary": {
             "$ref": "#/components/schemas/GetOrderResponseSchemaAmountSummary"
@@ -61803,7 +61803,7 @@
             "example": "{ _id: 61dd33e88058b9f967ca79dc, authorizeAmount: 0, locationId: \"SBAWb4yu7A4LSc0skQ6g\", name: \"Sample Product\": price: {}, product: { name: \"Testing product\", productType: \"SERVICE\" }}"
           },
           "coupon": {
-            "$ref": "#/components/schemas/GetOrderResponseSchemaCouponProperty2"
+            "$ref": "#/components/schemas/GetOrderResponseSchemaCouponProperty"
           },
           "trackingId": {
             "type": "string",
@@ -61816,7 +61816,7 @@
             "example": "5d51db5a-42b0-4b04-ba88-2c046c982a3a"
           },
           "meta": {
-            "$ref": "#/components/schemas/GetOrderResponseSchemaMetaProperty2"
+            "$ref": "#/components/schemas/GetOrderResponseSchemaMetaProperty"
           },
           "markAsTest": {
             "type": "boolean",
@@ -61834,7 +61834,7 @@
             "example": true
           },
           "taxCalculationProvider": {
-            "$ref": "#/components/schemas/GetOrderResponseSchemaTaxCalculationProviderProperty2"
+            "$ref": "#/components/schemas/GetOrderResponseSchemaTaxCalculationProviderProperty"
           },
           "createdBy": {
             "type": "string",
@@ -62515,7 +62515,7 @@
             "example": "100"
           },
           "status": {
-            "$ref": "#/components/schemas/TxnResponseSchemaStatusProperty2"
+            "$ref": "#/components/schemas/TxnResponseSchemaStatusProperty"
           },
           "liveMode": {
             "type": "boolean",
@@ -62553,7 +62553,7 @@
             "example": "BDBMEghdIUaqMPEsK349"
           },
           "entitySourceMeta": {
-            "$ref": "#/components/schemas/TxnResponseSchemaEntitySourceMetaProperty2"
+            "$ref": "#/components/schemas/TxnResponseSchemaEntitySourceMetaProperty"
           },
           "subscriptionId": {
             "type": "string",
@@ -62566,7 +62566,7 @@
             "example": "in_1KGcXDCScnf89tZohCsmImwE"
           },
           "chargeSnapshot": {
-            "$ref": "#/components/schemas/TxnResponseSchemaChargeSnapshotProperty2"
+            "$ref": "#/components/schemas/TxnResponseSchemaChargeSnapshotProperty"
           },
           "paymentProviderType": {
             "type": "string",
@@ -62601,7 +62601,7 @@
             "example": "10"
           },
           "paymentMethod": {
-            "$ref": "#/components/schemas/TxnResponseSchemaPaymentMethodProperty2"
+            "$ref": "#/components/schemas/TxnResponseSchemaPaymentMethodProperty"
           },
           "fulfilledAt": {
             "type": "string",
@@ -62667,7 +62667,7 @@
             "example": "XPLSw2SVagl12LMDeTmQ"
           },
           "contactSnapshot": {
-            "$ref": "#/components/schemas/GetTxnResponseSchemaContactSnapshotProperty2"
+            "$ref": "#/components/schemas/GetTxnResponseSchemaContactSnapshotProperty"
           },
           "currency": {
             "type": "string",
@@ -62680,7 +62680,7 @@
             "example": "100"
           },
           "status": {
-            "$ref": "#/components/schemas/GetTxnResponseSchemaStatusProperty2"
+            "$ref": "#/components/schemas/GetTxnResponseSchemaStatusProperty"
           },
           "liveMode": {
             "type": "boolean",
@@ -62718,7 +62718,7 @@
             "example": "in_1KGcXDCScnf89tZohCsmImwE"
           },
           "chargeSnapshot": {
-            "$ref": "#/components/schemas/GetTxnResponseSchemaChargeSnapshotProperty2"
+            "$ref": "#/components/schemas/GetTxnResponseSchemaChargeSnapshotProperty"
           },
           "invoiceId": {
             "type": "string",
@@ -62731,7 +62731,7 @@
             "example": "sub_1KGcXDCScnf89tZoVkoEMCEL"
           },
           "paymentProvider": {
-            "$ref": "#/components/schemas/GetTxnResponseSchemaPaymentProviderProperty2"
+            "$ref": "#/components/schemas/GetTxnResponseSchemaPaymentProviderProperty"
           },
           "ipAddress": {
             "type": "string",
@@ -62739,7 +62739,7 @@
             "example": "107.178.194.224"
           },
           "meta": {
-            "$ref": "#/components/schemas/GetTxnResponseSchemaMetaProperty2"
+            "$ref": "#/components/schemas/GetTxnResponseSchemaMetaProperty"
           },
           "markAsTest": {
             "type": "boolean",
@@ -62767,7 +62767,7 @@
             "example": "false"
           },
           "qboResponse": {
-            "$ref": "#/components/schemas/GetTxnResponseSchemaQboResponseProperty2"
+            "$ref": "#/components/schemas/GetTxnResponseSchemaQboResponseProperty"
           },
           "traceId": {
             "type": "string",
@@ -62837,7 +62837,7 @@
             "example": "100"
           },
           "status": {
-            "$ref": "#/components/schemas/SubscriptionResponseSchemaStatusProperty2"
+            "$ref": "#/components/schemas/SubscriptionResponseSchemaStatusProperty"
           },
           "liveMode": {
             "type": "boolean",
@@ -62870,7 +62870,7 @@
             "example": "bevrkPbLaDNXFaqfLKMm"
           },
           "entitySourceMeta": {
-            "$ref": "#/components/schemas/SubscriptionResponseSchemaEntitySourceMetaProperty2"
+            "$ref": "#/components/schemas/SubscriptionResponseSchemaEntitySourceMetaProperty"
           },
           "subscriptionId": {
             "type": "string",
@@ -62878,7 +62878,7 @@
             "example": "I-0UE609H8E43P"
           },
           "subscriptionSnapshot": {
-            "$ref": "#/components/schemas/SubscriptionResponseSchemaSubscriptionSnapshotProperty2"
+            "$ref": "#/components/schemas/SubscriptionResponseSchemaSubscriptionSnapshotProperty"
           },
           "paymentProviderType": {
             "type": "string",
@@ -63024,7 +63024,7 @@
             "example": "64bf78af39118e4011926cba"
           },
           "altType": {
-            "$ref": "#/components/schemas/GetSubscriptionResponseSchemaAltTypeProperty2"
+            "$ref": "#/components/schemas/GetSubscriptionResponseSchemaAltTypeProperty"
           },
           "altId": {
             "type": "string",
@@ -63037,10 +63037,10 @@
             "example": "XPLSw2SVagl12LMDeTmQ"
           },
           "contactSnapshot": {
-            "$ref": "#/components/schemas/GetSubscriptionResponseSchemaContactSnapshotProperty2"
+            "$ref": "#/components/schemas/GetSubscriptionResponseSchemaContactSnapshotProperty"
           },
           "coupon": {
-            "$ref": "#/components/schemas/GetSubscriptionResponseSchemaCouponProperty2"
+            "$ref": "#/components/schemas/GetSubscriptionResponseSchemaCouponProperty"
           },
           "currency": {
             "type": "string",
@@ -63053,7 +63053,7 @@
             "example": "100"
           },
           "status": {
-            "$ref": "#/components/schemas/GetSubscriptionResponseSchemaStatusProperty2"
+            "$ref": "#/components/schemas/GetSubscriptionResponseSchemaStatusProperty"
           },
           "liveMode": {
             "type": "boolean",
@@ -63079,10 +63079,10 @@
             "example": "I-0UE609H8E43P"
           },
           "subscriptionSnapshot": {
-            "$ref": "#/components/schemas/GetSubscriptionResponseSchemaSubscriptionSnapshotProperty2"
+            "$ref": "#/components/schemas/GetSubscriptionResponseSchemaSubscriptionSnapshotProperty"
           },
           "paymentProvider": {
-            "$ref": "#/components/schemas/GetSubscriptionResponseSchemaPaymentProviderProperty2"
+            "$ref": "#/components/schemas/GetSubscriptionResponseSchemaPaymentProviderProperty"
           },
           "ipAddress": {
             "type": "string",
@@ -63102,7 +63102,7 @@
             "example": "2024-01-23T09:57:04.846Z"
           },
           "meta": {
-            "$ref": "#/components/schemas/GetSubscriptionResponseSchemaMetaProperty2"
+            "$ref": "#/components/schemas/GetSubscriptionResponseSchemaMetaProperty"
           },
           "markAsTest": {
             "type": "boolean",
@@ -63113,10 +63113,10 @@
             "$ref": "#/components/schemas/GetSubscriptionResponseSchemaSchedule"
           },
           "autoPayment": {
-            "$ref": "#/components/schemas/GetSubscriptionResponseSchemaAutoPaymentProperty2"
+            "$ref": "#/components/schemas/GetSubscriptionResponseSchemaAutoPaymentProperty"
           },
           "recurringProduct": {
-            "$ref": "#/components/schemas/GetSubscriptionResponseSchemaRecurringProductProperty2"
+            "$ref": "#/components/schemas/GetSubscriptionResponseSchemaRecurringProductProperty"
           },
           "canceledAt": {
             "type": "string",
@@ -63726,7 +63726,7 @@
             "example": "65f0b217a05c774da7f1efa5"
           },
           "paymentProvider": {
-            "$ref": "#/components/schemas/CreateCustomProvidersResponseSchemaPaymentProviderProperty2"
+            "$ref": "#/components/schemas/CreateCustomProvidersResponseSchemaPaymentProviderProperty"
           },
           "deleted": {
             "type": "boolean",
@@ -63822,7 +63822,7 @@
             "example": "65f0b217a05c774da7f1efa5"
           },
           "paymentProvider": {
-            "$ref": "#/components/schemas/GetCustomProvidersResponseSchemaPaymentProviderProperty2"
+            "$ref": "#/components/schemas/GetCustomProvidersResponseSchemaPaymentProviderProperty"
           },
           "deleted": {
             "type": "boolean",
@@ -63939,7 +63939,7 @@
             "example": "65f0b217a05c774da7f1efa5"
           },
           "paymentProvider": {
-            "$ref": "#/components/schemas/ConnectCustomProvidersResponseSchemaPaymentProviderProperty2"
+            "$ref": "#/components/schemas/ConnectCustomProvidersResponseSchemaPaymentProviderProperty"
           },
           "deleted": {
             "type": "boolean",
@@ -64738,322 +64738,862 @@
         "description": "Test config containing api-key and publishable-key for test payments"
       },
       "OrderResponseSchemaSourceMeta": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Meta content for the source of order.",
-        "example": "{ domain: \"app.gohighlevel.com\", pageId:  \"rBVhyYhMsbxbO8ZqOcei\", pageUrl:  \"/v2/preview/rBVhyYhMsbxbO8ZqOcei\", stepId:   \"5a772f62-3fbc-418b-af1b-be8929dd64c2\"}"
+        "example": "{ domain: \"app.gohighlevel.com\", pageId:  \"rBVhyYhMsbxbO8ZqOcei\", pageUrl:  \"/v2/preview/rBVhyYhMsbxbO8ZqOcei\", stepId:   \"5a772f62-3fbc-418b-af1b-be8929dd64c2\"}",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "OrderSourceMeta": {
         "type": "object"
       },
       "GetOrderResponseSchemaContactSnapshot": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Contact details of the order.",
-        "example": "{ last_name: \"Mcclain\", type: \"lead\", first_name_lower_case: \"rogan\", email: \"anish+11@gohighlevel.com\", last_name_lower_case: \"mcclain\", location_id: \"o6241QsiRwUIJHyjuhos\", company_name: \"Jordan and Cox Trading\"}"
+        "example": "{ last_name: \"Mcclain\", type: \"lead\", first_name_lower_case: \"rogan\", email: \"anish+11@gohighlevel.com\", last_name_lower_case: \"mcclain\", location_id: \"o6241QsiRwUIJHyjuhos\", company_name: \"Jordan and Cox Trading\"}",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetOrderResponseSchemaCoupon": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Coupon details of the order.",
-        "example": "{ code: \"FEST10\", _id: \"63455e48901b43d4ef364a20\" }"
+        "example": "{ code: \"FEST10\", _id: \"63455e48901b43d4ef364a20\" }",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetOrderResponseSchemaMeta": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Meta details of the order.",
-        "example": "{ couponSessionExpired: true }"
+        "example": "{ couponSessionExpired: true }",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetOrderResponseSchemaTaxCalculationProvider": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Provider name for automatic tax calculation",
-        "example": "taxjar"
+        "example": "taxjar",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "PostRecordOrderPaymentBodyMeta": {
         "type": "object",
         "description": "Meta data to be recorded with the transaction"
       },
       "TxnResponseSchemaStatus": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "The status of the transaction (e.g., succeeded).",
-        "example": "succeeded"
+        "example": "succeeded",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "TxnResponseSchemaEntitySourceMeta": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Meta content for the entity source of transaction.",
-        "example": "{ domain: \"app.gohighlevel.com\", pageId:  \"rBVhyYhMsbxbO8ZqOcei\", pageUrl:  \"/v2/preview/rBVhyYhMsbxbO8ZqOcei\", stepId:   \"5a772f62-3fbc-418b-af1b-be8929dd64c2\"}"
+        "example": "{ domain: \"app.gohighlevel.com\", pageId:  \"rBVhyYhMsbxbO8ZqOcei\", pageUrl:  \"/v2/preview/rBVhyYhMsbxbO8ZqOcei\", stepId:   \"5a772f62-3fbc-418b-af1b-be8929dd64c2\"}",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "TxnResponseSchemaChargeSnapshot": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Charge snapshot of transaction.",
-        "example": "{ id: \"in_1KGcXDCScnf89tZohCsmImwE\", object: \"invoice\", account_country: \"US\",  account_name:  \"GHL-Testing\" }"
+        "example": "{ id: \"in_1KGcXDCScnf89tZohCsmImwE\", object: \"invoice\", account_country: \"US\",  account_name:  \"GHL-Testing\" }",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "TxnResponseSchemaPaymentMethod": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Transaction payment method details.",
-        "example": "{ card: { \"brand\": \"discover\", \"last4\": \"0012\" } }"
+        "example": "{ card: { \"brand\": \"discover\", \"last4\": \"0012\" } }",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetTxnResponseSchemaContactSnapshot": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Contact details of the transaction.",
-        "example": "{ last_name: \"Mcclain\", type: \"lead\", first_name_lower_case: \"rogan\", email: \"anish+11@gohighlevel.com\", last_name_lower_case: \"mcclain\", location_id: \"o6241QsiRwUIJHyjuhos\", company_name: \"Jordan and Cox Trading\"}"
+        "example": "{ last_name: \"Mcclain\", type: \"lead\", first_name_lower_case: \"rogan\", email: \"anish+11@gohighlevel.com\", last_name_lower_case: \"mcclain\", location_id: \"o6241QsiRwUIJHyjuhos\", company_name: \"Jordan and Cox Trading\"}",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetTxnResponseSchemaStatus": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Transaction status.",
-        "example": "succeeded"
+        "example": "succeeded",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetTxnResponseSchemaChargeSnapshot": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Charge snapshot of transaction.",
-        "example": "{ id: \"in_1KGcXDCScnf89tZohCsmImwE\", object: \"invoice\", account_country: \"US\",  account_name:  \"GHL-Testing\" }"
+        "example": "{ id: \"in_1KGcXDCScnf89tZohCsmImwE\", object: \"invoice\", account_country: \"US\",  account_name:  \"GHL-Testing\" }",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetTxnResponseSchemaPaymentProvider": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Payment provider details of the transaction.",
-        "example": "{ type: \"stripe\", connectedAccount: { _id: \"612ca676b484b241fef9d962\", accountId: \"acct_1Ihw53CScnf89tZo\" } }"
+        "example": "{ type: \"stripe\", connectedAccount: { _id: \"612ca676b484b241fef9d962\", accountId: \"acct_1Ihw53CScnf89tZo\" } }",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetTxnResponseSchemaMeta": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Meta details of the transaction.",
-        "example": "{ stepId: \"af7c731e-e36f-4152-bd1a-3f69a31d6d6d\", pageId: \"A8ltotc2jZxurJba4e3Y\", pageUrl: \"/v2/preview/A8ltotc2jZxurJba4e3Y\" }"
+        "example": "{ stepId: \"af7c731e-e36f-4152-bd1a-3f69a31d6d6d\", pageId: \"A8ltotc2jZxurJba4e3Y\", pageUrl: \"/v2/preview/A8ltotc2jZxurJba4e3Y\" }",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetTxnResponseSchemaQboResponse": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Qbo details of the transaction.",
-        "example": "{ domain: \"QBO\", sparse: false, Id: \"180\", SyncToken: \"0\", TotalAmt: 25 }"
+        "example": "{ domain: \"QBO\", sparse: false, Id: \"180\", SyncToken: \"0\", TotalAmt: 25 }",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "SubscriptionResponseSchemaStatus": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "The status of the subscription (e.g., succeeded).",
-        "example": "active"
+        "example": "active",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "SubscriptionResponseSchemaEntitySourceMeta": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Meta content for the entity source of subscription.",
-        "example": "{ domain: \"app.gohighlevel.com\", pageId:  \"sxC4lNhFIavEnLZh5KhC\", pageUrl:  \"/v2/preview/sxC4lNhFIavEnLZh5KhC\", stepId: \"7d303d1f-cb85-403d-b548-bf01de5c7bb0\" }"
+        "example": "{ domain: \"app.gohighlevel.com\", pageId:  \"sxC4lNhFIavEnLZh5KhC\", pageUrl:  \"/v2/preview/sxC4lNhFIavEnLZh5KhC\", stepId: \"7d303d1f-cb85-403d-b548-bf01de5c7bb0\" }",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "SubscriptionResponseSchemaSubscriptionSnapshot": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Snapshot of subscription.",
-        "example": "{ status: \"ACTIVE\", status_update_time: \"2022-08-16T11:06:53Z\", id: \"I-0UE609H8E43P\", plan_id: \"P-82K11750F0313430KMLRGE6Y\", start_time: \"2022-08-16T11:05:31Z\", quantity: 1 }"
+        "example": "{ status: \"ACTIVE\", status_update_time: \"2022-08-16T11:06:53Z\", id: \"I-0UE609H8E43P\", plan_id: \"P-82K11750F0313430KMLRGE6Y\", start_time: \"2022-08-16T11:05:31Z\", quantity: 1 }",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetSubscriptionResponseSchemaAltType": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "AltType is the type of identifier.",
-        "example": "location"
+        "example": "location",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetSubscriptionResponseSchemaContactSnapshot": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Contact details of the subscriber.",
-        "example": "{ last_name: \"Mcclain\", type: \"lead\", first_name_lower_case: \"rogan\", email: \"anish+11@gohighlevel.com\", last_name_lower_case: \"mcclain\", location_id: \"o6241QsiRwUIJHyjuhos\", company_name: \"Jordan and Cox Trading\"}"
+        "example": "{ last_name: \"Mcclain\", type: \"lead\", first_name_lower_case: \"rogan\", email: \"anish+11@gohighlevel.com\", last_name_lower_case: \"mcclain\", location_id: \"o6241QsiRwUIJHyjuhos\", company_name: \"Jordan and Cox Trading\"}",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetSubscriptionResponseSchemaCoupon": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Coupon details of the subscription.",
-        "example": "{ _id: \"6374c6926d119a393fe1e556\", usageCount: 5260, altId: \"jVFIxsMY19D94nOSIOEO\", altType: \"location\", name: \"FREE-100%\", code: \"FREE100\", discountType: \"percentage\", discountValue: 100 }"
+        "example": "{ _id: \"6374c6926d119a393fe1e556\", usageCount: 5260, altId: \"jVFIxsMY19D94nOSIOEO\", altType: \"location\", name: \"FREE-100%\", code: \"FREE100\", discountType: \"percentage\", discountValue: 100 }",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetSubscriptionResponseSchemaStatus": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Subscription status.",
-        "example": "active"
+        "example": "active",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetSubscriptionResponseSchemaSubscriptionSnapshot": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Snapshot of subscription.",
-        "example": "{ status: \"ACTIVE\", status_update_time: \"2022-08-16T11:06:53Z\", id: \"I-0UE609H8E43P\", plan_id: \"P-82K11750F0313430KMLRGE6Y\", start_time: \"2022-08-16T11:05:31Z\", quantity: 1 }"
+        "example": "{ status: \"ACTIVE\", status_update_time: \"2022-08-16T11:06:53Z\", id: \"I-0UE609H8E43P\", plan_id: \"P-82K11750F0313430KMLRGE6Y\", start_time: \"2022-08-16T11:05:31Z\", quantity: 1 }",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetSubscriptionResponseSchemaPaymentProvider": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Payment provider details for the subscription.",
-        "example": "{ type: \"paypal\", connectedAccount: { _id: \"64410debdc8f3b0503523abb\", merchantClientId: \"AeXtjrxdgsJiCPwQt5jML5pH-0mwmLs-tH7ub4Uo3IrDKvRl34FvJy8niI6E1wmS_pryIRdNllyVl58b\" } }"
+        "example": "{ type: \"paypal\", connectedAccount: { _id: \"64410debdc8f3b0503523abb\", merchantClientId: \"AeXtjrxdgsJiCPwQt5jML5pH-0mwmLs-tH7ub4Uo3IrDKvRl34FvJy8niI6E1wmS_pryIRdNllyVl58b\" } }",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetSubscriptionResponseSchemaMeta": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Meta details of the subscription.",
-        "example": "{ collection: \"transactionsv2\", id: \"6320652f0f664b6632006920\" }"
+        "example": "{ collection: \"transactionsv2\", id: \"6320652f0f664b6632006920\" }",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetSubscriptionResponseSchemaAutoPayment": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Auto payment details of the subscription.",
-        "example": "{ customerId: \"908879612\", paymentMethodId: \"908646635\" }"
+        "example": "{ customerId: \"908879612\", paymentMethodId: \"908646635\" }",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetSubscriptionResponseSchemaRecurringProduct": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Recurring product details of the subscription.",
-        "example": "{ locationId: \"Z4Bxl8J4SaPEPLq9IQ8g\", funnel: \"bQHJWKcyjiKjk4BHv91g\", step: \"2281a993-8a75-4b48-9912-571f29c99a74\", name: \"Sofa Set\" }"
+        "example": "{ locationId: \"Z4Bxl8J4SaPEPLq9IQ8g\", funnel: \"bQHJWKcyjiKjk4BHv91g\", step: \"2281a993-8a75-4b48-9912-571f29c99a74\", name: \"Sofa Set\" }",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "CreateCustomProvidersResponseSchemaPaymentProvider": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Payment provider details.",
-        "example": "{ live: { liveMode: true }, test: { liveMode: false, apiKey: \"y5ZQxryRFXZHvUJZdLXXXXXX\", publishableKey: \"rzp_test_zPRoVMLOa0A9wo\" }}"
+        "example": "{ live: { liveMode: true }, test: { liveMode: false, apiKey: \"y5ZQxryRFXZHvUJZdLXXXXXX\", publishableKey: \"rzp_test_zPRoVMLOa0A9wo\" }}",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetCustomProvidersResponseSchemaPaymentProvider": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Payment provider details.",
-        "example": "{ live: { liveMode: true }, test: { liveMode: false, apiKey: \"y5ZQxryRFXZHvUJZdLXXXXXX\", publishableKey: \"rzp_test_zPRoVMLOa0A9wo\" }}"
+        "example": "{ live: { liveMode: true }, test: { liveMode: false, apiKey: \"y5ZQxryRFXZHvUJZdLXXXXXX\", publishableKey: \"rzp_test_zPRoVMLOa0A9wo\" }}",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "ConnectCustomProvidersResponseSchemaPaymentProvider": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Payment provider details.",
-        "example": "{ live: { liveMode: true }, test: { liveMode: false, apiKey: \"y5ZQxryRFXZHvUJZdLXXXXXX\", publishableKey: \"rzp_test_zPRoVMLOa0A9wo\" }}"
+        "example": "{ live: { liveMode: true }, test: { liveMode: false, apiKey: \"y5ZQxryRFXZHvUJZdLXXXXXX\", publishableKey: \"rzp_test_zPRoVMLOa0A9wo\" }}",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "PaymentsExamplePayload": {
         "type": "object",
         "description": "Placeholder schema for path example refs"
       },
       "OrderResponseSchemaSourceMetaProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Meta content for the source of order.",
-        "example": "{ domain: \"app.gohighlevel.com\", pageId:  \"rBVhyYhMsbxbO8ZqOcei\", pageUrl:  \"/v2/preview/rBVhyYhMsbxbO8ZqOcei\", stepId:   \"5a772f62-3fbc-418b-af1b-be8929dd64c2\"}"
+        "example": "{ domain: \"app.gohighlevel.com\", pageId:  \"rBVhyYhMsbxbO8ZqOcei\", pageUrl:  \"/v2/preview/rBVhyYhMsbxbO8ZqOcei\", stepId:   \"5a772f62-3fbc-418b-af1b-be8929dd64c2\"}",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "OrderSourceMetaProperty": {
         "type": "object"
       },
       "GetOrderResponseSchemaContactSnapshotProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Contact details of the order.",
-        "example": "{ last_name: \"Mcclain\", type: \"lead\", first_name_lower_case: \"rogan\", email: \"anish+11@gohighlevel.com\", last_name_lower_case: \"mcclain\", location_id: \"o6241QsiRwUIJHyjuhos\", company_name: \"Jordan and Cox Trading\"}"
+        "example": "{ last_name: \"Mcclain\", type: \"lead\", first_name_lower_case: \"rogan\", email: \"anish+11@gohighlevel.com\", last_name_lower_case: \"mcclain\", location_id: \"o6241QsiRwUIJHyjuhos\", company_name: \"Jordan and Cox Trading\"}",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetOrderResponseSchemaCouponProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Coupon details of the order.",
-        "example": "{ code: \"FEST10\", _id: \"63455e48901b43d4ef364a20\" }"
+        "example": "{ code: \"FEST10\", _id: \"63455e48901b43d4ef364a20\" }",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetOrderResponseSchemaMetaProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Meta details of the order.",
-        "example": "{ couponSessionExpired: true }"
+        "example": "{ couponSessionExpired: true }",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetOrderResponseSchemaTaxCalculationProviderProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Provider name for automatic tax calculation",
-        "example": "taxjar"
+        "example": "taxjar",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "PostRecordOrderPaymentBodyMetaProperty": {
         "type": "object",
         "description": "Meta data to be recorded with the transaction"
       },
       "TxnResponseSchemaStatusProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "The status of the transaction (e.g., succeeded).",
-        "example": "succeeded"
+        "example": "succeeded",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "TxnResponseSchemaEntitySourceMetaProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Meta content for the entity source of transaction.",
-        "example": "{ domain: \"app.gohighlevel.com\", pageId:  \"rBVhyYhMsbxbO8ZqOcei\", pageUrl:  \"/v2/preview/rBVhyYhMsbxbO8ZqOcei\", stepId:   \"5a772f62-3fbc-418b-af1b-be8929dd64c2\"}"
+        "example": "{ domain: \"app.gohighlevel.com\", pageId:  \"rBVhyYhMsbxbO8ZqOcei\", pageUrl:  \"/v2/preview/rBVhyYhMsbxbO8ZqOcei\", stepId:   \"5a772f62-3fbc-418b-af1b-be8929dd64c2\"}",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "TxnResponseSchemaChargeSnapshotProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Charge snapshot of transaction.",
-        "example": "{ id: \"in_1KGcXDCScnf89tZohCsmImwE\", object: \"invoice\", account_country: \"US\",  account_name:  \"GHL-Testing\" }"
+        "example": "{ id: \"in_1KGcXDCScnf89tZohCsmImwE\", object: \"invoice\", account_country: \"US\",  account_name:  \"GHL-Testing\" }",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "TxnResponseSchemaPaymentMethodProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Transaction payment method details.",
-        "example": "{ card: { \"brand\": \"discover\", \"last4\": \"0012\" } }"
+        "example": "{ card: { \"brand\": \"discover\", \"last4\": \"0012\" } }",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetTxnResponseSchemaContactSnapshotProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Contact details of the transaction.",
-        "example": "{ last_name: \"Mcclain\", type: \"lead\", first_name_lower_case: \"rogan\", email: \"anish+11@gohighlevel.com\", last_name_lower_case: \"mcclain\", location_id: \"o6241QsiRwUIJHyjuhos\", company_name: \"Jordan and Cox Trading\"}"
+        "example": "{ last_name: \"Mcclain\", type: \"lead\", first_name_lower_case: \"rogan\", email: \"anish+11@gohighlevel.com\", last_name_lower_case: \"mcclain\", location_id: \"o6241QsiRwUIJHyjuhos\", company_name: \"Jordan and Cox Trading\"}",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetTxnResponseSchemaStatusProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Transaction status.",
-        "example": "succeeded"
+        "example": "succeeded",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetTxnResponseSchemaChargeSnapshotProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Charge snapshot of transaction.",
-        "example": "{ id: \"in_1KGcXDCScnf89tZohCsmImwE\", object: \"invoice\", account_country: \"US\",  account_name:  \"GHL-Testing\" }"
+        "example": "{ id: \"in_1KGcXDCScnf89tZohCsmImwE\", object: \"invoice\", account_country: \"US\",  account_name:  \"GHL-Testing\" }",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetTxnResponseSchemaPaymentProviderProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Payment provider details of the transaction.",
-        "example": "{ type: \"stripe\", connectedAccount: { _id: \"612ca676b484b241fef9d962\", accountId: \"acct_1Ihw53CScnf89tZo\" } }"
+        "example": "{ type: \"stripe\", connectedAccount: { _id: \"612ca676b484b241fef9d962\", accountId: \"acct_1Ihw53CScnf89tZo\" } }",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetTxnResponseSchemaMetaProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Meta details of the transaction.",
-        "example": "{ stepId: \"af7c731e-e36f-4152-bd1a-3f69a31d6d6d\", pageId: \"A8ltotc2jZxurJba4e3Y\", pageUrl: \"/v2/preview/A8ltotc2jZxurJba4e3Y\" }"
+        "example": "{ stepId: \"af7c731e-e36f-4152-bd1a-3f69a31d6d6d\", pageId: \"A8ltotc2jZxurJba4e3Y\", pageUrl: \"/v2/preview/A8ltotc2jZxurJba4e3Y\" }",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetTxnResponseSchemaQboResponseProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Qbo details of the transaction.",
-        "example": "{ domain: \"QBO\", sparse: false, Id: \"180\", SyncToken: \"0\", TotalAmt: 25 }"
+        "example": "{ domain: \"QBO\", sparse: false, Id: \"180\", SyncToken: \"0\", TotalAmt: 25 }",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "SubscriptionResponseSchemaStatusProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "The status of the subscription (e.g., succeeded).",
-        "example": "active"
+        "example": "active",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "SubscriptionResponseSchemaEntitySourceMetaProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Meta content for the entity source of subscription.",
-        "example": "{ domain: \"app.gohighlevel.com\", pageId:  \"sxC4lNhFIavEnLZh5KhC\", pageUrl:  \"/v2/preview/sxC4lNhFIavEnLZh5KhC\", stepId: \"7d303d1f-cb85-403d-b548-bf01de5c7bb0\" }"
+        "example": "{ domain: \"app.gohighlevel.com\", pageId:  \"sxC4lNhFIavEnLZh5KhC\", pageUrl:  \"/v2/preview/sxC4lNhFIavEnLZh5KhC\", stepId: \"7d303d1f-cb85-403d-b548-bf01de5c7bb0\" }",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "SubscriptionResponseSchemaSubscriptionSnapshotProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Snapshot of subscription.",
-        "example": "{ status: \"ACTIVE\", status_update_time: \"2022-08-16T11:06:53Z\", id: \"I-0UE609H8E43P\", plan_id: \"P-82K11750F0313430KMLRGE6Y\", start_time: \"2022-08-16T11:05:31Z\", quantity: 1 }"
+        "example": "{ status: \"ACTIVE\", status_update_time: \"2022-08-16T11:06:53Z\", id: \"I-0UE609H8E43P\", plan_id: \"P-82K11750F0313430KMLRGE6Y\", start_time: \"2022-08-16T11:05:31Z\", quantity: 1 }",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetSubscriptionResponseSchemaAltTypeProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "AltType is the type of identifier.",
-        "example": "location"
+        "example": "location",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetSubscriptionResponseSchemaContactSnapshotProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Contact details of the subscriber.",
-        "example": "{ last_name: \"Mcclain\", type: \"lead\", first_name_lower_case: \"rogan\", email: \"anish+11@gohighlevel.com\", last_name_lower_case: \"mcclain\", location_id: \"o6241QsiRwUIJHyjuhos\", company_name: \"Jordan and Cox Trading\"}"
+        "example": "{ last_name: \"Mcclain\", type: \"lead\", first_name_lower_case: \"rogan\", email: \"anish+11@gohighlevel.com\", last_name_lower_case: \"mcclain\", location_id: \"o6241QsiRwUIJHyjuhos\", company_name: \"Jordan and Cox Trading\"}",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetSubscriptionResponseSchemaCouponProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Coupon details of the subscription.",
-        "example": "{ _id: \"6374c6926d119a393fe1e556\", usageCount: 5260, altId: \"jVFIxsMY19D94nOSIOEO\", altType: \"location\", name: \"FREE-100%\", code: \"FREE100\", discountType: \"percentage\", discountValue: 100 }"
+        "example": "{ _id: \"6374c6926d119a393fe1e556\", usageCount: 5260, altId: \"jVFIxsMY19D94nOSIOEO\", altType: \"location\", name: \"FREE-100%\", code: \"FREE100\", discountType: \"percentage\", discountValue: 100 }",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetSubscriptionResponseSchemaStatusProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Subscription status.",
-        "example": "active"
+        "example": "active",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetSubscriptionResponseSchemaSubscriptionSnapshotProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Snapshot of subscription.",
-        "example": "{ status: \"ACTIVE\", status_update_time: \"2022-08-16T11:06:53Z\", id: \"I-0UE609H8E43P\", plan_id: \"P-82K11750F0313430KMLRGE6Y\", start_time: \"2022-08-16T11:05:31Z\", quantity: 1 }"
+        "example": "{ status: \"ACTIVE\", status_update_time: \"2022-08-16T11:06:53Z\", id: \"I-0UE609H8E43P\", plan_id: \"P-82K11750F0313430KMLRGE6Y\", start_time: \"2022-08-16T11:05:31Z\", quantity: 1 }",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetSubscriptionResponseSchemaPaymentProviderProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Payment provider details for the subscription.",
-        "example": "{ type: \"paypal\", connectedAccount: { _id: \"64410debdc8f3b0503523abb\", merchantClientId: \"AeXtjrxdgsJiCPwQt5jML5pH-0mwmLs-tH7ub4Uo3IrDKvRl34FvJy8niI6E1wmS_pryIRdNllyVl58b\" } }"
+        "example": "{ type: \"paypal\", connectedAccount: { _id: \"64410debdc8f3b0503523abb\", merchantClientId: \"AeXtjrxdgsJiCPwQt5jML5pH-0mwmLs-tH7ub4Uo3IrDKvRl34FvJy8niI6E1wmS_pryIRdNllyVl58b\" } }",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetSubscriptionResponseSchemaMetaProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Meta details of the subscription.",
-        "example": "{ collection: \"transactionsv2\", id: \"6320652f0f664b6632006920\" }"
+        "example": "{ collection: \"transactionsv2\", id: \"6320652f0f664b6632006920\" }",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetSubscriptionResponseSchemaAutoPaymentProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Auto payment details of the subscription.",
-        "example": "{ customerId: \"908879612\", paymentMethodId: \"908646635\" }"
+        "example": "{ customerId: \"908879612\", paymentMethodId: \"908646635\" }",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetSubscriptionResponseSchemaRecurringProductProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Recurring product details of the subscription.",
-        "example": "{ locationId: \"Z4Bxl8J4SaPEPLq9IQ8g\", funnel: \"bQHJWKcyjiKjk4BHv91g\", step: \"2281a993-8a75-4b48-9912-571f29c99a74\", name: \"Sofa Set\" }"
+        "example": "{ locationId: \"Z4Bxl8J4SaPEPLq9IQ8g\", funnel: \"bQHJWKcyjiKjk4BHv91g\", step: \"2281a993-8a75-4b48-9912-571f29c99a74\", name: \"Sofa Set\" }",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "CreateCustomProvidersResponseSchemaPaymentProviderProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Payment provider details.",
-        "example": "{ live: { liveMode: true }, test: { liveMode: false, apiKey: \"y5ZQxryRFXZHvUJZdLXXXXXX\", publishableKey: \"rzp_test_zPRoVMLOa0A9wo\" }}"
+        "example": "{ live: { liveMode: true }, test: { liveMode: false, apiKey: \"y5ZQxryRFXZHvUJZdLXXXXXX\", publishableKey: \"rzp_test_zPRoVMLOa0A9wo\" }}",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetCustomProvidersResponseSchemaPaymentProviderProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Payment provider details.",
-        "example": "{ live: { liveMode: true }, test: { liveMode: false, apiKey: \"y5ZQxryRFXZHvUJZdLXXXXXX\", publishableKey: \"rzp_test_zPRoVMLOa0A9wo\" }}"
+        "example": "{ live: { liveMode: true }, test: { liveMode: false, apiKey: \"y5ZQxryRFXZHvUJZdLXXXXXX\", publishableKey: \"rzp_test_zPRoVMLOa0A9wo\" }}",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "ConnectCustomProvidersResponseSchemaPaymentProviderProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Payment provider details.",
-        "example": "{ live: { liveMode: true }, test: { liveMode: false, apiKey: \"y5ZQxryRFXZHvUJZdLXXXXXX\", publishableKey: \"rzp_test_zPRoVMLOa0A9wo\" }}"
+        "example": "{ live: { liveMode: true }, test: { liveMode: false, apiKey: \"y5ZQxryRFXZHvUJZdLXXXXXX\", publishableKey: \"rzp_test_zPRoVMLOa0A9wo\" }}",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetOrderResponseSchemaSourceMeta": {
         "type": "object"
@@ -65932,19 +66472,19 @@
             "example": "student"
           },
           "firstObjectLabel": {
-            "$ref": "#/components/schemas/GetPostSuccessfulResponseDtoFirstObjectLabelProperty2"
+            "$ref": "#/components/schemas/GetPostSuccessfulResponseDtoFirstObjectLabelProperty"
           },
           "firstObjectKey": {
-            "$ref": "#/components/schemas/GetPostSuccessfulResponseDtoFirstObjectKeyProperty2"
+            "$ref": "#/components/schemas/GetPostSuccessfulResponseDtoFirstObjectKeyProperty"
           },
           "secondObjectLabel": {
-            "$ref": "#/components/schemas/GetPostSuccessfulResponseDtoSecondObjectLabelProperty2"
+            "$ref": "#/components/schemas/GetPostSuccessfulResponseDtoSecondObjectLabelProperty"
           },
           "secondObjectKey": {
-            "$ref": "#/components/schemas/GetPostSuccessfulResponseDtoSecondObjectKeyProperty2"
+            "$ref": "#/components/schemas/GetPostSuccessfulResponseDtoSecondObjectKeyProperty"
           },
           "associationType": {
-            "$ref": "#/components/schemas/GetPostSuccessfulResponseDtoAssociationTypeProperty2"
+            "$ref": "#/components/schemas/GetPostSuccessfulResponseDtoAssociationTypeProperty"
           }
         }
       },
@@ -65969,16 +66509,16 @@
             "example": "student_teacher"
           },
           "firstObjectLabel": {
-            "$ref": "#/components/schemas/CreateAssociationReqDtoFirstObjectLabelProperty2"
+            "$ref": "#/components/schemas/CreateAssociationReqDtoFirstObjectLabelProperty"
           },
           "firstObjectKey": {
-            "$ref": "#/components/schemas/CreateAssociationReqDtoFirstObjectKeyProperty2"
+            "$ref": "#/components/schemas/CreateAssociationReqDtoFirstObjectKeyProperty"
           },
           "secondObjectLabel": {
-            "$ref": "#/components/schemas/CreateAssociationReqDtoSecondObjectLabelProperty2"
+            "$ref": "#/components/schemas/CreateAssociationReqDtoSecondObjectLabelProperty"
           },
           "secondObjectKey": {
-            "$ref": "#/components/schemas/CreateAssociationReqDtoSecondObjectKeyProperty2"
+            "$ref": "#/components/schemas/CreateAssociationReqDtoSecondObjectKeyProperty"
           }
         }
       },
@@ -65990,10 +66530,10 @@
         "type": "object",
         "properties": {
           "firstObjectLabel": {
-            "$ref": "#/components/schemas/UpdateAssociationReqDtoFirstObjectLabelProperty2"
+            "$ref": "#/components/schemas/UpdateAssociationReqDtoFirstObjectLabelProperty"
           },
           "secondObjectLabel": {
-            "$ref": "#/components/schemas/UpdateAssociationReqDtoSecondObjectLabelProperty2"
+            "$ref": "#/components/schemas/UpdateAssociationReqDtoSecondObjectLabelProperty"
           }
         }
       },
@@ -66074,114 +66614,312 @@
         }
       },
       "GetPostSuccessfulResponseDtoFirstObjectLabel": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "First Objects Association Label (custom_objects.children)",
-        "example": "student"
+        "example": "student",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetPostSuccessfulResponseDtoFirstObjectKey": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "First Objects Key",
-        "example": "custom_objects.children"
+        "example": "custom_objects.children",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetPostSuccessfulResponseDtoSecondObjectLabel": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Second Object Association Label (contact)",
-        "example": "Teacher"
+        "example": "Teacher",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetPostSuccessfulResponseDtoSecondObjectKey": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Second Objects Key",
-        "example": "contact"
+        "example": "contact",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetPostSuccessfulResponseDtoAssociationType": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Association Type can be USER_DEFINED or SYSTEM_DEFINED",
-        "example": "USER_DEFINED"
+        "example": "USER_DEFINED",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "CreateAssociationReqDtoFirstObjectLabel": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "First Objects Association Label (custom_objects.children)",
-        "example": "student"
+        "example": "student",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "CreateAssociationReqDtoFirstObjectKey": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "First Objects Key",
-        "example": "custom_objects.children"
+        "example": "custom_objects.children",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "CreateAssociationReqDtoSecondObjectLabel": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Second Object Association Label (contact)",
-        "example": "Teacher"
+        "example": "Teacher",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "CreateAssociationReqDtoSecondObjectKey": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Second Objects Key",
-        "example": "contact"
+        "example": "contact",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "UpdateAssociationReqDtoFirstObjectLabel": {
-        "type": "object",
-        "example": "student"
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
+        "example": "student",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "UpdateAssociationReqDtoSecondObjectLabel": {
-        "type": "object",
-        "example": "tutor"
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
+        "example": "tutor",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "AssociationsExamplePayload": {
         "type": "object",
         "description": "Placeholder schema for path example refs"
       },
       "GetPostSuccessfulResponseDtoFirstObjectLabelProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "First Objects Association Label (custom_objects.children)",
-        "example": "student"
+        "example": "student",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetPostSuccessfulResponseDtoFirstObjectKeyProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "First Objects Key",
-        "example": "custom_objects.children"
+        "example": "custom_objects.children",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetPostSuccessfulResponseDtoSecondObjectLabelProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Second Object Association Label (contact)",
-        "example": "Teacher"
+        "example": "Teacher",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetPostSuccessfulResponseDtoSecondObjectKeyProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Second Objects Key",
-        "example": "contact"
+        "example": "contact",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetPostSuccessfulResponseDtoAssociationTypeProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Association Type can be USER_DEFINED or SYSTEM_DEFINED",
-        "example": "USER_DEFINED"
+        "example": "USER_DEFINED",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "CreateAssociationReqDtoFirstObjectLabelProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "First Objects Association Label (custom_objects.children)",
-        "example": "student"
+        "example": "student",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "CreateAssociationReqDtoFirstObjectKeyProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "First Objects Key",
-        "example": "custom_objects.children"
+        "example": "custom_objects.children",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "CreateAssociationReqDtoSecondObjectLabelProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Second Object Association Label (contact)",
-        "example": "Teacher"
+        "example": "Teacher",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "CreateAssociationReqDtoSecondObjectKeyProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Second Objects Key",
-        "example": "contact"
+        "example": "contact",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "UpdateAssociationReqDtoFirstObjectLabelProperty": {
-        "type": "object",
-        "example": "student"
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
+        "example": "student",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "UpdateAssociationReqDtoSecondObjectLabelProperty": {
-        "type": "object",
-        "example": "tutor"
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
+        "example": "tutor",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "AssociationsValue20210728Version": {
         "enum": [
@@ -77451,7 +78189,7 @@
             "example": "7915dedc-8f18-44d5-8bc3-77c04e994a10"
           },
           "monetaryValue": {
-            "$ref": "#/components/schemas/UpsertOpportunityDtoMonetaryValueProperty2"
+            "$ref": "#/components/schemas/UpsertOpportunityDtoMonetaryValueProperty"
           },
           "assignedTo": {
             "type": "string",
@@ -77659,8 +78397,17 @@
         "type": "object"
       },
       "UpsertOpportunityDtoMonetaryValue": {
-        "type": "object",
-        "example": 220
+        "anyOf": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "object"
+          }
+        ],
+        "example": 220,
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "UpsertOpportunitySuccessfulResponseDtoOpportunity": {
         "type": "object",
@@ -77680,8 +78427,17 @@
         "type": "object"
       },
       "UpsertOpportunityDtoMonetaryValueProperty": {
-        "type": "object",
-        "example": 220
+        "anyOf": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "object"
+          }
+        ],
+        "example": 220,
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "UpsertOpportunitySuccessfulResponseDtoOpportunityProperty": {
         "type": "object",
@@ -79185,10 +79941,10 @@
             "example": "u37swmmLbA02zgqKPpxITe2"
           },
           "platform": {
-            "$ref": "#/components/schemas/SocialGoogleMediaAccountSchemaPlatformProperty2"
+            "$ref": "#/components/schemas/SocialGoogleMediaAccountSchemaPlatformProperty"
           },
           "type": {
-            "$ref": "#/components/schemas/SocialGoogleMediaAccountSchemaTypeProperty2"
+            "$ref": "#/components/schemas/SocialGoogleMediaAccountSchemaTypeProperty"
           },
           "name": {
             "type": "string",
@@ -79298,7 +80054,7 @@
             "example": "true"
           },
           "postType": {
-            "$ref": "#/components/schemas/SearchPostDtoPostTypeProperty2"
+            "$ref": "#/components/schemas/SearchPostDtoPostTypeProperty"
           }
         }
       },
@@ -79416,7 +80172,7 @@
             "example": "Test suggestion"
           },
           "approvalStatus": {
-            "$ref": "#/components/schemas/FormatedApprovalDetailsApprovalStatusProperty2"
+            "$ref": "#/components/schemas/FormatedApprovalDetailsApprovalStatusProperty"
           },
           "approverUser": {
             "$ref": "#/components/schemas/FormatedApprovalDetailsApproverUser"
@@ -79427,7 +80183,7 @@
         "type": "object",
         "properties": {
           "privacyLevel": {
-            "$ref": "#/components/schemas/TiktokPostSchemaPrivacyLevelProperty2"
+            "$ref": "#/components/schemas/TiktokPostSchemaPrivacyLevelProperty"
           },
           "promoteOtherBrand": {
             "type": "boolean",
@@ -79572,7 +80328,7 @@
             "example": "https://google.com"
           },
           "actionType": {
-            "$ref": "#/components/schemas/GmbPostSchemaActionTypeProperty2"
+            "$ref": "#/components/schemas/GmbPostSchemaActionTypeProperty"
           }
         }
       },
@@ -79656,14 +80412,14 @@
             "description": "Post Media Data \n The limitations of media as per the platforms is provided through the reference link in API description"
           },
           "status": {
-            "$ref": "#/components/schemas/GetPostFormattedSchemaStatusProperty2"
+            "$ref": "#/components/schemas/GetPostFormattedSchemaStatusProperty"
           },
           "createdBy": {
             "type": "string",
             "example": "Lx1EI6YIgQYMQi0ytFXv"
           },
           "type": {
-            "$ref": "#/components/schemas/GetPostFormattedSchemaTypeProperty2"
+            "$ref": "#/components/schemas/GetPostFormattedSchemaTypeProperty"
           },
           "tags": {
             "type": "array",
@@ -79755,7 +80511,7 @@
             "example": "Test suggestion"
           },
           "approvalStatus": {
-            "$ref": "#/components/schemas/PostApprovalSchemaApprovalStatusProperty2"
+            "$ref": "#/components/schemas/PostApprovalSchemaApprovalStatusProperty"
           }
         }
       },
@@ -79790,7 +80546,7 @@
             "description": "Post Media Data \n The limitations of media as per the platforms is provided through the reference link in API description"
           },
           "status": {
-            "$ref": "#/components/schemas/CreatePostDtoStatusProperty2"
+            "$ref": "#/components/schemas/CreatePostDtoStatusProperty"
           },
           "scheduleDate": {
             "type": "string",
@@ -79809,7 +80565,7 @@
             "$ref": "#/components/schemas/CreatePostDtoOgTagsDetails"
           },
           "type": {
-            "$ref": "#/components/schemas/CreatePostDtoTypeProperty2"
+            "$ref": "#/components/schemas/CreatePostDtoTypeProperty"
           },
           "postApprovalDetails": {
             "$ref": "#/components/schemas/CreatePostDtoPostApprovalDetails"
@@ -79948,7 +80704,7 @@
             "description": "Post Media Data \n The limitations of media as per the platforms is provided through the reference link in API description"
           },
           "status": {
-            "$ref": "#/components/schemas/PostCreateRequestStatusProperty2"
+            "$ref": "#/components/schemas/PostCreateRequestStatusProperty"
           },
           "scheduleDate": {
             "type": "string",
@@ -79967,7 +80723,7 @@
             "$ref": "#/components/schemas/PostCreateRequestOgTagsDetails"
           },
           "type": {
-            "$ref": "#/components/schemas/PostCreateRequestTypeProperty2"
+            "$ref": "#/components/schemas/PostCreateRequestTypeProperty"
           },
           "postApprovalDetails": {
             "$ref": "#/components/schemas/PostCreateRequestPostApprovalDetails"
@@ -80292,7 +81048,7 @@
         "type": "object",
         "properties": {
           "type": {
-            "$ref": "#/components/schemas/AttachFbAccountDtoTypeProperty2"
+            "$ref": "#/components/schemas/AttachFbAccountDtoTypeProperty"
           },
           "originId": {
             "type": "string",
@@ -80337,10 +81093,10 @@
             "example": "u37swmmLbA02zgqKPpxITe2"
           },
           "platform": {
-            "$ref": "#/components/schemas/SocialMediaFacebookAccountSchemaPlatformProperty2"
+            "$ref": "#/components/schemas/SocialMediaFacebookAccountSchemaPlatformProperty"
           },
           "type": {
-            "$ref": "#/components/schemas/SocialMediaFacebookAccountSchemaTypeProperty2"
+            "$ref": "#/components/schemas/SocialMediaFacebookAccountSchemaTypeProperty"
           },
           "name": {
             "type": "string",
@@ -80520,10 +81276,10 @@
             "example": "u37swmmLbA02zgqKPpxITe2"
           },
           "platform": {
-            "$ref": "#/components/schemas/SocialMediaInstagramAccountSchemaPlatformProperty2"
+            "$ref": "#/components/schemas/SocialMediaInstagramAccountSchemaPlatformProperty"
           },
           "type": {
-            "$ref": "#/components/schemas/SocialMediaInstagramAccountSchemaTypeProperty2"
+            "$ref": "#/components/schemas/SocialMediaInstagramAccountSchemaTypeProperty"
           },
           "name": {
             "type": "string",
@@ -80742,10 +81498,10 @@
             "example": "u37swmmLbA02zgqKPpxITe2"
           },
           "platform": {
-            "$ref": "#/components/schemas/SocialMediaLinkedInAccountSchemaPlatformProperty2"
+            "$ref": "#/components/schemas/SocialMediaLinkedInAccountSchemaPlatformProperty"
           },
           "type": {
-            "$ref": "#/components/schemas/SocialMediaLinkedInAccountSchemaTypeProperty2"
+            "$ref": "#/components/schemas/SocialMediaLinkedInAccountSchemaTypeProperty"
           },
           "name": {
             "type": "string",
@@ -80945,10 +81701,10 @@
             "example": "u37swmmLbA02zgqKPpxITe2"
           },
           "platform": {
-            "$ref": "#/components/schemas/SocialMediaTwitterAccountSchemaPlatformProperty2"
+            "$ref": "#/components/schemas/SocialMediaTwitterAccountSchemaPlatformProperty"
           },
           "type": {
-            "$ref": "#/components/schemas/SocialMediaTwitterAccountSchemaTypeProperty2"
+            "$ref": "#/components/schemas/SocialMediaTwitterAccountSchemaTypeProperty"
           },
           "name": {
             "type": "string",
@@ -81479,7 +82235,7 @@
             "example": "Initial Comment"
           },
           "type": {
-            "$ref": "#/components/schemas/CsvPostSchemaTypeProperty2"
+            "$ref": "#/components/schemas/CsvPostSchemaTypeProperty"
           },
           "tiktokPostDetails": {
             "$ref": "#/components/schemas/CsvPostSchemaTiktokPostDetails"
@@ -81601,7 +82357,7 @@
             "example": "File"
           },
           "status": {
-            "$ref": "#/components/schemas/CsvResponseStatusProperty2"
+            "$ref": "#/components/schemas/CsvResponseStatusProperty"
           },
           "count": {
             "type": "number",
@@ -81735,7 +82491,7 @@
             "example": true
           },
           "type": {
-            "$ref": "#/components/schemas/TiktokProfileSchemaTypeProperty2"
+            "$ref": "#/components/schemas/TiktokProfileSchemaTypeProperty"
           }
         }
       },
@@ -81835,10 +82591,10 @@
             "example": "u37swmmLbA02zgqKPpxITe2"
           },
           "platform": {
-            "$ref": "#/components/schemas/SocialMediaTiktokAccountSchemaPlatformProperty2"
+            "$ref": "#/components/schemas/SocialMediaTiktokAccountSchemaPlatformProperty"
           },
           "type": {
-            "$ref": "#/components/schemas/SocialMediaTiktokAccountSchemaTypeProperty2"
+            "$ref": "#/components/schemas/SocialMediaTiktokAccountSchemaTypeProperty"
           },
           "name": {
             "type": "string",
@@ -82506,10 +83262,10 @@
             "example": "u37swmmLbA02zgqKPpxITe2"
           },
           "platform": {
-            "$ref": "#/components/schemas/SocialMediaGmbAccountResponseDtoResultsPlatformProperty"
+            "$ref": "#/components/schemas/SocialMediaGmbAccountResponseDtoResultsPlatform"
           },
           "type": {
-            "$ref": "#/components/schemas/SocialMediaGmbAccountResponseDtoResultsTypeProperty"
+            "$ref": "#/components/schemas/SocialMediaGmbAccountResponseDtoResultsType"
           },
           "name": {
             "type": "string",
@@ -82745,7 +83501,7 @@
             "example": "Test suggestion"
           },
           "approvalStatus": {
-            "$ref": "#/components/schemas/GetPostFormattedSchemaPostApprovalDetailsApprovalStatusProperty"
+            "$ref": "#/components/schemas/GetPostFormattedSchemaPostApprovalDetailsApprovalStatus"
           },
           "approverUser": {
             "$ref": "#/components/schemas/FormatedApprovalDetailsApproverUser"
@@ -82757,7 +83513,7 @@
         "type": "object",
         "properties": {
           "privacyLevel": {
-            "$ref": "#/components/schemas/GetPostFormattedSchemaTiktokPostDetailsPrivacyLevelProperty"
+            "$ref": "#/components/schemas/GetPostFormattedSchemaTiktokPostDetailsPrivacyLevel"
           },
           "promoteOtherBrand": {
             "type": "boolean",
@@ -82837,7 +83593,7 @@
             "example": "https://google.com"
           },
           "actionType": {
-            "$ref": "#/components/schemas/GetPostFormattedSchemaGmbPostDetailsActionTypeProperty"
+            "$ref": "#/components/schemas/GetPostFormattedSchemaGmbPostDetailsActionType"
           }
         },
         "description": "GMB Post Details"
@@ -82943,7 +83699,7 @@
             "example": "Test suggestion"
           },
           "approvalStatus": {
-            "$ref": "#/components/schemas/CreatePostDtoPostApprovalDetailsApprovalStatusProperty"
+            "$ref": "#/components/schemas/CreatePostDtoPostApprovalDetailsApprovalStatus"
           }
         },
         "description": "Post Approval Details"
@@ -82952,7 +83708,7 @@
         "type": "object",
         "properties": {
           "privacyLevel": {
-            "$ref": "#/components/schemas/CreatePostDtoTiktokPostDetailsPrivacyLevelProperty"
+            "$ref": "#/components/schemas/CreatePostDtoTiktokPostDetailsPrivacyLevel"
           },
           "promoteOtherBrand": {
             "type": "boolean",
@@ -83032,7 +83788,7 @@
             "example": "https://google.com"
           },
           "actionType": {
-            "$ref": "#/components/schemas/CreatePostDtoGmbPostDetailsActionTypeProperty"
+            "$ref": "#/components/schemas/CreatePostDtoGmbPostDetailsActionType"
           }
         },
         "description": "GMB Post Details"
@@ -83117,14 +83873,14 @@
             "description": "Post Media Data \n The limitations of media as per the platforms is provided through the reference link in API description"
           },
           "status": {
-            "$ref": "#/components/schemas/CreatePostSuccessfulResponseSchemaPostStatusProperty"
+            "$ref": "#/components/schemas/CreatePostSuccessfulResponseSchemaPostStatus"
           },
           "createdBy": {
             "type": "string",
             "example": "Lx1EI6YIgQYMQi0ytFXv"
           },
           "type": {
-            "$ref": "#/components/schemas/CreatePostSuccessfulResponseSchemaPostTypeProperty"
+            "$ref": "#/components/schemas/CreatePostSuccessfulResponseSchemaPostType"
           },
           "tags": {
             "type": "array",
@@ -83243,14 +83999,14 @@
             "description": "Post Media Data \n The limitations of media as per the platforms is provided through the reference link in API description"
           },
           "status": {
-            "$ref": "#/components/schemas/GetPostSuccessfulResponseSchemaPostStatusProperty"
+            "$ref": "#/components/schemas/GetPostSuccessfulResponseSchemaPostStatus"
           },
           "createdBy": {
             "type": "string",
             "example": "Lx1EI6YIgQYMQi0ytFXv"
           },
           "type": {
-            "$ref": "#/components/schemas/GetPostSuccessfulResponseSchemaPostTypeProperty"
+            "$ref": "#/components/schemas/GetPostSuccessfulResponseSchemaPostType"
           },
           "tags": {
             "type": "array",
@@ -83323,7 +84079,7 @@
             "example": "Test suggestion"
           },
           "approvalStatus": {
-            "$ref": "#/components/schemas/PostCreateRequestPostApprovalDetailsApprovalStatusProperty"
+            "$ref": "#/components/schemas/PostCreateRequestPostApprovalDetailsApprovalStatus"
           }
         },
         "description": "Post Approval Details"
@@ -83332,7 +84088,7 @@
         "type": "object",
         "properties": {
           "privacyLevel": {
-            "$ref": "#/components/schemas/PostCreateRequestTiktokPostDetailsPrivacyLevelProperty"
+            "$ref": "#/components/schemas/PostCreateRequestTiktokPostDetailsPrivacyLevel"
           },
           "promoteOtherBrand": {
             "type": "boolean",
@@ -83412,7 +84168,7 @@
             "example": "https://google.com"
           },
           "actionType": {
-            "$ref": "#/components/schemas/PostCreateRequestGmbPostDetailsActionTypeProperty"
+            "$ref": "#/components/schemas/PostCreateRequestGmbPostDetailsActionType"
           }
         },
         "description": "GMB Post Details"
@@ -83497,10 +84253,10 @@
             "example": "u37swmmLbA02zgqKPpxITe2"
           },
           "platform": {
-            "$ref": "#/components/schemas/SocialMediaFbAccountResponseDtoResultsPlatformProperty"
+            "$ref": "#/components/schemas/SocialMediaFbAccountResponseDtoResultsPlatform"
           },
           "type": {
-            "$ref": "#/components/schemas/SocialMediaFbAccountResponseDtoResultsTypeProperty"
+            "$ref": "#/components/schemas/SocialMediaFbAccountResponseDtoResultsType"
           },
           "name": {
             "type": "string",
@@ -83573,10 +84329,10 @@
             "example": "u37swmmLbA02zgqKPpxITe2"
           },
           "platform": {
-            "$ref": "#/components/schemas/SocialMediaInstagramAccountResponseDtoResultsPlatformProperty"
+            "$ref": "#/components/schemas/SocialMediaInstagramAccountResponseDtoResultsPlatform"
           },
           "type": {
-            "$ref": "#/components/schemas/SocialMediaInstagramAccountResponseDtoResultsTypeProperty"
+            "$ref": "#/components/schemas/SocialMediaInstagramAccountResponseDtoResultsType"
           },
           "name": {
             "type": "string",
@@ -83656,10 +84412,10 @@
             "example": "u37swmmLbA02zgqKPpxITe2"
           },
           "platform": {
-            "$ref": "#/components/schemas/SocialMediaLinkedInAccountResponseDtoResultsPlatformProperty"
+            "$ref": "#/components/schemas/SocialMediaLinkedInAccountResponseDtoResultsPlatform"
           },
           "type": {
-            "$ref": "#/components/schemas/SocialMediaLinkedInAccountResponseDtoResultsTypeProperty"
+            "$ref": "#/components/schemas/SocialMediaLinkedInAccountResponseDtoResultsType"
           },
           "name": {
             "type": "string",
@@ -83732,10 +84488,10 @@
             "example": "u37swmmLbA02zgqKPpxITe2"
           },
           "platform": {
-            "$ref": "#/components/schemas/SocialMediaTwitterAccountResponseDtoResultsPlatformProperty"
+            "$ref": "#/components/schemas/SocialMediaTwitterAccountResponseDtoResultsPlatform"
           },
           "type": {
-            "$ref": "#/components/schemas/SocialMediaTwitterAccountResponseDtoResultsTypeProperty"
+            "$ref": "#/components/schemas/SocialMediaTwitterAccountResponseDtoResultsType"
           },
           "name": {
             "type": "string",
@@ -83950,7 +84706,7 @@
         "type": "object",
         "properties": {
           "privacyLevel": {
-            "$ref": "#/components/schemas/CsvPostSchemaTiktokPostDetailsPrivacyLevelProperty"
+            "$ref": "#/components/schemas/CsvPostSchemaTiktokPostDetailsPrivacyLevel"
           },
           "promoteOtherBrand": {
             "type": "boolean",
@@ -84030,7 +84786,7 @@
             "example": "https://google.com"
           },
           "actionType": {
-            "$ref": "#/components/schemas/CsvPostSchemaGmbPostDetailsActionTypeProperty"
+            "$ref": "#/components/schemas/CsvPostSchemaGmbPostDetailsActionType"
           }
         },
         "description": "GMB Post Details"
@@ -84156,7 +84912,7 @@
             "example": "File"
           },
           "status": {
-            "$ref": "#/components/schemas/CsvResponseSchemaCsvStatusProperty"
+            "$ref": "#/components/schemas/CsvResponseSchemaCsvStatus"
           },
           "count": {
             "type": "number",
@@ -84240,10 +84996,10 @@
             "example": "u37swmmLbA02zgqKPpxITe2"
           },
           "platform": {
-            "$ref": "#/components/schemas/SocialMediaTiktokAccountResponseDtoResultsPlatformProperty"
+            "$ref": "#/components/schemas/SocialMediaTiktokAccountResponseDtoResultsPlatform"
           },
           "type": {
-            "$ref": "#/components/schemas/SocialMediaTiktokAccountResponseDtoResultsTypeProperty"
+            "$ref": "#/components/schemas/SocialMediaTiktokAccountResponseDtoResultsType"
           },
           "name": {
             "type": "string",
@@ -84440,12 +85196,30 @@
         "type": "object"
       },
       "SocialGoogleMediaAccountSchemaPlatform": {
-        "type": "object",
-        "example": "google"
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
+        "example": "google",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "SocialGoogleMediaAccountSchemaType": {
-        "type": "object",
-        "example": "location"
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
+        "example": "location",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "SocialGoogleMediaAccountSchemaMeta": {
         "type": "object",
@@ -84479,59 +85253,158 @@
         }
       },
       "SearchPostDtoPostType": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Post Type must be one of the following values: - post, story, reel",
-        "example": "post"
+        "example": "post",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "FormatedApprovalDetailsApprovalStatus": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Approval Status must be one of the following values: pending, approved, rejected, not_required",
-        "example": "approved"
+        "example": "approved",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "TiktokPostSchemaPrivacyLevel": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "privacy level is an enum and must be one of the following values: PUBLIC_TO_EVERYONE, MUTUAL_FOLLOW_FRIENDS, SELF_ONLY",
-        "example": "PUBLIC_TO_EVERYONE"
+        "example": "PUBLIC_TO_EVERYONE",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GmbPostSchemaActionType": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Action Type must be one of the following values: none, order, book, shop, learn_more, call, sign_up",
-        "example": "book"
+        "example": "book",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetPostFormattedSchemaStatus": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Status must be one of the following values: in_progress, draft, failed, published, scheduled, in_review, notification_sent, deleted",
-        "example": "published"
+        "example": "published",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetPostFormattedSchemaType": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Post Type must be one of the following values: - post, story, reel",
-        "example": "post"
+        "example": "post",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "PostApprovalSchemaApprovalStatus": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Approval Status must be one of the following values: pending, approved, rejected, not_required",
-        "example": "approved"
+        "example": "approved",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "CreatePostDtoStatus": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Status must be one of the following values: null, in_progress, draft, failed, published, scheduled, in_review, notification_sent, deleted",
-        "example": "draft"
+        "example": "draft",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "CreatePostDtoType": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Post Type must be one of the following values: - post, story, reel",
-        "example": "post"
+        "example": "post",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "PostCreateRequestStatus": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Status must be one of the following values: in_progress, draft, failed, published, scheduled, in_review, notification_sent, deleted",
-        "example": "draft"
+        "example": "draft",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "PostCreateRequestType": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Post Type must be one of the following values: - post, story, reel",
-        "example": "post"
+        "example": "post",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetAccountSchemaMeta": {
         "type": "object",
@@ -84541,17 +85414,44 @@
         }
       },
       "AttachFbAccountDtoType": {
-        "type": "object",
-        "example": "page"
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
+        "example": "page",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "SocialMediaFacebookAccountSchemaPlatform": {
-        "type": "object",
-        "example": "facebook"
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
+        "example": "facebook",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "SocialMediaFacebookAccountSchemaType": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "type value must be page",
-        "example": "page"
+        "example": "page",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "SocialMediaFacebookAccountSchemaMeta": {
         "type": "object",
@@ -84585,12 +85485,30 @@
         }
       },
       "SocialMediaInstagramAccountSchemaPlatform": {
-        "type": "object",
-        "example": "instagram"
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
+        "example": "instagram",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "SocialMediaInstagramAccountSchemaType": {
-        "type": "object",
-        "example": "profile"
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
+        "example": "profile",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "SocialMediaInstagramAccountSchemaMeta": {
         "type": "object",
@@ -84624,13 +85542,31 @@
         }
       },
       "SocialMediaLinkedInAccountSchemaPlatform": {
-        "type": "object",
-        "example": "linkedin"
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
+        "example": "linkedin",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "SocialMediaLinkedInAccountSchemaType": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "type must be one of the following values: page, profile",
-        "example": "profile"
+        "example": "profile",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "SocialMediaLinkedInAccountSchemaMeta": {
         "type": "object",
@@ -84664,12 +85600,30 @@
         }
       },
       "SocialMediaTwitterAccountSchemaPlatform": {
-        "type": "object",
-        "example": "twitter"
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
+        "example": "twitter",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "SocialMediaTwitterAccountSchemaType": {
-        "type": "object",
-        "example": "profile"
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
+        "example": "profile",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "SocialMediaTwitterAccountSchemaMeta": {
         "type": "object",
@@ -84703,27 +85657,72 @@
         }
       },
       "CsvPostSchemaType": {
-        "type": "object",
-        "example": "post"
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
+        "example": "post",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "CsvResponseStatus": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "status must be one of the following values: pending, in_progress, completed, failed, in_review, importing, deleted",
-        "example": "completed"
+        "example": "completed",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "TiktokProfileSchemaType": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Tiktok Account Type must be one of the following values: business, profile",
-        "example": "BUSINESS"
+        "example": "BUSINESS",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "SocialMediaTiktokAccountSchemaPlatform": {
-        "type": "object",
-        "example": "tiktok"
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
+        "example": "tiktok",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "SocialMediaTiktokAccountSchemaType": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "type must be one of the following values: profile, business",
-        "example": "profile"
+        "example": "profile",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "SocialMediaTiktokAccountSchemaMeta": {
         "type": "object",
@@ -85000,12 +85999,30 @@
         "type": "object"
       },
       "SocialGoogleMediaAccountSchemaPlatformProperty": {
-        "type": "object",
-        "example": "google"
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
+        "example": "google",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "SocialGoogleMediaAccountSchemaTypeProperty": {
-        "type": "object",
-        "example": "location"
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
+        "example": "location",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "SocialGoogleMediaAccountSchemaMetaProperty": {
         "type": "object",
@@ -85039,59 +86056,158 @@
         }
       },
       "SearchPostDtoPostTypeProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Post Type must be one of the following values: - post, story, reel",
-        "example": "post"
+        "example": "post",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "FormatedApprovalDetailsApprovalStatusProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Approval Status must be one of the following values: pending, approved, rejected, not_required",
-        "example": "approved"
+        "example": "approved",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "TiktokPostSchemaPrivacyLevelProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "privacy level is an enum and must be one of the following values: PUBLIC_TO_EVERYONE, MUTUAL_FOLLOW_FRIENDS, SELF_ONLY",
-        "example": "PUBLIC_TO_EVERYONE"
+        "example": "PUBLIC_TO_EVERYONE",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GmbPostSchemaActionTypeProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Action Type must be one of the following values: none, order, book, shop, learn_more, call, sign_up",
-        "example": "book"
+        "example": "book",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetPostFormattedSchemaStatusProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Status must be one of the following values: in_progress, draft, failed, published, scheduled, in_review, notification_sent, deleted",
-        "example": "published"
+        "example": "published",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetPostFormattedSchemaTypeProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Post Type must be one of the following values: - post, story, reel",
-        "example": "post"
+        "example": "post",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "PostApprovalSchemaApprovalStatusProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Approval Status must be one of the following values: pending, approved, rejected, not_required",
-        "example": "approved"
+        "example": "approved",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "CreatePostDtoStatusProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Status must be one of the following values: null, in_progress, draft, failed, published, scheduled, in_review, notification_sent, deleted",
-        "example": "draft"
+        "example": "draft",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "CreatePostDtoTypeProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Post Type must be one of the following values: - post, story, reel",
-        "example": "post"
+        "example": "post",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "PostCreateRequestStatusProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Status must be one of the following values: in_progress, draft, failed, published, scheduled, in_review, notification_sent, deleted",
-        "example": "draft"
+        "example": "draft",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "PostCreateRequestTypeProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Post Type must be one of the following values: - post, story, reel",
-        "example": "post"
+        "example": "post",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetAccountSchemaMetaProperty": {
         "type": "object",
@@ -85101,17 +86217,44 @@
         }
       },
       "AttachFbAccountDtoTypeProperty": {
-        "type": "object",
-        "example": "page"
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
+        "example": "page",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "SocialMediaFacebookAccountSchemaPlatformProperty": {
-        "type": "object",
-        "example": "facebook"
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
+        "example": "facebook",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "SocialMediaFacebookAccountSchemaTypeProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "type value must be page",
-        "example": "page"
+        "example": "page",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "SocialMediaFacebookAccountSchemaMetaProperty": {
         "type": "object",
@@ -85145,12 +86288,30 @@
         }
       },
       "SocialMediaInstagramAccountSchemaPlatformProperty": {
-        "type": "object",
-        "example": "instagram"
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
+        "example": "instagram",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "SocialMediaInstagramAccountSchemaTypeProperty": {
-        "type": "object",
-        "example": "profile"
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
+        "example": "profile",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "SocialMediaInstagramAccountSchemaMetaProperty": {
         "type": "object",
@@ -85184,13 +86345,31 @@
         }
       },
       "SocialMediaLinkedInAccountSchemaPlatformProperty": {
-        "type": "object",
-        "example": "linkedin"
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
+        "example": "linkedin",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "SocialMediaLinkedInAccountSchemaTypeProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "type must be one of the following values: page, profile",
-        "example": "profile"
+        "example": "profile",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "SocialMediaLinkedInAccountSchemaMetaProperty": {
         "type": "object",
@@ -85224,12 +86403,30 @@
         }
       },
       "SocialMediaTwitterAccountSchemaPlatformProperty": {
-        "type": "object",
-        "example": "twitter"
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
+        "example": "twitter",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "SocialMediaTwitterAccountSchemaTypeProperty": {
-        "type": "object",
-        "example": "profile"
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
+        "example": "profile",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "SocialMediaTwitterAccountSchemaMetaProperty": {
         "type": "object",
@@ -85263,27 +86460,72 @@
         }
       },
       "CsvPostSchemaTypeProperty": {
-        "type": "object",
-        "example": "post"
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
+        "example": "post",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "CsvResponseStatusProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "status must be one of the following values: pending, in_progress, completed, failed, in_review, importing, deleted",
-        "example": "completed"
+        "example": "completed",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "TiktokProfileSchemaTypeProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Tiktok Account Type must be one of the following values: business, profile",
-        "example": "BUSINESS"
+        "example": "BUSINESS",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "SocialMediaTiktokAccountSchemaPlatformProperty": {
-        "type": "object",
-        "example": "tiktok"
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
+        "example": "tiktok",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "SocialMediaTiktokAccountSchemaTypeProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "type must be one of the following values: profile, business",
-        "example": "profile"
+        "example": "profile",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "SocialMediaTiktokAccountSchemaMetaProperty": {
         "type": "object",
@@ -85329,12 +86571,30 @@
         "description": "All locations and chain related to this one"
       },
       "SocialMediaGmbAccountResponseDtoResultsPlatform": {
-        "type": "object",
-        "example": "google"
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
+        "example": "google",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "SocialMediaGmbAccountResponseDtoResultsType": {
-        "type": "object",
-        "example": "location"
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
+        "example": "location",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "SocialMediaGmbAccountResponseDtoResultsMeta": {
         "type": "object",
@@ -85368,78 +86628,213 @@
         }
       },
       "GetPostFormattedSchemaPostApprovalDetailsApprovalStatus": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Approval Status must be one of the following values: pending, approved, rejected, not_required",
-        "example": "approved"
+        "example": "approved",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetPostFormattedSchemaTiktokPostDetailsPrivacyLevel": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "privacy level is an enum and must be one of the following values: PUBLIC_TO_EVERYONE, MUTUAL_FOLLOW_FRIENDS, SELF_ONLY",
-        "example": "PUBLIC_TO_EVERYONE"
+        "example": "PUBLIC_TO_EVERYONE",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetPostFormattedSchemaGmbPostDetailsActionType": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Action Type must be one of the following values: none, order, book, shop, learn_more, call, sign_up",
-        "example": "book"
+        "example": "book",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "CreatePostDtoPostApprovalDetailsApprovalStatus": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Approval Status must be one of the following values: pending, approved, rejected, not_required",
-        "example": "approved"
+        "example": "approved",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "CreatePostDtoTiktokPostDetailsPrivacyLevel": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "privacy level is an enum and must be one of the following values: PUBLIC_TO_EVERYONE, MUTUAL_FOLLOW_FRIENDS, SELF_ONLY",
-        "example": "PUBLIC_TO_EVERYONE"
+        "example": "PUBLIC_TO_EVERYONE",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "CreatePostDtoGmbPostDetailsActionType": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Action Type must be one of the following values: none, order, book, shop, learn_more, call, sign_up",
-        "example": "book"
+        "example": "book",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "CreatePostSuccessfulResponseSchemaPostStatus": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Status must be one of the following values: in_progress, draft, failed, published, scheduled, in_review, notification_sent, deleted",
-        "example": "published"
+        "example": "published",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "CreatePostSuccessfulResponseSchemaPostType": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Post Type must be one of the following values: - post, story, reel",
-        "example": "post"
+        "example": "post",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetPostSuccessfulResponseSchemaPostStatus": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Status must be one of the following values: in_progress, draft, failed, published, scheduled, in_review, notification_sent, deleted",
-        "example": "published"
+        "example": "published",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetPostSuccessfulResponseSchemaPostType": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Post Type must be one of the following values: - post, story, reel",
-        "example": "post"
+        "example": "post",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "PostCreateRequestPostApprovalDetailsApprovalStatus": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Approval Status must be one of the following values: pending, approved, rejected, not_required",
-        "example": "approved"
+        "example": "approved",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "PostCreateRequestTiktokPostDetailsPrivacyLevel": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "privacy level is an enum and must be one of the following values: PUBLIC_TO_EVERYONE, MUTUAL_FOLLOW_FRIENDS, SELF_ONLY",
-        "example": "PUBLIC_TO_EVERYONE"
+        "example": "PUBLIC_TO_EVERYONE",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "PostCreateRequestGmbPostDetailsActionType": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Action Type must be one of the following values: none, order, book, shop, learn_more, call, sign_up",
-        "example": "book"
+        "example": "book",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "SocialMediaFbAccountResponseDtoResultsPlatform": {
-        "type": "object",
-        "example": "facebook"
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
+        "example": "facebook",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "SocialMediaFbAccountResponseDtoResultsType": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "type value must be page",
-        "example": "page"
+        "example": "page",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "SocialMediaFbAccountResponseDtoResultsMeta": {
         "type": "object",
@@ -85473,12 +86868,30 @@
         }
       },
       "SocialMediaInstagramAccountResponseDtoResultsPlatform": {
-        "type": "object",
-        "example": "instagram"
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
+        "example": "instagram",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "SocialMediaInstagramAccountResponseDtoResultsType": {
-        "type": "object",
-        "example": "profile"
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
+        "example": "profile",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "SocialMediaInstagramAccountResponseDtoResultsMeta": {
         "type": "object",
@@ -85512,13 +86925,31 @@
         }
       },
       "SocialMediaLinkedInAccountResponseDtoResultsPlatform": {
-        "type": "object",
-        "example": "linkedin"
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
+        "example": "linkedin",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "SocialMediaLinkedInAccountResponseDtoResultsType": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "type must be one of the following values: page, profile",
-        "example": "profile"
+        "example": "profile",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "SocialMediaLinkedInAccountResponseDtoResultsMeta": {
         "type": "object",
@@ -85552,12 +86983,30 @@
         }
       },
       "SocialMediaTwitterAccountResponseDtoResultsPlatform": {
-        "type": "object",
-        "example": "twitter"
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
+        "example": "twitter",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "SocialMediaTwitterAccountResponseDtoResultsType": {
-        "type": "object",
-        "example": "profile"
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
+        "example": "profile",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "SocialMediaTwitterAccountResponseDtoResultsMeta": {
         "type": "object",
@@ -85591,28 +87040,73 @@
         }
       },
       "CsvPostSchemaTiktokPostDetailsPrivacyLevel": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "privacy level is an enum and must be one of the following values: PUBLIC_TO_EVERYONE, MUTUAL_FOLLOW_FRIENDS, SELF_ONLY",
-        "example": "PUBLIC_TO_EVERYONE"
+        "example": "PUBLIC_TO_EVERYONE",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "CsvPostSchemaGmbPostDetailsActionType": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Action Type must be one of the following values: none, order, book, shop, learn_more, call, sign_up",
-        "example": "book"
+        "example": "book",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "CsvResponseSchemaCsvStatus": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "status must be one of the following values: pending, in_progress, completed, failed, in_review, importing, deleted",
-        "example": "completed"
+        "example": "completed",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "SocialMediaTiktokAccountResponseDtoResultsPlatform": {
-        "type": "object",
-        "example": "tiktok"
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
+        "example": "tiktok",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "SocialMediaTiktokAccountResponseDtoResultsType": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "type must be one of the following values: profile, business",
-        "example": "profile"
+        "example": "profile",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "SocialMediaTiktokAccountResponseDtoResultsMeta": {
         "type": "object",
@@ -86413,7 +87907,7 @@
             "format": "date-time"
           },
           "type": {
-            "$ref": "#/components/schemas/ICustomObjectSchemaTypeProperty2"
+            "$ref": "#/components/schemas/ICustomObjectSchemaTypeProperty"
           }
         }
       },
@@ -87196,9 +88690,18 @@
         "description": "Last Updated By Meta"
       },
       "ICustomObjectSchemaType": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Object`s Type",
-        "example": "The Object type can either USER_DEFINED or SYSTEM_DEFINED"
+        "example": "The Object type can either USER_DEFINED or SYSTEM_DEFINED",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "ObjectsExamplePayload": {
         "type": "object",
@@ -87211,9 +88714,18 @@
         "type": "object"
       },
       "ICustomObjectSchemaTypeProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Object`s Type",
-        "example": "The Object type can either USER_DEFINED or SYSTEM_DEFINED"
+        "example": "The Object type can either USER_DEFINED or SYSTEM_DEFINED",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "ObjectsICustomFieldAcceptedFormats": {
         "enum": [
@@ -105331,7 +106843,7 @@
             "$ref": "#/components/schemas/SendMessageBodyDtoType"
           },
           "subType": {
-            "$ref": "#/components/schemas/SendMessageBodyDtoSubTypeProperty2"
+            "$ref": "#/components/schemas/SendMessageBodyDtoSubTypeProperty"
           },
           "contactId": {
             "type": "string",
@@ -106528,9 +108040,18 @@
         }
       },
       "SendMessageBodyDtoSubType": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Type of message being sent",
-        "example": "Email"
+        "example": "Email",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "ProcessMessageBodyDtoDirection": {
         "type": "object",
@@ -106574,9 +108095,18 @@
         }
       },
       "SendMessageBodyDtoSubTypeProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Type of message being sent",
-        "example": "Email"
+        "example": "Email",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "ProcessMessageBodyDtoDirectionProperty": {
         "type": "object",
@@ -111606,7 +113136,7 @@
             "description": "Array of Product Reviews"
           },
           "status": {
-            "$ref": "#/components/schemas/UpdateProductReviewsDtoStatusProperty2"
+            "$ref": "#/components/schemas/UpdateProductReviewsDtoStatusProperty"
           }
         }
       },
@@ -113205,9 +114735,18 @@
         }
       },
       "UpdateProductReviewsDtoStatus": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Status of the review",
-        "example": "approved"
+        "example": "approved",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "ProductsExamplePayload": {
         "type": "object",
@@ -113231,9 +114770,18 @@
         }
       },
       "UpdateProductReviewsDtoStatusProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Status of the review",
-        "example": "approved"
+        "example": "approved",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "PriceUpdateFieldType": {
         "enum": [
@@ -114646,16 +116194,16 @@
             "description": "RRULE as per the iCalendar (RFC 5545) specification for recurring events. DTSTART is not required, instance ids are calculated on the basis of startTime of the event."
           },
           "startTime": {
-            "$ref": "#/components/schemas/CalendarEventDtoStartTimeProperty2"
+            "$ref": "#/components/schemas/CalendarEventDtoStartTimeProperty"
           },
           "endTime": {
-            "$ref": "#/components/schemas/CalendarEventDtoEndTimeProperty2"
+            "$ref": "#/components/schemas/CalendarEventDtoEndTimeProperty"
           },
           "dateAdded": {
-            "$ref": "#/components/schemas/CalendarEventDtoDateAddedProperty2"
+            "$ref": "#/components/schemas/CalendarEventDtoDateAddedProperty"
           },
           "dateUpdated": {
-            "$ref": "#/components/schemas/CalendarEventDtoDateUpdatedProperty2"
+            "$ref": "#/components/schemas/CalendarEventDtoDateUpdatedProperty"
           },
           "assignedResources": {
             "type": "array",
@@ -114750,10 +116298,10 @@
             "example": "My event"
           },
           "startTime": {
-            "$ref": "#/components/schemas/BlockedSlotSuccessfulResponseDtoStartTimeProperty2"
+            "$ref": "#/components/schemas/BlockedSlotSuccessfulResponseDtoStartTimeProperty"
           },
           "endTime": {
-            "$ref": "#/components/schemas/BlockedSlotSuccessfulResponseDtoEndTimeProperty2"
+            "$ref": "#/components/schemas/BlockedSlotSuccessfulResponseDtoEndTimeProperty"
           },
           "calendarId": {
             "type": "string",
@@ -116894,34 +118442,88 @@
         "description": "Schedule"
       },
       "CalendarEventDtoStartTime": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Start Time",
-        "example": "2023-09-25T16:00:00+05:30"
+        "example": "2023-09-25T16:00:00+05:30",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "CalendarEventDtoEndTime": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "End Time",
-        "example": "2023-09-25T16:00:00+05:30"
+        "example": "2023-09-25T16:00:00+05:30",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "CalendarEventDtoDateAdded": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Date Added",
-        "example": "2023-09-25T16:00:00+05:30"
+        "example": "2023-09-25T16:00:00+05:30",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "CalendarEventDtoDateUpdated": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Date Updated",
-        "example": "2023-09-25T16:00:00+05:30"
+        "example": "2023-09-25T16:00:00+05:30",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "BlockedSlotSuccessfulResponseDtoStartTime": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Start Time",
-        "example": "2021-06-23T03:30:00+05:30"
+        "example": "2021-06-23T03:30:00+05:30",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "BlockedSlotSuccessfulResponseDtoEndTime": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "End Time",
-        "example": "2021-06-23T04:30:00+05:30"
+        "example": "2021-06-23T04:30:00+05:30",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetSlots200Response": {
         "type": "object",
@@ -117047,34 +118649,88 @@
         }
       },
       "CalendarEventDtoStartTimeProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Start Time",
-        "example": "2023-09-25T16:00:00+05:30"
+        "example": "2023-09-25T16:00:00+05:30",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "CalendarEventDtoEndTimeProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "End Time",
-        "example": "2023-09-25T16:00:00+05:30"
+        "example": "2023-09-25T16:00:00+05:30",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "CalendarEventDtoDateAddedProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Date Added",
-        "example": "2023-09-25T16:00:00+05:30"
+        "example": "2023-09-25T16:00:00+05:30",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "CalendarEventDtoDateUpdatedProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Date Updated",
-        "example": "2023-09-25T16:00:00+05:30"
+        "example": "2023-09-25T16:00:00+05:30",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "BlockedSlotSuccessfulResponseDtoStartTimeProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Start Time",
-        "example": "2021-06-23T03:30:00+05:30"
+        "example": "2021-06-23T03:30:00+05:30",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "BlockedSlotSuccessfulResponseDtoEndTimeProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "End Time",
-        "example": "2021-06-23T04:30:00+05:30"
+        "example": "2021-06-23T04:30:00+05:30",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "AppointmentCreateSchemaMeetingLocationType": {
         "enum": [
@@ -125315,7 +126971,7 @@
             "example": "1"
           },
           "metaData": {
-            "$ref": "#/components/schemas/IOnboardingDtoMetaDataProperty2"
+            "$ref": "#/components/schemas/IOnboardingDtoMetaDataProperty"
           }
         }
       },
@@ -125675,15 +127331,24 @@
             "example": "1"
           },
           "metaData": {
-            "$ref": "#/components/schemas/GetCompanyByIdSchemaOnboardingInfoMetaDataProperty"
+            "$ref": "#/components/schemas/GetCompanyByIdSchemaOnboardingInfoMetaData"
           }
         },
         "example": ""
       },
       "IOnboardingDtoMetaData": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "metaData for onboarding",
-        "example": true
+        "example": true,
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetCompanyByIdSchemaSaasSettings": {
         "type": "object",
@@ -125698,9 +127363,18 @@
         "description": "Placeholder schema for path example refs"
       },
       "IOnboardingDtoMetaDataProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "metaData for onboarding",
-        "example": true
+        "example": true,
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetCompanyByIdSchemaSaasSettingsProperty": {
         "type": "object",
@@ -125711,9 +127385,18 @@
         }
       },
       "GetCompanyByIdSchemaOnboardingInfoMetaData": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "metaData for onboarding",
-        "example": true
+        "example": true,
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "CompaniesValue20210728Version": {
         "enum": [
@@ -128015,7 +129698,7 @@
             "example": "my_custom_field"
           },
           "field_value": {
-            "$ref": "#/components/schemas/NumericFieldFieldValueProperty2"
+            "$ref": "#/components/schemas/NumericFieldFieldValueProperty"
           }
         }
       },
@@ -128034,7 +129717,7 @@
             "example": "my_custom_field"
           },
           "field_value": {
-            "$ref": "#/components/schemas/MonetoryFieldFieldValueProperty2"
+            "$ref": "#/components/schemas/MonetoryFieldFieldValueProperty"
           }
         }
       },
@@ -129045,12 +130728,30 @@
         "type": "object"
       },
       "NumericFieldFieldValue": {
-        "type": "object",
-        "example": 100
+        "anyOf": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "object"
+          }
+        ],
+        "example": 100,
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "MonetoryFieldFieldValue": {
-        "type": "object",
-        "example": 100.5
+        "anyOf": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "object"
+          }
+        ],
+        "example": 100.5,
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "FileFieldFieldValue": {
         "type": "object",
@@ -129101,12 +130802,30 @@
         "type": "object"
       },
       "NumericFieldFieldValueProperty": {
-        "type": "object",
-        "example": 100
+        "anyOf": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "object"
+          }
+        ],
+        "example": 100,
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "MonetoryFieldFieldValueProperty": {
-        "type": "object",
-        "example": 100.5
+        "anyOf": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "object"
+          }
+        ],
+        "example": 100.5,
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "FileFieldFieldValueProperty": {
         "type": "object",
@@ -142789,7 +144508,7 @@
             "example": "6578278e879ad2646715ba9c"
           },
           "status": {
-            "$ref": "#/components/schemas/CreateInvoiceScheduleResponseDtoStatusProperty2"
+            "$ref": "#/components/schemas/CreateInvoiceScheduleResponseDtoStatusProperty"
           },
           "liveMode": {
             "type": "boolean",
@@ -142912,7 +144631,7 @@
             "example": "6578278e879ad2646715ba9c"
           },
           "status": {
-            "$ref": "#/components/schemas/GetScheduleResponseDtoStatusProperty2"
+            "$ref": "#/components/schemas/GetScheduleResponseDtoStatusProperty"
           },
           "liveMode": {
             "type": "boolean",
@@ -143123,7 +144842,7 @@
             "example": "6578278e879ad2646715ba9c"
           },
           "status": {
-            "$ref": "#/components/schemas/UpdateInvoiceScheduleResponseDtoStatusProperty2"
+            "$ref": "#/components/schemas/UpdateInvoiceScheduleResponseDtoStatusProperty"
           },
           "liveMode": {
             "type": "boolean",
@@ -143259,7 +144978,7 @@
             "example": "6578278e879ad2646715ba9c"
           },
           "status": {
-            "$ref": "#/components/schemas/UpdateAndScheduleInvoiceScheduleResponseDtoStatusProperty2"
+            "$ref": "#/components/schemas/UpdateAndScheduleInvoiceScheduleResponseDtoStatusProperty"
           },
           "liveMode": {
             "type": "boolean",
@@ -143526,7 +145245,7 @@
             "example": "6578278e879ad2646715ba9c"
           },
           "status": {
-            "$ref": "#/components/schemas/ScheduleInvoiceScheduleResponseDtoStatusProperty2"
+            "$ref": "#/components/schemas/ScheduleInvoiceScheduleResponseDtoStatusProperty"
           },
           "liveMode": {
             "type": "boolean",
@@ -143674,7 +145393,7 @@
             "example": "6578278e879ad2646715ba9c"
           },
           "status": {
-            "$ref": "#/components/schemas/AutoPaymentInvoiceScheduleResponseDtoStatusProperty2"
+            "$ref": "#/components/schemas/AutoPaymentInvoiceScheduleResponseDtoStatusProperty"
           },
           "liveMode": {
             "type": "boolean",
@@ -143814,7 +145533,7 @@
             "example": "6578278e879ad2646715ba9c"
           },
           "status": {
-            "$ref": "#/components/schemas/CancelInvoiceScheduleResponseDtoStatusProperty2"
+            "$ref": "#/components/schemas/CancelInvoiceScheduleResponseDtoStatusProperty"
           },
           "liveMode": {
             "type": "boolean",
@@ -146908,7 +148627,16 @@
           }
         },
         "description": "Business Address",
-        "example": "9931 Beechwood, TX"
+        "example": {
+          "addressLine1": "9931 Beechwood",
+          "addressLine2": "Beechwood",
+          "city": "St. Houston",
+          "state": "TX",
+          "countryCode": "US",
+          "postalCode": "559-6993"
+        },
+        "x-client-original-example": "9931 Beechwood, TX",
+        "x-client-example-repair": "used-property-examples"
       },
       "LateFeesConfigurationDtoFrequency": {
         "required": [
@@ -150626,42 +152354,105 @@
         "description": "split invoice into payment schedule summing up to full invoice amount"
       },
       "CreateInvoiceScheduleResponseDtoStatus": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Schedule Status",
-        "example": "draft"
+        "example": "draft",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetScheduleResponseDtoStatus": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Schedule Status",
-        "example": "draft"
+        "example": "draft",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "UpdateInvoiceScheduleResponseDtoStatus": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Schedule Status",
-        "example": "draft"
+        "example": "draft",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "UpdateAndScheduleInvoiceScheduleResponseDtoStatus": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Schedule Status",
-        "example": "draft"
+        "example": "draft",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "AutoPaymentDetailsDtoProvider": {
         "type": "object"
       },
       "ScheduleInvoiceScheduleResponseDtoStatus": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Schedule Status",
-        "example": "draft"
+        "example": "draft",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "AutoPaymentInvoiceScheduleResponseDtoStatus": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Schedule Status",
-        "example": "draft"
+        "example": "draft",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "CancelInvoiceScheduleResponseDtoStatus": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Schedule Status",
-        "example": "draft"
+        "example": "draft",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "CreateInvoiceResponseDtoBusinessDetails": {
         "type": "object",
@@ -150984,42 +152775,105 @@
         "description": "split invoice into payment schedule summing up to full invoice amount"
       },
       "CreateInvoiceScheduleResponseDtoStatusProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Schedule Status",
-        "example": "draft"
+        "example": "draft",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "GetScheduleResponseDtoStatusProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Schedule Status",
-        "example": "draft"
+        "example": "draft",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "UpdateInvoiceScheduleResponseDtoStatusProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Schedule Status",
-        "example": "draft"
+        "example": "draft",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "UpdateAndScheduleInvoiceScheduleResponseDtoStatusProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Schedule Status",
-        "example": "draft"
+        "example": "draft",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "AutoPaymentDetailsDtoProviderProperty": {
         "type": "object"
       },
       "ScheduleInvoiceScheduleResponseDtoStatusProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Schedule Status",
-        "example": "draft"
+        "example": "draft",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "AutoPaymentInvoiceScheduleResponseDtoStatusProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Schedule Status",
-        "example": "draft"
+        "example": "draft",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "CancelInvoiceScheduleResponseDtoStatusProperty": {
-        "type": "object",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
         "description": "Schedule Status",
-        "example": "draft"
+        "example": "draft",
+        "x-client-original-type": "object",
+        "x-client-example-repair": "preserved-object-and-scalar-shapes"
       },
       "CreateInvoiceResponseDtoBusinessDetailsProperty": {
         "type": "object",
@@ -154615,162 +156469,12 @@
         "type": "object",
         "description": "Knowledge base metadata"
       },
-      "OrderResponseSchemaSourceMetaProperty2": {
-        "type": "object",
-        "description": "Meta content for the source of order.",
-        "example": "{ domain: \"app.gohighlevel.com\", pageId:  \"rBVhyYhMsbxbO8ZqOcei\", pageUrl:  \"/v2/preview/rBVhyYhMsbxbO8ZqOcei\", stepId:   \"5a772f62-3fbc-418b-af1b-be8929dd64c2\"}"
-      },
       "OrderSourceMetaProperty2": {
         "type": "object"
-      },
-      "GetOrderResponseSchemaContactSnapshotProperty2": {
-        "type": "object",
-        "description": "Contact details of the order.",
-        "example": "{ last_name: \"Mcclain\", type: \"lead\", first_name_lower_case: \"rogan\", email: \"anish+11@gohighlevel.com\", last_name_lower_case: \"mcclain\", location_id: \"o6241QsiRwUIJHyjuhos\", company_name: \"Jordan and Cox Trading\"}"
-      },
-      "GetOrderResponseSchemaCouponProperty2": {
-        "type": "object",
-        "description": "Coupon details of the order.",
-        "example": "{ code: \"FEST10\", _id: \"63455e48901b43d4ef364a20\" }"
-      },
-      "GetOrderResponseSchemaMetaProperty2": {
-        "type": "object",
-        "description": "Meta details of the order.",
-        "example": "{ couponSessionExpired: true }"
-      },
-      "GetOrderResponseSchemaTaxCalculationProviderProperty2": {
-        "type": "object",
-        "description": "Provider name for automatic tax calculation",
-        "example": "taxjar"
       },
       "PostRecordOrderPaymentBodyMetaProperty2": {
         "type": "object",
         "description": "Meta data to be recorded with the transaction"
-      },
-      "TxnResponseSchemaStatusProperty2": {
-        "type": "object",
-        "description": "The status of the transaction (e.g., succeeded).",
-        "example": "succeeded"
-      },
-      "TxnResponseSchemaEntitySourceMetaProperty2": {
-        "type": "object",
-        "description": "Meta content for the entity source of transaction.",
-        "example": "{ domain: \"app.gohighlevel.com\", pageId:  \"rBVhyYhMsbxbO8ZqOcei\", pageUrl:  \"/v2/preview/rBVhyYhMsbxbO8ZqOcei\", stepId:   \"5a772f62-3fbc-418b-af1b-be8929dd64c2\"}"
-      },
-      "TxnResponseSchemaChargeSnapshotProperty2": {
-        "type": "object",
-        "description": "Charge snapshot of transaction.",
-        "example": "{ id: \"in_1KGcXDCScnf89tZohCsmImwE\", object: \"invoice\", account_country: \"US\",  account_name:  \"GHL-Testing\" }"
-      },
-      "TxnResponseSchemaPaymentMethodProperty2": {
-        "type": "object",
-        "description": "Transaction payment method details.",
-        "example": "{ card: { \"brand\": \"discover\", \"last4\": \"0012\" } }"
-      },
-      "GetTxnResponseSchemaContactSnapshotProperty2": {
-        "type": "object",
-        "description": "Contact details of the transaction.",
-        "example": "{ last_name: \"Mcclain\", type: \"lead\", first_name_lower_case: \"rogan\", email: \"anish+11@gohighlevel.com\", last_name_lower_case: \"mcclain\", location_id: \"o6241QsiRwUIJHyjuhos\", company_name: \"Jordan and Cox Trading\"}"
-      },
-      "GetTxnResponseSchemaStatusProperty2": {
-        "type": "object",
-        "description": "Transaction status.",
-        "example": "succeeded"
-      },
-      "GetTxnResponseSchemaChargeSnapshotProperty2": {
-        "type": "object",
-        "description": "Charge snapshot of transaction.",
-        "example": "{ id: \"in_1KGcXDCScnf89tZohCsmImwE\", object: \"invoice\", account_country: \"US\",  account_name:  \"GHL-Testing\" }"
-      },
-      "GetTxnResponseSchemaPaymentProviderProperty2": {
-        "type": "object",
-        "description": "Payment provider details of the transaction.",
-        "example": "{ type: \"stripe\", connectedAccount: { _id: \"612ca676b484b241fef9d962\", accountId: \"acct_1Ihw53CScnf89tZo\" } }"
-      },
-      "GetTxnResponseSchemaMetaProperty2": {
-        "type": "object",
-        "description": "Meta details of the transaction.",
-        "example": "{ stepId: \"af7c731e-e36f-4152-bd1a-3f69a31d6d6d\", pageId: \"A8ltotc2jZxurJba4e3Y\", pageUrl: \"/v2/preview/A8ltotc2jZxurJba4e3Y\" }"
-      },
-      "GetTxnResponseSchemaQboResponseProperty2": {
-        "type": "object",
-        "description": "Qbo details of the transaction.",
-        "example": "{ domain: \"QBO\", sparse: false, Id: \"180\", SyncToken: \"0\", TotalAmt: 25 }"
-      },
-      "SubscriptionResponseSchemaStatusProperty2": {
-        "type": "object",
-        "description": "The status of the subscription (e.g., succeeded).",
-        "example": "active"
-      },
-      "SubscriptionResponseSchemaEntitySourceMetaProperty2": {
-        "type": "object",
-        "description": "Meta content for the entity source of subscription.",
-        "example": "{ domain: \"app.gohighlevel.com\", pageId:  \"sxC4lNhFIavEnLZh5KhC\", pageUrl:  \"/v2/preview/sxC4lNhFIavEnLZh5KhC\", stepId: \"7d303d1f-cb85-403d-b548-bf01de5c7bb0\" }"
-      },
-      "SubscriptionResponseSchemaSubscriptionSnapshotProperty2": {
-        "type": "object",
-        "description": "Snapshot of subscription.",
-        "example": "{ status: \"ACTIVE\", status_update_time: \"2022-08-16T11:06:53Z\", id: \"I-0UE609H8E43P\", plan_id: \"P-82K11750F0313430KMLRGE6Y\", start_time: \"2022-08-16T11:05:31Z\", quantity: 1 }"
-      },
-      "GetSubscriptionResponseSchemaAltTypeProperty2": {
-        "type": "object",
-        "description": "AltType is the type of identifier.",
-        "example": "location"
-      },
-      "GetSubscriptionResponseSchemaContactSnapshotProperty2": {
-        "type": "object",
-        "description": "Contact details of the subscriber.",
-        "example": "{ last_name: \"Mcclain\", type: \"lead\", first_name_lower_case: \"rogan\", email: \"anish+11@gohighlevel.com\", last_name_lower_case: \"mcclain\", location_id: \"o6241QsiRwUIJHyjuhos\", company_name: \"Jordan and Cox Trading\"}"
-      },
-      "GetSubscriptionResponseSchemaCouponProperty2": {
-        "type": "object",
-        "description": "Coupon details of the subscription.",
-        "example": "{ _id: \"6374c6926d119a393fe1e556\", usageCount: 5260, altId: \"jVFIxsMY19D94nOSIOEO\", altType: \"location\", name: \"FREE-100%\", code: \"FREE100\", discountType: \"percentage\", discountValue: 100 }"
-      },
-      "GetSubscriptionResponseSchemaStatusProperty2": {
-        "type": "object",
-        "description": "Subscription status.",
-        "example": "active"
-      },
-      "GetSubscriptionResponseSchemaSubscriptionSnapshotProperty2": {
-        "type": "object",
-        "description": "Snapshot of subscription.",
-        "example": "{ status: \"ACTIVE\", status_update_time: \"2022-08-16T11:06:53Z\", id: \"I-0UE609H8E43P\", plan_id: \"P-82K11750F0313430KMLRGE6Y\", start_time: \"2022-08-16T11:05:31Z\", quantity: 1 }"
-      },
-      "GetSubscriptionResponseSchemaPaymentProviderProperty2": {
-        "type": "object",
-        "description": "Payment provider details for the subscription.",
-        "example": "{ type: \"paypal\", connectedAccount: { _id: \"64410debdc8f3b0503523abb\", merchantClientId: \"AeXtjrxdgsJiCPwQt5jML5pH-0mwmLs-tH7ub4Uo3IrDKvRl34FvJy8niI6E1wmS_pryIRdNllyVl58b\" } }"
-      },
-      "GetSubscriptionResponseSchemaMetaProperty2": {
-        "type": "object",
-        "description": "Meta details of the subscription.",
-        "example": "{ collection: \"transactionsv2\", id: \"6320652f0f664b6632006920\" }"
-      },
-      "GetSubscriptionResponseSchemaAutoPaymentProperty2": {
-        "type": "object",
-        "description": "Auto payment details of the subscription.",
-        "example": "{ customerId: \"908879612\", paymentMethodId: \"908646635\" }"
-      },
-      "GetSubscriptionResponseSchemaRecurringProductProperty2": {
-        "type": "object",
-        "description": "Recurring product details of the subscription.",
-        "example": "{ locationId: \"Z4Bxl8J4SaPEPLq9IQ8g\", funnel: \"bQHJWKcyjiKjk4BHv91g\", step: \"2281a993-8a75-4b48-9912-571f29c99a74\", name: \"Sofa Set\" }"
-      },
-      "CreateCustomProvidersResponseSchemaPaymentProviderProperty2": {
-        "type": "object",
-        "description": "Payment provider details.",
-        "example": "{ live: { liveMode: true }, test: { liveMode: false, apiKey: \"y5ZQxryRFXZHvUJZdLXXXXXX\", publishableKey: \"rzp_test_zPRoVMLOa0A9wo\" }}"
-      },
-      "GetCustomProvidersResponseSchemaPaymentProviderProperty2": {
-        "type": "object",
-        "description": "Payment provider details.",
-        "example": "{ live: { liveMode: true }, test: { liveMode: false, apiKey: \"y5ZQxryRFXZHvUJZdLXXXXXX\", publishableKey: \"rzp_test_zPRoVMLOa0A9wo\" }}"
-      },
-      "ConnectCustomProvidersResponseSchemaPaymentProviderProperty2": {
-        "type": "object",
-        "description": "Payment provider details.",
-        "example": "{ live: { liveMode: true }, test: { liveMode: false, apiKey: \"y5ZQxryRFXZHvUJZdLXXXXXX\", publishableKey: \"rzp_test_zPRoVMLOa0A9wo\" }}"
       },
       "GetOrderResponseSchemaSourceMetaProperty": {
         "type": "object"
@@ -154780,59 +156484,6 @@
       },
       "GetSubscriptionResponseSchemaEntitySourceMetaProperty": {
         "type": "object"
-      },
-      "GetPostSuccessfulResponseDtoFirstObjectLabelProperty2": {
-        "type": "object",
-        "description": "First Objects Association Label (custom_objects.children)",
-        "example": "student"
-      },
-      "GetPostSuccessfulResponseDtoFirstObjectKeyProperty2": {
-        "type": "object",
-        "description": "First Objects Key",
-        "example": "custom_objects.children"
-      },
-      "GetPostSuccessfulResponseDtoSecondObjectLabelProperty2": {
-        "type": "object",
-        "description": "Second Object Association Label (contact)",
-        "example": "Teacher"
-      },
-      "GetPostSuccessfulResponseDtoSecondObjectKeyProperty2": {
-        "type": "object",
-        "description": "Second Objects Key",
-        "example": "contact"
-      },
-      "GetPostSuccessfulResponseDtoAssociationTypeProperty2": {
-        "type": "object",
-        "description": "Association Type can be USER_DEFINED or SYSTEM_DEFINED",
-        "example": "USER_DEFINED"
-      },
-      "CreateAssociationReqDtoFirstObjectLabelProperty2": {
-        "type": "object",
-        "description": "First Objects Association Label (custom_objects.children)",
-        "example": "student"
-      },
-      "CreateAssociationReqDtoFirstObjectKeyProperty2": {
-        "type": "object",
-        "description": "First Objects Key",
-        "example": "custom_objects.children"
-      },
-      "CreateAssociationReqDtoSecondObjectLabelProperty2": {
-        "type": "object",
-        "description": "Second Object Association Label (contact)",
-        "example": "Teacher"
-      },
-      "CreateAssociationReqDtoSecondObjectKeyProperty2": {
-        "type": "object",
-        "description": "Second Objects Key",
-        "example": "contact"
-      },
-      "UpdateAssociationReqDtoFirstObjectLabelProperty2": {
-        "type": "object",
-        "example": "student"
-      },
-      "UpdateAssociationReqDtoSecondObjectLabelProperty2": {
-        "type": "object",
-        "example": "tutor"
       },
       "AudienceLocationGeometryLocationProperty2": {
         "type": "object",
@@ -155012,10 +156663,6 @@
       },
       "CustomFieldsInputObjectSchemaFieldValueProperty2": {
         "type": "object"
-      },
-      "UpsertOpportunityDtoMonetaryValueProperty2": {
-        "type": "object",
-        "example": 220
       },
       "UpsertOpportunitySuccessfulResponseDtoOpportunityProperty2": {
         "type": "object",
@@ -155204,14 +156851,6 @@
       "AttachGmbLocationDtoAccountProperty2": {
         "type": "object"
       },
-      "SocialGoogleMediaAccountSchemaPlatformProperty2": {
-        "type": "object",
-        "example": "google"
-      },
-      "SocialGoogleMediaAccountSchemaTypeProperty2": {
-        "type": "object",
-        "example": "location"
-      },
       "SocialGoogleMediaAccountSchemaMetaProperty2": {
         "type": "object",
         "example": {
@@ -155243,80 +156882,12 @@
           }
         }
       },
-      "SearchPostDtoPostTypeProperty2": {
-        "type": "object",
-        "description": "Post Type must be one of the following values: - post, story, reel",
-        "example": "post"
-      },
-      "FormatedApprovalDetailsApprovalStatusProperty2": {
-        "type": "object",
-        "description": "Approval Status must be one of the following values: pending, approved, rejected, not_required",
-        "example": "approved"
-      },
-      "TiktokPostSchemaPrivacyLevelProperty2": {
-        "type": "object",
-        "description": "privacy level is an enum and must be one of the following values: PUBLIC_TO_EVERYONE, MUTUAL_FOLLOW_FRIENDS, SELF_ONLY",
-        "example": "PUBLIC_TO_EVERYONE"
-      },
-      "GmbPostSchemaActionTypeProperty2": {
-        "type": "object",
-        "description": "Action Type must be one of the following values: none, order, book, shop, learn_more, call, sign_up",
-        "example": "book"
-      },
-      "GetPostFormattedSchemaStatusProperty2": {
-        "type": "object",
-        "description": "Status must be one of the following values: in_progress, draft, failed, published, scheduled, in_review, notification_sent, deleted",
-        "example": "published"
-      },
-      "GetPostFormattedSchemaTypeProperty2": {
-        "type": "object",
-        "description": "Post Type must be one of the following values: - post, story, reel",
-        "example": "post"
-      },
-      "PostApprovalSchemaApprovalStatusProperty2": {
-        "type": "object",
-        "description": "Approval Status must be one of the following values: pending, approved, rejected, not_required",
-        "example": "approved"
-      },
-      "CreatePostDtoStatusProperty2": {
-        "type": "object",
-        "description": "Status must be one of the following values: null, in_progress, draft, failed, published, scheduled, in_review, notification_sent, deleted",
-        "example": "draft"
-      },
-      "CreatePostDtoTypeProperty2": {
-        "type": "object",
-        "description": "Post Type must be one of the following values: - post, story, reel",
-        "example": "post"
-      },
-      "PostCreateRequestStatusProperty2": {
-        "type": "object",
-        "description": "Status must be one of the following values: in_progress, draft, failed, published, scheduled, in_review, notification_sent, deleted",
-        "example": "draft"
-      },
-      "PostCreateRequestTypeProperty2": {
-        "type": "object",
-        "description": "Post Type must be one of the following values: - post, story, reel",
-        "example": "post"
-      },
       "GetAccountSchemaMetaProperty2": {
         "type": "object",
         "example": {
           "hasGoogleUpdated": true,
           "canDelete": true
         }
-      },
-      "AttachFbAccountDtoTypeProperty2": {
-        "type": "object",
-        "example": "page"
-      },
-      "SocialMediaFacebookAccountSchemaPlatformProperty2": {
-        "type": "object",
-        "example": "facebook"
-      },
-      "SocialMediaFacebookAccountSchemaTypeProperty2": {
-        "type": "object",
-        "description": "type value must be page",
-        "example": "page"
       },
       "SocialMediaFacebookAccountSchemaMetaProperty2": {
         "type": "object",
@@ -155349,14 +156920,6 @@
           }
         }
       },
-      "SocialMediaInstagramAccountSchemaPlatformProperty2": {
-        "type": "object",
-        "example": "instagram"
-      },
-      "SocialMediaInstagramAccountSchemaTypeProperty2": {
-        "type": "object",
-        "example": "profile"
-      },
       "SocialMediaInstagramAccountSchemaMetaProperty2": {
         "type": "object",
         "example": {
@@ -155387,15 +156950,6 @@
             ]
           }
         }
-      },
-      "SocialMediaLinkedInAccountSchemaPlatformProperty2": {
-        "type": "object",
-        "example": "linkedin"
-      },
-      "SocialMediaLinkedInAccountSchemaTypeProperty2": {
-        "type": "object",
-        "description": "type must be one of the following values: page, profile",
-        "example": "profile"
       },
       "SocialMediaLinkedInAccountSchemaMetaProperty2": {
         "type": "object",
@@ -155428,14 +156982,6 @@
           }
         }
       },
-      "SocialMediaTwitterAccountSchemaPlatformProperty2": {
-        "type": "object",
-        "example": "twitter"
-      },
-      "SocialMediaTwitterAccountSchemaTypeProperty2": {
-        "type": "object",
-        "example": "profile"
-      },
       "SocialMediaTwitterAccountSchemaMetaProperty2": {
         "type": "object",
         "example": {
@@ -155466,29 +157012,6 @@
             ]
           }
         }
-      },
-      "CsvPostSchemaTypeProperty2": {
-        "type": "object",
-        "example": "post"
-      },
-      "CsvResponseStatusProperty2": {
-        "type": "object",
-        "description": "status must be one of the following values: pending, in_progress, completed, failed, in_review, importing, deleted",
-        "example": "completed"
-      },
-      "TiktokProfileSchemaTypeProperty2": {
-        "type": "object",
-        "description": "Tiktok Account Type must be one of the following values: business, profile",
-        "example": "BUSINESS"
-      },
-      "SocialMediaTiktokAccountSchemaPlatformProperty2": {
-        "type": "object",
-        "example": "tiktok"
-      },
-      "SocialMediaTiktokAccountSchemaTypeProperty2": {
-        "type": "object",
-        "description": "type must be one of the following values: profile, business",
-        "example": "profile"
       },
       "SocialMediaTiktokAccountSchemaMetaProperty2": {
         "type": "object",
@@ -155533,14 +157056,6 @@
         "type": "object",
         "description": "All locations and chain related to this one"
       },
-      "SocialMediaGmbAccountResponseDtoResultsPlatformProperty": {
-        "type": "object",
-        "example": "google"
-      },
-      "SocialMediaGmbAccountResponseDtoResultsTypeProperty": {
-        "type": "object",
-        "example": "location"
-      },
       "SocialMediaGmbAccountResponseDtoResultsMetaProperty": {
         "type": "object",
         "example": {
@@ -155571,80 +157086,6 @@
             ]
           }
         }
-      },
-      "GetPostFormattedSchemaPostApprovalDetailsApprovalStatusProperty": {
-        "type": "object",
-        "description": "Approval Status must be one of the following values: pending, approved, rejected, not_required",
-        "example": "approved"
-      },
-      "GetPostFormattedSchemaTiktokPostDetailsPrivacyLevelProperty": {
-        "type": "object",
-        "description": "privacy level is an enum and must be one of the following values: PUBLIC_TO_EVERYONE, MUTUAL_FOLLOW_FRIENDS, SELF_ONLY",
-        "example": "PUBLIC_TO_EVERYONE"
-      },
-      "GetPostFormattedSchemaGmbPostDetailsActionTypeProperty": {
-        "type": "object",
-        "description": "Action Type must be one of the following values: none, order, book, shop, learn_more, call, sign_up",
-        "example": "book"
-      },
-      "CreatePostDtoPostApprovalDetailsApprovalStatusProperty": {
-        "type": "object",
-        "description": "Approval Status must be one of the following values: pending, approved, rejected, not_required",
-        "example": "approved"
-      },
-      "CreatePostDtoTiktokPostDetailsPrivacyLevelProperty": {
-        "type": "object",
-        "description": "privacy level is an enum and must be one of the following values: PUBLIC_TO_EVERYONE, MUTUAL_FOLLOW_FRIENDS, SELF_ONLY",
-        "example": "PUBLIC_TO_EVERYONE"
-      },
-      "CreatePostDtoGmbPostDetailsActionTypeProperty": {
-        "type": "object",
-        "description": "Action Type must be one of the following values: none, order, book, shop, learn_more, call, sign_up",
-        "example": "book"
-      },
-      "CreatePostSuccessfulResponseSchemaPostStatusProperty": {
-        "type": "object",
-        "description": "Status must be one of the following values: in_progress, draft, failed, published, scheduled, in_review, notification_sent, deleted",
-        "example": "published"
-      },
-      "CreatePostSuccessfulResponseSchemaPostTypeProperty": {
-        "type": "object",
-        "description": "Post Type must be one of the following values: - post, story, reel",
-        "example": "post"
-      },
-      "GetPostSuccessfulResponseSchemaPostStatusProperty": {
-        "type": "object",
-        "description": "Status must be one of the following values: in_progress, draft, failed, published, scheduled, in_review, notification_sent, deleted",
-        "example": "published"
-      },
-      "GetPostSuccessfulResponseSchemaPostTypeProperty": {
-        "type": "object",
-        "description": "Post Type must be one of the following values: - post, story, reel",
-        "example": "post"
-      },
-      "PostCreateRequestPostApprovalDetailsApprovalStatusProperty": {
-        "type": "object",
-        "description": "Approval Status must be one of the following values: pending, approved, rejected, not_required",
-        "example": "approved"
-      },
-      "PostCreateRequestTiktokPostDetailsPrivacyLevelProperty": {
-        "type": "object",
-        "description": "privacy level is an enum and must be one of the following values: PUBLIC_TO_EVERYONE, MUTUAL_FOLLOW_FRIENDS, SELF_ONLY",
-        "example": "PUBLIC_TO_EVERYONE"
-      },
-      "PostCreateRequestGmbPostDetailsActionTypeProperty": {
-        "type": "object",
-        "description": "Action Type must be one of the following values: none, order, book, shop, learn_more, call, sign_up",
-        "example": "book"
-      },
-      "SocialMediaFbAccountResponseDtoResultsPlatformProperty": {
-        "type": "object",
-        "example": "facebook"
-      },
-      "SocialMediaFbAccountResponseDtoResultsTypeProperty": {
-        "type": "object",
-        "description": "type value must be page",
-        "example": "page"
       },
       "SocialMediaFbAccountResponseDtoResultsMetaProperty": {
         "type": "object",
@@ -155677,14 +157118,6 @@
           }
         }
       },
-      "SocialMediaInstagramAccountResponseDtoResultsPlatformProperty": {
-        "type": "object",
-        "example": "instagram"
-      },
-      "SocialMediaInstagramAccountResponseDtoResultsTypeProperty": {
-        "type": "object",
-        "example": "profile"
-      },
       "SocialMediaInstagramAccountResponseDtoResultsMetaProperty": {
         "type": "object",
         "example": {
@@ -155715,15 +157148,6 @@
             ]
           }
         }
-      },
-      "SocialMediaLinkedInAccountResponseDtoResultsPlatformProperty": {
-        "type": "object",
-        "example": "linkedin"
-      },
-      "SocialMediaLinkedInAccountResponseDtoResultsTypeProperty": {
-        "type": "object",
-        "description": "type must be one of the following values: page, profile",
-        "example": "profile"
       },
       "SocialMediaLinkedInAccountResponseDtoResultsMetaProperty": {
         "type": "object",
@@ -155756,14 +157180,6 @@
           }
         }
       },
-      "SocialMediaTwitterAccountResponseDtoResultsPlatformProperty": {
-        "type": "object",
-        "example": "twitter"
-      },
-      "SocialMediaTwitterAccountResponseDtoResultsTypeProperty": {
-        "type": "object",
-        "example": "profile"
-      },
       "SocialMediaTwitterAccountResponseDtoResultsMetaProperty": {
         "type": "object",
         "example": {
@@ -155794,30 +157210,6 @@
             ]
           }
         }
-      },
-      "CsvPostSchemaTiktokPostDetailsPrivacyLevelProperty": {
-        "type": "object",
-        "description": "privacy level is an enum and must be one of the following values: PUBLIC_TO_EVERYONE, MUTUAL_FOLLOW_FRIENDS, SELF_ONLY",
-        "example": "PUBLIC_TO_EVERYONE"
-      },
-      "CsvPostSchemaGmbPostDetailsActionTypeProperty": {
-        "type": "object",
-        "description": "Action Type must be one of the following values: none, order, book, shop, learn_more, call, sign_up",
-        "example": "book"
-      },
-      "CsvResponseSchemaCsvStatusProperty": {
-        "type": "object",
-        "description": "status must be one of the following values: pending, in_progress, completed, failed, in_review, importing, deleted",
-        "example": "completed"
-      },
-      "SocialMediaTiktokAccountResponseDtoResultsPlatformProperty": {
-        "type": "object",
-        "example": "tiktok"
-      },
-      "SocialMediaTiktokAccountResponseDtoResultsTypeProperty": {
-        "type": "object",
-        "description": "type must be one of the following values: profile, business",
-        "example": "profile"
       },
       "SocialMediaTiktokAccountResponseDtoResultsMetaProperty": {
         "type": "object",
@@ -155901,11 +157293,6 @@
           "$ref": "#/components/schemas/GetSocialMediaStatistics201ResponseResultsBreakdownsReachPlatformsAdditionalProperties"
         }
       },
-      "ICustomObjectSchemaTypeProperty2": {
-        "type": "object",
-        "description": "Object`s Type",
-        "example": "The Object type can either USER_DEFINED or SYSTEM_DEFINED"
-      },
       "IBuilderJsonMapperAttrsProperty2": {
         "type": "object"
       },
@@ -155932,11 +157319,6 @@
             ]
           }
         }
-      },
-      "SendMessageBodyDtoSubTypeProperty2": {
-        "type": "object",
-        "description": "Type of message being sent",
-        "example": "Email"
       },
       "ProcessMessageBodyDtoDirectionProperty2": {
         "type": "object",
@@ -155981,41 +157363,6 @@
         "type": "object",
         "description": "Collection Data"
       },
-      "UpdateProductReviewsDtoStatusProperty2": {
-        "type": "object",
-        "description": "Status of the review",
-        "example": "approved"
-      },
-      "CalendarEventDtoStartTimeProperty2": {
-        "type": "object",
-        "description": "Start Time",
-        "example": "2023-09-25T16:00:00+05:30"
-      },
-      "CalendarEventDtoEndTimeProperty2": {
-        "type": "object",
-        "description": "End Time",
-        "example": "2023-09-25T16:00:00+05:30"
-      },
-      "CalendarEventDtoDateAddedProperty2": {
-        "type": "object",
-        "description": "Date Added",
-        "example": "2023-09-25T16:00:00+05:30"
-      },
-      "CalendarEventDtoDateUpdatedProperty2": {
-        "type": "object",
-        "description": "Date Updated",
-        "example": "2023-09-25T16:00:00+05:30"
-      },
-      "BlockedSlotSuccessfulResponseDtoStartTimeProperty2": {
-        "type": "object",
-        "description": "Start Time",
-        "example": "2021-06-23T03:30:00+05:30"
-      },
-      "BlockedSlotSuccessfulResponseDtoEndTimeProperty2": {
-        "type": "object",
-        "description": "End Time",
-        "example": "2021-06-23T04:30:00+05:30"
-      },
       "GetLocationByIdSchemaResellerProperty2": {
         "type": "object"
       },
@@ -156026,11 +157373,6 @@
           "FileName.csv": "https://highlevel-private-staging.storage.googleapis.com/location/Ar4JQgIyuzRsVuwD9RSK/custom-Field/UpZLmohmKEQYn0ymqplY/56e0d7fc-085c-4a07-9e1d-6d8fdac7e710.csv"
         }
       },
-      "IOnboardingDtoMetaDataProperty2": {
-        "type": "object",
-        "description": "metaData for onboarding",
-        "example": true
-      },
       "GetCompanyByIdSchemaSaasSettingsProperty2": {
         "type": "object",
         "description": "Saas Settings",
@@ -156038,11 +157380,6 @@
           "agencyDashboardVisibleTo": "string",
           "stripeConnectInitiatedBy": "string"
         }
-      },
-      "GetCompanyByIdSchemaOnboardingInfoMetaDataProperty": {
-        "type": "object",
-        "description": "metaData for onboarding",
-        "example": true
       },
       "TwilioAccountResponseDtoAssignedToNumbersProperty2": {
         "type": "object",
@@ -156073,14 +157410,6 @@
       },
       "ContactsCustomFieldsInputObjectSchemaFieldValueProperty2": {
         "type": "object"
-      },
-      "NumericFieldFieldValueProperty2": {
-        "type": "object",
-        "example": 100
-      },
-      "MonetoryFieldFieldValueProperty2": {
-        "type": "object",
-        "example": 100.5
       },
       "FileFieldFieldValueProperty2": {
         "type": "object",
@@ -156259,43 +157588,8 @@
         "type": "object",
         "description": "split invoice into payment schedule summing up to full invoice amount"
       },
-      "CreateInvoiceScheduleResponseDtoStatusProperty2": {
-        "type": "object",
-        "description": "Schedule Status",
-        "example": "draft"
-      },
-      "GetScheduleResponseDtoStatusProperty2": {
-        "type": "object",
-        "description": "Schedule Status",
-        "example": "draft"
-      },
-      "UpdateInvoiceScheduleResponseDtoStatusProperty2": {
-        "type": "object",
-        "description": "Schedule Status",
-        "example": "draft"
-      },
-      "UpdateAndScheduleInvoiceScheduleResponseDtoStatusProperty2": {
-        "type": "object",
-        "description": "Schedule Status",
-        "example": "draft"
-      },
       "AutoPaymentDetailsDtoProviderProperty2": {
         "type": "object"
-      },
-      "ScheduleInvoiceScheduleResponseDtoStatusProperty2": {
-        "type": "object",
-        "description": "Schedule Status",
-        "example": "draft"
-      },
-      "AutoPaymentInvoiceScheduleResponseDtoStatusProperty2": {
-        "type": "object",
-        "description": "Schedule Status",
-        "example": "draft"
-      },
-      "CancelInvoiceScheduleResponseDtoStatusProperty2": {
-        "type": "object",
-        "description": "Schedule Status",
-        "example": "draft"
       },
       "CreateInvoiceResponseDtoBusinessDetailsProperty2": {
         "type": "object",

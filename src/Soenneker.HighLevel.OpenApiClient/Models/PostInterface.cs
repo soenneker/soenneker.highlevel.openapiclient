@@ -11,53 +11,79 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostInterface : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("bucketVideoUrl") is { } nullNodeBucketVideoUrl && nullNodeBucketVideoUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BucketVideoUrl = null;
+            if (parseNode.GetChildNode("contentType") is { } nullNodeContentType && nullNodeContentType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContentType = null;
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("postMaterials") is { } nullNodePostMaterials && nullNodePostMaterials.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PostMaterials = null;
+            if (parseNode.GetChildNode("thumbnailUrl") is { } nullNodeThumbnailUrl && nullNodeThumbnailUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThumbnailUrl = null;
+            if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
+            if (parseNode.GetChildNode("visibility") is { } nullNodeVisibility && nullNodeVisibility.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Visibility = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The bucketVideoUrl property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BucketVideoUrl { get; set; }
+        public string? BucketVideoUrl { get => _explicitNullValueBucketVideoUrl; set { _explicitNullValueBucketVideoUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bucketVideoUrl"); else _explicitNullProperties?.Remove("bucketVideoUrl"); } }
+        private string? _explicitNullValueBucketVideoUrl = default!;
 #nullable restore
 #else
-        public string BucketVideoUrl { get; set; }
+        public string BucketVideoUrl { get => _explicitNullValueBucketVideoUrl; set { _explicitNullValueBucketVideoUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bucketVideoUrl"); else _explicitNullProperties?.Remove("bucketVideoUrl"); } }
+        private string _explicitNullValueBucketVideoUrl = default!;
 #endif
         /// <summary>The contentType property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ContentType? ContentType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ContentType? ContentType { get => _explicitNullValueContentType; set { _explicitNullValueContentType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contentType"); else _explicitNullProperties?.Remove("contentType"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.ContentType? _explicitNullValueContentType = default!;
         /// <summary>The description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>The postMaterials property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.PostMaterialInterface>? PostMaterials { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.PostMaterialInterface>? PostMaterials { get => _explicitNullValuePostMaterials; set { _explicitNullValuePostMaterials = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("postMaterials"); else _explicitNullProperties?.Remove("postMaterials"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.PostMaterialInterface>? _explicitNullValuePostMaterials = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.PostMaterialInterface> PostMaterials { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.PostMaterialInterface> PostMaterials { get => _explicitNullValuePostMaterials; set { _explicitNullValuePostMaterials = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("postMaterials"); else _explicitNullProperties?.Remove("postMaterials"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.PostMaterialInterface> _explicitNullValuePostMaterials = default!;
 #endif
         /// <summary>The thumbnailUrl property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ThumbnailUrl { get; set; }
+        public string? ThumbnailUrl { get => _explicitNullValueThumbnailUrl; set { _explicitNullValueThumbnailUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumbnailUrl"); else _explicitNullProperties?.Remove("thumbnailUrl"); } }
+        private string? _explicitNullValueThumbnailUrl = default!;
 #nullable restore
 #else
-        public string ThumbnailUrl { get; set; }
+        public string ThumbnailUrl { get => _explicitNullValueThumbnailUrl; set { _explicitNullValueThumbnailUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumbnailUrl"); else _explicitNullProperties?.Remove("thumbnailUrl"); } }
+        private string _explicitNullValueThumbnailUrl = default!;
 #endif
         /// <summary>The title property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Title { get; set; }
+        public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        private string? _explicitNullValueTitle = default!;
 #nullable restore
 #else
-        public string Title { get; set; }
+        public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        private string _explicitNullValueTitle = default!;
 #endif
         /// <summary>The visibility property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.Visibility? Visibility { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.Visibility? Visibility { get => _explicitNullValueVisibility; set { _explicitNullValueVisibility = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visibility"); else _explicitNullProperties?.Remove("visibility"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.Visibility? _explicitNullValueVisibility = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.PostInterface"/> and sets the default values.
         /// </summary>
@@ -73,7 +99,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.PostInterface CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.PostInterface();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.PostInterface(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -106,6 +132,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("thumbnailUrl", ThumbnailUrl);
             writer.WriteStringValue("title", Title);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.Visibility>("visibility", Visibility);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

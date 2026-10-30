@@ -12,7 +12,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UpsertAssetsDtoPayload : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CallAssetPayloadDto"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -49,17 +54,26 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             var result = new global::Soenneker.HighLevel.OpenApiClient.Models.UpsertAssetsDtoPayload();
             if("CallAssetPayloadDto".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.CallAssetPayloadDto = new global::Soenneker.HighLevel.OpenApiClient.Models.CallAssetPayloadDto();
+                
             }
             else if("LeadFormAssetPayloadDto".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.LeadFormAssetPayloadDto = new global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormAssetPayloadDto();
+                
             }
             else if("SitelinkAssetPayloadDto".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.SitelinkAssetPayloadDto = new global::Soenneker.HighLevel.OpenApiClient.Models.SitelinkAssetPayloadDto();
+                
             }
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("phoneNumber") != null && parseNode.GetChildNode("countryCode") != null))();
+            bool matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("linkText") != null && parseNode.GetChildNode("finalUrls") != null))();
+            bool matchesUnionBranch2 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("headline") != null && parseNode.GetChildNode("description") != null && parseNode.GetChildNode("businessName") != null && parseNode.GetChildNode("privacyPolicyUrl") != null && parseNode.GetChildNode("fields") != null && parseNode.GetChildNode("callToActionType") != null && (parseNode.GetChildNode("callToActionType")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag6 && ("LEARN_MORE".Equals(tag6.GetValue(), global::System.StringComparison.Ordinal) || "GET_QUOTE".Equals(tag6.GetValue(), global::System.StringComparison.Ordinal) || "APPLY_NOW".Equals(tag6.GetValue(), global::System.StringComparison.Ordinal) || "SIGN_UP".Equals(tag6.GetValue(), global::System.StringComparison.Ordinal) || "CONTACT_US".Equals(tag6.GetValue(), global::System.StringComparison.Ordinal) || "SUBSCRIBE".Equals(tag6.GetValue(), global::System.StringComparison.Ordinal) || "DOWNLOAD".Equals(tag6.GetValue(), global::System.StringComparison.Ordinal) || "BOOK_NOW".Equals(tag6.GetValue(), global::System.StringComparison.Ordinal) || "GET_OFFER".Equals(tag6.GetValue(), global::System.StringComparison.Ordinal) || "REGISTER".Equals(tag6.GetValue(), global::System.StringComparison.Ordinal) || "GET_INFO".Equals(tag6.GetValue(), global::System.StringComparison.Ordinal) || "REQUEST_DEMO".Equals(tag6.GetValue(), global::System.StringComparison.Ordinal) || "JOIN_NOW".Equals(tag6.GetValue(), global::System.StringComparison.Ordinal) || "GET_STARTED".Equals(tag6.GetValue(), global::System.StringComparison.Ordinal) || "VISIT_SITE".Equals(tag6.GetValue(), global::System.StringComparison.Ordinal))) && (parseNode.GetChildNode("desiredIntent") == null || (parseNode.GetChildNode("desiredIntent")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString optionalTag7 && ("LOW_INTENT".Equals(optionalTag7.GetValue(), global::System.StringComparison.Ordinal) || "HIGH_INTENT".Equals(optionalTag7.GetValue(), global::System.StringComparison.Ordinal)))) && (parseNode.GetChildNode("postSubmitCallToActionType") == null || (parseNode.GetChildNode("postSubmitCallToActionType")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString optionalTag8 && ("VISIT_SITE".Equals(optionalTag8.GetValue(), global::System.StringComparison.Ordinal) || "DOWNLOAD".Equals(optionalTag8.GetValue(), global::System.StringComparison.Ordinal) || "LEARN_MORE".Equals(optionalTag8.GetValue(), global::System.StringComparison.Ordinal) || "SHOP_NOW".Equals(optionalTag8.GetValue(), global::System.StringComparison.Ordinal))))))();
+            if (result.CallAssetPayloadDto == null && result.LeadFormAssetPayloadDto == null && result.SitelinkAssetPayloadDto == null && matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2) result.CallAssetPayloadDto = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.CallAssetPayloadDto(), parseNode);
+            if (result.CallAssetPayloadDto == null && result.LeadFormAssetPayloadDto == null && result.SitelinkAssetPayloadDto == null && matchesUnionBranch1 && !matchesUnionBranch0 && !matchesUnionBranch2) result.SitelinkAssetPayloadDto = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.SitelinkAssetPayloadDto(), parseNode);
+            if (result.CallAssetPayloadDto == null && result.LeadFormAssetPayloadDto == null && result.SitelinkAssetPayloadDto == null && matchesUnionBranch2 && !matchesUnionBranch0 && !matchesUnionBranch1) result.LeadFormAssetPayloadDto = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormAssetPayloadDto(), parseNode);
+            if (result.CallAssetPayloadDto == null && result.LeadFormAssetPayloadDto == null && result.SitelinkAssetPayloadDto == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -87,17 +101,26 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (CallAssetPayloadDto == null && LeadFormAssetPayloadDto == null && SitelinkAssetPayloadDto == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (CallAssetPayloadDto != null && LeadFormAssetPayloadDto == null && SitelinkAssetPayloadDto == null) { if (CallAssetPayloadDto is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, CallAssetPayloadDto); return; }
+            if (LeadFormAssetPayloadDto != null && CallAssetPayloadDto == null && SitelinkAssetPayloadDto == null) { if (LeadFormAssetPayloadDto is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, LeadFormAssetPayloadDto); return; }
+            if (SitelinkAssetPayloadDto != null && CallAssetPayloadDto == null && LeadFormAssetPayloadDto == null) { if (SitelinkAssetPayloadDto is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, SitelinkAssetPayloadDto); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(CallAssetPayloadDto != null)
             {
+                if (CallAssetPayloadDto is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CallAssetPayloadDto>(null, CallAssetPayloadDto);
             }
             else if(LeadFormAssetPayloadDto != null)
             {
+                if (LeadFormAssetPayloadDto is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormAssetPayloadDto>(null, LeadFormAssetPayloadDto);
             }
             else if(SitelinkAssetPayloadDto != null)
             {
+                if (SitelinkAssetPayloadDto is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SitelinkAssetPayloadDto>(null, SitelinkAssetPayloadDto);
             }
         }

@@ -57,6 +57,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Locations
             {
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.LocationsCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.LocationsCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationSuccessfulResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.CreateLocationSuccessfulResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

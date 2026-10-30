@@ -12,40 +12,59 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CreatePostDtoPostApprovalDetails : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("approvalStatus") is { } nullNodeApprovalStatus && nullNodeApprovalStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApprovalStatus = null;
+            if (parseNode.GetChildNode("approver") is { } nullNodeApprover && nullNodeApprover.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Approver = null;
+            if (parseNode.GetChildNode("approverNote") is { } nullNodeApproverNote && nullNodeApproverNote.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApproverNote = null;
+            if (parseNode.GetChildNode("requesterNote") is { } nullNodeRequesterNote && nullNodeRequesterNote.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequesterNote = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Approval Status must be one of the following values: pending, approved, rejected, not_required</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoPostApprovalDetailsApprovalStatusProperty? ApprovalStatus { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoPostApprovalDetailsApprovalStatus? ApprovalStatus { get => _explicitNullValueApprovalStatus; set { _explicitNullValueApprovalStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approvalStatus"); else _explicitNullProperties?.Remove("approvalStatus"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoPostApprovalDetailsApprovalStatus? _explicitNullValueApprovalStatus = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoPostApprovalDetailsApprovalStatusProperty ApprovalStatus { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoPostApprovalDetailsApprovalStatus ApprovalStatus { get => _explicitNullValueApprovalStatus; set { _explicitNullValueApprovalStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approvalStatus"); else _explicitNullProperties?.Remove("approvalStatus"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoPostApprovalDetailsApprovalStatus _explicitNullValueApprovalStatus = default!;
 #endif
         /// <summary>Approver</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Approver { get; set; }
+        public string? Approver { get => _explicitNullValueApprover; set { _explicitNullValueApprover = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approver"); else _explicitNullProperties?.Remove("approver"); } }
+        private string? _explicitNullValueApprover = default!;
 #nullable restore
 #else
-        public string Approver { get; set; }
+        public string Approver { get => _explicitNullValueApprover; set { _explicitNullValueApprover = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approver"); else _explicitNullProperties?.Remove("approver"); } }
+        private string _explicitNullValueApprover = default!;
 #endif
         /// <summary>Approver Notes</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ApproverNote { get; set; }
+        public string? ApproverNote { get => _explicitNullValueApproverNote; set { _explicitNullValueApproverNote = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approverNote"); else _explicitNullProperties?.Remove("approverNote"); } }
+        private string? _explicitNullValueApproverNote = default!;
 #nullable restore
 #else
-        public string ApproverNote { get; set; }
+        public string ApproverNote { get => _explicitNullValueApproverNote; set { _explicitNullValueApproverNote = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approverNote"); else _explicitNullProperties?.Remove("approverNote"); } }
+        private string _explicitNullValueApproverNote = default!;
 #endif
         /// <summary>Requester Notes</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RequesterNote { get; set; }
+        public string? RequesterNote { get => _explicitNullValueRequesterNote; set { _explicitNullValueRequesterNote = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requesterNote"); else _explicitNullProperties?.Remove("requesterNote"); } }
+        private string? _explicitNullValueRequesterNote = default!;
 #nullable restore
 #else
-        public string RequesterNote { get; set; }
+        public string RequesterNote { get => _explicitNullValueRequesterNote; set { _explicitNullValueRequesterNote = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requesterNote"); else _explicitNullProperties?.Remove("requesterNote"); } }
+        private string _explicitNullValueRequesterNote = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoPostApprovalDetails"/> and sets the default values.
@@ -62,7 +81,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoPostApprovalDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoPostApprovalDetails();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoPostApprovalDetails(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -72,7 +91,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "approvalStatus", n => { ApprovalStatus = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoPostApprovalDetailsApprovalStatusProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoPostApprovalDetailsApprovalStatusProperty.CreateFromDiscriminatorValue); } },
+                { "approvalStatus", n => { ApprovalStatus = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoPostApprovalDetailsApprovalStatus>(global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoPostApprovalDetailsApprovalStatus.CreateFromDiscriminatorValue); } },
                 { "approver", n => { Approver = n.GetStringValue(); } },
                 { "approverNote", n => { ApproverNote = n.GetStringValue(); } },
                 { "requesterNote", n => { RequesterNote = n.GetStringValue(); } },
@@ -85,10 +104,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoPostApprovalDetailsApprovalStatusProperty>("approvalStatus", ApprovalStatus);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoPostApprovalDetailsApprovalStatus>("approvalStatus", ApprovalStatus);
             writer.WriteStringValue("approver", Approver);
             writer.WriteStringValue("approverNote", ApproverNote);
             writer.WriteStringValue("requesterNote", RequesterNote);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,85 +11,123 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TwilioAccountResponseDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("account_sid") is { } nullNodeAccountSid && nullNodeAccountSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountSid = null;
+            if (parseNode.GetChildNode("assigned_to_numbers") is { } nullNodeAssignedToNumbers && nullNodeAssignedToNumbers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssignedToNumbers = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("location_id") is { } nullNodeLocationId && nullNodeLocationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationId = null;
+            if (parseNode.GetChildNode("migration_numbers") is { } nullNodeMigrationNumbers && nullNodeMigrationNumbers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MigrationNumbers = null;
+            if (parseNode.GetChildNode("migration_status") is { } nullNodeMigrationStatus && nullNodeMigrationStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MigrationStatus = null;
+            if (parseNode.GetChildNode("new_account_sid") is { } nullNodeNewAccountSid && nullNodeNewAccountSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewAccountSid = null;
+            if (parseNode.GetChildNode("number_name") is { } nullNodeNumberName && nullNodeNumberName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumberName = null;
+            if (parseNode.GetChildNode("numbers") is { } nullNodeNumbers && nullNodeNumbers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Numbers = null;
+            if (parseNode.GetChildNode("under_ghl_account") is { } nullNodeUnderGhlAccount && nullNodeUnderGhlAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnderGhlAccount = null;
+            if (parseNode.GetChildNode("validate_sms") is { } nullNodeValidateSms && nullNodeValidateSms.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ValidateSms = null;
+        }
+
         /// <summary>Twilio Account SID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountSid { get; set; }
+        public string? AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
+        private string? _explicitNullValueAccountSid = default!;
 #nullable restore
 #else
-        public string AccountSid { get; set; }
+        public string AccountSid { get => _explicitNullValueAccountSid; set { _explicitNullValueAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_sid"); else _explicitNullProperties?.Remove("account_sid"); } }
+        private string _explicitNullValueAccountSid = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Map of phone numbers to assigned user IDs</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDtoAssignedToNumbersProperty2? AssignedToNumbers { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDtoAssignedToNumbersProperty2? AssignedToNumbers { get => _explicitNullValueAssignedToNumbers; set { _explicitNullValueAssignedToNumbers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assigned_to_numbers"); else _explicitNullProperties?.Remove("assigned_to_numbers"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDtoAssignedToNumbersProperty2? _explicitNullValueAssignedToNumbers = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDtoAssignedToNumbersProperty2 AssignedToNumbers { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDtoAssignedToNumbersProperty2 AssignedToNumbers { get => _explicitNullValueAssignedToNumbers; set { _explicitNullValueAssignedToNumbers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assigned_to_numbers"); else _explicitNullProperties?.Remove("assigned_to_numbers"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDtoAssignedToNumbersProperty2 _explicitNullValueAssignedToNumbers = default!;
 #endif
         /// <summary>Unique identifier of the Twilio account record</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The location ID this Twilio account belongs to</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LocationId { get; set; }
+        public string? LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("location_id"); else _explicitNullProperties?.Remove("location_id"); } }
+        private string? _explicitNullValueLocationId = default!;
 #nullable restore
 #else
-        public string LocationId { get; set; }
+        public string LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("location_id"); else _explicitNullProperties?.Remove("location_id"); } }
+        private string _explicitNullValueLocationId = default!;
 #endif
         /// <summary>List of numbers being migrated</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? MigrationNumbers { get; set; }
+        public List<string>? MigrationNumbers { get => _explicitNullValueMigrationNumbers; set { _explicitNullValueMigrationNumbers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("migration_numbers"); else _explicitNullProperties?.Remove("migration_numbers"); } }
+        private List<string>? _explicitNullValueMigrationNumbers = default!;
 #nullable restore
 #else
-        public List<string> MigrationNumbers { get; set; }
+        public List<string> MigrationNumbers { get => _explicitNullValueMigrationNumbers; set { _explicitNullValueMigrationNumbers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("migration_numbers"); else _explicitNullProperties?.Remove("migration_numbers"); } }
+        private List<string> _explicitNullValueMigrationNumbers = default!;
 #endif
         /// <summary>Current migration status of the account</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MigrationStatus { get; set; }
+        public string? MigrationStatus { get => _explicitNullValueMigrationStatus; set { _explicitNullValueMigrationStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("migration_status"); else _explicitNullProperties?.Remove("migration_status"); } }
+        private string? _explicitNullValueMigrationStatus = default!;
 #nullable restore
 #else
-        public string MigrationStatus { get; set; }
+        public string MigrationStatus { get => _explicitNullValueMigrationStatus; set { _explicitNullValueMigrationStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("migration_status"); else _explicitNullProperties?.Remove("migration_status"); } }
+        private string _explicitNullValueMigrationStatus = default!;
 #endif
         /// <summary>New account SID if the account has been migrated to new credentials</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NewAccountSid { get; set; }
+        public string? NewAccountSid { get => _explicitNullValueNewAccountSid; set { _explicitNullValueNewAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_account_sid"); else _explicitNullProperties?.Remove("new_account_sid"); } }
+        private string? _explicitNullValueNewAccountSid = default!;
 #nullable restore
 #else
-        public string NewAccountSid { get; set; }
+        public string NewAccountSid { get => _explicitNullValueNewAccountSid; set { _explicitNullValueNewAccountSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_account_sid"); else _explicitNullProperties?.Remove("new_account_sid"); } }
+        private string _explicitNullValueNewAccountSid = default!;
 #endif
         /// <summary>Map of phone numbers to their friendly names</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDtoNumberNameProperty2? NumberName { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDtoNumberNameProperty2? NumberName { get => _explicitNullValueNumberName; set { _explicitNullValueNumberName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("number_name"); else _explicitNullProperties?.Remove("number_name"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDtoNumberNameProperty2? _explicitNullValueNumberName = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDtoNumberNameProperty2 NumberName { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDtoNumberNameProperty2 NumberName { get => _explicitNullValueNumberName; set { _explicitNullValueNumberName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("number_name"); else _explicitNullProperties?.Remove("number_name"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDtoNumberNameProperty2 _explicitNullValueNumberName = default!;
 #endif
         /// <summary>Map of phone numbers to their service type (e.g. &apos;conversation&apos;)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDtoNumbersProperty2? Numbers { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDtoNumbersProperty2? Numbers { get => _explicitNullValueNumbers; set { _explicitNullValueNumbers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("numbers"); else _explicitNullProperties?.Remove("numbers"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDtoNumbersProperty2? _explicitNullValueNumbers = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDtoNumbersProperty2 Numbers { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDtoNumbersProperty2 Numbers { get => _explicitNullValueNumbers; set { _explicitNullValueNumbers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("numbers"); else _explicitNullProperties?.Remove("numbers"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDtoNumbersProperty2 _explicitNullValueNumbers = default!;
 #endif
         /// <summary>Whether this location is under a GHL-managed Twilio account</summary>
-        public bool? UnderGhlAccount { get; set; }
+        public bool? UnderGhlAccount { get => _explicitNullValueUnderGhlAccount; set { _explicitNullValueUnderGhlAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("under_ghl_account"); else _explicitNullProperties?.Remove("under_ghl_account"); } }
+        private bool? _explicitNullValueUnderGhlAccount = default!;
         /// <summary>Whether SMS validation is enabled</summary>
-        public bool? ValidateSms { get; set; }
+        public bool? ValidateSms { get => _explicitNullValueValidateSms; set { _explicitNullValueValidateSms = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validate_sms"); else _explicitNullProperties?.Remove("validate_sms"); } }
+        private bool? _explicitNullValueValidateSms = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDto"/> and sets the default values.
         /// </summary>
@@ -105,7 +143,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -146,6 +184,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDtoNumbersProperty2>("numbers", Numbers);
             writer.WriteBoolValue("under_ghl_account", UnderGhlAccount);
             writer.WriteBoolValue("validate_sms", ValidateSms);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

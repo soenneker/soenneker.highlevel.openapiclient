@@ -16,6 +16,7 @@ namespace Soenneker.HighLevel.OpenApiClient.AgentStudio.PublicApi
     public partial class PublicApiRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The agents property</summary>
+        [Obsolete("")]
         public global::Soenneker.HighLevel.OpenApiClient.AgentStudio.PublicApi.Agents.AgentsRequestBuilder Agents
         {
             get => new global::Soenneker.HighLevel.OpenApiClient.AgentStudio.PublicApi.Agents.AgentsRequestBuilder(PathParameters, RequestAdapter);

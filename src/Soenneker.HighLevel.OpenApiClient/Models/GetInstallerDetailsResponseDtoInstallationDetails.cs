@@ -12,99 +12,141 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GetInstallerDetailsResponseDtoInstallationDetails : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("companyEmail") is { } nullNodeCompanyEmail && nullNodeCompanyEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CompanyEmail = null;
+            if (parseNode.GetChildNode("companyHighLevelPlan") is { } nullNodeCompanyHighLevelPlan && nullNodeCompanyHighLevelPlan.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CompanyHighLevelPlan = null;
+            if (parseNode.GetChildNode("companyId") is { } nullNodeCompanyId && nullNodeCompanyId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CompanyId = null;
+            if (parseNode.GetChildNode("companyName") is { } nullNodeCompanyName && nullNodeCompanyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CompanyName = null;
+            if (parseNode.GetChildNode("companyOwnerFullName") is { } nullNodeCompanyOwnerFullName && nullNodeCompanyOwnerFullName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CompanyOwnerFullName = null;
+            if (parseNode.GetChildNode("companyPlan") is { } nullNodeCompanyPlan && nullNodeCompanyPlan.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CompanyPlan = null;
+            if (parseNode.GetChildNode("isWhitelabelCompany") is { } nullNodeIsWhitelabelCompany && nullNodeIsWhitelabelCompany.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsWhitelabelCompany = null;
+            if (parseNode.GetChildNode("locationId") is { } nullNodeLocationId && nullNodeLocationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationId = null;
+            if (parseNode.GetChildNode("marketplaceAppPlanId") is { } nullNodeMarketplaceAppPlanId && nullNodeMarketplaceAppPlanId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MarketplaceAppPlanId = null;
+            if (parseNode.GetChildNode("relationshipNumber") is { } nullNodeRelationshipNumber && nullNodeRelationshipNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RelationshipNumber = null;
+            if (parseNode.GetChildNode("userId") is { } nullNodeUserId && nullNodeUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserId = null;
+            if (parseNode.GetChildNode("whitelabelDetails") is { } nullNodeWhitelabelDetails && nullNodeWhitelabelDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WhitelabelDetails = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Company email. Will be null for sub-account installations due to PII concerns.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CompanyEmail { get; set; }
+        public string? CompanyEmail { get => _explicitNullValueCompanyEmail; set { _explicitNullValueCompanyEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("companyEmail"); else _explicitNullProperties?.Remove("companyEmail"); } }
+        private string? _explicitNullValueCompanyEmail = default!;
 #nullable restore
 #else
-        public string CompanyEmail { get; set; }
+        public string CompanyEmail { get => _explicitNullValueCompanyEmail; set { _explicitNullValueCompanyEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("companyEmail"); else _explicitNullProperties?.Remove("companyEmail"); } }
+        private string _explicitNullValueCompanyEmail = default!;
 #endif
         /// <summary>Company plan. Will be null for sub-account installations due to business sensitivity.</summary>
         [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CompanyHighLevelPlan { get; set; }
+        public string? CompanyHighLevelPlan { get => _explicitNullValueCompanyHighLevelPlan; set { _explicitNullValueCompanyHighLevelPlan = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("companyHighLevelPlan"); else _explicitNullProperties?.Remove("companyHighLevelPlan"); } }
+        private string? _explicitNullValueCompanyHighLevelPlan = default!;
 #nullable restore
 #else
-        public string CompanyHighLevelPlan { get; set; }
+        public string CompanyHighLevelPlan { get => _explicitNullValueCompanyHighLevelPlan; set { _explicitNullValueCompanyHighLevelPlan = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("companyHighLevelPlan"); else _explicitNullProperties?.Remove("companyHighLevelPlan"); } }
+        private string _explicitNullValueCompanyHighLevelPlan = default!;
 #endif
         /// <summary>Company ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CompanyId { get; set; }
+        public string? CompanyId { get => _explicitNullValueCompanyId; set { _explicitNullValueCompanyId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("companyId"); else _explicitNullProperties?.Remove("companyId"); } }
+        private string? _explicitNullValueCompanyId = default!;
 #nullable restore
 #else
-        public string CompanyId { get; set; }
+        public string CompanyId { get => _explicitNullValueCompanyId; set { _explicitNullValueCompanyId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("companyId"); else _explicitNullProperties?.Remove("companyId"); } }
+        private string _explicitNullValueCompanyId = default!;
 #endif
         /// <summary>Company name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CompanyName { get; set; }
+        public string? CompanyName { get => _explicitNullValueCompanyName; set { _explicitNullValueCompanyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("companyName"); else _explicitNullProperties?.Remove("companyName"); } }
+        private string? _explicitNullValueCompanyName = default!;
 #nullable restore
 #else
-        public string CompanyName { get; set; }
+        public string CompanyName { get => _explicitNullValueCompanyName; set { _explicitNullValueCompanyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("companyName"); else _explicitNullProperties?.Remove("companyName"); } }
+        private string _explicitNullValueCompanyName = default!;
 #endif
         /// <summary>Company owner full name. Will be null for sub-account installations due to PII concerns.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CompanyOwnerFullName { get; set; }
+        public string? CompanyOwnerFullName { get => _explicitNullValueCompanyOwnerFullName; set { _explicitNullValueCompanyOwnerFullName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("companyOwnerFullName"); else _explicitNullProperties?.Remove("companyOwnerFullName"); } }
+        private string? _explicitNullValueCompanyOwnerFullName = default!;
 #nullable restore
 #else
-        public string CompanyOwnerFullName { get; set; }
+        public string CompanyOwnerFullName { get => _explicitNullValueCompanyOwnerFullName; set { _explicitNullValueCompanyOwnerFullName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("companyOwnerFullName"); else _explicitNullProperties?.Remove("companyOwnerFullName"); } }
+        private string _explicitNullValueCompanyOwnerFullName = default!;
 #endif
         /// <summary>Company plan. Will be null for sub-account installations due to business sensitivity.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CompanyPlan { get; set; }
+        public string? CompanyPlan { get => _explicitNullValueCompanyPlan; set { _explicitNullValueCompanyPlan = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("companyPlan"); else _explicitNullProperties?.Remove("companyPlan"); } }
+        private string? _explicitNullValueCompanyPlan = default!;
 #nullable restore
 #else
-        public string CompanyPlan { get; set; }
+        public string CompanyPlan { get => _explicitNullValueCompanyPlan; set { _explicitNullValueCompanyPlan = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("companyPlan"); else _explicitNullProperties?.Remove("companyPlan"); } }
+        private string _explicitNullValueCompanyPlan = default!;
 #endif
         /// <summary>Whether the company is a whitelabel company</summary>
-        public bool? IsWhitelabelCompany { get; set; }
+        public bool? IsWhitelabelCompany { get => _explicitNullValueIsWhitelabelCompany; set { _explicitNullValueIsWhitelabelCompany = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isWhitelabelCompany"); else _explicitNullProperties?.Remove("isWhitelabelCompany"); } }
+        private bool? _explicitNullValueIsWhitelabelCompany = default!;
         /// <summary>Location ID (if applicable)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LocationId { get; set; }
+        public string? LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
+        private string? _explicitNullValueLocationId = default!;
 #nullable restore
 #else
-        public string LocationId { get; set; }
+        public string LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
+        private string _explicitNullValueLocationId = default!;
 #endif
         /// <summary>Marketplace app plan ID for paid apps</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MarketplaceAppPlanId { get; set; }
+        public string? MarketplaceAppPlanId { get => _explicitNullValueMarketplaceAppPlanId; set { _explicitNullValueMarketplaceAppPlanId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("marketplaceAppPlanId"); else _explicitNullProperties?.Remove("marketplaceAppPlanId"); } }
+        private string? _explicitNullValueMarketplaceAppPlanId = default!;
 #nullable restore
 #else
-        public string MarketplaceAppPlanId { get; set; }
+        public string MarketplaceAppPlanId { get => _explicitNullValueMarketplaceAppPlanId; set { _explicitNullValueMarketplaceAppPlanId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("marketplaceAppPlanId"); else _explicitNullProperties?.Remove("marketplaceAppPlanId"); } }
+        private string _explicitNullValueMarketplaceAppPlanId = default!;
 #endif
         /// <summary>Company relationship number</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RelationshipNumber { get; set; }
+        public string? RelationshipNumber { get => _explicitNullValueRelationshipNumber; set { _explicitNullValueRelationshipNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("relationshipNumber"); else _explicitNullProperties?.Remove("relationshipNumber"); } }
+        private string? _explicitNullValueRelationshipNumber = default!;
 #nullable restore
 #else
-        public string RelationshipNumber { get; set; }
+        public string RelationshipNumber { get => _explicitNullValueRelationshipNumber; set { _explicitNullValueRelationshipNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("relationshipNumber"); else _explicitNullProperties?.Remove("relationshipNumber"); } }
+        private string _explicitNullValueRelationshipNumber = default!;
 #endif
         /// <summary>User ID who installed the app</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserId { get; set; }
+        public string? UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userId"); else _explicitNullProperties?.Remove("userId"); } }
+        private string? _explicitNullValueUserId = default!;
 #nullable restore
 #else
-        public string UserId { get; set; }
+        public string UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userId"); else _explicitNullProperties?.Remove("userId"); } }
+        private string _explicitNullValueUserId = default!;
 #endif
         /// <summary>Whitelabel details (only present if isWhitelabelCompany is true)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.InstallerDetailsDtoWhitelabelDetails? WhitelabelDetails { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.InstallerDetailsDtoWhitelabelDetails? WhitelabelDetails { get => _explicitNullValueWhitelabelDetails; set { _explicitNullValueWhitelabelDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whitelabelDetails"); else _explicitNullProperties?.Remove("whitelabelDetails"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.InstallerDetailsDtoWhitelabelDetails? _explicitNullValueWhitelabelDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.InstallerDetailsDtoWhitelabelDetails WhitelabelDetails { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.InstallerDetailsDtoWhitelabelDetails WhitelabelDetails { get => _explicitNullValueWhitelabelDetails; set { _explicitNullValueWhitelabelDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whitelabelDetails"); else _explicitNullProperties?.Remove("whitelabelDetails"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.InstallerDetailsDtoWhitelabelDetails _explicitNullValueWhitelabelDetails = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GetInstallerDetailsResponseDtoInstallationDetails"/> and sets the default values.
@@ -121,7 +163,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.GetInstallerDetailsResponseDtoInstallationDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.GetInstallerDetailsResponseDtoInstallationDetails();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.GetInstallerDetailsResponseDtoInstallationDetails(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -164,6 +206,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("relationshipNumber", RelationshipNumber);
             writer.WriteStringValue("userId", UserId);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.InstallerDetailsDtoWhitelabelDetails>("whitelabelDetails", WhitelabelDetails);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

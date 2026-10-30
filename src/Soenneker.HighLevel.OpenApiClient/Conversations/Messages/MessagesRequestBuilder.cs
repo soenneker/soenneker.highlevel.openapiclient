@@ -106,6 +106,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Conversations.Messages
             {
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.ConversationsCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.ConversationsCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

@@ -12,17 +12,32 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GetLocationSchemaSettings : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("allowDuplicateContact") is { } nullNodeAllowDuplicateContact && nullNodeAllowDuplicateContact.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowDuplicateContact = null;
+            if (parseNode.GetChildNode("allowDuplicateOpportunity") is { } nullNodeAllowDuplicateOpportunity && nullNodeAllowDuplicateOpportunity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowDuplicateOpportunity = null;
+            if (parseNode.GetChildNode("allowFacebookNameMerge") is { } nullNodeAllowFacebookNameMerge && nullNodeAllowFacebookNameMerge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowFacebookNameMerge = null;
+            if (parseNode.GetChildNode("disableContactTimezone") is { } nullNodeDisableContactTimezone && nullNodeDisableContactTimezone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisableContactTimezone = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The allowDuplicateContact property</summary>
-        public bool? AllowDuplicateContact { get; set; }
+        public bool? AllowDuplicateContact { get => _explicitNullValueAllowDuplicateContact; set { _explicitNullValueAllowDuplicateContact = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowDuplicateContact"); else _explicitNullProperties?.Remove("allowDuplicateContact"); } }
+        private bool? _explicitNullValueAllowDuplicateContact = default!;
         /// <summary>The allowDuplicateOpportunity property</summary>
-        public bool? AllowDuplicateOpportunity { get; set; }
+        public bool? AllowDuplicateOpportunity { get => _explicitNullValueAllowDuplicateOpportunity; set { _explicitNullValueAllowDuplicateOpportunity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowDuplicateOpportunity"); else _explicitNullProperties?.Remove("allowDuplicateOpportunity"); } }
+        private bool? _explicitNullValueAllowDuplicateOpportunity = default!;
         /// <summary>The allowFacebookNameMerge property</summary>
-        public bool? AllowFacebookNameMerge { get; set; }
+        public bool? AllowFacebookNameMerge { get => _explicitNullValueAllowFacebookNameMerge; set { _explicitNullValueAllowFacebookNameMerge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowFacebookNameMerge"); else _explicitNullProperties?.Remove("allowFacebookNameMerge"); } }
+        private bool? _explicitNullValueAllowFacebookNameMerge = default!;
         /// <summary>The disableContactTimezone property</summary>
-        public bool? DisableContactTimezone { get; set; }
+        public bool? DisableContactTimezone { get => _explicitNullValueDisableContactTimezone; set { _explicitNullValueDisableContactTimezone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disableContactTimezone"); else _explicitNullProperties?.Remove("disableContactTimezone"); } }
+        private bool? _explicitNullValueDisableContactTimezone = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationSchemaSettings"/> and sets the default values.
         /// </summary>
@@ -38,7 +53,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationSchemaSettings CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationSchemaSettings();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationSchemaSettings(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -65,6 +80,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteBoolValue("allowDuplicateOpportunity", AllowDuplicateOpportunity);
             writer.WriteBoolValue("allowFacebookNameMerge", AllowFacebookNameMerge);
             writer.WriteBoolValue("disableContactTimezone", DisableContactTimezone);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

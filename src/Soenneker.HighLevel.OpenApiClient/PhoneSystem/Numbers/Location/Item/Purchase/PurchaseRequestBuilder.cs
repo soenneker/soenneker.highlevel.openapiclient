@@ -57,6 +57,8 @@ namespace Soenneker.HighLevel.OpenApiClient.PhoneSystem.Numbers.Location.Item.Pu
             {
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.PurchasePhoneNumber400Response.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.PhoneSystemCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.TwilioAccountResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

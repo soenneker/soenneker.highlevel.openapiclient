@@ -12,42 +12,63 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UpsertAudienceDtoExclusionDimension : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("ageRanges") is { } nullNodeAgeRanges && nullNodeAgeRanges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgeRanges = null;
+            if (parseNode.GetChildNode("audienceSegments") is { } nullNodeAudienceSegments && nullNodeAudienceSegments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AudienceSegments = null;
+            if (parseNode.GetChildNode("genders") is { } nullNodeGenders && nullNodeGenders.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Genders = null;
+            if (parseNode.GetChildNode("isAgeUnknown") is { } nullNodeIsAgeUnknown && nullNodeIsAgeUnknown.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAgeUnknown = null;
+            if (parseNode.GetChildNode("parentalStatuses") is { } nullNodeParentalStatuses && nullNodeParentalStatuses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParentalStatuses = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Age range filters</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AgeRanges { get; set; }
+        public List<string>? AgeRanges { get => _explicitNullValueAgeRanges; set { _explicitNullValueAgeRanges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ageRanges"); else _explicitNullProperties?.Remove("ageRanges"); } }
+        private List<string>? _explicitNullValueAgeRanges = default!;
 #nullable restore
 #else
-        public List<string> AgeRanges { get; set; }
+        public List<string> AgeRanges { get => _explicitNullValueAgeRanges; set { _explicitNullValueAgeRanges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ageRanges"); else _explicitNullProperties?.Remove("ageRanges"); } }
+        private List<string> _explicitNullValueAgeRanges = default!;
 #endif
         /// <summary>Audience segment references used for targeting</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AudienceDimensionDtoAudienceSegments? AudienceSegments { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AudienceDimensionDtoAudienceSegments? AudienceSegments { get => _explicitNullValueAudienceSegments; set { _explicitNullValueAudienceSegments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audienceSegments"); else _explicitNullProperties?.Remove("audienceSegments"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.AudienceDimensionDtoAudienceSegments? _explicitNullValueAudienceSegments = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AudienceDimensionDtoAudienceSegments AudienceSegments { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AudienceDimensionDtoAudienceSegments AudienceSegments { get => _explicitNullValueAudienceSegments; set { _explicitNullValueAudienceSegments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audienceSegments"); else _explicitNullProperties?.Remove("audienceSegments"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.AudienceDimensionDtoAudienceSegments _explicitNullValueAudienceSegments = default!;
 #endif
         /// <summary>Gender targets</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Genders { get; set; }
+        public List<string>? Genders { get => _explicitNullValueGenders; set { _explicitNullValueGenders = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("genders"); else _explicitNullProperties?.Remove("genders"); } }
+        private List<string>? _explicitNullValueGenders = default!;
 #nullable restore
 #else
-        public List<string> Genders { get; set; }
+        public List<string> Genders { get => _explicitNullValueGenders; set { _explicitNullValueGenders = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("genders"); else _explicitNullProperties?.Remove("genders"); } }
+        private List<string> _explicitNullValueGenders = default!;
 #endif
         /// <summary>Include unknown age</summary>
-        public bool? IsAgeUnknown { get; set; }
+        public bool? IsAgeUnknown { get => _explicitNullValueIsAgeUnknown; set { _explicitNullValueIsAgeUnknown = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isAgeUnknown"); else _explicitNullProperties?.Remove("isAgeUnknown"); } }
+        private bool? _explicitNullValueIsAgeUnknown = default!;
         /// <summary>Parental status targets</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ParentalStatuses { get; set; }
+        public List<string>? ParentalStatuses { get => _explicitNullValueParentalStatuses; set { _explicitNullValueParentalStatuses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parentalStatuses"); else _explicitNullProperties?.Remove("parentalStatuses"); } }
+        private List<string>? _explicitNullValueParentalStatuses = default!;
 #nullable restore
 #else
-        public List<string> ParentalStatuses { get; set; }
+        public List<string> ParentalStatuses { get => _explicitNullValueParentalStatuses; set { _explicitNullValueParentalStatuses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parentalStatuses"); else _explicitNullProperties?.Remove("parentalStatuses"); } }
+        private List<string> _explicitNullValueParentalStatuses = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpsertAudienceDtoExclusionDimension"/> and sets the default values.
@@ -64,7 +85,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.UpsertAudienceDtoExclusionDimension CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.UpsertAudienceDtoExclusionDimension();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.UpsertAudienceDtoExclusionDimension(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -93,6 +114,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("genders", Genders);
             writer.WriteBoolValue("isAgeUnknown", IsAgeUnknown);
             writer.WriteCollectionOfPrimitiveValues<string>("parentalStatuses", ParentalStatuses);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

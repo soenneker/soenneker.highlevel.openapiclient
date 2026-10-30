@@ -11,28 +11,45 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ListFaqsResponseDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("count") is { } nullNodeCount && nullNodeCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Count = null;
+            if (parseNode.GetChildNode("faqs") is { } nullNodeFaqs && nullNodeFaqs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Faqs = null;
+            if (parseNode.GetChildNode("hasMore") is { } nullNodeHasMore && nullNodeHasMore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasMore = null;
+            if (parseNode.GetChildNode("lastFaqId") is { } nullNodeLastFaqId && nullNodeLastFaqId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastFaqId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Total count of all FAQs in the knowledge base</summary>
-        public double? Count { get; set; }
+        public double? Count { get => _explicitNullValueCount; set { _explicitNullValueCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("count"); else _explicitNullProperties?.Remove("count"); } }
+        private double? _explicitNullValueCount = default!;
         /// <summary>Array of FAQ objects</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.FaqResponseDto>? Faqs { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.FaqResponseDto>? Faqs { get => _explicitNullValueFaqs; set { _explicitNullValueFaqs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("faqs"); else _explicitNullProperties?.Remove("faqs"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.FaqResponseDto>? _explicitNullValueFaqs = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.FaqResponseDto> Faqs { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.FaqResponseDto> Faqs { get => _explicitNullValueFaqs; set { _explicitNullValueFaqs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("faqs"); else _explicitNullProperties?.Remove("faqs"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.FaqResponseDto> _explicitNullValueFaqs = default!;
 #endif
         /// <summary>Whether there are more FAQs available</summary>
-        public bool? HasMore { get; set; }
+        public bool? HasMore { get => _explicitNullValueHasMore; set { _explicitNullValueHasMore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hasMore"); else _explicitNullProperties?.Remove("hasMore"); } }
+        private bool? _explicitNullValueHasMore = default!;
         /// <summary>Last FAQ ID for pagination (use as lastFaqId in next request)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LastFaqId { get; set; }
+        public string? LastFaqId { get => _explicitNullValueLastFaqId; set { _explicitNullValueLastFaqId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastFaqId"); else _explicitNullProperties?.Remove("lastFaqId"); } }
+        private string? _explicitNullValueLastFaqId = default!;
 #nullable restore
 #else
-        public string LastFaqId { get; set; }
+        public string LastFaqId { get => _explicitNullValueLastFaqId; set { _explicitNullValueLastFaqId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastFaqId"); else _explicitNullProperties?.Remove("lastFaqId"); } }
+        private string _explicitNullValueLastFaqId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.ListFaqsResponseDto"/> and sets the default values.
@@ -49,7 +66,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.ListFaqsResponseDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.ListFaqsResponseDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.ListFaqsResponseDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -76,6 +93,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.FaqResponseDto>("faqs", Faqs);
             writer.WriteBoolValue("hasMore", HasMore);
             writer.WriteStringValue("lastFaqId", LastFaqId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

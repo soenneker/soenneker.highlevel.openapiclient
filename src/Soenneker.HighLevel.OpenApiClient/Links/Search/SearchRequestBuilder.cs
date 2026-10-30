@@ -49,7 +49,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Links.Search
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.GetLinksSuccessfulResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.GetLinksSuccessfulResponseDto.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.GetLinksSuccessfulResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.GetLinksSuccessfulResponseDto.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get list of links by searching

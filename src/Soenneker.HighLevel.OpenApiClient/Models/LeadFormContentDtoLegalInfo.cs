@@ -12,32 +12,48 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class LeadFormContentDtoLegalInfo : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("consents") is { } nullNodeConsents && nullNodeConsents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Consents = null;
+            if (parseNode.GetChildNode("legalDisclaimer") is { } nullNodeLegalDisclaimer && nullNodeLegalDisclaimer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LegalDisclaimer = null;
+            if (parseNode.GetChildNode("privacyPolicyUrl") is { } nullNodePrivacyPolicyUrl && nullNodePrivacyPolicyUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrivacyPolicyUrl = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Consent entries</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ConsentDto>? Consents { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ConsentDto>? Consents { get => _explicitNullValueConsents; set { _explicitNullValueConsents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("consents"); else _explicitNullProperties?.Remove("consents"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.ConsentDto>? _explicitNullValueConsents = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ConsentDto> Consents { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ConsentDto> Consents { get => _explicitNullValueConsents; set { _explicitNullValueConsents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("consents"); else _explicitNullProperties?.Remove("consents"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.ConsentDto> _explicitNullValueConsents = default!;
 #endif
         /// <summary>Legal disclaimer text</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LegalInfoDtoLegalDisclaimer? LegalDisclaimer { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LegalInfoDtoLegalDisclaimer? LegalDisclaimer { get => _explicitNullValueLegalDisclaimer; set { _explicitNullValueLegalDisclaimer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("legalDisclaimer"); else _explicitNullProperties?.Remove("legalDisclaimer"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.LegalInfoDtoLegalDisclaimer? _explicitNullValueLegalDisclaimer = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LegalInfoDtoLegalDisclaimer LegalDisclaimer { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LegalInfoDtoLegalDisclaimer LegalDisclaimer { get => _explicitNullValueLegalDisclaimer; set { _explicitNullValueLegalDisclaimer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("legalDisclaimer"); else _explicitNullProperties?.Remove("legalDisclaimer"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.LegalInfoDtoLegalDisclaimer _explicitNullValueLegalDisclaimer = default!;
 #endif
         /// <summary>Privacy policy URL</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrivacyPolicyUrl { get; set; }
+        public string? PrivacyPolicyUrl { get => _explicitNullValuePrivacyPolicyUrl; set { _explicitNullValuePrivacyPolicyUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("privacyPolicyUrl"); else _explicitNullProperties?.Remove("privacyPolicyUrl"); } }
+        private string? _explicitNullValuePrivacyPolicyUrl = default!;
 #nullable restore
 #else
-        public string PrivacyPolicyUrl { get; set; }
+        public string PrivacyPolicyUrl { get => _explicitNullValuePrivacyPolicyUrl; set { _explicitNullValuePrivacyPolicyUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("privacyPolicyUrl"); else _explicitNullProperties?.Remove("privacyPolicyUrl"); } }
+        private string _explicitNullValuePrivacyPolicyUrl = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoLegalInfo"/> and sets the default values.
@@ -54,7 +70,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoLegalInfo CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoLegalInfo();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoLegalInfo(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +95,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ConsentDto>("consents", Consents);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.LegalInfoDtoLegalDisclaimer>("legalDisclaimer", LegalDisclaimer);
             writer.WriteStringValue("privacyPolicyUrl", PrivacyPolicyUrl);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

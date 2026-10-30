@@ -11,124 +11,187 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CreatePriceDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("allowOutOfStockPurchases") is { } nullNodeAllowOutOfStockPurchases && nullNodeAllowOutOfStockPurchases.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowOutOfStockPurchases = null;
+            if (parseNode.GetChildNode("amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
+            if (parseNode.GetChildNode("availableQuantity") is { } nullNodeAvailableQuantity && nullNodeAvailableQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AvailableQuantity = null;
+            if (parseNode.GetChildNode("compareAtPrice") is { } nullNodeCompareAtPrice && nullNodeCompareAtPrice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CompareAtPrice = null;
+            if (parseNode.GetChildNode("currency") is { } nullNodeCurrency && nullNodeCurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Currency = null;
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("digitalDelivery") is { } nullNodeDigitalDelivery && nullNodeDigitalDelivery.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DigitalDelivery = null;
+            if (parseNode.GetChildNode("isDigitalProduct") is { } nullNodeIsDigitalProduct && nullNodeIsDigitalProduct.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsDigitalProduct = null;
+            if (parseNode.GetChildNode("locationId") is { } nullNodeLocationId && nullNodeLocationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationId = null;
+            if (parseNode.GetChildNode("membershipOffers") is { } nullNodeMembershipOffers && nullNodeMembershipOffers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MembershipOffers = null;
+            if (parseNode.GetChildNode("meta") is { } nullNodeMeta && nullNodeMeta.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Meta = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("recurring") is { } nullNodeRecurring && nullNodeRecurring.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Recurring = null;
+            if (parseNode.GetChildNode("setupFee") is { } nullNodeSetupFee && nullNodeSetupFee.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SetupFee = null;
+            if (parseNode.GetChildNode("shippingOptions") is { } nullNodeShippingOptions && nullNodeShippingOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingOptions = null;
+            if (parseNode.GetChildNode("sku") is { } nullNodeSku && nullNodeSku.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sku = null;
+            if (parseNode.GetChildNode("totalCycles") is { } nullNodeTotalCycles && nullNodeTotalCycles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalCycles = null;
+            if (parseNode.GetChildNode("trackInventory") is { } nullNodeTrackInventory && nullNodeTrackInventory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackInventory = null;
+            if (parseNode.GetChildNode("trialPeriod") is { } nullNodeTrialPeriod && nullNodeTrialPeriod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrialPeriod = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("userId") is { } nullNodeUserId && nullNodeUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserId = null;
+            if (parseNode.GetChildNode("variantOptionIds") is { } nullNodeVariantOptionIds && nullNodeVariantOptionIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VariantOptionIds = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Continue selling when out of stock</summary>
-        public bool? AllowOutOfStockPurchases { get; set; }
+        public bool? AllowOutOfStockPurchases { get => _explicitNullValueAllowOutOfStockPurchases; set { _explicitNullValueAllowOutOfStockPurchases = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowOutOfStockPurchases"); else _explicitNullProperties?.Remove("allowOutOfStockPurchases"); } }
+        private bool? _explicitNullValueAllowOutOfStockPurchases = default!;
         /// <summary>The amount of the price. ( min: 0 )</summary>
-        public double? Amount { get; set; }
+        public double? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
+        private double? _explicitNullValueAmount = default!;
         /// <summary>Available inventory stock quantity</summary>
-        public double? AvailableQuantity { get; set; }
+        public double? AvailableQuantity { get => _explicitNullValueAvailableQuantity; set { _explicitNullValueAvailableQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("availableQuantity"); else _explicitNullProperties?.Remove("availableQuantity"); } }
+        private double? _explicitNullValueAvailableQuantity = default!;
         /// <summary>The compare at price for the price.</summary>
-        public double? CompareAtPrice { get; set; }
+        public double? CompareAtPrice { get => _explicitNullValueCompareAtPrice; set { _explicitNullValueCompareAtPrice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("compareAtPrice"); else _explicitNullProperties?.Remove("compareAtPrice"); } }
+        private double? _explicitNullValueCompareAtPrice = default!;
         /// <summary>The currency of the price.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Currency { get; set; }
+        public string? Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        private string? _explicitNullValueCurrency = default!;
 #nullable restore
 #else
-        public string Currency { get; set; }
+        public string Currency { get => _explicitNullValueCurrency; set { _explicitNullValueCurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currency"); else _explicitNullProperties?.Remove("currency"); } }
+        private string _explicitNullValueCurrency = default!;
 #endif
         /// <summary>A brief description of the price.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>Digital delivery options</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? DigitalDelivery { get; set; }
+        public List<string>? DigitalDelivery { get => _explicitNullValueDigitalDelivery; set { _explicitNullValueDigitalDelivery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("digitalDelivery"); else _explicitNullProperties?.Remove("digitalDelivery"); } }
+        private List<string>? _explicitNullValueDigitalDelivery = default!;
 #nullable restore
 #else
-        public List<string> DigitalDelivery { get; set; }
+        public List<string> DigitalDelivery { get => _explicitNullValueDigitalDelivery; set { _explicitNullValueDigitalDelivery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("digitalDelivery"); else _explicitNullProperties?.Remove("digitalDelivery"); } }
+        private List<string> _explicitNullValueDigitalDelivery = default!;
 #endif
         /// <summary>Is the product a digital product</summary>
-        public bool? IsDigitalProduct { get; set; }
+        public bool? IsDigitalProduct { get => _explicitNullValueIsDigitalProduct; set { _explicitNullValueIsDigitalProduct = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isDigitalProduct"); else _explicitNullProperties?.Remove("isDigitalProduct"); } }
+        private bool? _explicitNullValueIsDigitalProduct = default!;
         /// <summary>The unique identifier of the location associated with the price.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LocationId { get; set; }
+        public string? LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
+        private string? _explicitNullValueLocationId = default!;
 #nullable restore
 #else
-        public string LocationId { get; set; }
+        public string LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
+        private string _explicitNullValueLocationId = default!;
 #endif
         /// <summary>An array of membership offers associated with the price.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ProductsMembershipOfferDto>? MembershipOffers { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ProductsMembershipOfferDto>? MembershipOffers { get => _explicitNullValueMembershipOffers; set { _explicitNullValueMembershipOffers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("membershipOffers"); else _explicitNullProperties?.Remove("membershipOffers"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.ProductsMembershipOfferDto>? _explicitNullValueMembershipOffers = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ProductsMembershipOfferDto> MembershipOffers { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ProductsMembershipOfferDto> MembershipOffers { get => _explicitNullValueMembershipOffers; set { _explicitNullValueMembershipOffers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("membershipOffers"); else _explicitNullProperties?.Remove("membershipOffers"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.ProductsMembershipOfferDto> _explicitNullValueMembershipOffers = default!;
 #endif
         /// <summary>Additional metadata associated with the price.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreatePriceDtoMeta? Meta { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreatePriceDtoMeta? Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CreatePriceDtoMeta? _explicitNullValueMeta = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreatePriceDtoMeta Meta { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreatePriceDtoMeta Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CreatePriceDtoMeta _explicitNullValueMeta = default!;
 #endif
         /// <summary>The name of the price.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The recurring details of the price (if type is recurring).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreatePriceDtoRecurring? Recurring { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreatePriceDtoRecurring? Recurring { get => _explicitNullValueRecurring; set { _explicitNullValueRecurring = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurring"); else _explicitNullProperties?.Remove("recurring"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CreatePriceDtoRecurring? _explicitNullValueRecurring = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreatePriceDtoRecurring Recurring { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreatePriceDtoRecurring Recurring { get => _explicitNullValueRecurring; set { _explicitNullValueRecurring = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurring"); else _explicitNullProperties?.Remove("recurring"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CreatePriceDtoRecurring _explicitNullValueRecurring = default!;
 #endif
         /// <summary>The setup fee for the price.</summary>
-        public double? SetupFee { get; set; }
+        public double? SetupFee { get => _explicitNullValueSetupFee; set { _explicitNullValueSetupFee = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("setupFee"); else _explicitNullProperties?.Remove("setupFee"); } }
+        private double? _explicitNullValueSetupFee = default!;
         /// <summary>Shipping options of the Price</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreatePriceDtoShippingOptions? ShippingOptions { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreatePriceDtoShippingOptions? ShippingOptions { get => _explicitNullValueShippingOptions; set { _explicitNullValueShippingOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shippingOptions"); else _explicitNullProperties?.Remove("shippingOptions"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CreatePriceDtoShippingOptions? _explicitNullValueShippingOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreatePriceDtoShippingOptions ShippingOptions { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreatePriceDtoShippingOptions ShippingOptions { get => _explicitNullValueShippingOptions; set { _explicitNullValueShippingOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shippingOptions"); else _explicitNullProperties?.Remove("shippingOptions"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CreatePriceDtoShippingOptions _explicitNullValueShippingOptions = default!;
 #endif
         /// <summary>The unique identifier of the SKU associated with the price</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Sku { get; set; }
+        public string? Sku { get => _explicitNullValueSku; set { _explicitNullValueSku = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sku"); else _explicitNullProperties?.Remove("sku"); } }
+        private string? _explicitNullValueSku = default!;
 #nullable restore
 #else
-        public string Sku { get; set; }
+        public string Sku { get => _explicitNullValueSku; set { _explicitNullValueSku = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sku"); else _explicitNullProperties?.Remove("sku"); } }
+        private string _explicitNullValueSku = default!;
 #endif
         /// <summary>The total number of billing cycles for the price. ( min: 1 )</summary>
-        public double? TotalCycles { get; set; }
+        public double? TotalCycles { get => _explicitNullValueTotalCycles; set { _explicitNullValueTotalCycles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalCycles"); else _explicitNullProperties?.Remove("totalCycles"); } }
+        private double? _explicitNullValueTotalCycles = default!;
         /// <summary>Need to track inventory stock quantity</summary>
-        public bool? TrackInventory { get; set; }
+        public bool? TrackInventory { get => _explicitNullValueTrackInventory; set { _explicitNullValueTrackInventory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trackInventory"); else _explicitNullProperties?.Remove("trackInventory"); } }
+        private bool? _explicitNullValueTrackInventory = default!;
         /// <summary>The trial period duration in days (if applicable).</summary>
-        public double? TrialPeriod { get; set; }
+        public double? TrialPeriod { get => _explicitNullValueTrialPeriod; set { _explicitNullValueTrialPeriod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trialPeriod"); else _explicitNullProperties?.Remove("trialPeriod"); } }
+        private double? _explicitNullValueTrialPeriod = default!;
         /// <summary>The type of the price.</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreatePriceDtoType? Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreatePriceDtoType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CreatePriceDtoType? _explicitNullValueType = default!;
         /// <summary>The unique identifier of the user who created the price.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserId { get; set; }
+        public string? UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userId"); else _explicitNullProperties?.Remove("userId"); } }
+        private string? _explicitNullValueUserId = default!;
 #nullable restore
 #else
-        public string UserId { get; set; }
+        public string UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userId"); else _explicitNullProperties?.Remove("userId"); } }
+        private string _explicitNullValueUserId = default!;
 #endif
         /// <summary>An array of variant option IDs associated with the price.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? VariantOptionIds { get; set; }
+        public List<string>? VariantOptionIds { get => _explicitNullValueVariantOptionIds; set { _explicitNullValueVariantOptionIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variantOptionIds"); else _explicitNullProperties?.Remove("variantOptionIds"); } }
+        private List<string>? _explicitNullValueVariantOptionIds = default!;
 #nullable restore
 #else
-        public List<string> VariantOptionIds { get; set; }
+        public List<string> VariantOptionIds { get => _explicitNullValueVariantOptionIds; set { _explicitNullValueVariantOptionIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variantOptionIds"); else _explicitNullProperties?.Remove("variantOptionIds"); } }
+        private List<string> _explicitNullValueVariantOptionIds = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CreatePriceDto"/> and sets the default values.
@@ -145,7 +208,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.CreatePriceDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.CreatePriceDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.CreatePriceDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -208,6 +271,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePriceDtoType>("type", Type);
             writer.WriteStringValue("userId", UserId);
             writer.WriteCollectionOfPrimitiveValues<string>("variantOptionIds", VariantOptionIds);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

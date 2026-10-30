@@ -11,162 +11,233 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GoogleAdContentDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("adCampaignId") is { } nullNodeAdCampaignId && nullNodeAdCampaignId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdCampaignId = null;
+            if (parseNode.GetChildNode("adError") is { } nullNodeAdError && nullNodeAdError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdError = null;
+            if (parseNode.GetChildNode("adGroupId") is { } nullNodeAdGroupId && nullNodeAdGroupId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdGroupId = null;
+            if (parseNode.GetChildNode("adId") is { } nullNodeAdId && nullNodeAdId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdId = null;
+            if (parseNode.GetChildNode("businessName") is { } nullNodeBusinessName && nullNodeBusinessName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BusinessName = null;
+            if (parseNode.GetChildNode("callToActionLabel") is { } nullNodeCallToActionLabel && nullNodeCallToActionLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallToActionLabel = null;
+            if (parseNode.GetChildNode("carouselCards") is { } nullNodeCarouselCards && nullNodeCarouselCards.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CarouselCards = null;
+            if (parseNode.GetChildNode("customChannels") is { } nullNodeCustomChannels && nullNodeCustomChannels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomChannels = null;
+            if (parseNode.GetChildNode("descriptions") is { } nullNodeDescriptions && nullNodeDescriptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Descriptions = null;
+            if (parseNode.GetChildNode("finalUrl") is { } nullNodeFinalUrl && nullNodeFinalUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FinalUrl = null;
+            if (parseNode.GetChildNode("googleAdId") is { } nullNodeGoogleAdId && nullNodeGoogleAdId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GoogleAdId = null;
+            if (parseNode.GetChildNode("headlines") is { } nullNodeHeadlines && nullNodeHeadlines.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Headlines = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("isDeleted") is { } nullNodeIsDeleted && nullNodeIsDeleted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsDeleted = null;
+            if (parseNode.GetChildNode("longHeadlines") is { } nullNodeLongHeadlines && nullNodeLongHeadlines.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LongHeadlines = null;
+            if (parseNode.GetChildNode("media") is { } nullNodeMedia && nullNodeMedia.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Media = null;
+            if (parseNode.GetChildNode("mediaType") is { } nullNodeMediaType && nullNodeMediaType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MediaType = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("path1") is { } nullNodePath1 && nullNodePath1.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Path1 = null;
+            if (parseNode.GetChildNode("path2") is { } nullNodePath2 && nullNodePath2.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Path2 = null;
+            if (parseNode.GetChildNode("placements") is { } nullNodePlacements && nullNodePlacements.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Placements = null;
+            if (parseNode.GetChildNode("publishingStatus") is { } nullNodePublishingStatus && nullNodePublishingStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PublishingStatus = null;
+            if (parseNode.GetChildNode("youtubeVideoLinks") is { } nullNodeYoutubeVideoLinks && nullNodeYoutubeVideoLinks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) YoutubeVideoLinks = null;
+        }
+
         /// <summary>Ad campaign identifier</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AdCampaignId { get; set; }
+        public string? AdCampaignId { get => _explicitNullValueAdCampaignId; set { _explicitNullValueAdCampaignId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adCampaignId"); else _explicitNullProperties?.Remove("adCampaignId"); } }
+        private string? _explicitNullValueAdCampaignId = default!;
 #nullable restore
 #else
-        public string AdCampaignId { get; set; }
+        public string AdCampaignId { get => _explicitNullValueAdCampaignId; set { _explicitNullValueAdCampaignId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adCampaignId"); else _explicitNullProperties?.Remove("adCampaignId"); } }
+        private string _explicitNullValueAdCampaignId = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Ad-level error message from Google</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AdError { get; set; }
+        public string? AdError { get => _explicitNullValueAdError; set { _explicitNullValueAdError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adError"); else _explicitNullProperties?.Remove("adError"); } }
+        private string? _explicitNullValueAdError = default!;
 #nullable restore
 #else
-        public string AdError { get; set; }
+        public string AdError { get => _explicitNullValueAdError; set { _explicitNullValueAdError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adError"); else _explicitNullProperties?.Remove("adError"); } }
+        private string _explicitNullValueAdError = default!;
 #endif
         /// <summary>Ad group identifier</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AdGroupId { get; set; }
+        public string? AdGroupId { get => _explicitNullValueAdGroupId; set { _explicitNullValueAdGroupId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adGroupId"); else _explicitNullProperties?.Remove("adGroupId"); } }
+        private string? _explicitNullValueAdGroupId = default!;
 #nullable restore
 #else
-        public string AdGroupId { get; set; }
+        public string AdGroupId { get => _explicitNullValueAdGroupId; set { _explicitNullValueAdGroupId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adGroupId"); else _explicitNullProperties?.Remove("adGroupId"); } }
+        private string _explicitNullValueAdGroupId = default!;
 #endif
         /// <summary>Internal ad identifier</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AdId { get; set; }
+        public string? AdId { get => _explicitNullValueAdId; set { _explicitNullValueAdId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adId"); else _explicitNullProperties?.Remove("adId"); } }
+        private string? _explicitNullValueAdId = default!;
 #nullable restore
 #else
-        public string AdId { get; set; }
+        public string AdId { get => _explicitNullValueAdId; set { _explicitNullValueAdId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adId"); else _explicitNullProperties?.Remove("adId"); } }
+        private string _explicitNullValueAdId = default!;
 #endif
         /// <summary>Business name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BusinessName { get; set; }
+        public string? BusinessName { get => _explicitNullValueBusinessName; set { _explicitNullValueBusinessName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("businessName"); else _explicitNullProperties?.Remove("businessName"); } }
+        private string? _explicitNullValueBusinessName = default!;
 #nullable restore
 #else
-        public string BusinessName { get; set; }
+        public string BusinessName { get => _explicitNullValueBusinessName; set { _explicitNullValueBusinessName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("businessName"); else _explicitNullProperties?.Remove("businessName"); } }
+        private string _explicitNullValueBusinessName = default!;
 #endif
         /// <summary>Call to action label</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdContentDtoCallToActionLabel? CallToActionLabel { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdContentDtoCallToActionLabel? CallToActionLabel { get => _explicitNullValueCallToActionLabel; set { _explicitNullValueCallToActionLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callToActionLabel"); else _explicitNullProperties?.Remove("callToActionLabel"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdContentDtoCallToActionLabel? _explicitNullValueCallToActionLabel = default!;
         /// <summary>Carousel cards</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleCarouselCardDto>? CarouselCards { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleCarouselCardDto>? CarouselCards { get => _explicitNullValueCarouselCards; set { _explicitNullValueCarouselCards = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carouselCards"); else _explicitNullProperties?.Remove("carouselCards"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleCarouselCardDto>? _explicitNullValueCarouselCards = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleCarouselCardDto> CarouselCards { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleCarouselCardDto> CarouselCards { get => _explicitNullValueCarouselCards; set { _explicitNullValueCarouselCards = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("carouselCards"); else _explicitNullProperties?.Remove("carouselCards"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleCarouselCardDto> _explicitNullValueCarouselCards = default!;
 #endif
         /// <summary>Custom channels flag</summary>
-        public bool? CustomChannels { get; set; }
+        public bool? CustomChannels { get => _explicitNullValueCustomChannels; set { _explicitNullValueCustomChannels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customChannels"); else _explicitNullProperties?.Remove("customChannels"); } }
+        private bool? _explicitNullValueCustomChannels = default!;
         /// <summary>Ad descriptions</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Descriptions { get; set; }
+        public List<string>? Descriptions { get => _explicitNullValueDescriptions; set { _explicitNullValueDescriptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("descriptions"); else _explicitNullProperties?.Remove("descriptions"); } }
+        private List<string>? _explicitNullValueDescriptions = default!;
 #nullable restore
 #else
-        public List<string> Descriptions { get; set; }
+        public List<string> Descriptions { get => _explicitNullValueDescriptions; set { _explicitNullValueDescriptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("descriptions"); else _explicitNullProperties?.Remove("descriptions"); } }
+        private List<string> _explicitNullValueDescriptions = default!;
 #endif
         /// <summary>Final URL</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FinalUrl { get; set; }
+        public string? FinalUrl { get => _explicitNullValueFinalUrl; set { _explicitNullValueFinalUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("finalUrl"); else _explicitNullProperties?.Remove("finalUrl"); } }
+        private string? _explicitNullValueFinalUrl = default!;
 #nullable restore
 #else
-        public string FinalUrl { get; set; }
+        public string FinalUrl { get => _explicitNullValueFinalUrl; set { _explicitNullValueFinalUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("finalUrl"); else _explicitNullProperties?.Remove("finalUrl"); } }
+        private string _explicitNullValueFinalUrl = default!;
 #endif
         /// <summary>Google Ads ad resource ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GoogleAdId { get; set; }
+        public string? GoogleAdId { get => _explicitNullValueGoogleAdId; set { _explicitNullValueGoogleAdId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("googleAdId"); else _explicitNullProperties?.Remove("googleAdId"); } }
+        private string? _explicitNullValueGoogleAdId = default!;
 #nullable restore
 #else
-        public string GoogleAdId { get; set; }
+        public string GoogleAdId { get => _explicitNullValueGoogleAdId; set { _explicitNullValueGoogleAdId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("googleAdId"); else _explicitNullProperties?.Remove("googleAdId"); } }
+        private string _explicitNullValueGoogleAdId = default!;
 #endif
         /// <summary>Ad headlines</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Headlines { get; set; }
+        public List<string>? Headlines { get => _explicitNullValueHeadlines; set { _explicitNullValueHeadlines = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("headlines"); else _explicitNullProperties?.Remove("headlines"); } }
+        private List<string>? _explicitNullValueHeadlines = default!;
 #nullable restore
 #else
-        public List<string> Headlines { get; set; }
+        public List<string> Headlines { get => _explicitNullValueHeadlines; set { _explicitNullValueHeadlines = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("headlines"); else _explicitNullProperties?.Remove("headlines"); } }
+        private List<string> _explicitNullValueHeadlines = default!;
 #endif
         /// <summary>Ad identifier</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>Whether the ad is soft-deleted</summary>
-        public bool? IsDeleted { get; set; }
+        public bool? IsDeleted { get => _explicitNullValueIsDeleted; set { _explicitNullValueIsDeleted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isDeleted"); else _explicitNullProperties?.Remove("isDeleted"); } }
+        private bool? _explicitNullValueIsDeleted = default!;
         /// <summary>Long headlines</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? LongHeadlines { get; set; }
+        public List<string>? LongHeadlines { get => _explicitNullValueLongHeadlines; set { _explicitNullValueLongHeadlines = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("longHeadlines"); else _explicitNullProperties?.Remove("longHeadlines"); } }
+        private List<string>? _explicitNullValueLongHeadlines = default!;
 #nullable restore
 #else
-        public List<string> LongHeadlines { get; set; }
+        public List<string> LongHeadlines { get => _explicitNullValueLongHeadlines; set { _explicitNullValueLongHeadlines = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("longHeadlines"); else _explicitNullProperties?.Remove("longHeadlines"); } }
+        private List<string> _explicitNullValueLongHeadlines = default!;
 #endif
         /// <summary>Ad media items</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleMediaDto>? Media { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleMediaDto>? Media { get => _explicitNullValueMedia; set { _explicitNullValueMedia = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("media"); else _explicitNullProperties?.Remove("media"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleMediaDto>? _explicitNullValueMedia = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleMediaDto> Media { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleMediaDto> Media { get => _explicitNullValueMedia; set { _explicitNullValueMedia = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("media"); else _explicitNullProperties?.Remove("media"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleMediaDto> _explicitNullValueMedia = default!;
 #endif
         /// <summary>Media type</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdContentDtoMediaType? MediaType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdContentDtoMediaType? MediaType { get => _explicitNullValueMediaType; set { _explicitNullValueMediaType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mediaType"); else _explicitNullProperties?.Remove("mediaType"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdContentDtoMediaType? _explicitNullValueMediaType = default!;
         /// <summary>Ad name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>Display path 1</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Path1 { get; set; }
+        public string? Path1 { get => _explicitNullValuePath1; set { _explicitNullValuePath1 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("path1"); else _explicitNullProperties?.Remove("path1"); } }
+        private string? _explicitNullValuePath1 = default!;
 #nullable restore
 #else
-        public string Path1 { get; set; }
+        public string Path1 { get => _explicitNullValuePath1; set { _explicitNullValuePath1 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("path1"); else _explicitNullProperties?.Remove("path1"); } }
+        private string _explicitNullValuePath1 = default!;
 #endif
         /// <summary>Display path 2</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Path2 { get; set; }
+        public string? Path2 { get => _explicitNullValuePath2; set { _explicitNullValuePath2 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("path2"); else _explicitNullProperties?.Remove("path2"); } }
+        private string? _explicitNullValuePath2 = default!;
 #nullable restore
 #else
-        public string Path2 { get; set; }
+        public string Path2 { get => _explicitNullValuePath2; set { _explicitNullValuePath2 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("path2"); else _explicitNullProperties?.Remove("path2"); } }
+        private string _explicitNullValuePath2 = default!;
 #endif
         /// <summary>Channel placements</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdContentDtoPlacementsItem?>? Placements { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdContentDtoPlacementsItem?>? Placements { get => _explicitNullValuePlacements; set { _explicitNullValuePlacements = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("placements"); else _explicitNullProperties?.Remove("placements"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdContentDtoPlacementsItem?>? _explicitNullValuePlacements = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdContentDtoPlacementsItem?> Placements { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdContentDtoPlacementsItem?> Placements { get => _explicitNullValuePlacements; set { _explicitNullValuePlacements = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("placements"); else _explicitNullProperties?.Remove("placements"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdContentDtoPlacementsItem?> _explicitNullValuePlacements = default!;
 #endif
         /// <summary>Ad publishing status</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdContentDtoPublishingStatus? PublishingStatus { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdContentDtoPublishingStatus? PublishingStatus { get => _explicitNullValuePublishingStatus; set { _explicitNullValuePublishingStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("publishingStatus"); else _explicitNullProperties?.Remove("publishingStatus"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdContentDtoPublishingStatus? _explicitNullValuePublishingStatus = default!;
         /// <summary>YouTube video links</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleYouTubeVideoLinkDto>? YoutubeVideoLinks { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleYouTubeVideoLinkDto>? YoutubeVideoLinks { get => _explicitNullValueYoutubeVideoLinks; set { _explicitNullValueYoutubeVideoLinks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("youtubeVideoLinks"); else _explicitNullProperties?.Remove("youtubeVideoLinks"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleYouTubeVideoLinkDto>? _explicitNullValueYoutubeVideoLinks = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleYouTubeVideoLinkDto> YoutubeVideoLinks { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleYouTubeVideoLinkDto> YoutubeVideoLinks { get => _explicitNullValueYoutubeVideoLinks; set { _explicitNullValueYoutubeVideoLinks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("youtubeVideoLinks"); else _explicitNullProperties?.Remove("youtubeVideoLinks"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleYouTubeVideoLinkDto> _explicitNullValueYoutubeVideoLinks = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdContentDto"/> and sets the default values.
@@ -183,7 +254,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdContentDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdContentDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdContentDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -248,6 +319,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteCollectionOfEnumValues<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdContentDtoPlacementsItem>("placements", Placements);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdContentDtoPublishingStatus>("publishingStatus", PublishingStatus);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleYouTubeVideoLinkDto>("youtubeVideoLinks", YoutubeVideoLinks);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

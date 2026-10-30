@@ -57,6 +57,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Calendars.Schedules.Item.Association
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.CalendarsCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.CalendarsCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.HighLevel.OpenApiClient.Models.CalendarsCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.RemoveCalendarFromSchedule200Response>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.RemoveCalendarFromSchedule200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -84,6 +86,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Calendars.Schedules.Item.Association
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.CalendarsCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.CalendarsCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.HighLevel.OpenApiClient.Models.CalendarsCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.AddCalendarToSchedule200Response>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.AddCalendarToSchedule200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

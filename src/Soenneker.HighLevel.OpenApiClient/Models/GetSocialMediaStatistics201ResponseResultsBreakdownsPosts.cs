@@ -11,21 +11,35 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetSocialMediaStatistics201ResponseResultsBreakdownsPosts : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("platforms") is { } nullNodePlatforms && nullNodePlatforms.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Platforms = null;
+            if (parseNode.GetChildNode("total") is { } nullNodeTotal && nullNodeTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Total = null;
+            if (parseNode.GetChildNode("totalChange") is { } nullNodeTotalChange && nullNodeTotalChange.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalChange = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The platforms property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsBreakdownsPostsPlatformsProperty? Platforms { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsBreakdownsPostsPlatformsProperty? Platforms { get => _explicitNullValuePlatforms; set { _explicitNullValuePlatforms = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platforms"); else _explicitNullProperties?.Remove("platforms"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsBreakdownsPostsPlatformsProperty? _explicitNullValuePlatforms = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsBreakdownsPostsPlatformsProperty Platforms { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsBreakdownsPostsPlatformsProperty Platforms { get => _explicitNullValuePlatforms; set { _explicitNullValuePlatforms = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platforms"); else _explicitNullProperties?.Remove("platforms"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsBreakdownsPostsPlatformsProperty _explicitNullValuePlatforms = default!;
 #endif
         /// <summary>The total property</summary>
-        public double? Total { get; set; }
+        public double? Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total"); else _explicitNullProperties?.Remove("total"); } }
+        private double? _explicitNullValueTotal = default!;
         /// <summary>The totalChange property</summary>
-        public double? TotalChange { get; set; }
+        public double? TotalChange { get => _explicitNullValueTotalChange; set { _explicitNullValueTotalChange = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalChange"); else _explicitNullProperties?.Remove("totalChange"); } }
+        private double? _explicitNullValueTotalChange = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsBreakdownsPosts"/> and sets the default values.
         /// </summary>
@@ -41,7 +55,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsBreakdownsPosts CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsBreakdownsPosts();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsBreakdownsPosts(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -66,6 +80,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsBreakdownsPostsPlatformsProperty>("platforms", Platforms);
             writer.WriteDoubleValue("total", Total);
             writer.WriteDoubleValue("totalChange", TotalChange);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

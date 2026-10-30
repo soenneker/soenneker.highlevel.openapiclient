@@ -49,7 +49,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Funnels.Lookup.Redirect.List
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.RedirectListResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.RedirectListResponseDto.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.RedirectListResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.RedirectListResponseDto.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieves a list of all URL redirects based on the given query parameters.

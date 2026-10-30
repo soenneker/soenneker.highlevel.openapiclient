@@ -11,40 +11,59 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CreateRelationReqDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("associationId") is { } nullNodeAssociationId && nullNodeAssociationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssociationId = null;
+            if (parseNode.GetChildNode("firstRecordId") is { } nullNodeFirstRecordId && nullNodeFirstRecordId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstRecordId = null;
+            if (parseNode.GetChildNode("locationId") is { } nullNodeLocationId && nullNodeLocationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationId = null;
+            if (parseNode.GetChildNode("secondRecordId") is { } nullNodeSecondRecordId && nullNodeSecondRecordId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecondRecordId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Association&apos;s Id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AssociationId { get; set; }
+        public string? AssociationId { get => _explicitNullValueAssociationId; set { _explicitNullValueAssociationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("associationId"); else _explicitNullProperties?.Remove("associationId"); } }
+        private string? _explicitNullValueAssociationId = default!;
 #nullable restore
 #else
-        public string AssociationId { get; set; }
+        public string AssociationId { get => _explicitNullValueAssociationId; set { _explicitNullValueAssociationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("associationId"); else _explicitNullProperties?.Remove("associationId"); } }
+        private string _explicitNullValueAssociationId = default!;
 #endif
         /// <summary>First Record&apos;s Id. For instance, if you have an association between a contact and a custom object, and you specify the contact as the first object while creating the association, then your firstRecordId would be the contactId </summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FirstRecordId { get; set; }
+        public string? FirstRecordId { get => _explicitNullValueFirstRecordId; set { _explicitNullValueFirstRecordId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("firstRecordId"); else _explicitNullProperties?.Remove("firstRecordId"); } }
+        private string? _explicitNullValueFirstRecordId = default!;
 #nullable restore
 #else
-        public string FirstRecordId { get; set; }
+        public string FirstRecordId { get => _explicitNullValueFirstRecordId; set { _explicitNullValueFirstRecordId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("firstRecordId"); else _explicitNullProperties?.Remove("firstRecordId"); } }
+        private string _explicitNullValueFirstRecordId = default!;
 #endif
         /// <summary>Your Sub Account&apos;s ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LocationId { get; set; }
+        public string? LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
+        private string? _explicitNullValueLocationId = default!;
 #nullable restore
 #else
-        public string LocationId { get; set; }
+        public string LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
+        private string _explicitNullValueLocationId = default!;
 #endif
         /// <summary>Second Record&apos;s Id.For instance, if you have an association between a contact and a custom object, and you specify the custom object as the second entity while creating the association, then your secondRecordId would be the customObject record Id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SecondRecordId { get; set; }
+        public string? SecondRecordId { get => _explicitNullValueSecondRecordId; set { _explicitNullValueSecondRecordId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondRecordId"); else _explicitNullProperties?.Remove("secondRecordId"); } }
+        private string? _explicitNullValueSecondRecordId = default!;
 #nullable restore
 #else
-        public string SecondRecordId { get; set; }
+        public string SecondRecordId { get => _explicitNullValueSecondRecordId; set { _explicitNullValueSecondRecordId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondRecordId"); else _explicitNullProperties?.Remove("secondRecordId"); } }
+        private string _explicitNullValueSecondRecordId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CreateRelationReqDto"/> and sets the default values.
@@ -61,7 +80,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.CreateRelationReqDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.CreateRelationReqDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.CreateRelationReqDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,6 +107,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("firstRecordId", FirstRecordId);
             writer.WriteStringValue("locationId", LocationId);
             writer.WriteStringValue("secondRecordId", SecondRecordId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

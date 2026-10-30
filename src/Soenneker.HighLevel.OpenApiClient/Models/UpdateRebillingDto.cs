@@ -11,27 +11,42 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class UpdateRebillingDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("config") is { } nullNodeConfig && nullNodeConfig.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Config = null;
+            if (parseNode.GetChildNode("locationIds") is { } nullNodeLocationIds && nullNodeLocationIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationIds = null;
+            if (parseNode.GetChildNode("product") is { } nullNodeProduct && nullNodeProduct.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Product = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Configuration for rebilling settings</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateRebillingDtoConfig? Config { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateRebillingDtoConfig? Config { get => _explicitNullValueConfig; set { _explicitNullValueConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("config"); else _explicitNullProperties?.Remove("config"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.UpdateRebillingDtoConfig? _explicitNullValueConfig = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateRebillingDtoConfig Config { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateRebillingDtoConfig Config { get => _explicitNullValueConfig; set { _explicitNullValueConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("config"); else _explicitNullProperties?.Remove("config"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.UpdateRebillingDtoConfig _explicitNullValueConfig = default!;
 #endif
         /// <summary>Array of location IDs to update rebilling for</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? LocationIds { get; set; }
+        public List<string>? LocationIds { get => _explicitNullValueLocationIds; set { _explicitNullValueLocationIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationIds"); else _explicitNullProperties?.Remove("locationIds"); } }
+        private List<string>? _explicitNullValueLocationIds = default!;
 #nullable restore
 #else
-        public List<string> LocationIds { get; set; }
+        public List<string> LocationIds { get => _explicitNullValueLocationIds; set { _explicitNullValueLocationIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationIds"); else _explicitNullProperties?.Remove("locationIds"); } }
+        private List<string> _explicitNullValueLocationIds = default!;
 #endif
         /// <summary>The product to update rebilling for</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateRebillingDtoProduct? Product { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateRebillingDtoProduct? Product { get => _explicitNullValueProduct; set { _explicitNullValueProduct = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product"); else _explicitNullProperties?.Remove("product"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.UpdateRebillingDtoProduct? _explicitNullValueProduct = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpdateRebillingDto"/> and sets the default values.
         /// </summary>
@@ -47,7 +62,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.UpdateRebillingDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.UpdateRebillingDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.UpdateRebillingDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -72,6 +87,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateRebillingDtoConfig>("config", Config);
             writer.WriteCollectionOfPrimitiveValues<string>("locationIds", LocationIds);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateRebillingDtoProduct>("product", Product);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

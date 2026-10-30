@@ -12,7 +12,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UpdateActionResponseDtoActionParameters : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentBookingActionParameters"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -89,37 +94,56 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             var result = new global::Soenneker.HighLevel.OpenApiClient.Models.UpdateActionResponseDtoActionParameters();
             if("AppointmentBookingActionParameters".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.AppointmentBookingActionParameters = new global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentBookingActionParameters();
+                
             }
             else if("CallTransferActionParameters".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.CallTransferActionParameters = new global::Soenneker.HighLevel.OpenApiClient.Models.CallTransferActionParameters();
+                
             }
             else if("CustomActionParameters".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.CustomActionParameters = new global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParameters();
+                
             }
             else if("DataExtractionActionParameters".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.DataExtractionActionParameters = new global::Soenneker.HighLevel.OpenApiClient.Models.DataExtractionActionParameters();
+                
             }
             else if("InCallDataExtractionActionParameters".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.InCallDataExtractionActionParameters = new global::Soenneker.HighLevel.OpenApiClient.Models.InCallDataExtractionActionParameters();
+                
             }
             else if("KnowledgeBaseParameters".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.KnowledgeBaseParameters = new global::Soenneker.HighLevel.OpenApiClient.Models.KnowledgeBaseParameters();
+                
             }
             else if("SmsParameters".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.SmsParameters = new global::Soenneker.HighLevel.OpenApiClient.Models.SmsParameters();
+                
             }
             else if("WorkflowTriggerParameters".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.WorkflowTriggerParameters = new global::Soenneker.HighLevel.OpenApiClient.Models.WorkflowTriggerParameters();
+                
             }
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("triggerPrompt") != null && parseNode.GetChildNode("transferToType") != null && (parseNode.GetChildNode("transferToType")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag2 && ("number".Equals(tag2.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("transferToValue") != null && parseNode.GetChildNode("triggerMessage") != null))();
+            bool matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("contactFieldId") != null && parseNode.GetChildNode("description") != null && parseNode.GetChildNode("examples") != null))();
+            bool matchesUnionBranch2 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("contactFieldId") != null && parseNode.GetChildNode("description") != null && parseNode.GetChildNode("examples") != null))();
+            bool matchesUnionBranch3 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("triggerPrompt") != null && parseNode.GetChildNode("triggerMessage") != null && parseNode.GetChildNode("workflowId") != null))();
+            bool matchesUnionBranch4 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("triggerPrompt") != null && parseNode.GetChildNode("triggerMessage") != null && parseNode.GetChildNode("messageBody") != null))();
+            bool matchesUnionBranch5 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("calendarId") != null && parseNode.GetChildNode("daysOfOfferingDates") != null && parseNode.GetChildNode("slotsPerDay") != null && parseNode.GetChildNode("hoursBetweenSlots") != null))();
+            bool matchesUnionBranch6 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("triggerPrompt") != null && parseNode.GetChildNode("triggerMessage") != null && parseNode.GetChildNode("apiDetails") != null))();
+            bool matchesUnionBranch7 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("triggerPrompt") != null && parseNode.GetChildNode("knowledgeBaseId") != null))();
+            if (result.AppointmentBookingActionParameters == null && result.CallTransferActionParameters == null && result.CustomActionParameters == null && result.DataExtractionActionParameters == null && result.InCallDataExtractionActionParameters == null && result.KnowledgeBaseParameters == null && result.SmsParameters == null && result.WorkflowTriggerParameters == null && matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5 && !matchesUnionBranch6 && !matchesUnionBranch7) result.CallTransferActionParameters = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.CallTransferActionParameters(), parseNode);
+            if (result.AppointmentBookingActionParameters == null && result.CallTransferActionParameters == null && result.CustomActionParameters == null && result.DataExtractionActionParameters == null && result.InCallDataExtractionActionParameters == null && result.KnowledgeBaseParameters == null && result.SmsParameters == null && result.WorkflowTriggerParameters == null && matchesUnionBranch1 && !matchesUnionBranch0 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5 && !matchesUnionBranch6 && !matchesUnionBranch7) result.DataExtractionActionParameters = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.DataExtractionActionParameters(), parseNode);
+            if (result.AppointmentBookingActionParameters == null && result.CallTransferActionParameters == null && result.CustomActionParameters == null && result.DataExtractionActionParameters == null && result.InCallDataExtractionActionParameters == null && result.KnowledgeBaseParameters == null && result.SmsParameters == null && result.WorkflowTriggerParameters == null && matchesUnionBranch2 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5 && !matchesUnionBranch6 && !matchesUnionBranch7) result.InCallDataExtractionActionParameters = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.InCallDataExtractionActionParameters(), parseNode);
+            if (result.AppointmentBookingActionParameters == null && result.CallTransferActionParameters == null && result.CustomActionParameters == null && result.DataExtractionActionParameters == null && result.InCallDataExtractionActionParameters == null && result.KnowledgeBaseParameters == null && result.SmsParameters == null && result.WorkflowTriggerParameters == null && matchesUnionBranch3 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch4 && !matchesUnionBranch5 && !matchesUnionBranch6 && !matchesUnionBranch7) result.WorkflowTriggerParameters = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.WorkflowTriggerParameters(), parseNode);
+            if (result.AppointmentBookingActionParameters == null && result.CallTransferActionParameters == null && result.CustomActionParameters == null && result.DataExtractionActionParameters == null && result.InCallDataExtractionActionParameters == null && result.KnowledgeBaseParameters == null && result.SmsParameters == null && result.WorkflowTriggerParameters == null && matchesUnionBranch4 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch5 && !matchesUnionBranch6 && !matchesUnionBranch7) result.SmsParameters = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.SmsParameters(), parseNode);
+            if (result.AppointmentBookingActionParameters == null && result.CallTransferActionParameters == null && result.CustomActionParameters == null && result.DataExtractionActionParameters == null && result.InCallDataExtractionActionParameters == null && result.KnowledgeBaseParameters == null && result.SmsParameters == null && result.WorkflowTriggerParameters == null && matchesUnionBranch5 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch6 && !matchesUnionBranch7) result.AppointmentBookingActionParameters = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentBookingActionParameters(), parseNode);
+            if (result.AppointmentBookingActionParameters == null && result.CallTransferActionParameters == null && result.CustomActionParameters == null && result.DataExtractionActionParameters == null && result.InCallDataExtractionActionParameters == null && result.KnowledgeBaseParameters == null && result.SmsParameters == null && result.WorkflowTriggerParameters == null && matchesUnionBranch6 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5 && !matchesUnionBranch7) result.CustomActionParameters = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParameters(), parseNode);
+            if (result.AppointmentBookingActionParameters == null && result.CallTransferActionParameters == null && result.CustomActionParameters == null && result.DataExtractionActionParameters == null && result.InCallDataExtractionActionParameters == null && result.KnowledgeBaseParameters == null && result.SmsParameters == null && result.WorkflowTriggerParameters == null && matchesUnionBranch7 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5 && !matchesUnionBranch6) result.KnowledgeBaseParameters = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.KnowledgeBaseParameters(), parseNode);
+            if (result.AppointmentBookingActionParameters == null && result.CallTransferActionParameters == null && result.CustomActionParameters == null && result.DataExtractionActionParameters == null && result.InCallDataExtractionActionParameters == null && result.KnowledgeBaseParameters == null && result.SmsParameters == null && result.WorkflowTriggerParameters == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -167,37 +191,56 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (AppointmentBookingActionParameters == null && CallTransferActionParameters == null && CustomActionParameters == null && DataExtractionActionParameters == null && InCallDataExtractionActionParameters == null && KnowledgeBaseParameters == null && SmsParameters == null && WorkflowTriggerParameters == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (AppointmentBookingActionParameters != null && CallTransferActionParameters == null && CustomActionParameters == null && DataExtractionActionParameters == null && InCallDataExtractionActionParameters == null && KnowledgeBaseParameters == null && SmsParameters == null && WorkflowTriggerParameters == null) { if (AppointmentBookingActionParameters is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, AppointmentBookingActionParameters); return; }
+            if (CallTransferActionParameters != null && AppointmentBookingActionParameters == null && CustomActionParameters == null && DataExtractionActionParameters == null && InCallDataExtractionActionParameters == null && KnowledgeBaseParameters == null && SmsParameters == null && WorkflowTriggerParameters == null) { if (CallTransferActionParameters is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, CallTransferActionParameters); return; }
+            if (CustomActionParameters != null && AppointmentBookingActionParameters == null && CallTransferActionParameters == null && DataExtractionActionParameters == null && InCallDataExtractionActionParameters == null && KnowledgeBaseParameters == null && SmsParameters == null && WorkflowTriggerParameters == null) { if (CustomActionParameters is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, CustomActionParameters); return; }
+            if (DataExtractionActionParameters != null && AppointmentBookingActionParameters == null && CallTransferActionParameters == null && CustomActionParameters == null && InCallDataExtractionActionParameters == null && KnowledgeBaseParameters == null && SmsParameters == null && WorkflowTriggerParameters == null) { if (DataExtractionActionParameters is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, DataExtractionActionParameters); return; }
+            if (InCallDataExtractionActionParameters != null && AppointmentBookingActionParameters == null && CallTransferActionParameters == null && CustomActionParameters == null && DataExtractionActionParameters == null && KnowledgeBaseParameters == null && SmsParameters == null && WorkflowTriggerParameters == null) { if (InCallDataExtractionActionParameters is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, InCallDataExtractionActionParameters); return; }
+            if (KnowledgeBaseParameters != null && AppointmentBookingActionParameters == null && CallTransferActionParameters == null && CustomActionParameters == null && DataExtractionActionParameters == null && InCallDataExtractionActionParameters == null && SmsParameters == null && WorkflowTriggerParameters == null) { if (KnowledgeBaseParameters is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, KnowledgeBaseParameters); return; }
+            if (SmsParameters != null && AppointmentBookingActionParameters == null && CallTransferActionParameters == null && CustomActionParameters == null && DataExtractionActionParameters == null && InCallDataExtractionActionParameters == null && KnowledgeBaseParameters == null && WorkflowTriggerParameters == null) { if (SmsParameters is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, SmsParameters); return; }
+            if (WorkflowTriggerParameters != null && AppointmentBookingActionParameters == null && CallTransferActionParameters == null && CustomActionParameters == null && DataExtractionActionParameters == null && InCallDataExtractionActionParameters == null && KnowledgeBaseParameters == null && SmsParameters == null) { if (WorkflowTriggerParameters is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, WorkflowTriggerParameters); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(AppointmentBookingActionParameters != null)
             {
+                if (AppointmentBookingActionParameters is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentBookingActionParameters>(null, AppointmentBookingActionParameters);
             }
             else if(CallTransferActionParameters != null)
             {
+                if (CallTransferActionParameters is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CallTransferActionParameters>(null, CallTransferActionParameters);
             }
             else if(CustomActionParameters != null)
             {
+                if (CustomActionParameters is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParameters>(null, CustomActionParameters);
             }
             else if(DataExtractionActionParameters != null)
             {
+                if (DataExtractionActionParameters is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DataExtractionActionParameters>(null, DataExtractionActionParameters);
             }
             else if(InCallDataExtractionActionParameters != null)
             {
+                if (InCallDataExtractionActionParameters is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.InCallDataExtractionActionParameters>(null, InCallDataExtractionActionParameters);
             }
             else if(KnowledgeBaseParameters != null)
             {
+                if (KnowledgeBaseParameters is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.KnowledgeBaseParameters>(null, KnowledgeBaseParameters);
             }
             else if(SmsParameters != null)
             {
+                if (SmsParameters is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SmsParameters>(null, SmsParameters);
             }
             else if(WorkflowTriggerParameters != null)
             {
+                if (WorkflowTriggerParameters is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.WorkflowTriggerParameters>(null, WorkflowTriggerParameters);
             }
         }

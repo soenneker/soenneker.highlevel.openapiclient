@@ -60,6 +60,8 @@ namespace Soenneker.HighLevel.OpenApiClient.SaasApi.PublicApi.SaasPlan.Item
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.UnauthorizedDto.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.HighLevel.OpenApiClient.Models.ResourceNotFoundDto.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.HighLevel.OpenApiClient.Models.InternalServerErrorDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.SaasPlanResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.SaasPlanResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

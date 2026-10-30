@@ -53,6 +53,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Payments.Coupon.List
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsCommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.ListCouponsResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.ListCouponsResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

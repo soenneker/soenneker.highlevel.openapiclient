@@ -12,32 +12,48 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GetSocialMediaStatistics201ResponseResultsPlatformTotals : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("followers") is { } nullNodeFollowers && nullNodeFollowers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Followers = null;
+            if (parseNode.GetChildNode("impressions") is { } nullNodeImpressions && nullNodeImpressions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Impressions = null;
+            if (parseNode.GetChildNode("likes") is { } nullNodeLikes && nullNodeLikes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Likes = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The followers property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsPlatformTotalsFollowersProperty? Followers { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsPlatformTotalsFollowersProperty? Followers { get => _explicitNullValueFollowers; set { _explicitNullValueFollowers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("followers"); else _explicitNullProperties?.Remove("followers"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsPlatformTotalsFollowersProperty? _explicitNullValueFollowers = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsPlatformTotalsFollowersProperty Followers { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsPlatformTotalsFollowersProperty Followers { get => _explicitNullValueFollowers; set { _explicitNullValueFollowers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("followers"); else _explicitNullProperties?.Remove("followers"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsPlatformTotalsFollowersProperty _explicitNullValueFollowers = default!;
 #endif
         /// <summary>The impressions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsPlatformTotalsImpressionsProperty? Impressions { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsPlatformTotalsImpressionsProperty? Impressions { get => _explicitNullValueImpressions; set { _explicitNullValueImpressions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("impressions"); else _explicitNullProperties?.Remove("impressions"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsPlatformTotalsImpressionsProperty? _explicitNullValueImpressions = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsPlatformTotalsImpressionsProperty Impressions { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsPlatformTotalsImpressionsProperty Impressions { get => _explicitNullValueImpressions; set { _explicitNullValueImpressions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("impressions"); else _explicitNullProperties?.Remove("impressions"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsPlatformTotalsImpressionsProperty _explicitNullValueImpressions = default!;
 #endif
         /// <summary>The likes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsPlatformTotalsLikesProperty? Likes { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsPlatformTotalsLikesProperty? Likes { get => _explicitNullValueLikes; set { _explicitNullValueLikes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("likes"); else _explicitNullProperties?.Remove("likes"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsPlatformTotalsLikesProperty? _explicitNullValueLikes = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsPlatformTotalsLikesProperty Likes { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsPlatformTotalsLikesProperty Likes { get => _explicitNullValueLikes; set { _explicitNullValueLikes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("likes"); else _explicitNullProperties?.Remove("likes"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsPlatformTotalsLikesProperty _explicitNullValueLikes = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsPlatformTotals"/> and sets the default values.
@@ -54,7 +70,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsPlatformTotals CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsPlatformTotals();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsPlatformTotals(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +95,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsPlatformTotalsFollowersProperty>("followers", Followers);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsPlatformTotalsImpressionsProperty>("impressions", Impressions);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsPlatformTotalsLikesProperty>("likes", Likes);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

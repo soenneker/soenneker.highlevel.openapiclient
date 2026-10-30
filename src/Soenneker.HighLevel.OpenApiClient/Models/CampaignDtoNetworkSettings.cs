@@ -12,13 +12,24 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CampaignDtoNetworkSettings : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("targetContentNetwork") is { } nullNodeTargetContentNetwork && nullNodeTargetContentNetwork.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetContentNetwork = null;
+            if (parseNode.GetChildNode("targetSearchNetwork") is { } nullNodeTargetSearchNetwork && nullNodeTargetSearchNetwork.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetSearchNetwork = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Target Google Display Network</summary>
-        public bool? TargetContentNetwork { get; set; }
+        public bool? TargetContentNetwork { get => _explicitNullValueTargetContentNetwork; set { _explicitNullValueTargetContentNetwork = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("targetContentNetwork"); else _explicitNullProperties?.Remove("targetContentNetwork"); } }
+        private bool? _explicitNullValueTargetContentNetwork = default!;
         /// <summary>Target Google Search Network</summary>
-        public bool? TargetSearchNetwork { get; set; }
+        public bool? TargetSearchNetwork { get => _explicitNullValueTargetSearchNetwork; set { _explicitNullValueTargetSearchNetwork = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("targetSearchNetwork"); else _explicitNullProperties?.Remove("targetSearchNetwork"); } }
+        private bool? _explicitNullValueTargetSearchNetwork = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CampaignDtoNetworkSettings"/> and sets the default values.
         /// </summary>
@@ -34,7 +45,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.CampaignDtoNetworkSettings CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.CampaignDtoNetworkSettings();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.CampaignDtoNetworkSettings(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -57,6 +68,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("targetContentNetwork", TargetContentNetwork);
             writer.WriteBoolValue("targetSearchNetwork", TargetSearchNetwork);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

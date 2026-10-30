@@ -11,26 +11,46 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetMessageTranscriptionResponseDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("confidence") is { } nullNodeConfidence && nullNodeConfidence.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Confidence = null;
+            if (parseNode.GetChildNode("endTime") is { } nullNodeEndTime && nullNodeEndTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndTime = null;
+            if (parseNode.GetChildNode("mediaChannel") is { } nullNodeMediaChannel && nullNodeMediaChannel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MediaChannel = null;
+            if (parseNode.GetChildNode("sentenceIndex") is { } nullNodeSentenceIndex && nullNodeSentenceIndex.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SentenceIndex = null;
+            if (parseNode.GetChildNode("startTime") is { } nullNodeStartTime && nullNodeStartTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartTime = null;
+            if (parseNode.GetChildNode("transcript") is { } nullNodeTranscript && nullNodeTranscript.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Transcript = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Confidence of the transcription</summary>
-        public double? Confidence { get; set; }
+        public double? Confidence { get => _explicitNullValueConfidence; set { _explicitNullValueConfidence = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("confidence"); else _explicitNullProperties?.Remove("confidence"); } }
+        private double? _explicitNullValueConfidence = default!;
         /// <summary>End time of the sentence in milliseconds</summary>
-        public double? EndTime { get; set; }
+        public double? EndTime { get => _explicitNullValueEndTime; set { _explicitNullValueEndTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endTime"); else _explicitNullProperties?.Remove("endTime"); } }
+        private double? _explicitNullValueEndTime = default!;
         /// <summary>Media channel describes the user interaction channel</summary>
-        public double? MediaChannel { get; set; }
+        public double? MediaChannel { get => _explicitNullValueMediaChannel; set { _explicitNullValueMediaChannel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mediaChannel"); else _explicitNullProperties?.Remove("mediaChannel"); } }
+        private double? _explicitNullValueMediaChannel = default!;
         /// <summary>Index of the sentence in the transcription</summary>
-        public double? SentenceIndex { get; set; }
+        public double? SentenceIndex { get => _explicitNullValueSentenceIndex; set { _explicitNullValueSentenceIndex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sentenceIndex"); else _explicitNullProperties?.Remove("sentenceIndex"); } }
+        private double? _explicitNullValueSentenceIndex = default!;
         /// <summary>Start time of the sentence in milliseconds</summary>
-        public double? StartTime { get; set; }
+        public double? StartTime { get => _explicitNullValueStartTime; set { _explicitNullValueStartTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startTime"); else _explicitNullProperties?.Remove("startTime"); } }
+        private double? _explicitNullValueStartTime = default!;
         /// <summary>Transcript of the sentence</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Transcript { get; set; }
+        public string? Transcript { get => _explicitNullValueTranscript; set { _explicitNullValueTranscript = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transcript"); else _explicitNullProperties?.Remove("transcript"); } }
+        private string? _explicitNullValueTranscript = default!;
 #nullable restore
 #else
-        public string Transcript { get; set; }
+        public string Transcript { get => _explicitNullValueTranscript; set { _explicitNullValueTranscript = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transcript"); else _explicitNullProperties?.Remove("transcript"); } }
+        private string _explicitNullValueTranscript = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GetMessageTranscriptionResponseDto"/> and sets the default values.
@@ -47,7 +67,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.GetMessageTranscriptionResponseDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.GetMessageTranscriptionResponseDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.GetMessageTranscriptionResponseDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +98,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteDoubleValue("sentenceIndex", SentenceIndex);
             writer.WriteDoubleValue("startTime", StartTime);
             writer.WriteStringValue("transcript", Transcript);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

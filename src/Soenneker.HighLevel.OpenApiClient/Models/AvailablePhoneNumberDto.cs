@@ -11,108 +11,155 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AvailablePhoneNumberDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("addressRequirements") is { } nullNodeAddressRequirements && nullNodeAddressRequirements.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressRequirements = null;
+            if (parseNode.GetChildNode("beta") is { } nullNodeBeta && nullNodeBeta.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Beta = null;
+            if (parseNode.GetChildNode("capabilities") is { } nullNodeCapabilities && nullNodeCapabilities.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Capabilities = null;
+            if (parseNode.GetChildNode("friendlyName") is { } nullNodeFriendlyName && nullNodeFriendlyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FriendlyName = null;
+            if (parseNode.GetChildNode("isoCountry") is { } nullNodeIsoCountry && nullNodeIsoCountry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsoCountry = null;
+            if (parseNode.GetChildNode("lata") is { } nullNodeLata && nullNodeLata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Lata = null;
+            if (parseNode.GetChildNode("latitude") is { } nullNodeLatitude && nullNodeLatitude.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Latitude = null;
+            if (parseNode.GetChildNode("locality") is { } nullNodeLocality && nullNodeLocality.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locality = null;
+            if (parseNode.GetChildNode("longitude") is { } nullNodeLongitude && nullNodeLongitude.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Longitude = null;
+            if (parseNode.GetChildNode("phoneNumber") is { } nullNodePhoneNumber && nullNodePhoneNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhoneNumber = null;
+            if (parseNode.GetChildNode("postalCode") is { } nullNodePostalCode && nullNodePostalCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PostalCode = null;
+            if (parseNode.GetChildNode("price") is { } nullNodePrice && nullNodePrice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Price = null;
+            if (parseNode.GetChildNode("rateCenter") is { } nullNodeRateCenter && nullNodeRateCenter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RateCenter = null;
+            if (parseNode.GetChildNode("region") is { } nullNodeRegion && nullNodeRegion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Region = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Address requirements for purchasing this number</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AvailablePhoneNumberDtoAddressRequirements? AddressRequirements { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AvailablePhoneNumberDtoAddressRequirements? AddressRequirements { get => _explicitNullValueAddressRequirements; set { _explicitNullValueAddressRequirements = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("addressRequirements"); else _explicitNullProperties?.Remove("addressRequirements"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.AvailablePhoneNumberDtoAddressRequirements? _explicitNullValueAddressRequirements = default!;
         /// <summary>Whether this is a beta number</summary>
-        public bool? Beta { get; set; }
+        public bool? Beta { get => _explicitNullValueBeta; set { _explicitNullValueBeta = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("beta"); else _explicitNullProperties?.Remove("beta"); } }
+        private bool? _explicitNullValueBeta = default!;
         /// <summary>Communication capabilities supported by this number</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AvailablePhoneNumberDtoCapabilities? Capabilities { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AvailablePhoneNumberDtoCapabilities? Capabilities { get => _explicitNullValueCapabilities; set { _explicitNullValueCapabilities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("capabilities"); else _explicitNullProperties?.Remove("capabilities"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.AvailablePhoneNumberDtoCapabilities? _explicitNullValueCapabilities = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AvailablePhoneNumberDtoCapabilities Capabilities { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AvailablePhoneNumberDtoCapabilities Capabilities { get => _explicitNullValueCapabilities; set { _explicitNullValueCapabilities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("capabilities"); else _explicitNullProperties?.Remove("capabilities"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.AvailablePhoneNumberDtoCapabilities _explicitNullValueCapabilities = default!;
 #endif
         /// <summary>Human-readable formatted phone number</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FriendlyName { get; set; }
+        public string? FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("friendlyName"); else _explicitNullProperties?.Remove("friendlyName"); } }
+        private string? _explicitNullValueFriendlyName = default!;
 #nullable restore
 #else
-        public string FriendlyName { get; set; }
+        public string FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("friendlyName"); else _explicitNullProperties?.Remove("friendlyName"); } }
+        private string _explicitNullValueFriendlyName = default!;
 #endif
         /// <summary>ISO 3166-1 alpha-2 country code</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IsoCountry { get; set; }
+        public string? IsoCountry { get => _explicitNullValueIsoCountry; set { _explicitNullValueIsoCountry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isoCountry"); else _explicitNullProperties?.Remove("isoCountry"); } }
+        private string? _explicitNullValueIsoCountry = default!;
 #nullable restore
 #else
-        public string IsoCountry { get; set; }
+        public string IsoCountry { get => _explicitNullValueIsoCountry; set { _explicitNullValueIsoCountry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isoCountry"); else _explicitNullProperties?.Remove("isoCountry"); } }
+        private string _explicitNullValueIsoCountry = default!;
 #endif
         /// <summary>Local Access and Transport Area code</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Lata { get; set; }
+        public string? Lata { get => _explicitNullValueLata; set { _explicitNullValueLata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lata"); else _explicitNullProperties?.Remove("lata"); } }
+        private string? _explicitNullValueLata = default!;
 #nullable restore
 #else
-        public string Lata { get; set; }
+        public string Lata { get => _explicitNullValueLata; set { _explicitNullValueLata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lata"); else _explicitNullProperties?.Remove("lata"); } }
+        private string _explicitNullValueLata = default!;
 #endif
         /// <summary>Latitude coordinate of the number&apos;s location</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Latitude { get; set; }
+        public string? Latitude { get => _explicitNullValueLatitude; set { _explicitNullValueLatitude = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("latitude"); else _explicitNullProperties?.Remove("latitude"); } }
+        private string? _explicitNullValueLatitude = default!;
 #nullable restore
 #else
-        public string Latitude { get; set; }
+        public string Latitude { get => _explicitNullValueLatitude; set { _explicitNullValueLatitude = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("latitude"); else _explicitNullProperties?.Remove("latitude"); } }
+        private string _explicitNullValueLatitude = default!;
 #endif
         /// <summary>City or locality of the number</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Locality { get; set; }
+        public string? Locality { get => _explicitNullValueLocality; set { _explicitNullValueLocality = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locality"); else _explicitNullProperties?.Remove("locality"); } }
+        private string? _explicitNullValueLocality = default!;
 #nullable restore
 #else
-        public string Locality { get; set; }
+        public string Locality { get => _explicitNullValueLocality; set { _explicitNullValueLocality = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locality"); else _explicitNullProperties?.Remove("locality"); } }
+        private string _explicitNullValueLocality = default!;
 #endif
         /// <summary>Longitude coordinate of the number&apos;s location</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Longitude { get; set; }
+        public string? Longitude { get => _explicitNullValueLongitude; set { _explicitNullValueLongitude = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("longitude"); else _explicitNullProperties?.Remove("longitude"); } }
+        private string? _explicitNullValueLongitude = default!;
 #nullable restore
 #else
-        public string Longitude { get; set; }
+        public string Longitude { get => _explicitNullValueLongitude; set { _explicitNullValueLongitude = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("longitude"); else _explicitNullProperties?.Remove("longitude"); } }
+        private string _explicitNullValueLongitude = default!;
 #endif
         /// <summary>E.164 formatted phone number</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PhoneNumber { get; set; }
+        public string? PhoneNumber { get => _explicitNullValuePhoneNumber; set { _explicitNullValuePhoneNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phoneNumber"); else _explicitNullProperties?.Remove("phoneNumber"); } }
+        private string? _explicitNullValuePhoneNumber = default!;
 #nullable restore
 #else
-        public string PhoneNumber { get; set; }
+        public string PhoneNumber { get => _explicitNullValuePhoneNumber; set { _explicitNullValuePhoneNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phoneNumber"); else _explicitNullProperties?.Remove("phoneNumber"); } }
+        private string _explicitNullValuePhoneNumber = default!;
 #endif
         /// <summary>Postal code of the number</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PostalCode { get; set; }
+        public string? PostalCode { get => _explicitNullValuePostalCode; set { _explicitNullValuePostalCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("postalCode"); else _explicitNullProperties?.Remove("postalCode"); } }
+        private string? _explicitNullValuePostalCode = default!;
 #nullable restore
 #else
-        public string PostalCode { get; set; }
+        public string PostalCode { get => _explicitNullValuePostalCode; set { _explicitNullValuePostalCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("postalCode"); else _explicitNullProperties?.Remove("postalCode"); } }
+        private string _explicitNullValuePostalCode = default!;
 #endif
         /// <summary>Pricing information for this number</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AvailablePhoneNumberDtoPrice? Price { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AvailablePhoneNumberDtoPrice? Price { get => _explicitNullValuePrice; set { _explicitNullValuePrice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("price"); else _explicitNullProperties?.Remove("price"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.AvailablePhoneNumberDtoPrice? _explicitNullValuePrice = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AvailablePhoneNumberDtoPrice Price { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AvailablePhoneNumberDtoPrice Price { get => _explicitNullValuePrice; set { _explicitNullValuePrice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("price"); else _explicitNullProperties?.Remove("price"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.AvailablePhoneNumberDtoPrice _explicitNullValuePrice = default!;
 #endif
         /// <summary>Rate center of the number</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RateCenter { get; set; }
+        public string? RateCenter { get => _explicitNullValueRateCenter; set { _explicitNullValueRateCenter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rateCenter"); else _explicitNullProperties?.Remove("rateCenter"); } }
+        private string? _explicitNullValueRateCenter = default!;
 #nullable restore
 #else
-        public string RateCenter { get; set; }
+        public string RateCenter { get => _explicitNullValueRateCenter; set { _explicitNullValueRateCenter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rateCenter"); else _explicitNullProperties?.Remove("rateCenter"); } }
+        private string _explicitNullValueRateCenter = default!;
 #endif
         /// <summary>State or region abbreviation</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Region { get; set; }
+        public string? Region { get => _explicitNullValueRegion; set { _explicitNullValueRegion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("region"); else _explicitNullProperties?.Remove("region"); } }
+        private string? _explicitNullValueRegion = default!;
 #nullable restore
 #else
-        public string Region { get; set; }
+        public string Region { get => _explicitNullValueRegion; set { _explicitNullValueRegion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("region"); else _explicitNullProperties?.Remove("region"); } }
+        private string _explicitNullValueRegion = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.AvailablePhoneNumberDto"/> and sets the default values.
@@ -129,7 +176,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.AvailablePhoneNumberDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.AvailablePhoneNumberDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.AvailablePhoneNumberDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -176,6 +223,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AvailablePhoneNumberDtoPrice>("price", Price);
             writer.WriteStringValue("rateCenter", RateCenter);
             writer.WriteStringValue("region", Region);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

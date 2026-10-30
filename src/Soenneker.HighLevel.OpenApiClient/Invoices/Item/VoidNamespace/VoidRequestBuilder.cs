@@ -59,6 +59,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Invoices.Item.VoidNamespace
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.VoidInvoice400Response.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.VoidInvoiceResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.VoidInvoiceResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

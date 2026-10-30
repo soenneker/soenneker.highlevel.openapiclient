@@ -55,6 +55,8 @@ namespace Soenneker.HighLevel.OpenApiClient.CustomFields.ObjectKey.Item
             {
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

@@ -72,6 +72,8 @@ namespace Soenneker.HighLevel.OpenApiClient.KnowledgeBase.KnowledgeBases.Faqs
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.KnowledgeBaseUnauthorizedDto.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.UnprocessableDto.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.HighLevel.OpenApiClient.Models.KnowledgeBaseInternalServerErrorDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.ListFaqsResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.ListFaqsResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -103,6 +105,8 @@ namespace Soenneker.HighLevel.OpenApiClient.KnowledgeBase.KnowledgeBases.Faqs
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.KnowledgeBaseUnauthorizedDto.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.UnprocessableDto.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.HighLevel.OpenApiClient.Models.KnowledgeBaseInternalServerErrorDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.CreateFaqResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.CreateFaqResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

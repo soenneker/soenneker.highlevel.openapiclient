@@ -11,72 +11,103 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class SearchPostDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("accounts") is { } nullNodeAccounts && nullNodeAccounts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Accounts = null;
+            if (parseNode.GetChildNode("fromDate") is { } nullNodeFromDate && nullNodeFromDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FromDate = null;
+            if (parseNode.GetChildNode("includeUsers") is { } nullNodeIncludeUsers && nullNodeIncludeUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncludeUsers = null;
+            if (parseNode.GetChildNode("limit") is { } nullNodeLimit && nullNodeLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Limit = null;
+            if (parseNode.GetChildNode("postType") is { } nullNodePostType && nullNodePostType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PostType = null;
+            if (parseNode.GetChildNode("skip") is { } nullNodeSkip && nullNodeSkip.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Skip = null;
+            if (parseNode.GetChildNode("toDate") is { } nullNodeToDate && nullNodeToDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToDate = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>List of account Ids seperated by comma as a string</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Accounts { get; set; }
+        public string? Accounts { get => _explicitNullValueAccounts; set { _explicitNullValueAccounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accounts"); else _explicitNullProperties?.Remove("accounts"); } }
+        private string? _explicitNullValueAccounts = default!;
 #nullable restore
 #else
-        public string Accounts { get; set; }
+        public string Accounts { get => _explicitNullValueAccounts; set { _explicitNullValueAccounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accounts"); else _explicitNullProperties?.Remove("accounts"); } }
+        private string _explicitNullValueAccounts = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>From Date</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FromDate { get; set; }
+        public string? FromDate { get => _explicitNullValueFromDate; set { _explicitNullValueFromDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fromDate"); else _explicitNullProperties?.Remove("fromDate"); } }
+        private string? _explicitNullValueFromDate = default!;
 #nullable restore
 #else
-        public string FromDate { get; set; }
+        public string FromDate { get => _explicitNullValueFromDate; set { _explicitNullValueFromDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fromDate"); else _explicitNullProperties?.Remove("fromDate"); } }
+        private string _explicitNullValueFromDate = default!;
 #endif
         /// <summary>Include User Data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IncludeUsers { get; set; }
+        public string? IncludeUsers { get => _explicitNullValueIncludeUsers; set { _explicitNullValueIncludeUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("includeUsers"); else _explicitNullProperties?.Remove("includeUsers"); } }
+        private string? _explicitNullValueIncludeUsers = default!;
 #nullable restore
 #else
-        public string IncludeUsers { get; set; }
+        public string IncludeUsers { get => _explicitNullValueIncludeUsers; set { _explicitNullValueIncludeUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("includeUsers"); else _explicitNullProperties?.Remove("includeUsers"); } }
+        private string _explicitNullValueIncludeUsers = default!;
 #endif
         /// <summary>The limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Limit { get; set; }
+        public string? Limit { get => _explicitNullValueLimit; set { _explicitNullValueLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("limit"); else _explicitNullProperties?.Remove("limit"); } }
+        private string? _explicitNullValueLimit = default!;
 #nullable restore
 #else
-        public string Limit { get; set; }
+        public string Limit { get => _explicitNullValueLimit; set { _explicitNullValueLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("limit"); else _explicitNullProperties?.Remove("limit"); } }
+        private string _explicitNullValueLimit = default!;
 #endif
         /// <summary>Post Type must be one of the following values: - post, story, reel</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SearchPostDtoPostTypeProperty2? PostType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SearchPostDtoPostTypeProperty? PostType { get => _explicitNullValuePostType; set { _explicitNullValuePostType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("postType"); else _explicitNullProperties?.Remove("postType"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.SearchPostDtoPostTypeProperty? _explicitNullValuePostType = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SearchPostDtoPostTypeProperty2 PostType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SearchPostDtoPostTypeProperty PostType { get => _explicitNullValuePostType; set { _explicitNullValuePostType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("postType"); else _explicitNullProperties?.Remove("postType"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.SearchPostDtoPostTypeProperty _explicitNullValuePostType = default!;
 #endif
         /// <summary>The skip property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Skip { get; set; }
+        public string? Skip { get => _explicitNullValueSkip; set { _explicitNullValueSkip = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skip"); else _explicitNullProperties?.Remove("skip"); } }
+        private string? _explicitNullValueSkip = default!;
 #nullable restore
 #else
-        public string Skip { get; set; }
+        public string Skip { get => _explicitNullValueSkip; set { _explicitNullValueSkip = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skip"); else _explicitNullProperties?.Remove("skip"); } }
+        private string _explicitNullValueSkip = default!;
 #endif
         /// <summary>To Date</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ToDate { get; set; }
+        public string? ToDate { get => _explicitNullValueToDate; set { _explicitNullValueToDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("toDate"); else _explicitNullProperties?.Remove("toDate"); } }
+        private string? _explicitNullValueToDate = default!;
 #nullable restore
 #else
-        public string ToDate { get; set; }
+        public string ToDate { get => _explicitNullValueToDate; set { _explicitNullValueToDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("toDate"); else _explicitNullProperties?.Remove("toDate"); } }
+        private string _explicitNullValueToDate = default!;
 #endif
         /// <summary>type must be one of the following values: recent, all, scheduled, draft, failed, in_review, published, in_progress and deleted</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Type { get; set; }
+        public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private string? _explicitNullValueType = default!;
 #nullable restore
 #else
-        public string Type { get; set; }
+        public string Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private string _explicitNullValueType = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.SearchPostDto"/> and sets the default values.
@@ -96,7 +127,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.SearchPostDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.SearchPostDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.SearchPostDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -110,7 +141,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "fromDate", n => { FromDate = n.GetStringValue(); } },
                 { "includeUsers", n => { IncludeUsers = n.GetStringValue(); } },
                 { "limit", n => { Limit = n.GetStringValue(); } },
-                { "postType", n => { PostType = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SearchPostDtoPostTypeProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.SearchPostDtoPostTypeProperty2.CreateFromDiscriminatorValue); } },
+                { "postType", n => { PostType = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SearchPostDtoPostTypeProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.SearchPostDtoPostTypeProperty.CreateFromDiscriminatorValue); } },
                 { "skip", n => { Skip = n.GetStringValue(); } },
                 { "toDate", n => { ToDate = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetStringValue(); } },
@@ -127,10 +158,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("fromDate", FromDate);
             writer.WriteStringValue("includeUsers", IncludeUsers);
             writer.WriteStringValue("limit", Limit);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SearchPostDtoPostTypeProperty2>("postType", PostType);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SearchPostDtoPostTypeProperty>("postType", PostType);
             writer.WriteStringValue("skip", Skip);
             writer.WriteStringValue("toDate", ToDate);
             writer.WriteStringValue("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

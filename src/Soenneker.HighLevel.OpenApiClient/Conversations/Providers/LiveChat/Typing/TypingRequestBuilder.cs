@@ -59,6 +59,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Conversations.Providers.LiveChat.Typ
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.ConversationsCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.ConversationsCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.ConversationsCommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.CreateLiveChatMessageFeedbackResponse>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.CreateLiveChatMessageFeedbackResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

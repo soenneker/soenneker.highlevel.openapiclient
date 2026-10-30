@@ -12,40 +12,59 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UpdateEstimateDtoSentTo : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("email") is { } nullNodeEmail && nullNodeEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Email = null;
+            if (parseNode.GetChildNode("emailBcc") is { } nullNodeEmailBcc && nullNodeEmailBcc.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailBcc = null;
+            if (parseNode.GetChildNode("emailCc") is { } nullNodeEmailCc && nullNodeEmailCc.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailCc = null;
+            if (parseNode.GetChildNode("phoneNo") is { } nullNodePhoneNo && nullNodePhoneNo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhoneNo = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Email Address</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Email { get; set; }
+        public List<string>? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        private List<string>? _explicitNullValueEmail = default!;
 #nullable restore
 #else
-        public List<string> Email { get; set; }
+        public List<string> Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        private List<string> _explicitNullValueEmail = default!;
 #endif
         /// <summary>bcc to be kept in any sent out emails</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? EmailBcc { get; set; }
+        public List<string>? EmailBcc { get => _explicitNullValueEmailBcc; set { _explicitNullValueEmailBcc = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailBcc"); else _explicitNullProperties?.Remove("emailBcc"); } }
+        private List<string>? _explicitNullValueEmailBcc = default!;
 #nullable restore
 #else
-        public List<string> EmailBcc { get; set; }
+        public List<string> EmailBcc { get => _explicitNullValueEmailBcc; set { _explicitNullValueEmailBcc = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailBcc"); else _explicitNullProperties?.Remove("emailBcc"); } }
+        private List<string> _explicitNullValueEmailBcc = default!;
 #endif
         /// <summary>cc to be kept in any sent out emails</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? EmailCc { get; set; }
+        public List<string>? EmailCc { get => _explicitNullValueEmailCc; set { _explicitNullValueEmailCc = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailCc"); else _explicitNullProperties?.Remove("emailCc"); } }
+        private List<string>? _explicitNullValueEmailCc = default!;
 #nullable restore
 #else
-        public List<string> EmailCc { get; set; }
+        public List<string> EmailCc { get => _explicitNullValueEmailCc; set { _explicitNullValueEmailCc = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailCc"); else _explicitNullProperties?.Remove("emailCc"); } }
+        private List<string> _explicitNullValueEmailCc = default!;
 #endif
         /// <summary>Contact Phone Number</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? PhoneNo { get; set; }
+        public List<string>? PhoneNo { get => _explicitNullValuePhoneNo; set { _explicitNullValuePhoneNo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phoneNo"); else _explicitNullProperties?.Remove("phoneNo"); } }
+        private List<string>? _explicitNullValuePhoneNo = default!;
 #nullable restore
 #else
-        public List<string> PhoneNo { get; set; }
+        public List<string> PhoneNo { get => _explicitNullValuePhoneNo; set { _explicitNullValuePhoneNo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phoneNo"); else _explicitNullProperties?.Remove("phoneNo"); } }
+        private List<string> _explicitNullValuePhoneNo = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpdateEstimateDtoSentTo"/> and sets the default values.
@@ -62,7 +81,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.UpdateEstimateDtoSentTo CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.UpdateEstimateDtoSentTo();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.UpdateEstimateDtoSentTo(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -89,6 +108,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("emailBcc", EmailBcc);
             writer.WriteCollectionOfPrimitiveValues<string>("emailCc", EmailCc);
             writer.WriteCollectionOfPrimitiveValues<string>("phoneNo", PhoneNo);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

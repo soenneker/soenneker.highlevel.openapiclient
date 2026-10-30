@@ -55,6 +55,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Conversations.Messages.Upload.Comple
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.ConversationsCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.CompleteFileUploadResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.CompleteFileUploadResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

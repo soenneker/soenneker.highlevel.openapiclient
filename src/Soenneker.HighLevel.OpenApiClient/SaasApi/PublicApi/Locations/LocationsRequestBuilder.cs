@@ -60,6 +60,8 @@ namespace Soenneker.HighLevel.OpenApiClient.SaasApi.PublicApi.Locations
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.UnauthorizedDto.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.HighLevel.OpenApiClient.Models.ResourceNotFoundDto.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.HighLevel.OpenApiClient.Models.InternalServerErrorDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             var collectionResult = await RequestAdapter.SendPrimitiveCollectionAsync<string>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
             return collectionResult?.AsList();

@@ -11,24 +11,37 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class UpdateFollowupSettingsDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("actionIds") is { } nullNodeActionIds && nullNodeActionIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionIds = null;
+            if (parseNode.GetChildNode("followupSettings") is { } nullNodeFollowupSettings && nullNodeFollowupSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FollowupSettings = null;
+        }
+
         /// <summary>The actionIds property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ActionIds { get; set; }
+        public List<string>? ActionIds { get => _explicitNullValueActionIds; set { _explicitNullValueActionIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionIds"); else _explicitNullProperties?.Remove("actionIds"); } }
+        private List<string>? _explicitNullValueActionIds = default!;
 #nullable restore
 #else
-        public List<string> ActionIds { get; set; }
+        public List<string> ActionIds { get => _explicitNullValueActionIds; set { _explicitNullValueActionIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionIds"); else _explicitNullProperties?.Remove("actionIds"); } }
+        private List<string> _explicitNullValueActionIds = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The followupSettings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.FollowupSettings? FollowupSettings { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.FollowupSettings? FollowupSettings { get => _explicitNullValueFollowupSettings; set { _explicitNullValueFollowupSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("followupSettings"); else _explicitNullProperties?.Remove("followupSettings"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.FollowupSettings? _explicitNullValueFollowupSettings = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.FollowupSettings FollowupSettings { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.FollowupSettings FollowupSettings { get => _explicitNullValueFollowupSettings; set { _explicitNullValueFollowupSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("followupSettings"); else _explicitNullProperties?.Remove("followupSettings"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.FollowupSettings _explicitNullValueFollowupSettings = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpdateFollowupSettingsDto"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.UpdateFollowupSettingsDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.UpdateFollowupSettingsDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.UpdateFollowupSettingsDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("actionIds", ActionIds);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.FollowupSettings>("followupSettings", FollowupSettings);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

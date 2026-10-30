@@ -12,34 +12,52 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BulkUpdateDtoFilters : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("availableInStore") is { } nullNodeAvailableInStore && nullNodeAvailableInStore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AvailableInStore = null;
+            if (parseNode.GetChildNode("collectionIds") is { } nullNodeCollectionIds && nullNodeCollectionIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CollectionIds = null;
+            if (parseNode.GetChildNode("productType") is { } nullNodeProductType && nullNodeProductType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductType = null;
+            if (parseNode.GetChildNode("search") is { } nullNodeSearch && nullNodeSearch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Search = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Filter by availability status</summary>
-        public bool? AvailableInStore { get; set; }
+        public bool? AvailableInStore { get => _explicitNullValueAvailableInStore; set { _explicitNullValueAvailableInStore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("availableInStore"); else _explicitNullProperties?.Remove("availableInStore"); } }
+        private bool? _explicitNullValueAvailableInStore = default!;
         /// <summary>Filter by collection IDs</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? CollectionIds { get; set; }
+        public List<string>? CollectionIds { get => _explicitNullValueCollectionIds; set { _explicitNullValueCollectionIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collectionIds"); else _explicitNullProperties?.Remove("collectionIds"); } }
+        private List<string>? _explicitNullValueCollectionIds = default!;
 #nullable restore
 #else
-        public List<string> CollectionIds { get; set; }
+        public List<string> CollectionIds { get => _explicitNullValueCollectionIds; set { _explicitNullValueCollectionIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collectionIds"); else _explicitNullProperties?.Remove("collectionIds"); } }
+        private List<string> _explicitNullValueCollectionIds = default!;
 #endif
         /// <summary>Filter by product type</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProductType { get; set; }
+        public string? ProductType { get => _explicitNullValueProductType; set { _explicitNullValueProductType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("productType"); else _explicitNullProperties?.Remove("productType"); } }
+        private string? _explicitNullValueProductType = default!;
 #nullable restore
 #else
-        public string ProductType { get; set; }
+        public string ProductType { get => _explicitNullValueProductType; set { _explicitNullValueProductType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("productType"); else _explicitNullProperties?.Remove("productType"); } }
+        private string _explicitNullValueProductType = default!;
 #endif
         /// <summary>Filter by search term</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Search { get; set; }
+        public string? Search { get => _explicitNullValueSearch; set { _explicitNullValueSearch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("search"); else _explicitNullProperties?.Remove("search"); } }
+        private string? _explicitNullValueSearch = default!;
 #nullable restore
 #else
-        public string Search { get; set; }
+        public string Search { get => _explicitNullValueSearch; set { _explicitNullValueSearch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("search"); else _explicitNullProperties?.Remove("search"); } }
+        private string _explicitNullValueSearch = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.BulkUpdateDtoFilters"/> and sets the default values.
@@ -56,7 +74,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.BulkUpdateDtoFilters CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.BulkUpdateDtoFilters();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.BulkUpdateDtoFilters(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -83,6 +101,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("collectionIds", CollectionIds);
             writer.WriteStringValue("productType", ProductType);
             writer.WriteStringValue("search", Search);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

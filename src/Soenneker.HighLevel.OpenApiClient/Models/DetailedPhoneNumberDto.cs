@@ -11,109 +11,161 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class DetailedPhoneNumberDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("addressSid") is { } nullNodeAddressSid && nullNodeAddressSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressSid = null;
+            if (parseNode.GetChildNode("bundleSid") is { } nullNodeBundleSid && nullNodeBundleSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BundleSid = null;
+            if (parseNode.GetChildNode("capabilities") is { } nullNodeCapabilities && nullNodeCapabilities.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Capabilities = null;
+            if (parseNode.GetChildNode("countryCode") is { } nullNodeCountryCode && nullNodeCountryCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CountryCode = null;
+            if (parseNode.GetChildNode("dateAdded") is { } nullNodeDateAdded && nullNodeDateAdded.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateAdded = null;
+            if (parseNode.GetChildNode("dateUpdated") is { } nullNodeDateUpdated && nullNodeDateUpdated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateUpdated = null;
+            if (parseNode.GetChildNode("forwardingNumber") is { } nullNodeForwardingNumber && nullNodeForwardingNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ForwardingNumber = null;
+            if (parseNode.GetChildNode("friendlyName") is { } nullNodeFriendlyName && nullNodeFriendlyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FriendlyName = null;
+            if (parseNode.GetChildNode("inboundCallService") is { } nullNodeInboundCallService && nullNodeInboundCallService.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InboundCallService = null;
+            if (parseNode.GetChildNode("isDefaultNumber") is { } nullNodeIsDefaultNumber && nullNodeIsDefaultNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsDefaultNumber = null;
+            if (parseNode.GetChildNode("isGroupConversationEnabled") is { } nullNodeIsGroupConversationEnabled && nullNodeIsGroupConversationEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsGroupConversationEnabled = null;
+            if (parseNode.GetChildNode("linkedRingAllUsers") is { } nullNodeLinkedRingAllUsers && nullNodeLinkedRingAllUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LinkedRingAllUsers = null;
+            if (parseNode.GetChildNode("linkedUser") is { } nullNodeLinkedUser && nullNodeLinkedUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LinkedUser = null;
+            if (parseNode.GetChildNode("origin") is { } nullNodeOrigin && nullNodeOrigin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Origin = null;
+            if (parseNode.GetChildNode("phoneNumber") is { } nullNodePhoneNumber && nullNodePhoneNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhoneNumber = null;
+            if (parseNode.GetChildNode("sid") is { } nullNodeSid && nullNodeSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sid = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Address SID for compliance purposes</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AddressSid { get; set; }
+        public string? AddressSid { get => _explicitNullValueAddressSid; set { _explicitNullValueAddressSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("addressSid"); else _explicitNullProperties?.Remove("addressSid"); } }
+        private string? _explicitNullValueAddressSid = default!;
 #nullable restore
 #else
-        public string AddressSid { get; set; }
+        public string AddressSid { get => _explicitNullValueAddressSid; set { _explicitNullValueAddressSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("addressSid"); else _explicitNullProperties?.Remove("addressSid"); } }
+        private string _explicitNullValueAddressSid = default!;
 #endif
         /// <summary>Bundle SID for regulatory compliance</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BundleSid { get; set; }
+        public string? BundleSid { get => _explicitNullValueBundleSid; set { _explicitNullValueBundleSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bundleSid"); else _explicitNullProperties?.Remove("bundleSid"); } }
+        private string? _explicitNullValueBundleSid = default!;
 #nullable restore
 #else
-        public string BundleSid { get; set; }
+        public string BundleSid { get => _explicitNullValueBundleSid; set { _explicitNullValueBundleSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bundleSid"); else _explicitNullProperties?.Remove("bundleSid"); } }
+        private string _explicitNullValueBundleSid = default!;
 #endif
         /// <summary>Communication capabilities supported by this number</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDtoCapabilities? Capabilities { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDtoCapabilities? Capabilities { get => _explicitNullValueCapabilities; set { _explicitNullValueCapabilities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("capabilities"); else _explicitNullProperties?.Remove("capabilities"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDtoCapabilities? _explicitNullValueCapabilities = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDtoCapabilities Capabilities { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDtoCapabilities Capabilities { get => _explicitNullValueCapabilities; set { _explicitNullValueCapabilities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("capabilities"); else _explicitNullProperties?.Remove("capabilities"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDtoCapabilities _explicitNullValueCapabilities = default!;
 #endif
         /// <summary>ISO 3166-1 alpha-2 country code</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CountryCode { get; set; }
+        public string? CountryCode { get => _explicitNullValueCountryCode; set { _explicitNullValueCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("countryCode"); else _explicitNullProperties?.Remove("countryCode"); } }
+        private string? _explicitNullValueCountryCode = default!;
 #nullable restore
 #else
-        public string CountryCode { get; set; }
+        public string CountryCode { get => _explicitNullValueCountryCode; set { _explicitNullValueCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("countryCode"); else _explicitNullProperties?.Remove("countryCode"); } }
+        private string _explicitNullValueCountryCode = default!;
 #endif
         /// <summary>When the number was originally purchased/added</summary>
-        public DateTimeOffset? DateAdded { get; set; }
+        public DateTimeOffset? DateAdded { get => _explicitNullValueDateAdded; set { _explicitNullValueDateAdded = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dateAdded"); else _explicitNullProperties?.Remove("dateAdded"); } }
+        private DateTimeOffset? _explicitNullValueDateAdded = default!;
         /// <summary>When the number configuration was last updated</summary>
-        public DateTimeOffset? DateUpdated { get; set; }
+        public DateTimeOffset? DateUpdated { get => _explicitNullValueDateUpdated; set { _explicitNullValueDateUpdated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dateUpdated"); else _explicitNullProperties?.Remove("dateUpdated"); } }
+        private DateTimeOffset? _explicitNullValueDateUpdated = default!;
         /// <summary>Phone number to forward calls to</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ForwardingNumber { get; set; }
+        public string? ForwardingNumber { get => _explicitNullValueForwardingNumber; set { _explicitNullValueForwardingNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("forwardingNumber"); else _explicitNullProperties?.Remove("forwardingNumber"); } }
+        private string? _explicitNullValueForwardingNumber = default!;
 #nullable restore
 #else
-        public string ForwardingNumber { get; set; }
+        public string ForwardingNumber { get => _explicitNullValueForwardingNumber; set { _explicitNullValueForwardingNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("forwardingNumber"); else _explicitNullProperties?.Remove("forwardingNumber"); } }
+        private string _explicitNullValueForwardingNumber = default!;
 #endif
         /// <summary>Human-readable name assigned to the number</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FriendlyName { get; set; }
+        public string? FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("friendlyName"); else _explicitNullProperties?.Remove("friendlyName"); } }
+        private string? _explicitNullValueFriendlyName = default!;
 #nullable restore
 #else
-        public string FriendlyName { get; set; }
+        public string FriendlyName { get => _explicitNullValueFriendlyName; set { _explicitNullValueFriendlyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("friendlyName"); else _explicitNullProperties?.Remove("friendlyName"); } }
+        private string _explicitNullValueFriendlyName = default!;
 #endif
         /// <summary>Configuration for inbound call handling service</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDtoInboundCallService? InboundCallService { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDtoInboundCallService? InboundCallService { get => _explicitNullValueInboundCallService; set { _explicitNullValueInboundCallService = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inboundCallService"); else _explicitNullProperties?.Remove("inboundCallService"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDtoInboundCallService? _explicitNullValueInboundCallService = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDtoInboundCallService InboundCallService { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDtoInboundCallService InboundCallService { get => _explicitNullValueInboundCallService; set { _explicitNullValueInboundCallService = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inboundCallService"); else _explicitNullProperties?.Remove("inboundCallService"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDtoInboundCallService _explicitNullValueInboundCallService = default!;
 #endif
         /// <summary>Whether this is the default outbound number for the location</summary>
-        public bool? IsDefaultNumber { get; set; }
+        public bool? IsDefaultNumber { get => _explicitNullValueIsDefaultNumber; set { _explicitNullValueIsDefaultNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isDefaultNumber"); else _explicitNullProperties?.Remove("isDefaultNumber"); } }
+        private bool? _explicitNullValueIsDefaultNumber = default!;
         /// <summary>Whether group conversations are enabled for this number (US/CA numbers with SMS/MMS only)</summary>
-        public bool? IsGroupConversationEnabled { get; set; }
+        public bool? IsGroupConversationEnabled { get => _explicitNullValueIsGroupConversationEnabled; set { _explicitNullValueIsGroupConversationEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isGroupConversationEnabled"); else _explicitNullProperties?.Remove("isGroupConversationEnabled"); } }
+        private bool? _explicitNullValueIsGroupConversationEnabled = default!;
         /// <summary>Array of user IDs that should ring when this number is called</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? LinkedRingAllUsers { get; set; }
+        public List<string>? LinkedRingAllUsers { get => _explicitNullValueLinkedRingAllUsers; set { _explicitNullValueLinkedRingAllUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("linkedRingAllUsers"); else _explicitNullProperties?.Remove("linkedRingAllUsers"); } }
+        private List<string>? _explicitNullValueLinkedRingAllUsers = default!;
 #nullable restore
 #else
-        public List<string> LinkedRingAllUsers { get; set; }
+        public List<string> LinkedRingAllUsers { get => _explicitNullValueLinkedRingAllUsers; set { _explicitNullValueLinkedRingAllUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("linkedRingAllUsers"); else _explicitNullProperties?.Remove("linkedRingAllUsers"); } }
+        private List<string> _explicitNullValueLinkedRingAllUsers = default!;
 #endif
         /// <summary>User ID of the user assigned to this number</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LinkedUser { get; set; }
+        public string? LinkedUser { get => _explicitNullValueLinkedUser; set { _explicitNullValueLinkedUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("linkedUser"); else _explicitNullProperties?.Remove("linkedUser"); } }
+        private string? _explicitNullValueLinkedUser = default!;
 #nullable restore
 #else
-        public string LinkedUser { get; set; }
+        public string LinkedUser { get => _explicitNullValueLinkedUser; set { _explicitNullValueLinkedUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("linkedUser"); else _explicitNullProperties?.Remove("linkedUser"); } }
+        private string _explicitNullValueLinkedUser = default!;
 #endif
         /// <summary>Source or origin of the phone number</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDtoOrigin? Origin { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDtoOrigin? Origin { get => _explicitNullValueOrigin; set { _explicitNullValueOrigin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("origin"); else _explicitNullProperties?.Remove("origin"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDtoOrigin? _explicitNullValueOrigin = default!;
         /// <summary>E.164 formatted phone number</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PhoneNumber { get; set; }
+        public string? PhoneNumber { get => _explicitNullValuePhoneNumber; set { _explicitNullValuePhoneNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phoneNumber"); else _explicitNullProperties?.Remove("phoneNumber"); } }
+        private string? _explicitNullValuePhoneNumber = default!;
 #nullable restore
 #else
-        public string PhoneNumber { get; set; }
+        public string PhoneNumber { get => _explicitNullValuePhoneNumber; set { _explicitNullValuePhoneNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phoneNumber"); else _explicitNullProperties?.Remove("phoneNumber"); } }
+        private string _explicitNullValuePhoneNumber = default!;
 #endif
         /// <summary>Phone number SID (unique identifier)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Sid { get; set; }
+        public string? Sid { get => _explicitNullValueSid; set { _explicitNullValueSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sid"); else _explicitNullProperties?.Remove("sid"); } }
+        private string? _explicitNullValueSid = default!;
 #nullable restore
 #else
-        public string Sid { get; set; }
+        public string Sid { get => _explicitNullValueSid; set { _explicitNullValueSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sid"); else _explicitNullProperties?.Remove("sid"); } }
+        private string _explicitNullValueSid = default!;
 #endif
         /// <summary>Type of phone number (local, toll-free, mobile, etc.)</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDtoType? Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDtoType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDtoType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDto"/> and sets the default values.
         /// </summary>
@@ -129,7 +181,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -182,6 +234,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("phoneNumber", PhoneNumber);
             writer.WriteStringValue("sid", Sid);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDtoType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

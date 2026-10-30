@@ -12,7 +12,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CreateActionDtoDetails : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.AdvancedFollowupDto"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -81,33 +86,50 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             var result = new global::Soenneker.HighLevel.OpenApiClient.Models.CreateActionDtoDetails();
             if("AdvancedFollowupDto".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.AdvancedFollowupDto = new global::Soenneker.HighLevel.OpenApiClient.Models.AdvancedFollowupDto();
+                
             }
             else if("AppointmentBookingDto".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.AppointmentBookingDto = new global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentBookingDto();
+                
             }
             else if("HumanHandOverDto".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.HumanHandOverDto = new global::Soenneker.HighLevel.OpenApiClient.Models.HumanHandOverDto();
+                
             }
             else if("StopBotDto".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.StopBotDto = new global::Soenneker.HighLevel.OpenApiClient.Models.StopBotDto();
+                
             }
             else if("TransferBotDto".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.TransferBotDto = new global::Soenneker.HighLevel.OpenApiClient.Models.TransferBotDto();
+                
             }
             else if("TriggerWorkflowDto".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.TriggerWorkflowDto = new global::Soenneker.HighLevel.OpenApiClient.Models.TriggerWorkflowDto();
+                
             }
             else if("UpdateContactFieldDto".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.UpdateContactFieldDto = new global::Soenneker.HighLevel.OpenApiClient.Models.UpdateContactFieldDto();
+                
             }
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("workflowIds") != null && parseNode.GetChildNode("triggerCondition") != null))();
+            bool matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("contactFieldId") != null && parseNode.GetChildNode("description") != null))();
+            bool matchesUnionBranch2 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("calendarId") != null && parseNode.GetChildNode("onlySendLink") != null && parseNode.GetChildNode("triggerWorkflow") != null && parseNode.GetChildNode("sleepAfterBooking") != null && parseNode.GetChildNode("transferBot") != null && parseNode.GetChildNode("rescheduleEnabled") != null && parseNode.GetChildNode("cancelEnabled") != null && (parseNode.GetChildNode("sleepTimeUnit") == null || (parseNode.GetChildNode("sleepTimeUnit")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString optionalTag7 && ("days".Equals(optionalTag7.GetValue(), global::System.StringComparison.Ordinal) || "hours".Equals(optionalTag7.GetValue(), global::System.StringComparison.Ordinal) || "minutes".Equals(optionalTag7.GetValue(), global::System.StringComparison.Ordinal))))))();
+            bool matchesUnionBranch3 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("stopBotDetectionType") != null && (parseNode.GetChildNode("stopBotDetectionType")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("Goodbye".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal) || "Custom".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("stopBotTriggerCondition") != null && parseNode.GetChildNode("reactivateEnabled") != null && parseNode.GetChildNode("enabled") != null && parseNode.GetChildNode("stopBotExamples") != null && parseNode.GetChildNode("finalMessage") != null && (parseNode.GetChildNode("sleepTimeUnit") == null || (parseNode.GetChildNode("sleepTimeUnit")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString optionalTag7 && ("days".Equals(optionalTag7.GetValue(), global::System.StringComparison.Ordinal) || "hours".Equals(optionalTag7.GetValue(), global::System.StringComparison.Ordinal) || "minutes".Equals(optionalTag7.GetValue(), global::System.StringComparison.Ordinal))))))();
+            bool matchesUnionBranch4 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("enabled") != null && parseNode.GetChildNode("triggerCondition") != null && parseNode.GetChildNode("reactivateEnabled") != null && parseNode.GetChildNode("finalMessage") != null && parseNode.GetChildNode("handoverType") != null && (parseNode.GetChildNode("handoverType")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag5 && ("contactRequest".Equals(tag5.GetValue(), global::System.StringComparison.Ordinal) || "lackOfInformation".Equals(tag5.GetValue(), global::System.StringComparison.Ordinal) || "failedToResolveIssue".Equals(tag5.GetValue(), global::System.StringComparison.Ordinal) || "custom".Equals(tag5.GetValue(), global::System.StringComparison.Ordinal))) && (parseNode.GetChildNode("sleepTimeUnit") == null || (parseNode.GetChildNode("sleepTimeUnit")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString optionalTag6 && ("days".Equals(optionalTag6.GetValue(), global::System.StringComparison.Ordinal) || "hours".Equals(optionalTag6.GetValue(), global::System.StringComparison.Ordinal) || "minutes".Equals(optionalTag6.GetValue(), global::System.StringComparison.Ordinal))))))();
+            bool matchesUnionBranch5 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("enabled") != null && parseNode.GetChildNode("scenarioId") != null && (parseNode.GetChildNode("scenarioId")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag2 && ("contactStoppedReplying".Equals(tag2.GetValue(), global::System.StringComparison.Ordinal) || "contactIsBusy".Equals(tag2.GetValue(), global::System.StringComparison.Ordinal) || "contactRequested".Equals(tag2.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("followupSequence") != null))();
+            bool matchesUnionBranch6 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("transferBotType") != null && (parseNode.GetChildNode("transferBotType")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("Default".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal) || "Custom".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("transferToBot") != null && parseNode.GetChildNode("enabled") != null))();
+            if (result.AdvancedFollowupDto == null && result.AppointmentBookingDto == null && result.HumanHandOverDto == null && result.StopBotDto == null && result.TransferBotDto == null && result.TriggerWorkflowDto == null && result.UpdateContactFieldDto == null && matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5 && !matchesUnionBranch6) result.TriggerWorkflowDto = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.TriggerWorkflowDto(), parseNode);
+            if (result.AdvancedFollowupDto == null && result.AppointmentBookingDto == null && result.HumanHandOverDto == null && result.StopBotDto == null && result.TransferBotDto == null && result.TriggerWorkflowDto == null && result.UpdateContactFieldDto == null && matchesUnionBranch1 && !matchesUnionBranch0 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5 && !matchesUnionBranch6) result.UpdateContactFieldDto = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.UpdateContactFieldDto(), parseNode);
+            if (result.AdvancedFollowupDto == null && result.AppointmentBookingDto == null && result.HumanHandOverDto == null && result.StopBotDto == null && result.TransferBotDto == null && result.TriggerWorkflowDto == null && result.UpdateContactFieldDto == null && matchesUnionBranch2 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5 && !matchesUnionBranch6) result.AppointmentBookingDto = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentBookingDto(), parseNode);
+            if (result.AdvancedFollowupDto == null && result.AppointmentBookingDto == null && result.HumanHandOverDto == null && result.StopBotDto == null && result.TransferBotDto == null && result.TriggerWorkflowDto == null && result.UpdateContactFieldDto == null && matchesUnionBranch3 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch4 && !matchesUnionBranch5 && !matchesUnionBranch6) result.StopBotDto = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.StopBotDto(), parseNode);
+            if (result.AdvancedFollowupDto == null && result.AppointmentBookingDto == null && result.HumanHandOverDto == null && result.StopBotDto == null && result.TransferBotDto == null && result.TriggerWorkflowDto == null && result.UpdateContactFieldDto == null && matchesUnionBranch4 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch5 && !matchesUnionBranch6) result.HumanHandOverDto = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.HumanHandOverDto(), parseNode);
+            if (result.AdvancedFollowupDto == null && result.AppointmentBookingDto == null && result.HumanHandOverDto == null && result.StopBotDto == null && result.TransferBotDto == null && result.TriggerWorkflowDto == null && result.UpdateContactFieldDto == null && matchesUnionBranch5 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch6) result.AdvancedFollowupDto = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.AdvancedFollowupDto(), parseNode);
+            if (result.AdvancedFollowupDto == null && result.AppointmentBookingDto == null && result.HumanHandOverDto == null && result.StopBotDto == null && result.TransferBotDto == null && result.TriggerWorkflowDto == null && result.UpdateContactFieldDto == null && matchesUnionBranch6 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5) result.TransferBotDto = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.TransferBotDto(), parseNode);
+            if (result.AdvancedFollowupDto == null && result.AppointmentBookingDto == null && result.HumanHandOverDto == null && result.StopBotDto == null && result.TransferBotDto == null && result.TriggerWorkflowDto == null && result.UpdateContactFieldDto == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -151,33 +173,50 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (AdvancedFollowupDto == null && AppointmentBookingDto == null && HumanHandOverDto == null && StopBotDto == null && TransferBotDto == null && TriggerWorkflowDto == null && UpdateContactFieldDto == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (AdvancedFollowupDto != null && AppointmentBookingDto == null && HumanHandOverDto == null && StopBotDto == null && TransferBotDto == null && TriggerWorkflowDto == null && UpdateContactFieldDto == null) { if (AdvancedFollowupDto is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, AdvancedFollowupDto); return; }
+            if (AppointmentBookingDto != null && AdvancedFollowupDto == null && HumanHandOverDto == null && StopBotDto == null && TransferBotDto == null && TriggerWorkflowDto == null && UpdateContactFieldDto == null) { if (AppointmentBookingDto is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, AppointmentBookingDto); return; }
+            if (HumanHandOverDto != null && AdvancedFollowupDto == null && AppointmentBookingDto == null && StopBotDto == null && TransferBotDto == null && TriggerWorkflowDto == null && UpdateContactFieldDto == null) { if (HumanHandOverDto is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, HumanHandOverDto); return; }
+            if (StopBotDto != null && AdvancedFollowupDto == null && AppointmentBookingDto == null && HumanHandOverDto == null && TransferBotDto == null && TriggerWorkflowDto == null && UpdateContactFieldDto == null) { if (StopBotDto is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, StopBotDto); return; }
+            if (TransferBotDto != null && AdvancedFollowupDto == null && AppointmentBookingDto == null && HumanHandOverDto == null && StopBotDto == null && TriggerWorkflowDto == null && UpdateContactFieldDto == null) { if (TransferBotDto is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, TransferBotDto); return; }
+            if (TriggerWorkflowDto != null && AdvancedFollowupDto == null && AppointmentBookingDto == null && HumanHandOverDto == null && StopBotDto == null && TransferBotDto == null && UpdateContactFieldDto == null) { if (TriggerWorkflowDto is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, TriggerWorkflowDto); return; }
+            if (UpdateContactFieldDto != null && AdvancedFollowupDto == null && AppointmentBookingDto == null && HumanHandOverDto == null && StopBotDto == null && TransferBotDto == null && TriggerWorkflowDto == null) { if (UpdateContactFieldDto is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, UpdateContactFieldDto); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(AdvancedFollowupDto != null)
             {
+                if (AdvancedFollowupDto is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AdvancedFollowupDto>(null, AdvancedFollowupDto);
             }
             else if(AppointmentBookingDto != null)
             {
+                if (AppointmentBookingDto is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentBookingDto>(null, AppointmentBookingDto);
             }
             else if(HumanHandOverDto != null)
             {
+                if (HumanHandOverDto is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.HumanHandOverDto>(null, HumanHandOverDto);
             }
             else if(StopBotDto != null)
             {
+                if (StopBotDto is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.StopBotDto>(null, StopBotDto);
             }
             else if(TransferBotDto != null)
             {
+                if (TransferBotDto is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.TransferBotDto>(null, TransferBotDto);
             }
             else if(TriggerWorkflowDto != null)
             {
+                if (TriggerWorkflowDto is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.TriggerWorkflowDto>(null, TriggerWorkflowDto);
             }
             else if(UpdateContactFieldDto != null)
             {
+                if (UpdateContactFieldDto is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateContactFieldDto>(null, UpdateContactFieldDto);
             }
         }

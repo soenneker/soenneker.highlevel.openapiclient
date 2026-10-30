@@ -12,32 +12,48 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GoogleGeoLocationDtoGeometry : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("location") is { } nullNodeLocation && nullNodeLocation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Location = null;
+            if (parseNode.GetChildNode("location_type") is { } nullNodeLocationType && nullNodeLocationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationType = null;
+            if (parseNode.GetChildNode("viewport") is { } nullNodeViewport && nullNodeViewport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Viewport = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Location coordinates</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GeoGeometryDtoLocation? Location { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GeoGeometryDtoLocation? Location { get => _explicitNullValueLocation; set { _explicitNullValueLocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("location"); else _explicitNullProperties?.Remove("location"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GeoGeometryDtoLocation? _explicitNullValueLocation = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GeoGeometryDtoLocation Location { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GeoGeometryDtoLocation Location { get => _explicitNullValueLocation; set { _explicitNullValueLocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("location"); else _explicitNullProperties?.Remove("location"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GeoGeometryDtoLocation _explicitNullValueLocation = default!;
 #endif
         /// <summary>Location type (e.g. APPROXIMATE)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LocationType { get; set; }
+        public string? LocationType { get => _explicitNullValueLocationType; set { _explicitNullValueLocationType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("location_type"); else _explicitNullProperties?.Remove("location_type"); } }
+        private string? _explicitNullValueLocationType = default!;
 #nullable restore
 #else
-        public string LocationType { get; set; }
+        public string LocationType { get => _explicitNullValueLocationType; set { _explicitNullValueLocationType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("location_type"); else _explicitNullProperties?.Remove("location_type"); } }
+        private string _explicitNullValueLocationType = default!;
 #endif
         /// <summary>Viewport bounding box</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GeoGeometryDtoViewport? Viewport { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GeoGeometryDtoViewport? Viewport { get => _explicitNullValueViewport; set { _explicitNullValueViewport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("viewport"); else _explicitNullProperties?.Remove("viewport"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GeoGeometryDtoViewport? _explicitNullValueViewport = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GeoGeometryDtoViewport Viewport { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GeoGeometryDtoViewport Viewport { get => _explicitNullValueViewport; set { _explicitNullValueViewport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("viewport"); else _explicitNullProperties?.Remove("viewport"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GeoGeometryDtoViewport _explicitNullValueViewport = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GoogleGeoLocationDtoGeometry"/> and sets the default values.
@@ -54,7 +70,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.GoogleGeoLocationDtoGeometry CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.GoogleGeoLocationDtoGeometry();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.GoogleGeoLocationDtoGeometry(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +95,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GeoGeometryDtoLocation>("location", Location);
             writer.WriteStringValue("location_type", LocationType);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GeoGeometryDtoViewport>("viewport", Viewport);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

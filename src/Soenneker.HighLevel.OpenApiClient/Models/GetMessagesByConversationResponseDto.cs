@@ -11,27 +11,42 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetMessagesByConversationResponseDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("lastMessageId") is { } nullNodeLastMessageId && nullNodeLastMessageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastMessageId = null;
+            if (parseNode.GetChildNode("messages") is { } nullNodeMessages && nullNodeMessages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Messages = null;
+            if (parseNode.GetChildNode("nextPage") is { } nullNodeNextPage && nullNodeNextPage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextPage = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Id of the last message in the messages array</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LastMessageId { get; set; }
+        public string? LastMessageId { get => _explicitNullValueLastMessageId; set { _explicitNullValueLastMessageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastMessageId"); else _explicitNullProperties?.Remove("lastMessageId"); } }
+        private string? _explicitNullValueLastMessageId = default!;
 #nullable restore
 #else
-        public string LastMessageId { get; set; }
+        public string LastMessageId { get => _explicitNullValueLastMessageId; set { _explicitNullValueLastMessageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastMessageId"); else _explicitNullProperties?.Remove("lastMessageId"); } }
+        private string _explicitNullValueLastMessageId = default!;
 #endif
         /// <summary>Array of messages</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GetMessageResponseDto>? Messages { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GetMessageResponseDto>? Messages { get => _explicitNullValueMessages; set { _explicitNullValueMessages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messages"); else _explicitNullProperties?.Remove("messages"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.GetMessageResponseDto>? _explicitNullValueMessages = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GetMessageResponseDto> Messages { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GetMessageResponseDto> Messages { get => _explicitNullValueMessages; set { _explicitNullValueMessages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messages"); else _explicitNullProperties?.Remove("messages"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.GetMessageResponseDto> _explicitNullValueMessages = default!;
 #endif
         /// <summary>Next page value true indicates only 20 message is in the response. Rest of the messages are in the next page. Please use the lastMessageId value in the query to get the next page messages</summary>
-        public bool? NextPage { get; set; }
+        public bool? NextPage { get => _explicitNullValueNextPage; set { _explicitNullValueNextPage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nextPage"); else _explicitNullProperties?.Remove("nextPage"); } }
+        private bool? _explicitNullValueNextPage = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GetMessagesByConversationResponseDto"/> and sets the default values.
         /// </summary>
@@ -47,7 +62,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.GetMessagesByConversationResponseDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.GetMessagesByConversationResponseDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.GetMessagesByConversationResponseDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -72,6 +87,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("lastMessageId", LastMessageId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.GetMessageResponseDto>("messages", Messages);
             writer.WriteBoolValue("nextPage", NextPage);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

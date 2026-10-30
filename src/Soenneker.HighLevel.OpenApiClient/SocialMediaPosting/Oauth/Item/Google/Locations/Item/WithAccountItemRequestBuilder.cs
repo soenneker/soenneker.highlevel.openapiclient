@@ -57,6 +57,8 @@ namespace Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Oauth.Item.Google
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaPostingCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaPostingCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaPostingCommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.GetGoogleLocationResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -86,6 +88,8 @@ namespace Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Oauth.Item.Google
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaPostingCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaPostingCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaPostingCommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaGmbAccountResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.SocialMediaGmbAccountResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

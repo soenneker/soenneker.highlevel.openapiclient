@@ -11,34 +11,52 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class UpdateProductReviewsDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("altId") is { } nullNodeAltId && nullNodeAltId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AltId = null;
+            if (parseNode.GetChildNode("altType") is { } nullNodeAltType && nullNodeAltType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AltType = null;
+            if (parseNode.GetChildNode("reviews") is { } nullNodeReviews && nullNodeReviews.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reviews = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Location Id or Agency Id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AltId { get; set; }
+        public string? AltId { get => _explicitNullValueAltId; set { _explicitNullValueAltId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("altId"); else _explicitNullProperties?.Remove("altId"); } }
+        private string? _explicitNullValueAltId = default!;
 #nullable restore
 #else
-        public string AltId { get; set; }
+        public string AltId { get => _explicitNullValueAltId; set { _explicitNullValueAltId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("altId"); else _explicitNullProperties?.Remove("altId"); } }
+        private string _explicitNullValueAltId = default!;
 #endif
         /// <summary>The altType property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ProductsLocationAltType? AltType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ProductsLocationAltType? AltType { get => _explicitNullValueAltType; set { _explicitNullValueAltType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("altType"); else _explicitNullProperties?.Remove("altType"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.ProductsLocationAltType? _explicitNullValueAltType = default!;
         /// <summary>Array of Product Reviews</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductReviewObjectDto>? Reviews { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductReviewObjectDto>? Reviews { get => _explicitNullValueReviews; set { _explicitNullValueReviews = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reviews"); else _explicitNullProperties?.Remove("reviews"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductReviewObjectDto>? _explicitNullValueReviews = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductReviewObjectDto> Reviews { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductReviewObjectDto> Reviews { get => _explicitNullValueReviews; set { _explicitNullValueReviews = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reviews"); else _explicitNullProperties?.Remove("reviews"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductReviewObjectDto> _explicitNullValueReviews = default!;
 #endif
         /// <summary>Status of the review</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductReviewsDtoStatusProperty2? Status { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductReviewsDtoStatusProperty? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductReviewsDtoStatusProperty? _explicitNullValueStatus = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductReviewsDtoStatusProperty2 Status { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductReviewsDtoStatusProperty Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductReviewsDtoStatusProperty _explicitNullValueStatus = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductReviewsDto"/> and sets the default values.
@@ -55,7 +73,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductReviewsDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductReviewsDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductReviewsDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,7 +86,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "altId", n => { AltId = n.GetStringValue(); } },
                 { "altType", n => { AltType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProductsLocationAltType>(); } },
                 { "reviews", n => { Reviews = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductReviewObjectDto>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductReviewObjectDto.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "status", n => { Status = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductReviewsDtoStatusProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductReviewsDtoStatusProperty2.CreateFromDiscriminatorValue); } },
+                { "status", n => { Status = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductReviewsDtoStatusProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductReviewsDtoStatusProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -81,7 +99,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("altId", AltId);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProductsLocationAltType>("altType", AltType);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductReviewObjectDto>("reviews", Reviews);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductReviewsDtoStatusProperty2>("status", Status);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateProductReviewsDtoStatusProperty>("status", Status);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

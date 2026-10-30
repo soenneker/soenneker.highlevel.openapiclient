@@ -12,28 +12,45 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CampaignDtoBudget : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
+            if (parseNode.GetChildNode("budgetType") is { } nullNodeBudgetType && nullNodeBudgetType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BudgetType = null;
+            if (parseNode.GetChildNode("scheduleEndDate") is { } nullNodeScheduleEndDate && nullNodeScheduleEndDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduleEndDate = null;
+            if (parseNode.GetChildNode("scheduleStartDate") is { } nullNodeScheduleStartDate && nullNodeScheduleStartDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduleStartDate = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Budget amount in micros</summary>
-        public double? Amount { get; set; }
+        public double? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
+        private double? _explicitNullValueAmount = default!;
         /// <summary>Budget type</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GoogleBudgetDtoBudgetType? BudgetType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GoogleBudgetDtoBudgetType? BudgetType { get => _explicitNullValueBudgetType; set { _explicitNullValueBudgetType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("budgetType"); else _explicitNullProperties?.Remove("budgetType"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GoogleBudgetDtoBudgetType? _explicitNullValueBudgetType = default!;
         /// <summary>Schedule end date</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ScheduleEndDate { get; set; }
+        public string? ScheduleEndDate { get => _explicitNullValueScheduleEndDate; set { _explicitNullValueScheduleEndDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduleEndDate"); else _explicitNullProperties?.Remove("scheduleEndDate"); } }
+        private string? _explicitNullValueScheduleEndDate = default!;
 #nullable restore
 #else
-        public string ScheduleEndDate { get; set; }
+        public string ScheduleEndDate { get => _explicitNullValueScheduleEndDate; set { _explicitNullValueScheduleEndDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduleEndDate"); else _explicitNullProperties?.Remove("scheduleEndDate"); } }
+        private string _explicitNullValueScheduleEndDate = default!;
 #endif
         /// <summary>Schedule start date</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ScheduleStartDate { get; set; }
+        public string? ScheduleStartDate { get => _explicitNullValueScheduleStartDate; set { _explicitNullValueScheduleStartDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduleStartDate"); else _explicitNullProperties?.Remove("scheduleStartDate"); } }
+        private string? _explicitNullValueScheduleStartDate = default!;
 #nullable restore
 #else
-        public string ScheduleStartDate { get; set; }
+        public string ScheduleStartDate { get => _explicitNullValueScheduleStartDate; set { _explicitNullValueScheduleStartDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduleStartDate"); else _explicitNullProperties?.Remove("scheduleStartDate"); } }
+        private string _explicitNullValueScheduleStartDate = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CampaignDtoBudget"/> and sets the default values.
@@ -50,7 +67,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.CampaignDtoBudget CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.CampaignDtoBudget();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.CampaignDtoBudget(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -77,6 +94,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleBudgetDtoBudgetType>("budgetType", BudgetType);
             writer.WriteStringValue("scheduleEndDate", ScheduleEndDate);
             writer.WriteStringValue("scheduleStartDate", ScheduleStartDate);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

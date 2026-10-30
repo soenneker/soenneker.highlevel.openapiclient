@@ -11,96 +11,136 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class UpdatePublicAgentVersionDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("edges") is { } nullNodeEdges && nullNodeEdges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Edges = null;
+            if (parseNode.GetChildNode("globalConfig") is { } nullNodeGlobalConfig && nullNodeGlobalConfig.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GlobalConfig = null;
+            if (parseNode.GetChildNode("globalVariables") is { } nullNodeGlobalVariables && nullNodeGlobalVariables.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GlobalVariables = null;
+            if (parseNode.GetChildNode("inputVariables") is { } nullNodeInputVariables && nullNodeInputVariables.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InputVariables = null;
+            if (parseNode.GetChildNode("locationId") is { } nullNodeLocationId && nullNodeLocationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationId = null;
+            if (parseNode.GetChildNode("nodes") is { } nullNodeNodes && nullNodeNodes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Nodes = null;
+            if (parseNode.GetChildNode("runtimeVariables") is { } nullNodeRuntimeVariables && nullNodeRuntimeVariables.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RuntimeVariables = null;
+            if (parseNode.GetChildNode("userId") is { } nullNodeUserId && nullNodeUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserId = null;
+            if (parseNode.GetChildNode("userName") is { } nullNodeUserName && nullNodeUserName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserName = null;
+            if (parseNode.GetChildNode("versionName") is { } nullNodeVersionName && nullNodeVersionName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VersionName = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Description of the version</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>Complete array of edges connecting the nodes. Provide all edges including unchanged ones.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentVersionDtoEdgesItemProperty2>? Edges { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentVersionDtoEdgesItemProperty2>? Edges { get => _explicitNullValueEdges; set { _explicitNullValueEdges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("edges"); else _explicitNullProperties?.Remove("edges"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentVersionDtoEdgesItemProperty2>? _explicitNullValueEdges = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentVersionDtoEdgesItemProperty2> Edges { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentVersionDtoEdgesItemProperty2> Edges { get => _explicitNullValueEdges; set { _explicitNullValueEdges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("edges"); else _explicitNullProperties?.Remove("edges"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentVersionDtoEdgesItemProperty2> _explicitNullValueEdges = default!;
 #endif
         /// <summary>Global configuration including prompts and settings</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentVersionDtoGlobalConfigProperty2? GlobalConfig { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentVersionDtoGlobalConfigProperty2? GlobalConfig { get => _explicitNullValueGlobalConfig; set { _explicitNullValueGlobalConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("globalConfig"); else _explicitNullProperties?.Remove("globalConfig"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentVersionDtoGlobalConfigProperty2? _explicitNullValueGlobalConfig = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentVersionDtoGlobalConfigProperty2 GlobalConfig { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentVersionDtoGlobalConfigProperty2 GlobalConfig { get => _explicitNullValueGlobalConfig; set { _explicitNullValueGlobalConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("globalConfig"); else _explicitNullProperties?.Remove("globalConfig"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentVersionDtoGlobalConfigProperty2 _explicitNullValueGlobalConfig = default!;
 #endif
         /// <summary>Global variables accessible throughout the agent workflow</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentVersionDtoGlobalVariablesItemProperty2>? GlobalVariables { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentVersionDtoGlobalVariablesItemProperty2>? GlobalVariables { get => _explicitNullValueGlobalVariables; set { _explicitNullValueGlobalVariables = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("globalVariables"); else _explicitNullProperties?.Remove("globalVariables"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentVersionDtoGlobalVariablesItemProperty2>? _explicitNullValueGlobalVariables = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentVersionDtoGlobalVariablesItemProperty2> GlobalVariables { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentVersionDtoGlobalVariablesItemProperty2> GlobalVariables { get => _explicitNullValueGlobalVariables; set { _explicitNullValueGlobalVariables = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("globalVariables"); else _explicitNullProperties?.Remove("globalVariables"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentVersionDtoGlobalVariablesItemProperty2> _explicitNullValueGlobalVariables = default!;
 #endif
         /// <summary>Input variables required from user at execution time</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentVersionDtoInputVariablesItemProperty2>? InputVariables { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentVersionDtoInputVariablesItemProperty2>? InputVariables { get => _explicitNullValueInputVariables; set { _explicitNullValueInputVariables = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputVariables"); else _explicitNullProperties?.Remove("inputVariables"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentVersionDtoInputVariablesItemProperty2>? _explicitNullValueInputVariables = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentVersionDtoInputVariablesItemProperty2> InputVariables { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentVersionDtoInputVariablesItemProperty2> InputVariables { get => _explicitNullValueInputVariables; set { _explicitNullValueInputVariables = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputVariables"); else _explicitNullProperties?.Remove("inputVariables"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentVersionDtoInputVariablesItemProperty2> _explicitNullValueInputVariables = default!;
 #endif
         /// <summary>Location ID for authorization</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LocationId { get; set; }
+        public string? LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
+        private string? _explicitNullValueLocationId = default!;
 #nullable restore
 #else
-        public string LocationId { get; set; }
+        public string LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
+        private string _explicitNullValueLocationId = default!;
 #endif
         /// <summary>Complete array of nodes for the agent workflow. Provide all nodes including unchanged ones.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentVersionDtoNodesItemProperty2>? Nodes { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentVersionDtoNodesItemProperty2>? Nodes { get => _explicitNullValueNodes; set { _explicitNullValueNodes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nodes"); else _explicitNullProperties?.Remove("nodes"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentVersionDtoNodesItemProperty2>? _explicitNullValueNodes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentVersionDtoNodesItemProperty2> Nodes { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentVersionDtoNodesItemProperty2> Nodes { get => _explicitNullValueNodes; set { _explicitNullValueNodes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nodes"); else _explicitNullProperties?.Remove("nodes"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentVersionDtoNodesItemProperty2> _explicitNullValueNodes = default!;
 #endif
         /// <summary>Runtime variables generated during agent execution</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentVersionDtoRuntimeVariablesItemProperty2>? RuntimeVariables { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentVersionDtoRuntimeVariablesItemProperty2>? RuntimeVariables { get => _explicitNullValueRuntimeVariables; set { _explicitNullValueRuntimeVariables = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runtimeVariables"); else _explicitNullProperties?.Remove("runtimeVariables"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentVersionDtoRuntimeVariablesItemProperty2>? _explicitNullValueRuntimeVariables = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentVersionDtoRuntimeVariablesItemProperty2> RuntimeVariables { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentVersionDtoRuntimeVariablesItemProperty2> RuntimeVariables { get => _explicitNullValueRuntimeVariables; set { _explicitNullValueRuntimeVariables = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runtimeVariables"); else _explicitNullProperties?.Remove("runtimeVariables"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentVersionDtoRuntimeVariablesItemProperty2> _explicitNullValueRuntimeVariables = default!;
 #endif
         /// <summary>User ID performing the update</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserId { get; set; }
+        public string? UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userId"); else _explicitNullProperties?.Remove("userId"); } }
+        private string? _explicitNullValueUserId = default!;
 #nullable restore
 #else
-        public string UserId { get; set; }
+        public string UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userId"); else _explicitNullProperties?.Remove("userId"); } }
+        private string _explicitNullValueUserId = default!;
 #endif
         /// <summary>User name performing the update</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserName { get; set; }
+        public string? UserName { get => _explicitNullValueUserName; set { _explicitNullValueUserName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userName"); else _explicitNullProperties?.Remove("userName"); } }
+        private string? _explicitNullValueUserName = default!;
 #nullable restore
 #else
-        public string UserName { get; set; }
+        public string UserName { get => _explicitNullValueUserName; set { _explicitNullValueUserName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userName"); else _explicitNullProperties?.Remove("userName"); } }
+        private string _explicitNullValueUserName = default!;
 #endif
         /// <summary>Version name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VersionName { get; set; }
+        public string? VersionName { get => _explicitNullValueVersionName; set { _explicitNullValueVersionName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("versionName"); else _explicitNullProperties?.Remove("versionName"); } }
+        private string? _explicitNullValueVersionName = default!;
 #nullable restore
 #else
-        public string VersionName { get; set; }
+        public string VersionName { get => _explicitNullValueVersionName; set { _explicitNullValueVersionName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("versionName"); else _explicitNullProperties?.Remove("versionName"); } }
+        private string _explicitNullValueVersionName = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentVersionDto"/> and sets the default values.
@@ -117,7 +157,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentVersionDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentVersionDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentVersionDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -158,6 +198,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("userId", UserId);
             writer.WriteStringValue("userName", UserName);
             writer.WriteStringValue("versionName", VersionName);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

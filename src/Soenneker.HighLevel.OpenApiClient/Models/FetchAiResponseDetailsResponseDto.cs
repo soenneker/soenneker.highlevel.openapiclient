@@ -11,88 +11,125 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class FetchAiResponseDetailsResponseDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("actionLogs") is { } nullNodeActionLogs && nullNodeActionLogs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionLogs = null;
+            if (parseNode.GetChildNode("agentId") is { } nullNodeAgentId && nullNodeAgentId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgentId = null;
+            if (parseNode.GetChildNode("faqs") is { } nullNodeFaqs && nullNodeFaqs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Faqs = null;
+            if (parseNode.GetChildNode("history") is { } nullNodeHistory && nullNodeHistory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) History = null;
+            if (parseNode.GetChildNode("input") is { } nullNodeInput && nullNodeInput.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Input = null;
+            if (parseNode.GetChildNode("intent") is { } nullNodeIntent && nullNodeIntent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Intent = null;
+            if (parseNode.GetChildNode("mode") is { } nullNodeMode && nullNodeMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mode = null;
+            if (parseNode.GetChildNode("prompt") is { } nullNodePrompt && nullNodePrompt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Prompt = null;
+            if (parseNode.GetChildNode("responseMessage") is { } nullNodeResponseMessage && nullNodeResponseMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResponseMessage = null;
+            if (parseNode.GetChildNode("website") is { } nullNodeWebsite && nullNodeWebsite.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Website = null;
+        }
+
         /// <summary>List of actions taken during this interaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? ActionLogs { get; set; }
+        public UntypedNode? ActionLogs { get => _explicitNullValueActionLogs; set { _explicitNullValueActionLogs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionLogs"); else _explicitNullProperties?.Remove("actionLogs"); } }
+        private UntypedNode? _explicitNullValueActionLogs = default!;
 #nullable restore
 #else
-        public UntypedNode ActionLogs { get; set; }
+        public UntypedNode ActionLogs { get => _explicitNullValueActionLogs; set { _explicitNullValueActionLogs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionLogs"); else _explicitNullProperties?.Remove("actionLogs"); } }
+        private UntypedNode _explicitNullValueActionLogs = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>ID of the employee/agent that generated the response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AgentId { get; set; }
+        public string? AgentId { get => _explicitNullValueAgentId; set { _explicitNullValueAgentId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agentId"); else _explicitNullProperties?.Remove("agentId"); } }
+        private string? _explicitNullValueAgentId = default!;
 #nullable restore
 #else
-        public string AgentId { get; set; }
+        public string AgentId { get => _explicitNullValueAgentId; set { _explicitNullValueAgentId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agentId"); else _explicitNullProperties?.Remove("agentId"); } }
+        private string _explicitNullValueAgentId = default!;
 #endif
         /// <summary>FAQ chunks used in generating the response from fine-tuned data.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Faqs { get; set; }
+        public UntypedNode? Faqs { get => _explicitNullValueFaqs; set { _explicitNullValueFaqs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("faqs"); else _explicitNullProperties?.Remove("faqs"); } }
+        private UntypedNode? _explicitNullValueFaqs = default!;
 #nullable restore
 #else
-        public UntypedNode Faqs { get; set; }
+        public UntypedNode Faqs { get => _explicitNullValueFaqs; set { _explicitNullValueFaqs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("faqs"); else _explicitNullProperties?.Remove("faqs"); } }
+        private UntypedNode _explicitNullValueFaqs = default!;
 #endif
         /// <summary>Conversation history leading up to this response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? History { get; set; }
+        public UntypedNode? History { get => _explicitNullValueHistory; set { _explicitNullValueHistory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("history"); else _explicitNullProperties?.Remove("history"); } }
+        private UntypedNode? _explicitNullValueHistory = default!;
 #nullable restore
 #else
-        public UntypedNode History { get; set; }
+        public UntypedNode History { get => _explicitNullValueHistory; set { _explicitNullValueHistory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("history"); else _explicitNullProperties?.Remove("history"); } }
+        private UntypedNode _explicitNullValueHistory = default!;
 #endif
         /// <summary>The original input message that triggered this response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Input { get; set; }
+        public string? Input { get => _explicitNullValueInput; set { _explicitNullValueInput = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("input"); else _explicitNullProperties?.Remove("input"); } }
+        private string? _explicitNullValueInput = default!;
 #nullable restore
 #else
-        public string Input { get; set; }
+        public string Input { get => _explicitNullValueInput; set { _explicitNullValueInput = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("input"); else _explicitNullProperties?.Remove("input"); } }
+        private string _explicitNullValueInput = default!;
 #endif
         /// <summary>The intent/goal extracted from location prompt.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Intent { get; set; }
+        public string? Intent { get => _explicitNullValueIntent; set { _explicitNullValueIntent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intent"); else _explicitNullProperties?.Remove("intent"); } }
+        private string? _explicitNullValueIntent = default!;
 #nullable restore
 #else
-        public string Intent { get; set; }
+        public string Intent { get => _explicitNullValueIntent; set { _explicitNullValueIntent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intent"); else _explicitNullProperties?.Remove("intent"); } }
+        private string _explicitNullValueIntent = default!;
 #endif
         /// <summary>Mode of operation during this interaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Mode { get; set; }
+        public string? Mode { get => _explicitNullValueMode; set { _explicitNullValueMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mode"); else _explicitNullProperties?.Remove("mode"); } }
+        private string? _explicitNullValueMode = default!;
 #nullable restore
 #else
-        public string Mode { get; set; }
+        public string Mode { get => _explicitNullValueMode; set { _explicitNullValueMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mode"); else _explicitNullProperties?.Remove("mode"); } }
+        private string _explicitNullValueMode = default!;
 #endif
         /// <summary>The complete prompt used for the AI response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Prompt { get; set; }
+        public string? Prompt { get => _explicitNullValuePrompt; set { _explicitNullValuePrompt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prompt"); else _explicitNullProperties?.Remove("prompt"); } }
+        private string? _explicitNullValuePrompt = default!;
 #nullable restore
 #else
-        public string Prompt { get; set; }
+        public string Prompt { get => _explicitNullValuePrompt; set { _explicitNullValuePrompt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prompt"); else _explicitNullProperties?.Remove("prompt"); } }
+        private string _explicitNullValuePrompt = default!;
 #endif
         /// <summary>The response message generated by the AI.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ResponseMessage { get; set; }
+        public string? ResponseMessage { get => _explicitNullValueResponseMessage; set { _explicitNullValueResponseMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("responseMessage"); else _explicitNullProperties?.Remove("responseMessage"); } }
+        private string? _explicitNullValueResponseMessage = default!;
 #nullable restore
 #else
-        public string ResponseMessage { get; set; }
+        public string ResponseMessage { get => _explicitNullValueResponseMessage; set { _explicitNullValueResponseMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("responseMessage"); else _explicitNullProperties?.Remove("responseMessage"); } }
+        private string _explicitNullValueResponseMessage = default!;
 #endif
         /// <summary>Website content chunks used in generating the response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Website { get; set; }
+        public UntypedNode? Website { get => _explicitNullValueWebsite; set { _explicitNullValueWebsite = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("website"); else _explicitNullProperties?.Remove("website"); } }
+        private UntypedNode? _explicitNullValueWebsite = default!;
 #nullable restore
 #else
-        public UntypedNode Website { get; set; }
+        public UntypedNode Website { get => _explicitNullValueWebsite; set { _explicitNullValueWebsite = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("website"); else _explicitNullProperties?.Remove("website"); } }
+        private UntypedNode _explicitNullValueWebsite = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.FetchAiResponseDetailsResponseDto"/> and sets the default values.
@@ -109,7 +146,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.FetchAiResponseDetailsResponseDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.FetchAiResponseDetailsResponseDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.FetchAiResponseDetailsResponseDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -148,6 +185,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("prompt", Prompt);
             writer.WriteStringValue("responseMessage", ResponseMessage);
             writer.WriteObjectValue<UntypedNode>("website", Website);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

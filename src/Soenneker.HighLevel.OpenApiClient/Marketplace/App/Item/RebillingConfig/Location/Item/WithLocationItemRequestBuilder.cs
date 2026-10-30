@@ -49,7 +49,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Marketplace.App.Item.RebillingConfig
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.GetRebillingConfigResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.GetRebillingConfigResponseDto.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.GetRebillingConfigResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.GetRebillingConfigResponseDto.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get rebilling config for an app subscription and usage plans for the authenticated sub-account. This endpoint returns the subscription and usage plans for an app.

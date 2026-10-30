@@ -11,40 +11,59 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class OthersSchema : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("__custom_field_id__") is { } nullNodeCustomFieldId && nullNodeCustomFieldId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomFieldId = null;
+            if (parseNode.GetChildNode("eventData") is { } nullNodeEventData && nullNodeEventData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventData = null;
+            if (parseNode.GetChildNode("fieldsOriSequance") is { } nullNodeFieldsOriSequance && nullNodeFieldsOriSequance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldsOriSequance = null;
+            if (parseNode.GetChildNode("__submissions_other_field__") is { } nullNodeSubmissionsOtherField && nullNodeSubmissionsOtherField.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubmissionsOtherField = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The custom_field_id__ property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomFieldId { get; set; }
+        public string? CustomFieldId { get => _explicitNullValueCustomFieldId; set { _explicitNullValueCustomFieldId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("__custom_field_id__"); else _explicitNullProperties?.Remove("__custom_field_id__"); } }
+        private string? _explicitNullValueCustomFieldId = default!;
 #nullable restore
 #else
-        public string CustomFieldId { get; set; }
+        public string CustomFieldId { get => _explicitNullValueCustomFieldId; set { _explicitNullValueCustomFieldId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("__custom_field_id__"); else _explicitNullProperties?.Remove("__custom_field_id__"); } }
+        private string _explicitNullValueCustomFieldId = default!;
 #endif
         /// <summary>The eventData property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.EventDataSchema? EventData { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.EventDataSchema? EventData { get => _explicitNullValueEventData; set { _explicitNullValueEventData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eventData"); else _explicitNullProperties?.Remove("eventData"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.EventDataSchema? _explicitNullValueEventData = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.EventDataSchema EventData { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.EventDataSchema EventData { get => _explicitNullValueEventData; set { _explicitNullValueEventData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eventData"); else _explicitNullProperties?.Remove("eventData"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.EventDataSchema _explicitNullValueEventData = default!;
 #endif
         /// <summary>The fieldsOriSequance property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? FieldsOriSequance { get; set; }
+        public List<string>? FieldsOriSequance { get => _explicitNullValueFieldsOriSequance; set { _explicitNullValueFieldsOriSequance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldsOriSequance"); else _explicitNullProperties?.Remove("fieldsOriSequance"); } }
+        private List<string>? _explicitNullValueFieldsOriSequance = default!;
 #nullable restore
 #else
-        public List<string> FieldsOriSequance { get; set; }
+        public List<string> FieldsOriSequance { get => _explicitNullValueFieldsOriSequance; set { _explicitNullValueFieldsOriSequance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldsOriSequance"); else _explicitNullProperties?.Remove("fieldsOriSequance"); } }
+        private List<string> _explicitNullValueFieldsOriSequance = default!;
 #endif
         /// <summary>The submissions_other_field__ property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SubmissionsOtherField { get; set; }
+        public string? SubmissionsOtherField { get => _explicitNullValueSubmissionsOtherField; set { _explicitNullValueSubmissionsOtherField = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("__submissions_other_field__"); else _explicitNullProperties?.Remove("__submissions_other_field__"); } }
+        private string? _explicitNullValueSubmissionsOtherField = default!;
 #nullable restore
 #else
-        public string SubmissionsOtherField { get; set; }
+        public string SubmissionsOtherField { get => _explicitNullValueSubmissionsOtherField; set { _explicitNullValueSubmissionsOtherField = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("__submissions_other_field__"); else _explicitNullProperties?.Remove("__submissions_other_field__"); } }
+        private string _explicitNullValueSubmissionsOtherField = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.OthersSchema"/> and sets the default values.
@@ -61,7 +80,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.OthersSchema CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.OthersSchema();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.OthersSchema(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,6 +107,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EventDataSchema>("eventData", EventData);
             writer.WriteCollectionOfPrimitiveValues<string>("fieldsOriSequance", FieldsOriSequance);
             writer.WriteStringValue("__submissions_other_field__", SubmissionsOtherField);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

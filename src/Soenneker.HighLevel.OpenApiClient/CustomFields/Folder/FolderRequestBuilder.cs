@@ -70,6 +70,8 @@ namespace Soenneker.HighLevel.OpenApiClient.CustomFields.Folder
             {
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.ICustomFieldFolder>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.ICustomFieldFolder.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

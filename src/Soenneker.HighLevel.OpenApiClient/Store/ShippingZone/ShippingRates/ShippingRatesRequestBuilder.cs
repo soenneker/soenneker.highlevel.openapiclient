@@ -59,6 +59,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Store.ShippingZone.ShippingRates
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.StoreCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.StoreCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.StoreCommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.GetAvailableShippingRatesResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.GetAvailableShippingRatesResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

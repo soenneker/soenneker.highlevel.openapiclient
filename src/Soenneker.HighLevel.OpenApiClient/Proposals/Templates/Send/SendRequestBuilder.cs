@@ -55,6 +55,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Proposals.Templates.Send
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.ProposalsBadRequestDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.SendTemplateResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.SendTemplateResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

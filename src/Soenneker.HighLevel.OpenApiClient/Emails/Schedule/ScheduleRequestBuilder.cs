@@ -61,6 +61,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Emails.Schedule
                 { "403", global::Soenneker.HighLevel.OpenApiClient.Models.InvalidLocationDto.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.HighLevel.OpenApiClient.Models.NotFoundDto.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.EmailsCommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleFetchSuccessfulDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleFetchSuccessfulDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

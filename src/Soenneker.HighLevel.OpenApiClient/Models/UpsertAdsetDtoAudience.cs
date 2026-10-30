@@ -12,70 +12,104 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UpsertAdsetDtoAudience : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("age_max") is { } nullNodeAgeMax && nullNodeAgeMax.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgeMax = null;
+            if (parseNode.GetChildNode("age_min") is { } nullNodeAgeMin && nullNodeAgeMin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgeMin = null;
+            if (parseNode.GetChildNode("genders") is { } nullNodeGenders && nullNodeGenders.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Genders = null;
+            if (parseNode.GetChildNode("geo_locations") is { } nullNodeGeoLocations && nullNodeGeoLocations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GeoLocations = null;
+            if (parseNode.GetChildNode("interests") is { } nullNodeInterests && nullNodeInterests.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Interests = null;
+            if (parseNode.GetChildNode("locales") is { } nullNodeLocales && nullNodeLocales.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locales = null;
+            if (parseNode.GetChildNode("lookalike") is { } nullNodeLookalike && nullNodeLookalike.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Lookalike = null;
+            if (parseNode.GetChildNode("placements") is { } nullNodePlacements && nullNodePlacements.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Placements = null;
+            if (parseNode.GetChildNode("placementType") is { } nullNodePlacementType && nullNodePlacementType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlacementType = null;
+            if (parseNode.GetChildNode("retargeting") is { } nullNodeRetargeting && nullNodeRetargeting.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Retargeting = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Maximum age for targeting</summary>
-        public double? AgeMax { get; set; }
+        public double? AgeMax { get => _explicitNullValueAgeMax; set { _explicitNullValueAgeMax = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("age_max"); else _explicitNullProperties?.Remove("age_max"); } }
+        private double? _explicitNullValueAgeMax = default!;
         /// <summary>Minimum age for targeting</summary>
-        public double? AgeMin { get; set; }
+        public double? AgeMin { get => _explicitNullValueAgeMin; set { _explicitNullValueAgeMin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("age_min"); else _explicitNullProperties?.Remove("age_min"); } }
+        private double? _explicitNullValueAgeMin = default!;
         /// <summary>Gender targeting (1 = male, 2 = female)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<double?>? Genders { get; set; }
+        public List<double?>? Genders { get => _explicitNullValueGenders; set { _explicitNullValueGenders = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("genders"); else _explicitNullProperties?.Remove("genders"); } }
+        private List<double?>? _explicitNullValueGenders = default!;
 #nullable restore
 #else
-        public List<double?> Genders { get; set; }
+        public List<double?> Genders { get => _explicitNullValueGenders; set { _explicitNullValueGenders = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("genders"); else _explicitNullProperties?.Remove("genders"); } }
+        private List<double?> _explicitNullValueGenders = default!;
 #endif
         /// <summary>Geographic locations to target or exclude</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.AudienceLocationDto>? GeoLocations { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.AudienceLocationDto>? GeoLocations { get => _explicitNullValueGeoLocations; set { _explicitNullValueGeoLocations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("geo_locations"); else _explicitNullProperties?.Remove("geo_locations"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.AudienceLocationDto>? _explicitNullValueGeoLocations = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.AudienceLocationDto> GeoLocations { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.AudienceLocationDto> GeoLocations { get => _explicitNullValueGeoLocations; set { _explicitNullValueGeoLocations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("geo_locations"); else _explicitNullProperties?.Remove("geo_locations"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.AudienceLocationDto> _explicitNullValueGeoLocations = default!;
 #endif
         /// <summary>Interest-based targeting criteria</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.AudienceInterestDto>? Interests { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.AudienceInterestDto>? Interests { get => _explicitNullValueInterests; set { _explicitNullValueInterests = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interests"); else _explicitNullProperties?.Remove("interests"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.AudienceInterestDto>? _explicitNullValueInterests = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.AudienceInterestDto> Interests { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.AudienceInterestDto> Interests { get => _explicitNullValueInterests; set { _explicitNullValueInterests = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interests"); else _explicitNullProperties?.Remove("interests"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.AudienceInterestDto> _explicitNullValueInterests = default!;
 #endif
         /// <summary>Language locales to target</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.AudienceLocaleDto>? Locales { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.AudienceLocaleDto>? Locales { get => _explicitNullValueLocales; set { _explicitNullValueLocales = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locales"); else _explicitNullProperties?.Remove("locales"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.AudienceLocaleDto>? _explicitNullValueLocales = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.AudienceLocaleDto> Locales { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.AudienceLocaleDto> Locales { get => _explicitNullValueLocales; set { _explicitNullValueLocales = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locales"); else _explicitNullProperties?.Remove("locales"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.AudienceLocaleDto> _explicitNullValueLocales = default!;
 #endif
         /// <summary>Lookalike audiences to target</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.AudienceCustomAudienceItemDto>? Lookalike { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.AudienceCustomAudienceItemDto>? Lookalike { get => _explicitNullValueLookalike; set { _explicitNullValueLookalike = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lookalike"); else _explicitNullProperties?.Remove("lookalike"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.AudienceCustomAudienceItemDto>? _explicitNullValueLookalike = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.AudienceCustomAudienceItemDto> Lookalike { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.AudienceCustomAudienceItemDto> Lookalike { get => _explicitNullValueLookalike; set { _explicitNullValueLookalike = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lookalike"); else _explicitNullProperties?.Remove("lookalike"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.AudienceCustomAudienceItemDto> _explicitNullValueLookalike = default!;
 #endif
         /// <summary>Ad placement positions per platform (only used when placementType is &quot;manual&quot;)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.FacebookAudienceDtoPlacements? Placements { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.FacebookAudienceDtoPlacements? Placements { get => _explicitNullValuePlacements; set { _explicitNullValuePlacements = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("placements"); else _explicitNullProperties?.Remove("placements"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.FacebookAudienceDtoPlacements? _explicitNullValuePlacements = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.FacebookAudienceDtoPlacements Placements { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.FacebookAudienceDtoPlacements Placements { get => _explicitNullValuePlacements; set { _explicitNullValuePlacements = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("placements"); else _explicitNullProperties?.Remove("placements"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.FacebookAudienceDtoPlacements _explicitNullValuePlacements = default!;
 #endif
         /// <summary>Placement strategy — &quot;auto&quot; lets Facebook choose, &quot;manual&quot; uses the placements config</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.FacebookAudienceDtoPlacementType? PlacementType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.FacebookAudienceDtoPlacementType? PlacementType { get => _explicitNullValuePlacementType; set { _explicitNullValuePlacementType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("placementType"); else _explicitNullProperties?.Remove("placementType"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.FacebookAudienceDtoPlacementType? _explicitNullValuePlacementType = default!;
         /// <summary>Retargeting custom audiences to target</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.AudienceCustomAudienceItemDto>? Retargeting { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.AudienceCustomAudienceItemDto>? Retargeting { get => _explicitNullValueRetargeting; set { _explicitNullValueRetargeting = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("retargeting"); else _explicitNullProperties?.Remove("retargeting"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.AudienceCustomAudienceItemDto>? _explicitNullValueRetargeting = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.AudienceCustomAudienceItemDto> Retargeting { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.AudienceCustomAudienceItemDto> Retargeting { get => _explicitNullValueRetargeting; set { _explicitNullValueRetargeting = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("retargeting"); else _explicitNullProperties?.Remove("retargeting"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.AudienceCustomAudienceItemDto> _explicitNullValueRetargeting = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpsertAdsetDtoAudience"/> and sets the default values.
@@ -92,7 +126,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.UpsertAdsetDtoAudience CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.UpsertAdsetDtoAudience();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.UpsertAdsetDtoAudience(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -131,6 +165,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.FacebookAudienceDtoPlacements>("placements", Placements);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.FacebookAudienceDtoPlacementType>("placementType", PlacementType);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.AudienceCustomAudienceItemDto>("retargeting", Retargeting);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -59,6 +59,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Blogs.Posts.Item
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.BlogsCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.BlogsCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.BlogsCommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.BlogPostUpdateResponseWrapperDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.BlogPostUpdateResponseWrapperDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

@@ -11,26 +11,41 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class BulkEnableSaasRequestDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("actionPayload") is { } nullNodeActionPayload && nullNodeActionPayload.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionPayload = null;
+            if (parseNode.GetChildNode("isSaaSV2") is { } nullNodeIsSaaSV2 && nullNodeIsSaaSV2.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsSaaSV2 = null;
+            if (parseNode.GetChildNode("locationIds") is { } nullNodeLocationIds && nullNodeLocationIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationIds = null;
+        }
+
         /// <summary>Action payload for the bulk enable SaaS operation</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.BulkEnableSaasRequestDtoActionPayload? ActionPayload { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.BulkEnableSaasRequestDtoActionPayload? ActionPayload { get => _explicitNullValueActionPayload; set { _explicitNullValueActionPayload = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionPayload"); else _explicitNullProperties?.Remove("actionPayload"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.BulkEnableSaasRequestDtoActionPayload? _explicitNullValueActionPayload = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.BulkEnableSaasRequestDtoActionPayload ActionPayload { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.BulkEnableSaasRequestDtoActionPayload ActionPayload { get => _explicitNullValueActionPayload; set { _explicitNullValueActionPayload = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionPayload"); else _explicitNullProperties?.Remove("actionPayload"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.BulkEnableSaasRequestDtoActionPayload _explicitNullValueActionPayload = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Indicates if the SaaS is V2</summary>
-        public bool? IsSaaSV2 { get; set; }
+        public bool? IsSaaSV2 { get => _explicitNullValueIsSaaSV2; set { _explicitNullValueIsSaaSV2 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isSaaSV2"); else _explicitNullProperties?.Remove("isSaaSV2"); } }
+        private bool? _explicitNullValueIsSaaSV2 = default!;
         /// <summary>Array of location IDs to enable SaaS for</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? LocationIds { get; set; }
+        public List<string>? LocationIds { get => _explicitNullValueLocationIds; set { _explicitNullValueLocationIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationIds"); else _explicitNullProperties?.Remove("locationIds"); } }
+        private List<string>? _explicitNullValueLocationIds = default!;
 #nullable restore
 #else
-        public List<string> LocationIds { get; set; }
+        public List<string> LocationIds { get => _explicitNullValueLocationIds; set { _explicitNullValueLocationIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationIds"); else _explicitNullProperties?.Remove("locationIds"); } }
+        private List<string> _explicitNullValueLocationIds = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.BulkEnableSaasRequestDto"/> and sets the default values.
@@ -47,7 +62,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.BulkEnableSaasRequestDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.BulkEnableSaasRequestDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.BulkEnableSaasRequestDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -72,6 +87,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BulkEnableSaasRequestDtoActionPayload>("actionPayload", ActionPayload);
             writer.WriteBoolValue("isSaaSV2", IsSaaSV2);
             writer.WriteCollectionOfPrimitiveValues<string>("locationIds", LocationIds);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

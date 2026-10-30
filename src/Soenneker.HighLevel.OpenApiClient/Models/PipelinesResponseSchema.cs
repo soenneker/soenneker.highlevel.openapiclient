@@ -11,46 +11,71 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PipelinesResponseSchema : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("colorRenderMode") is { } nullNodeColorRenderMode && nullNodeColorRenderMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ColorRenderMode = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("locationId") is { } nullNodeLocationId && nullNodeLocationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationId = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("showInFunnel") is { } nullNodeShowInFunnel && nullNodeShowInFunnel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShowInFunnel = null;
+            if (parseNode.GetChildNode("showInPieChart") is { } nullNodeShowInPieChart && nullNodeShowInPieChart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShowInPieChart = null;
+            if (parseNode.GetChildNode("stages") is { } nullNodeStages && nullNodeStages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Stages = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>How pipeline/stage colors are rendered</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PipelinesResponseSchemaColorRenderMode? ColorRenderMode { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PipelinesResponseSchemaColorRenderMode? ColorRenderMode { get => _explicitNullValueColorRenderMode; set { _explicitNullValueColorRenderMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("colorRenderMode"); else _explicitNullProperties?.Remove("colorRenderMode"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.PipelinesResponseSchemaColorRenderMode? _explicitNullValueColorRenderMode = default!;
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The locationId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LocationId { get; set; }
+        public string? LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
+        private string? _explicitNullValueLocationId = default!;
 #nullable restore
 #else
-        public string LocationId { get; set; }
+        public string LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
+        private string _explicitNullValueLocationId = default!;
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The showInFunnel property</summary>
-        public bool? ShowInFunnel { get; set; }
+        public bool? ShowInFunnel { get => _explicitNullValueShowInFunnel; set { _explicitNullValueShowInFunnel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("showInFunnel"); else _explicitNullProperties?.Remove("showInFunnel"); } }
+        private bool? _explicitNullValueShowInFunnel = default!;
         /// <summary>The showInPieChart property</summary>
-        public bool? ShowInPieChart { get; set; }
+        public bool? ShowInPieChart { get => _explicitNullValueShowInPieChart; set { _explicitNullValueShowInPieChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("showInPieChart"); else _explicitNullProperties?.Remove("showInPieChart"); } }
+        private bool? _explicitNullValueShowInPieChart = default!;
         /// <summary>The stages property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<UntypedNode>? Stages { get; set; }
+        public List<UntypedNode>? Stages { get => _explicitNullValueStages; set { _explicitNullValueStages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stages"); else _explicitNullProperties?.Remove("stages"); } }
+        private List<UntypedNode>? _explicitNullValueStages = default!;
 #nullable restore
 #else
-        public List<UntypedNode> Stages { get; set; }
+        public List<UntypedNode> Stages { get => _explicitNullValueStages; set { _explicitNullValueStages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stages"); else _explicitNullProperties?.Remove("stages"); } }
+        private List<UntypedNode> _explicitNullValueStages = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.PipelinesResponseSchema"/> and sets the default values.
@@ -67,7 +92,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.PipelinesResponseSchema CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.PipelinesResponseSchema();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.PipelinesResponseSchema(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -83,7 +108,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "showInFunnel", n => { ShowInFunnel = n.GetBoolValue(); } },
                 { "showInPieChart", n => { ShowInPieChart = n.GetBoolValue(); } },
-                { "stages", n => { Stages = n.GetCollectionOfPrimitiveValues<UntypedNode>()?.AsList(); } },
+                { "stages", n => { Stages = n.GetCollectionOfObjectValues<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -100,6 +125,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteBoolValue("showInFunnel", ShowInFunnel);
             writer.WriteBoolValue("showInPieChart", ShowInPieChart);
             writer.WriteCollectionOfPrimitiveValues<UntypedNode>("stages", Stages);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

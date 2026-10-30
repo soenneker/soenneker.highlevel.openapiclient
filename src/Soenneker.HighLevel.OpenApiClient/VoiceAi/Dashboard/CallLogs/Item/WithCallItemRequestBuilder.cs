@@ -55,6 +55,8 @@ namespace Soenneker.HighLevel.OpenApiClient.VoiceAi.Dashboard.CallLogs.Item
             {
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.VoiceAiCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.VoiceAiCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.CallLogDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.CallLogDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

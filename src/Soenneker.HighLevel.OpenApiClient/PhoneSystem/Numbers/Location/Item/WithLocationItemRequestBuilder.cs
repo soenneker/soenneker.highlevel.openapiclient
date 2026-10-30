@@ -71,6 +71,8 @@ namespace Soenneker.HighLevel.OpenApiClient.PhoneSystem.Numbers.Location.Item
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.PhoneSystemCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.HighLevel.OpenApiClient.Models.ActiveNumbers404Response.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.HighLevel.OpenApiClient.Models.ActiveNumbers500Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.ActiveNumbers200Response>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.ActiveNumbers200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

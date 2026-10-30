@@ -12,136 +12,191 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GetInvoiceSettingsResponseDtoCustomNotification : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("customerAutoPaymentAmountChanged") is { } nullNodeCustomerAutoPaymentAmountChanged && nullNodeCustomerAutoPaymentAmountChanged.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerAutoPaymentAmountChanged = null;
+            if (parseNode.GetChildNode("customerAutoPaymentFailure") is { } nullNodeCustomerAutoPaymentFailure && nullNodeCustomerAutoPaymentFailure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerAutoPaymentFailure = null;
+            if (parseNode.GetChildNode("customerAutoPaymentInfo") is { } nullNodeCustomerAutoPaymentInfo && nullNodeCustomerAutoPaymentInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerAutoPaymentInfo = null;
+            if (parseNode.GetChildNode("customerAutoPaymentSuccess") is { } nullNodeCustomerAutoPaymentSuccess && nullNodeCustomerAutoPaymentSuccess.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerAutoPaymentSuccess = null;
+            if (parseNode.GetChildNode("customerPaymentFailure") is { } nullNodeCustomerPaymentFailure && nullNodeCustomerPaymentFailure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerPaymentFailure = null;
+            if (parseNode.GetChildNode("customerPaymentSuccess") is { } nullNodeCustomerPaymentSuccess && nullNodeCustomerPaymentSuccess.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerPaymentSuccess = null;
+            if (parseNode.GetChildNode("customerSendEstimate") is { } nullNodeCustomerSendEstimate && nullNodeCustomerSendEstimate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerSendEstimate = null;
+            if (parseNode.GetChildNode("customerSendInvoice") is { } nullNodeCustomerSendInvoice && nullNodeCustomerSendInvoice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerSendInvoice = null;
+            if (parseNode.GetChildNode("teamAutoPaymentFailure") is { } nullNodeTeamAutoPaymentFailure && nullNodeTeamAutoPaymentFailure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TeamAutoPaymentFailure = null;
+            if (parseNode.GetChildNode("teamAutoPaymentSkip") is { } nullNodeTeamAutoPaymentSkip && nullNodeTeamAutoPaymentSkip.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TeamAutoPaymentSkip = null;
+            if (parseNode.GetChildNode("teamAutoPaymentSuccess") is { } nullNodeTeamAutoPaymentSuccess && nullNodeTeamAutoPaymentSuccess.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TeamAutoPaymentSuccess = null;
+            if (parseNode.GetChildNode("teamEstimateAccepted") is { } nullNodeTeamEstimateAccepted && nullNodeTeamEstimateAccepted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TeamEstimateAccepted = null;
+            if (parseNode.GetChildNode("teamEstimateDeclined") is { } nullNodeTeamEstimateDeclined && nullNodeTeamEstimateDeclined.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TeamEstimateDeclined = null;
+            if (parseNode.GetChildNode("teamPaymentFailure") is { } nullNodeTeamPaymentFailure && nullNodeTeamPaymentFailure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TeamPaymentFailure = null;
+            if (parseNode.GetChildNode("teamPaymentSuccess") is { } nullNodeTeamPaymentSuccess && nullNodeTeamPaymentSuccess.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TeamPaymentSuccess = null;
+            if (parseNode.GetChildNode("teamRecurringSendInvoiceFailed") is { } nullNodeTeamRecurringSendInvoiceFailed && nullNodeTeamRecurringSendInvoiceFailed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TeamRecurringSendInvoiceFailed = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The customerAutoPaymentAmountChanged property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto? CustomerAutoPaymentAmountChanged { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto? CustomerAutoPaymentAmountChanged { get => _explicitNullValueCustomerAutoPaymentAmountChanged; set { _explicitNullValueCustomerAutoPaymentAmountChanged = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customerAutoPaymentAmountChanged"); else _explicitNullProperties?.Remove("customerAutoPaymentAmountChanged"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto? _explicitNullValueCustomerAutoPaymentAmountChanged = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto CustomerAutoPaymentAmountChanged { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto CustomerAutoPaymentAmountChanged { get => _explicitNullValueCustomerAutoPaymentAmountChanged; set { _explicitNullValueCustomerAutoPaymentAmountChanged = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customerAutoPaymentAmountChanged"); else _explicitNullProperties?.Remove("customerAutoPaymentAmountChanged"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto _explicitNullValueCustomerAutoPaymentAmountChanged = default!;
 #endif
         /// <summary>The customerAutoPaymentFailure property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto? CustomerAutoPaymentFailure { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto? CustomerAutoPaymentFailure { get => _explicitNullValueCustomerAutoPaymentFailure; set { _explicitNullValueCustomerAutoPaymentFailure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customerAutoPaymentFailure"); else _explicitNullProperties?.Remove("customerAutoPaymentFailure"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto? _explicitNullValueCustomerAutoPaymentFailure = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto CustomerAutoPaymentFailure { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto CustomerAutoPaymentFailure { get => _explicitNullValueCustomerAutoPaymentFailure; set { _explicitNullValueCustomerAutoPaymentFailure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customerAutoPaymentFailure"); else _explicitNullProperties?.Remove("customerAutoPaymentFailure"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto _explicitNullValueCustomerAutoPaymentFailure = default!;
 #endif
         /// <summary>The customerAutoPaymentInfo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto? CustomerAutoPaymentInfo { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto? CustomerAutoPaymentInfo { get => _explicitNullValueCustomerAutoPaymentInfo; set { _explicitNullValueCustomerAutoPaymentInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customerAutoPaymentInfo"); else _explicitNullProperties?.Remove("customerAutoPaymentInfo"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto? _explicitNullValueCustomerAutoPaymentInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto CustomerAutoPaymentInfo { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto CustomerAutoPaymentInfo { get => _explicitNullValueCustomerAutoPaymentInfo; set { _explicitNullValueCustomerAutoPaymentInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customerAutoPaymentInfo"); else _explicitNullProperties?.Remove("customerAutoPaymentInfo"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto _explicitNullValueCustomerAutoPaymentInfo = default!;
 #endif
         /// <summary>The customerAutoPaymentSuccess property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto? CustomerAutoPaymentSuccess { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto? CustomerAutoPaymentSuccess { get => _explicitNullValueCustomerAutoPaymentSuccess; set { _explicitNullValueCustomerAutoPaymentSuccess = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customerAutoPaymentSuccess"); else _explicitNullProperties?.Remove("customerAutoPaymentSuccess"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto? _explicitNullValueCustomerAutoPaymentSuccess = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto CustomerAutoPaymentSuccess { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto CustomerAutoPaymentSuccess { get => _explicitNullValueCustomerAutoPaymentSuccess; set { _explicitNullValueCustomerAutoPaymentSuccess = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customerAutoPaymentSuccess"); else _explicitNullProperties?.Remove("customerAutoPaymentSuccess"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto _explicitNullValueCustomerAutoPaymentSuccess = default!;
 #endif
         /// <summary>The customerPaymentFailure property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto? CustomerPaymentFailure { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto? CustomerPaymentFailure { get => _explicitNullValueCustomerPaymentFailure; set { _explicitNullValueCustomerPaymentFailure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customerPaymentFailure"); else _explicitNullProperties?.Remove("customerPaymentFailure"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto? _explicitNullValueCustomerPaymentFailure = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto CustomerPaymentFailure { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto CustomerPaymentFailure { get => _explicitNullValueCustomerPaymentFailure; set { _explicitNullValueCustomerPaymentFailure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customerPaymentFailure"); else _explicitNullProperties?.Remove("customerPaymentFailure"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto _explicitNullValueCustomerPaymentFailure = default!;
 #endif
         /// <summary>The customerPaymentSuccess property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto? CustomerPaymentSuccess { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto? CustomerPaymentSuccess { get => _explicitNullValueCustomerPaymentSuccess; set { _explicitNullValueCustomerPaymentSuccess = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customerPaymentSuccess"); else _explicitNullProperties?.Remove("customerPaymentSuccess"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto? _explicitNullValueCustomerPaymentSuccess = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto CustomerPaymentSuccess { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto CustomerPaymentSuccess { get => _explicitNullValueCustomerPaymentSuccess; set { _explicitNullValueCustomerPaymentSuccess = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customerPaymentSuccess"); else _explicitNullProperties?.Remove("customerPaymentSuccess"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto _explicitNullValueCustomerPaymentSuccess = default!;
 #endif
         /// <summary>The customerSendEstimate property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto? CustomerSendEstimate { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto? CustomerSendEstimate { get => _explicitNullValueCustomerSendEstimate; set { _explicitNullValueCustomerSendEstimate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customerSendEstimate"); else _explicitNullProperties?.Remove("customerSendEstimate"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto? _explicitNullValueCustomerSendEstimate = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto CustomerSendEstimate { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto CustomerSendEstimate { get => _explicitNullValueCustomerSendEstimate; set { _explicitNullValueCustomerSendEstimate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customerSendEstimate"); else _explicitNullProperties?.Remove("customerSendEstimate"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto _explicitNullValueCustomerSendEstimate = default!;
 #endif
         /// <summary>The customerSendInvoice property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto? CustomerSendInvoice { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto? CustomerSendInvoice { get => _explicitNullValueCustomerSendInvoice; set { _explicitNullValueCustomerSendInvoice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customerSendInvoice"); else _explicitNullProperties?.Remove("customerSendInvoice"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto? _explicitNullValueCustomerSendInvoice = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto CustomerSendInvoice { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto CustomerSendInvoice { get => _explicitNullValueCustomerSendInvoice; set { _explicitNullValueCustomerSendInvoice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customerSendInvoice"); else _explicitNullProperties?.Remove("customerSendInvoice"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto _explicitNullValueCustomerSendInvoice = default!;
 #endif
         /// <summary>The teamAutoPaymentFailure property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto? TeamAutoPaymentFailure { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto? TeamAutoPaymentFailure { get => _explicitNullValueTeamAutoPaymentFailure; set { _explicitNullValueTeamAutoPaymentFailure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("teamAutoPaymentFailure"); else _explicitNullProperties?.Remove("teamAutoPaymentFailure"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto? _explicitNullValueTeamAutoPaymentFailure = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto TeamAutoPaymentFailure { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto TeamAutoPaymentFailure { get => _explicitNullValueTeamAutoPaymentFailure; set { _explicitNullValueTeamAutoPaymentFailure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("teamAutoPaymentFailure"); else _explicitNullProperties?.Remove("teamAutoPaymentFailure"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto _explicitNullValueTeamAutoPaymentFailure = default!;
 #endif
         /// <summary>The teamAutoPaymentSkip property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto? TeamAutoPaymentSkip { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto? TeamAutoPaymentSkip { get => _explicitNullValueTeamAutoPaymentSkip; set { _explicitNullValueTeamAutoPaymentSkip = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("teamAutoPaymentSkip"); else _explicitNullProperties?.Remove("teamAutoPaymentSkip"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto? _explicitNullValueTeamAutoPaymentSkip = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto TeamAutoPaymentSkip { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto TeamAutoPaymentSkip { get => _explicitNullValueTeamAutoPaymentSkip; set { _explicitNullValueTeamAutoPaymentSkip = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("teamAutoPaymentSkip"); else _explicitNullProperties?.Remove("teamAutoPaymentSkip"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto _explicitNullValueTeamAutoPaymentSkip = default!;
 #endif
         /// <summary>The teamAutoPaymentSuccess property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto? TeamAutoPaymentSuccess { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto? TeamAutoPaymentSuccess { get => _explicitNullValueTeamAutoPaymentSuccess; set { _explicitNullValueTeamAutoPaymentSuccess = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("teamAutoPaymentSuccess"); else _explicitNullProperties?.Remove("teamAutoPaymentSuccess"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto? _explicitNullValueTeamAutoPaymentSuccess = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto TeamAutoPaymentSuccess { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto TeamAutoPaymentSuccess { get => _explicitNullValueTeamAutoPaymentSuccess; set { _explicitNullValueTeamAutoPaymentSuccess = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("teamAutoPaymentSuccess"); else _explicitNullProperties?.Remove("teamAutoPaymentSuccess"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto _explicitNullValueTeamAutoPaymentSuccess = default!;
 #endif
         /// <summary>The teamEstimateAccepted property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto? TeamEstimateAccepted { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto? TeamEstimateAccepted { get => _explicitNullValueTeamEstimateAccepted; set { _explicitNullValueTeamEstimateAccepted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("teamEstimateAccepted"); else _explicitNullProperties?.Remove("teamEstimateAccepted"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto? _explicitNullValueTeamEstimateAccepted = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto TeamEstimateAccepted { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto TeamEstimateAccepted { get => _explicitNullValueTeamEstimateAccepted; set { _explicitNullValueTeamEstimateAccepted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("teamEstimateAccepted"); else _explicitNullProperties?.Remove("teamEstimateAccepted"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto _explicitNullValueTeamEstimateAccepted = default!;
 #endif
         /// <summary>The teamEstimateDeclined property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto? TeamEstimateDeclined { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto? TeamEstimateDeclined { get => _explicitNullValueTeamEstimateDeclined; set { _explicitNullValueTeamEstimateDeclined = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("teamEstimateDeclined"); else _explicitNullProperties?.Remove("teamEstimateDeclined"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto? _explicitNullValueTeamEstimateDeclined = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto TeamEstimateDeclined { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto TeamEstimateDeclined { get => _explicitNullValueTeamEstimateDeclined; set { _explicitNullValueTeamEstimateDeclined = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("teamEstimateDeclined"); else _explicitNullProperties?.Remove("teamEstimateDeclined"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto _explicitNullValueTeamEstimateDeclined = default!;
 #endif
         /// <summary>The teamPaymentFailure property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto? TeamPaymentFailure { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto? TeamPaymentFailure { get => _explicitNullValueTeamPaymentFailure; set { _explicitNullValueTeamPaymentFailure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("teamPaymentFailure"); else _explicitNullProperties?.Remove("teamPaymentFailure"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto? _explicitNullValueTeamPaymentFailure = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto TeamPaymentFailure { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto TeamPaymentFailure { get => _explicitNullValueTeamPaymentFailure; set { _explicitNullValueTeamPaymentFailure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("teamPaymentFailure"); else _explicitNullProperties?.Remove("teamPaymentFailure"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto _explicitNullValueTeamPaymentFailure = default!;
 #endif
         /// <summary>The teamPaymentSuccess property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto? TeamPaymentSuccess { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto? TeamPaymentSuccess { get => _explicitNullValueTeamPaymentSuccess; set { _explicitNullValueTeamPaymentSuccess = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("teamPaymentSuccess"); else _explicitNullProperties?.Remove("teamPaymentSuccess"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto? _explicitNullValueTeamPaymentSuccess = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto TeamPaymentSuccess { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto TeamPaymentSuccess { get => _explicitNullValueTeamPaymentSuccess; set { _explicitNullValueTeamPaymentSuccess = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("teamPaymentSuccess"); else _explicitNullProperties?.Remove("teamPaymentSuccess"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto _explicitNullValueTeamPaymentSuccess = default!;
 #endif
         /// <summary>The teamRecurringSendInvoiceFailed property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto? TeamRecurringSendInvoiceFailed { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto? TeamRecurringSendInvoiceFailed { get => _explicitNullValueTeamRecurringSendInvoiceFailed; set { _explicitNullValueTeamRecurringSendInvoiceFailed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("teamRecurringSendInvoiceFailed"); else _explicitNullProperties?.Remove("teamRecurringSendInvoiceFailed"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto? _explicitNullValueTeamRecurringSendInvoiceFailed = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto TeamRecurringSendInvoiceFailed { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto TeamRecurringSendInvoiceFailed { get => _explicitNullValueTeamRecurringSendInvoiceFailed; set { _explicitNullValueTeamRecurringSendInvoiceFailed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("teamRecurringSendInvoiceFailed"); else _explicitNullProperties?.Remove("teamRecurringSendInvoiceFailed"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto _explicitNullValueTeamRecurringSendInvoiceFailed = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDtoCustomNotification"/> and sets the default values.
@@ -158,7 +213,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDtoCustomNotification CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDtoCustomNotification();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDtoCustomNotification(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -209,6 +264,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto>("teamPaymentFailure", TeamPaymentFailure);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto>("teamPaymentSuccess", TeamPaymentSuccess);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomNotificationItemDto>("teamRecurringSendInvoiceFailed", TeamRecurringSendInvoiceFailed);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

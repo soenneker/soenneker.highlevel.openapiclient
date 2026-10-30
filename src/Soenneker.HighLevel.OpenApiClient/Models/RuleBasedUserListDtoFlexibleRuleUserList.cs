@@ -12,32 +12,48 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RuleBasedUserListDtoFlexibleRuleUserList : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("exclusiveOperands") is { } nullNodeExclusiveOperands && nullNodeExclusiveOperands.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExclusiveOperands = null;
+            if (parseNode.GetChildNode("inclusiveOperands") is { } nullNodeInclusiveOperands && nullNodeInclusiveOperands.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InclusiveOperands = null;
+            if (parseNode.GetChildNode("inclusiveRuleOperator") is { } nullNodeInclusiveRuleOperator && nullNodeInclusiveRuleOperator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InclusiveRuleOperator = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Exclusive rule operands</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.RuleOperandDto>? ExclusiveOperands { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.RuleOperandDto>? ExclusiveOperands { get => _explicitNullValueExclusiveOperands; set { _explicitNullValueExclusiveOperands = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exclusiveOperands"); else _explicitNullProperties?.Remove("exclusiveOperands"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.RuleOperandDto>? _explicitNullValueExclusiveOperands = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.RuleOperandDto> ExclusiveOperands { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.RuleOperandDto> ExclusiveOperands { get => _explicitNullValueExclusiveOperands; set { _explicitNullValueExclusiveOperands = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exclusiveOperands"); else _explicitNullProperties?.Remove("exclusiveOperands"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.RuleOperandDto> _explicitNullValueExclusiveOperands = default!;
 #endif
         /// <summary>Inclusive rule operands</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.RuleOperandDto>? InclusiveOperands { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.RuleOperandDto>? InclusiveOperands { get => _explicitNullValueInclusiveOperands; set { _explicitNullValueInclusiveOperands = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inclusiveOperands"); else _explicitNullProperties?.Remove("inclusiveOperands"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.RuleOperandDto>? _explicitNullValueInclusiveOperands = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.RuleOperandDto> InclusiveOperands { get; set; }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.RuleOperandDto> InclusiveOperands { get => _explicitNullValueInclusiveOperands; set { _explicitNullValueInclusiveOperands = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inclusiveOperands"); else _explicitNullProperties?.Remove("inclusiveOperands"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.RuleOperandDto> _explicitNullValueInclusiveOperands = default!;
 #endif
         /// <summary>Operator for combining inclusive operands</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InclusiveRuleOperator { get; set; }
+        public string? InclusiveRuleOperator { get => _explicitNullValueInclusiveRuleOperator; set { _explicitNullValueInclusiveRuleOperator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inclusiveRuleOperator"); else _explicitNullProperties?.Remove("inclusiveRuleOperator"); } }
+        private string? _explicitNullValueInclusiveRuleOperator = default!;
 #nullable restore
 #else
-        public string InclusiveRuleOperator { get; set; }
+        public string InclusiveRuleOperator { get => _explicitNullValueInclusiveRuleOperator; set { _explicitNullValueInclusiveRuleOperator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inclusiveRuleOperator"); else _explicitNullProperties?.Remove("inclusiveRuleOperator"); } }
+        private string _explicitNullValueInclusiveRuleOperator = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.RuleBasedUserListDtoFlexibleRuleUserList"/> and sets the default values.
@@ -54,7 +70,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.RuleBasedUserListDtoFlexibleRuleUserList CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.RuleBasedUserListDtoFlexibleRuleUserList();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.RuleBasedUserListDtoFlexibleRuleUserList(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +95,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.RuleOperandDto>("exclusiveOperands", ExclusiveOperands);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.RuleOperandDto>("inclusiveOperands", InclusiveOperands);
             writer.WriteStringValue("inclusiveRuleOperator", InclusiveRuleOperator);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

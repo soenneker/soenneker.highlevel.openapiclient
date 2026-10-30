@@ -61,6 +61,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Contacts.Item.Tasks.Item
             {
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.ContactsCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.ContactsCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteTaskSuccessfulResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.DeleteTaskSuccessfulResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -86,6 +88,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Contacts.Item.Tasks.Item
             {
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.ContactsCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.ContactsCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.TaskByIsSuccessfulResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.TaskByIsSuccessfulResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -115,6 +119,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Contacts.Item.Tasks.Item
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.ContactsCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.ContactsCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.ContactsCommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.TaskByIsSuccessfulResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.TaskByIsSuccessfulResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

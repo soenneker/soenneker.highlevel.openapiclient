@@ -12,24 +12,37 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class LeadFormContentDtoPostSubmissionInfo : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("callToAction") is { } nullNodeCallToAction && nullNodeCallToAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallToAction = null;
+            if (parseNode.GetChildNode("message") is { } nullNodeMessage && nullNodeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Message = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Post-submission call to action</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PostSubmissionInfoDtoCallToAction? CallToAction { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PostSubmissionInfoDtoCallToAction? CallToAction { get => _explicitNullValueCallToAction; set { _explicitNullValueCallToAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callToAction"); else _explicitNullProperties?.Remove("callToAction"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.PostSubmissionInfoDtoCallToAction? _explicitNullValueCallToAction = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PostSubmissionInfoDtoCallToAction CallToAction { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PostSubmissionInfoDtoCallToAction CallToAction { get => _explicitNullValueCallToAction; set { _explicitNullValueCallToAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callToAction"); else _explicitNullProperties?.Remove("callToAction"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.PostSubmissionInfoDtoCallToAction _explicitNullValueCallToAction = default!;
 #endif
         /// <summary>Thank-you message</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PostSubmissionInfoDtoMessage? Message { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PostSubmissionInfoDtoMessage? Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.PostSubmissionInfoDtoMessage? _explicitNullValueMessage = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PostSubmissionInfoDtoMessage Message { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PostSubmissionInfoDtoMessage Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.PostSubmissionInfoDtoMessage _explicitNullValueMessage = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoPostSubmissionInfo"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoPostSubmissionInfo CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoPostSubmissionInfo();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoPostSubmissionInfo(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostSubmissionInfoDtoCallToAction>("callToAction", CallToAction);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostSubmissionInfoDtoMessage>("message", Message);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

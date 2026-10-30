@@ -12,32 +12,48 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FacebookAudienceDtoPlacements : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("facebook") is { } nullNodeFacebook && nullNodeFacebook.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Facebook = null;
+            if (parseNode.GetChildNode("instagram") is { } nullNodeInstagram && nullNodeInstagram.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Instagram = null;
+            if (parseNode.GetChildNode("messenger") is { } nullNodeMessenger && nullNodeMessenger.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Messenger = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Facebook placement positions</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Facebook { get; set; }
+        public List<string>? Facebook { get => _explicitNullValueFacebook; set { _explicitNullValueFacebook = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("facebook"); else _explicitNullProperties?.Remove("facebook"); } }
+        private List<string>? _explicitNullValueFacebook = default!;
 #nullable restore
 #else
-        public List<string> Facebook { get; set; }
+        public List<string> Facebook { get => _explicitNullValueFacebook; set { _explicitNullValueFacebook = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("facebook"); else _explicitNullProperties?.Remove("facebook"); } }
+        private List<string> _explicitNullValueFacebook = default!;
 #endif
         /// <summary>Instagram placement positions</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Instagram { get; set; }
+        public List<string>? Instagram { get => _explicitNullValueInstagram; set { _explicitNullValueInstagram = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("instagram"); else _explicitNullProperties?.Remove("instagram"); } }
+        private List<string>? _explicitNullValueInstagram = default!;
 #nullable restore
 #else
-        public List<string> Instagram { get; set; }
+        public List<string> Instagram { get => _explicitNullValueInstagram; set { _explicitNullValueInstagram = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("instagram"); else _explicitNullProperties?.Remove("instagram"); } }
+        private List<string> _explicitNullValueInstagram = default!;
 #endif
         /// <summary>Messenger placement positions</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Messenger { get; set; }
+        public List<string>? Messenger { get => _explicitNullValueMessenger; set { _explicitNullValueMessenger = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messenger"); else _explicitNullProperties?.Remove("messenger"); } }
+        private List<string>? _explicitNullValueMessenger = default!;
 #nullable restore
 #else
-        public List<string> Messenger { get; set; }
+        public List<string> Messenger { get => _explicitNullValueMessenger; set { _explicitNullValueMessenger = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messenger"); else _explicitNullProperties?.Remove("messenger"); } }
+        private List<string> _explicitNullValueMessenger = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.FacebookAudienceDtoPlacements"/> and sets the default values.
@@ -54,7 +70,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.FacebookAudienceDtoPlacements CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.FacebookAudienceDtoPlacements();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.FacebookAudienceDtoPlacements(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +95,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("facebook", Facebook);
             writer.WriteCollectionOfPrimitiveValues<string>("instagram", Instagram);
             writer.WriteCollectionOfPrimitiveValues<string>("messenger", Messenger);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

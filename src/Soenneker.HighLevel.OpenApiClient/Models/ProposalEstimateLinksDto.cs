@@ -11,48 +11,75 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ProposalEstimateLinksDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("createdBy") is { } nullNodeCreatedBy && nullNodeCreatedBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedBy = null;
+            if (parseNode.GetChildNode("deleted") is { } nullNodeDeleted && nullNodeDeleted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Deleted = null;
+            if (parseNode.GetChildNode("documentId") is { } nullNodeDocumentId && nullNodeDocumentId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DocumentId = null;
+            if (parseNode.GetChildNode("documentRevision") is { } nullNodeDocumentRevision && nullNodeDocumentRevision.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DocumentRevision = null;
+            if (parseNode.GetChildNode("entityName") is { } nullNodeEntityName && nullNodeEntityName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EntityName = null;
+            if (parseNode.GetChildNode("recipientCategory") is { } nullNodeRecipientCategory && nullNodeRecipientCategory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecipientCategory = null;
+            if (parseNode.GetChildNode("recipientId") is { } nullNodeRecipientId && nullNodeRecipientId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecipientId = null;
+            if (parseNode.GetChildNode("referenceId") is { } nullNodeReferenceId && nullNodeReferenceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReferenceId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Created by user ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CreatedBy { get; set; }
+        public string? CreatedBy { get => _explicitNullValueCreatedBy; set { _explicitNullValueCreatedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createdBy"); else _explicitNullProperties?.Remove("createdBy"); } }
+        private string? _explicitNullValueCreatedBy = default!;
 #nullable restore
 #else
-        public string CreatedBy { get; set; }
+        public string CreatedBy { get => _explicitNullValueCreatedBy; set { _explicitNullValueCreatedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createdBy"); else _explicitNullProperties?.Remove("createdBy"); } }
+        private string _explicitNullValueCreatedBy = default!;
 #endif
         /// <summary>Whether the document is deleted</summary>
-        public bool? Deleted { get; set; }
+        public bool? Deleted { get => _explicitNullValueDeleted; set { _explicitNullValueDeleted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deleted"); else _explicitNullProperties?.Remove("deleted"); } }
+        private bool? _explicitNullValueDeleted = default!;
         /// <summary>Document ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DocumentId { get; set; }
+        public string? DocumentId { get => _explicitNullValueDocumentId; set { _explicitNullValueDocumentId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("documentId"); else _explicitNullProperties?.Remove("documentId"); } }
+        private string? _explicitNullValueDocumentId = default!;
 #nullable restore
 #else
-        public string DocumentId { get; set; }
+        public string DocumentId { get => _explicitNullValueDocumentId; set { _explicitNullValueDocumentId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("documentId"); else _explicitNullProperties?.Remove("documentId"); } }
+        private string _explicitNullValueDocumentId = default!;
 #endif
         /// <summary>Document revision number</summary>
-        public double? DocumentRevision { get; set; }
+        public double? DocumentRevision { get => _explicitNullValueDocumentRevision; set { _explicitNullValueDocumentRevision = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("documentRevision"); else _explicitNullProperties?.Remove("documentRevision"); } }
+        private double? _explicitNullValueDocumentRevision = default!;
         /// <summary>Entity name that the recipient belongs to</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ProposalEstimateLinksDtoEntityName? EntityName { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ProposalEstimateLinksDtoEntityName? EntityName { get => _explicitNullValueEntityName; set { _explicitNullValueEntityName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entityName"); else _explicitNullProperties?.Remove("entityName"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.ProposalEstimateLinksDtoEntityName? _explicitNullValueEntityName = default!;
         /// <summary>Recipient category (recipient, cc, or bcc)</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ProposalEstimateLinksDtoRecipientCategory? RecipientCategory { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ProposalEstimateLinksDtoRecipientCategory? RecipientCategory { get => _explicitNullValueRecipientCategory; set { _explicitNullValueRecipientCategory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipientCategory"); else _explicitNullProperties?.Remove("recipientCategory"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.ProposalEstimateLinksDtoRecipientCategory? _explicitNullValueRecipientCategory = default!;
         /// <summary>Recipient ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RecipientId { get; set; }
+        public string? RecipientId { get => _explicitNullValueRecipientId; set { _explicitNullValueRecipientId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipientId"); else _explicitNullProperties?.Remove("recipientId"); } }
+        private string? _explicitNullValueRecipientId = default!;
 #nullable restore
 #else
-        public string RecipientId { get; set; }
+        public string RecipientId { get => _explicitNullValueRecipientId; set { _explicitNullValueRecipientId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipientId"); else _explicitNullProperties?.Remove("recipientId"); } }
+        private string _explicitNullValueRecipientId = default!;
 #endif
         /// <summary>Reference ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReferenceId { get; set; }
+        public string? ReferenceId { get => _explicitNullValueReferenceId; set { _explicitNullValueReferenceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("referenceId"); else _explicitNullProperties?.Remove("referenceId"); } }
+        private string? _explicitNullValueReferenceId = default!;
 #nullable restore
 #else
-        public string ReferenceId { get; set; }
+        public string ReferenceId { get => _explicitNullValueReferenceId; set { _explicitNullValueReferenceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("referenceId"); else _explicitNullProperties?.Remove("referenceId"); } }
+        private string _explicitNullValueReferenceId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.ProposalEstimateLinksDto"/> and sets the default values.
@@ -69,7 +96,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.ProposalEstimateLinksDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.ProposalEstimateLinksDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.ProposalEstimateLinksDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -104,6 +131,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProposalEstimateLinksDtoRecipientCategory>("recipientCategory", RecipientCategory);
             writer.WriteStringValue("recipientId", RecipientId);
             writer.WriteStringValue("referenceId", ReferenceId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

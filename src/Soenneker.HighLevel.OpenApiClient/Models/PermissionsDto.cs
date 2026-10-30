@@ -11,85 +11,168 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PermissionsDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("adwordsReportingEnabled") is { } nullNodeAdwordsReportingEnabled && nullNodeAdwordsReportingEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdwordsReportingEnabled = null;
+            if (parseNode.GetChildNode("affiliateManagerEnabled") is { } nullNodeAffiliateManagerEnabled && nullNodeAffiliateManagerEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AffiliateManagerEnabled = null;
+            if (parseNode.GetChildNode("agentReportingEnabled") is { } nullNodeAgentReportingEnabled && nullNodeAgentReportingEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgentReportingEnabled = null;
+            if (parseNode.GetChildNode("appointmentsEnabled") is { } nullNodeAppointmentsEnabled && nullNodeAppointmentsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppointmentsEnabled = null;
+            if (parseNode.GetChildNode("assignedDataOnly") is { } nullNodeAssignedDataOnly && nullNodeAssignedDataOnly.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssignedDataOnly = null;
+            if (parseNode.GetChildNode("attributionsReportingEnabled") is { } nullNodeAttributionsReportingEnabled && nullNodeAttributionsReportingEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AttributionsReportingEnabled = null;
+            if (parseNode.GetChildNode("bloggingEnabled") is { } nullNodeBloggingEnabled && nullNodeBloggingEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BloggingEnabled = null;
+            if (parseNode.GetChildNode("botService") is { } nullNodeBotService && nullNodeBotService.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BotService = null;
+            if (parseNode.GetChildNode("bulkRequestsEnabled") is { } nullNodeBulkRequestsEnabled && nullNodeBulkRequestsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BulkRequestsEnabled = null;
+            if (parseNode.GetChildNode("campaignsEnabled") is { } nullNodeCampaignsEnabled && nullNodeCampaignsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CampaignsEnabled = null;
+            if (parseNode.GetChildNode("campaignsReadOnly") is { } nullNodeCampaignsReadOnly && nullNodeCampaignsReadOnly.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CampaignsReadOnly = null;
+            if (parseNode.GetChildNode("cancelSubscriptionEnabled") is { } nullNodeCancelSubscriptionEnabled && nullNodeCancelSubscriptionEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CancelSubscriptionEnabled = null;
+            if (parseNode.GetChildNode("communitiesEnabled") is { } nullNodeCommunitiesEnabled && nullNodeCommunitiesEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommunitiesEnabled = null;
+            if (parseNode.GetChildNode("contactsEnabled") is { } nullNodeContactsEnabled && nullNodeContactsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactsEnabled = null;
+            if (parseNode.GetChildNode("contentAiEnabled") is { } nullNodeContentAiEnabled && nullNodeContentAiEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContentAiEnabled = null;
+            if (parseNode.GetChildNode("conversationsEnabled") is { } nullNodeConversationsEnabled && nullNodeConversationsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConversationsEnabled = null;
+            if (parseNode.GetChildNode("dashboardStatsEnabled") is { } nullNodeDashboardStatsEnabled && nullNodeDashboardStatsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DashboardStatsEnabled = null;
+            if (parseNode.GetChildNode("exportPaymentsEnabled") is { } nullNodeExportPaymentsEnabled && nullNodeExportPaymentsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExportPaymentsEnabled = null;
+            if (parseNode.GetChildNode("facebookAdsReportingEnabled") is { } nullNodeFacebookAdsReportingEnabled && nullNodeFacebookAdsReportingEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FacebookAdsReportingEnabled = null;
+            if (parseNode.GetChildNode("funnelsEnabled") is { } nullNodeFunnelsEnabled && nullNodeFunnelsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FunnelsEnabled = null;
+            if (parseNode.GetChildNode("invoiceEnabled") is { } nullNodeInvoiceEnabled && nullNodeInvoiceEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvoiceEnabled = null;
+            if (parseNode.GetChildNode("leadValueEnabled") is { } nullNodeLeadValueEnabled && nullNodeLeadValueEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LeadValueEnabled = null;
+            if (parseNode.GetChildNode("marketingEnabled") is { } nullNodeMarketingEnabled && nullNodeMarketingEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MarketingEnabled = null;
+            if (parseNode.GetChildNode("membershipEnabled") is { } nullNodeMembershipEnabled && nullNodeMembershipEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MembershipEnabled = null;
+            if (parseNode.GetChildNode("onlineListingsEnabled") is { } nullNodeOnlineListingsEnabled && nullNodeOnlineListingsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OnlineListingsEnabled = null;
+            if (parseNode.GetChildNode("opportunitiesEnabled") is { } nullNodeOpportunitiesEnabled && nullNodeOpportunitiesEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OpportunitiesEnabled = null;
+            if (parseNode.GetChildNode("paymentsEnabled") is { } nullNodePaymentsEnabled && nullNodePaymentsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentsEnabled = null;
+            if (parseNode.GetChildNode("phoneCallEnabled") is { } nullNodePhoneCallEnabled && nullNodePhoneCallEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhoneCallEnabled = null;
+            if (parseNode.GetChildNode("recordPaymentEnabled") is { } nullNodeRecordPaymentEnabled && nullNodeRecordPaymentEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecordPaymentEnabled = null;
+            if (parseNode.GetChildNode("refundsEnabled") is { } nullNodeRefundsEnabled && nullNodeRefundsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RefundsEnabled = null;
+            if (parseNode.GetChildNode("reviewsEnabled") is { } nullNodeReviewsEnabled && nullNodeReviewsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReviewsEnabled = null;
+            if (parseNode.GetChildNode("settingsEnabled") is { } nullNodeSettingsEnabled && nullNodeSettingsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SettingsEnabled = null;
+            if (parseNode.GetChildNode("socialPlanner") is { } nullNodeSocialPlanner && nullNodeSocialPlanner.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SocialPlanner = null;
+            if (parseNode.GetChildNode("tagsEnabled") is { } nullNodeTagsEnabled && nullNodeTagsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TagsEnabled = null;
+            if (parseNode.GetChildNode("triggersEnabled") is { } nullNodeTriggersEnabled && nullNodeTriggersEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TriggersEnabled = null;
+            if (parseNode.GetChildNode("websitesEnabled") is { } nullNodeWebsitesEnabled && nullNodeWebsitesEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebsitesEnabled = null;
+            if (parseNode.GetChildNode("workflowsEnabled") is { } nullNodeWorkflowsEnabled && nullNodeWorkflowsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowsEnabled = null;
+            if (parseNode.GetChildNode("workflowsReadOnly") is { } nullNodeWorkflowsReadOnly && nullNodeWorkflowsReadOnly.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowsReadOnly = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The adwordsReportingEnabled property</summary>
-        public bool? AdwordsReportingEnabled { get; set; }
+        public bool? AdwordsReportingEnabled { get => _explicitNullValueAdwordsReportingEnabled; set { _explicitNullValueAdwordsReportingEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adwordsReportingEnabled"); else _explicitNullProperties?.Remove("adwordsReportingEnabled"); } }
+        private bool? _explicitNullValueAdwordsReportingEnabled = default!;
         /// <summary>The affiliateManagerEnabled property</summary>
-        public bool? AffiliateManagerEnabled { get; set; }
+        public bool? AffiliateManagerEnabled { get => _explicitNullValueAffiliateManagerEnabled; set { _explicitNullValueAffiliateManagerEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("affiliateManagerEnabled"); else _explicitNullProperties?.Remove("affiliateManagerEnabled"); } }
+        private bool? _explicitNullValueAffiliateManagerEnabled = default!;
         /// <summary>The agentReportingEnabled property</summary>
-        public bool? AgentReportingEnabled { get; set; }
+        public bool? AgentReportingEnabled { get => _explicitNullValueAgentReportingEnabled; set { _explicitNullValueAgentReportingEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agentReportingEnabled"); else _explicitNullProperties?.Remove("agentReportingEnabled"); } }
+        private bool? _explicitNullValueAgentReportingEnabled = default!;
         /// <summary>The appointmentsEnabled property</summary>
-        public bool? AppointmentsEnabled { get; set; }
+        public bool? AppointmentsEnabled { get => _explicitNullValueAppointmentsEnabled; set { _explicitNullValueAppointmentsEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("appointmentsEnabled"); else _explicitNullProperties?.Remove("appointmentsEnabled"); } }
+        private bool? _explicitNullValueAppointmentsEnabled = default!;
         /// <summary>The assignedDataOnly property</summary>
-        public bool? AssignedDataOnly { get; set; }
+        public bool? AssignedDataOnly { get => _explicitNullValueAssignedDataOnly; set { _explicitNullValueAssignedDataOnly = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assignedDataOnly"); else _explicitNullProperties?.Remove("assignedDataOnly"); } }
+        private bool? _explicitNullValueAssignedDataOnly = default!;
         /// <summary>The attributionsReportingEnabled property</summary>
-        public bool? AttributionsReportingEnabled { get; set; }
+        public bool? AttributionsReportingEnabled { get => _explicitNullValueAttributionsReportingEnabled; set { _explicitNullValueAttributionsReportingEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attributionsReportingEnabled"); else _explicitNullProperties?.Remove("attributionsReportingEnabled"); } }
+        private bool? _explicitNullValueAttributionsReportingEnabled = default!;
         /// <summary>The bloggingEnabled property</summary>
-        public bool? BloggingEnabled { get; set; }
+        public bool? BloggingEnabled { get => _explicitNullValueBloggingEnabled; set { _explicitNullValueBloggingEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bloggingEnabled"); else _explicitNullProperties?.Remove("bloggingEnabled"); } }
+        private bool? _explicitNullValueBloggingEnabled = default!;
         /// <summary>The botService property</summary>
-        public bool? BotService { get; set; }
+        public bool? BotService { get => _explicitNullValueBotService; set { _explicitNullValueBotService = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("botService"); else _explicitNullProperties?.Remove("botService"); } }
+        private bool? _explicitNullValueBotService = default!;
         /// <summary>The bulkRequestsEnabled property</summary>
-        public bool? BulkRequestsEnabled { get; set; }
+        public bool? BulkRequestsEnabled { get => _explicitNullValueBulkRequestsEnabled; set { _explicitNullValueBulkRequestsEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bulkRequestsEnabled"); else _explicitNullProperties?.Remove("bulkRequestsEnabled"); } }
+        private bool? _explicitNullValueBulkRequestsEnabled = default!;
         /// <summary>The campaignsEnabled property</summary>
-        public bool? CampaignsEnabled { get; set; }
+        public bool? CampaignsEnabled { get => _explicitNullValueCampaignsEnabled; set { _explicitNullValueCampaignsEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("campaignsEnabled"); else _explicitNullProperties?.Remove("campaignsEnabled"); } }
+        private bool? _explicitNullValueCampaignsEnabled = default!;
         /// <summary>The campaignsReadOnly property</summary>
-        public bool? CampaignsReadOnly { get; set; }
+        public bool? CampaignsReadOnly { get => _explicitNullValueCampaignsReadOnly; set { _explicitNullValueCampaignsReadOnly = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("campaignsReadOnly"); else _explicitNullProperties?.Remove("campaignsReadOnly"); } }
+        private bool? _explicitNullValueCampaignsReadOnly = default!;
         /// <summary>The cancelSubscriptionEnabled property</summary>
-        public bool? CancelSubscriptionEnabled { get; set; }
+        public bool? CancelSubscriptionEnabled { get => _explicitNullValueCancelSubscriptionEnabled; set { _explicitNullValueCancelSubscriptionEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancelSubscriptionEnabled"); else _explicitNullProperties?.Remove("cancelSubscriptionEnabled"); } }
+        private bool? _explicitNullValueCancelSubscriptionEnabled = default!;
         /// <summary>The communitiesEnabled property</summary>
-        public bool? CommunitiesEnabled { get; set; }
+        public bool? CommunitiesEnabled { get => _explicitNullValueCommunitiesEnabled; set { _explicitNullValueCommunitiesEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("communitiesEnabled"); else _explicitNullProperties?.Remove("communitiesEnabled"); } }
+        private bool? _explicitNullValueCommunitiesEnabled = default!;
         /// <summary>The contactsEnabled property</summary>
-        public bool? ContactsEnabled { get; set; }
+        public bool? ContactsEnabled { get => _explicitNullValueContactsEnabled; set { _explicitNullValueContactsEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactsEnabled"); else _explicitNullProperties?.Remove("contactsEnabled"); } }
+        private bool? _explicitNullValueContactsEnabled = default!;
         /// <summary>The contentAiEnabled property</summary>
-        public bool? ContentAiEnabled { get; set; }
+        public bool? ContentAiEnabled { get => _explicitNullValueContentAiEnabled; set { _explicitNullValueContentAiEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contentAiEnabled"); else _explicitNullProperties?.Remove("contentAiEnabled"); } }
+        private bool? _explicitNullValueContentAiEnabled = default!;
         /// <summary>The conversationsEnabled property</summary>
-        public bool? ConversationsEnabled { get; set; }
+        public bool? ConversationsEnabled { get => _explicitNullValueConversationsEnabled; set { _explicitNullValueConversationsEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conversationsEnabled"); else _explicitNullProperties?.Remove("conversationsEnabled"); } }
+        private bool? _explicitNullValueConversationsEnabled = default!;
         /// <summary>The dashboardStatsEnabled property</summary>
-        public bool? DashboardStatsEnabled { get; set; }
+        public bool? DashboardStatsEnabled { get => _explicitNullValueDashboardStatsEnabled; set { _explicitNullValueDashboardStatsEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dashboardStatsEnabled"); else _explicitNullProperties?.Remove("dashboardStatsEnabled"); } }
+        private bool? _explicitNullValueDashboardStatsEnabled = default!;
         /// <summary>The exportPaymentsEnabled property</summary>
-        public bool? ExportPaymentsEnabled { get; set; }
+        public bool? ExportPaymentsEnabled { get => _explicitNullValueExportPaymentsEnabled; set { _explicitNullValueExportPaymentsEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exportPaymentsEnabled"); else _explicitNullProperties?.Remove("exportPaymentsEnabled"); } }
+        private bool? _explicitNullValueExportPaymentsEnabled = default!;
         /// <summary>The facebookAdsReportingEnabled property</summary>
-        public bool? FacebookAdsReportingEnabled { get; set; }
+        public bool? FacebookAdsReportingEnabled { get => _explicitNullValueFacebookAdsReportingEnabled; set { _explicitNullValueFacebookAdsReportingEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("facebookAdsReportingEnabled"); else _explicitNullProperties?.Remove("facebookAdsReportingEnabled"); } }
+        private bool? _explicitNullValueFacebookAdsReportingEnabled = default!;
         /// <summary>The funnelsEnabled property</summary>
-        public bool? FunnelsEnabled { get; set; }
+        public bool? FunnelsEnabled { get => _explicitNullValueFunnelsEnabled; set { _explicitNullValueFunnelsEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("funnelsEnabled"); else _explicitNullProperties?.Remove("funnelsEnabled"); } }
+        private bool? _explicitNullValueFunnelsEnabled = default!;
         /// <summary>The invoiceEnabled property</summary>
-        public bool? InvoiceEnabled { get; set; }
+        public bool? InvoiceEnabled { get => _explicitNullValueInvoiceEnabled; set { _explicitNullValueInvoiceEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoiceEnabled"); else _explicitNullProperties?.Remove("invoiceEnabled"); } }
+        private bool? _explicitNullValueInvoiceEnabled = default!;
         /// <summary>The leadValueEnabled property</summary>
-        public bool? LeadValueEnabled { get; set; }
+        public bool? LeadValueEnabled { get => _explicitNullValueLeadValueEnabled; set { _explicitNullValueLeadValueEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("leadValueEnabled"); else _explicitNullProperties?.Remove("leadValueEnabled"); } }
+        private bool? _explicitNullValueLeadValueEnabled = default!;
         /// <summary>The marketingEnabled property</summary>
-        public bool? MarketingEnabled { get; set; }
+        public bool? MarketingEnabled { get => _explicitNullValueMarketingEnabled; set { _explicitNullValueMarketingEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("marketingEnabled"); else _explicitNullProperties?.Remove("marketingEnabled"); } }
+        private bool? _explicitNullValueMarketingEnabled = default!;
         /// <summary>The membershipEnabled property</summary>
-        public bool? MembershipEnabled { get; set; }
+        public bool? MembershipEnabled { get => _explicitNullValueMembershipEnabled; set { _explicitNullValueMembershipEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("membershipEnabled"); else _explicitNullProperties?.Remove("membershipEnabled"); } }
+        private bool? _explicitNullValueMembershipEnabled = default!;
         /// <summary>The onlineListingsEnabled property</summary>
-        public bool? OnlineListingsEnabled { get; set; }
+        public bool? OnlineListingsEnabled { get => _explicitNullValueOnlineListingsEnabled; set { _explicitNullValueOnlineListingsEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("onlineListingsEnabled"); else _explicitNullProperties?.Remove("onlineListingsEnabled"); } }
+        private bool? _explicitNullValueOnlineListingsEnabled = default!;
         /// <summary>The opportunitiesEnabled property</summary>
-        public bool? OpportunitiesEnabled { get; set; }
+        public bool? OpportunitiesEnabled { get => _explicitNullValueOpportunitiesEnabled; set { _explicitNullValueOpportunitiesEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opportunitiesEnabled"); else _explicitNullProperties?.Remove("opportunitiesEnabled"); } }
+        private bool? _explicitNullValueOpportunitiesEnabled = default!;
         /// <summary>The paymentsEnabled property</summary>
-        public bool? PaymentsEnabled { get; set; }
+        public bool? PaymentsEnabled { get => _explicitNullValuePaymentsEnabled; set { _explicitNullValuePaymentsEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paymentsEnabled"); else _explicitNullProperties?.Remove("paymentsEnabled"); } }
+        private bool? _explicitNullValuePaymentsEnabled = default!;
         /// <summary>The phoneCallEnabled property</summary>
-        public bool? PhoneCallEnabled { get; set; }
+        public bool? PhoneCallEnabled { get => _explicitNullValuePhoneCallEnabled; set { _explicitNullValuePhoneCallEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phoneCallEnabled"); else _explicitNullProperties?.Remove("phoneCallEnabled"); } }
+        private bool? _explicitNullValuePhoneCallEnabled = default!;
         /// <summary>The recordPaymentEnabled property</summary>
-        public bool? RecordPaymentEnabled { get; set; }
+        public bool? RecordPaymentEnabled { get => _explicitNullValueRecordPaymentEnabled; set { _explicitNullValueRecordPaymentEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recordPaymentEnabled"); else _explicitNullProperties?.Remove("recordPaymentEnabled"); } }
+        private bool? _explicitNullValueRecordPaymentEnabled = default!;
         /// <summary>The refundsEnabled property</summary>
-        public bool? RefundsEnabled { get; set; }
+        public bool? RefundsEnabled { get => _explicitNullValueRefundsEnabled; set { _explicitNullValueRefundsEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refundsEnabled"); else _explicitNullProperties?.Remove("refundsEnabled"); } }
+        private bool? _explicitNullValueRefundsEnabled = default!;
         /// <summary>The reviewsEnabled property</summary>
-        public bool? ReviewsEnabled { get; set; }
+        public bool? ReviewsEnabled { get => _explicitNullValueReviewsEnabled; set { _explicitNullValueReviewsEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reviewsEnabled"); else _explicitNullProperties?.Remove("reviewsEnabled"); } }
+        private bool? _explicitNullValueReviewsEnabled = default!;
         /// <summary>The settingsEnabled property</summary>
-        public bool? SettingsEnabled { get; set; }
+        public bool? SettingsEnabled { get => _explicitNullValueSettingsEnabled; set { _explicitNullValueSettingsEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("settingsEnabled"); else _explicitNullProperties?.Remove("settingsEnabled"); } }
+        private bool? _explicitNullValueSettingsEnabled = default!;
         /// <summary>The socialPlanner property</summary>
-        public bool? SocialPlanner { get; set; }
+        public bool? SocialPlanner { get => _explicitNullValueSocialPlanner; set { _explicitNullValueSocialPlanner = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("socialPlanner"); else _explicitNullProperties?.Remove("socialPlanner"); } }
+        private bool? _explicitNullValueSocialPlanner = default!;
         /// <summary>The tagsEnabled property</summary>
-        public bool? TagsEnabled { get; set; }
+        public bool? TagsEnabled { get => _explicitNullValueTagsEnabled; set { _explicitNullValueTagsEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tagsEnabled"); else _explicitNullProperties?.Remove("tagsEnabled"); } }
+        private bool? _explicitNullValueTagsEnabled = default!;
         /// <summary>The triggersEnabled property</summary>
-        public bool? TriggersEnabled { get; set; }
+        public bool? TriggersEnabled { get => _explicitNullValueTriggersEnabled; set { _explicitNullValueTriggersEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggersEnabled"); else _explicitNullProperties?.Remove("triggersEnabled"); } }
+        private bool? _explicitNullValueTriggersEnabled = default!;
         /// <summary>The websitesEnabled property</summary>
-        public bool? WebsitesEnabled { get; set; }
+        public bool? WebsitesEnabled { get => _explicitNullValueWebsitesEnabled; set { _explicitNullValueWebsitesEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("websitesEnabled"); else _explicitNullProperties?.Remove("websitesEnabled"); } }
+        private bool? _explicitNullValueWebsitesEnabled = default!;
         /// <summary>The workflowsEnabled property</summary>
-        public bool? WorkflowsEnabled { get; set; }
+        public bool? WorkflowsEnabled { get => _explicitNullValueWorkflowsEnabled; set { _explicitNullValueWorkflowsEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowsEnabled"); else _explicitNullProperties?.Remove("workflowsEnabled"); } }
+        private bool? _explicitNullValueWorkflowsEnabled = default!;
         /// <summary>The workflowsReadOnly property</summary>
-        public bool? WorkflowsReadOnly { get; set; }
+        public bool? WorkflowsReadOnly { get => _explicitNullValueWorkflowsReadOnly; set { _explicitNullValueWorkflowsReadOnly = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowsReadOnly"); else _explicitNullProperties?.Remove("workflowsReadOnly"); } }
+        private bool? _explicitNullValueWorkflowsReadOnly = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.PermissionsDto"/> and sets the default values.
         /// </summary>
@@ -143,7 +226,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.PermissionsDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.PermissionsDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.PermissionsDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -238,6 +321,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteBoolValue("websitesEnabled", WebsitesEnabled);
             writer.WriteBoolValue("workflowsEnabled", WorkflowsEnabled);
             writer.WriteBoolValue("workflowsReadOnly", WorkflowsReadOnly);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

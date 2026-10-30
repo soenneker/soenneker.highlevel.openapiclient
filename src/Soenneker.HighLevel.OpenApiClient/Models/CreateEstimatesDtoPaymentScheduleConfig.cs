@@ -12,27 +12,42 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CreateEstimatesDtoPaymentScheduleConfig : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("dateConfig") is { } nullNodeDateConfig && nullNodeDateConfig.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateConfig = null;
+            if (parseNode.GetChildNode("schedules") is { } nullNodeSchedules && nullNodeSchedules.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Schedules = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Due date type configuration</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PaymentScheduleConfigDtoDateConfig? DateConfig { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PaymentScheduleConfigDtoDateConfig? DateConfig { get => _explicitNullValueDateConfig; set { _explicitNullValueDateConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dateConfig"); else _explicitNullProperties?.Remove("dateConfig"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.PaymentScheduleConfigDtoDateConfig? _explicitNullValueDateConfig = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PaymentScheduleConfigDtoDateConfig DateConfig { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PaymentScheduleConfigDtoDateConfig DateConfig { get => _explicitNullValueDateConfig; set { _explicitNullValueDateConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dateConfig"); else _explicitNullProperties?.Remove("dateConfig"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.PaymentScheduleConfigDtoDateConfig _explicitNullValueDateConfig = default!;
 #endif
         /// <summary>Payment Schedule Items</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<UntypedNode>? Schedules { get; set; }
+        public List<UntypedNode>? Schedules { get => _explicitNullValueSchedules; set { _explicitNullValueSchedules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("schedules"); else _explicitNullProperties?.Remove("schedules"); } }
+        private List<UntypedNode>? _explicitNullValueSchedules = default!;
 #nullable restore
 #else
-        public List<UntypedNode> Schedules { get; set; }
+        public List<UntypedNode> Schedules { get => _explicitNullValueSchedules; set { _explicitNullValueSchedules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("schedules"); else _explicitNullProperties?.Remove("schedules"); } }
+        private List<UntypedNode> _explicitNullValueSchedules = default!;
 #endif
         /// <summary>Payment Schedule Type</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PaymentScheduleConfigDtoType? Type { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PaymentScheduleConfigDtoType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.PaymentScheduleConfigDtoType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CreateEstimatesDtoPaymentScheduleConfig"/> and sets the default values.
         /// </summary>
@@ -48,7 +63,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.CreateEstimatesDtoPaymentScheduleConfig CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.CreateEstimatesDtoPaymentScheduleConfig();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.CreateEstimatesDtoPaymentScheduleConfig(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -59,7 +74,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "dateConfig", n => { DateConfig = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentScheduleConfigDtoDateConfig>(global::Soenneker.HighLevel.OpenApiClient.Models.PaymentScheduleConfigDtoDateConfig.CreateFromDiscriminatorValue); } },
-                { "schedules", n => { Schedules = n.GetCollectionOfPrimitiveValues<UntypedNode>()?.AsList(); } },
+                { "schedules", n => { Schedules = n.GetCollectionOfObjectValues<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentScheduleConfigDtoType>(); } },
             };
         }
@@ -73,6 +88,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentScheduleConfigDtoDateConfig>("dateConfig", DateConfig);
             writer.WriteCollectionOfPrimitiveValues<UntypedNode>("schedules", Schedules);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentScheduleConfigDtoType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

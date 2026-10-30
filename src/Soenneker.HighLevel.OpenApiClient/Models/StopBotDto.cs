@@ -11,50 +11,79 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class StopBotDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("enabled") is { } nullNodeEnabled && nullNodeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enabled = null;
+            if (parseNode.GetChildNode("finalMessage") is { } nullNodeFinalMessage && nullNodeFinalMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FinalMessage = null;
+            if (parseNode.GetChildNode("reactivateEnabled") is { } nullNodeReactivateEnabled && nullNodeReactivateEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReactivateEnabled = null;
+            if (parseNode.GetChildNode("sleepTime") is { } nullNodeSleepTime && nullNodeSleepTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SleepTime = null;
+            if (parseNode.GetChildNode("sleepTimeUnit") is { } nullNodeSleepTimeUnit && nullNodeSleepTimeUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SleepTimeUnit = null;
+            if (parseNode.GetChildNode("stopBotDetectionType") is { } nullNodeStopBotDetectionType && nullNodeStopBotDetectionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StopBotDetectionType = null;
+            if (parseNode.GetChildNode("stopBotExamples") is { } nullNodeStopBotExamples && nullNodeStopBotExamples.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StopBotExamples = null;
+            if (parseNode.GetChildNode("stopBotTriggerCondition") is { } nullNodeStopBotTriggerCondition && nullNodeStopBotTriggerCondition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StopBotTriggerCondition = null;
+            if (parseNode.GetChildNode("tags") is { } nullNodeTags && nullNodeTags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tags = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether this action is enabled for the agent</summary>
-        public bool? Enabled { get; set; }
+        public bool? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled"); else _explicitNullProperties?.Remove("enabled"); } }
+        private bool? _explicitNullValueEnabled = default!;
         /// <summary>Final message sent when stopping the bot</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FinalMessage { get; set; }
+        public string? FinalMessage { get => _explicitNullValueFinalMessage; set { _explicitNullValueFinalMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("finalMessage"); else _explicitNullProperties?.Remove("finalMessage"); } }
+        private string? _explicitNullValueFinalMessage = default!;
 #nullable restore
 #else
-        public string FinalMessage { get; set; }
+        public string FinalMessage { get => _explicitNullValueFinalMessage; set { _explicitNullValueFinalMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("finalMessage"); else _explicitNullProperties?.Remove("finalMessage"); } }
+        private string _explicitNullValueFinalMessage = default!;
 #endif
         /// <summary>Whether the bot can be reactivated after being stopped</summary>
-        public bool? ReactivateEnabled { get; set; }
+        public bool? ReactivateEnabled { get => _explicitNullValueReactivateEnabled; set { _explicitNullValueReactivateEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reactivateEnabled"); else _explicitNullProperties?.Remove("reactivateEnabled"); } }
+        private bool? _explicitNullValueReactivateEnabled = default!;
         /// <summary>Time duration before reactivation (required when reactivateEnabled is true)</summary>
-        public double? SleepTime { get; set; }
+        public double? SleepTime { get => _explicitNullValueSleepTime; set { _explicitNullValueSleepTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sleepTime"); else _explicitNullProperties?.Remove("sleepTime"); } }
+        private double? _explicitNullValueSleepTime = default!;
         /// <summary>Time unit for reactivation delay (required when reactivateEnabled is true)</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.StopBotDtoSleepTimeUnit? SleepTimeUnit { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.StopBotDtoSleepTimeUnit? SleepTimeUnit { get => _explicitNullValueSleepTimeUnit; set { _explicitNullValueSleepTimeUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sleepTimeUnit"); else _explicitNullProperties?.Remove("sleepTimeUnit"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.StopBotDtoSleepTimeUnit? _explicitNullValueSleepTimeUnit = default!;
         /// <summary>Type of stop bot detection - Goodbye or Custom</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.StopBotDtoStopBotDetectionType? StopBotDetectionType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.StopBotDtoStopBotDetectionType? StopBotDetectionType { get => _explicitNullValueStopBotDetectionType; set { _explicitNullValueStopBotDetectionType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stopBotDetectionType"); else _explicitNullProperties?.Remove("stopBotDetectionType"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.StopBotDtoStopBotDetectionType? _explicitNullValueStopBotDetectionType = default!;
         /// <summary>Example phrases that trigger stop bot action (minimum 2 required)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? StopBotExamples { get; set; }
+        public List<string>? StopBotExamples { get => _explicitNullValueStopBotExamples; set { _explicitNullValueStopBotExamples = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stopBotExamples"); else _explicitNullProperties?.Remove("stopBotExamples"); } }
+        private List<string>? _explicitNullValueStopBotExamples = default!;
 #nullable restore
 #else
-        public List<string> StopBotExamples { get; set; }
+        public List<string> StopBotExamples { get => _explicitNullValueStopBotExamples; set { _explicitNullValueStopBotExamples = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stopBotExamples"); else _explicitNullProperties?.Remove("stopBotExamples"); } }
+        private List<string> _explicitNullValueStopBotExamples = default!;
 #endif
         /// <summary>Condition that triggers stopping the bot</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StopBotTriggerCondition { get; set; }
+        public string? StopBotTriggerCondition { get => _explicitNullValueStopBotTriggerCondition; set { _explicitNullValueStopBotTriggerCondition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stopBotTriggerCondition"); else _explicitNullProperties?.Remove("stopBotTriggerCondition"); } }
+        private string? _explicitNullValueStopBotTriggerCondition = default!;
 #nullable restore
 #else
-        public string StopBotTriggerCondition { get; set; }
+        public string StopBotTriggerCondition { get => _explicitNullValueStopBotTriggerCondition; set { _explicitNullValueStopBotTriggerCondition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stopBotTriggerCondition"); else _explicitNullProperties?.Remove("stopBotTriggerCondition"); } }
+        private string _explicitNullValueStopBotTriggerCondition = default!;
 #endif
         /// <summary>Tags to apply when stopping the bot</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Tags { get; set; }
+        public List<string>? Tags { get => _explicitNullValueTags; set { _explicitNullValueTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tags"); else _explicitNullProperties?.Remove("tags"); } }
+        private List<string>? _explicitNullValueTags = default!;
 #nullable restore
 #else
-        public List<string> Tags { get; set; }
+        public List<string> Tags { get => _explicitNullValueTags; set { _explicitNullValueTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tags"); else _explicitNullProperties?.Remove("tags"); } }
+        private List<string> _explicitNullValueTags = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.StopBotDto"/> and sets the default values.
@@ -71,7 +100,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.StopBotDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.StopBotDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.StopBotDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -108,6 +137,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("stopBotExamples", StopBotExamples);
             writer.WriteStringValue("stopBotTriggerCondition", StopBotTriggerCondition);
             writer.WriteCollectionOfPrimitiveValues<string>("tags", Tags);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

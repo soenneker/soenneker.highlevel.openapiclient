@@ -72,6 +72,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Marketplace.Billing.Charges
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.MarketplaceCommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.GetCharges200Response>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.GetCharges200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -99,6 +101,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Marketplace.Billing.Charges
             {
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.Charge400Response.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.MarketplaceCommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.Charge201Response>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.Charge201Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

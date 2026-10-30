@@ -12,64 +12,92 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CsvPostSchemaLink : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("error") is { } nullNodeError && nullNodeError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Error = null;
+            if (parseNode.GetChildNode("ogDescription") is { } nullNodeOgDescription && nullNodeOgDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OgDescription = null;
+            if (parseNode.GetChildNode("ogImage") is { } nullNodeOgImage && nullNodeOgImage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OgImage = null;
+            if (parseNode.GetChildNode("ogSiteName") is { } nullNodeOgSiteName && nullNodeOgSiteName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OgSiteName = null;
+            if (parseNode.GetChildNode("ogTitle") is { } nullNodeOgTitle && nullNodeOgTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OgTitle = null;
+            if (parseNode.GetChildNode("ogUrl") is { } nullNodeOgUrl && nullNodeOgUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OgUrl = null;
+            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Og Tag Error</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Error { get; set; }
+        public string? Error { get => _explicitNullValueError; set { _explicitNullValueError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
+        private string? _explicitNullValueError = default!;
 #nullable restore
 #else
-        public string Error { get; set; }
+        public string Error { get => _explicitNullValueError; set { _explicitNullValueError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
+        private string _explicitNullValueError = default!;
 #endif
         /// <summary>Tag description</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OgDescription { get; set; }
+        public string? OgDescription { get => _explicitNullValueOgDescription; set { _explicitNullValueOgDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ogDescription"); else _explicitNullProperties?.Remove("ogDescription"); } }
+        private string? _explicitNullValueOgDescription = default!;
 #nullable restore
 #else
-        public string OgDescription { get; set; }
+        public string OgDescription { get => _explicitNullValueOgDescription; set { _explicitNullValueOgDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ogDescription"); else _explicitNullProperties?.Remove("ogDescription"); } }
+        private string _explicitNullValueOgDescription = default!;
 #endif
         /// <summary>Tag description</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.IOgTagsSchemaOgImage? OgImage { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.IOgTagsSchemaOgImage? OgImage { get => _explicitNullValueOgImage; set { _explicitNullValueOgImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ogImage"); else _explicitNullProperties?.Remove("ogImage"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.IOgTagsSchemaOgImage? _explicitNullValueOgImage = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.IOgTagsSchemaOgImage OgImage { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.IOgTagsSchemaOgImage OgImage { get => _explicitNullValueOgImage; set { _explicitNullValueOgImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ogImage"); else _explicitNullProperties?.Remove("ogImage"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.IOgTagsSchemaOgImage _explicitNullValueOgImage = default!;
 #endif
         /// <summary>Site Name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OgSiteName { get; set; }
+        public string? OgSiteName { get => _explicitNullValueOgSiteName; set { _explicitNullValueOgSiteName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ogSiteName"); else _explicitNullProperties?.Remove("ogSiteName"); } }
+        private string? _explicitNullValueOgSiteName = default!;
 #nullable restore
 #else
-        public string OgSiteName { get; set; }
+        public string OgSiteName { get => _explicitNullValueOgSiteName; set { _explicitNullValueOgSiteName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ogSiteName"); else _explicitNullProperties?.Remove("ogSiteName"); } }
+        private string _explicitNullValueOgSiteName = default!;
 #endif
         /// <summary>Tag Title</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OgTitle { get; set; }
+        public string? OgTitle { get => _explicitNullValueOgTitle; set { _explicitNullValueOgTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ogTitle"); else _explicitNullProperties?.Remove("ogTitle"); } }
+        private string? _explicitNullValueOgTitle = default!;
 #nullable restore
 #else
-        public string OgTitle { get; set; }
+        public string OgTitle { get => _explicitNullValueOgTitle; set { _explicitNullValueOgTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ogTitle"); else _explicitNullProperties?.Remove("ogTitle"); } }
+        private string _explicitNullValueOgTitle = default!;
 #endif
         /// <summary>Tag Url</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OgUrl { get; set; }
+        public string? OgUrl { get => _explicitNullValueOgUrl; set { _explicitNullValueOgUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ogUrl"); else _explicitNullProperties?.Remove("ogUrl"); } }
+        private string? _explicitNullValueOgUrl = default!;
 #nullable restore
 #else
-        public string OgUrl { get; set; }
+        public string OgUrl { get => _explicitNullValueOgUrl; set { _explicitNullValueOgUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ogUrl"); else _explicitNullProperties?.Remove("ogUrl"); } }
+        private string _explicitNullValueOgUrl = default!;
 #endif
         /// <summary>Tag url</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get; set; }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get; set; }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaLink"/> and sets the default values.
@@ -86,7 +114,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaLink CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaLink();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaLink(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -119,6 +147,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("ogTitle", OgTitle);
             writer.WriteStringValue("ogUrl", OgUrl);
             writer.WriteStringValue("url", Url);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

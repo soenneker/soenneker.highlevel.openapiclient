@@ -11,34 +11,52 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CreateSnapshotShareLinkRequestDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("relationship_number") is { } nullNodeRelationshipNumber && nullNodeRelationshipNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RelationshipNumber = null;
+            if (parseNode.GetChildNode("share_location_id") is { } nullNodeShareLocationId && nullNodeShareLocationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShareLocationId = null;
+            if (parseNode.GetChildNode("share_type") is { } nullNodeShareType && nullNodeShareType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShareType = null;
+            if (parseNode.GetChildNode("snapshot_id") is { } nullNodeSnapshotId && nullNodeSnapshotId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SnapshotId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Comma separated Relationship number of Agencies to create agency restricted share link</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RelationshipNumber { get; set; }
+        public string? RelationshipNumber { get => _explicitNullValueRelationshipNumber; set { _explicitNullValueRelationshipNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("relationship_number"); else _explicitNullProperties?.Remove("relationship_number"); } }
+        private string? _explicitNullValueRelationshipNumber = default!;
 #nullable restore
 #else
-        public string RelationshipNumber { get; set; }
+        public string RelationshipNumber { get => _explicitNullValueRelationshipNumber; set { _explicitNullValueRelationshipNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("relationship_number"); else _explicitNullProperties?.Remove("relationship_number"); } }
+        private string _explicitNullValueRelationshipNumber = default!;
 #endif
         /// <summary>Comma separated Sub-Account ids to create sub-account restricted share link</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShareLocationId { get; set; }
+        public string? ShareLocationId { get => _explicitNullValueShareLocationId; set { _explicitNullValueShareLocationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("share_location_id"); else _explicitNullProperties?.Remove("share_location_id"); } }
+        private string? _explicitNullValueShareLocationId = default!;
 #nullable restore
 #else
-        public string ShareLocationId { get; set; }
+        public string ShareLocationId { get => _explicitNullValueShareLocationId; set { _explicitNullValueShareLocationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("share_location_id"); else _explicitNullProperties?.Remove("share_location_id"); } }
+        private string _explicitNullValueShareLocationId = default!;
 #endif
         /// <summary>Type of share link to generate</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateSnapshotShareLinkRequestDtoShareType? ShareType { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateSnapshotShareLinkRequestDtoShareType? ShareType { get => _explicitNullValueShareType; set { _explicitNullValueShareType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("share_type"); else _explicitNullProperties?.Remove("share_type"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CreateSnapshotShareLinkRequestDtoShareType? _explicitNullValueShareType = default!;
         /// <summary>id for snapshot to be shared</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SnapshotId { get; set; }
+        public string? SnapshotId { get => _explicitNullValueSnapshotId; set { _explicitNullValueSnapshotId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("snapshot_id"); else _explicitNullProperties?.Remove("snapshot_id"); } }
+        private string? _explicitNullValueSnapshotId = default!;
 #nullable restore
 #else
-        public string SnapshotId { get; set; }
+        public string SnapshotId { get => _explicitNullValueSnapshotId; set { _explicitNullValueSnapshotId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("snapshot_id"); else _explicitNullProperties?.Remove("snapshot_id"); } }
+        private string _explicitNullValueSnapshotId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CreateSnapshotShareLinkRequestDto"/> and sets the default values.
@@ -55,7 +73,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.CreateSnapshotShareLinkRequestDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.CreateSnapshotShareLinkRequestDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.CreateSnapshotShareLinkRequestDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -82,6 +100,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("share_location_id", ShareLocationId);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateSnapshotShareLinkRequestDtoShareType>("share_type", ShareType);
             writer.WriteStringValue("snapshot_id", SnapshotId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

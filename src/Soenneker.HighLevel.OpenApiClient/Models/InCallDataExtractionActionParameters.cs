@@ -11,35 +11,53 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class InCallDataExtractionActionParameters : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("contactFieldId") is { } nullNodeContactFieldId && nullNodeContactFieldId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactFieldId = null;
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("examples") is { } nullNodeExamples && nullNodeExamples.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Examples = null;
+            if (parseNode.GetChildNode("overwriteExistingValue") is { } nullNodeOverwriteExistingValue && nullNodeOverwriteExistingValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverwriteExistingValue = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>ID of the contact field to be updated with the extracted data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ContactFieldId { get; set; }
+        public string? ContactFieldId { get => _explicitNullValueContactFieldId; set { _explicitNullValueContactFieldId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactFieldId"); else _explicitNullProperties?.Remove("contactFieldId"); } }
+        private string? _explicitNullValueContactFieldId = default!;
 #nullable restore
 #else
-        public string ContactFieldId { get; set; }
+        public string ContactFieldId { get => _explicitNullValueContactFieldId; set { _explicitNullValueContactFieldId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactFieldId"); else _explicitNullProperties?.Remove("contactFieldId"); } }
+        private string _explicitNullValueContactFieldId = default!;
 #endif
         /// <summary>Description of what data to extract</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>Example values to help Agent understand the expected format. At least one example is required, maximum 5 examples allowed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Examples { get; set; }
+        public List<string>? Examples { get => _explicitNullValueExamples; set { _explicitNullValueExamples = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("examples"); else _explicitNullProperties?.Remove("examples"); } }
+        private List<string>? _explicitNullValueExamples = default!;
 #nullable restore
 #else
-        public List<string> Examples { get; set; }
+        public List<string> Examples { get => _explicitNullValueExamples; set { _explicitNullValueExamples = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("examples"); else _explicitNullProperties?.Remove("examples"); } }
+        private List<string> _explicitNullValueExamples = default!;
 #endif
         /// <summary>Whether to overwrite existing field value if already set, default is false</summary>
-        public bool? OverwriteExistingValue { get; set; }
+        public bool? OverwriteExistingValue { get => _explicitNullValueOverwriteExistingValue; set { _explicitNullValueOverwriteExistingValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overwriteExistingValue"); else _explicitNullProperties?.Remove("overwriteExistingValue"); } }
+        private bool? _explicitNullValueOverwriteExistingValue = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.InCallDataExtractionActionParameters"/> and sets the default values.
         /// </summary>
@@ -56,7 +74,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.InCallDataExtractionActionParameters CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.InCallDataExtractionActionParameters();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.InCallDataExtractionActionParameters(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -83,6 +101,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteCollectionOfPrimitiveValues<string>("examples", Examples);
             writer.WriteBoolValue("overwriteExistingValue", OverwriteExistingValue);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

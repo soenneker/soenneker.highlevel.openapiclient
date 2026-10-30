@@ -12,26 +12,41 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AvailablePhoneNumberDtoPrice : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("number_type") is { } nullNodeNumberType && nullNodeNumberType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumberType = null;
+            if (parseNode.GetChildNode("price") is { } nullNodePrice && nullNodePrice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Price = null;
+            if (parseNode.GetChildNode("price_unit") is { } nullNodePriceUnit && nullNodePriceUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PriceUnit = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Type of number for billing purposes</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NumberType { get; set; }
+        public string? NumberType { get => _explicitNullValueNumberType; set { _explicitNullValueNumberType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("number_type"); else _explicitNullProperties?.Remove("number_type"); } }
+        private string? _explicitNullValueNumberType = default!;
 #nullable restore
 #else
-        public string NumberType { get; set; }
+        public string NumberType { get => _explicitNullValueNumberType; set { _explicitNullValueNumberType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("number_type"); else _explicitNullProperties?.Remove("number_type"); } }
+        private string _explicitNullValueNumberType = default!;
 #endif
         /// <summary>Monthly price for this number</summary>
-        public double? Price { get; set; }
+        public double? Price { get => _explicitNullValuePrice; set { _explicitNullValuePrice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("price"); else _explicitNullProperties?.Remove("price"); } }
+        private double? _explicitNullValuePrice = default!;
         /// <summary>Currency unit for the price</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PriceUnit { get; set; }
+        public string? PriceUnit { get => _explicitNullValuePriceUnit; set { _explicitNullValuePriceUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("price_unit"); else _explicitNullProperties?.Remove("price_unit"); } }
+        private string? _explicitNullValuePriceUnit = default!;
 #nullable restore
 #else
-        public string PriceUnit { get; set; }
+        public string PriceUnit { get => _explicitNullValuePriceUnit; set { _explicitNullValuePriceUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("price_unit"); else _explicitNullProperties?.Remove("price_unit"); } }
+        private string _explicitNullValuePriceUnit = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.AvailablePhoneNumberDtoPrice"/> and sets the default values.
@@ -48,7 +63,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.AvailablePhoneNumberDtoPrice CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.AvailablePhoneNumberDtoPrice();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.AvailablePhoneNumberDtoPrice(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -73,6 +88,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("number_type", NumberType);
             writer.WriteDoubleValue("price", Price);
             writer.WriteStringValue("price_unit", PriceUnit);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

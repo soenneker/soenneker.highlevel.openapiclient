@@ -11,19 +11,36 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AdScheduleTargetDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("dayOfWeek") is { } nullNodeDayOfWeek && nullNodeDayOfWeek.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DayOfWeek = null;
+            if (parseNode.GetChildNode("endHour") is { } nullNodeEndHour && nullNodeEndHour.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndHour = null;
+            if (parseNode.GetChildNode("endMinute") is { } nullNodeEndMinute && nullNodeEndMinute.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndMinute = null;
+            if (parseNode.GetChildNode("startHour") is { } nullNodeStartHour && nullNodeStartHour.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartHour = null;
+            if (parseNode.GetChildNode("startMinute") is { } nullNodeStartMinute && nullNodeStartMinute.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartMinute = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Day of the week for this schedule</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AdScheduleTargetDtoDayOfWeek? DayOfWeek { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AdScheduleTargetDtoDayOfWeek? DayOfWeek { get => _explicitNullValueDayOfWeek; set { _explicitNullValueDayOfWeek = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dayOfWeek"); else _explicitNullProperties?.Remove("dayOfWeek"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.AdScheduleTargetDtoDayOfWeek? _explicitNullValueDayOfWeek = default!;
         /// <summary>End hour in 24h format (0-23)</summary>
-        public double? EndHour { get; set; }
+        public double? EndHour { get => _explicitNullValueEndHour; set { _explicitNullValueEndHour = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endHour"); else _explicitNullProperties?.Remove("endHour"); } }
+        private double? _explicitNullValueEndHour = default!;
         /// <summary>Minute mark the schedule ends at</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AdScheduleTargetDtoEndMinute? EndMinute { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AdScheduleTargetDtoEndMinute? EndMinute { get => _explicitNullValueEndMinute; set { _explicitNullValueEndMinute = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endMinute"); else _explicitNullProperties?.Remove("endMinute"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.AdScheduleTargetDtoEndMinute? _explicitNullValueEndMinute = default!;
         /// <summary>Start hour in 24h format (0-23)</summary>
-        public double? StartHour { get; set; }
+        public double? StartHour { get => _explicitNullValueStartHour; set { _explicitNullValueStartHour = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startHour"); else _explicitNullProperties?.Remove("startHour"); } }
+        private double? _explicitNullValueStartHour = default!;
         /// <summary>Minute mark the schedule starts at</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AdScheduleTargetDtoStartMinute? StartMinute { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AdScheduleTargetDtoStartMinute? StartMinute { get => _explicitNullValueStartMinute; set { _explicitNullValueStartMinute = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startMinute"); else _explicitNullProperties?.Remove("startMinute"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.AdScheduleTargetDtoStartMinute? _explicitNullValueStartMinute = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.AdScheduleTargetDto"/> and sets the default values.
         /// </summary>
@@ -39,7 +56,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.AdScheduleTargetDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.AdScheduleTargetDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.AdScheduleTargetDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +85,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.AdScheduleTargetDtoEndMinute>("endMinute", EndMinute);
             writer.WriteDoubleValue("startHour", StartHour);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.AdScheduleTargetDtoStartMinute>("startMinute", StartMinute);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

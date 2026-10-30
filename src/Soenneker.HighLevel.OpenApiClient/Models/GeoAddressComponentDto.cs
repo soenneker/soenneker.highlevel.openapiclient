@@ -11,32 +11,48 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GeoAddressComponentDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("long_name") is { } nullNodeLongName && nullNodeLongName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LongName = null;
+            if (parseNode.GetChildNode("short_name") is { } nullNodeShortName && nullNodeShortName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShortName = null;
+            if (parseNode.GetChildNode("types") is { } nullNodeTypes && nullNodeTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Types = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Full name of the address component</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LongName { get; set; }
+        public string? LongName { get => _explicitNullValueLongName; set { _explicitNullValueLongName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("long_name"); else _explicitNullProperties?.Remove("long_name"); } }
+        private string? _explicitNullValueLongName = default!;
 #nullable restore
 #else
-        public string LongName { get; set; }
+        public string LongName { get => _explicitNullValueLongName; set { _explicitNullValueLongName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("long_name"); else _explicitNullProperties?.Remove("long_name"); } }
+        private string _explicitNullValueLongName = default!;
 #endif
         /// <summary>Abbreviated name of the address component</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShortName { get; set; }
+        public string? ShortName { get => _explicitNullValueShortName; set { _explicitNullValueShortName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("short_name"); else _explicitNullProperties?.Remove("short_name"); } }
+        private string? _explicitNullValueShortName = default!;
 #nullable restore
 #else
-        public string ShortName { get; set; }
+        public string ShortName { get => _explicitNullValueShortName; set { _explicitNullValueShortName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("short_name"); else _explicitNullProperties?.Remove("short_name"); } }
+        private string _explicitNullValueShortName = default!;
 #endif
         /// <summary>Address component types</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Types { get; set; }
+        public List<string>? Types { get => _explicitNullValueTypes; set { _explicitNullValueTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("types"); else _explicitNullProperties?.Remove("types"); } }
+        private List<string>? _explicitNullValueTypes = default!;
 #nullable restore
 #else
-        public List<string> Types { get; set; }
+        public List<string> Types { get => _explicitNullValueTypes; set { _explicitNullValueTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("types"); else _explicitNullProperties?.Remove("types"); } }
+        private List<string> _explicitNullValueTypes = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GeoAddressComponentDto"/> and sets the default values.
@@ -53,7 +69,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.GeoAddressComponentDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.GeoAddressComponentDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.GeoAddressComponentDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +94,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("long_name", LongName);
             writer.WriteStringValue("short_name", ShortName);
             writer.WriteCollectionOfPrimitiveValues<string>("types", Types);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

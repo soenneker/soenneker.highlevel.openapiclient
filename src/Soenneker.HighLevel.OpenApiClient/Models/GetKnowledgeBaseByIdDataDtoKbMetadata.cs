@@ -12,21 +12,40 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GetKnowledgeBaseByIdDataDtoKbMetadata : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("faqs") is { } nullNodeFaqs && nullNodeFaqs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Faqs = null;
+            if (parseNode.GetChildNode("files") is { } nullNodeFiles && nullNodeFiles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Files = null;
+            if (parseNode.GetChildNode("richText") is { } nullNodeRichText && nullNodeRichText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RichText = null;
+            if (parseNode.GetChildNode("tables") is { } nullNodeTables && nullNodeTables.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tables = null;
+            if (parseNode.GetChildNode("urls") is { } nullNodeUrls && nullNodeUrls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Urls = null;
+            if (parseNode.GetChildNode("webSearches") is { } nullNodeWebSearches && nullNodeWebSearches.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebSearches = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Number of FAQs in the knowledge base</summary>
-        public double? Faqs { get; set; }
+        public double? Faqs { get => _explicitNullValueFaqs; set { _explicitNullValueFaqs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("faqs"); else _explicitNullProperties?.Remove("faqs"); } }
+        private double? _explicitNullValueFaqs = default!;
         /// <summary>Number of files in the knowledge base</summary>
-        public double? Files { get; set; }
+        public double? Files { get => _explicitNullValueFiles; set { _explicitNullValueFiles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("files"); else _explicitNullProperties?.Remove("files"); } }
+        private double? _explicitNullValueFiles = default!;
         /// <summary>Number of rich text documents in the knowledge base</summary>
-        public double? RichText { get; set; }
+        public double? RichText { get => _explicitNullValueRichText; set { _explicitNullValueRichText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("richText"); else _explicitNullProperties?.Remove("richText"); } }
+        private double? _explicitNullValueRichText = default!;
         /// <summary>Number of tables in the knowledge base</summary>
-        public double? Tables { get; set; }
+        public double? Tables { get => _explicitNullValueTables; set { _explicitNullValueTables = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tables"); else _explicitNullProperties?.Remove("tables"); } }
+        private double? _explicitNullValueTables = default!;
         /// <summary>Number of URLs in the knowledge base</summary>
-        public double? Urls { get; set; }
+        public double? Urls { get => _explicitNullValueUrls; set { _explicitNullValueUrls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("urls"); else _explicitNullProperties?.Remove("urls"); } }
+        private double? _explicitNullValueUrls = default!;
         /// <summary>Number of web searche configs in the knowledge base</summary>
-        public double? WebSearches { get; set; }
+        public double? WebSearches { get => _explicitNullValueWebSearches; set { _explicitNullValueWebSearches = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webSearches"); else _explicitNullProperties?.Remove("webSearches"); } }
+        private double? _explicitNullValueWebSearches = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GetKnowledgeBaseByIdDataDtoKbMetadata"/> and sets the default values.
         /// </summary>
@@ -42,7 +61,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.GetKnowledgeBaseByIdDataDtoKbMetadata CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.GetKnowledgeBaseByIdDataDtoKbMetadata();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.GetKnowledgeBaseByIdDataDtoKbMetadata(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -73,6 +92,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteDoubleValue("tables", Tables);
             writer.WriteDoubleValue("urls", Urls);
             writer.WriteDoubleValue("webSearches", WebSearches);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

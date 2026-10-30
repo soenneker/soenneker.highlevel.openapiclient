@@ -55,6 +55,8 @@ namespace Soenneker.HighLevel.OpenApiClient.KnowledgeBase.KnowledgeBases.Item
             {
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.KnowledgeBaseBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.KnowledgeBaseUnauthorizedDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteKnowledgeBaseResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.DeleteKnowledgeBaseResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -80,6 +82,8 @@ namespace Soenneker.HighLevel.OpenApiClient.KnowledgeBase.KnowledgeBases.Item
             {
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.KnowledgeBaseBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.KnowledgeBaseUnauthorizedDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.GetKnowledgeBaseByIdResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.GetKnowledgeBaseByIdResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -107,6 +111,8 @@ namespace Soenneker.HighLevel.OpenApiClient.KnowledgeBase.KnowledgeBases.Item
             {
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.KnowledgeBaseBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.KnowledgeBaseUnauthorizedDto.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateKnowledgeBaseResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.UpdateKnowledgeBaseResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

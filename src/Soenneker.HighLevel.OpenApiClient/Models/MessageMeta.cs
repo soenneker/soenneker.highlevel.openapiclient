@@ -11,26 +11,41 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class MessageMeta : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("callDuration") is { } nullNodeCallDuration && nullNodeCallDuration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallDuration = null;
+            if (parseNode.GetChildNode("callStatus") is { } nullNodeCallStatus && nullNodeCallStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallStatus = null;
+            if (parseNode.GetChildNode("email") is { } nullNodeEmail && nullNodeEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Email = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Call duration in seconds</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CallDuration { get; set; }
+        public string? CallDuration { get => _explicitNullValueCallDuration; set { _explicitNullValueCallDuration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callDuration"); else _explicitNullProperties?.Remove("callDuration"); } }
+        private string? _explicitNullValueCallDuration = default!;
 #nullable restore
 #else
-        public string CallDuration { get; set; }
+        public string CallDuration { get => _explicitNullValueCallDuration; set { _explicitNullValueCallDuration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callDuration"); else _explicitNullProperties?.Remove("callDuration"); } }
+        private string _explicitNullValueCallDuration = default!;
 #endif
         /// <summary>Call status - can be pending, completed, answered, busy, no-answer, failed, canceled, or voicemail</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.MessageMetaCallStatus? CallStatus { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.MessageMetaCallStatus? CallStatus { get => _explicitNullValueCallStatus; set { _explicitNullValueCallStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callStatus"); else _explicitNullProperties?.Remove("callStatus"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.MessageMetaCallStatus? _explicitNullValueCallStatus = default!;
         /// <summary>meta will contain email, for message type 3 (email). messageIds is list of all email message ids under the message thread</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.MessageMetaEmailProperty2? Email { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.MessageMetaEmailProperty2? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.MessageMetaEmailProperty2? _explicitNullValueEmail = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.MessageMetaEmailProperty2 Email { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.MessageMetaEmailProperty2 Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.MessageMetaEmailProperty2 _explicitNullValueEmail = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.MessageMeta"/> and sets the default values.
@@ -47,7 +62,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.MessageMeta CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.MessageMeta();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.MessageMeta(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -72,6 +87,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("callDuration", CallDuration);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.MessageMetaCallStatus>("callStatus", CallStatus);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.MessageMetaEmailProperty2>("email", Email);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

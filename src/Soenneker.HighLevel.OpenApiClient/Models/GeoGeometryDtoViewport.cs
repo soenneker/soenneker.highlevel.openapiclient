@@ -12,24 +12,37 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GeoGeometryDtoViewport : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("northeast") is { } nullNodeNortheast && nullNodeNortheast.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Northeast = null;
+            if (parseNode.GetChildNode("southwest") is { } nullNodeSouthwest && nullNodeSouthwest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Southwest = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Northeast corner of the viewport</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GeoViewportDtoNortheast? Northeast { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GeoViewportDtoNortheast? Northeast { get => _explicitNullValueNortheast; set { _explicitNullValueNortheast = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("northeast"); else _explicitNullProperties?.Remove("northeast"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GeoViewportDtoNortheast? _explicitNullValueNortheast = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GeoViewportDtoNortheast Northeast { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GeoViewportDtoNortheast Northeast { get => _explicitNullValueNortheast; set { _explicitNullValueNortheast = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("northeast"); else _explicitNullProperties?.Remove("northeast"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GeoViewportDtoNortheast _explicitNullValueNortheast = default!;
 #endif
         /// <summary>Southwest corner of the viewport</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GeoViewportDtoSouthwest? Southwest { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GeoViewportDtoSouthwest? Southwest { get => _explicitNullValueSouthwest; set { _explicitNullValueSouthwest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("southwest"); else _explicitNullProperties?.Remove("southwest"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GeoViewportDtoSouthwest? _explicitNullValueSouthwest = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GeoViewportDtoSouthwest Southwest { get; set; }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GeoViewportDtoSouthwest Southwest { get => _explicitNullValueSouthwest; set { _explicitNullValueSouthwest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("southwest"); else _explicitNullProperties?.Remove("southwest"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GeoViewportDtoSouthwest _explicitNullValueSouthwest = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GeoGeometryDtoViewport"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public static global::Soenneker.HighLevel.OpenApiClient.Models.GeoGeometryDtoViewport CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HighLevel.OpenApiClient.Models.GeoGeometryDtoViewport();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.GeoGeometryDtoViewport(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GeoViewportDtoNortheast>("northeast", Northeast);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GeoViewportDtoSouthwest>("southwest", Southwest);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
