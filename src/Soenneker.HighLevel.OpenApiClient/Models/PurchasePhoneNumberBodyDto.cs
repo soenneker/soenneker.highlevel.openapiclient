@@ -17,15 +17,24 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("addressSid") is { } nullNodeAddressSid && nullNodeAddressSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressSid = null;
-            if (parseNode.GetChildNode("bundleSid") is { } nullNodeBundleSid && nullNodeBundleSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BundleSid = null;
-            if (parseNode.GetChildNode("countryCode") is { } nullNodeCountryCode && nullNodeCountryCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CountryCode = null;
-            if (parseNode.GetChildNode("fingerprintId") is { } nullNodeFingerprintId && nullNodeFingerprintId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FingerprintId = null;
-            if (parseNode.GetChildNode("locality") is { } nullNodeLocality && nullNodeLocality.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locality = null;
-            if (parseNode.GetChildNode("numberType") is { } nullNodeNumberType && nullNodeNumberType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumberType = null;
-            if (parseNode.GetChildNode("phoneNumber") is { } nullNodePhoneNumber && nullNodePhoneNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhoneNumber = null;
-            if (parseNode.GetChildNode("region") is { } nullNodeRegion && nullNodeRegion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Region = null;
-            if (parseNode.GetChildNode("skipLocationKYC") is { } nullNodeSkipLocationKYC && nullNodeSkipLocationKYC.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SkipLocationKYC = null;
+            if (parseNode.GetChildNode("addressSid") is null) { _explicitNullValueAddressSid = default!; _explicitNullProperties?.Remove("addressSid"); }
+            else if (parseNode.GetChildNode("addressSid") is { } nullNodeAddressSid && nullNodeAddressSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressSid = null;
+            if (parseNode.GetChildNode("bundleSid") is null) { _explicitNullValueBundleSid = default!; _explicitNullProperties?.Remove("bundleSid"); }
+            else if (parseNode.GetChildNode("bundleSid") is { } nullNodeBundleSid && nullNodeBundleSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BundleSid = null;
+            if (parseNode.GetChildNode("countryCode") is null) { _explicitNullValueCountryCode = default!; _explicitNullProperties?.Remove("countryCode"); }
+            else if (parseNode.GetChildNode("countryCode") is { } nullNodeCountryCode && nullNodeCountryCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CountryCode = null;
+            if (parseNode.GetChildNode("fingerprintId") is null) { _explicitNullValueFingerprintId = default!; _explicitNullProperties?.Remove("fingerprintId"); }
+            else if (parseNode.GetChildNode("fingerprintId") is { } nullNodeFingerprintId && nullNodeFingerprintId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FingerprintId = null;
+            if (parseNode.GetChildNode("locality") is null) { _explicitNullValueLocality = default!; _explicitNullProperties?.Remove("locality"); }
+            else if (parseNode.GetChildNode("locality") is { } nullNodeLocality && nullNodeLocality.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locality = null;
+            if (parseNode.GetChildNode("numberType") is null) { _explicitNullValueNumberType = default!; _explicitNullProperties?.Remove("numberType"); }
+            else if (parseNode.GetChildNode("numberType") is { } nullNodeNumberType && nullNodeNumberType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumberType = null;
+            if (parseNode.GetChildNode("phoneNumber") is null) { _explicitNullValuePhoneNumber = default!; _explicitNullProperties?.Remove("phoneNumber"); }
+            else if (parseNode.GetChildNode("phoneNumber") is { } nullNodePhoneNumber && nullNodePhoneNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PhoneNumber = null;
+            if (parseNode.GetChildNode("region") is null) { _explicitNullValueRegion = default!; _explicitNullProperties?.Remove("region"); }
+            else if (parseNode.GetChildNode("region") is { } nullNodeRegion && nullNodeRegion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Region = null;
+            if (parseNode.GetChildNode("skipLocationKYC") is null) { _explicitNullValueSkipLocationKYC = default!; _explicitNullProperties?.Remove("skipLocationKYC"); }
+            else if (parseNode.GetChildNode("skipLocationKYC") is { } nullNodeSkipLocationKYC && nullNodeSkipLocationKYC.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SkipLocationKYC = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -33,78 +42,78 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Twilio address SID for compliance</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AddressSid { get => _explicitNullValueAddressSid; set { _explicitNullValueAddressSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("addressSid"); else _explicitNullProperties?.Remove("addressSid"); } }
+        public string? AddressSid { get => _explicitNullValueAddressSid; set { _explicitNullValueAddressSid = value; AdditionalData?.Remove("addressSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("addressSid"); else _explicitNullProperties?.Remove("addressSid"); } }
         private string? _explicitNullValueAddressSid = default!;
 #nullable restore
 #else
-        public string AddressSid { get => _explicitNullValueAddressSid; set { _explicitNullValueAddressSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("addressSid"); else _explicitNullProperties?.Remove("addressSid"); } }
+        public string AddressSid { get => _explicitNullValueAddressSid; set { _explicitNullValueAddressSid = value; AdditionalData?.Remove("addressSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("addressSid"); else _explicitNullProperties?.Remove("addressSid"); } }
         private string _explicitNullValueAddressSid = default!;
 #endif
         /// <summary>Twilio bundle SID for regulatory compliance</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BundleSid { get => _explicitNullValueBundleSid; set { _explicitNullValueBundleSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bundleSid"); else _explicitNullProperties?.Remove("bundleSid"); } }
+        public string? BundleSid { get => _explicitNullValueBundleSid; set { _explicitNullValueBundleSid = value; AdditionalData?.Remove("bundleSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bundleSid"); else _explicitNullProperties?.Remove("bundleSid"); } }
         private string? _explicitNullValueBundleSid = default!;
 #nullable restore
 #else
-        public string BundleSid { get => _explicitNullValueBundleSid; set { _explicitNullValueBundleSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bundleSid"); else _explicitNullProperties?.Remove("bundleSid"); } }
+        public string BundleSid { get => _explicitNullValueBundleSid; set { _explicitNullValueBundleSid = value; AdditionalData?.Remove("bundleSid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bundleSid"); else _explicitNullProperties?.Remove("bundleSid"); } }
         private string _explicitNullValueBundleSid = default!;
 #endif
         /// <summary>ISO 3166-1 alpha-2 country code of the number</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CountryCode { get => _explicitNullValueCountryCode; set { _explicitNullValueCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("countryCode"); else _explicitNullProperties?.Remove("countryCode"); } }
+        public string? CountryCode { get => _explicitNullValueCountryCode; set { _explicitNullValueCountryCode = value; AdditionalData?.Remove("countryCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("countryCode"); else _explicitNullProperties?.Remove("countryCode"); } }
         private string? _explicitNullValueCountryCode = default!;
 #nullable restore
 #else
-        public string CountryCode { get => _explicitNullValueCountryCode; set { _explicitNullValueCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("countryCode"); else _explicitNullProperties?.Remove("countryCode"); } }
+        public string CountryCode { get => _explicitNullValueCountryCode; set { _explicitNullValueCountryCode = value; AdditionalData?.Remove("countryCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("countryCode"); else _explicitNullProperties?.Remove("countryCode"); } }
         private string _explicitNullValueCountryCode = default!;
 #endif
         /// <summary>Unique request ID for idempotency (fingerprint of the purchase request)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FingerprintId { get => _explicitNullValueFingerprintId; set { _explicitNullValueFingerprintId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fingerprintId"); else _explicitNullProperties?.Remove("fingerprintId"); } }
+        public string? FingerprintId { get => _explicitNullValueFingerprintId; set { _explicitNullValueFingerprintId = value; AdditionalData?.Remove("fingerprintId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fingerprintId"); else _explicitNullProperties?.Remove("fingerprintId"); } }
         private string? _explicitNullValueFingerprintId = default!;
 #nullable restore
 #else
-        public string FingerprintId { get => _explicitNullValueFingerprintId; set { _explicitNullValueFingerprintId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fingerprintId"); else _explicitNullProperties?.Remove("fingerprintId"); } }
+        public string FingerprintId { get => _explicitNullValueFingerprintId; set { _explicitNullValueFingerprintId = value; AdditionalData?.Remove("fingerprintId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fingerprintId"); else _explicitNullProperties?.Remove("fingerprintId"); } }
         private string _explicitNullValueFingerprintId = default!;
 #endif
         /// <summary>Locality where the number is being purchased</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Locality { get => _explicitNullValueLocality; set { _explicitNullValueLocality = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locality"); else _explicitNullProperties?.Remove("locality"); } }
+        public string? Locality { get => _explicitNullValueLocality; set { _explicitNullValueLocality = value; AdditionalData?.Remove("locality"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locality"); else _explicitNullProperties?.Remove("locality"); } }
         private string? _explicitNullValueLocality = default!;
 #nullable restore
 #else
-        public string Locality { get => _explicitNullValueLocality; set { _explicitNullValueLocality = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locality"); else _explicitNullProperties?.Remove("locality"); } }
+        public string Locality { get => _explicitNullValueLocality; set { _explicitNullValueLocality = value; AdditionalData?.Remove("locality"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locality"); else _explicitNullProperties?.Remove("locality"); } }
         private string _explicitNullValueLocality = default!;
 #endif
         /// <summary>Type of phone number</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PurchasePhoneNumberBodyDtoNumberType? NumberType { get => _explicitNullValueNumberType; set { _explicitNullValueNumberType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("numberType"); else _explicitNullProperties?.Remove("numberType"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PurchasePhoneNumberBodyDtoNumberType? NumberType { get => _explicitNullValueNumberType; set { _explicitNullValueNumberType = value; AdditionalData?.Remove("numberType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("numberType"); else _explicitNullProperties?.Remove("numberType"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.PurchasePhoneNumberBodyDtoNumberType? _explicitNullValueNumberType = default!;
         /// <summary>The phone number to purchase</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PhoneNumber { get => _explicitNullValuePhoneNumber; set { _explicitNullValuePhoneNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phoneNumber"); else _explicitNullProperties?.Remove("phoneNumber"); } }
+        public string? PhoneNumber { get => _explicitNullValuePhoneNumber; set { _explicitNullValuePhoneNumber = value; AdditionalData?.Remove("phoneNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phoneNumber"); else _explicitNullProperties?.Remove("phoneNumber"); } }
         private string? _explicitNullValuePhoneNumber = default!;
 #nullable restore
 #else
-        public string PhoneNumber { get => _explicitNullValuePhoneNumber; set { _explicitNullValuePhoneNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phoneNumber"); else _explicitNullProperties?.Remove("phoneNumber"); } }
+        public string PhoneNumber { get => _explicitNullValuePhoneNumber; set { _explicitNullValuePhoneNumber = value; AdditionalData?.Remove("phoneNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phoneNumber"); else _explicitNullProperties?.Remove("phoneNumber"); } }
         private string _explicitNullValuePhoneNumber = default!;
 #endif
         /// <summary>Region where the number is being purchased</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Region { get => _explicitNullValueRegion; set { _explicitNullValueRegion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("region"); else _explicitNullProperties?.Remove("region"); } }
+        public string? Region { get => _explicitNullValueRegion; set { _explicitNullValueRegion = value; AdditionalData?.Remove("region"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("region"); else _explicitNullProperties?.Remove("region"); } }
         private string? _explicitNullValueRegion = default!;
 #nullable restore
 #else
-        public string Region { get => _explicitNullValueRegion; set { _explicitNullValueRegion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("region"); else _explicitNullProperties?.Remove("region"); } }
+        public string Region { get => _explicitNullValueRegion; set { _explicitNullValueRegion = value; AdditionalData?.Remove("region"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("region"); else _explicitNullProperties?.Remove("region"); } }
         private string _explicitNullValueRegion = default!;
 #endif
         /// <summary>Skip location-level KYC verification if agency-level compliance has already been verified</summary>
-        public bool? SkipLocationKYC { get => _explicitNullValueSkipLocationKYC; set { _explicitNullValueSkipLocationKYC = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skipLocationKYC"); else _explicitNullProperties?.Remove("skipLocationKYC"); } }
+        public bool? SkipLocationKYC { get => _explicitNullValueSkipLocationKYC; set { _explicitNullValueSkipLocationKYC = value; AdditionalData?.Remove("skipLocationKYC"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skipLocationKYC"); else _explicitNullProperties?.Remove("skipLocationKYC"); } }
         private bool? _explicitNullValueSkipLocationKYC = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.PurchasePhoneNumberBodyDto"/> and sets the default values.
@@ -136,7 +145,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "countryCode", n => { CountryCode = n.GetStringValue(); } },
                 { "fingerprintId", n => { FingerprintId = n.GetStringValue(); } },
                 { "locality", n => { Locality = n.GetStringValue(); } },
-                { "numberType", n => { NumberType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PurchasePhoneNumberBodyDtoNumberType>(); } },
+                { "numberType", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PurchasePhoneNumberBodyDtoNumberType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueNumberType = default; _explicitNullProperties?.Remove("numberType"); AdditionalData["numberType"] = unknown; } else { NumberType = parsed; AdditionalData.Remove("numberType"); } } },
                 { "phoneNumber", n => { PhoneNumber = n.GetStringValue(); } },
                 { "region", n => { Region = n.GetStringValue(); } },
                 { "skipLocationKYC", n => { SkipLocationKYC = n.GetBoolValue(); } },

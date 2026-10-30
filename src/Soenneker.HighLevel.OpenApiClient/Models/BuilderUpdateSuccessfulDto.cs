@@ -17,10 +17,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ok") is { } nullNodeOk && nullNodeOk.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ok = null;
-            if (parseNode.GetChildNode("previewUrl") is { } nullNodePreviewUrl && nullNodePreviewUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreviewUrl = null;
-            if (parseNode.GetChildNode("templateDownloadUrl") is { } nullNodeTemplateDownloadUrl && nullNodeTemplateDownloadUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TemplateDownloadUrl = null;
-            if (parseNode.GetChildNode("traceId") is { } nullNodeTraceId && nullNodeTraceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TraceId = null;
+            if (parseNode.GetChildNode("ok") is null) { _explicitNullValueOk = default!; _explicitNullProperties?.Remove("ok"); }
+            else if (parseNode.GetChildNode("ok") is { } nullNodeOk && nullNodeOk.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ok = null;
+            if (parseNode.GetChildNode("previewUrl") is null) { _explicitNullValuePreviewUrl = default!; _explicitNullProperties?.Remove("previewUrl"); }
+            else if (parseNode.GetChildNode("previewUrl") is { } nullNodePreviewUrl && nullNodePreviewUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreviewUrl = null;
+            if (parseNode.GetChildNode("templateDownloadUrl") is null) { _explicitNullValueTemplateDownloadUrl = default!; _explicitNullProperties?.Remove("templateDownloadUrl"); }
+            else if (parseNode.GetChildNode("templateDownloadUrl") is { } nullNodeTemplateDownloadUrl && nullNodeTemplateDownloadUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TemplateDownloadUrl = null;
+            if (parseNode.GetChildNode("traceId") is null) { _explicitNullValueTraceId = default!; _explicitNullProperties?.Remove("traceId"); }
+            else if (parseNode.GetChildNode("traceId") is { } nullNodeTraceId && nullNodeTraceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TraceId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,41 +32,41 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>ok</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Ok { get => _explicitNullValueOk; set { _explicitNullValueOk = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ok"); else _explicitNullProperties?.Remove("ok"); } }
+        public string? Ok { get => _explicitNullValueOk; set { _explicitNullValueOk = value; AdditionalData?.Remove("ok"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ok"); else _explicitNullProperties?.Remove("ok"); } }
         private string? _explicitNullValueOk = default!;
 #nullable restore
 #else
-        public string Ok { get => _explicitNullValueOk; set { _explicitNullValueOk = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ok"); else _explicitNullProperties?.Remove("ok"); } }
+        public string Ok { get => _explicitNullValueOk; set { _explicitNullValueOk = value; AdditionalData?.Remove("ok"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ok"); else _explicitNullProperties?.Remove("ok"); } }
         private string _explicitNullValueOk = default!;
 #endif
         /// <summary>preview url</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PreviewUrl { get => _explicitNullValuePreviewUrl; set { _explicitNullValuePreviewUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previewUrl"); else _explicitNullProperties?.Remove("previewUrl"); } }
+        public string? PreviewUrl { get => _explicitNullValuePreviewUrl; set { _explicitNullValuePreviewUrl = value; AdditionalData?.Remove("previewUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previewUrl"); else _explicitNullProperties?.Remove("previewUrl"); } }
         private string? _explicitNullValuePreviewUrl = default!;
 #nullable restore
 #else
-        public string PreviewUrl { get => _explicitNullValuePreviewUrl; set { _explicitNullValuePreviewUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previewUrl"); else _explicitNullProperties?.Remove("previewUrl"); } }
+        public string PreviewUrl { get => _explicitNullValuePreviewUrl; set { _explicitNullValuePreviewUrl = value; AdditionalData?.Remove("previewUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previewUrl"); else _explicitNullProperties?.Remove("previewUrl"); } }
         private string _explicitNullValuePreviewUrl = default!;
 #endif
         /// <summary>template data download url</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TemplateDownloadUrl { get => _explicitNullValueTemplateDownloadUrl; set { _explicitNullValueTemplateDownloadUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("templateDownloadUrl"); else _explicitNullProperties?.Remove("templateDownloadUrl"); } }
+        public string? TemplateDownloadUrl { get => _explicitNullValueTemplateDownloadUrl; set { _explicitNullValueTemplateDownloadUrl = value; AdditionalData?.Remove("templateDownloadUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("templateDownloadUrl"); else _explicitNullProperties?.Remove("templateDownloadUrl"); } }
         private string? _explicitNullValueTemplateDownloadUrl = default!;
 #nullable restore
 #else
-        public string TemplateDownloadUrl { get => _explicitNullValueTemplateDownloadUrl; set { _explicitNullValueTemplateDownloadUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("templateDownloadUrl"); else _explicitNullProperties?.Remove("templateDownloadUrl"); } }
+        public string TemplateDownloadUrl { get => _explicitNullValueTemplateDownloadUrl; set { _explicitNullValueTemplateDownloadUrl = value; AdditionalData?.Remove("templateDownloadUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("templateDownloadUrl"); else _explicitNullProperties?.Remove("templateDownloadUrl"); } }
         private string _explicitNullValueTemplateDownloadUrl = default!;
 #endif
         /// <summary>trace id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TraceId { get => _explicitNullValueTraceId; set { _explicitNullValueTraceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("traceId"); else _explicitNullProperties?.Remove("traceId"); } }
+        public string? TraceId { get => _explicitNullValueTraceId; set { _explicitNullValueTraceId = value; AdditionalData?.Remove("traceId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("traceId"); else _explicitNullProperties?.Remove("traceId"); } }
         private string? _explicitNullValueTraceId = default!;
 #nullable restore
 #else
-        public string TraceId { get => _explicitNullValueTraceId; set { _explicitNullValueTraceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("traceId"); else _explicitNullProperties?.Remove("traceId"); } }
+        public string TraceId { get => _explicitNullValueTraceId; set { _explicitNullValueTraceId = value; AdditionalData?.Remove("traceId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("traceId"); else _explicitNullProperties?.Remove("traceId"); } }
         private string _explicitNullValueTraceId = default!;
 #endif
         /// <summary>

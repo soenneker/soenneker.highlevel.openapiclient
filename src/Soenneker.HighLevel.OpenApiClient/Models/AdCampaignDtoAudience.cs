@@ -18,8 +18,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("geo_locations") is { } nullNodeGeoLocations && nullNodeGeoLocations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GeoLocations = null;
-            if (parseNode.GetChildNode("targetAudience") is { } nullNodeTargetAudience && nullNodeTargetAudience.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetAudience = null;
+            if (parseNode.GetChildNode("geo_locations") is null) { _explicitNullValueGeoLocations = default!; _explicitNullProperties?.Remove("geo_locations"); }
+            else if (parseNode.GetChildNode("geo_locations") is { } nullNodeGeoLocations && nullNodeGeoLocations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GeoLocations = null;
+            if (parseNode.GetChildNode("targetAudience") is null) { _explicitNullValueTargetAudience = default!; _explicitNullProperties?.Remove("targetAudience"); }
+            else if (parseNode.GetChildNode("targetAudience") is { } nullNodeTargetAudience && nullNodeTargetAudience.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetAudience = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Geographic location targets</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GeoLocationDto>? GeoLocations { get => _explicitNullValueGeoLocations; set { _explicitNullValueGeoLocations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("geo_locations"); else _explicitNullProperties?.Remove("geo_locations"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GeoLocationDto>? GeoLocations { get => _explicitNullValueGeoLocations; set { _explicitNullValueGeoLocations = value; AdditionalData?.Remove("geo_locations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("geo_locations"); else _explicitNullProperties?.Remove("geo_locations"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.GeoLocationDto>? _explicitNullValueGeoLocations = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GeoLocationDto> GeoLocations { get => _explicitNullValueGeoLocations; set { _explicitNullValueGeoLocations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("geo_locations"); else _explicitNullProperties?.Remove("geo_locations"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GeoLocationDto> GeoLocations { get => _explicitNullValueGeoLocations; set { _explicitNullValueGeoLocations = value; AdditionalData?.Remove("geo_locations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("geo_locations"); else _explicitNullProperties?.Remove("geo_locations"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.GeoLocationDto> _explicitNullValueGeoLocations = default!;
 #endif
         /// <summary>Target audience attribute selections</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AudienceDtoTargetAudience? TargetAudience { get => _explicitNullValueTargetAudience; set { _explicitNullValueTargetAudience = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("targetAudience"); else _explicitNullProperties?.Remove("targetAudience"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AudienceDtoTargetAudience? TargetAudience { get => _explicitNullValueTargetAudience; set { _explicitNullValueTargetAudience = value; AdditionalData?.Remove("targetAudience"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("targetAudience"); else _explicitNullProperties?.Remove("targetAudience"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.AudienceDtoTargetAudience? _explicitNullValueTargetAudience = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AudienceDtoTargetAudience TargetAudience { get => _explicitNullValueTargetAudience; set { _explicitNullValueTargetAudience = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("targetAudience"); else _explicitNullProperties?.Remove("targetAudience"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AudienceDtoTargetAudience TargetAudience { get => _explicitNullValueTargetAudience; set { _explicitNullValueTargetAudience = value; AdditionalData?.Remove("targetAudience"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("targetAudience"); else _explicitNullProperties?.Remove("targetAudience"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.AudienceDtoTargetAudience _explicitNullValueTargetAudience = default!;
 #endif
         /// <summary>

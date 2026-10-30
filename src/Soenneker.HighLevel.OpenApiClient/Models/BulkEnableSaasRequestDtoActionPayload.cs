@@ -18,10 +18,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("priceId") is { } nullNodePriceId && nullNodePriceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PriceId = null;
-            if (parseNode.GetChildNode("providerLocationId") is { } nullNodeProviderLocationId && nullNodeProviderLocationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProviderLocationId = null;
-            if (parseNode.GetChildNode("saasPlanId") is { } nullNodeSaasPlanId && nullNodeSaasPlanId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SaasPlanId = null;
-            if (parseNode.GetChildNode("stripeAccountId") is { } nullNodeStripeAccountId && nullNodeStripeAccountId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StripeAccountId = null;
+            if (parseNode.GetChildNode("priceId") is null) { _explicitNullValuePriceId = default!; _explicitNullProperties?.Remove("priceId"); }
+            else if (parseNode.GetChildNode("priceId") is { } nullNodePriceId && nullNodePriceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PriceId = null;
+            if (parseNode.GetChildNode("providerLocationId") is null) { _explicitNullValueProviderLocationId = default!; _explicitNullProperties?.Remove("providerLocationId"); }
+            else if (parseNode.GetChildNode("providerLocationId") is { } nullNodeProviderLocationId && nullNodeProviderLocationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProviderLocationId = null;
+            if (parseNode.GetChildNode("saasPlanId") is null) { _explicitNullValueSaasPlanId = default!; _explicitNullProperties?.Remove("saasPlanId"); }
+            else if (parseNode.GetChildNode("saasPlanId") is { } nullNodeSaasPlanId && nullNodeSaasPlanId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SaasPlanId = null;
+            if (parseNode.GetChildNode("stripeAccountId") is null) { _explicitNullValueStripeAccountId = default!; _explicitNullProperties?.Remove("stripeAccountId"); }
+            else if (parseNode.GetChildNode("stripeAccountId") is { } nullNodeStripeAccountId && nullNodeStripeAccountId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StripeAccountId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,41 +33,41 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Price ID for the SaaS plan</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PriceId { get => _explicitNullValuePriceId; set { _explicitNullValuePriceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("priceId"); else _explicitNullProperties?.Remove("priceId"); } }
+        public string? PriceId { get => _explicitNullValuePriceId; set { _explicitNullValuePriceId = value; AdditionalData?.Remove("priceId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("priceId"); else _explicitNullProperties?.Remove("priceId"); } }
         private string? _explicitNullValuePriceId = default!;
 #nullable restore
 #else
-        public string PriceId { get => _explicitNullValuePriceId; set { _explicitNullValuePriceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("priceId"); else _explicitNullProperties?.Remove("priceId"); } }
+        public string PriceId { get => _explicitNullValuePriceId; set { _explicitNullValuePriceId = value; AdditionalData?.Remove("priceId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("priceId"); else _explicitNullProperties?.Remove("priceId"); } }
         private string _explicitNullValuePriceId = default!;
 #endif
         /// <summary>Provider location ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProviderLocationId { get => _explicitNullValueProviderLocationId; set { _explicitNullValueProviderLocationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("providerLocationId"); else _explicitNullProperties?.Remove("providerLocationId"); } }
+        public string? ProviderLocationId { get => _explicitNullValueProviderLocationId; set { _explicitNullValueProviderLocationId = value; AdditionalData?.Remove("providerLocationId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("providerLocationId"); else _explicitNullProperties?.Remove("providerLocationId"); } }
         private string? _explicitNullValueProviderLocationId = default!;
 #nullable restore
 #else
-        public string ProviderLocationId { get => _explicitNullValueProviderLocationId; set { _explicitNullValueProviderLocationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("providerLocationId"); else _explicitNullProperties?.Remove("providerLocationId"); } }
+        public string ProviderLocationId { get => _explicitNullValueProviderLocationId; set { _explicitNullValueProviderLocationId = value; AdditionalData?.Remove("providerLocationId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("providerLocationId"); else _explicitNullProperties?.Remove("providerLocationId"); } }
         private string _explicitNullValueProviderLocationId = default!;
 #endif
         /// <summary>SaaS plan ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SaasPlanId { get => _explicitNullValueSaasPlanId; set { _explicitNullValueSaasPlanId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("saasPlanId"); else _explicitNullProperties?.Remove("saasPlanId"); } }
+        public string? SaasPlanId { get => _explicitNullValueSaasPlanId; set { _explicitNullValueSaasPlanId = value; AdditionalData?.Remove("saasPlanId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("saasPlanId"); else _explicitNullProperties?.Remove("saasPlanId"); } }
         private string? _explicitNullValueSaasPlanId = default!;
 #nullable restore
 #else
-        public string SaasPlanId { get => _explicitNullValueSaasPlanId; set { _explicitNullValueSaasPlanId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("saasPlanId"); else _explicitNullProperties?.Remove("saasPlanId"); } }
+        public string SaasPlanId { get => _explicitNullValueSaasPlanId; set { _explicitNullValueSaasPlanId = value; AdditionalData?.Remove("saasPlanId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("saasPlanId"); else _explicitNullProperties?.Remove("saasPlanId"); } }
         private string _explicitNullValueSaasPlanId = default!;
 #endif
         /// <summary>Stripe account ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StripeAccountId { get => _explicitNullValueStripeAccountId; set { _explicitNullValueStripeAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stripeAccountId"); else _explicitNullProperties?.Remove("stripeAccountId"); } }
+        public string? StripeAccountId { get => _explicitNullValueStripeAccountId; set { _explicitNullValueStripeAccountId = value; AdditionalData?.Remove("stripeAccountId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stripeAccountId"); else _explicitNullProperties?.Remove("stripeAccountId"); } }
         private string? _explicitNullValueStripeAccountId = default!;
 #nullable restore
 #else
-        public string StripeAccountId { get => _explicitNullValueStripeAccountId; set { _explicitNullValueStripeAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stripeAccountId"); else _explicitNullProperties?.Remove("stripeAccountId"); } }
+        public string StripeAccountId { get => _explicitNullValueStripeAccountId; set { _explicitNullValueStripeAccountId = value; AdditionalData?.Remove("stripeAccountId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stripeAccountId"); else _explicitNullProperties?.Remove("stripeAccountId"); } }
         private string _explicitNullValueStripeAccountId = default!;
 #endif
         /// <summary>

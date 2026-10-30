@@ -120,7 +120,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Products.Item.Price
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Products.Item.Price.PriceRequestBuilder.PriceRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/products/{productId}/price?locationId={locationId}{&ids*,limit*,offset*}", PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve("{+baseurl}/products/{productId}/price?locationId={locationId}{&ids*,limit*,offset*}", RequestAdapter.BaseUrl, "https://services.leadconnectorhq.com", "/products/{productId}/price", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -141,7 +141,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Products.Item.Price
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://services.leadconnectorhq.com", "/products/{productId}/price", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);

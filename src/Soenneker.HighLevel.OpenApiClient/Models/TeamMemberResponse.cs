@@ -17,25 +17,29 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("isPrimary") is { } nullNodeIsPrimary && nullNodeIsPrimary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsPrimary = null;
-            if (parseNode.GetChildNode("locationConfigurations") is { } nullNodeLocationConfigurations && nullNodeLocationConfigurations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationConfigurations = null;
-            if (parseNode.GetChildNode("priority") is { } nullNodePriority && nullNodePriority.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Priority = null;
-            if (parseNode.GetChildNode("userId") is { } nullNodeUserId && nullNodeUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserId = null;
+            if (parseNode.GetChildNode("isPrimary") is null) { _explicitNullValueIsPrimary = default!; _explicitNullProperties?.Remove("isPrimary"); }
+            else if (parseNode.GetChildNode("isPrimary") is { } nullNodeIsPrimary && nullNodeIsPrimary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsPrimary = null;
+            if (parseNode.GetChildNode("locationConfigurations") is null) { _explicitNullValueLocationConfigurations = default!; _explicitNullProperties?.Remove("locationConfigurations"); }
+            else if (parseNode.GetChildNode("locationConfigurations") is { } nullNodeLocationConfigurations && nullNodeLocationConfigurations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationConfigurations = null;
+            if (parseNode.GetChildNode("priority") is null) { _explicitNullValuePriority = default!; _explicitNullProperties?.Remove("priority"); }
+            else if (parseNode.GetChildNode("priority") is { } nullNodePriority && nullNodePriority.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Priority = null;
+            if (parseNode.GetChildNode("userId") is null) { _explicitNullValueUserId = default!; _explicitNullProperties?.Remove("userId"); }
+            else if (parseNode.GetChildNode("userId") is { } nullNodeUserId && nullNodeUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Marks a user as primary. This property is required in case of collective booking calendars. Only one user can be primary.</summary>
-        public bool? IsPrimary { get => _explicitNullValueIsPrimary; set { _explicitNullValueIsPrimary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isPrimary"); else _explicitNullProperties?.Remove("isPrimary"); } }
+        public bool? IsPrimary { get => _explicitNullValueIsPrimary; set { _explicitNullValueIsPrimary = value; AdditionalData?.Remove("isPrimary"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isPrimary"); else _explicitNullProperties?.Remove("isPrimary"); } }
         private bool? _explicitNullValueIsPrimary = default!;
         /// <summary>Meeting location configurations</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.LocationConfigurationResponse>? LocationConfigurations { get => _explicitNullValueLocationConfigurations; set { _explicitNullValueLocationConfigurations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationConfigurations"); else _explicitNullProperties?.Remove("locationConfigurations"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.LocationConfigurationResponse>? LocationConfigurations { get => _explicitNullValueLocationConfigurations; set { _explicitNullValueLocationConfigurations = value; AdditionalData?.Remove("locationConfigurations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationConfigurations"); else _explicitNullProperties?.Remove("locationConfigurations"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.LocationConfigurationResponse>? _explicitNullValueLocationConfigurations = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.LocationConfigurationResponse> LocationConfigurations { get => _explicitNullValueLocationConfigurations; set { _explicitNullValueLocationConfigurations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationConfigurations"); else _explicitNullProperties?.Remove("locationConfigurations"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.LocationConfigurationResponse> LocationConfigurations { get => _explicitNullValueLocationConfigurations; set { _explicitNullValueLocationConfigurations = value; AdditionalData?.Remove("locationConfigurations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationConfigurations"); else _explicitNullProperties?.Remove("locationConfigurations"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.LocationConfigurationResponse> _explicitNullValueLocationConfigurations = default!;
 #endif
         /// <summary>🚨 Deprecated! Use `locationConfigurations.location` instead.</summary>
@@ -51,16 +55,16 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         [Obsolete("")]
         public global::Soenneker.HighLevel.OpenApiClient.Models.TeamMemberResponseMeetingLocationType? MeetingLocationType { get; private set; }
         /// <summary>The priority property</summary>
-        public double? Priority { get => _explicitNullValuePriority; set { _explicitNullValuePriority = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("priority"); else _explicitNullProperties?.Remove("priority"); } }
+        public double? Priority { get => _explicitNullValuePriority; set { _explicitNullValuePriority = value; AdditionalData?.Remove("priority"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("priority"); else _explicitNullProperties?.Remove("priority"); } }
         private double? _explicitNullValuePriority = default!;
         /// <summary>The userId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userId"); else _explicitNullProperties?.Remove("userId"); } }
+        public string? UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; AdditionalData?.Remove("userId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userId"); else _explicitNullProperties?.Remove("userId"); } }
         private string? _explicitNullValueUserId = default!;
 #nullable restore
 #else
-        public string UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userId"); else _explicitNullProperties?.Remove("userId"); } }
+        public string UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; AdditionalData?.Remove("userId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userId"); else _explicitNullProperties?.Remove("userId"); } }
         private string _explicitNullValueUserId = default!;
 #endif
         /// <summary>

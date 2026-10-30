@@ -17,79 +17,88 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("attributionModel") is { } nullNodeAttributionModel && nullNodeAttributionModel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AttributionModel = null;
-            if (parseNode.GetChildNode("category") is { } nullNodeCategory && nullNodeCategory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Category = null;
-            if (parseNode.GetChildNode("clickThroughWindow") is { } nullNodeClickThroughWindow && nullNodeClickThroughWindow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClickThroughWindow = null;
-            if (parseNode.GetChildNode("conversionId") is { } nullNodeConversionId && nullNodeConversionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConversionId = null;
-            if (parseNode.GetChildNode("countingType") is { } nullNodeCountingType && nullNodeCountingType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CountingType = null;
-            if (parseNode.GetChildNode("locationId") is { } nullNodeLocationId && nullNodeLocationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationId = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
-            if (parseNode.GetChildNode("valueSettings") is { } nullNodeValueSettings && nullNodeValueSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ValueSettings = null;
+            if (parseNode.GetChildNode("attributionModel") is null) { _explicitNullValueAttributionModel = default!; _explicitNullProperties?.Remove("attributionModel"); }
+            else if (parseNode.GetChildNode("attributionModel") is { } nullNodeAttributionModel && nullNodeAttributionModel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AttributionModel = null;
+            if (parseNode.GetChildNode("category") is null) { _explicitNullValueCategory = default!; _explicitNullProperties?.Remove("category"); }
+            else if (parseNode.GetChildNode("category") is { } nullNodeCategory && nullNodeCategory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Category = null;
+            if (parseNode.GetChildNode("clickThroughWindow") is null) { _explicitNullValueClickThroughWindow = default!; _explicitNullProperties?.Remove("clickThroughWindow"); }
+            else if (parseNode.GetChildNode("clickThroughWindow") is { } nullNodeClickThroughWindow && nullNodeClickThroughWindow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClickThroughWindow = null;
+            if (parseNode.GetChildNode("conversionId") is null) { _explicitNullValueConversionId = default!; _explicitNullProperties?.Remove("conversionId"); }
+            else if (parseNode.GetChildNode("conversionId") is { } nullNodeConversionId && nullNodeConversionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConversionId = null;
+            if (parseNode.GetChildNode("countingType") is null) { _explicitNullValueCountingType = default!; _explicitNullProperties?.Remove("countingType"); }
+            else if (parseNode.GetChildNode("countingType") is { } nullNodeCountingType && nullNodeCountingType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CountingType = null;
+            if (parseNode.GetChildNode("locationId") is null) { _explicitNullValueLocationId = default!; _explicitNullProperties?.Remove("locationId"); }
+            else if (parseNode.GetChildNode("locationId") is { } nullNodeLocationId && nullNodeLocationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationId = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("valueSettings") is null) { _explicitNullValueValueSettings = default!; _explicitNullProperties?.Remove("valueSettings"); }
+            else if (parseNode.GetChildNode("valueSettings") is { } nullNodeValueSettings && nullNodeValueSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ValueSettings = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Attribution model used to credit conversions</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpsertConversionDtoAttributionModel? AttributionModel { get => _explicitNullValueAttributionModel; set { _explicitNullValueAttributionModel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attributionModel"); else _explicitNullProperties?.Remove("attributionModel"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpsertConversionDtoAttributionModel? AttributionModel { get => _explicitNullValueAttributionModel; set { _explicitNullValueAttributionModel = value; AdditionalData?.Remove("attributionModel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attributionModel"); else _explicitNullProperties?.Remove("attributionModel"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.UpsertConversionDtoAttributionModel? _explicitNullValueAttributionModel = default!;
         /// <summary>Conversion category</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Category { get => _explicitNullValueCategory; set { _explicitNullValueCategory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("category"); else _explicitNullProperties?.Remove("category"); } }
+        public string? Category { get => _explicitNullValueCategory; set { _explicitNullValueCategory = value; AdditionalData?.Remove("category"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("category"); else _explicitNullProperties?.Remove("category"); } }
         private string? _explicitNullValueCategory = default!;
 #nullable restore
 #else
-        public string Category { get => _explicitNullValueCategory; set { _explicitNullValueCategory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("category"); else _explicitNullProperties?.Remove("category"); } }
+        public string Category { get => _explicitNullValueCategory; set { _explicitNullValueCategory = value; AdditionalData?.Remove("category"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("category"); else _explicitNullProperties?.Remove("category"); } }
         private string _explicitNullValueCategory = default!;
 #endif
         /// <summary>Click-through conversion window in days</summary>
-        public double? ClickThroughWindow { get => _explicitNullValueClickThroughWindow; set { _explicitNullValueClickThroughWindow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clickThroughWindow"); else _explicitNullProperties?.Remove("clickThroughWindow"); } }
+        public double? ClickThroughWindow { get => _explicitNullValueClickThroughWindow; set { _explicitNullValueClickThroughWindow = value; AdditionalData?.Remove("clickThroughWindow"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clickThroughWindow"); else _explicitNullProperties?.Remove("clickThroughWindow"); } }
         private double? _explicitNullValueClickThroughWindow = default!;
         /// <summary>Conversion identifier</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConversionId { get => _explicitNullValueConversionId; set { _explicitNullValueConversionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conversionId"); else _explicitNullProperties?.Remove("conversionId"); } }
+        public string? ConversionId { get => _explicitNullValueConversionId; set { _explicitNullValueConversionId = value; AdditionalData?.Remove("conversionId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conversionId"); else _explicitNullProperties?.Remove("conversionId"); } }
         private string? _explicitNullValueConversionId = default!;
 #nullable restore
 #else
-        public string ConversionId { get => _explicitNullValueConversionId; set { _explicitNullValueConversionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conversionId"); else _explicitNullProperties?.Remove("conversionId"); } }
+        public string ConversionId { get => _explicitNullValueConversionId; set { _explicitNullValueConversionId = value; AdditionalData?.Remove("conversionId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conversionId"); else _explicitNullProperties?.Remove("conversionId"); } }
         private string _explicitNullValueConversionId = default!;
 #endif
         /// <summary>How conversions are counted per interaction</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpsertConversionDtoCountingType? CountingType { get => _explicitNullValueCountingType; set { _explicitNullValueCountingType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("countingType"); else _explicitNullProperties?.Remove("countingType"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpsertConversionDtoCountingType? CountingType { get => _explicitNullValueCountingType; set { _explicitNullValueCountingType = value; AdditionalData?.Remove("countingType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("countingType"); else _explicitNullProperties?.Remove("countingType"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.UpsertConversionDtoCountingType? _explicitNullValueCountingType = default!;
         /// <summary>Location identifier</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
+        public string? LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; AdditionalData?.Remove("locationId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
         private string? _explicitNullValueLocationId = default!;
 #nullable restore
 #else
-        public string LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
+        public string LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; AdditionalData?.Remove("locationId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
         private string _explicitNullValueLocationId = default!;
 #endif
         /// <summary>Conversion name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>Conversion type</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpsertConversionDtoType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpsertConversionDtoType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.UpsertConversionDtoType? _explicitNullValueType = default!;
         /// <summary>Value settings that control how monetary value is attributed to conversions</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpsertConversionDtoValueSettings? ValueSettings { get => _explicitNullValueValueSettings; set { _explicitNullValueValueSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("valueSettings"); else _explicitNullProperties?.Remove("valueSettings"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpsertConversionDtoValueSettings? ValueSettings { get => _explicitNullValueValueSettings; set { _explicitNullValueValueSettings = value; AdditionalData?.Remove("valueSettings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("valueSettings"); else _explicitNullProperties?.Remove("valueSettings"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.UpsertConversionDtoValueSettings? _explicitNullValueValueSettings = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpsertConversionDtoValueSettings ValueSettings { get => _explicitNullValueValueSettings; set { _explicitNullValueValueSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("valueSettings"); else _explicitNullProperties?.Remove("valueSettings"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpsertConversionDtoValueSettings ValueSettings { get => _explicitNullValueValueSettings; set { _explicitNullValueValueSettings = value; AdditionalData?.Remove("valueSettings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("valueSettings"); else _explicitNullProperties?.Remove("valueSettings"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.UpsertConversionDtoValueSettings _explicitNullValueValueSettings = default!;
 #endif
         /// <summary>
@@ -117,14 +126,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "attributionModel", n => { AttributionModel = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpsertConversionDtoAttributionModel>(); } },
+                { "attributionModel", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpsertConversionDtoAttributionModel>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAttributionModel = default; _explicitNullProperties?.Remove("attributionModel"); AdditionalData["attributionModel"] = unknown; } else { AttributionModel = parsed; AdditionalData.Remove("attributionModel"); } } },
                 { "category", n => { Category = n.GetStringValue(); } },
                 { "clickThroughWindow", n => { ClickThroughWindow = n.GetDoubleValue(); } },
                 { "conversionId", n => { ConversionId = n.GetStringValue(); } },
-                { "countingType", n => { CountingType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpsertConversionDtoCountingType>(); } },
+                { "countingType", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpsertConversionDtoCountingType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCountingType = default; _explicitNullProperties?.Remove("countingType"); AdditionalData["countingType"] = unknown; } else { CountingType = parsed; AdditionalData.Remove("countingType"); } } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpsertConversionDtoType>(); } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpsertConversionDtoType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
                 { "valueSettings", n => { ValueSettings = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpsertConversionDtoValueSettings>(global::Soenneker.HighLevel.OpenApiClient.Models.UpsertConversionDtoValueSettings.CreateFromDiscriminatorValue); } },
             };
         }

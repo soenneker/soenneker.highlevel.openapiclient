@@ -17,24 +17,32 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("accounts") is { } nullNodeAccounts && nullNodeAccounts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Accounts = null;
-            if (parseNode.GetChildNode("fromDate") is { } nullNodeFromDate && nullNodeFromDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FromDate = null;
-            if (parseNode.GetChildNode("includeUsers") is { } nullNodeIncludeUsers && nullNodeIncludeUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncludeUsers = null;
-            if (parseNode.GetChildNode("limit") is { } nullNodeLimit && nullNodeLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Limit = null;
-            if (parseNode.GetChildNode("postType") is { } nullNodePostType && nullNodePostType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PostType = null;
-            if (parseNode.GetChildNode("skip") is { } nullNodeSkip && nullNodeSkip.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Skip = null;
-            if (parseNode.GetChildNode("toDate") is { } nullNodeToDate && nullNodeToDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToDate = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("accounts") is null) { _explicitNullValueAccounts = default!; _explicitNullProperties?.Remove("accounts"); }
+            else if (parseNode.GetChildNode("accounts") is { } nullNodeAccounts && nullNodeAccounts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Accounts = null;
+            if (parseNode.GetChildNode("fromDate") is null) { _explicitNullValueFromDate = default!; _explicitNullProperties?.Remove("fromDate"); }
+            else if (parseNode.GetChildNode("fromDate") is { } nullNodeFromDate && nullNodeFromDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FromDate = null;
+            if (parseNode.GetChildNode("includeUsers") is null) { _explicitNullValueIncludeUsers = default!; _explicitNullProperties?.Remove("includeUsers"); }
+            else if (parseNode.GetChildNode("includeUsers") is { } nullNodeIncludeUsers && nullNodeIncludeUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncludeUsers = null;
+            if (parseNode.GetChildNode("limit") is null) { _explicitNullValueLimit = default!; _explicitNullProperties?.Remove("limit"); }
+            else if (parseNode.GetChildNode("limit") is { } nullNodeLimit && nullNodeLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Limit = null;
+            if (parseNode.GetChildNode("postType") is null) { _explicitNullValuePostType = default!; _explicitNullProperties?.Remove("postType"); }
+            else if (parseNode.GetChildNode("postType") is { } nullNodePostType && nullNodePostType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PostType = null;
+            if (parseNode.GetChildNode("skip") is null) { _explicitNullValueSkip = default!; _explicitNullProperties?.Remove("skip"); }
+            else if (parseNode.GetChildNode("skip") is { } nullNodeSkip && nullNodeSkip.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Skip = null;
+            if (parseNode.GetChildNode("toDate") is null) { _explicitNullValueToDate = default!; _explicitNullProperties?.Remove("toDate"); }
+            else if (parseNode.GetChildNode("toDate") is { } nullNodeToDate && nullNodeToDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToDate = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
         }
 
         /// <summary>List of account Ids seperated by comma as a string</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Accounts { get => _explicitNullValueAccounts; set { _explicitNullValueAccounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accounts"); else _explicitNullProperties?.Remove("accounts"); } }
+        public string? Accounts { get => _explicitNullValueAccounts; set { _explicitNullValueAccounts = value; AdditionalData?.Remove("accounts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accounts"); else _explicitNullProperties?.Remove("accounts"); } }
         private string? _explicitNullValueAccounts = default!;
 #nullable restore
 #else
-        public string Accounts { get => _explicitNullValueAccounts; set { _explicitNullValueAccounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accounts"); else _explicitNullProperties?.Remove("accounts"); } }
+        public string Accounts { get => _explicitNullValueAccounts; set { _explicitNullValueAccounts = value; AdditionalData?.Remove("accounts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accounts"); else _explicitNullProperties?.Remove("accounts"); } }
         private string _explicitNullValueAccounts = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -42,71 +50,71 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>From Date</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FromDate { get => _explicitNullValueFromDate; set { _explicitNullValueFromDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fromDate"); else _explicitNullProperties?.Remove("fromDate"); } }
+        public string? FromDate { get => _explicitNullValueFromDate; set { _explicitNullValueFromDate = value; AdditionalData?.Remove("fromDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fromDate"); else _explicitNullProperties?.Remove("fromDate"); } }
         private string? _explicitNullValueFromDate = default!;
 #nullable restore
 #else
-        public string FromDate { get => _explicitNullValueFromDate; set { _explicitNullValueFromDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fromDate"); else _explicitNullProperties?.Remove("fromDate"); } }
+        public string FromDate { get => _explicitNullValueFromDate; set { _explicitNullValueFromDate = value; AdditionalData?.Remove("fromDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fromDate"); else _explicitNullProperties?.Remove("fromDate"); } }
         private string _explicitNullValueFromDate = default!;
 #endif
         /// <summary>Include User Data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IncludeUsers { get => _explicitNullValueIncludeUsers; set { _explicitNullValueIncludeUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("includeUsers"); else _explicitNullProperties?.Remove("includeUsers"); } }
+        public string? IncludeUsers { get => _explicitNullValueIncludeUsers; set { _explicitNullValueIncludeUsers = value; AdditionalData?.Remove("includeUsers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("includeUsers"); else _explicitNullProperties?.Remove("includeUsers"); } }
         private string? _explicitNullValueIncludeUsers = default!;
 #nullable restore
 #else
-        public string IncludeUsers { get => _explicitNullValueIncludeUsers; set { _explicitNullValueIncludeUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("includeUsers"); else _explicitNullProperties?.Remove("includeUsers"); } }
+        public string IncludeUsers { get => _explicitNullValueIncludeUsers; set { _explicitNullValueIncludeUsers = value; AdditionalData?.Remove("includeUsers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("includeUsers"); else _explicitNullProperties?.Remove("includeUsers"); } }
         private string _explicitNullValueIncludeUsers = default!;
 #endif
         /// <summary>The limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Limit { get => _explicitNullValueLimit; set { _explicitNullValueLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("limit"); else _explicitNullProperties?.Remove("limit"); } }
+        public string? Limit { get => _explicitNullValueLimit; set { _explicitNullValueLimit = value; AdditionalData?.Remove("limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("limit"); else _explicitNullProperties?.Remove("limit"); } }
         private string? _explicitNullValueLimit = default!;
 #nullable restore
 #else
-        public string Limit { get => _explicitNullValueLimit; set { _explicitNullValueLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("limit"); else _explicitNullProperties?.Remove("limit"); } }
+        public string Limit { get => _explicitNullValueLimit; set { _explicitNullValueLimit = value; AdditionalData?.Remove("limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("limit"); else _explicitNullProperties?.Remove("limit"); } }
         private string _explicitNullValueLimit = default!;
 #endif
         /// <summary>Post Type must be one of the following values: - post, story, reel</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SearchPostDtoPostTypeProperty? PostType { get => _explicitNullValuePostType; set { _explicitNullValuePostType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("postType"); else _explicitNullProperties?.Remove("postType"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.SearchPostDtoPostTypeProperty? _explicitNullValuePostType = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoType? PostType { get => _explicitNullValuePostType; set { _explicitNullValuePostType = value; AdditionalData?.Remove("postType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("postType"); else _explicitNullProperties?.Remove("postType"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoType? _explicitNullValuePostType = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SearchPostDtoPostTypeProperty PostType { get => _explicitNullValuePostType; set { _explicitNullValuePostType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("postType"); else _explicitNullProperties?.Remove("postType"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.SearchPostDtoPostTypeProperty _explicitNullValuePostType = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoType PostType { get => _explicitNullValuePostType; set { _explicitNullValuePostType = value; AdditionalData?.Remove("postType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("postType"); else _explicitNullProperties?.Remove("postType"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoType _explicitNullValuePostType = default!;
 #endif
         /// <summary>The skip property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Skip { get => _explicitNullValueSkip; set { _explicitNullValueSkip = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skip"); else _explicitNullProperties?.Remove("skip"); } }
+        public string? Skip { get => _explicitNullValueSkip; set { _explicitNullValueSkip = value; AdditionalData?.Remove("skip"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skip"); else _explicitNullProperties?.Remove("skip"); } }
         private string? _explicitNullValueSkip = default!;
 #nullable restore
 #else
-        public string Skip { get => _explicitNullValueSkip; set { _explicitNullValueSkip = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skip"); else _explicitNullProperties?.Remove("skip"); } }
+        public string Skip { get => _explicitNullValueSkip; set { _explicitNullValueSkip = value; AdditionalData?.Remove("skip"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skip"); else _explicitNullProperties?.Remove("skip"); } }
         private string _explicitNullValueSkip = default!;
 #endif
         /// <summary>To Date</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ToDate { get => _explicitNullValueToDate; set { _explicitNullValueToDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("toDate"); else _explicitNullProperties?.Remove("toDate"); } }
+        public string? ToDate { get => _explicitNullValueToDate; set { _explicitNullValueToDate = value; AdditionalData?.Remove("toDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("toDate"); else _explicitNullProperties?.Remove("toDate"); } }
         private string? _explicitNullValueToDate = default!;
 #nullable restore
 #else
-        public string ToDate { get => _explicitNullValueToDate; set { _explicitNullValueToDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("toDate"); else _explicitNullProperties?.Remove("toDate"); } }
+        public string ToDate { get => _explicitNullValueToDate; set { _explicitNullValueToDate = value; AdditionalData?.Remove("toDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("toDate"); else _explicitNullProperties?.Remove("toDate"); } }
         private string _explicitNullValueToDate = default!;
 #endif
         /// <summary>type must be one of the following values: recent, all, scheduled, draft, failed, in_review, published, in_progress and deleted</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private string? _explicitNullValueType = default!;
 #nullable restore
 #else
-        public string Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public string Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private string _explicitNullValueType = default!;
 #endif
         /// <summary>
@@ -141,7 +149,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "fromDate", n => { FromDate = n.GetStringValue(); } },
                 { "includeUsers", n => { IncludeUsers = n.GetStringValue(); } },
                 { "limit", n => { Limit = n.GetStringValue(); } },
-                { "postType", n => { PostType = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SearchPostDtoPostTypeProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.SearchPostDtoPostTypeProperty.CreateFromDiscriminatorValue); } },
+                { "postType", n => { PostType = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoType>(global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoType.CreateFromDiscriminatorValue); } },
                 { "skip", n => { Skip = n.GetStringValue(); } },
                 { "toDate", n => { ToDate = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetStringValue(); } },
@@ -158,7 +166,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("fromDate", FromDate);
             writer.WriteStringValue("includeUsers", IncludeUsers);
             writer.WriteStringValue("limit", Limit);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SearchPostDtoPostTypeProperty>("postType", PostType);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoType>("postType", PostType);
             writer.WriteStringValue("skip", Skip);
             writer.WriteStringValue("toDate", ToDate);
             writer.WriteStringValue("type", Type);

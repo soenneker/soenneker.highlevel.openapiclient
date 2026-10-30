@@ -18,38 +18,42 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("internalSource") is { } nullNodeInternalSource && nullNodeInternalSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InternalSource = null;
-            if (parseNode.GetChildNode("source") is { } nullNodeSource && nullNodeSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Source = null;
-            if (parseNode.GetChildNode("sourceId") is { } nullNodeSourceId && nullNodeSourceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceId = null;
-            if (parseNode.GetChildNode("stripePriceId") is { } nullNodeStripePriceId && nullNodeStripePriceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StripePriceId = null;
+            if (parseNode.GetChildNode("internalSource") is null) { _explicitNullValueInternalSource = default!; _explicitNullProperties?.Remove("internalSource"); }
+            else if (parseNode.GetChildNode("internalSource") is { } nullNodeInternalSource && nullNodeInternalSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InternalSource = null;
+            if (parseNode.GetChildNode("source") is null) { _explicitNullValueSource = default!; _explicitNullProperties?.Remove("source"); }
+            else if (parseNode.GetChildNode("source") is { } nullNodeSource && nullNodeSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Source = null;
+            if (parseNode.GetChildNode("sourceId") is null) { _explicitNullValueSourceId = default!; _explicitNullProperties?.Remove("sourceId"); }
+            else if (parseNode.GetChildNode("sourceId") is { } nullNodeSourceId && nullNodeSourceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceId = null;
+            if (parseNode.GetChildNode("stripePriceId") is null) { _explicitNullValueStripePriceId = default!; _explicitNullProperties?.Remove("stripePriceId"); }
+            else if (parseNode.GetChildNode("stripePriceId") is { } nullNodeStripePriceId && nullNodeStripePriceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StripePriceId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The internal source of the price.</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PriceMetaDtoInternalSource? InternalSource { get => _explicitNullValueInternalSource; set { _explicitNullValueInternalSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("internalSource"); else _explicitNullProperties?.Remove("internalSource"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PriceMetaDtoInternalSource? InternalSource { get => _explicitNullValueInternalSource; set { _explicitNullValueInternalSource = value; AdditionalData?.Remove("internalSource"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("internalSource"); else _explicitNullProperties?.Remove("internalSource"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.PriceMetaDtoInternalSource? _explicitNullValueInternalSource = default!;
         /// <summary>The source of the price.</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PriceMetaDtoSource? Source { get => _explicitNullValueSource; set { _explicitNullValueSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source"); else _explicitNullProperties?.Remove("source"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PriceMetaDtoSource? Source { get => _explicitNullValueSource; set { _explicitNullValueSource = value; AdditionalData?.Remove("source"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source"); else _explicitNullProperties?.Remove("source"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.PriceMetaDtoSource? _explicitNullValueSource = default!;
         /// <summary>The id of the source of the price from where it is imported</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SourceId { get => _explicitNullValueSourceId; set { _explicitNullValueSourceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceId"); else _explicitNullProperties?.Remove("sourceId"); } }
+        public string? SourceId { get => _explicitNullValueSourceId; set { _explicitNullValueSourceId = value; AdditionalData?.Remove("sourceId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceId"); else _explicitNullProperties?.Remove("sourceId"); } }
         private string? _explicitNullValueSourceId = default!;
 #nullable restore
 #else
-        public string SourceId { get => _explicitNullValueSourceId; set { _explicitNullValueSourceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceId"); else _explicitNullProperties?.Remove("sourceId"); } }
+        public string SourceId { get => _explicitNullValueSourceId; set { _explicitNullValueSourceId = value; AdditionalData?.Remove("sourceId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceId"); else _explicitNullProperties?.Remove("sourceId"); } }
         private string _explicitNullValueSourceId = default!;
 #endif
         /// <summary>The Stripe price ID associated with the price.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StripePriceId { get => _explicitNullValueStripePriceId; set { _explicitNullValueStripePriceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stripePriceId"); else _explicitNullProperties?.Remove("stripePriceId"); } }
+        public string? StripePriceId { get => _explicitNullValueStripePriceId; set { _explicitNullValueStripePriceId = value; AdditionalData?.Remove("stripePriceId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stripePriceId"); else _explicitNullProperties?.Remove("stripePriceId"); } }
         private string? _explicitNullValueStripePriceId = default!;
 #nullable restore
 #else
-        public string StripePriceId { get => _explicitNullValueStripePriceId; set { _explicitNullValueStripePriceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stripePriceId"); else _explicitNullProperties?.Remove("stripePriceId"); } }
+        public string StripePriceId { get => _explicitNullValueStripePriceId; set { _explicitNullValueStripePriceId = value; AdditionalData?.Remove("stripePriceId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stripePriceId"); else _explicitNullProperties?.Remove("stripePriceId"); } }
         private string _explicitNullValueStripePriceId = default!;
 #endif
         /// <summary>
@@ -77,8 +81,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "internalSource", n => { InternalSource = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PriceMetaDtoInternalSource>(); } },
-                { "source", n => { Source = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PriceMetaDtoSource>(); } },
+                { "internalSource", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PriceMetaDtoInternalSource>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueInternalSource = default; _explicitNullProperties?.Remove("internalSource"); AdditionalData["internalSource"] = unknown; } else { InternalSource = parsed; AdditionalData.Remove("internalSource"); } } },
+                { "source", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PriceMetaDtoSource>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueSource = default; _explicitNullProperties?.Remove("source"); AdditionalData["source"] = unknown; } else { Source = parsed; AdditionalData.Remove("source"); } } },
                 { "sourceId", n => { SourceId = n.GetStringValue(); } },
                 { "stripePriceId", n => { StripePriceId = n.GetStringValue(); } },
             };

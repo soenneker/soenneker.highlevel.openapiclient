@@ -17,8 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("invoice") is { } nullNodeInvoice && nullNodeInvoice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Invoice = null;
-            if (parseNode.GetChildNode("invoiceUrl") is { } nullNodeInvoiceUrl && nullNodeInvoiceUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvoiceUrl = null;
+            if (parseNode.GetChildNode("invoice") is null) { _explicitNullValueInvoice = default!; _explicitNullProperties?.Remove("invoice"); }
+            else if (parseNode.GetChildNode("invoice") is { } nullNodeInvoice && nullNodeInvoice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Invoice = null;
+            if (parseNode.GetChildNode("invoiceUrl") is null) { _explicitNullValueInvoiceUrl = default!; _explicitNullProperties?.Remove("invoiceUrl"); }
+            else if (parseNode.GetChildNode("invoiceUrl") is { } nullNodeInvoiceUrl && nullNodeInvoiceUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvoiceUrl = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The invoice property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DefaultInvoiceResponseDto? Invoice { get => _explicitNullValueInvoice; set { _explicitNullValueInvoice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice"); else _explicitNullProperties?.Remove("invoice"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DefaultInvoiceResponseDto? Invoice { get => _explicitNullValueInvoice; set { _explicitNullValueInvoice = value; AdditionalData?.Remove("invoice"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice"); else _explicitNullProperties?.Remove("invoice"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.DefaultInvoiceResponseDto? _explicitNullValueInvoice = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DefaultInvoiceResponseDto Invoice { get => _explicitNullValueInvoice; set { _explicitNullValueInvoice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice"); else _explicitNullProperties?.Remove("invoice"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DefaultInvoiceResponseDto Invoice { get => _explicitNullValueInvoice; set { _explicitNullValueInvoice = value; AdditionalData?.Remove("invoice"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice"); else _explicitNullProperties?.Remove("invoice"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.DefaultInvoiceResponseDto _explicitNullValueInvoice = default!;
 #endif
         /// <summary>preview url of generated invoice</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InvoiceUrl { get => _explicitNullValueInvoiceUrl; set { _explicitNullValueInvoiceUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoiceUrl"); else _explicitNullProperties?.Remove("invoiceUrl"); } }
+        public string? InvoiceUrl { get => _explicitNullValueInvoiceUrl; set { _explicitNullValueInvoiceUrl = value; AdditionalData?.Remove("invoiceUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoiceUrl"); else _explicitNullProperties?.Remove("invoiceUrl"); } }
         private string? _explicitNullValueInvoiceUrl = default!;
 #nullable restore
 #else
-        public string InvoiceUrl { get => _explicitNullValueInvoiceUrl; set { _explicitNullValueInvoiceUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoiceUrl"); else _explicitNullProperties?.Remove("invoiceUrl"); } }
+        public string InvoiceUrl { get => _explicitNullValueInvoiceUrl; set { _explicitNullValueInvoiceUrl = value; AdditionalData?.Remove("invoiceUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoiceUrl"); else _explicitNullProperties?.Remove("invoiceUrl"); } }
         private string _explicitNullValueInvoiceUrl = default!;
 #endif
         /// <summary>

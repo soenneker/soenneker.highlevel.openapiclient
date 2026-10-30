@@ -17,39 +17,52 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("adCampaignId") is { } nullNodeAdCampaignId && nullNodeAdCampaignId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdCampaignId = null;
-            if (parseNode.GetChildNode("adContent") is { } nullNodeAdContent && nullNodeAdContent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdContent = null;
-            if (parseNode.GetChildNode("adGroupError") is { } nullNodeAdGroupError && nullNodeAdGroupError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdGroupError = null;
-            if (parseNode.GetChildNode("adGroupId") is { } nullNodeAdGroupId && nullNodeAdGroupId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdGroupId = null;
-            if (parseNode.GetChildNode("audience") is { } nullNodeAudience && nullNodeAudience.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Audience = null;
-            if (parseNode.GetChildNode("customChannels") is { } nullNodeCustomChannels && nullNodeCustomChannels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomChannels = null;
-            if (parseNode.GetChildNode("googleAdGroupId") is { } nullNodeGoogleAdGroupId && nullNodeGoogleAdGroupId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GoogleAdGroupId = null;
-            if (parseNode.GetChildNode("googleAudienceId") is { } nullNodeGoogleAudienceId && nullNodeGoogleAudienceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GoogleAudienceId = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("keywords") is { } nullNodeKeywords && nullNodeKeywords.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Keywords = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("publishingStatus") is { } nullNodePublishingStatus && nullNodePublishingStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PublishingStatus = null;
-            if (parseNode.GetChildNode("selectedChannels") is { } nullNodeSelectedChannels && nullNodeSelectedChannels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SelectedChannels = null;
+            if (parseNode.GetChildNode("adCampaignId") is null) { _explicitNullValueAdCampaignId = default!; _explicitNullProperties?.Remove("adCampaignId"); }
+            else if (parseNode.GetChildNode("adCampaignId") is { } nullNodeAdCampaignId && nullNodeAdCampaignId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdCampaignId = null;
+            if (parseNode.GetChildNode("adContent") is null) { _explicitNullValueAdContent = default!; _explicitNullProperties?.Remove("adContent"); }
+            else if (parseNode.GetChildNode("adContent") is { } nullNodeAdContent && nullNodeAdContent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdContent = null;
+            if (parseNode.GetChildNode("adGroupError") is null) { _explicitNullValueAdGroupError = default!; _explicitNullProperties?.Remove("adGroupError"); }
+            else if (parseNode.GetChildNode("adGroupError") is { } nullNodeAdGroupError && nullNodeAdGroupError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdGroupError = null;
+            if (parseNode.GetChildNode("adGroupId") is null) { _explicitNullValueAdGroupId = default!; _explicitNullProperties?.Remove("adGroupId"); }
+            else if (parseNode.GetChildNode("adGroupId") is { } nullNodeAdGroupId && nullNodeAdGroupId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdGroupId = null;
+            if (parseNode.GetChildNode("audience") is null) { _explicitNullValueAudience = default!; _explicitNullProperties?.Remove("audience"); }
+            else if (parseNode.GetChildNode("audience") is { } nullNodeAudience && nullNodeAudience.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Audience = null;
+            if (parseNode.GetChildNode("customChannels") is null) { _explicitNullValueCustomChannels = default!; _explicitNullProperties?.Remove("customChannels"); }
+            else if (parseNode.GetChildNode("customChannels") is { } nullNodeCustomChannels && nullNodeCustomChannels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomChannels = null;
+            if (parseNode.GetChildNode("googleAdGroupId") is null) { _explicitNullValueGoogleAdGroupId = default!; _explicitNullProperties?.Remove("googleAdGroupId"); }
+            else if (parseNode.GetChildNode("googleAdGroupId") is { } nullNodeGoogleAdGroupId && nullNodeGoogleAdGroupId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GoogleAdGroupId = null;
+            if (parseNode.GetChildNode("googleAudienceId") is null) { _explicitNullValueGoogleAudienceId = default!; _explicitNullProperties?.Remove("googleAudienceId"); }
+            else if (parseNode.GetChildNode("googleAudienceId") is { } nullNodeGoogleAudienceId && nullNodeGoogleAudienceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GoogleAudienceId = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("keywords") is null) { _explicitNullValueKeywords = default!; _explicitNullProperties?.Remove("keywords"); }
+            else if (parseNode.GetChildNode("keywords") is { } nullNodeKeywords && nullNodeKeywords.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Keywords = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("publishingStatus") is null) { _explicitNullValuePublishingStatus = default!; _explicitNullProperties?.Remove("publishingStatus"); }
+            else if (parseNode.GetChildNode("publishingStatus") is { } nullNodePublishingStatus && nullNodePublishingStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PublishingStatus = null;
+            if (parseNode.GetChildNode("selectedChannels") is null) { _explicitNullValueSelectedChannels = default!; _explicitNullProperties?.Remove("selectedChannels"); }
+            else if (parseNode.GetChildNode("selectedChannels") is { } nullNodeSelectedChannels && nullNodeSelectedChannels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SelectedChannels = null;
         }
 
         /// <summary>Ad campaign identifier</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AdCampaignId { get => _explicitNullValueAdCampaignId; set { _explicitNullValueAdCampaignId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adCampaignId"); else _explicitNullProperties?.Remove("adCampaignId"); } }
+        public string? AdCampaignId { get => _explicitNullValueAdCampaignId; set { _explicitNullValueAdCampaignId = value; AdditionalData?.Remove("adCampaignId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adCampaignId"); else _explicitNullProperties?.Remove("adCampaignId"); } }
         private string? _explicitNullValueAdCampaignId = default!;
 #nullable restore
 #else
-        public string AdCampaignId { get => _explicitNullValueAdCampaignId; set { _explicitNullValueAdCampaignId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adCampaignId"); else _explicitNullProperties?.Remove("adCampaignId"); } }
+        public string AdCampaignId { get => _explicitNullValueAdCampaignId; set { _explicitNullValueAdCampaignId = value; AdditionalData?.Remove("adCampaignId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adCampaignId"); else _explicitNullProperties?.Remove("adCampaignId"); } }
         private string _explicitNullValueAdCampaignId = default!;
 #endif
         /// <summary>Ad content items</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdContentDto>? AdContent { get => _explicitNullValueAdContent; set { _explicitNullValueAdContent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adContent"); else _explicitNullProperties?.Remove("adContent"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdContentDto>? AdContent { get => _explicitNullValueAdContent; set { _explicitNullValueAdContent = value; AdditionalData?.Remove("adContent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adContent"); else _explicitNullProperties?.Remove("adContent"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdContentDto>? _explicitNullValueAdContent = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdContentDto> AdContent { get => _explicitNullValueAdContent; set { _explicitNullValueAdContent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adContent"); else _explicitNullProperties?.Remove("adContent"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdContentDto> AdContent { get => _explicitNullValueAdContent; set { _explicitNullValueAdContent = value; AdditionalData?.Remove("adContent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adContent"); else _explicitNullProperties?.Remove("adContent"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdContentDto> _explicitNullValueAdContent = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -57,97 +70,97 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Ad group-level error from Google</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AdGroupError { get => _explicitNullValueAdGroupError; set { _explicitNullValueAdGroupError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adGroupError"); else _explicitNullProperties?.Remove("adGroupError"); } }
+        public string? AdGroupError { get => _explicitNullValueAdGroupError; set { _explicitNullValueAdGroupError = value; AdditionalData?.Remove("adGroupError"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adGroupError"); else _explicitNullProperties?.Remove("adGroupError"); } }
         private string? _explicitNullValueAdGroupError = default!;
 #nullable restore
 #else
-        public string AdGroupError { get => _explicitNullValueAdGroupError; set { _explicitNullValueAdGroupError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adGroupError"); else _explicitNullProperties?.Remove("adGroupError"); } }
+        public string AdGroupError { get => _explicitNullValueAdGroupError; set { _explicitNullValueAdGroupError = value; AdditionalData?.Remove("adGroupError"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adGroupError"); else _explicitNullProperties?.Remove("adGroupError"); } }
         private string _explicitNullValueAdGroupError = default!;
 #endif
         /// <summary>Google ad group identifier</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AdGroupId { get => _explicitNullValueAdGroupId; set { _explicitNullValueAdGroupId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adGroupId"); else _explicitNullProperties?.Remove("adGroupId"); } }
+        public string? AdGroupId { get => _explicitNullValueAdGroupId; set { _explicitNullValueAdGroupId = value; AdditionalData?.Remove("adGroupId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adGroupId"); else _explicitNullProperties?.Remove("adGroupId"); } }
         private string? _explicitNullValueAdGroupId = default!;
 #nullable restore
 #else
-        public string AdGroupId { get => _explicitNullValueAdGroupId; set { _explicitNullValueAdGroupId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adGroupId"); else _explicitNullProperties?.Remove("adGroupId"); } }
+        public string AdGroupId { get => _explicitNullValueAdGroupId; set { _explicitNullValueAdGroupId = value; AdditionalData?.Remove("adGroupId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adGroupId"); else _explicitNullProperties?.Remove("adGroupId"); } }
         private string _explicitNullValueAdGroupId = default!;
 #endif
         /// <summary>Ad group audience targeting</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdGroupDtoAudience? Audience { get => _explicitNullValueAudience; set { _explicitNullValueAudience = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audience"); else _explicitNullProperties?.Remove("audience"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdGroupDtoAudience? Audience { get => _explicitNullValueAudience; set { _explicitNullValueAudience = value; AdditionalData?.Remove("audience"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audience"); else _explicitNullProperties?.Remove("audience"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdGroupDtoAudience? _explicitNullValueAudience = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdGroupDtoAudience Audience { get => _explicitNullValueAudience; set { _explicitNullValueAudience = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audience"); else _explicitNullProperties?.Remove("audience"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdGroupDtoAudience Audience { get => _explicitNullValueAudience; set { _explicitNullValueAudience = value; AdditionalData?.Remove("audience"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audience"); else _explicitNullProperties?.Remove("audience"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdGroupDtoAudience _explicitNullValueAudience = default!;
 #endif
         /// <summary>Custom channels flag</summary>
-        public bool? CustomChannels { get => _explicitNullValueCustomChannels; set { _explicitNullValueCustomChannels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customChannels"); else _explicitNullProperties?.Remove("customChannels"); } }
+        public bool? CustomChannels { get => _explicitNullValueCustomChannels; set { _explicitNullValueCustomChannels = value; AdditionalData?.Remove("customChannels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customChannels"); else _explicitNullProperties?.Remove("customChannels"); } }
         private bool? _explicitNullValueCustomChannels = default!;
         /// <summary>Google Ads ad group resource ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GoogleAdGroupId { get => _explicitNullValueGoogleAdGroupId; set { _explicitNullValueGoogleAdGroupId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("googleAdGroupId"); else _explicitNullProperties?.Remove("googleAdGroupId"); } }
+        public string? GoogleAdGroupId { get => _explicitNullValueGoogleAdGroupId; set { _explicitNullValueGoogleAdGroupId = value; AdditionalData?.Remove("googleAdGroupId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("googleAdGroupId"); else _explicitNullProperties?.Remove("googleAdGroupId"); } }
         private string? _explicitNullValueGoogleAdGroupId = default!;
 #nullable restore
 #else
-        public string GoogleAdGroupId { get => _explicitNullValueGoogleAdGroupId; set { _explicitNullValueGoogleAdGroupId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("googleAdGroupId"); else _explicitNullProperties?.Remove("googleAdGroupId"); } }
+        public string GoogleAdGroupId { get => _explicitNullValueGoogleAdGroupId; set { _explicitNullValueGoogleAdGroupId = value; AdditionalData?.Remove("googleAdGroupId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("googleAdGroupId"); else _explicitNullProperties?.Remove("googleAdGroupId"); } }
         private string _explicitNullValueGoogleAdGroupId = default!;
 #endif
         /// <summary>Google audience resource ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GoogleAudienceId { get => _explicitNullValueGoogleAudienceId; set { _explicitNullValueGoogleAudienceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("googleAudienceId"); else _explicitNullProperties?.Remove("googleAudienceId"); } }
+        public string? GoogleAudienceId { get => _explicitNullValueGoogleAudienceId; set { _explicitNullValueGoogleAudienceId = value; AdditionalData?.Remove("googleAudienceId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("googleAudienceId"); else _explicitNullProperties?.Remove("googleAudienceId"); } }
         private string? _explicitNullValueGoogleAudienceId = default!;
 #nullable restore
 #else
-        public string GoogleAudienceId { get => _explicitNullValueGoogleAudienceId; set { _explicitNullValueGoogleAudienceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("googleAudienceId"); else _explicitNullProperties?.Remove("googleAudienceId"); } }
+        public string GoogleAudienceId { get => _explicitNullValueGoogleAudienceId; set { _explicitNullValueGoogleAudienceId = value; AdditionalData?.Remove("googleAudienceId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("googleAudienceId"); else _explicitNullProperties?.Remove("googleAudienceId"); } }
         private string _explicitNullValueGoogleAudienceId = default!;
 #endif
         /// <summary>Ad group identifier</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>Keyword targeting</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdGroupDtoKeywords? Keywords { get => _explicitNullValueKeywords; set { _explicitNullValueKeywords = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("keywords"); else _explicitNullProperties?.Remove("keywords"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdGroupDtoKeywords? Keywords { get => _explicitNullValueKeywords; set { _explicitNullValueKeywords = value; AdditionalData?.Remove("keywords"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("keywords"); else _explicitNullProperties?.Remove("keywords"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdGroupDtoKeywords? _explicitNullValueKeywords = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdGroupDtoKeywords Keywords { get => _explicitNullValueKeywords; set { _explicitNullValueKeywords = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("keywords"); else _explicitNullProperties?.Remove("keywords"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdGroupDtoKeywords Keywords { get => _explicitNullValueKeywords; set { _explicitNullValueKeywords = value; AdditionalData?.Remove("keywords"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("keywords"); else _explicitNullProperties?.Remove("keywords"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdGroupDtoKeywords _explicitNullValueKeywords = default!;
 #endif
         /// <summary>Ad group name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>Ad group publishing status</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdGroupDtoPublishingStatus? PublishingStatus { get => _explicitNullValuePublishingStatus; set { _explicitNullValuePublishingStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("publishingStatus"); else _explicitNullProperties?.Remove("publishingStatus"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdGroupDtoPublishingStatus? PublishingStatus { get => _explicitNullValuePublishingStatus; set { _explicitNullValuePublishingStatus = value; AdditionalData?.Remove("publishingStatus"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("publishingStatus"); else _explicitNullProperties?.Remove("publishingStatus"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdGroupDtoPublishingStatus? _explicitNullValuePublishingStatus = default!;
         /// <summary>Selected channel placements</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdGroupDtoSelectedChannelsItem?>? SelectedChannels { get => _explicitNullValueSelectedChannels; set { _explicitNullValueSelectedChannels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selectedChannels"); else _explicitNullProperties?.Remove("selectedChannels"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdGroupDtoSelectedChannelsItem?>? SelectedChannels { get => _explicitNullValueSelectedChannels; set { _explicitNullValueSelectedChannels = value; AdditionalData?.Remove("selectedChannels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selectedChannels"); else _explicitNullProperties?.Remove("selectedChannels"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdGroupDtoSelectedChannelsItem?>? _explicitNullValueSelectedChannels = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdGroupDtoSelectedChannelsItem?> SelectedChannels { get => _explicitNullValueSelectedChannels; set { _explicitNullValueSelectedChannels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selectedChannels"); else _explicitNullProperties?.Remove("selectedChannels"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdGroupDtoSelectedChannelsItem?> SelectedChannels { get => _explicitNullValueSelectedChannels; set { _explicitNullValueSelectedChannels = value; AdditionalData?.Remove("selectedChannels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selectedChannels"); else _explicitNullProperties?.Remove("selectedChannels"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdGroupDtoSelectedChannelsItem?> _explicitNullValueSelectedChannels = default!;
 #endif
         /// <summary>
@@ -186,7 +199,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "keywords", n => { Keywords = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdGroupDtoKeywords>(global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdGroupDtoKeywords.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "publishingStatus", n => { PublishingStatus = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdGroupDtoPublishingStatus>(); } },
+                { "publishingStatus", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdGroupDtoPublishingStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePublishingStatus = default; _explicitNullProperties?.Remove("publishingStatus"); AdditionalData["publishingStatus"] = unknown; } else { PublishingStatus = parsed; AdditionalData.Remove("publishingStatus"); } } },
                 { "selectedChannels", n => { SelectedChannels = n.GetCollectionOfEnumValues<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdGroupDtoSelectedChannelsItem>()?.AsList(); } },
             };
         }

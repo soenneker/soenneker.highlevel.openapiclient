@@ -17,7 +17,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("postIds") is { } nullNodePostIds && nullNodePostIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PostIds = null;
+            if (parseNode.GetChildNode("postIds") is null) { _explicitNullValuePostIds = default!; _explicitNullProperties?.Remove("postIds"); }
+            else if (parseNode.GetChildNode("postIds") is { } nullNodePostIds && nullNodePostIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PostIds = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Requested Results</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? PostIds { get => _explicitNullValuePostIds; set { _explicitNullValuePostIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("postIds"); else _explicitNullProperties?.Remove("postIds"); } }
+        public List<string>? PostIds { get => _explicitNullValuePostIds; set { _explicitNullValuePostIds = value; AdditionalData?.Remove("postIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("postIds"); else _explicitNullProperties?.Remove("postIds"); } }
         private List<string>? _explicitNullValuePostIds = default!;
 #nullable restore
 #else
-        public List<string> PostIds { get => _explicitNullValuePostIds; set { _explicitNullValuePostIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("postIds"); else _explicitNullProperties?.Remove("postIds"); } }
+        public List<string> PostIds { get => _explicitNullValuePostIds; set { _explicitNullValuePostIds = value; AdditionalData?.Remove("postIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("postIds"); else _explicitNullProperties?.Remove("postIds"); } }
         private List<string> _explicitNullValuePostIds = default!;
 #endif
         /// <summary>

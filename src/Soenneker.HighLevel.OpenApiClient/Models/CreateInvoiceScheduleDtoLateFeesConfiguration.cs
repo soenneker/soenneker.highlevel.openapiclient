@@ -18,54 +18,60 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("enable") is { } nullNodeEnable && nullNodeEnable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enable = null;
-            if (parseNode.GetChildNode("frequency") is { } nullNodeFrequency && nullNodeFrequency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Frequency = null;
-            if (parseNode.GetChildNode("grace") is { } nullNodeGrace && nullNodeGrace.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Grace = null;
-            if (parseNode.GetChildNode("maxLateFees") is { } nullNodeMaxLateFees && nullNodeMaxLateFees.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxLateFees = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
-            if (parseNode.GetChildNode("value") is { } nullNodeValue && nullNodeValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Value = null;
+            if (parseNode.GetChildNode("enable") is null) { _explicitNullValueEnable = default!; _explicitNullProperties?.Remove("enable"); }
+            else if (parseNode.GetChildNode("enable") is { } nullNodeEnable && nullNodeEnable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enable = null;
+            if (parseNode.GetChildNode("frequency") is null) { _explicitNullValueFrequency = default!; _explicitNullProperties?.Remove("frequency"); }
+            else if (parseNode.GetChildNode("frequency") is { } nullNodeFrequency && nullNodeFrequency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Frequency = null;
+            if (parseNode.GetChildNode("grace") is null) { _explicitNullValueGrace = default!; _explicitNullProperties?.Remove("grace"); }
+            else if (parseNode.GetChildNode("grace") is { } nullNodeGrace && nullNodeGrace.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Grace = null;
+            if (parseNode.GetChildNode("maxLateFees") is null) { _explicitNullValueMaxLateFees = default!; _explicitNullProperties?.Remove("maxLateFees"); }
+            else if (parseNode.GetChildNode("maxLateFees") is { } nullNodeMaxLateFees && nullNodeMaxLateFees.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxLateFees = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("value") is null) { _explicitNullValueValue = default!; _explicitNullProperties?.Remove("value"); }
+            else if (parseNode.GetChildNode("value") is { } nullNodeValue && nullNodeValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Value = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Enable late fees</summary>
-        public bool? Enable { get => _explicitNullValueEnable; set { _explicitNullValueEnable = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enable"); else _explicitNullProperties?.Remove("enable"); } }
+        public bool? Enable { get => _explicitNullValueEnable; set { _explicitNullValueEnable = value; AdditionalData?.Remove("enable"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enable"); else _explicitNullProperties?.Remove("enable"); } }
         private bool? _explicitNullValueEnable = default!;
         /// <summary>Late Fees Frequency</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LateFeesConfigurationDtoFrequency? Frequency { get => _explicitNullValueFrequency; set { _explicitNullValueFrequency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("frequency"); else _explicitNullProperties?.Remove("frequency"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LateFeesConfigurationDtoFrequency? Frequency { get => _explicitNullValueFrequency; set { _explicitNullValueFrequency = value; AdditionalData?.Remove("frequency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("frequency"); else _explicitNullProperties?.Remove("frequency"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.LateFeesConfigurationDtoFrequency? _explicitNullValueFrequency = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LateFeesConfigurationDtoFrequency Frequency { get => _explicitNullValueFrequency; set { _explicitNullValueFrequency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("frequency"); else _explicitNullProperties?.Remove("frequency"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LateFeesConfigurationDtoFrequency Frequency { get => _explicitNullValueFrequency; set { _explicitNullValueFrequency = value; AdditionalData?.Remove("frequency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("frequency"); else _explicitNullProperties?.Remove("frequency"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.LateFeesConfigurationDtoFrequency _explicitNullValueFrequency = default!;
 #endif
         /// <summary>Late Fees Grace</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LateFeesConfigurationDtoGrace? Grace { get => _explicitNullValueGrace; set { _explicitNullValueGrace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("grace"); else _explicitNullProperties?.Remove("grace"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LateFeesConfigurationDtoGrace? Grace { get => _explicitNullValueGrace; set { _explicitNullValueGrace = value; AdditionalData?.Remove("grace"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("grace"); else _explicitNullProperties?.Remove("grace"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.LateFeesConfigurationDtoGrace? _explicitNullValueGrace = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LateFeesConfigurationDtoGrace Grace { get => _explicitNullValueGrace; set { _explicitNullValueGrace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("grace"); else _explicitNullProperties?.Remove("grace"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LateFeesConfigurationDtoGrace Grace { get => _explicitNullValueGrace; set { _explicitNullValueGrace = value; AdditionalData?.Remove("grace"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("grace"); else _explicitNullProperties?.Remove("grace"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.LateFeesConfigurationDtoGrace _explicitNullValueGrace = default!;
 #endif
         /// <summary>Max late fees payable</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LateFeesConfigurationDtoMaxLateFees? MaxLateFees { get => _explicitNullValueMaxLateFees; set { _explicitNullValueMaxLateFees = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxLateFees"); else _explicitNullProperties?.Remove("maxLateFees"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LateFeesConfigurationDtoMaxLateFees? MaxLateFees { get => _explicitNullValueMaxLateFees; set { _explicitNullValueMaxLateFees = value; AdditionalData?.Remove("maxLateFees"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxLateFees"); else _explicitNullProperties?.Remove("maxLateFees"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.LateFeesConfigurationDtoMaxLateFees? _explicitNullValueMaxLateFees = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LateFeesConfigurationDtoMaxLateFees MaxLateFees { get => _explicitNullValueMaxLateFees; set { _explicitNullValueMaxLateFees = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxLateFees"); else _explicitNullProperties?.Remove("maxLateFees"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LateFeesConfigurationDtoMaxLateFees MaxLateFees { get => _explicitNullValueMaxLateFees; set { _explicitNullValueMaxLateFees = value; AdditionalData?.Remove("maxLateFees"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxLateFees"); else _explicitNullProperties?.Remove("maxLateFees"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.LateFeesConfigurationDtoMaxLateFees _explicitNullValueMaxLateFees = default!;
 #endif
         /// <summary>Late Fees Type</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LateFeesConfigurationDtoType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LateFeesConfigurationDtoType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.LateFeesConfigurationDtoType? _explicitNullValueType = default!;
         /// <summary>Late Fees Value</summary>
-        public double? Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
+        public double? Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; AdditionalData?.Remove("value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
         private double? _explicitNullValueValue = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceScheduleDtoLateFeesConfiguration"/> and sets the default values.
@@ -96,7 +102,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "frequency", n => { Frequency = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.LateFeesConfigurationDtoFrequency>(global::Soenneker.HighLevel.OpenApiClient.Models.LateFeesConfigurationDtoFrequency.CreateFromDiscriminatorValue); } },
                 { "grace", n => { Grace = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.LateFeesConfigurationDtoGrace>(global::Soenneker.HighLevel.OpenApiClient.Models.LateFeesConfigurationDtoGrace.CreateFromDiscriminatorValue); } },
                 { "maxLateFees", n => { MaxLateFees = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.LateFeesConfigurationDtoMaxLateFees>(global::Soenneker.HighLevel.OpenApiClient.Models.LateFeesConfigurationDtoMaxLateFees.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LateFeesConfigurationDtoType>(); } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LateFeesConfigurationDtoType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
                 { "value", n => { Value = n.GetDoubleValue(); } },
             };
         }

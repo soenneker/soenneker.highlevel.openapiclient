@@ -17,8 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("receive") is { } nullNodeReceive && nullNodeReceive.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Receive = null;
-            if (parseNode.GetChildNode("sender") is { } nullNodeSender && nullNodeSender.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sender = null;
+            if (parseNode.GetChildNode("receive") is null) { _explicitNullValueReceive = default!; _explicitNullProperties?.Remove("receive"); }
+            else if (parseNode.GetChildNode("receive") is { } nullNodeReceive && nullNodeReceive.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Receive = null;
+            if (parseNode.GetChildNode("sender") is null) { _explicitNullValueSender = default!; _explicitNullProperties?.Remove("sender"); }
+            else if (parseNode.GetChildNode("sender") is { } nullNodeSender && nullNodeSender.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sender = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The receive property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.NotificationSendSettingDto? Receive { get => _explicitNullValueReceive; set { _explicitNullValueReceive = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("receive"); else _explicitNullProperties?.Remove("receive"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.NotificationSendSettingDto? Receive { get => _explicitNullValueReceive; set { _explicitNullValueReceive = value; AdditionalData?.Remove("receive"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("receive"); else _explicitNullProperties?.Remove("receive"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.NotificationSendSettingDto? _explicitNullValueReceive = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.NotificationSendSettingDto Receive { get => _explicitNullValueReceive; set { _explicitNullValueReceive = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("receive"); else _explicitNullProperties?.Remove("receive"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.NotificationSendSettingDto Receive { get => _explicitNullValueReceive; set { _explicitNullValueReceive = value; AdditionalData?.Remove("receive"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("receive"); else _explicitNullProperties?.Remove("receive"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.NotificationSendSettingDto _explicitNullValueReceive = default!;
 #endif
         /// <summary>The sender property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.NotificationSenderSettingDto? Sender { get => _explicitNullValueSender; set { _explicitNullValueSender = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender"); else _explicitNullProperties?.Remove("sender"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.NotificationSenderSettingDto? Sender { get => _explicitNullValueSender; set { _explicitNullValueSender = value; AdditionalData?.Remove("sender"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender"); else _explicitNullProperties?.Remove("sender"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.NotificationSenderSettingDto? _explicitNullValueSender = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.NotificationSenderSettingDto Sender { get => _explicitNullValueSender; set { _explicitNullValueSender = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender"); else _explicitNullProperties?.Remove("sender"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.NotificationSenderSettingDto Sender { get => _explicitNullValueSender; set { _explicitNullValueSender = value; AdditionalData?.Remove("sender"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender"); else _explicitNullProperties?.Remove("sender"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.NotificationSenderSettingDto _explicitNullValueSender = default!;
 #endif
         /// <summary>

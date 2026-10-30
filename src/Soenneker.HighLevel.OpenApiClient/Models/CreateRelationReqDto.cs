@@ -17,10 +17,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("associationId") is { } nullNodeAssociationId && nullNodeAssociationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssociationId = null;
-            if (parseNode.GetChildNode("firstRecordId") is { } nullNodeFirstRecordId && nullNodeFirstRecordId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstRecordId = null;
-            if (parseNode.GetChildNode("locationId") is { } nullNodeLocationId && nullNodeLocationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationId = null;
-            if (parseNode.GetChildNode("secondRecordId") is { } nullNodeSecondRecordId && nullNodeSecondRecordId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecondRecordId = null;
+            if (parseNode.GetChildNode("associationId") is null) { _explicitNullValueAssociationId = default!; _explicitNullProperties?.Remove("associationId"); }
+            else if (parseNode.GetChildNode("associationId") is { } nullNodeAssociationId && nullNodeAssociationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssociationId = null;
+            if (parseNode.GetChildNode("firstRecordId") is null) { _explicitNullValueFirstRecordId = default!; _explicitNullProperties?.Remove("firstRecordId"); }
+            else if (parseNode.GetChildNode("firstRecordId") is { } nullNodeFirstRecordId && nullNodeFirstRecordId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstRecordId = null;
+            if (parseNode.GetChildNode("locationId") is null) { _explicitNullValueLocationId = default!; _explicitNullProperties?.Remove("locationId"); }
+            else if (parseNode.GetChildNode("locationId") is { } nullNodeLocationId && nullNodeLocationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationId = null;
+            if (parseNode.GetChildNode("secondRecordId") is null) { _explicitNullValueSecondRecordId = default!; _explicitNullProperties?.Remove("secondRecordId"); }
+            else if (parseNode.GetChildNode("secondRecordId") is { } nullNodeSecondRecordId && nullNodeSecondRecordId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecondRecordId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,41 +32,41 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Association&apos;s Id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AssociationId { get => _explicitNullValueAssociationId; set { _explicitNullValueAssociationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("associationId"); else _explicitNullProperties?.Remove("associationId"); } }
+        public string? AssociationId { get => _explicitNullValueAssociationId; set { _explicitNullValueAssociationId = value; AdditionalData?.Remove("associationId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("associationId"); else _explicitNullProperties?.Remove("associationId"); } }
         private string? _explicitNullValueAssociationId = default!;
 #nullable restore
 #else
-        public string AssociationId { get => _explicitNullValueAssociationId; set { _explicitNullValueAssociationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("associationId"); else _explicitNullProperties?.Remove("associationId"); } }
+        public string AssociationId { get => _explicitNullValueAssociationId; set { _explicitNullValueAssociationId = value; AdditionalData?.Remove("associationId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("associationId"); else _explicitNullProperties?.Remove("associationId"); } }
         private string _explicitNullValueAssociationId = default!;
 #endif
         /// <summary>First Record&apos;s Id. For instance, if you have an association between a contact and a custom object, and you specify the contact as the first object while creating the association, then your firstRecordId would be the contactId </summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FirstRecordId { get => _explicitNullValueFirstRecordId; set { _explicitNullValueFirstRecordId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("firstRecordId"); else _explicitNullProperties?.Remove("firstRecordId"); } }
+        public string? FirstRecordId { get => _explicitNullValueFirstRecordId; set { _explicitNullValueFirstRecordId = value; AdditionalData?.Remove("firstRecordId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("firstRecordId"); else _explicitNullProperties?.Remove("firstRecordId"); } }
         private string? _explicitNullValueFirstRecordId = default!;
 #nullable restore
 #else
-        public string FirstRecordId { get => _explicitNullValueFirstRecordId; set { _explicitNullValueFirstRecordId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("firstRecordId"); else _explicitNullProperties?.Remove("firstRecordId"); } }
+        public string FirstRecordId { get => _explicitNullValueFirstRecordId; set { _explicitNullValueFirstRecordId = value; AdditionalData?.Remove("firstRecordId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("firstRecordId"); else _explicitNullProperties?.Remove("firstRecordId"); } }
         private string _explicitNullValueFirstRecordId = default!;
 #endif
         /// <summary>Your Sub Account&apos;s ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
+        public string? LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; AdditionalData?.Remove("locationId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
         private string? _explicitNullValueLocationId = default!;
 #nullable restore
 #else
-        public string LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
+        public string LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; AdditionalData?.Remove("locationId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
         private string _explicitNullValueLocationId = default!;
 #endif
         /// <summary>Second Record&apos;s Id.For instance, if you have an association between a contact and a custom object, and you specify the custom object as the second entity while creating the association, then your secondRecordId would be the customObject record Id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SecondRecordId { get => _explicitNullValueSecondRecordId; set { _explicitNullValueSecondRecordId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondRecordId"); else _explicitNullProperties?.Remove("secondRecordId"); } }
+        public string? SecondRecordId { get => _explicitNullValueSecondRecordId; set { _explicitNullValueSecondRecordId = value; AdditionalData?.Remove("secondRecordId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondRecordId"); else _explicitNullProperties?.Remove("secondRecordId"); } }
         private string? _explicitNullValueSecondRecordId = default!;
 #nullable restore
 #else
-        public string SecondRecordId { get => _explicitNullValueSecondRecordId; set { _explicitNullValueSecondRecordId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondRecordId"); else _explicitNullProperties?.Remove("secondRecordId"); } }
+        public string SecondRecordId { get => _explicitNullValueSecondRecordId; set { _explicitNullValueSecondRecordId = value; AdditionalData?.Remove("secondRecordId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondRecordId"); else _explicitNullProperties?.Remove("secondRecordId"); } }
         private string _explicitNullValueSecondRecordId = default!;
 #endif
         /// <summary>

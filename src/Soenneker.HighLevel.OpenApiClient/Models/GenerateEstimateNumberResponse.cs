@@ -17,23 +17,25 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("estimateNumber") is { } nullNodeEstimateNumber && nullNodeEstimateNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EstimateNumber = null;
-            if (parseNode.GetChildNode("traceId") is { } nullNodeTraceId && nullNodeTraceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TraceId = null;
+            if (parseNode.GetChildNode("estimateNumber") is null) { _explicitNullValueEstimateNumber = default!; _explicitNullProperties?.Remove("estimateNumber"); }
+            else if (parseNode.GetChildNode("estimateNumber") is { } nullNodeEstimateNumber && nullNodeEstimateNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EstimateNumber = null;
+            if (parseNode.GetChildNode("traceId") is null) { _explicitNullValueTraceId = default!; _explicitNullProperties?.Remove("traceId"); }
+            else if (parseNode.GetChildNode("traceId") is { } nullNodeTraceId && nullNodeTraceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TraceId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The estimateNumber property</summary>
-        public double? EstimateNumber { get => _explicitNullValueEstimateNumber; set { _explicitNullValueEstimateNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("estimateNumber"); else _explicitNullProperties?.Remove("estimateNumber"); } }
+        public double? EstimateNumber { get => _explicitNullValueEstimateNumber; set { _explicitNullValueEstimateNumber = value; AdditionalData?.Remove("estimateNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("estimateNumber"); else _explicitNullProperties?.Remove("estimateNumber"); } }
         private double? _explicitNullValueEstimateNumber = default!;
         /// <summary>The traceId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TraceId { get => _explicitNullValueTraceId; set { _explicitNullValueTraceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("traceId"); else _explicitNullProperties?.Remove("traceId"); } }
+        public string? TraceId { get => _explicitNullValueTraceId; set { _explicitNullValueTraceId = value; AdditionalData?.Remove("traceId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("traceId"); else _explicitNullProperties?.Remove("traceId"); } }
         private string? _explicitNullValueTraceId = default!;
 #nullable restore
 #else
-        public string TraceId { get => _explicitNullValueTraceId; set { _explicitNullValueTraceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("traceId"); else _explicitNullProperties?.Remove("traceId"); } }
+        public string TraceId { get => _explicitNullValueTraceId; set { _explicitNullValueTraceId = value; AdditionalData?.Remove("traceId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("traceId"); else _explicitNullProperties?.Remove("traceId"); } }
         private string _explicitNullValueTraceId = default!;
 #endif
         /// <summary>

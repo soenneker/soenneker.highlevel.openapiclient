@@ -76,7 +76,7 @@ namespace Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Oauth.Linkedin.St
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Oauth.Linkedin.Start.StartRequestBuilder.StartRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://services.leadconnectorhq.com", "/social-media-posting/oauth/linkedin/start", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

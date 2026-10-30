@@ -17,8 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("invoices") is { } nullNodeInvoices && nullNodeInvoices.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Invoices = null;
-            if (parseNode.GetChildNode("total") is { } nullNodeTotal && nullNodeTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Total = null;
+            if (parseNode.GetChildNode("invoices") is null) { _explicitNullValueInvoices = default!; _explicitNullProperties?.Remove("invoices"); }
+            else if (parseNode.GetChildNode("invoices") is { } nullNodeInvoices && nullNodeInvoices.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Invoices = null;
+            if (parseNode.GetChildNode("total") is null) { _explicitNullValueTotal = default!; _explicitNullProperties?.Remove("total"); }
+            else if (parseNode.GetChildNode("total") is { } nullNodeTotal && nullNodeTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Total = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,15 +28,15 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The invoices property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceResponseDto>? Invoices { get => _explicitNullValueInvoices; set { _explicitNullValueInvoices = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoices"); else _explicitNullProperties?.Remove("invoices"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceResponseDto>? Invoices { get => _explicitNullValueInvoices; set { _explicitNullValueInvoices = value; AdditionalData?.Remove("invoices"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoices"); else _explicitNullProperties?.Remove("invoices"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceResponseDto>? _explicitNullValueInvoices = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceResponseDto> Invoices { get => _explicitNullValueInvoices; set { _explicitNullValueInvoices = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoices"); else _explicitNullProperties?.Remove("invoices"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceResponseDto> Invoices { get => _explicitNullValueInvoices; set { _explicitNullValueInvoices = value; AdditionalData?.Remove("invoices"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoices"); else _explicitNullProperties?.Remove("invoices"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceResponseDto> _explicitNullValueInvoices = default!;
 #endif
         /// <summary>Total number of invoices</summary>
-        public double? Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total"); else _explicitNullProperties?.Remove("total"); } }
+        public double? Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; AdditionalData?.Remove("total"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total"); else _explicitNullProperties?.Remove("total"); } }
         private double? _explicitNullValueTotal = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.ListInvoicesResponseDto"/> and sets the default values.

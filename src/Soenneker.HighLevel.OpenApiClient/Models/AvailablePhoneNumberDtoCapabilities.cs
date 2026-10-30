@@ -18,21 +18,24 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("MMS") is { } nullNodeMMS && nullNodeMMS.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MMS = null;
-            if (parseNode.GetChildNode("SMS") is { } nullNodeSMS && nullNodeSMS.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SMS = null;
-            if (parseNode.GetChildNode("voice") is { } nullNodeVoice && nullNodeVoice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Voice = null;
+            if (parseNode.GetChildNode("MMS") is null) { _explicitNullValueMMS = default!; _explicitNullProperties?.Remove("MMS"); }
+            else if (parseNode.GetChildNode("MMS") is { } nullNodeMMS && nullNodeMMS.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MMS = null;
+            if (parseNode.GetChildNode("SMS") is null) { _explicitNullValueSMS = default!; _explicitNullProperties?.Remove("SMS"); }
+            else if (parseNode.GetChildNode("SMS") is { } nullNodeSMS && nullNodeSMS.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SMS = null;
+            if (parseNode.GetChildNode("voice") is null) { _explicitNullValueVoice = default!; _explicitNullProperties?.Remove("voice"); }
+            else if (parseNode.GetChildNode("voice") is { } nullNodeVoice && nullNodeVoice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Voice = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The MMS property</summary>
-        public bool? MMS { get => _explicitNullValueMMS; set { _explicitNullValueMMS = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MMS"); else _explicitNullProperties?.Remove("MMS"); } }
+        public bool? MMS { get => _explicitNullValueMMS; set { _explicitNullValueMMS = value; AdditionalData?.Remove("MMS"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MMS"); else _explicitNullProperties?.Remove("MMS"); } }
         private bool? _explicitNullValueMMS = default!;
         /// <summary>The SMS property</summary>
-        public bool? SMS { get => _explicitNullValueSMS; set { _explicitNullValueSMS = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SMS"); else _explicitNullProperties?.Remove("SMS"); } }
+        public bool? SMS { get => _explicitNullValueSMS; set { _explicitNullValueSMS = value; AdditionalData?.Remove("SMS"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SMS"); else _explicitNullProperties?.Remove("SMS"); } }
         private bool? _explicitNullValueSMS = default!;
         /// <summary>The voice property</summary>
-        public bool? Voice { get => _explicitNullValueVoice; set { _explicitNullValueVoice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("voice"); else _explicitNullProperties?.Remove("voice"); } }
+        public bool? Voice { get => _explicitNullValueVoice; set { _explicitNullValueVoice = value; AdditionalData?.Remove("voice"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("voice"); else _explicitNullProperties?.Remove("voice"); } }
         private bool? _explicitNullValueVoice = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.AvailablePhoneNumberDtoCapabilities"/> and sets the default values.

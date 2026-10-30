@@ -18,7 +18,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("post") is { } nullNodePost && nullNodePost.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Post = null;
+            if (parseNode.GetChildNode("post") is null) { _explicitNullValuePost = default!; _explicitNullProperties?.Remove("post"); }
+            else if (parseNode.GetChildNode("post") is { } nullNodePost && nullNodePost.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Post = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Post Data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseSchemaPost? Post { get => _explicitNullValuePost; set { _explicitNullValuePost = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("post"); else _explicitNullProperties?.Remove("post"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseSchemaPost? Post { get => _explicitNullValuePost; set { _explicitNullValuePost = value; AdditionalData?.Remove("post"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("post"); else _explicitNullProperties?.Remove("post"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseSchemaPost? _explicitNullValuePost = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseSchemaPost Post { get => _explicitNullValuePost; set { _explicitNullValuePost = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("post"); else _explicitNullProperties?.Remove("post"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseSchemaPost Post { get => _explicitNullValuePost; set { _explicitNullValuePost = value; AdditionalData?.Remove("post"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("post"); else _explicitNullProperties?.Remove("post"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseSchemaPost _explicitNullValuePost = default!;
 #endif
         /// <summary>

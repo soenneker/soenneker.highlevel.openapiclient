@@ -17,7 +17,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ruleItems") is { } nullNodeRuleItems && nullNodeRuleItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RuleItems = null;
+            if (parseNode.GetChildNode("ruleItems") is null) { _explicitNullValueRuleItems = default!; _explicitNullProperties?.Remove("ruleItems"); }
+            else if (parseNode.GetChildNode("ruleItems") is { } nullNodeRuleItems && nullNodeRuleItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RuleItems = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>List of rule items</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.RuleItemDto>? RuleItems { get => _explicitNullValueRuleItems; set { _explicitNullValueRuleItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ruleItems"); else _explicitNullProperties?.Remove("ruleItems"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.RuleItemDto>? RuleItems { get => _explicitNullValueRuleItems; set { _explicitNullValueRuleItems = value; AdditionalData?.Remove("ruleItems"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ruleItems"); else _explicitNullProperties?.Remove("ruleItems"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.RuleItemDto>? _explicitNullValueRuleItems = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.RuleItemDto> RuleItems { get => _explicitNullValueRuleItems; set { _explicitNullValueRuleItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ruleItems"); else _explicitNullProperties?.Remove("ruleItems"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.RuleItemDto> RuleItems { get => _explicitNullValueRuleItems; set { _explicitNullValueRuleItems = value; AdditionalData?.Remove("ruleItems"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ruleItems"); else _explicitNullProperties?.Remove("ruleItems"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.RuleItemDto> _explicitNullValueRuleItems = default!;
 #endif
         /// <summary>

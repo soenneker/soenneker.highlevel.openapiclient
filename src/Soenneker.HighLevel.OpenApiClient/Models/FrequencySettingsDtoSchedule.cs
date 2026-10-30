@@ -18,8 +18,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("executeAt") is { } nullNodeExecuteAt && nullNodeExecuteAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExecuteAt = null;
-            if (parseNode.GetChildNode("rrule") is { } nullNodeRrule && nullNodeRrule.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Rrule = null;
+            if (parseNode.GetChildNode("executeAt") is null) { _explicitNullValueExecuteAt = default!; _explicitNullProperties?.Remove("executeAt"); }
+            else if (parseNode.GetChildNode("executeAt") is { } nullNodeExecuteAt && nullNodeExecuteAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExecuteAt = null;
+            if (parseNode.GetChildNode("rrule") is null) { _explicitNullValueRrule = default!; _explicitNullProperties?.Remove("rrule"); }
+            else if (parseNode.GetChildNode("rrule") is { } nullNodeRrule && nullNodeRrule.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Rrule = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The executeAt property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExecuteAt { get => _explicitNullValueExecuteAt; set { _explicitNullValueExecuteAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("executeAt"); else _explicitNullProperties?.Remove("executeAt"); } }
+        public string? ExecuteAt { get => _explicitNullValueExecuteAt; set { _explicitNullValueExecuteAt = value; AdditionalData?.Remove("executeAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("executeAt"); else _explicitNullProperties?.Remove("executeAt"); } }
         private string? _explicitNullValueExecuteAt = default!;
 #nullable restore
 #else
-        public string ExecuteAt { get => _explicitNullValueExecuteAt; set { _explicitNullValueExecuteAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("executeAt"); else _explicitNullProperties?.Remove("executeAt"); } }
+        public string ExecuteAt { get => _explicitNullValueExecuteAt; set { _explicitNullValueExecuteAt = value; AdditionalData?.Remove("executeAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("executeAt"); else _explicitNullProperties?.Remove("executeAt"); } }
         private string _explicitNullValueExecuteAt = default!;
 #endif
         /// <summary>The rrule property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCustomRRuleOptionsDto? Rrule { get => _explicitNullValueRrule; set { _explicitNullValueRrule = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rrule"); else _explicitNullProperties?.Remove("rrule"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCustomRRuleOptionsDto? Rrule { get => _explicitNullValueRrule; set { _explicitNullValueRrule = value; AdditionalData?.Remove("rrule"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rrule"); else _explicitNullProperties?.Remove("rrule"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCustomRRuleOptionsDto? _explicitNullValueRrule = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCustomRRuleOptionsDto Rrule { get => _explicitNullValueRrule; set { _explicitNullValueRrule = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rrule"); else _explicitNullProperties?.Remove("rrule"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCustomRRuleOptionsDto Rrule { get => _explicitNullValueRrule; set { _explicitNullValueRrule = value; AdditionalData?.Remove("rrule"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rrule"); else _explicitNullProperties?.Remove("rrule"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCustomRRuleOptionsDto _explicitNullValueRrule = default!;
 #endif
         /// <summary>

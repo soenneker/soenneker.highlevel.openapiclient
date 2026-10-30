@@ -18,62 +18,72 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("count") is { } nullNodeCount && nullNodeCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Count = null;
-            if (parseNode.GetChildNode("createTaskIfOverDue") is { } nullNodeCreateTaskIfOverDue && nullNodeCreateTaskIfOverDue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateTaskIfOverDue = null;
-            if (parseNode.GetChildNode("dayOfMonth") is { } nullNodeDayOfMonth && nullNodeDayOfMonth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DayOfMonth = null;
-            if (parseNode.GetChildNode("dayOfWeek") is { } nullNodeDayOfWeek && nullNodeDayOfWeek.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DayOfWeek = null;
-            if (parseNode.GetChildNode("dueAfterSeconds") is { } nullNodeDueAfterSeconds && nullNodeDueAfterSeconds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DueAfterSeconds = null;
-            if (parseNode.GetChildNode("endDate") is { } nullNodeEndDate && nullNodeEndDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndDate = null;
-            if (parseNode.GetChildNode("interval") is { } nullNodeInterval && nullNodeInterval.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Interval = null;
-            if (parseNode.GetChildNode("intervalType") is { } nullNodeIntervalType && nullNodeIntervalType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntervalType = null;
-            if (parseNode.GetChildNode("monthOfYear") is { } nullNodeMonthOfYear && nullNodeMonthOfYear.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthOfYear = null;
-            if (parseNode.GetChildNode("startDate") is { } nullNodeStartDate && nullNodeStartDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartDate = null;
+            if (parseNode.GetChildNode("count") is null) { _explicitNullValueCount = default!; _explicitNullProperties?.Remove("count"); }
+            else if (parseNode.GetChildNode("count") is { } nullNodeCount && nullNodeCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Count = null;
+            if (parseNode.GetChildNode("createTaskIfOverDue") is null) { _explicitNullValueCreateTaskIfOverDue = default!; _explicitNullProperties?.Remove("createTaskIfOverDue"); }
+            else if (parseNode.GetChildNode("createTaskIfOverDue") is { } nullNodeCreateTaskIfOverDue && nullNodeCreateTaskIfOverDue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateTaskIfOverDue = null;
+            if (parseNode.GetChildNode("dayOfMonth") is null) { _explicitNullValueDayOfMonth = default!; _explicitNullProperties?.Remove("dayOfMonth"); }
+            else if (parseNode.GetChildNode("dayOfMonth") is { } nullNodeDayOfMonth && nullNodeDayOfMonth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DayOfMonth = null;
+            if (parseNode.GetChildNode("dayOfWeek") is null) { _explicitNullValueDayOfWeek = default!; _explicitNullProperties?.Remove("dayOfWeek"); }
+            else if (parseNode.GetChildNode("dayOfWeek") is { } nullNodeDayOfWeek && nullNodeDayOfWeek.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DayOfWeek = null;
+            if (parseNode.GetChildNode("dueAfterSeconds") is null) { _explicitNullValueDueAfterSeconds = default!; _explicitNullProperties?.Remove("dueAfterSeconds"); }
+            else if (parseNode.GetChildNode("dueAfterSeconds") is { } nullNodeDueAfterSeconds && nullNodeDueAfterSeconds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DueAfterSeconds = null;
+            if (parseNode.GetChildNode("endDate") is null) { _explicitNullValueEndDate = default!; _explicitNullProperties?.Remove("endDate"); }
+            else if (parseNode.GetChildNode("endDate") is { } nullNodeEndDate && nullNodeEndDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndDate = null;
+            if (parseNode.GetChildNode("interval") is null) { _explicitNullValueInterval = default!; _explicitNullProperties?.Remove("interval"); }
+            else if (parseNode.GetChildNode("interval") is { } nullNodeInterval && nullNodeInterval.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Interval = null;
+            if (parseNode.GetChildNode("intervalType") is null) { _explicitNullValueIntervalType = default!; _explicitNullProperties?.Remove("intervalType"); }
+            else if (parseNode.GetChildNode("intervalType") is { } nullNodeIntervalType && nullNodeIntervalType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntervalType = null;
+            if (parseNode.GetChildNode("monthOfYear") is null) { _explicitNullValueMonthOfYear = default!; _explicitNullProperties?.Remove("monthOfYear"); }
+            else if (parseNode.GetChildNode("monthOfYear") is { } nullNodeMonthOfYear && nullNodeMonthOfYear.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthOfYear = null;
+            if (parseNode.GetChildNode("startDate") is null) { _explicitNullValueStartDate = default!; _explicitNullProperties?.Remove("startDate"); }
+            else if (parseNode.GetChildNode("startDate") is { } nullNodeStartDate && nullNodeStartDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartDate = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Max number of task executions</summary>
-        public double? Count { get => _explicitNullValueCount; set { _explicitNullValueCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("count"); else _explicitNullProperties?.Remove("count"); } }
+        public double? Count { get => _explicitNullValueCount; set { _explicitNullValueCount = value; AdditionalData?.Remove("count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("count"); else _explicitNullProperties?.Remove("count"); } }
         private double? _explicitNullValueCount = default!;
         /// <summary>Create Task If Over Due</summary>
-        public bool? CreateTaskIfOverDue { get => _explicitNullValueCreateTaskIfOverDue; set { _explicitNullValueCreateTaskIfOverDue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createTaskIfOverDue"); else _explicitNullProperties?.Remove("createTaskIfOverDue"); } }
+        public bool? CreateTaskIfOverDue { get => _explicitNullValueCreateTaskIfOverDue; set { _explicitNullValueCreateTaskIfOverDue = value; AdditionalData?.Remove("createTaskIfOverDue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createTaskIfOverDue"); else _explicitNullProperties?.Remove("createTaskIfOverDue"); } }
         private bool? _explicitNullValueCreateTaskIfOverDue = default!;
         /// <summary>1, 2, 3, ..., 27, 31</summary>
-        public double? DayOfMonth { get => _explicitNullValueDayOfMonth; set { _explicitNullValueDayOfMonth = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dayOfMonth"); else _explicitNullProperties?.Remove("dayOfMonth"); } }
+        public double? DayOfMonth { get => _explicitNullValueDayOfMonth; set { _explicitNullValueDayOfMonth = value; AdditionalData?.Remove("dayOfMonth"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dayOfMonth"); else _explicitNullProperties?.Remove("dayOfMonth"); } }
         private double? _explicitNullValueDayOfMonth = default!;
         /// <summary>The dayOfWeek property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomRRulesOptionsDayOfWeek? DayOfWeek { get => _explicitNullValueDayOfWeek; set { _explicitNullValueDayOfWeek = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dayOfWeek"); else _explicitNullProperties?.Remove("dayOfWeek"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomRRulesOptionsDayOfWeek? DayOfWeek { get => _explicitNullValueDayOfWeek; set { _explicitNullValueDayOfWeek = value; AdditionalData?.Remove("dayOfWeek"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dayOfWeek"); else _explicitNullProperties?.Remove("dayOfWeek"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.CustomRRulesOptionsDayOfWeek? _explicitNullValueDayOfWeek = default!;
         /// <summary>Due after seconds</summary>
-        public double? DueAfterSeconds { get => _explicitNullValueDueAfterSeconds; set { _explicitNullValueDueAfterSeconds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dueAfterSeconds"); else _explicitNullProperties?.Remove("dueAfterSeconds"); } }
+        public double? DueAfterSeconds { get => _explicitNullValueDueAfterSeconds; set { _explicitNullValueDueAfterSeconds = value; AdditionalData?.Remove("dueAfterSeconds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dueAfterSeconds"); else _explicitNullProperties?.Remove("dueAfterSeconds"); } }
         private double? _explicitNullValueDueAfterSeconds = default!;
         /// <summary>End Date</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EndDate { get => _explicitNullValueEndDate; set { _explicitNullValueEndDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endDate"); else _explicitNullProperties?.Remove("endDate"); } }
+        public string? EndDate { get => _explicitNullValueEndDate; set { _explicitNullValueEndDate = value; AdditionalData?.Remove("endDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endDate"); else _explicitNullProperties?.Remove("endDate"); } }
         private string? _explicitNullValueEndDate = default!;
 #nullable restore
 #else
-        public string EndDate { get => _explicitNullValueEndDate; set { _explicitNullValueEndDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endDate"); else _explicitNullProperties?.Remove("endDate"); } }
+        public string EndDate { get => _explicitNullValueEndDate; set { _explicitNullValueEndDate = value; AdditionalData?.Remove("endDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endDate"); else _explicitNullProperties?.Remove("endDate"); } }
         private string _explicitNullValueEndDate = default!;
 #endif
         /// <summary>The interval property</summary>
-        public double? Interval { get => _explicitNullValueInterval; set { _explicitNullValueInterval = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interval"); else _explicitNullProperties?.Remove("interval"); } }
+        public double? Interval { get => _explicitNullValueInterval; set { _explicitNullValueInterval = value; AdditionalData?.Remove("interval"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interval"); else _explicitNullProperties?.Remove("interval"); } }
         private double? _explicitNullValueInterval = default!;
         /// <summary>The intervalType property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomRRulesOptionsIntervalType? IntervalType { get => _explicitNullValueIntervalType; set { _explicitNullValueIntervalType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intervalType"); else _explicitNullProperties?.Remove("intervalType"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomRRulesOptionsIntervalType? IntervalType { get => _explicitNullValueIntervalType; set { _explicitNullValueIntervalType = value; AdditionalData?.Remove("intervalType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intervalType"); else _explicitNullProperties?.Remove("intervalType"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.CustomRRulesOptionsIntervalType? _explicitNullValueIntervalType = default!;
         /// <summary>1, 2, ....., 11, 12</summary>
-        public double? MonthOfYear { get => _explicitNullValueMonthOfYear; set { _explicitNullValueMonthOfYear = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("monthOfYear"); else _explicitNullProperties?.Remove("monthOfYear"); } }
+        public double? MonthOfYear { get => _explicitNullValueMonthOfYear; set { _explicitNullValueMonthOfYear = value; AdditionalData?.Remove("monthOfYear"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("monthOfYear"); else _explicitNullProperties?.Remove("monthOfYear"); } }
         private double? _explicitNullValueMonthOfYear = default!;
         /// <summary>Start Date</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StartDate { get => _explicitNullValueStartDate; set { _explicitNullValueStartDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startDate"); else _explicitNullProperties?.Remove("startDate"); } }
+        public string? StartDate { get => _explicitNullValueStartDate; set { _explicitNullValueStartDate = value; AdditionalData?.Remove("startDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startDate"); else _explicitNullProperties?.Remove("startDate"); } }
         private string? _explicitNullValueStartDate = default!;
 #nullable restore
 #else
-        public string StartDate { get => _explicitNullValueStartDate; set { _explicitNullValueStartDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startDate"); else _explicitNullProperties?.Remove("startDate"); } }
+        public string StartDate { get => _explicitNullValueStartDate; set { _explicitNullValueStartDate = value; AdditionalData?.Remove("startDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startDate"); else _explicitNullProperties?.Remove("startDate"); } }
         private string _explicitNullValueStartDate = default!;
 #endif
         /// <summary>
@@ -104,11 +114,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "count", n => { Count = n.GetDoubleValue(); } },
                 { "createTaskIfOverDue", n => { CreateTaskIfOverDue = n.GetBoolValue(); } },
                 { "dayOfMonth", n => { DayOfMonth = n.GetDoubleValue(); } },
-                { "dayOfWeek", n => { DayOfWeek = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomRRulesOptionsDayOfWeek>(); } },
+                { "dayOfWeek", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomRRulesOptionsDayOfWeek>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDayOfWeek = default; _explicitNullProperties?.Remove("dayOfWeek"); AdditionalData["dayOfWeek"] = unknown; } else { DayOfWeek = parsed; AdditionalData.Remove("dayOfWeek"); } } },
                 { "dueAfterSeconds", n => { DueAfterSeconds = n.GetDoubleValue(); } },
                 { "endDate", n => { EndDate = n.GetStringValue(); } },
                 { "interval", n => { Interval = n.GetDoubleValue(); } },
-                { "intervalType", n => { IntervalType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomRRulesOptionsIntervalType>(); } },
+                { "intervalType", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomRRulesOptionsIntervalType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueIntervalType = default; _explicitNullProperties?.Remove("intervalType"); AdditionalData["intervalType"] = unknown; } else { IntervalType = parsed; AdditionalData.Remove("intervalType"); } } },
                 { "monthOfYear", n => { MonthOfYear = n.GetDoubleValue(); } },
                 { "startDate", n => { StartDate = n.GetStringValue(); } },
             };

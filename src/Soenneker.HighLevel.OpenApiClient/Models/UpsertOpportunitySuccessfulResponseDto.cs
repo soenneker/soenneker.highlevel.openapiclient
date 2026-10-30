@@ -17,23 +17,25 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("new") is { } nullNodeNew && nullNodeNew.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) New = null;
-            if (parseNode.GetChildNode("opportunity") is { } nullNodeOpportunity && nullNodeOpportunity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Opportunity = null;
+            if (parseNode.GetChildNode("new") is null) { _explicitNullValueNew = default!; _explicitNullProperties?.Remove("new"); }
+            else if (parseNode.GetChildNode("new") is { } nullNodeNew && nullNodeNew.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) New = null;
+            if (parseNode.GetChildNode("opportunity") is null) { _explicitNullValueOpportunity = default!; _explicitNullProperties?.Remove("opportunity"); }
+            else if (parseNode.GetChildNode("opportunity") is { } nullNodeOpportunity && nullNodeOpportunity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Opportunity = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The new property</summary>
-        public bool? New { get => _explicitNullValueNew; set { _explicitNullValueNew = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new"); else _explicitNullProperties?.Remove("new"); } }
+        public bool? New { get => _explicitNullValueNew; set { _explicitNullValueNew = value; AdditionalData?.Remove("new"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new"); else _explicitNullProperties?.Remove("new"); } }
         private bool? _explicitNullValueNew = default!;
         /// <summary>Updated / New Opportunity</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunitySuccessfulResponseDtoOpportunityProperty2? Opportunity { get => _explicitNullValueOpportunity; set { _explicitNullValueOpportunity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opportunity"); else _explicitNullProperties?.Remove("opportunity"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunitySuccessfulResponseDtoOpportunityProperty2? Opportunity { get => _explicitNullValueOpportunity; set { _explicitNullValueOpportunity = value; AdditionalData?.Remove("opportunity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opportunity"); else _explicitNullProperties?.Remove("opportunity"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunitySuccessfulResponseDtoOpportunityProperty2? _explicitNullValueOpportunity = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunitySuccessfulResponseDtoOpportunityProperty2 Opportunity { get => _explicitNullValueOpportunity; set { _explicitNullValueOpportunity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opportunity"); else _explicitNullProperties?.Remove("opportunity"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunitySuccessfulResponseDtoOpportunityProperty2 Opportunity { get => _explicitNullValueOpportunity; set { _explicitNullValueOpportunity = value; AdditionalData?.Remove("opportunity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opportunity"); else _explicitNullProperties?.Remove("opportunity"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunitySuccessfulResponseDtoOpportunityProperty2 _explicitNullValueOpportunity = default!;
 #endif
         /// <summary>

@@ -17,8 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("buiseness") is { } nullNodeBuiseness && nullNodeBuiseness.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Buiseness = null;
-            if (parseNode.GetChildNode("success") is { } nullNodeSuccess && nullNodeSuccess.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Success = null;
+            if (parseNode.GetChildNode("buiseness") is null) { _explicitNullValueBuiseness = default!; _explicitNullProperties?.Remove("buiseness"); }
+            else if (parseNode.GetChildNode("buiseness") is { } nullNodeBuiseness && nullNodeBuiseness.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Buiseness = null;
+            if (parseNode.GetChildNode("success") is null) { _explicitNullValueSuccess = default!; _explicitNullProperties?.Remove("success"); }
+            else if (parseNode.GetChildNode("success") is { } nullNodeSuccess && nullNodeSuccess.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Success = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,15 +28,15 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Business Response</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateBusinessResponseDtoBuiseness? Buiseness { get => _explicitNullValueBuiseness; set { _explicitNullValueBuiseness = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buiseness"); else _explicitNullProperties?.Remove("buiseness"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateBusinessResponseDtoBuiseness? Buiseness { get => _explicitNullValueBuiseness; set { _explicitNullValueBuiseness = value; AdditionalData?.Remove("buiseness"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buiseness"); else _explicitNullProperties?.Remove("buiseness"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.UpdateBusinessResponseDtoBuiseness? _explicitNullValueBuiseness = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateBusinessResponseDtoBuiseness Buiseness { get => _explicitNullValueBuiseness; set { _explicitNullValueBuiseness = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buiseness"); else _explicitNullProperties?.Remove("buiseness"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateBusinessResponseDtoBuiseness Buiseness { get => _explicitNullValueBuiseness; set { _explicitNullValueBuiseness = value; AdditionalData?.Remove("buiseness"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buiseness"); else _explicitNullProperties?.Remove("buiseness"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.UpdateBusinessResponseDtoBuiseness _explicitNullValueBuiseness = default!;
 #endif
         /// <summary>Success Value</summary>
-        public bool? Success { get => _explicitNullValueSuccess; set { _explicitNullValueSuccess = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("success"); else _explicitNullProperties?.Remove("success"); } }
+        public bool? Success { get => _explicitNullValueSuccess; set { _explicitNullValueSuccess = value; AdditionalData?.Remove("success"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("success"); else _explicitNullProperties?.Remove("success"); } }
         private bool? _explicitNullValueSuccess = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpdateBusinessResponseDto"/> and sets the default values.

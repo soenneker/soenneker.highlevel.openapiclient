@@ -18,17 +18,19 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("depositDateType") is { } nullNodeDepositDateType && nullNodeDepositDateType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DepositDateType = null;
-            if (parseNode.GetChildNode("scheduleDateType") is { } nullNodeScheduleDateType && nullNodeScheduleDateType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduleDateType = null;
+            if (parseNode.GetChildNode("depositDateType") is null) { _explicitNullValueDepositDateType = default!; _explicitNullProperties?.Remove("depositDateType"); }
+            else if (parseNode.GetChildNode("depositDateType") is { } nullNodeDepositDateType && nullNodeDepositDateType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DepositDateType = null;
+            if (parseNode.GetChildNode("scheduleDateType") is null) { _explicitNullValueScheduleDateType = default!; _explicitNullProperties?.Remove("scheduleDateType"); }
+            else if (parseNode.GetChildNode("scheduleDateType") is { } nullNodeScheduleDateType && nullNodeScheduleDateType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduleDateType = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Deposit date type</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PaymentScheduleDateConfigDtoDepositDateType? DepositDateType { get => _explicitNullValueDepositDateType; set { _explicitNullValueDepositDateType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("depositDateType"); else _explicitNullProperties?.Remove("depositDateType"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PaymentScheduleDateConfigDtoDepositDateType? DepositDateType { get => _explicitNullValueDepositDateType; set { _explicitNullValueDepositDateType = value; AdditionalData?.Remove("depositDateType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("depositDateType"); else _explicitNullProperties?.Remove("depositDateType"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.PaymentScheduleDateConfigDtoDepositDateType? _explicitNullValueDepositDateType = default!;
         /// <summary>Payment Schedule Date Type</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PaymentScheduleDateConfigDtoScheduleDateType? ScheduleDateType { get => _explicitNullValueScheduleDateType; set { _explicitNullValueScheduleDateType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduleDateType"); else _explicitNullProperties?.Remove("scheduleDateType"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PaymentScheduleDateConfigDtoScheduleDateType? ScheduleDateType { get => _explicitNullValueScheduleDateType; set { _explicitNullValueScheduleDateType = value; AdditionalData?.Remove("scheduleDateType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduleDateType"); else _explicitNullProperties?.Remove("scheduleDateType"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.PaymentScheduleDateConfigDtoScheduleDateType? _explicitNullValueScheduleDateType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.PaymentScheduleConfigDtoDateConfig"/> and sets the default values.
@@ -55,8 +57,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "depositDateType", n => { DepositDateType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentScheduleDateConfigDtoDepositDateType>(); } },
-                { "scheduleDateType", n => { ScheduleDateType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentScheduleDateConfigDtoScheduleDateType>(); } },
+                { "depositDateType", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentScheduleDateConfigDtoDepositDateType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDepositDateType = default; _explicitNullProperties?.Remove("depositDateType"); AdditionalData["depositDateType"] = unknown; } else { DepositDateType = parsed; AdditionalData.Remove("depositDateType"); } } },
+                { "scheduleDateType", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentScheduleDateConfigDtoScheduleDateType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueScheduleDateType = default; _explicitNullProperties?.Remove("scheduleDateType"); AdditionalData["scheduleDateType"] = unknown; } else { ScheduleDateType = parsed; AdditionalData.Remove("scheduleDateType"); } } },
             };
         }
         /// <summary>

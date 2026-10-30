@@ -64,7 +64,7 @@ namespace Soenneker.HighLevel.OpenApiClient.SaasApi.Saas.SaasLocations.Item
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.SaasApi.Saas.SaasLocations.Item.WithCompanyItemRequestBuilder.WithCompanyItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://services.leadconnectorhq.com", "/saas-api/saas/saas-locations/{companyId}", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             return requestInfo;
         }

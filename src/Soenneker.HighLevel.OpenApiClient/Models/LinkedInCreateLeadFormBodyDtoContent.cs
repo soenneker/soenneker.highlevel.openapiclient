@@ -18,11 +18,16 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
-            if (parseNode.GetChildNode("headline") is { } nullNodeHeadline && nullNodeHeadline.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Headline = null;
-            if (parseNode.GetChildNode("legalInfo") is { } nullNodeLegalInfo && nullNodeLegalInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LegalInfo = null;
-            if (parseNode.GetChildNode("postSubmissionInfo") is { } nullNodePostSubmissionInfo && nullNodePostSubmissionInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PostSubmissionInfo = null;
-            if (parseNode.GetChildNode("questions") is { } nullNodeQuestions && nullNodeQuestions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Questions = null;
+            if (parseNode.GetChildNode("description") is null) { _explicitNullValueDescription = default!; _explicitNullProperties?.Remove("description"); }
+            else if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("headline") is null) { _explicitNullValueHeadline = default!; _explicitNullProperties?.Remove("headline"); }
+            else if (parseNode.GetChildNode("headline") is { } nullNodeHeadline && nullNodeHeadline.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Headline = null;
+            if (parseNode.GetChildNode("legalInfo") is null) { _explicitNullValueLegalInfo = default!; _explicitNullProperties?.Remove("legalInfo"); }
+            else if (parseNode.GetChildNode("legalInfo") is { } nullNodeLegalInfo && nullNodeLegalInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LegalInfo = null;
+            if (parseNode.GetChildNode("postSubmissionInfo") is null) { _explicitNullValuePostSubmissionInfo = default!; _explicitNullProperties?.Remove("postSubmissionInfo"); }
+            else if (parseNode.GetChildNode("postSubmissionInfo") is { } nullNodePostSubmissionInfo && nullNodePostSubmissionInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PostSubmissionInfo = null;
+            if (parseNode.GetChildNode("questions") is null) { _explicitNullValueQuestions = default!; _explicitNullProperties?.Remove("questions"); }
+            else if (parseNode.GetChildNode("questions") is { } nullNodeQuestions && nullNodeQuestions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Questions = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,51 +35,51 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Form description</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoDescription? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoDescription? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoDescription? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoDescription Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoDescription Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoDescription _explicitNullValueDescription = default!;
 #endif
         /// <summary>Form headline</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoHeadline? Headline { get => _explicitNullValueHeadline; set { _explicitNullValueHeadline = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("headline"); else _explicitNullProperties?.Remove("headline"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoHeadline? Headline { get => _explicitNullValueHeadline; set { _explicitNullValueHeadline = value; AdditionalData?.Remove("headline"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("headline"); else _explicitNullProperties?.Remove("headline"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoHeadline? _explicitNullValueHeadline = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoHeadline Headline { get => _explicitNullValueHeadline; set { _explicitNullValueHeadline = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("headline"); else _explicitNullProperties?.Remove("headline"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoHeadline Headline { get => _explicitNullValueHeadline; set { _explicitNullValueHeadline = value; AdditionalData?.Remove("headline"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("headline"); else _explicitNullProperties?.Remove("headline"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoHeadline _explicitNullValueHeadline = default!;
 #endif
         /// <summary>Legal information</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoLegalInfo? LegalInfo { get => _explicitNullValueLegalInfo; set { _explicitNullValueLegalInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("legalInfo"); else _explicitNullProperties?.Remove("legalInfo"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoLegalInfo? LegalInfo { get => _explicitNullValueLegalInfo; set { _explicitNullValueLegalInfo = value; AdditionalData?.Remove("legalInfo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("legalInfo"); else _explicitNullProperties?.Remove("legalInfo"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoLegalInfo? _explicitNullValueLegalInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoLegalInfo LegalInfo { get => _explicitNullValueLegalInfo; set { _explicitNullValueLegalInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("legalInfo"); else _explicitNullProperties?.Remove("legalInfo"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoLegalInfo LegalInfo { get => _explicitNullValueLegalInfo; set { _explicitNullValueLegalInfo = value; AdditionalData?.Remove("legalInfo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("legalInfo"); else _explicitNullProperties?.Remove("legalInfo"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoLegalInfo _explicitNullValueLegalInfo = default!;
 #endif
         /// <summary>Post-submission info</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoPostSubmissionInfo? PostSubmissionInfo { get => _explicitNullValuePostSubmissionInfo; set { _explicitNullValuePostSubmissionInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("postSubmissionInfo"); else _explicitNullProperties?.Remove("postSubmissionInfo"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoPostSubmissionInfo? PostSubmissionInfo { get => _explicitNullValuePostSubmissionInfo; set { _explicitNullValuePostSubmissionInfo = value; AdditionalData?.Remove("postSubmissionInfo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("postSubmissionInfo"); else _explicitNullProperties?.Remove("postSubmissionInfo"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoPostSubmissionInfo? _explicitNullValuePostSubmissionInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoPostSubmissionInfo PostSubmissionInfo { get => _explicitNullValuePostSubmissionInfo; set { _explicitNullValuePostSubmissionInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("postSubmissionInfo"); else _explicitNullProperties?.Remove("postSubmissionInfo"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoPostSubmissionInfo PostSubmissionInfo { get => _explicitNullValuePostSubmissionInfo; set { _explicitNullValuePostSubmissionInfo = value; AdditionalData?.Remove("postSubmissionInfo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("postSubmissionInfo"); else _explicitNullProperties?.Remove("postSubmissionInfo"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoPostSubmissionInfo _explicitNullValuePostSubmissionInfo = default!;
 #endif
         /// <summary>Form questions</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormQuestionDto>? Questions { get => _explicitNullValueQuestions; set { _explicitNullValueQuestions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("questions"); else _explicitNullProperties?.Remove("questions"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormQuestionDto>? Questions { get => _explicitNullValueQuestions; set { _explicitNullValueQuestions = value; AdditionalData?.Remove("questions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("questions"); else _explicitNullProperties?.Remove("questions"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormQuestionDto>? _explicitNullValueQuestions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormQuestionDto> Questions { get => _explicitNullValueQuestions; set { _explicitNullValueQuestions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("questions"); else _explicitNullProperties?.Remove("questions"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormQuestionDto> Questions { get => _explicitNullValueQuestions; set { _explicitNullValueQuestions = value; AdditionalData?.Remove("questions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("questions"); else _explicitNullProperties?.Remove("questions"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormQuestionDto> _explicitNullValueQuestions = default!;
 #endif
         /// <summary>

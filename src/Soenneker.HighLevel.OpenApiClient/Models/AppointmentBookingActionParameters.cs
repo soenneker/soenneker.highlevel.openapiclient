@@ -17,10 +17,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("calendarId") is { } nullNodeCalendarId && nullNodeCalendarId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CalendarId = null;
-            if (parseNode.GetChildNode("daysOfOfferingDates") is { } nullNodeDaysOfOfferingDates && nullNodeDaysOfOfferingDates.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DaysOfOfferingDates = null;
-            if (parseNode.GetChildNode("hoursBetweenSlots") is { } nullNodeHoursBetweenSlots && nullNodeHoursBetweenSlots.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HoursBetweenSlots = null;
-            if (parseNode.GetChildNode("slotsPerDay") is { } nullNodeSlotsPerDay && nullNodeSlotsPerDay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SlotsPerDay = null;
+            if (parseNode.GetChildNode("calendarId") is null) { _explicitNullValueCalendarId = default!; _explicitNullProperties?.Remove("calendarId"); }
+            else if (parseNode.GetChildNode("calendarId") is { } nullNodeCalendarId && nullNodeCalendarId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CalendarId = null;
+            if (parseNode.GetChildNode("daysOfOfferingDates") is null) { _explicitNullValueDaysOfOfferingDates = default!; _explicitNullProperties?.Remove("daysOfOfferingDates"); }
+            else if (parseNode.GetChildNode("daysOfOfferingDates") is { } nullNodeDaysOfOfferingDates && nullNodeDaysOfOfferingDates.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DaysOfOfferingDates = null;
+            if (parseNode.GetChildNode("hoursBetweenSlots") is null) { _explicitNullValueHoursBetweenSlots = default!; _explicitNullProperties?.Remove("hoursBetweenSlots"); }
+            else if (parseNode.GetChildNode("hoursBetweenSlots") is { } nullNodeHoursBetweenSlots && nullNodeHoursBetweenSlots.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HoursBetweenSlots = null;
+            if (parseNode.GetChildNode("slotsPerDay") is null) { _explicitNullValueSlotsPerDay = default!; _explicitNullProperties?.Remove("slotsPerDay"); }
+            else if (parseNode.GetChildNode("slotsPerDay") is { } nullNodeSlotsPerDay && nullNodeSlotsPerDay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SlotsPerDay = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,21 +32,21 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Calendar ID to book appointments in</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CalendarId { get => _explicitNullValueCalendarId; set { _explicitNullValueCalendarId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calendarId"); else _explicitNullProperties?.Remove("calendarId"); } }
+        public string? CalendarId { get => _explicitNullValueCalendarId; set { _explicitNullValueCalendarId = value; AdditionalData?.Remove("calendarId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calendarId"); else _explicitNullProperties?.Remove("calendarId"); } }
         private string? _explicitNullValueCalendarId = default!;
 #nullable restore
 #else
-        public string CalendarId { get => _explicitNullValueCalendarId; set { _explicitNullValueCalendarId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calendarId"); else _explicitNullProperties?.Remove("calendarId"); } }
+        public string CalendarId { get => _explicitNullValueCalendarId; set { _explicitNullValueCalendarId = value; AdditionalData?.Remove("calendarId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calendarId"); else _explicitNullProperties?.Remove("calendarId"); } }
         private string _explicitNullValueCalendarId = default!;
 #endif
         /// <summary>Number of days ahead to offer booking dates</summary>
-        public double? DaysOfOfferingDates { get => _explicitNullValueDaysOfOfferingDates; set { _explicitNullValueDaysOfOfferingDates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("daysOfOfferingDates"); else _explicitNullProperties?.Remove("daysOfOfferingDates"); } }
+        public double? DaysOfOfferingDates { get => _explicitNullValueDaysOfOfferingDates; set { _explicitNullValueDaysOfOfferingDates = value; AdditionalData?.Remove("daysOfOfferingDates"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("daysOfOfferingDates"); else _explicitNullProperties?.Remove("daysOfOfferingDates"); } }
         private double? _explicitNullValueDaysOfOfferingDates = default!;
         /// <summary>Hours between available slots</summary>
-        public double? HoursBetweenSlots { get => _explicitNullValueHoursBetweenSlots; set { _explicitNullValueHoursBetweenSlots = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hoursBetweenSlots"); else _explicitNullProperties?.Remove("hoursBetweenSlots"); } }
+        public double? HoursBetweenSlots { get => _explicitNullValueHoursBetweenSlots; set { _explicitNullValueHoursBetweenSlots = value; AdditionalData?.Remove("hoursBetweenSlots"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hoursBetweenSlots"); else _explicitNullProperties?.Remove("hoursBetweenSlots"); } }
         private double? _explicitNullValueHoursBetweenSlots = default!;
         /// <summary>Number of available slots per day</summary>
-        public double? SlotsPerDay { get => _explicitNullValueSlotsPerDay; set { _explicitNullValueSlotsPerDay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("slotsPerDay"); else _explicitNullProperties?.Remove("slotsPerDay"); } }
+        public double? SlotsPerDay { get => _explicitNullValueSlotsPerDay; set { _explicitNullValueSlotsPerDay = value; AdditionalData?.Remove("slotsPerDay"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("slotsPerDay"); else _explicitNullProperties?.Remove("slotsPerDay"); } }
         private double? _explicitNullValueSlotsPerDay = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentBookingActionParameters"/> and sets the default values.

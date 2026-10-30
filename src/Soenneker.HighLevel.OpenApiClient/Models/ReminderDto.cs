@@ -17,20 +17,34 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("emailSubject") is { } nullNodeEmailSubject && nullNodeEmailSubject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailSubject = null;
-            if (parseNode.GetChildNode("emailTemplate") is { } nullNodeEmailTemplate && nullNodeEmailTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailTemplate = null;
-            if (parseNode.GetChildNode("enabled") is { } nullNodeEnabled && nullNodeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enabled = null;
-            if (parseNode.GetChildNode("endTime") is { } nullNodeEndTime && nullNodeEndTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndTime = null;
-            if (parseNode.GetChildNode("intervalType") is { } nullNodeIntervalType && nullNodeIntervalType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntervalType = null;
-            if (parseNode.GetChildNode("maxReminders") is { } nullNodeMaxReminders && nullNodeMaxReminders.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxReminders = null;
-            if (parseNode.GetChildNode("reminderId") is { } nullNodeReminderId && nullNodeReminderId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReminderId = null;
-            if (parseNode.GetChildNode("reminderInvoiceCondition") is { } nullNodeReminderInvoiceCondition && nullNodeReminderInvoiceCondition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReminderInvoiceCondition = null;
-            if (parseNode.GetChildNode("reminderName") is { } nullNodeReminderName && nullNodeReminderName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReminderName = null;
-            if (parseNode.GetChildNode("reminderNumber") is { } nullNodeReminderNumber && nullNodeReminderNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReminderNumber = null;
-            if (parseNode.GetChildNode("reminderTime") is { } nullNodeReminderTime && nullNodeReminderTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReminderTime = null;
-            if (parseNode.GetChildNode("smsTemplate") is { } nullNodeSmsTemplate && nullNodeSmsTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmsTemplate = null;
-            if (parseNode.GetChildNode("startTime") is { } nullNodeStartTime && nullNodeStartTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartTime = null;
-            if (parseNode.GetChildNode("timezone") is { } nullNodeTimezone && nullNodeTimezone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Timezone = null;
+            if (parseNode.GetChildNode("emailSubject") is null) { _explicitNullValueEmailSubject = default!; _explicitNullProperties?.Remove("emailSubject"); }
+            else if (parseNode.GetChildNode("emailSubject") is { } nullNodeEmailSubject && nullNodeEmailSubject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailSubject = null;
+            if (parseNode.GetChildNode("emailTemplate") is null) { _explicitNullValueEmailTemplate = default!; _explicitNullProperties?.Remove("emailTemplate"); }
+            else if (parseNode.GetChildNode("emailTemplate") is { } nullNodeEmailTemplate && nullNodeEmailTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailTemplate = null;
+            if (parseNode.GetChildNode("enabled") is null) { _explicitNullValueEnabled = default!; _explicitNullProperties?.Remove("enabled"); }
+            else if (parseNode.GetChildNode("enabled") is { } nullNodeEnabled && nullNodeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enabled = null;
+            if (parseNode.GetChildNode("endTime") is null) { _explicitNullValueEndTime = default!; _explicitNullProperties?.Remove("endTime"); }
+            else if (parseNode.GetChildNode("endTime") is { } nullNodeEndTime && nullNodeEndTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndTime = null;
+            if (parseNode.GetChildNode("intervalType") is null) { _explicitNullValueIntervalType = default!; _explicitNullProperties?.Remove("intervalType"); }
+            else if (parseNode.GetChildNode("intervalType") is { } nullNodeIntervalType && nullNodeIntervalType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntervalType = null;
+            if (parseNode.GetChildNode("maxReminders") is null) { _explicitNullValueMaxReminders = default!; _explicitNullProperties?.Remove("maxReminders"); }
+            else if (parseNode.GetChildNode("maxReminders") is { } nullNodeMaxReminders && nullNodeMaxReminders.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxReminders = null;
+            if (parseNode.GetChildNode("reminderId") is null) { _explicitNullValueReminderId = default!; _explicitNullProperties?.Remove("reminderId"); }
+            else if (parseNode.GetChildNode("reminderId") is { } nullNodeReminderId && nullNodeReminderId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReminderId = null;
+            if (parseNode.GetChildNode("reminderInvoiceCondition") is null) { _explicitNullValueReminderInvoiceCondition = default!; _explicitNullProperties?.Remove("reminderInvoiceCondition"); }
+            else if (parseNode.GetChildNode("reminderInvoiceCondition") is { } nullNodeReminderInvoiceCondition && nullNodeReminderInvoiceCondition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReminderInvoiceCondition = null;
+            if (parseNode.GetChildNode("reminderName") is null) { _explicitNullValueReminderName = default!; _explicitNullProperties?.Remove("reminderName"); }
+            else if (parseNode.GetChildNode("reminderName") is { } nullNodeReminderName && nullNodeReminderName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReminderName = null;
+            if (parseNode.GetChildNode("reminderNumber") is null) { _explicitNullValueReminderNumber = default!; _explicitNullProperties?.Remove("reminderNumber"); }
+            else if (parseNode.GetChildNode("reminderNumber") is { } nullNodeReminderNumber && nullNodeReminderNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReminderNumber = null;
+            if (parseNode.GetChildNode("reminderTime") is null) { _explicitNullValueReminderTime = default!; _explicitNullProperties?.Remove("reminderTime"); }
+            else if (parseNode.GetChildNode("reminderTime") is { } nullNodeReminderTime && nullNodeReminderTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReminderTime = null;
+            if (parseNode.GetChildNode("smsTemplate") is null) { _explicitNullValueSmsTemplate = default!; _explicitNullProperties?.Remove("smsTemplate"); }
+            else if (parseNode.GetChildNode("smsTemplate") is { } nullNodeSmsTemplate && nullNodeSmsTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmsTemplate = null;
+            if (parseNode.GetChildNode("startTime") is null) { _explicitNullValueStartTime = default!; _explicitNullProperties?.Remove("startTime"); }
+            else if (parseNode.GetChildNode("startTime") is { } nullNodeStartTime && nullNodeStartTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartTime = null;
+            if (parseNode.GetChildNode("timezone") is null) { _explicitNullValueTimezone = default!; _explicitNullProperties?.Remove("timezone"); }
+            else if (parseNode.GetChildNode("timezone") is { } nullNodeTimezone && nullNodeTimezone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Timezone = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -38,99 +52,99 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Subject of the reminder</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmailSubject { get => _explicitNullValueEmailSubject; set { _explicitNullValueEmailSubject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailSubject"); else _explicitNullProperties?.Remove("emailSubject"); } }
+        public string? EmailSubject { get => _explicitNullValueEmailSubject; set { _explicitNullValueEmailSubject = value; AdditionalData?.Remove("emailSubject"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailSubject"); else _explicitNullProperties?.Remove("emailSubject"); } }
         private string? _explicitNullValueEmailSubject = default!;
 #nullable restore
 #else
-        public string EmailSubject { get => _explicitNullValueEmailSubject; set { _explicitNullValueEmailSubject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailSubject"); else _explicitNullProperties?.Remove("emailSubject"); } }
+        public string EmailSubject { get => _explicitNullValueEmailSubject; set { _explicitNullValueEmailSubject = value; AdditionalData?.Remove("emailSubject"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailSubject"); else _explicitNullProperties?.Remove("emailSubject"); } }
         private string _explicitNullValueEmailSubject = default!;
 #endif
         /// <summary>Email template to be used for sending reminders</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmailTemplate { get => _explicitNullValueEmailTemplate; set { _explicitNullValueEmailTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailTemplate"); else _explicitNullProperties?.Remove("emailTemplate"); } }
+        public string? EmailTemplate { get => _explicitNullValueEmailTemplate; set { _explicitNullValueEmailTemplate = value; AdditionalData?.Remove("emailTemplate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailTemplate"); else _explicitNullProperties?.Remove("emailTemplate"); } }
         private string? _explicitNullValueEmailTemplate = default!;
 #nullable restore
 #else
-        public string EmailTemplate { get => _explicitNullValueEmailTemplate; set { _explicitNullValueEmailTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailTemplate"); else _explicitNullProperties?.Remove("emailTemplate"); } }
+        public string EmailTemplate { get => _explicitNullValueEmailTemplate; set { _explicitNullValueEmailTemplate = value; AdditionalData?.Remove("emailTemplate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailTemplate"); else _explicitNullProperties?.Remove("emailTemplate"); } }
         private string _explicitNullValueEmailTemplate = default!;
 #endif
         /// <summary>Flag indicating if the reminder is enabled or not</summary>
-        public bool? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled"); else _explicitNullProperties?.Remove("enabled"); } }
+        public bool? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; AdditionalData?.Remove("enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled"); else _explicitNullProperties?.Remove("enabled"); } }
         private bool? _explicitNullValueEnabled = default!;
         /// <summary>Business Hour End Time</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EndTime { get => _explicitNullValueEndTime; set { _explicitNullValueEndTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endTime"); else _explicitNullProperties?.Remove("endTime"); } }
+        public string? EndTime { get => _explicitNullValueEndTime; set { _explicitNullValueEndTime = value; AdditionalData?.Remove("endTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endTime"); else _explicitNullProperties?.Remove("endTime"); } }
         private string? _explicitNullValueEndTime = default!;
 #nullable restore
 #else
-        public string EndTime { get => _explicitNullValueEndTime; set { _explicitNullValueEndTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endTime"); else _explicitNullProperties?.Remove("endTime"); } }
+        public string EndTime { get => _explicitNullValueEndTime; set { _explicitNullValueEndTime = value; AdditionalData?.Remove("endTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endTime"); else _explicitNullProperties?.Remove("endTime"); } }
         private string _explicitNullValueEndTime = default!;
 #endif
         /// <summary>Interval type for the reminder</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ReminderDtoIntervalType? IntervalType { get => _explicitNullValueIntervalType; set { _explicitNullValueIntervalType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intervalType"); else _explicitNullProperties?.Remove("intervalType"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ReminderDtoIntervalType? IntervalType { get => _explicitNullValueIntervalType; set { _explicitNullValueIntervalType = value; AdditionalData?.Remove("intervalType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intervalType"); else _explicitNullProperties?.Remove("intervalType"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.ReminderDtoIntervalType? _explicitNullValueIntervalType = default!;
         /// <summary>Maximum number of reminders that can be sent</summary>
-        public double? MaxReminders { get => _explicitNullValueMaxReminders; set { _explicitNullValueMaxReminders = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxReminders"); else _explicitNullProperties?.Remove("maxReminders"); } }
+        public double? MaxReminders { get => _explicitNullValueMaxReminders; set { _explicitNullValueMaxReminders = value; AdditionalData?.Remove("maxReminders"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxReminders"); else _explicitNullProperties?.Remove("maxReminders"); } }
         private double? _explicitNullValueMaxReminders = default!;
         /// <summary>Unique identifier for the reminder</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReminderId { get => _explicitNullValueReminderId; set { _explicitNullValueReminderId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reminderId"); else _explicitNullProperties?.Remove("reminderId"); } }
+        public string? ReminderId { get => _explicitNullValueReminderId; set { _explicitNullValueReminderId = value; AdditionalData?.Remove("reminderId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reminderId"); else _explicitNullProperties?.Remove("reminderId"); } }
         private string? _explicitNullValueReminderId = default!;
 #nullable restore
 #else
-        public string ReminderId { get => _explicitNullValueReminderId; set { _explicitNullValueReminderId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reminderId"); else _explicitNullProperties?.Remove("reminderId"); } }
+        public string ReminderId { get => _explicitNullValueReminderId; set { _explicitNullValueReminderId = value; AdditionalData?.Remove("reminderId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reminderId"); else _explicitNullProperties?.Remove("reminderId"); } }
         private string _explicitNullValueReminderId = default!;
 #endif
         /// <summary>Condition for sending the reminder</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ReminderDtoReminderInvoiceCondition? ReminderInvoiceCondition { get => _explicitNullValueReminderInvoiceCondition; set { _explicitNullValueReminderInvoiceCondition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reminderInvoiceCondition"); else _explicitNullProperties?.Remove("reminderInvoiceCondition"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ReminderDtoReminderInvoiceCondition? ReminderInvoiceCondition { get => _explicitNullValueReminderInvoiceCondition; set { _explicitNullValueReminderInvoiceCondition = value; AdditionalData?.Remove("reminderInvoiceCondition"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reminderInvoiceCondition"); else _explicitNullProperties?.Remove("reminderInvoiceCondition"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.ReminderDtoReminderInvoiceCondition? _explicitNullValueReminderInvoiceCondition = default!;
         /// <summary>Name of the reminder</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReminderName { get => _explicitNullValueReminderName; set { _explicitNullValueReminderName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reminderName"); else _explicitNullProperties?.Remove("reminderName"); } }
+        public string? ReminderName { get => _explicitNullValueReminderName; set { _explicitNullValueReminderName = value; AdditionalData?.Remove("reminderName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reminderName"); else _explicitNullProperties?.Remove("reminderName"); } }
         private string? _explicitNullValueReminderName = default!;
 #nullable restore
 #else
-        public string ReminderName { get => _explicitNullValueReminderName; set { _explicitNullValueReminderName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reminderName"); else _explicitNullProperties?.Remove("reminderName"); } }
+        public string ReminderName { get => _explicitNullValueReminderName; set { _explicitNullValueReminderName = value; AdditionalData?.Remove("reminderName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reminderName"); else _explicitNullProperties?.Remove("reminderName"); } }
         private string _explicitNullValueReminderName = default!;
 #endif
         /// <summary>frequency gap of the reminder to exeucte</summary>
-        public double? ReminderNumber { get => _explicitNullValueReminderNumber; set { _explicitNullValueReminderNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reminderNumber"); else _explicitNullProperties?.Remove("reminderNumber"); } }
+        public double? ReminderNumber { get => _explicitNullValueReminderNumber; set { _explicitNullValueReminderNumber = value; AdditionalData?.Remove("reminderNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reminderNumber"); else _explicitNullProperties?.Remove("reminderNumber"); } }
         private double? _explicitNullValueReminderNumber = default!;
         /// <summary>Time condition for the reminder</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ReminderDtoReminderTime? ReminderTime { get => _explicitNullValueReminderTime; set { _explicitNullValueReminderTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reminderTime"); else _explicitNullProperties?.Remove("reminderTime"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ReminderDtoReminderTime? ReminderTime { get => _explicitNullValueReminderTime; set { _explicitNullValueReminderTime = value; AdditionalData?.Remove("reminderTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reminderTime"); else _explicitNullProperties?.Remove("reminderTime"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.ReminderDtoReminderTime? _explicitNullValueReminderTime = default!;
         /// <summary>SMS template to be used for sending reminders</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SmsTemplate { get => _explicitNullValueSmsTemplate; set { _explicitNullValueSmsTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smsTemplate"); else _explicitNullProperties?.Remove("smsTemplate"); } }
+        public string? SmsTemplate { get => _explicitNullValueSmsTemplate; set { _explicitNullValueSmsTemplate = value; AdditionalData?.Remove("smsTemplate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smsTemplate"); else _explicitNullProperties?.Remove("smsTemplate"); } }
         private string? _explicitNullValueSmsTemplate = default!;
 #nullable restore
 #else
-        public string SmsTemplate { get => _explicitNullValueSmsTemplate; set { _explicitNullValueSmsTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smsTemplate"); else _explicitNullProperties?.Remove("smsTemplate"); } }
+        public string SmsTemplate { get => _explicitNullValueSmsTemplate; set { _explicitNullValueSmsTemplate = value; AdditionalData?.Remove("smsTemplate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smsTemplate"); else _explicitNullProperties?.Remove("smsTemplate"); } }
         private string _explicitNullValueSmsTemplate = default!;
 #endif
         /// <summary>Business Hour Start Time</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StartTime { get => _explicitNullValueStartTime; set { _explicitNullValueStartTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startTime"); else _explicitNullProperties?.Remove("startTime"); } }
+        public string? StartTime { get => _explicitNullValueStartTime; set { _explicitNullValueStartTime = value; AdditionalData?.Remove("startTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startTime"); else _explicitNullProperties?.Remove("startTime"); } }
         private string? _explicitNullValueStartTime = default!;
 #nullable restore
 #else
-        public string StartTime { get => _explicitNullValueStartTime; set { _explicitNullValueStartTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startTime"); else _explicitNullProperties?.Remove("startTime"); } }
+        public string StartTime { get => _explicitNullValueStartTime; set { _explicitNullValueStartTime = value; AdditionalData?.Remove("startTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startTime"); else _explicitNullProperties?.Remove("startTime"); } }
         private string _explicitNullValueStartTime = default!;
 #endif
         /// <summary>Timezone at which reminder will be sent</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Timezone { get => _explicitNullValueTimezone; set { _explicitNullValueTimezone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timezone"); else _explicitNullProperties?.Remove("timezone"); } }
+        public string? Timezone { get => _explicitNullValueTimezone; set { _explicitNullValueTimezone = value; AdditionalData?.Remove("timezone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timezone"); else _explicitNullProperties?.Remove("timezone"); } }
         private string? _explicitNullValueTimezone = default!;
 #nullable restore
 #else
-        public string Timezone { get => _explicitNullValueTimezone; set { _explicitNullValueTimezone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timezone"); else _explicitNullProperties?.Remove("timezone"); } }
+        public string Timezone { get => _explicitNullValueTimezone; set { _explicitNullValueTimezone = value; AdditionalData?.Remove("timezone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timezone"); else _explicitNullProperties?.Remove("timezone"); } }
         private string _explicitNullValueTimezone = default!;
 #endif
         /// <summary>
@@ -162,13 +176,13 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "emailTemplate", n => { EmailTemplate = n.GetStringValue(); } },
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
                 { "endTime", n => { EndTime = n.GetStringValue(); } },
-                { "intervalType", n => { IntervalType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ReminderDtoIntervalType>(); } },
+                { "intervalType", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ReminderDtoIntervalType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueIntervalType = default; _explicitNullProperties?.Remove("intervalType"); AdditionalData["intervalType"] = unknown; } else { IntervalType = parsed; AdditionalData.Remove("intervalType"); } } },
                 { "maxReminders", n => { MaxReminders = n.GetDoubleValue(); } },
                 { "reminderId", n => { ReminderId = n.GetStringValue(); } },
-                { "reminderInvoiceCondition", n => { ReminderInvoiceCondition = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ReminderDtoReminderInvoiceCondition>(); } },
+                { "reminderInvoiceCondition", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ReminderDtoReminderInvoiceCondition>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueReminderInvoiceCondition = default; _explicitNullProperties?.Remove("reminderInvoiceCondition"); AdditionalData["reminderInvoiceCondition"] = unknown; } else { ReminderInvoiceCondition = parsed; AdditionalData.Remove("reminderInvoiceCondition"); } } },
                 { "reminderName", n => { ReminderName = n.GetStringValue(); } },
                 { "reminderNumber", n => { ReminderNumber = n.GetDoubleValue(); } },
-                { "reminderTime", n => { ReminderTime = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ReminderDtoReminderTime>(); } },
+                { "reminderTime", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ReminderDtoReminderTime>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueReminderTime = default; _explicitNullProperties?.Remove("reminderTime"); AdditionalData["reminderTime"] = unknown; } else { ReminderTime = parsed; AdditionalData.Remove("reminderTime"); } } },
                 { "smsTemplate", n => { SmsTemplate = n.GetStringValue(); } },
                 { "startTime", n => { StartTime = n.GetStringValue(); } },
                 { "timezone", n => { Timezone = n.GetStringValue(); } },

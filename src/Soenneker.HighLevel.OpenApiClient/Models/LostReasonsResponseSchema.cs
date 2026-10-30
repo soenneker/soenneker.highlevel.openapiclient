@@ -17,8 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("lostReasons") is { } nullNodeLostReasons && nullNodeLostReasons.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LostReasons = null;
-            if (parseNode.GetChildNode("total") is { } nullNodeTotal && nullNodeTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Total = null;
+            if (parseNode.GetChildNode("lostReasons") is null) { _explicitNullValueLostReasons = default!; _explicitNullProperties?.Remove("lostReasons"); }
+            else if (parseNode.GetChildNode("lostReasons") is { } nullNodeLostReasons && nullNodeLostReasons.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LostReasons = null;
+            if (parseNode.GetChildNode("total") is null) { _explicitNullValueTotal = default!; _explicitNullProperties?.Remove("total"); }
+            else if (parseNode.GetChildNode("total") is { } nullNodeTotal && nullNodeTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Total = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,15 +28,15 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The lostReasons property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.LostReasonResponseSchema>? LostReasons { get => _explicitNullValueLostReasons; set { _explicitNullValueLostReasons = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lostReasons"); else _explicitNullProperties?.Remove("lostReasons"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.LostReasonResponseSchema>? LostReasons { get => _explicitNullValueLostReasons; set { _explicitNullValueLostReasons = value; AdditionalData?.Remove("lostReasons"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lostReasons"); else _explicitNullProperties?.Remove("lostReasons"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.LostReasonResponseSchema>? _explicitNullValueLostReasons = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.LostReasonResponseSchema> LostReasons { get => _explicitNullValueLostReasons; set { _explicitNullValueLostReasons = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lostReasons"); else _explicitNullProperties?.Remove("lostReasons"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.LostReasonResponseSchema> LostReasons { get => _explicitNullValueLostReasons; set { _explicitNullValueLostReasons = value; AdditionalData?.Remove("lostReasons"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lostReasons"); else _explicitNullProperties?.Remove("lostReasons"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.LostReasonResponseSchema> _explicitNullValueLostReasons = default!;
 #endif
         /// <summary>The total property</summary>
-        public double? Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total"); else _explicitNullProperties?.Remove("total"); } }
+        public double? Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; AdditionalData?.Remove("total"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total"); else _explicitNullProperties?.Remove("total"); } }
         private double? _explicitNullValueTotal = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.LostReasonsResponseSchema"/> and sets the default values.

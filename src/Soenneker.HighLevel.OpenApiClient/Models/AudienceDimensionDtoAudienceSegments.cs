@@ -18,9 +18,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("customAudiences") is { } nullNodeCustomAudiences && nullNodeCustomAudiences.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomAudiences = null;
-            if (parseNode.GetChildNode("userInterests") is { } nullNodeUserInterests && nullNodeUserInterests.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserInterests = null;
-            if (parseNode.GetChildNode("userLists") is { } nullNodeUserLists && nullNodeUserLists.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserLists = null;
+            if (parseNode.GetChildNode("customAudiences") is null) { _explicitNullValueCustomAudiences = default!; _explicitNullProperties?.Remove("customAudiences"); }
+            else if (parseNode.GetChildNode("customAudiences") is { } nullNodeCustomAudiences && nullNodeCustomAudiences.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomAudiences = null;
+            if (parseNode.GetChildNode("userInterests") is null) { _explicitNullValueUserInterests = default!; _explicitNullProperties?.Remove("userInterests"); }
+            else if (parseNode.GetChildNode("userInterests") is { } nullNodeUserInterests && nullNodeUserInterests.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserInterests = null;
+            if (parseNode.GetChildNode("userLists") is null) { _explicitNullValueUserLists = default!; _explicitNullProperties?.Remove("userLists"); }
+            else if (parseNode.GetChildNode("userLists") is { } nullNodeUserLists && nullNodeUserLists.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserLists = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Resource names of custom audience segments</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? CustomAudiences { get => _explicitNullValueCustomAudiences; set { _explicitNullValueCustomAudiences = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customAudiences"); else _explicitNullProperties?.Remove("customAudiences"); } }
+        public List<string>? CustomAudiences { get => _explicitNullValueCustomAudiences; set { _explicitNullValueCustomAudiences = value; AdditionalData?.Remove("customAudiences"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customAudiences"); else _explicitNullProperties?.Remove("customAudiences"); } }
         private List<string>? _explicitNullValueCustomAudiences = default!;
 #nullable restore
 #else
-        public List<string> CustomAudiences { get => _explicitNullValueCustomAudiences; set { _explicitNullValueCustomAudiences = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customAudiences"); else _explicitNullProperties?.Remove("customAudiences"); } }
+        public List<string> CustomAudiences { get => _explicitNullValueCustomAudiences; set { _explicitNullValueCustomAudiences = value; AdditionalData?.Remove("customAudiences"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customAudiences"); else _explicitNullProperties?.Remove("customAudiences"); } }
         private List<string> _explicitNullValueCustomAudiences = default!;
 #endif
         /// <summary>Resource names of user interest segments (in-market or affinity audiences)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? UserInterests { get => _explicitNullValueUserInterests; set { _explicitNullValueUserInterests = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userInterests"); else _explicitNullProperties?.Remove("userInterests"); } }
+        public List<string>? UserInterests { get => _explicitNullValueUserInterests; set { _explicitNullValueUserInterests = value; AdditionalData?.Remove("userInterests"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userInterests"); else _explicitNullProperties?.Remove("userInterests"); } }
         private List<string>? _explicitNullValueUserInterests = default!;
 #nullable restore
 #else
-        public List<string> UserInterests { get => _explicitNullValueUserInterests; set { _explicitNullValueUserInterests = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userInterests"); else _explicitNullProperties?.Remove("userInterests"); } }
+        public List<string> UserInterests { get => _explicitNullValueUserInterests; set { _explicitNullValueUserInterests = value; AdditionalData?.Remove("userInterests"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userInterests"); else _explicitNullProperties?.Remove("userInterests"); } }
         private List<string> _explicitNullValueUserInterests = default!;
 #endif
         /// <summary>Resource names of user lists (remarketing lists, customer match lists, etc.)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? UserLists { get => _explicitNullValueUserLists; set { _explicitNullValueUserLists = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userLists"); else _explicitNullProperties?.Remove("userLists"); } }
+        public List<string>? UserLists { get => _explicitNullValueUserLists; set { _explicitNullValueUserLists = value; AdditionalData?.Remove("userLists"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userLists"); else _explicitNullProperties?.Remove("userLists"); } }
         private List<string>? _explicitNullValueUserLists = default!;
 #nullable restore
 #else
-        public List<string> UserLists { get => _explicitNullValueUserLists; set { _explicitNullValueUserLists = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userLists"); else _explicitNullProperties?.Remove("userLists"); } }
+        public List<string> UserLists { get => _explicitNullValueUserLists; set { _explicitNullValueUserLists = value; AdditionalData?.Remove("userLists"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userLists"); else _explicitNullProperties?.Remove("userLists"); } }
         private List<string> _explicitNullValueUserLists = default!;
 #endif
         /// <summary>

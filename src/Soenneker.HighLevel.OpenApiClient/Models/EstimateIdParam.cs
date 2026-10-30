@@ -17,7 +17,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("estimateId") is { } nullNodeEstimateId && nullNodeEstimateId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EstimateId = null;
+            if (parseNode.GetChildNode("estimateId") is null) { _explicitNullValueEstimateId = default!; _explicitNullProperties?.Remove("estimateId"); }
+            else if (parseNode.GetChildNode("estimateId") is { } nullNodeEstimateId && nullNodeEstimateId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EstimateId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Estimate Id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EstimateId { get => _explicitNullValueEstimateId; set { _explicitNullValueEstimateId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("estimateId"); else _explicitNullProperties?.Remove("estimateId"); } }
+        public string? EstimateId { get => _explicitNullValueEstimateId; set { _explicitNullValueEstimateId = value; AdditionalData?.Remove("estimateId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("estimateId"); else _explicitNullProperties?.Remove("estimateId"); } }
         private string? _explicitNullValueEstimateId = default!;
 #nullable restore
 #else
-        public string EstimateId { get => _explicitNullValueEstimateId; set { _explicitNullValueEstimateId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("estimateId"); else _explicitNullProperties?.Remove("estimateId"); } }
+        public string EstimateId { get => _explicitNullValueEstimateId; set { _explicitNullValueEstimateId = value; AdditionalData?.Remove("estimateId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("estimateId"); else _explicitNullProperties?.Remove("estimateId"); } }
         private string _explicitNullValueEstimateId = default!;
 #endif
         /// <summary>

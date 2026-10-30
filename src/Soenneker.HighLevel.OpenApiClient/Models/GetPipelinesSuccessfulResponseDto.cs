@@ -17,7 +17,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("pipelines") is { } nullNodePipelines && nullNodePipelines.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pipelines = null;
+            if (parseNode.GetChildNode("pipelines") is null) { _explicitNullValuePipelines = default!; _explicitNullProperties?.Remove("pipelines"); }
+            else if (parseNode.GetChildNode("pipelines") is { } nullNodePipelines && nullNodePipelines.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pipelines = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The pipelines property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.PipelinesResponseSchema>? Pipelines { get => _explicitNullValuePipelines; set { _explicitNullValuePipelines = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipelines"); else _explicitNullProperties?.Remove("pipelines"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.PipelinesResponseSchema>? Pipelines { get => _explicitNullValuePipelines; set { _explicitNullValuePipelines = value; AdditionalData?.Remove("pipelines"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipelines"); else _explicitNullProperties?.Remove("pipelines"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.PipelinesResponseSchema>? _explicitNullValuePipelines = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.PipelinesResponseSchema> Pipelines { get => _explicitNullValuePipelines; set { _explicitNullValuePipelines = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipelines"); else _explicitNullProperties?.Remove("pipelines"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.PipelinesResponseSchema> Pipelines { get => _explicitNullValuePipelines; set { _explicitNullValuePipelines = value; AdditionalData?.Remove("pipelines"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipelines"); else _explicitNullProperties?.Remove("pipelines"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.PipelinesResponseSchema> _explicitNullValuePipelines = default!;
 #endif
         /// <summary>

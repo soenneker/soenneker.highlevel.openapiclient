@@ -17,9 +17,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("aggregations") is { } nullNodeAggregations && nullNodeAggregations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Aggregations = null;
-            if (parseNode.GetChildNode("opportunities") is { } nullNodeOpportunities && nullNodeOpportunities.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Opportunities = null;
-            if (parseNode.GetChildNode("total") is { } nullNodeTotal && nullNodeTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Total = null;
+            if (parseNode.GetChildNode("aggregations") is null) { _explicitNullValueAggregations = default!; _explicitNullProperties?.Remove("aggregations"); }
+            else if (parseNode.GetChildNode("aggregations") is { } nullNodeAggregations && nullNodeAggregations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Aggregations = null;
+            if (parseNode.GetChildNode("opportunities") is null) { _explicitNullValueOpportunities = default!; _explicitNullProperties?.Remove("opportunities"); }
+            else if (parseNode.GetChildNode("opportunities") is { } nullNodeOpportunities && nullNodeOpportunities.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Opportunities = null;
+            if (parseNode.GetChildNode("total") is null) { _explicitNullValueTotal = default!; _explicitNullProperties?.Remove("total"); }
+            else if (parseNode.GetChildNode("total") is { } nullNodeTotal && nullNodeTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Total = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,25 +30,25 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The aggregations property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PostSearchSuccessfulResponseDtoAggregationsProperty2? Aggregations { get => _explicitNullValueAggregations; set { _explicitNullValueAggregations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aggregations"); else _explicitNullProperties?.Remove("aggregations"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PostSearchSuccessfulResponseDtoAggregationsProperty2? Aggregations { get => _explicitNullValueAggregations; set { _explicitNullValueAggregations = value; AdditionalData?.Remove("aggregations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aggregations"); else _explicitNullProperties?.Remove("aggregations"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.PostSearchSuccessfulResponseDtoAggregationsProperty2? _explicitNullValueAggregations = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PostSearchSuccessfulResponseDtoAggregationsProperty2 Aggregations { get => _explicitNullValueAggregations; set { _explicitNullValueAggregations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aggregations"); else _explicitNullProperties?.Remove("aggregations"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PostSearchSuccessfulResponseDtoAggregationsProperty2 Aggregations { get => _explicitNullValueAggregations; set { _explicitNullValueAggregations = value; AdditionalData?.Remove("aggregations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aggregations"); else _explicitNullProperties?.Remove("aggregations"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.PostSearchSuccessfulResponseDtoAggregationsProperty2 _explicitNullValueAggregations = default!;
 #endif
         /// <summary>The opportunities property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.SearchOpportunitiesResponseSchema>? Opportunities { get => _explicitNullValueOpportunities; set { _explicitNullValueOpportunities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opportunities"); else _explicitNullProperties?.Remove("opportunities"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.SearchOpportunitiesResponseSchema>? Opportunities { get => _explicitNullValueOpportunities; set { _explicitNullValueOpportunities = value; AdditionalData?.Remove("opportunities"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opportunities"); else _explicitNullProperties?.Remove("opportunities"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.SearchOpportunitiesResponseSchema>? _explicitNullValueOpportunities = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.SearchOpportunitiesResponseSchema> Opportunities { get => _explicitNullValueOpportunities; set { _explicitNullValueOpportunities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opportunities"); else _explicitNullProperties?.Remove("opportunities"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.SearchOpportunitiesResponseSchema> Opportunities { get => _explicitNullValueOpportunities; set { _explicitNullValueOpportunities = value; AdditionalData?.Remove("opportunities"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opportunities"); else _explicitNullProperties?.Remove("opportunities"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.SearchOpportunitiesResponseSchema> _explicitNullValueOpportunities = default!;
 #endif
         /// <summary>The total property</summary>
-        public double? Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total"); else _explicitNullProperties?.Remove("total"); } }
+        public double? Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; AdditionalData?.Remove("total"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total"); else _explicitNullProperties?.Remove("total"); } }
         private double? _explicitNullValueTotal = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.PostSearchSuccessfulResponseDto"/> and sets the default values.

@@ -17,72 +17,81 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("enabled") is { } nullNodeEnabled && nullNodeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enabled = null;
-            if (parseNode.GetChildNode("finalMessage") is { } nullNodeFinalMessage && nullNodeFinalMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FinalMessage = null;
-            if (parseNode.GetChildNode("reactivateEnabled") is { } nullNodeReactivateEnabled && nullNodeReactivateEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReactivateEnabled = null;
-            if (parseNode.GetChildNode("sleepTime") is { } nullNodeSleepTime && nullNodeSleepTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SleepTime = null;
-            if (parseNode.GetChildNode("sleepTimeUnit") is { } nullNodeSleepTimeUnit && nullNodeSleepTimeUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SleepTimeUnit = null;
-            if (parseNode.GetChildNode("stopBotDetectionType") is { } nullNodeStopBotDetectionType && nullNodeStopBotDetectionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StopBotDetectionType = null;
-            if (parseNode.GetChildNode("stopBotExamples") is { } nullNodeStopBotExamples && nullNodeStopBotExamples.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StopBotExamples = null;
-            if (parseNode.GetChildNode("stopBotTriggerCondition") is { } nullNodeStopBotTriggerCondition && nullNodeStopBotTriggerCondition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StopBotTriggerCondition = null;
-            if (parseNode.GetChildNode("tags") is { } nullNodeTags && nullNodeTags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tags = null;
+            if (parseNode.GetChildNode("enabled") is null) { _explicitNullValueEnabled = default!; _explicitNullProperties?.Remove("enabled"); }
+            else if (parseNode.GetChildNode("enabled") is { } nullNodeEnabled && nullNodeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enabled = null;
+            if (parseNode.GetChildNode("finalMessage") is null) { _explicitNullValueFinalMessage = default!; _explicitNullProperties?.Remove("finalMessage"); }
+            else if (parseNode.GetChildNode("finalMessage") is { } nullNodeFinalMessage && nullNodeFinalMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FinalMessage = null;
+            if (parseNode.GetChildNode("reactivateEnabled") is null) { _explicitNullValueReactivateEnabled = default!; _explicitNullProperties?.Remove("reactivateEnabled"); }
+            else if (parseNode.GetChildNode("reactivateEnabled") is { } nullNodeReactivateEnabled && nullNodeReactivateEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReactivateEnabled = null;
+            if (parseNode.GetChildNode("sleepTime") is null) { _explicitNullValueSleepTime = default!; _explicitNullProperties?.Remove("sleepTime"); }
+            else if (parseNode.GetChildNode("sleepTime") is { } nullNodeSleepTime && nullNodeSleepTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SleepTime = null;
+            if (parseNode.GetChildNode("sleepTimeUnit") is null) { _explicitNullValueSleepTimeUnit = default!; _explicitNullProperties?.Remove("sleepTimeUnit"); }
+            else if (parseNode.GetChildNode("sleepTimeUnit") is { } nullNodeSleepTimeUnit && nullNodeSleepTimeUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SleepTimeUnit = null;
+            if (parseNode.GetChildNode("stopBotDetectionType") is null) { _explicitNullValueStopBotDetectionType = default!; _explicitNullProperties?.Remove("stopBotDetectionType"); }
+            else if (parseNode.GetChildNode("stopBotDetectionType") is { } nullNodeStopBotDetectionType && nullNodeStopBotDetectionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StopBotDetectionType = null;
+            if (parseNode.GetChildNode("stopBotExamples") is null) { _explicitNullValueStopBotExamples = default!; _explicitNullProperties?.Remove("stopBotExamples"); }
+            else if (parseNode.GetChildNode("stopBotExamples") is { } nullNodeStopBotExamples && nullNodeStopBotExamples.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StopBotExamples = null;
+            if (parseNode.GetChildNode("stopBotTriggerCondition") is null) { _explicitNullValueStopBotTriggerCondition = default!; _explicitNullProperties?.Remove("stopBotTriggerCondition"); }
+            else if (parseNode.GetChildNode("stopBotTriggerCondition") is { } nullNodeStopBotTriggerCondition && nullNodeStopBotTriggerCondition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StopBotTriggerCondition = null;
+            if (parseNode.GetChildNode("tags") is null) { _explicitNullValueTags = default!; _explicitNullProperties?.Remove("tags"); }
+            else if (parseNode.GetChildNode("tags") is { } nullNodeTags && nullNodeTags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tags = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether this action is enabled for the agent</summary>
-        public bool? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled"); else _explicitNullProperties?.Remove("enabled"); } }
+        public bool? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; AdditionalData?.Remove("enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled"); else _explicitNullProperties?.Remove("enabled"); } }
         private bool? _explicitNullValueEnabled = default!;
         /// <summary>Final message sent when stopping the bot</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FinalMessage { get => _explicitNullValueFinalMessage; set { _explicitNullValueFinalMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("finalMessage"); else _explicitNullProperties?.Remove("finalMessage"); } }
+        public string? FinalMessage { get => _explicitNullValueFinalMessage; set { _explicitNullValueFinalMessage = value; AdditionalData?.Remove("finalMessage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("finalMessage"); else _explicitNullProperties?.Remove("finalMessage"); } }
         private string? _explicitNullValueFinalMessage = default!;
 #nullable restore
 #else
-        public string FinalMessage { get => _explicitNullValueFinalMessage; set { _explicitNullValueFinalMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("finalMessage"); else _explicitNullProperties?.Remove("finalMessage"); } }
+        public string FinalMessage { get => _explicitNullValueFinalMessage; set { _explicitNullValueFinalMessage = value; AdditionalData?.Remove("finalMessage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("finalMessage"); else _explicitNullProperties?.Remove("finalMessage"); } }
         private string _explicitNullValueFinalMessage = default!;
 #endif
         /// <summary>Whether the bot can be reactivated after being stopped</summary>
-        public bool? ReactivateEnabled { get => _explicitNullValueReactivateEnabled; set { _explicitNullValueReactivateEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reactivateEnabled"); else _explicitNullProperties?.Remove("reactivateEnabled"); } }
+        public bool? ReactivateEnabled { get => _explicitNullValueReactivateEnabled; set { _explicitNullValueReactivateEnabled = value; AdditionalData?.Remove("reactivateEnabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reactivateEnabled"); else _explicitNullProperties?.Remove("reactivateEnabled"); } }
         private bool? _explicitNullValueReactivateEnabled = default!;
         /// <summary>Time duration before reactivation (required when reactivateEnabled is true)</summary>
-        public double? SleepTime { get => _explicitNullValueSleepTime; set { _explicitNullValueSleepTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sleepTime"); else _explicitNullProperties?.Remove("sleepTime"); } }
+        public double? SleepTime { get => _explicitNullValueSleepTime; set { _explicitNullValueSleepTime = value; AdditionalData?.Remove("sleepTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sleepTime"); else _explicitNullProperties?.Remove("sleepTime"); } }
         private double? _explicitNullValueSleepTime = default!;
         /// <summary>Time unit for reactivation delay (required when reactivateEnabled is true)</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.StopBotDtoSleepTimeUnit? SleepTimeUnit { get => _explicitNullValueSleepTimeUnit; set { _explicitNullValueSleepTimeUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sleepTimeUnit"); else _explicitNullProperties?.Remove("sleepTimeUnit"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.StopBotDtoSleepTimeUnit? SleepTimeUnit { get => _explicitNullValueSleepTimeUnit; set { _explicitNullValueSleepTimeUnit = value; AdditionalData?.Remove("sleepTimeUnit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sleepTimeUnit"); else _explicitNullProperties?.Remove("sleepTimeUnit"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.StopBotDtoSleepTimeUnit? _explicitNullValueSleepTimeUnit = default!;
         /// <summary>Type of stop bot detection - Goodbye or Custom</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.StopBotDtoStopBotDetectionType? StopBotDetectionType { get => _explicitNullValueStopBotDetectionType; set { _explicitNullValueStopBotDetectionType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stopBotDetectionType"); else _explicitNullProperties?.Remove("stopBotDetectionType"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.StopBotDtoStopBotDetectionType? StopBotDetectionType { get => _explicitNullValueStopBotDetectionType; set { _explicitNullValueStopBotDetectionType = value; AdditionalData?.Remove("stopBotDetectionType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stopBotDetectionType"); else _explicitNullProperties?.Remove("stopBotDetectionType"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.StopBotDtoStopBotDetectionType? _explicitNullValueStopBotDetectionType = default!;
         /// <summary>Example phrases that trigger stop bot action (minimum 2 required)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? StopBotExamples { get => _explicitNullValueStopBotExamples; set { _explicitNullValueStopBotExamples = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stopBotExamples"); else _explicitNullProperties?.Remove("stopBotExamples"); } }
+        public List<string>? StopBotExamples { get => _explicitNullValueStopBotExamples; set { _explicitNullValueStopBotExamples = value; AdditionalData?.Remove("stopBotExamples"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stopBotExamples"); else _explicitNullProperties?.Remove("stopBotExamples"); } }
         private List<string>? _explicitNullValueStopBotExamples = default!;
 #nullable restore
 #else
-        public List<string> StopBotExamples { get => _explicitNullValueStopBotExamples; set { _explicitNullValueStopBotExamples = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stopBotExamples"); else _explicitNullProperties?.Remove("stopBotExamples"); } }
+        public List<string> StopBotExamples { get => _explicitNullValueStopBotExamples; set { _explicitNullValueStopBotExamples = value; AdditionalData?.Remove("stopBotExamples"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stopBotExamples"); else _explicitNullProperties?.Remove("stopBotExamples"); } }
         private List<string> _explicitNullValueStopBotExamples = default!;
 #endif
         /// <summary>Condition that triggers stopping the bot</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StopBotTriggerCondition { get => _explicitNullValueStopBotTriggerCondition; set { _explicitNullValueStopBotTriggerCondition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stopBotTriggerCondition"); else _explicitNullProperties?.Remove("stopBotTriggerCondition"); } }
+        public string? StopBotTriggerCondition { get => _explicitNullValueStopBotTriggerCondition; set { _explicitNullValueStopBotTriggerCondition = value; AdditionalData?.Remove("stopBotTriggerCondition"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stopBotTriggerCondition"); else _explicitNullProperties?.Remove("stopBotTriggerCondition"); } }
         private string? _explicitNullValueStopBotTriggerCondition = default!;
 #nullable restore
 #else
-        public string StopBotTriggerCondition { get => _explicitNullValueStopBotTriggerCondition; set { _explicitNullValueStopBotTriggerCondition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stopBotTriggerCondition"); else _explicitNullProperties?.Remove("stopBotTriggerCondition"); } }
+        public string StopBotTriggerCondition { get => _explicitNullValueStopBotTriggerCondition; set { _explicitNullValueStopBotTriggerCondition = value; AdditionalData?.Remove("stopBotTriggerCondition"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stopBotTriggerCondition"); else _explicitNullProperties?.Remove("stopBotTriggerCondition"); } }
         private string _explicitNullValueStopBotTriggerCondition = default!;
 #endif
         /// <summary>Tags to apply when stopping the bot</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Tags { get => _explicitNullValueTags; set { _explicitNullValueTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tags"); else _explicitNullProperties?.Remove("tags"); } }
+        public List<string>? Tags { get => _explicitNullValueTags; set { _explicitNullValueTags = value; AdditionalData?.Remove("tags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tags"); else _explicitNullProperties?.Remove("tags"); } }
         private List<string>? _explicitNullValueTags = default!;
 #nullable restore
 #else
-        public List<string> Tags { get => _explicitNullValueTags; set { _explicitNullValueTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tags"); else _explicitNullProperties?.Remove("tags"); } }
+        public List<string> Tags { get => _explicitNullValueTags; set { _explicitNullValueTags = value; AdditionalData?.Remove("tags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tags"); else _explicitNullProperties?.Remove("tags"); } }
         private List<string> _explicitNullValueTags = default!;
 #endif
         /// <summary>
@@ -114,8 +123,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "finalMessage", n => { FinalMessage = n.GetStringValue(); } },
                 { "reactivateEnabled", n => { ReactivateEnabled = n.GetBoolValue(); } },
                 { "sleepTime", n => { SleepTime = n.GetDoubleValue(); } },
-                { "sleepTimeUnit", n => { SleepTimeUnit = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.StopBotDtoSleepTimeUnit>(); } },
-                { "stopBotDetectionType", n => { StopBotDetectionType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.StopBotDtoStopBotDetectionType>(); } },
+                { "sleepTimeUnit", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.StopBotDtoSleepTimeUnit>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueSleepTimeUnit = default; _explicitNullProperties?.Remove("sleepTimeUnit"); AdditionalData["sleepTimeUnit"] = unknown; } else { SleepTimeUnit = parsed; AdditionalData.Remove("sleepTimeUnit"); } } },
+                { "stopBotDetectionType", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.StopBotDtoStopBotDetectionType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStopBotDetectionType = default; _explicitNullProperties?.Remove("stopBotDetectionType"); AdditionalData["stopBotDetectionType"] = unknown; } else { StopBotDetectionType = parsed; AdditionalData.Remove("stopBotDetectionType"); } } },
                 { "stopBotExamples", n => { StopBotExamples = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "stopBotTriggerCondition", n => { StopBotTriggerCondition = n.GetStringValue(); } },
                 { "tags", n => { Tags = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },

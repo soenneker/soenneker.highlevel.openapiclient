@@ -18,7 +18,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("stripe") is { } nullNodeStripe && nullNodeStripe.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Stripe = null;
+            if (parseNode.GetChildNode("stripe") is null) { _explicitNullValueStripe = default!; _explicitNullProperties?.Remove("stripe"); }
+            else if (parseNode.GetChildNode("stripe") is { } nullNodeStripe && nullNodeStripe.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Stripe = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Payment Method</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PaymentMethodDtoStripe? Stripe { get => _explicitNullValueStripe; set { _explicitNullValueStripe = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stripe"); else _explicitNullProperties?.Remove("stripe"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PaymentMethodDtoStripe? Stripe { get => _explicitNullValueStripe; set { _explicitNullValueStripe = value; AdditionalData?.Remove("stripe"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stripe"); else _explicitNullProperties?.Remove("stripe"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.PaymentMethodDtoStripe? _explicitNullValueStripe = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PaymentMethodDtoStripe Stripe { get => _explicitNullValueStripe; set { _explicitNullValueStripe = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stripe"); else _explicitNullProperties?.Remove("stripe"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PaymentMethodDtoStripe Stripe { get => _explicitNullValueStripe; set { _explicitNullValueStripe = value; AdditionalData?.Remove("stripe"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stripe"); else _explicitNullProperties?.Remove("stripe"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.PaymentMethodDtoStripe _explicitNullValueStripe = default!;
 #endif
         /// <summary>

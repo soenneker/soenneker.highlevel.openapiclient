@@ -17,51 +17,58 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("currentPage") is { } nullNodeCurrentPage && nullNodeCurrentPage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentPage = null;
-            if (parseNode.GetChildNode("nextPage") is { } nullNodeNextPage && nullNodeNextPage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextPage = null;
-            if (parseNode.GetChildNode("nextPageUrl") is { } nullNodeNextPageUrl && nullNodeNextPageUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextPageUrl = null;
-            if (parseNode.GetChildNode("prevPage") is { } nullNodePrevPage && nullNodePrevPage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrevPage = null;
-            if (parseNode.GetChildNode("startAfter") is { } nullNodeStartAfter && nullNodeStartAfter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartAfter = null;
-            if (parseNode.GetChildNode("startAfterId") is { } nullNodeStartAfterId && nullNodeStartAfterId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartAfterId = null;
-            if (parseNode.GetChildNode("total") is { } nullNodeTotal && nullNodeTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Total = null;
+            if (parseNode.GetChildNode("currentPage") is null) { _explicitNullValueCurrentPage = default!; _explicitNullProperties?.Remove("currentPage"); }
+            else if (parseNode.GetChildNode("currentPage") is { } nullNodeCurrentPage && nullNodeCurrentPage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentPage = null;
+            if (parseNode.GetChildNode("nextPage") is null) { _explicitNullValueNextPage = default!; _explicitNullProperties?.Remove("nextPage"); }
+            else if (parseNode.GetChildNode("nextPage") is { } nullNodeNextPage && nullNodeNextPage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextPage = null;
+            if (parseNode.GetChildNode("nextPageUrl") is null) { _explicitNullValueNextPageUrl = default!; _explicitNullProperties?.Remove("nextPageUrl"); }
+            else if (parseNode.GetChildNode("nextPageUrl") is { } nullNodeNextPageUrl && nullNodeNextPageUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextPageUrl = null;
+            if (parseNode.GetChildNode("prevPage") is null) { _explicitNullValuePrevPage = default!; _explicitNullProperties?.Remove("prevPage"); }
+            else if (parseNode.GetChildNode("prevPage") is { } nullNodePrevPage && nullNodePrevPage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrevPage = null;
+            if (parseNode.GetChildNode("startAfter") is null) { _explicitNullValueStartAfter = default!; _explicitNullProperties?.Remove("startAfter"); }
+            else if (parseNode.GetChildNode("startAfter") is { } nullNodeStartAfter && nullNodeStartAfter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartAfter = null;
+            if (parseNode.GetChildNode("startAfterId") is null) { _explicitNullValueStartAfterId = default!; _explicitNullProperties?.Remove("startAfterId"); }
+            else if (parseNode.GetChildNode("startAfterId") is { } nullNodeStartAfterId && nullNodeStartAfterId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartAfterId = null;
+            if (parseNode.GetChildNode("total") is null) { _explicitNullValueTotal = default!; _explicitNullProperties?.Remove("total"); }
+            else if (parseNode.GetChildNode("total") is { } nullNodeTotal && nullNodeTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Total = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The currentPage property</summary>
-        public double? CurrentPage { get => _explicitNullValueCurrentPage; set { _explicitNullValueCurrentPage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currentPage"); else _explicitNullProperties?.Remove("currentPage"); } }
+        public double? CurrentPage { get => _explicitNullValueCurrentPage; set { _explicitNullValueCurrentPage = value; AdditionalData?.Remove("currentPage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currentPage"); else _explicitNullProperties?.Remove("currentPage"); } }
         private double? _explicitNullValueCurrentPage = default!;
         /// <summary>The nextPage property</summary>
-        public double? NextPage { get => _explicitNullValueNextPage; set { _explicitNullValueNextPage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nextPage"); else _explicitNullProperties?.Remove("nextPage"); } }
+        public double? NextPage { get => _explicitNullValueNextPage; set { _explicitNullValueNextPage = value; AdditionalData?.Remove("nextPage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nextPage"); else _explicitNullProperties?.Remove("nextPage"); } }
         private double? _explicitNullValueNextPage = default!;
         /// <summary>The nextPageUrl property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NextPageUrl { get => _explicitNullValueNextPageUrl; set { _explicitNullValueNextPageUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nextPageUrl"); else _explicitNullProperties?.Remove("nextPageUrl"); } }
+        public string? NextPageUrl { get => _explicitNullValueNextPageUrl; set { _explicitNullValueNextPageUrl = value; AdditionalData?.Remove("nextPageUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nextPageUrl"); else _explicitNullProperties?.Remove("nextPageUrl"); } }
         private string? _explicitNullValueNextPageUrl = default!;
 #nullable restore
 #else
-        public string NextPageUrl { get => _explicitNullValueNextPageUrl; set { _explicitNullValueNextPageUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nextPageUrl"); else _explicitNullProperties?.Remove("nextPageUrl"); } }
+        public string NextPageUrl { get => _explicitNullValueNextPageUrl; set { _explicitNullValueNextPageUrl = value; AdditionalData?.Remove("nextPageUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nextPageUrl"); else _explicitNullProperties?.Remove("nextPageUrl"); } }
         private string _explicitNullValueNextPageUrl = default!;
 #endif
         /// <summary>The prevPage property</summary>
-        public double? PrevPage { get => _explicitNullValuePrevPage; set { _explicitNullValuePrevPage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prevPage"); else _explicitNullProperties?.Remove("prevPage"); } }
+        public double? PrevPage { get => _explicitNullValuePrevPage; set { _explicitNullValuePrevPage = value; AdditionalData?.Remove("prevPage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prevPage"); else _explicitNullProperties?.Remove("prevPage"); } }
         private double? _explicitNullValuePrevPage = default!;
         /// <summary>The startAfter property</summary>
-        public double? StartAfter { get => _explicitNullValueStartAfter; set { _explicitNullValueStartAfter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startAfter"); else _explicitNullProperties?.Remove("startAfter"); } }
+        public double? StartAfter { get => _explicitNullValueStartAfter; set { _explicitNullValueStartAfter = value; AdditionalData?.Remove("startAfter"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startAfter"); else _explicitNullProperties?.Remove("startAfter"); } }
         private double? _explicitNullValueStartAfter = default!;
         /// <summary>The startAfterId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StartAfterId { get => _explicitNullValueStartAfterId; set { _explicitNullValueStartAfterId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startAfterId"); else _explicitNullProperties?.Remove("startAfterId"); } }
+        public string? StartAfterId { get => _explicitNullValueStartAfterId; set { _explicitNullValueStartAfterId = value; AdditionalData?.Remove("startAfterId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startAfterId"); else _explicitNullProperties?.Remove("startAfterId"); } }
         private string? _explicitNullValueStartAfterId = default!;
 #nullable restore
 #else
-        public string StartAfterId { get => _explicitNullValueStartAfterId; set { _explicitNullValueStartAfterId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startAfterId"); else _explicitNullProperties?.Remove("startAfterId"); } }
+        public string StartAfterId { get => _explicitNullValueStartAfterId; set { _explicitNullValueStartAfterId = value; AdditionalData?.Remove("startAfterId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startAfterId"); else _explicitNullProperties?.Remove("startAfterId"); } }
         private string _explicitNullValueStartAfterId = default!;
 #endif
         /// <summary>The total property</summary>
-        public double? Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total"); else _explicitNullProperties?.Remove("total"); } }
+        public double? Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; AdditionalData?.Remove("total"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total"); else _explicitNullProperties?.Remove("total"); } }
         private double? _explicitNullValueTotal = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.SearchMetaResponseSchema"/> and sets the default values.

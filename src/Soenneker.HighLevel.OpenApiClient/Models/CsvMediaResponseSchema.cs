@@ -17,217 +17,241 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("aspectRatio") is { } nullNodeAspectRatio && nullNodeAspectRatio.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AspectRatio = null;
-            if (parseNode.GetChildNode("audioChannels") is { } nullNodeAudioChannels && nullNodeAudioChannels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AudioChannels = null;
-            if (parseNode.GetChildNode("audioCodecName") is { } nullNodeAudioCodecName && nullNodeAudioCodecName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AudioCodecName = null;
-            if (parseNode.GetChildNode("displayAspectRatio") is { } nullNodeDisplayAspectRatio && nullNodeDisplayAspectRatio.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayAspectRatio = null;
-            if (parseNode.GetChildNode("duration") is { } nullNodeDuration && nullNodeDuration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Duration = null;
-            if (parseNode.GetChildNode("error") is { } nullNodeError && nullNodeError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Error = null;
-            if (parseNode.GetChildNode("facebookError") is { } nullNodeFacebookError && nullNodeFacebookError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FacebookError = null;
-            if (parseNode.GetChildNode("format") is { } nullNodeFormat && nullNodeFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Format = null;
-            if (parseNode.GetChildNode("frameRate") is { } nullNodeFrameRate && nullNodeFrameRate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FrameRate = null;
-            if (parseNode.GetChildNode("frames") is { } nullNodeFrames && nullNodeFrames.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Frames = null;
-            if (parseNode.GetChildNode("gmbError") is { } nullNodeGmbError && nullNodeGmbError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GmbError = null;
-            if (parseNode.GetChildNode("height") is { } nullNodeHeight && nullNodeHeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Height = null;
-            if (parseNode.GetChildNode("instagramError") is { } nullNodeInstagramError && nullNodeInstagramError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InstagramError = null;
-            if (parseNode.GetChildNode("invalidError") is { } nullNodeInvalidError && nullNodeInvalidError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvalidError = null;
-            if (parseNode.GetChildNode("linkedinError") is { } nullNodeLinkedinError && nullNodeLinkedinError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LinkedinError = null;
-            if (parseNode.GetChildNode("selectedPoster") is { } nullNodeSelectedPoster && nullNodeSelectedPoster.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SelectedPoster = null;
-            if (parseNode.GetChildNode("size") is { } nullNodeSize && nullNodeSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Size = null;
-            if (parseNode.GetChildNode("tiktokBusinessError") is { } nullNodeTiktokBusinessError && nullNodeTiktokBusinessError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TiktokBusinessError = null;
-            if (parseNode.GetChildNode("tiktokError") is { } nullNodeTiktokError && nullNodeTiktokError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TiktokError = null;
-            if (parseNode.GetChildNode("twitterError") is { } nullNodeTwitterError && nullNodeTwitterError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TwitterError = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
-            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
-            if (parseNode.GetChildNode("videoCodecName") is { } nullNodeVideoCodecName && nullNodeVideoCodecName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VideoCodecName = null;
-            if (parseNode.GetChildNode("width") is { } nullNodeWidth && nullNodeWidth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Width = null;
+            if (parseNode.GetChildNode("aspectRatio") is null) { _explicitNullValueAspectRatio = default!; _explicitNullProperties?.Remove("aspectRatio"); }
+            else if (parseNode.GetChildNode("aspectRatio") is { } nullNodeAspectRatio && nullNodeAspectRatio.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AspectRatio = null;
+            if (parseNode.GetChildNode("audioChannels") is null) { _explicitNullValueAudioChannels = default!; _explicitNullProperties?.Remove("audioChannels"); }
+            else if (parseNode.GetChildNode("audioChannels") is { } nullNodeAudioChannels && nullNodeAudioChannels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AudioChannels = null;
+            if (parseNode.GetChildNode("audioCodecName") is null) { _explicitNullValueAudioCodecName = default!; _explicitNullProperties?.Remove("audioCodecName"); }
+            else if (parseNode.GetChildNode("audioCodecName") is { } nullNodeAudioCodecName && nullNodeAudioCodecName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AudioCodecName = null;
+            if (parseNode.GetChildNode("displayAspectRatio") is null) { _explicitNullValueDisplayAspectRatio = default!; _explicitNullProperties?.Remove("displayAspectRatio"); }
+            else if (parseNode.GetChildNode("displayAspectRatio") is { } nullNodeDisplayAspectRatio && nullNodeDisplayAspectRatio.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayAspectRatio = null;
+            if (parseNode.GetChildNode("duration") is null) { _explicitNullValueDuration = default!; _explicitNullProperties?.Remove("duration"); }
+            else if (parseNode.GetChildNode("duration") is { } nullNodeDuration && nullNodeDuration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Duration = null;
+            if (parseNode.GetChildNode("error") is null) { _explicitNullValueError = default!; _explicitNullProperties?.Remove("error"); }
+            else if (parseNode.GetChildNode("error") is { } nullNodeError && nullNodeError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Error = null;
+            if (parseNode.GetChildNode("facebookError") is null) { _explicitNullValueFacebookError = default!; _explicitNullProperties?.Remove("facebookError"); }
+            else if (parseNode.GetChildNode("facebookError") is { } nullNodeFacebookError && nullNodeFacebookError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FacebookError = null;
+            if (parseNode.GetChildNode("format") is null) { _explicitNullValueFormat = default!; _explicitNullProperties?.Remove("format"); }
+            else if (parseNode.GetChildNode("format") is { } nullNodeFormat && nullNodeFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Format = null;
+            if (parseNode.GetChildNode("frameRate") is null) { _explicitNullValueFrameRate = default!; _explicitNullProperties?.Remove("frameRate"); }
+            else if (parseNode.GetChildNode("frameRate") is { } nullNodeFrameRate && nullNodeFrameRate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FrameRate = null;
+            if (parseNode.GetChildNode("frames") is null) { _explicitNullValueFrames = default!; _explicitNullProperties?.Remove("frames"); }
+            else if (parseNode.GetChildNode("frames") is { } nullNodeFrames && nullNodeFrames.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Frames = null;
+            if (parseNode.GetChildNode("gmbError") is null) { _explicitNullValueGmbError = default!; _explicitNullProperties?.Remove("gmbError"); }
+            else if (parseNode.GetChildNode("gmbError") is { } nullNodeGmbError && nullNodeGmbError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GmbError = null;
+            if (parseNode.GetChildNode("height") is null) { _explicitNullValueHeight = default!; _explicitNullProperties?.Remove("height"); }
+            else if (parseNode.GetChildNode("height") is { } nullNodeHeight && nullNodeHeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Height = null;
+            if (parseNode.GetChildNode("instagramError") is null) { _explicitNullValueInstagramError = default!; _explicitNullProperties?.Remove("instagramError"); }
+            else if (parseNode.GetChildNode("instagramError") is { } nullNodeInstagramError && nullNodeInstagramError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InstagramError = null;
+            if (parseNode.GetChildNode("invalidError") is null) { _explicitNullValueInvalidError = default!; _explicitNullProperties?.Remove("invalidError"); }
+            else if (parseNode.GetChildNode("invalidError") is { } nullNodeInvalidError && nullNodeInvalidError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvalidError = null;
+            if (parseNode.GetChildNode("linkedinError") is null) { _explicitNullValueLinkedinError = default!; _explicitNullProperties?.Remove("linkedinError"); }
+            else if (parseNode.GetChildNode("linkedinError") is { } nullNodeLinkedinError && nullNodeLinkedinError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LinkedinError = null;
+            if (parseNode.GetChildNode("selectedPoster") is null) { _explicitNullValueSelectedPoster = default!; _explicitNullProperties?.Remove("selectedPoster"); }
+            else if (parseNode.GetChildNode("selectedPoster") is { } nullNodeSelectedPoster && nullNodeSelectedPoster.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SelectedPoster = null;
+            if (parseNode.GetChildNode("size") is null) { _explicitNullValueSize = default!; _explicitNullProperties?.Remove("size"); }
+            else if (parseNode.GetChildNode("size") is { } nullNodeSize && nullNodeSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Size = null;
+            if (parseNode.GetChildNode("tiktokBusinessError") is null) { _explicitNullValueTiktokBusinessError = default!; _explicitNullProperties?.Remove("tiktokBusinessError"); }
+            else if (parseNode.GetChildNode("tiktokBusinessError") is { } nullNodeTiktokBusinessError && nullNodeTiktokBusinessError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TiktokBusinessError = null;
+            if (parseNode.GetChildNode("tiktokError") is null) { _explicitNullValueTiktokError = default!; _explicitNullProperties?.Remove("tiktokError"); }
+            else if (parseNode.GetChildNode("tiktokError") is { } nullNodeTiktokError && nullNodeTiktokError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TiktokError = null;
+            if (parseNode.GetChildNode("twitterError") is null) { _explicitNullValueTwitterError = default!; _explicitNullProperties?.Remove("twitterError"); }
+            else if (parseNode.GetChildNode("twitterError") is { } nullNodeTwitterError && nullNodeTwitterError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TwitterError = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("url") is null) { _explicitNullValueUrl = default!; _explicitNullProperties?.Remove("url"); }
+            else if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+            if (parseNode.GetChildNode("videoCodecName") is null) { _explicitNullValueVideoCodecName = default!; _explicitNullProperties?.Remove("videoCodecName"); }
+            else if (parseNode.GetChildNode("videoCodecName") is { } nullNodeVideoCodecName && nullNodeVideoCodecName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VideoCodecName = null;
+            if (parseNode.GetChildNode("width") is null) { _explicitNullValueWidth = default!; _explicitNullProperties?.Remove("width"); }
+            else if (parseNode.GetChildNode("width") is { } nullNodeWidth && nullNodeWidth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Width = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Media Aspect Ratio</summary>
-        public double? AspectRatio { get => _explicitNullValueAspectRatio; set { _explicitNullValueAspectRatio = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aspectRatio"); else _explicitNullProperties?.Remove("aspectRatio"); } }
+        public double? AspectRatio { get => _explicitNullValueAspectRatio; set { _explicitNullValueAspectRatio = value; AdditionalData?.Remove("aspectRatio"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aspectRatio"); else _explicitNullProperties?.Remove("aspectRatio"); } }
         private double? _explicitNullValueAspectRatio = default!;
         /// <summary>Audio Channel</summary>
-        public double? AudioChannels { get => _explicitNullValueAudioChannels; set { _explicitNullValueAudioChannels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audioChannels"); else _explicitNullProperties?.Remove("audioChannels"); } }
+        public double? AudioChannels { get => _explicitNullValueAudioChannels; set { _explicitNullValueAudioChannels = value; AdditionalData?.Remove("audioChannels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audioChannels"); else _explicitNullProperties?.Remove("audioChannels"); } }
         private double? _explicitNullValueAudioChannels = default!;
         /// <summary>Audio Codec</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AudioCodecName { get => _explicitNullValueAudioCodecName; set { _explicitNullValueAudioCodecName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audioCodecName"); else _explicitNullProperties?.Remove("audioCodecName"); } }
+        public string? AudioCodecName { get => _explicitNullValueAudioCodecName; set { _explicitNullValueAudioCodecName = value; AdditionalData?.Remove("audioCodecName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audioCodecName"); else _explicitNullProperties?.Remove("audioCodecName"); } }
         private string? _explicitNullValueAudioCodecName = default!;
 #nullable restore
 #else
-        public string AudioCodecName { get => _explicitNullValueAudioCodecName; set { _explicitNullValueAudioCodecName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audioCodecName"); else _explicitNullProperties?.Remove("audioCodecName"); } }
+        public string AudioCodecName { get => _explicitNullValueAudioCodecName; set { _explicitNullValueAudioCodecName = value; AdditionalData?.Remove("audioCodecName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audioCodecName"); else _explicitNullProperties?.Remove("audioCodecName"); } }
         private string _explicitNullValueAudioCodecName = default!;
 #endif
         /// <summary>Display Aspect Ratio</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DisplayAspectRatio { get => _explicitNullValueDisplayAspectRatio; set { _explicitNullValueDisplayAspectRatio = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayAspectRatio"); else _explicitNullProperties?.Remove("displayAspectRatio"); } }
+        public string? DisplayAspectRatio { get => _explicitNullValueDisplayAspectRatio; set { _explicitNullValueDisplayAspectRatio = value; AdditionalData?.Remove("displayAspectRatio"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayAspectRatio"); else _explicitNullProperties?.Remove("displayAspectRatio"); } }
         private string? _explicitNullValueDisplayAspectRatio = default!;
 #nullable restore
 #else
-        public string DisplayAspectRatio { get => _explicitNullValueDisplayAspectRatio; set { _explicitNullValueDisplayAspectRatio = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayAspectRatio"); else _explicitNullProperties?.Remove("displayAspectRatio"); } }
+        public string DisplayAspectRatio { get => _explicitNullValueDisplayAspectRatio; set { _explicitNullValueDisplayAspectRatio = value; AdditionalData?.Remove("displayAspectRatio"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayAspectRatio"); else _explicitNullProperties?.Remove("displayAspectRatio"); } }
         private string _explicitNullValueDisplayAspectRatio = default!;
 #endif
         /// <summary>Media Aspect Ratio</summary>
-        public double? Duration { get => _explicitNullValueDuration; set { _explicitNullValueDuration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duration"); else _explicitNullProperties?.Remove("duration"); } }
+        public double? Duration { get => _explicitNullValueDuration; set { _explicitNullValueDuration = value; AdditionalData?.Remove("duration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duration"); else _explicitNullProperties?.Remove("duration"); } }
         private double? _explicitNullValueDuration = default!;
         /// <summary>Error</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Error { get => _explicitNullValueError; set { _explicitNullValueError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
+        public string? Error { get => _explicitNullValueError; set { _explicitNullValueError = value; AdditionalData?.Remove("error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
         private string? _explicitNullValueError = default!;
 #nullable restore
 #else
-        public string Error { get => _explicitNullValueError; set { _explicitNullValueError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
+        public string Error { get => _explicitNullValueError; set { _explicitNullValueError = value; AdditionalData?.Remove("error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
         private string _explicitNullValueError = default!;
 #endif
         /// <summary>Facebook media error. It can be one of the following errors: imageSize, imageType, videoDuration, videoSize</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FacebookError { get => _explicitNullValueFacebookError; set { _explicitNullValueFacebookError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("facebookError"); else _explicitNullProperties?.Remove("facebookError"); } }
+        public string? FacebookError { get => _explicitNullValueFacebookError; set { _explicitNullValueFacebookError = value; AdditionalData?.Remove("facebookError"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("facebookError"); else _explicitNullProperties?.Remove("facebookError"); } }
         private string? _explicitNullValueFacebookError = default!;
 #nullable restore
 #else
-        public string FacebookError { get => _explicitNullValueFacebookError; set { _explicitNullValueFacebookError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("facebookError"); else _explicitNullProperties?.Remove("facebookError"); } }
+        public string FacebookError { get => _explicitNullValueFacebookError; set { _explicitNullValueFacebookError = value; AdditionalData?.Remove("facebookError"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("facebookError"); else _explicitNullProperties?.Remove("facebookError"); } }
         private string _explicitNullValueFacebookError = default!;
 #endif
         /// <summary>Media format</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Format { get => _explicitNullValueFormat; set { _explicitNullValueFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("format"); else _explicitNullProperties?.Remove("format"); } }
+        public string? Format { get => _explicitNullValueFormat; set { _explicitNullValueFormat = value; AdditionalData?.Remove("format"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("format"); else _explicitNullProperties?.Remove("format"); } }
         private string? _explicitNullValueFormat = default!;
 #nullable restore
 #else
-        public string Format { get => _explicitNullValueFormat; set { _explicitNullValueFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("format"); else _explicitNullProperties?.Remove("format"); } }
+        public string Format { get => _explicitNullValueFormat; set { _explicitNullValueFormat = value; AdditionalData?.Remove("format"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("format"); else _explicitNullProperties?.Remove("format"); } }
         private string _explicitNullValueFormat = default!;
 #endif
         /// <summary>Video Frame Rate</summary>
-        public double? FrameRate { get => _explicitNullValueFrameRate; set { _explicitNullValueFrameRate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("frameRate"); else _explicitNullProperties?.Remove("frameRate"); } }
+        public double? FrameRate { get => _explicitNullValueFrameRate; set { _explicitNullValueFrameRate = value; AdditionalData?.Remove("frameRate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("frameRate"); else _explicitNullProperties?.Remove("frameRate"); } }
         private double? _explicitNullValueFrameRate = default!;
         /// <summary>List of frames</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Frames { get => _explicitNullValueFrames; set { _explicitNullValueFrames = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("frames"); else _explicitNullProperties?.Remove("frames"); } }
+        public List<string>? Frames { get => _explicitNullValueFrames; set { _explicitNullValueFrames = value; AdditionalData?.Remove("frames"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("frames"); else _explicitNullProperties?.Remove("frames"); } }
         private List<string>? _explicitNullValueFrames = default!;
 #nullable restore
 #else
-        public List<string> Frames { get => _explicitNullValueFrames; set { _explicitNullValueFrames = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("frames"); else _explicitNullProperties?.Remove("frames"); } }
+        public List<string> Frames { get => _explicitNullValueFrames; set { _explicitNullValueFrames = value; AdditionalData?.Remove("frames"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("frames"); else _explicitNullProperties?.Remove("frames"); } }
         private List<string> _explicitNullValueFrames = default!;
 #endif
         /// <summary>GMB media error. It can be one of the following errors: imageSize, imageDimension, imageType</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GmbError { get => _explicitNullValueGmbError; set { _explicitNullValueGmbError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gmbError"); else _explicitNullProperties?.Remove("gmbError"); } }
+        public string? GmbError { get => _explicitNullValueGmbError; set { _explicitNullValueGmbError = value; AdditionalData?.Remove("gmbError"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gmbError"); else _explicitNullProperties?.Remove("gmbError"); } }
         private string? _explicitNullValueGmbError = default!;
 #nullable restore
 #else
-        public string GmbError { get => _explicitNullValueGmbError; set { _explicitNullValueGmbError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gmbError"); else _explicitNullProperties?.Remove("gmbError"); } }
+        public string GmbError { get => _explicitNullValueGmbError; set { _explicitNullValueGmbError = value; AdditionalData?.Remove("gmbError"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gmbError"); else _explicitNullProperties?.Remove("gmbError"); } }
         private string _explicitNullValueGmbError = default!;
 #endif
         /// <summary>Media Height</summary>
-        public double? Height { get => _explicitNullValueHeight; set { _explicitNullValueHeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("height"); else _explicitNullProperties?.Remove("height"); } }
+        public double? Height { get => _explicitNullValueHeight; set { _explicitNullValueHeight = value; AdditionalData?.Remove("height"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("height"); else _explicitNullProperties?.Remove("height"); } }
         private double? _explicitNullValueHeight = default!;
         /// <summary>Instagram media error. It can we one of the following errors: imageSize, imageType, imageAspectRatio, videoType, videoDuration, videoSize, videoAspectRatio, videoWidthHeight, audioCodec, audioCodecChannels, videoCodec, videoFrameRate</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InstagramError { get => _explicitNullValueInstagramError; set { _explicitNullValueInstagramError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("instagramError"); else _explicitNullProperties?.Remove("instagramError"); } }
+        public string? InstagramError { get => _explicitNullValueInstagramError; set { _explicitNullValueInstagramError = value; AdditionalData?.Remove("instagramError"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("instagramError"); else _explicitNullProperties?.Remove("instagramError"); } }
         private string? _explicitNullValueInstagramError = default!;
 #nullable restore
 #else
-        public string InstagramError { get => _explicitNullValueInstagramError; set { _explicitNullValueInstagramError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("instagramError"); else _explicitNullProperties?.Remove("instagramError"); } }
+        public string InstagramError { get => _explicitNullValueInstagramError; set { _explicitNullValueInstagramError = value; AdditionalData?.Remove("instagramError"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("instagramError"); else _explicitNullProperties?.Remove("instagramError"); } }
         private string _explicitNullValueInstagramError = default!;
 #endif
         /// <summary>Media error. It can be one of the following values: imageSize, imageWidth</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InvalidError { get => _explicitNullValueInvalidError; set { _explicitNullValueInvalidError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invalidError"); else _explicitNullProperties?.Remove("invalidError"); } }
+        public string? InvalidError { get => _explicitNullValueInvalidError; set { _explicitNullValueInvalidError = value; AdditionalData?.Remove("invalidError"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invalidError"); else _explicitNullProperties?.Remove("invalidError"); } }
         private string? _explicitNullValueInvalidError = default!;
 #nullable restore
 #else
-        public string InvalidError { get => _explicitNullValueInvalidError; set { _explicitNullValueInvalidError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invalidError"); else _explicitNullProperties?.Remove("invalidError"); } }
+        public string InvalidError { get => _explicitNullValueInvalidError; set { _explicitNullValueInvalidError = value; AdditionalData?.Remove("invalidError"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invalidError"); else _explicitNullProperties?.Remove("invalidError"); } }
         private string _explicitNullValueInvalidError = default!;
 #endif
         /// <summary>LinkedIn media error. It can be one of the following errors: imageSize, imageType, videoType, videoDuration, videoSize</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LinkedinError { get => _explicitNullValueLinkedinError; set { _explicitNullValueLinkedinError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("linkedinError"); else _explicitNullProperties?.Remove("linkedinError"); } }
+        public string? LinkedinError { get => _explicitNullValueLinkedinError; set { _explicitNullValueLinkedinError = value; AdditionalData?.Remove("linkedinError"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("linkedinError"); else _explicitNullProperties?.Remove("linkedinError"); } }
         private string? _explicitNullValueLinkedinError = default!;
 #nullable restore
 #else
-        public string LinkedinError { get => _explicitNullValueLinkedinError; set { _explicitNullValueLinkedinError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("linkedinError"); else _explicitNullProperties?.Remove("linkedinError"); } }
+        public string LinkedinError { get => _explicitNullValueLinkedinError; set { _explicitNullValueLinkedinError = value; AdditionalData?.Remove("linkedinError"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("linkedinError"); else _explicitNullProperties?.Remove("linkedinError"); } }
         private string _explicitNullValueLinkedinError = default!;
 #endif
         /// <summary>Selected Poster</summary>
-        public double? SelectedPoster { get => _explicitNullValueSelectedPoster; set { _explicitNullValueSelectedPoster = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selectedPoster"); else _explicitNullProperties?.Remove("selectedPoster"); } }
+        public double? SelectedPoster { get => _explicitNullValueSelectedPoster; set { _explicitNullValueSelectedPoster = value; AdditionalData?.Remove("selectedPoster"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selectedPoster"); else _explicitNullProperties?.Remove("selectedPoster"); } }
         private double? _explicitNullValueSelectedPoster = default!;
         /// <summary>Media Size</summary>
-        public double? Size { get => _explicitNullValueSize; set { _explicitNullValueSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("size"); else _explicitNullProperties?.Remove("size"); } }
+        public double? Size { get => _explicitNullValueSize; set { _explicitNullValueSize = value; AdditionalData?.Remove("size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("size"); else _explicitNullProperties?.Remove("size"); } }
         private double? _explicitNullValueSize = default!;
         /// <summary>Tikok Business media error. It can be one of the following errors: videoType, videoDuration, videoSize, videoWidthHeight, videoCodec, videoFrameRate</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TiktokBusinessError { get => _explicitNullValueTiktokBusinessError; set { _explicitNullValueTiktokBusinessError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tiktokBusinessError"); else _explicitNullProperties?.Remove("tiktokBusinessError"); } }
+        public string? TiktokBusinessError { get => _explicitNullValueTiktokBusinessError; set { _explicitNullValueTiktokBusinessError = value; AdditionalData?.Remove("tiktokBusinessError"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tiktokBusinessError"); else _explicitNullProperties?.Remove("tiktokBusinessError"); } }
         private string? _explicitNullValueTiktokBusinessError = default!;
 #nullable restore
 #else
-        public string TiktokBusinessError { get => _explicitNullValueTiktokBusinessError; set { _explicitNullValueTiktokBusinessError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tiktokBusinessError"); else _explicitNullProperties?.Remove("tiktokBusinessError"); } }
+        public string TiktokBusinessError { get => _explicitNullValueTiktokBusinessError; set { _explicitNullValueTiktokBusinessError = value; AdditionalData?.Remove("tiktokBusinessError"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tiktokBusinessError"); else _explicitNullProperties?.Remove("tiktokBusinessError"); } }
         private string _explicitNullValueTiktokBusinessError = default!;
 #endif
         /// <summary>Tiktok media error. It can be one of the following errors: videoType, videoDuration, videoSize, videoWidthHeight, videoCodec, videoFrameRate</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TiktokError { get => _explicitNullValueTiktokError; set { _explicitNullValueTiktokError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tiktokError"); else _explicitNullProperties?.Remove("tiktokError"); } }
+        public string? TiktokError { get => _explicitNullValueTiktokError; set { _explicitNullValueTiktokError = value; AdditionalData?.Remove("tiktokError"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tiktokError"); else _explicitNullProperties?.Remove("tiktokError"); } }
         private string? _explicitNullValueTiktokError = default!;
 #nullable restore
 #else
-        public string TiktokError { get => _explicitNullValueTiktokError; set { _explicitNullValueTiktokError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tiktokError"); else _explicitNullProperties?.Remove("tiktokError"); } }
+        public string TiktokError { get => _explicitNullValueTiktokError; set { _explicitNullValueTiktokError = value; AdditionalData?.Remove("tiktokError"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tiktokError"); else _explicitNullProperties?.Remove("tiktokError"); } }
         private string _explicitNullValueTiktokError = default!;
 #endif
         /// <summary>Twitter media error. It can be one of the following errors: imageSize, videoType, videoDuration, videoSize</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TwitterError { get => _explicitNullValueTwitterError; set { _explicitNullValueTwitterError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twitterError"); else _explicitNullProperties?.Remove("twitterError"); } }
+        public string? TwitterError { get => _explicitNullValueTwitterError; set { _explicitNullValueTwitterError = value; AdditionalData?.Remove("twitterError"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twitterError"); else _explicitNullProperties?.Remove("twitterError"); } }
         private string? _explicitNullValueTwitterError = default!;
 #nullable restore
 #else
-        public string TwitterError { get => _explicitNullValueTwitterError; set { _explicitNullValueTwitterError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twitterError"); else _explicitNullProperties?.Remove("twitterError"); } }
+        public string TwitterError { get => _explicitNullValueTwitterError; set { _explicitNullValueTwitterError = value; AdditionalData?.Remove("twitterError"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twitterError"); else _explicitNullProperties?.Remove("twitterError"); } }
         private string _explicitNullValueTwitterError = default!;
 #endif
         /// <summary>Media Type</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private string? _explicitNullValueType = default!;
 #nullable restore
 #else
-        public string Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public string Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private string _explicitNullValueType = default!;
 #endif
         /// <summary>Media Url</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>Video Codec</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VideoCodecName { get => _explicitNullValueVideoCodecName; set { _explicitNullValueVideoCodecName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("videoCodecName"); else _explicitNullProperties?.Remove("videoCodecName"); } }
+        public string? VideoCodecName { get => _explicitNullValueVideoCodecName; set { _explicitNullValueVideoCodecName = value; AdditionalData?.Remove("videoCodecName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("videoCodecName"); else _explicitNullProperties?.Remove("videoCodecName"); } }
         private string? _explicitNullValueVideoCodecName = default!;
 #nullable restore
 #else
-        public string VideoCodecName { get => _explicitNullValueVideoCodecName; set { _explicitNullValueVideoCodecName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("videoCodecName"); else _explicitNullProperties?.Remove("videoCodecName"); } }
+        public string VideoCodecName { get => _explicitNullValueVideoCodecName; set { _explicitNullValueVideoCodecName = value; AdditionalData?.Remove("videoCodecName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("videoCodecName"); else _explicitNullProperties?.Remove("videoCodecName"); } }
         private string _explicitNullValueVideoCodecName = default!;
 #endif
         /// <summary>Media Width</summary>
-        public double? Width { get => _explicitNullValueWidth; set { _explicitNullValueWidth = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("width"); else _explicitNullProperties?.Remove("width"); } }
+        public double? Width { get => _explicitNullValueWidth; set { _explicitNullValueWidth = value; AdditionalData?.Remove("width"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("width"); else _explicitNullProperties?.Remove("width"); } }
         private double? _explicitNullValueWidth = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CsvMediaResponseSchema"/> and sets the default values.

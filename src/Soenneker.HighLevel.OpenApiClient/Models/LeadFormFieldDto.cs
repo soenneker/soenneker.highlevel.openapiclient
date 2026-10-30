@@ -17,8 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("inputType") is { } nullNodeInputType && nullNodeInputType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InputType = null;
-            if (parseNode.GetChildNode("singleChoiceAnswers") is { } nullNodeSingleChoiceAnswers && nullNodeSingleChoiceAnswers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SingleChoiceAnswers = null;
+            if (parseNode.GetChildNode("inputType") is null) { _explicitNullValueInputType = default!; _explicitNullProperties?.Remove("inputType"); }
+            else if (parseNode.GetChildNode("inputType") is { } nullNodeInputType && nullNodeInputType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InputType = null;
+            if (parseNode.GetChildNode("singleChoiceAnswers") is null) { _explicitNullValueSingleChoiceAnswers = default!; _explicitNullProperties?.Remove("singleChoiceAnswers"); }
+            else if (parseNode.GetChildNode("singleChoiceAnswers") is { } nullNodeSingleChoiceAnswers && nullNodeSingleChoiceAnswers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SingleChoiceAnswers = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Field input type from Google Ads LeadFormFieldUserInputType</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InputType { get => _explicitNullValueInputType; set { _explicitNullValueInputType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputType"); else _explicitNullProperties?.Remove("inputType"); } }
+        public string? InputType { get => _explicitNullValueInputType; set { _explicitNullValueInputType = value; AdditionalData?.Remove("inputType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputType"); else _explicitNullProperties?.Remove("inputType"); } }
         private string? _explicitNullValueInputType = default!;
 #nullable restore
 #else
-        public string InputType { get => _explicitNullValueInputType; set { _explicitNullValueInputType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputType"); else _explicitNullProperties?.Remove("inputType"); } }
+        public string InputType { get => _explicitNullValueInputType; set { _explicitNullValueInputType = value; AdditionalData?.Remove("inputType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputType"); else _explicitNullProperties?.Remove("inputType"); } }
         private string _explicitNullValueInputType = default!;
 #endif
         /// <summary>Single-choice answer options for the field</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? SingleChoiceAnswers { get => _explicitNullValueSingleChoiceAnswers; set { _explicitNullValueSingleChoiceAnswers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("singleChoiceAnswers"); else _explicitNullProperties?.Remove("singleChoiceAnswers"); } }
+        public List<string>? SingleChoiceAnswers { get => _explicitNullValueSingleChoiceAnswers; set { _explicitNullValueSingleChoiceAnswers = value; AdditionalData?.Remove("singleChoiceAnswers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("singleChoiceAnswers"); else _explicitNullProperties?.Remove("singleChoiceAnswers"); } }
         private List<string>? _explicitNullValueSingleChoiceAnswers = default!;
 #nullable restore
 #else
-        public List<string> SingleChoiceAnswers { get => _explicitNullValueSingleChoiceAnswers; set { _explicitNullValueSingleChoiceAnswers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("singleChoiceAnswers"); else _explicitNullProperties?.Remove("singleChoiceAnswers"); } }
+        public List<string> SingleChoiceAnswers { get => _explicitNullValueSingleChoiceAnswers; set { _explicitNullValueSingleChoiceAnswers = value; AdditionalData?.Remove("singleChoiceAnswers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("singleChoiceAnswers"); else _explicitNullProperties?.Remove("singleChoiceAnswers"); } }
         private List<string> _explicitNullValueSingleChoiceAnswers = default!;
 #endif
         /// <summary>

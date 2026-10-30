@@ -17,10 +17,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("__custom_field_id__") is { } nullNodeCustomFieldId && nullNodeCustomFieldId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomFieldId = null;
-            if (parseNode.GetChildNode("eventData") is { } nullNodeEventData && nullNodeEventData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventData = null;
-            if (parseNode.GetChildNode("fieldsOriSequance") is { } nullNodeFieldsOriSequance && nullNodeFieldsOriSequance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldsOriSequance = null;
-            if (parseNode.GetChildNode("__submissions_other_field__") is { } nullNodeSubmissionsOtherField && nullNodeSubmissionsOtherField.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubmissionsOtherField = null;
+            if (parseNode.GetChildNode("__custom_field_id__") is null) { _explicitNullValueCustomFieldId = default!; _explicitNullProperties?.Remove("__custom_field_id__"); }
+            else if (parseNode.GetChildNode("__custom_field_id__") is { } nullNodeCustomFieldId && nullNodeCustomFieldId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomFieldId = null;
+            if (parseNode.GetChildNode("eventData") is null) { _explicitNullValueEventData = default!; _explicitNullProperties?.Remove("eventData"); }
+            else if (parseNode.GetChildNode("eventData") is { } nullNodeEventData && nullNodeEventData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventData = null;
+            if (parseNode.GetChildNode("fieldsOriSequance") is null) { _explicitNullValueFieldsOriSequance = default!; _explicitNullProperties?.Remove("fieldsOriSequance"); }
+            else if (parseNode.GetChildNode("fieldsOriSequance") is { } nullNodeFieldsOriSequance && nullNodeFieldsOriSequance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldsOriSequance = null;
+            if (parseNode.GetChildNode("__submissions_other_field__") is null) { _explicitNullValueSubmissionsOtherField = default!; _explicitNullProperties?.Remove("__submissions_other_field__"); }
+            else if (parseNode.GetChildNode("__submissions_other_field__") is { } nullNodeSubmissionsOtherField && nullNodeSubmissionsOtherField.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubmissionsOtherField = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,41 +32,41 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The custom_field_id__ property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomFieldId { get => _explicitNullValueCustomFieldId; set { _explicitNullValueCustomFieldId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("__custom_field_id__"); else _explicitNullProperties?.Remove("__custom_field_id__"); } }
+        public string? CustomFieldId { get => _explicitNullValueCustomFieldId; set { _explicitNullValueCustomFieldId = value; AdditionalData?.Remove("__custom_field_id__"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("__custom_field_id__"); else _explicitNullProperties?.Remove("__custom_field_id__"); } }
         private string? _explicitNullValueCustomFieldId = default!;
 #nullable restore
 #else
-        public string CustomFieldId { get => _explicitNullValueCustomFieldId; set { _explicitNullValueCustomFieldId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("__custom_field_id__"); else _explicitNullProperties?.Remove("__custom_field_id__"); } }
+        public string CustomFieldId { get => _explicitNullValueCustomFieldId; set { _explicitNullValueCustomFieldId = value; AdditionalData?.Remove("__custom_field_id__"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("__custom_field_id__"); else _explicitNullProperties?.Remove("__custom_field_id__"); } }
         private string _explicitNullValueCustomFieldId = default!;
 #endif
         /// <summary>The eventData property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.EventDataSchema? EventData { get => _explicitNullValueEventData; set { _explicitNullValueEventData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eventData"); else _explicitNullProperties?.Remove("eventData"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.EventDataSchema? EventData { get => _explicitNullValueEventData; set { _explicitNullValueEventData = value; AdditionalData?.Remove("eventData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eventData"); else _explicitNullProperties?.Remove("eventData"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.EventDataSchema? _explicitNullValueEventData = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.EventDataSchema EventData { get => _explicitNullValueEventData; set { _explicitNullValueEventData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eventData"); else _explicitNullProperties?.Remove("eventData"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.EventDataSchema EventData { get => _explicitNullValueEventData; set { _explicitNullValueEventData = value; AdditionalData?.Remove("eventData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eventData"); else _explicitNullProperties?.Remove("eventData"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.EventDataSchema _explicitNullValueEventData = default!;
 #endif
         /// <summary>The fieldsOriSequance property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? FieldsOriSequance { get => _explicitNullValueFieldsOriSequance; set { _explicitNullValueFieldsOriSequance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldsOriSequance"); else _explicitNullProperties?.Remove("fieldsOriSequance"); } }
+        public List<string>? FieldsOriSequance { get => _explicitNullValueFieldsOriSequance; set { _explicitNullValueFieldsOriSequance = value; AdditionalData?.Remove("fieldsOriSequance"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldsOriSequance"); else _explicitNullProperties?.Remove("fieldsOriSequance"); } }
         private List<string>? _explicitNullValueFieldsOriSequance = default!;
 #nullable restore
 #else
-        public List<string> FieldsOriSequance { get => _explicitNullValueFieldsOriSequance; set { _explicitNullValueFieldsOriSequance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldsOriSequance"); else _explicitNullProperties?.Remove("fieldsOriSequance"); } }
+        public List<string> FieldsOriSequance { get => _explicitNullValueFieldsOriSequance; set { _explicitNullValueFieldsOriSequance = value; AdditionalData?.Remove("fieldsOriSequance"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldsOriSequance"); else _explicitNullProperties?.Remove("fieldsOriSequance"); } }
         private List<string> _explicitNullValueFieldsOriSequance = default!;
 #endif
         /// <summary>The submissions_other_field__ property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SubmissionsOtherField { get => _explicitNullValueSubmissionsOtherField; set { _explicitNullValueSubmissionsOtherField = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("__submissions_other_field__"); else _explicitNullProperties?.Remove("__submissions_other_field__"); } }
+        public string? SubmissionsOtherField { get => _explicitNullValueSubmissionsOtherField; set { _explicitNullValueSubmissionsOtherField = value; AdditionalData?.Remove("__submissions_other_field__"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("__submissions_other_field__"); else _explicitNullProperties?.Remove("__submissions_other_field__"); } }
         private string? _explicitNullValueSubmissionsOtherField = default!;
 #nullable restore
 #else
-        public string SubmissionsOtherField { get => _explicitNullValueSubmissionsOtherField; set { _explicitNullValueSubmissionsOtherField = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("__submissions_other_field__"); else _explicitNullProperties?.Remove("__submissions_other_field__"); } }
+        public string SubmissionsOtherField { get => _explicitNullValueSubmissionsOtherField; set { _explicitNullValueSubmissionsOtherField = value; AdditionalData?.Remove("__submissions_other_field__"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("__submissions_other_field__"); else _explicitNullProperties?.Remove("__submissions_other_field__"); } }
         private string _explicitNullValueSubmissionsOtherField = default!;
 #endif
         /// <summary>

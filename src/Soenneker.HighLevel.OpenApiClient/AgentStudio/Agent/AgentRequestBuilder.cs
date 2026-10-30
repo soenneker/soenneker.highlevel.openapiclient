@@ -130,7 +130,7 @@ namespace Soenneker.HighLevel.OpenApiClient.AgentStudio.Agent
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.AgentStudio.Agent.AgentRequestBuilder.AgentRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/agent-studio/agent?limit={limit}&locationId={locationId}&offset={offset}{&isPublished*,source*}", PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve("{+baseurl}/agent-studio/agent?limit={limit}&locationId={locationId}&offset={offset}{&isPublished*,source*}", RequestAdapter.BaseUrl, "https://services.leadconnectorhq.com", "/agent-studio/agent", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -151,7 +151,7 @@ namespace Soenneker.HighLevel.OpenApiClient.AgentStudio.Agent
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://services.leadconnectorhq.com", "/agent-studio/agent", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);

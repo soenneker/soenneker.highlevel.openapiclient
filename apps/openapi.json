@@ -56781,7 +56781,7 @@
             "example": "Trigger a Workflow"
           },
           "details": {
-            "$ref": "#/components/schemas/CreateActionDtoDetails"
+            "$ref": "#/components/schemas/ActionDataDtoDetails"
           }
         }
       },
@@ -61609,7 +61609,7 @@
             "example": "kDj7BHej9Zyyq3QakJmz"
           },
           "sourceMeta": {
-            "$ref": "#/components/schemas/OrderResponseSchemaSourceMetaProperty"
+            "$ref": "#/components/schemas/OrderResponseSchemaSourceMeta"
           },
           "couponCode": {
             "type": "string",
@@ -61786,7 +61786,7 @@
             "example": "unfulfilled"
           },
           "contactSnapshot": {
-            "$ref": "#/components/schemas/GetOrderResponseSchemaContactSnapshotProperty"
+            "$ref": "#/components/schemas/GetOrderResponseSchemaContactSnapshot"
           },
           "amountSummary": {
             "$ref": "#/components/schemas/GetOrderResponseSchemaAmountSummary"
@@ -61803,7 +61803,7 @@
             "example": "{ _id: 61dd33e88058b9f967ca79dc, authorizeAmount: 0, locationId: \"SBAWb4yu7A4LSc0skQ6g\", name: \"Sample Product\": price: {}, product: { name: \"Testing product\", productType: \"SERVICE\" }}"
           },
           "coupon": {
-            "$ref": "#/components/schemas/GetOrderResponseSchemaCouponProperty"
+            "$ref": "#/components/schemas/GetOrderResponseSchemaCoupon"
           },
           "trackingId": {
             "type": "string",
@@ -61816,7 +61816,7 @@
             "example": "5d51db5a-42b0-4b04-ba88-2c046c982a3a"
           },
           "meta": {
-            "$ref": "#/components/schemas/GetOrderResponseSchemaMetaProperty"
+            "$ref": "#/components/schemas/GetOrderResponseSchemaMeta"
           },
           "markAsTest": {
             "type": "boolean",
@@ -61834,7 +61834,7 @@
             "example": true
           },
           "taxCalculationProvider": {
-            "$ref": "#/components/schemas/GetOrderResponseSchemaTaxCalculationProviderProperty"
+            "$ref": "#/components/schemas/GetOrderResponseSchemaTaxCalculationProvider"
           },
           "createdBy": {
             "type": "string",
@@ -62515,7 +62515,7 @@
             "example": "100"
           },
           "status": {
-            "$ref": "#/components/schemas/TxnResponseSchemaStatusProperty"
+            "$ref": "#/components/schemas/TxnResponseSchemaStatus"
           },
           "liveMode": {
             "type": "boolean",
@@ -62553,7 +62553,7 @@
             "example": "BDBMEghdIUaqMPEsK349"
           },
           "entitySourceMeta": {
-            "$ref": "#/components/schemas/TxnResponseSchemaEntitySourceMetaProperty"
+            "$ref": "#/components/schemas/TxnResponseSchemaEntitySourceMeta"
           },
           "subscriptionId": {
             "type": "string",
@@ -62566,7 +62566,7 @@
             "example": "in_1KGcXDCScnf89tZohCsmImwE"
           },
           "chargeSnapshot": {
-            "$ref": "#/components/schemas/TxnResponseSchemaChargeSnapshotProperty"
+            "$ref": "#/components/schemas/GetTxnResponseSchemaChargeSnapshot"
           },
           "paymentProviderType": {
             "type": "string",
@@ -62601,7 +62601,7 @@
             "example": "10"
           },
           "paymentMethod": {
-            "$ref": "#/components/schemas/TxnResponseSchemaPaymentMethodProperty"
+            "$ref": "#/components/schemas/TxnResponseSchemaPaymentMethod"
           },
           "fulfilledAt": {
             "type": "string",
@@ -62667,7 +62667,7 @@
             "example": "XPLSw2SVagl12LMDeTmQ"
           },
           "contactSnapshot": {
-            "$ref": "#/components/schemas/GetTxnResponseSchemaContactSnapshotProperty"
+            "$ref": "#/components/schemas/GetTxnResponseSchemaContactSnapshot"
           },
           "currency": {
             "type": "string",
@@ -62680,7 +62680,7 @@
             "example": "100"
           },
           "status": {
-            "$ref": "#/components/schemas/GetTxnResponseSchemaStatusProperty"
+            "$ref": "#/components/schemas/GetTxnResponseSchemaStatus"
           },
           "liveMode": {
             "type": "boolean",
@@ -62718,7 +62718,7 @@
             "example": "in_1KGcXDCScnf89tZohCsmImwE"
           },
           "chargeSnapshot": {
-            "$ref": "#/components/schemas/GetTxnResponseSchemaChargeSnapshotProperty"
+            "$ref": "#/components/schemas/GetTxnResponseSchemaChargeSnapshot"
           },
           "invoiceId": {
             "type": "string",
@@ -62731,7 +62731,7 @@
             "example": "sub_1KGcXDCScnf89tZoVkoEMCEL"
           },
           "paymentProvider": {
-            "$ref": "#/components/schemas/GetTxnResponseSchemaPaymentProviderProperty"
+            "$ref": "#/components/schemas/GetTxnResponseSchemaPaymentProvider"
           },
           "ipAddress": {
             "type": "string",
@@ -62739,7 +62739,7 @@
             "example": "107.178.194.224"
           },
           "meta": {
-            "$ref": "#/components/schemas/GetTxnResponseSchemaMetaProperty"
+            "$ref": "#/components/schemas/GetTxnResponseSchemaMeta"
           },
           "markAsTest": {
             "type": "boolean",
@@ -62767,7 +62767,7 @@
             "example": "false"
           },
           "qboResponse": {
-            "$ref": "#/components/schemas/GetTxnResponseSchemaQboResponseProperty"
+            "$ref": "#/components/schemas/GetTxnResponseSchemaQboResponse"
           },
           "traceId": {
             "type": "string",
@@ -62837,7 +62837,7 @@
             "example": "100"
           },
           "status": {
-            "$ref": "#/components/schemas/SubscriptionResponseSchemaStatusProperty"
+            "$ref": "#/components/schemas/SubscriptionResponseSchemaStatus"
           },
           "liveMode": {
             "type": "boolean",
@@ -62870,7 +62870,7 @@
             "example": "bevrkPbLaDNXFaqfLKMm"
           },
           "entitySourceMeta": {
-            "$ref": "#/components/schemas/SubscriptionResponseSchemaEntitySourceMetaProperty"
+            "$ref": "#/components/schemas/SubscriptionResponseSchemaEntitySourceMeta"
           },
           "subscriptionId": {
             "type": "string",
@@ -62878,7 +62878,7 @@
             "example": "I-0UE609H8E43P"
           },
           "subscriptionSnapshot": {
-            "$ref": "#/components/schemas/SubscriptionResponseSchemaSubscriptionSnapshotProperty"
+            "$ref": "#/components/schemas/GetSubscriptionResponseSchemaSubscriptionSnapshot"
           },
           "paymentProviderType": {
             "type": "string",
@@ -63024,7 +63024,7 @@
             "example": "64bf78af39118e4011926cba"
           },
           "altType": {
-            "$ref": "#/components/schemas/GetSubscriptionResponseSchemaAltTypeProperty"
+            "$ref": "#/components/schemas/GetSubscriptionResponseSchemaAltType"
           },
           "altId": {
             "type": "string",
@@ -63037,10 +63037,10 @@
             "example": "XPLSw2SVagl12LMDeTmQ"
           },
           "contactSnapshot": {
-            "$ref": "#/components/schemas/GetSubscriptionResponseSchemaContactSnapshotProperty"
+            "$ref": "#/components/schemas/GetSubscriptionResponseSchemaContactSnapshot"
           },
           "coupon": {
-            "$ref": "#/components/schemas/GetSubscriptionResponseSchemaCouponProperty"
+            "$ref": "#/components/schemas/GetSubscriptionResponseSchemaCoupon"
           },
           "currency": {
             "type": "string",
@@ -63053,7 +63053,7 @@
             "example": "100"
           },
           "status": {
-            "$ref": "#/components/schemas/GetSubscriptionResponseSchemaStatusProperty"
+            "$ref": "#/components/schemas/GetSubscriptionResponseSchemaStatus"
           },
           "liveMode": {
             "type": "boolean",
@@ -63079,10 +63079,10 @@
             "example": "I-0UE609H8E43P"
           },
           "subscriptionSnapshot": {
-            "$ref": "#/components/schemas/GetSubscriptionResponseSchemaSubscriptionSnapshotProperty"
+            "$ref": "#/components/schemas/GetSubscriptionResponseSchemaSubscriptionSnapshot"
           },
           "paymentProvider": {
-            "$ref": "#/components/schemas/GetSubscriptionResponseSchemaPaymentProviderProperty"
+            "$ref": "#/components/schemas/GetSubscriptionResponseSchemaPaymentProvider"
           },
           "ipAddress": {
             "type": "string",
@@ -63102,7 +63102,7 @@
             "example": "2024-01-23T09:57:04.846Z"
           },
           "meta": {
-            "$ref": "#/components/schemas/GetSubscriptionResponseSchemaMetaProperty"
+            "$ref": "#/components/schemas/GetSubscriptionResponseSchemaMeta"
           },
           "markAsTest": {
             "type": "boolean",
@@ -63113,10 +63113,10 @@
             "$ref": "#/components/schemas/GetSubscriptionResponseSchemaSchedule"
           },
           "autoPayment": {
-            "$ref": "#/components/schemas/GetSubscriptionResponseSchemaAutoPaymentProperty"
+            "$ref": "#/components/schemas/GetSubscriptionResponseSchemaAutoPayment"
           },
           "recurringProduct": {
-            "$ref": "#/components/schemas/GetSubscriptionResponseSchemaRecurringProductProperty"
+            "$ref": "#/components/schemas/GetSubscriptionResponseSchemaRecurringProduct"
           },
           "canceledAt": {
             "type": "string",
@@ -63726,7 +63726,7 @@
             "example": "65f0b217a05c774da7f1efa5"
           },
           "paymentProvider": {
-            "$ref": "#/components/schemas/CreateCustomProvidersResponseSchemaPaymentProviderProperty"
+            "$ref": "#/components/schemas/ConnectCustomProvidersResponseSchemaPaymentProvider"
           },
           "deleted": {
             "type": "boolean",
@@ -63822,7 +63822,7 @@
             "example": "65f0b217a05c774da7f1efa5"
           },
           "paymentProvider": {
-            "$ref": "#/components/schemas/GetCustomProvidersResponseSchemaPaymentProviderProperty"
+            "$ref": "#/components/schemas/ConnectCustomProvidersResponseSchemaPaymentProvider"
           },
           "deleted": {
             "type": "boolean",
@@ -63939,7 +63939,7 @@
             "example": "65f0b217a05c774da7f1efa5"
           },
           "paymentProvider": {
-            "$ref": "#/components/schemas/ConnectCustomProvidersResponseSchemaPaymentProviderProperty"
+            "$ref": "#/components/schemas/ConnectCustomProvidersResponseSchemaPaymentProvider"
           },
           "deleted": {
             "type": "boolean",
@@ -66472,19 +66472,19 @@
             "example": "student"
           },
           "firstObjectLabel": {
-            "$ref": "#/components/schemas/GetPostSuccessfulResponseDtoFirstObjectLabelProperty"
+            "$ref": "#/components/schemas/CreateAssociationReqDtoFirstObjectLabel"
           },
           "firstObjectKey": {
-            "$ref": "#/components/schemas/GetPostSuccessfulResponseDtoFirstObjectKeyProperty"
+            "$ref": "#/components/schemas/CreateAssociationReqDtoFirstObjectKey"
           },
           "secondObjectLabel": {
-            "$ref": "#/components/schemas/GetPostSuccessfulResponseDtoSecondObjectLabelProperty"
+            "$ref": "#/components/schemas/CreateAssociationReqDtoSecondObjectLabel"
           },
           "secondObjectKey": {
-            "$ref": "#/components/schemas/GetPostSuccessfulResponseDtoSecondObjectKeyProperty"
+            "$ref": "#/components/schemas/CreateAssociationReqDtoSecondObjectKey"
           },
           "associationType": {
-            "$ref": "#/components/schemas/GetPostSuccessfulResponseDtoAssociationTypeProperty"
+            "$ref": "#/components/schemas/GetPostSuccessfulResponseDtoAssociationType"
           }
         }
       },
@@ -66509,16 +66509,16 @@
             "example": "student_teacher"
           },
           "firstObjectLabel": {
-            "$ref": "#/components/schemas/CreateAssociationReqDtoFirstObjectLabelProperty"
+            "$ref": "#/components/schemas/CreateAssociationReqDtoFirstObjectLabel"
           },
           "firstObjectKey": {
-            "$ref": "#/components/schemas/CreateAssociationReqDtoFirstObjectKeyProperty"
+            "$ref": "#/components/schemas/CreateAssociationReqDtoFirstObjectKey"
           },
           "secondObjectLabel": {
-            "$ref": "#/components/schemas/CreateAssociationReqDtoSecondObjectLabelProperty"
+            "$ref": "#/components/schemas/CreateAssociationReqDtoSecondObjectLabel"
           },
           "secondObjectKey": {
-            "$ref": "#/components/schemas/CreateAssociationReqDtoSecondObjectKeyProperty"
+            "$ref": "#/components/schemas/CreateAssociationReqDtoSecondObjectKey"
           }
         }
       },
@@ -66530,10 +66530,10 @@
         "type": "object",
         "properties": {
           "firstObjectLabel": {
-            "$ref": "#/components/schemas/UpdateAssociationReqDtoFirstObjectLabelProperty"
+            "$ref": "#/components/schemas/UpdateAssociationReqDtoFirstObjectLabel"
           },
           "secondObjectLabel": {
-            "$ref": "#/components/schemas/UpdateAssociationReqDtoSecondObjectLabelProperty"
+            "$ref": "#/components/schemas/UpdateAssociationReqDtoSecondObjectLabel"
           }
         }
       },
@@ -78129,7 +78129,7 @@
           "customFields": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/UpdateOpportunityDtoCustomFieldsItem"
+              "$ref": "#/components/schemas/CreateDtoCustomFieldsItem"
             },
             "description": "Update custom fields to opportunities."
           }
@@ -78189,7 +78189,7 @@
             "example": "7915dedc-8f18-44d5-8bc3-77c04e994a10"
           },
           "monetaryValue": {
-            "$ref": "#/components/schemas/UpsertOpportunityDtoMonetaryValueProperty"
+            "$ref": "#/components/schemas/UpsertOpportunityDtoMonetaryValue"
           },
           "assignedTo": {
             "type": "string",
@@ -79941,10 +79941,10 @@
             "example": "u37swmmLbA02zgqKPpxITe2"
           },
           "platform": {
-            "$ref": "#/components/schemas/SocialGoogleMediaAccountSchemaPlatformProperty"
+            "$ref": "#/components/schemas/SocialGoogleMediaAccountSchemaPlatform"
           },
           "type": {
-            "$ref": "#/components/schemas/SocialGoogleMediaAccountSchemaTypeProperty"
+            "$ref": "#/components/schemas/SocialGoogleMediaAccountSchemaType"
           },
           "name": {
             "type": "string",
@@ -80054,7 +80054,7 @@
             "example": "true"
           },
           "postType": {
-            "$ref": "#/components/schemas/SearchPostDtoPostTypeProperty"
+            "$ref": "#/components/schemas/CreatePostDtoType"
           }
         }
       },
@@ -80172,7 +80172,7 @@
             "example": "Test suggestion"
           },
           "approvalStatus": {
-            "$ref": "#/components/schemas/FormatedApprovalDetailsApprovalStatusProperty"
+            "$ref": "#/components/schemas/CreatePostDtoPostApprovalDetailsApprovalStatus"
           },
           "approverUser": {
             "$ref": "#/components/schemas/FormatedApprovalDetailsApproverUser"
@@ -80183,7 +80183,7 @@
         "type": "object",
         "properties": {
           "privacyLevel": {
-            "$ref": "#/components/schemas/TiktokPostSchemaPrivacyLevelProperty"
+            "$ref": "#/components/schemas/CreatePostDtoTiktokPostDetailsPrivacyLevel"
           },
           "promoteOtherBrand": {
             "type": "boolean",
@@ -80328,7 +80328,7 @@
             "example": "https://google.com"
           },
           "actionType": {
-            "$ref": "#/components/schemas/GmbPostSchemaActionTypeProperty"
+            "$ref": "#/components/schemas/CreatePostDtoGmbPostDetailsActionType"
           }
         }
       },
@@ -80412,14 +80412,14 @@
             "description": "Post Media Data \n The limitations of media as per the platforms is provided through the reference link in API description"
           },
           "status": {
-            "$ref": "#/components/schemas/GetPostFormattedSchemaStatusProperty"
+            "$ref": "#/components/schemas/CreatePostSuccessfulResponseSchemaPostStatus"
           },
           "createdBy": {
             "type": "string",
             "example": "Lx1EI6YIgQYMQi0ytFXv"
           },
           "type": {
-            "$ref": "#/components/schemas/GetPostFormattedSchemaTypeProperty"
+            "$ref": "#/components/schemas/CreatePostDtoType"
           },
           "tags": {
             "type": "array",
@@ -80511,7 +80511,7 @@
             "example": "Test suggestion"
           },
           "approvalStatus": {
-            "$ref": "#/components/schemas/PostApprovalSchemaApprovalStatusProperty"
+            "$ref": "#/components/schemas/CreatePostDtoPostApprovalDetailsApprovalStatus"
           }
         }
       },
@@ -80546,7 +80546,7 @@
             "description": "Post Media Data \n The limitations of media as per the platforms is provided through the reference link in API description"
           },
           "status": {
-            "$ref": "#/components/schemas/CreatePostDtoStatusProperty"
+            "$ref": "#/components/schemas/CreatePostDtoStatus"
           },
           "scheduleDate": {
             "type": "string",
@@ -80565,7 +80565,7 @@
             "$ref": "#/components/schemas/CreatePostDtoOgTagsDetails"
           },
           "type": {
-            "$ref": "#/components/schemas/CreatePostDtoTypeProperty"
+            "$ref": "#/components/schemas/CreatePostDtoType"
           },
           "postApprovalDetails": {
             "$ref": "#/components/schemas/CreatePostDtoPostApprovalDetails"
@@ -80704,7 +80704,7 @@
             "description": "Post Media Data \n The limitations of media as per the platforms is provided through the reference link in API description"
           },
           "status": {
-            "$ref": "#/components/schemas/PostCreateRequestStatusProperty"
+            "$ref": "#/components/schemas/PostCreateRequestStatus"
           },
           "scheduleDate": {
             "type": "string",
@@ -80723,7 +80723,7 @@
             "$ref": "#/components/schemas/PostCreateRequestOgTagsDetails"
           },
           "type": {
-            "$ref": "#/components/schemas/PostCreateRequestTypeProperty"
+            "$ref": "#/components/schemas/CreatePostDtoType"
           },
           "postApprovalDetails": {
             "$ref": "#/components/schemas/PostCreateRequestPostApprovalDetails"
@@ -81048,7 +81048,7 @@
         "type": "object",
         "properties": {
           "type": {
-            "$ref": "#/components/schemas/AttachFbAccountDtoTypeProperty"
+            "$ref": "#/components/schemas/AttachFbAccountDtoType"
           },
           "originId": {
             "type": "string",
@@ -81093,10 +81093,10 @@
             "example": "u37swmmLbA02zgqKPpxITe2"
           },
           "platform": {
-            "$ref": "#/components/schemas/SocialMediaFacebookAccountSchemaPlatformProperty"
+            "$ref": "#/components/schemas/SocialMediaFacebookAccountSchemaPlatform"
           },
           "type": {
-            "$ref": "#/components/schemas/SocialMediaFacebookAccountSchemaTypeProperty"
+            "$ref": "#/components/schemas/SocialMediaFacebookAccountSchemaType"
           },
           "name": {
             "type": "string",
@@ -81276,10 +81276,10 @@
             "example": "u37swmmLbA02zgqKPpxITe2"
           },
           "platform": {
-            "$ref": "#/components/schemas/SocialMediaInstagramAccountSchemaPlatformProperty"
+            "$ref": "#/components/schemas/SocialMediaInstagramAccountResponseDtoResultsPlatform"
           },
           "type": {
-            "$ref": "#/components/schemas/SocialMediaInstagramAccountSchemaTypeProperty"
+            "$ref": "#/components/schemas/SocialMediaInstagramAccountResponseDtoResultsType"
           },
           "name": {
             "type": "string",
@@ -81498,10 +81498,10 @@
             "example": "u37swmmLbA02zgqKPpxITe2"
           },
           "platform": {
-            "$ref": "#/components/schemas/SocialMediaLinkedInAccountSchemaPlatformProperty"
+            "$ref": "#/components/schemas/SocialMediaLinkedInAccountResponseDtoResultsPlatform"
           },
           "type": {
-            "$ref": "#/components/schemas/SocialMediaLinkedInAccountSchemaTypeProperty"
+            "$ref": "#/components/schemas/SocialMediaLinkedInAccountResponseDtoResultsType"
           },
           "name": {
             "type": "string",
@@ -81701,10 +81701,10 @@
             "example": "u37swmmLbA02zgqKPpxITe2"
           },
           "platform": {
-            "$ref": "#/components/schemas/SocialMediaTwitterAccountSchemaPlatformProperty"
+            "$ref": "#/components/schemas/SocialMediaTwitterAccountResponseDtoResultsPlatform"
           },
           "type": {
-            "$ref": "#/components/schemas/SocialMediaTwitterAccountSchemaTypeProperty"
+            "$ref": "#/components/schemas/SocialMediaInstagramAccountResponseDtoResultsType"
           },
           "name": {
             "type": "string",
@@ -82235,7 +82235,7 @@
             "example": "Initial Comment"
           },
           "type": {
-            "$ref": "#/components/schemas/CsvPostSchemaTypeProperty"
+            "$ref": "#/components/schemas/CsvPostSchemaType"
           },
           "tiktokPostDetails": {
             "$ref": "#/components/schemas/CsvPostSchemaTiktokPostDetails"
@@ -82357,7 +82357,7 @@
             "example": "File"
           },
           "status": {
-            "$ref": "#/components/schemas/CsvResponseStatusProperty"
+            "$ref": "#/components/schemas/CsvResponseSchemaCsvStatus"
           },
           "count": {
             "type": "number",
@@ -82491,7 +82491,7 @@
             "example": true
           },
           "type": {
-            "$ref": "#/components/schemas/TiktokProfileSchemaTypeProperty"
+            "$ref": "#/components/schemas/TiktokProfileSchemaType"
           }
         }
       },
@@ -82591,10 +82591,10 @@
             "example": "u37swmmLbA02zgqKPpxITe2"
           },
           "platform": {
-            "$ref": "#/components/schemas/SocialMediaTiktokAccountSchemaPlatformProperty"
+            "$ref": "#/components/schemas/SocialMediaTiktokAccountResponseDtoResultsPlatform"
           },
           "type": {
-            "$ref": "#/components/schemas/SocialMediaTiktokAccountSchemaTypeProperty"
+            "$ref": "#/components/schemas/SocialMediaTiktokAccountResponseDtoResultsType"
           },
           "name": {
             "type": "string",
@@ -83262,10 +83262,10 @@
             "example": "u37swmmLbA02zgqKPpxITe2"
           },
           "platform": {
-            "$ref": "#/components/schemas/SocialMediaGmbAccountResponseDtoResultsPlatform"
+            "$ref": "#/components/schemas/SocialGoogleMediaAccountSchemaPlatform"
           },
           "type": {
-            "$ref": "#/components/schemas/SocialMediaGmbAccountResponseDtoResultsType"
+            "$ref": "#/components/schemas/SocialGoogleMediaAccountSchemaType"
           },
           "name": {
             "type": "string",
@@ -83501,7 +83501,7 @@
             "example": "Test suggestion"
           },
           "approvalStatus": {
-            "$ref": "#/components/schemas/GetPostFormattedSchemaPostApprovalDetailsApprovalStatus"
+            "$ref": "#/components/schemas/CreatePostDtoPostApprovalDetailsApprovalStatus"
           },
           "approverUser": {
             "$ref": "#/components/schemas/FormatedApprovalDetailsApproverUser"
@@ -83513,7 +83513,7 @@
         "type": "object",
         "properties": {
           "privacyLevel": {
-            "$ref": "#/components/schemas/GetPostFormattedSchemaTiktokPostDetailsPrivacyLevel"
+            "$ref": "#/components/schemas/CreatePostDtoTiktokPostDetailsPrivacyLevel"
           },
           "promoteOtherBrand": {
             "type": "boolean",
@@ -83593,7 +83593,7 @@
             "example": "https://google.com"
           },
           "actionType": {
-            "$ref": "#/components/schemas/GetPostFormattedSchemaGmbPostDetailsActionType"
+            "$ref": "#/components/schemas/CreatePostDtoGmbPostDetailsActionType"
           }
         },
         "description": "GMB Post Details"
@@ -83880,7 +83880,7 @@
             "example": "Lx1EI6YIgQYMQi0ytFXv"
           },
           "type": {
-            "$ref": "#/components/schemas/CreatePostSuccessfulResponseSchemaPostType"
+            "$ref": "#/components/schemas/CreatePostDtoType"
           },
           "tags": {
             "type": "array",
@@ -83999,14 +83999,14 @@
             "description": "Post Media Data \n The limitations of media as per the platforms is provided through the reference link in API description"
           },
           "status": {
-            "$ref": "#/components/schemas/GetPostSuccessfulResponseSchemaPostStatus"
+            "$ref": "#/components/schemas/CreatePostSuccessfulResponseSchemaPostStatus"
           },
           "createdBy": {
             "type": "string",
             "example": "Lx1EI6YIgQYMQi0ytFXv"
           },
           "type": {
-            "$ref": "#/components/schemas/GetPostSuccessfulResponseSchemaPostType"
+            "$ref": "#/components/schemas/CreatePostDtoType"
           },
           "tags": {
             "type": "array",
@@ -84079,7 +84079,7 @@
             "example": "Test suggestion"
           },
           "approvalStatus": {
-            "$ref": "#/components/schemas/PostCreateRequestPostApprovalDetailsApprovalStatus"
+            "$ref": "#/components/schemas/CreatePostDtoPostApprovalDetailsApprovalStatus"
           }
         },
         "description": "Post Approval Details"
@@ -84088,7 +84088,7 @@
         "type": "object",
         "properties": {
           "privacyLevel": {
-            "$ref": "#/components/schemas/PostCreateRequestTiktokPostDetailsPrivacyLevel"
+            "$ref": "#/components/schemas/CreatePostDtoTiktokPostDetailsPrivacyLevel"
           },
           "promoteOtherBrand": {
             "type": "boolean",
@@ -84168,7 +84168,7 @@
             "example": "https://google.com"
           },
           "actionType": {
-            "$ref": "#/components/schemas/PostCreateRequestGmbPostDetailsActionType"
+            "$ref": "#/components/schemas/CreatePostDtoGmbPostDetailsActionType"
           }
         },
         "description": "GMB Post Details"
@@ -84253,10 +84253,10 @@
             "example": "u37swmmLbA02zgqKPpxITe2"
           },
           "platform": {
-            "$ref": "#/components/schemas/SocialMediaFbAccountResponseDtoResultsPlatform"
+            "$ref": "#/components/schemas/SocialMediaFacebookAccountSchemaPlatform"
           },
           "type": {
-            "$ref": "#/components/schemas/SocialMediaFbAccountResponseDtoResultsType"
+            "$ref": "#/components/schemas/SocialMediaFacebookAccountSchemaType"
           },
           "name": {
             "type": "string",
@@ -84491,7 +84491,7 @@
             "$ref": "#/components/schemas/SocialMediaTwitterAccountResponseDtoResultsPlatform"
           },
           "type": {
-            "$ref": "#/components/schemas/SocialMediaTwitterAccountResponseDtoResultsType"
+            "$ref": "#/components/schemas/SocialMediaInstagramAccountResponseDtoResultsType"
           },
           "name": {
             "type": "string",
@@ -84706,7 +84706,7 @@
         "type": "object",
         "properties": {
           "privacyLevel": {
-            "$ref": "#/components/schemas/CsvPostSchemaTiktokPostDetailsPrivacyLevel"
+            "$ref": "#/components/schemas/CreatePostDtoTiktokPostDetailsPrivacyLevel"
           },
           "promoteOtherBrand": {
             "type": "boolean",
@@ -84786,7 +84786,7 @@
             "example": "https://google.com"
           },
           "actionType": {
-            "$ref": "#/components/schemas/CsvPostSchemaGmbPostDetailsActionType"
+            "$ref": "#/components/schemas/CreatePostDtoGmbPostDetailsActionType"
           }
         },
         "description": "GMB Post Details"
@@ -87907,7 +87907,7 @@
             "format": "date-time"
           },
           "type": {
-            "$ref": "#/components/schemas/ICustomObjectSchemaTypeProperty"
+            "$ref": "#/components/schemas/ICustomObjectSchemaType"
           }
         }
       },
@@ -106831,7 +106831,7 @@
             "$ref": "#/components/schemas/SendMessageBodyDtoType"
           },
           "subType": {
-            "$ref": "#/components/schemas/SendMessageBodyDtoSubTypeProperty"
+            "$ref": "#/components/schemas/SendMessageBodyDtoSubType"
           },
           "contactId": {
             "type": "string",
@@ -113124,7 +113124,7 @@
             "description": "Array of Product Reviews"
           },
           "status": {
-            "$ref": "#/components/schemas/UpdateProductReviewsDtoStatusProperty"
+            "$ref": "#/components/schemas/UpdateProductReviewsDtoStatus"
           }
         }
       },
@@ -116182,16 +116182,16 @@
             "description": "RRULE as per the iCalendar (RFC 5545) specification for recurring events. DTSTART is not required, instance ids are calculated on the basis of startTime of the event."
           },
           "startTime": {
-            "$ref": "#/components/schemas/CalendarEventDtoStartTimeProperty"
+            "$ref": "#/components/schemas/CalendarEventDtoStartTime"
           },
           "endTime": {
-            "$ref": "#/components/schemas/CalendarEventDtoEndTimeProperty"
+            "$ref": "#/components/schemas/CalendarEventDtoEndTime"
           },
           "dateAdded": {
-            "$ref": "#/components/schemas/CalendarEventDtoDateAddedProperty"
+            "$ref": "#/components/schemas/CalendarEventDtoDateAdded"
           },
           "dateUpdated": {
-            "$ref": "#/components/schemas/CalendarEventDtoDateUpdatedProperty"
+            "$ref": "#/components/schemas/CalendarEventDtoDateUpdated"
           },
           "assignedResources": {
             "type": "array",
@@ -116286,10 +116286,10 @@
             "example": "My event"
           },
           "startTime": {
-            "$ref": "#/components/schemas/BlockedSlotSuccessfulResponseDtoStartTimeProperty"
+            "$ref": "#/components/schemas/BlockedSlotSuccessfulResponseDtoStartTime"
           },
           "endTime": {
-            "$ref": "#/components/schemas/BlockedSlotSuccessfulResponseDtoEndTimeProperty"
+            "$ref": "#/components/schemas/BlockedSlotSuccessfulResponseDtoEndTime"
           },
           "calendarId": {
             "type": "string",
@@ -126959,7 +126959,7 @@
             "example": "1"
           },
           "metaData": {
-            "$ref": "#/components/schemas/IOnboardingDtoMetaDataProperty"
+            "$ref": "#/components/schemas/GetCompanyByIdSchemaOnboardingInfoMetaData"
           }
         }
       },
@@ -129686,7 +129686,7 @@
             "example": "my_custom_field"
           },
           "field_value": {
-            "$ref": "#/components/schemas/NumericFieldFieldValueProperty"
+            "$ref": "#/components/schemas/NumericFieldFieldValue"
           }
         }
       },
@@ -129705,7 +129705,7 @@
             "example": "my_custom_field"
           },
           "field_value": {
-            "$ref": "#/components/schemas/MonetoryFieldFieldValueProperty"
+            "$ref": "#/components/schemas/MonetoryFieldFieldValue"
           }
         }
       },
@@ -130171,7 +130171,7 @@
           "customFields": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/UpdateContactDtoCustomFieldsItem"
+              "$ref": "#/components/schemas/CreateContactDtoCustomFieldsItem"
             }
           },
           "source": {
@@ -130298,7 +130298,7 @@
           "customFields": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/UpsertContactDtoCustomFieldsItem"
+              "$ref": "#/components/schemas/CreateContactDtoCustomFieldsItem"
             }
           },
           "source": {
@@ -140463,7 +140463,7 @@
             "example": "Send SMS Confirmation"
           },
           "actionParameters": {
-            "$ref": "#/components/schemas/CallActionSchemaActionParameters"
+            "$ref": "#/components/schemas/AgentActionResponseDtoActionParameters"
           },
           "executedAt": {
             "type": "string",
@@ -140768,7 +140768,7 @@
             "example": "Transfer to Manager"
           },
           "actionParameters": {
-            "$ref": "#/components/schemas/CreateSingleActionDtoActionParameters"
+            "$ref": "#/components/schemas/AgentActionResponseDtoActionParameters"
           }
         }
       },
@@ -140795,7 +140795,7 @@
             "example": "Transfer to Manager"
           },
           "actionParameters": {
-            "$ref": "#/components/schemas/CreateActionResponseDtoActionParameters"
+            "$ref": "#/components/schemas/AgentActionResponseDtoActionParameters"
           }
         }
       },
@@ -140828,7 +140828,7 @@
             "example": "Transfer to Manager"
           },
           "actionParameters": {
-            "$ref": "#/components/schemas/UpdateSingleActionDtoActionParameters"
+            "$ref": "#/components/schemas/AgentActionResponseDtoActionParameters"
           }
         }
       },
@@ -140855,7 +140855,7 @@
             "example": "Transfer to Manager"
           },
           "actionParameters": {
-            "$ref": "#/components/schemas/UpdateActionResponseDtoActionParameters"
+            "$ref": "#/components/schemas/AgentActionResponseDtoActionParameters"
           }
         }
       },
@@ -140882,7 +140882,7 @@
             "example": "Transfer to Manager"
           },
           "actionParameters": {
-            "$ref": "#/components/schemas/GetActionResponseDtoActionParameters"
+            "$ref": "#/components/schemas/AgentActionResponseDtoActionParameters"
           }
         }
       },
@@ -144496,7 +144496,7 @@
             "example": "6578278e879ad2646715ba9c"
           },
           "status": {
-            "$ref": "#/components/schemas/CreateInvoiceScheduleResponseDtoStatusProperty"
+            "$ref": "#/components/schemas/AutoPaymentInvoiceScheduleResponseDtoStatus"
           },
           "liveMode": {
             "type": "boolean",
@@ -144619,7 +144619,7 @@
             "example": "6578278e879ad2646715ba9c"
           },
           "status": {
-            "$ref": "#/components/schemas/GetScheduleResponseDtoStatusProperty"
+            "$ref": "#/components/schemas/AutoPaymentInvoiceScheduleResponseDtoStatus"
           },
           "liveMode": {
             "type": "boolean",
@@ -144830,7 +144830,7 @@
             "example": "6578278e879ad2646715ba9c"
           },
           "status": {
-            "$ref": "#/components/schemas/UpdateInvoiceScheduleResponseDtoStatusProperty"
+            "$ref": "#/components/schemas/AutoPaymentInvoiceScheduleResponseDtoStatus"
           },
           "liveMode": {
             "type": "boolean",
@@ -144966,7 +144966,7 @@
             "example": "6578278e879ad2646715ba9c"
           },
           "status": {
-            "$ref": "#/components/schemas/UpdateAndScheduleInvoiceScheduleResponseDtoStatusProperty"
+            "$ref": "#/components/schemas/AutoPaymentInvoiceScheduleResponseDtoStatus"
           },
           "liveMode": {
             "type": "boolean",
@@ -145233,7 +145233,7 @@
             "example": "6578278e879ad2646715ba9c"
           },
           "status": {
-            "$ref": "#/components/schemas/ScheduleInvoiceScheduleResponseDtoStatusProperty"
+            "$ref": "#/components/schemas/AutoPaymentInvoiceScheduleResponseDtoStatus"
           },
           "liveMode": {
             "type": "boolean",
@@ -145381,7 +145381,7 @@
             "example": "6578278e879ad2646715ba9c"
           },
           "status": {
-            "$ref": "#/components/schemas/AutoPaymentInvoiceScheduleResponseDtoStatusProperty"
+            "$ref": "#/components/schemas/AutoPaymentInvoiceScheduleResponseDtoStatus"
           },
           "liveMode": {
             "type": "boolean",
@@ -145521,7 +145521,7 @@
             "example": "6578278e879ad2646715ba9c"
           },
           "status": {
-            "$ref": "#/components/schemas/CancelInvoiceScheduleResponseDtoStatusProperty"
+            "$ref": "#/components/schemas/AutoPaymentInvoiceScheduleResponseDtoStatus"
           },
           "liveMode": {
             "type": "boolean",

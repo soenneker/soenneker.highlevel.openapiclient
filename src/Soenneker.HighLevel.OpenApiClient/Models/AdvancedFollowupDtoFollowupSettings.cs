@@ -18,31 +18,35 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("dynamicChannelSwitching") is { } nullNodeDynamicChannelSwitching && nullNodeDynamicChannelSwitching.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DynamicChannelSwitching = null;
-            if (parseNode.GetChildNode("followUpHours") is { } nullNodeFollowUpHours && nullNodeFollowUpHours.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FollowUpHours = null;
-            if (parseNode.GetChildNode("timezoneToUse") is { } nullNodeTimezoneToUse && nullNodeTimezoneToUse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimezoneToUse = null;
-            if (parseNode.GetChildNode("workingHours") is { } nullNodeWorkingHours && nullNodeWorkingHours.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkingHours = null;
+            if (parseNode.GetChildNode("dynamicChannelSwitching") is null) { _explicitNullValueDynamicChannelSwitching = default!; _explicitNullProperties?.Remove("dynamicChannelSwitching"); }
+            else if (parseNode.GetChildNode("dynamicChannelSwitching") is { } nullNodeDynamicChannelSwitching && nullNodeDynamicChannelSwitching.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DynamicChannelSwitching = null;
+            if (parseNode.GetChildNode("followUpHours") is null) { _explicitNullValueFollowUpHours = default!; _explicitNullProperties?.Remove("followUpHours"); }
+            else if (parseNode.GetChildNode("followUpHours") is { } nullNodeFollowUpHours && nullNodeFollowUpHours.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FollowUpHours = null;
+            if (parseNode.GetChildNode("timezoneToUse") is null) { _explicitNullValueTimezoneToUse = default!; _explicitNullProperties?.Remove("timezoneToUse"); }
+            else if (parseNode.GetChildNode("timezoneToUse") is { } nullNodeTimezoneToUse && nullNodeTimezoneToUse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimezoneToUse = null;
+            if (parseNode.GetChildNode("workingHours") is null) { _explicitNullValueWorkingHours = default!; _explicitNullProperties?.Remove("workingHours"); }
+            else if (parseNode.GetChildNode("workingHours") is { } nullNodeWorkingHours && nullNodeWorkingHours.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkingHours = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether to dynamically switch channels for followups</summary>
-        public bool? DynamicChannelSwitching { get => _explicitNullValueDynamicChannelSwitching; set { _explicitNullValueDynamicChannelSwitching = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dynamicChannelSwitching"); else _explicitNullProperties?.Remove("dynamicChannelSwitching"); } }
+        public bool? DynamicChannelSwitching { get => _explicitNullValueDynamicChannelSwitching; set { _explicitNullValueDynamicChannelSwitching = value; AdditionalData?.Remove("dynamicChannelSwitching"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dynamicChannelSwitching"); else _explicitNullProperties?.Remove("dynamicChannelSwitching"); } }
         private bool? _explicitNullValueDynamicChannelSwitching = default!;
         /// <summary>Whether to respect working hours for followups</summary>
-        public bool? FollowUpHours { get => _explicitNullValueFollowUpHours; set { _explicitNullValueFollowUpHours = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("followUpHours"); else _explicitNullProperties?.Remove("followUpHours"); } }
+        public bool? FollowUpHours { get => _explicitNullValueFollowUpHours; set { _explicitNullValueFollowUpHours = value; AdditionalData?.Remove("followUpHours"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("followUpHours"); else _explicitNullProperties?.Remove("followUpHours"); } }
         private bool? _explicitNullValueFollowUpHours = default!;
         /// <summary>Timezone to use for followups, contact or location</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.FollowupSettingsTimezoneToUse? TimezoneToUse { get => _explicitNullValueTimezoneToUse; set { _explicitNullValueTimezoneToUse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timezoneToUse"); else _explicitNullProperties?.Remove("timezoneToUse"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.FollowupSettingsTimezoneToUse? TimezoneToUse { get => _explicitNullValueTimezoneToUse; set { _explicitNullValueTimezoneToUse = value; AdditionalData?.Remove("timezoneToUse"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timezoneToUse"); else _explicitNullProperties?.Remove("timezoneToUse"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.FollowupSettingsTimezoneToUse? _explicitNullValueTimezoneToUse = default!;
         /// <summary>Working hours configuration for followups</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.WorkingHours>? WorkingHours { get => _explicitNullValueWorkingHours; set { _explicitNullValueWorkingHours = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workingHours"); else _explicitNullProperties?.Remove("workingHours"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.WorkingHours>? WorkingHours { get => _explicitNullValueWorkingHours; set { _explicitNullValueWorkingHours = value; AdditionalData?.Remove("workingHours"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workingHours"); else _explicitNullProperties?.Remove("workingHours"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.WorkingHours>? _explicitNullValueWorkingHours = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.WorkingHours> WorkingHours { get => _explicitNullValueWorkingHours; set { _explicitNullValueWorkingHours = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workingHours"); else _explicitNullProperties?.Remove("workingHours"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.WorkingHours> WorkingHours { get => _explicitNullValueWorkingHours; set { _explicitNullValueWorkingHours = value; AdditionalData?.Remove("workingHours"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workingHours"); else _explicitNullProperties?.Remove("workingHours"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.WorkingHours> _explicitNullValueWorkingHours = default!;
 #endif
         /// <summary>
@@ -73,7 +77,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             {
                 { "dynamicChannelSwitching", n => { DynamicChannelSwitching = n.GetBoolValue(); } },
                 { "followUpHours", n => { FollowUpHours = n.GetBoolValue(); } },
-                { "timezoneToUse", n => { TimezoneToUse = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.FollowupSettingsTimezoneToUse>(); } },
+                { "timezoneToUse", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.FollowupSettingsTimezoneToUse>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTimezoneToUse = default; _explicitNullProperties?.Remove("timezoneToUse"); AdditionalData["timezoneToUse"] = unknown; } else { TimezoneToUse = parsed; AdditionalData.Remove("timezoneToUse"); } } },
                 { "workingHours", n => { WorkingHours = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.WorkingHours>(global::Soenneker.HighLevel.OpenApiClient.Models.WorkingHours.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }

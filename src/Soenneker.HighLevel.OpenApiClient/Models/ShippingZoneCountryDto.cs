@@ -17,23 +17,25 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("code") is { } nullNodeCode && nullNodeCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Code = null;
-            if (parseNode.GetChildNode("states") is { } nullNodeStates && nullNodeStates.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) States = null;
+            if (parseNode.GetChildNode("code") is null) { _explicitNullValueCode = default!; _explicitNullProperties?.Remove("code"); }
+            else if (parseNode.GetChildNode("code") is { } nullNodeCode && nullNodeCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Code = null;
+            if (parseNode.GetChildNode("states") is null) { _explicitNullValueStates = default!; _explicitNullProperties?.Remove("states"); }
+            else if (parseNode.GetChildNode("states") is { } nullNodeStates && nullNodeStates.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) States = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Country code</summary>
-        public double? Code { get => _explicitNullValueCode; set { _explicitNullValueCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code"); else _explicitNullProperties?.Remove("code"); } }
+        public double? Code { get => _explicitNullValueCode; set { _explicitNullValueCode = value; AdditionalData?.Remove("code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code"); else _explicitNullProperties?.Remove("code"); } }
         private double? _explicitNullValueCode = default!;
         /// <summary>List of states that are available. If states is empty, then all states are available</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ShippingZoneCountryStateDto>? States { get => _explicitNullValueStates; set { _explicitNullValueStates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("states"); else _explicitNullProperties?.Remove("states"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ShippingZoneCountryStateDto>? States { get => _explicitNullValueStates; set { _explicitNullValueStates = value; AdditionalData?.Remove("states"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("states"); else _explicitNullProperties?.Remove("states"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.ShippingZoneCountryStateDto>? _explicitNullValueStates = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ShippingZoneCountryStateDto> States { get => _explicitNullValueStates; set { _explicitNullValueStates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("states"); else _explicitNullProperties?.Remove("states"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ShippingZoneCountryStateDto> States { get => _explicitNullValueStates; set { _explicitNullValueStates = value; AdditionalData?.Remove("states"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("states"); else _explicitNullProperties?.Remove("states"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.ShippingZoneCountryStateDto> _explicitNullValueStates = default!;
 #endif
         /// <summary>

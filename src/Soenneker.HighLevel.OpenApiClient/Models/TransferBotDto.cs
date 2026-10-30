@@ -17,49 +17,54 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("enabled") is { } nullNodeEnabled && nullNodeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enabled = null;
-            if (parseNode.GetChildNode("transferBotExamples") is { } nullNodeTransferBotExamples && nullNodeTransferBotExamples.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransferBotExamples = null;
-            if (parseNode.GetChildNode("transferBotTriggerCondition") is { } nullNodeTransferBotTriggerCondition && nullNodeTransferBotTriggerCondition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransferBotTriggerCondition = null;
-            if (parseNode.GetChildNode("transferBotType") is { } nullNodeTransferBotType && nullNodeTransferBotType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransferBotType = null;
-            if (parseNode.GetChildNode("transferToBot") is { } nullNodeTransferToBot && nullNodeTransferToBot.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransferToBot = null;
+            if (parseNode.GetChildNode("enabled") is null) { _explicitNullValueEnabled = default!; _explicitNullProperties?.Remove("enabled"); }
+            else if (parseNode.GetChildNode("enabled") is { } nullNodeEnabled && nullNodeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enabled = null;
+            if (parseNode.GetChildNode("transferBotExamples") is null) { _explicitNullValueTransferBotExamples = default!; _explicitNullProperties?.Remove("transferBotExamples"); }
+            else if (parseNode.GetChildNode("transferBotExamples") is { } nullNodeTransferBotExamples && nullNodeTransferBotExamples.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransferBotExamples = null;
+            if (parseNode.GetChildNode("transferBotTriggerCondition") is null) { _explicitNullValueTransferBotTriggerCondition = default!; _explicitNullProperties?.Remove("transferBotTriggerCondition"); }
+            else if (parseNode.GetChildNode("transferBotTriggerCondition") is { } nullNodeTransferBotTriggerCondition && nullNodeTransferBotTriggerCondition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransferBotTriggerCondition = null;
+            if (parseNode.GetChildNode("transferBotType") is null) { _explicitNullValueTransferBotType = default!; _explicitNullProperties?.Remove("transferBotType"); }
+            else if (parseNode.GetChildNode("transferBotType") is { } nullNodeTransferBotType && nullNodeTransferBotType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransferBotType = null;
+            if (parseNode.GetChildNode("transferToBot") is null) { _explicitNullValueTransferToBot = default!; _explicitNullProperties?.Remove("transferToBot"); }
+            else if (parseNode.GetChildNode("transferToBot") is { } nullNodeTransferToBot && nullNodeTransferToBot.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransferToBot = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether this transfer action is enabled</summary>
-        public bool? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled"); else _explicitNullProperties?.Remove("enabled"); } }
+        public bool? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; AdditionalData?.Remove("enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled"); else _explicitNullProperties?.Remove("enabled"); } }
         private bool? _explicitNullValueEnabled = default!;
         /// <summary>Example phrases that trigger transfer (required for Custom type, minimum 2)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? TransferBotExamples { get => _explicitNullValueTransferBotExamples; set { _explicitNullValueTransferBotExamples = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transferBotExamples"); else _explicitNullProperties?.Remove("transferBotExamples"); } }
+        public List<string>? TransferBotExamples { get => _explicitNullValueTransferBotExamples; set { _explicitNullValueTransferBotExamples = value; AdditionalData?.Remove("transferBotExamples"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transferBotExamples"); else _explicitNullProperties?.Remove("transferBotExamples"); } }
         private List<string>? _explicitNullValueTransferBotExamples = default!;
 #nullable restore
 #else
-        public List<string> TransferBotExamples { get => _explicitNullValueTransferBotExamples; set { _explicitNullValueTransferBotExamples = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transferBotExamples"); else _explicitNullProperties?.Remove("transferBotExamples"); } }
+        public List<string> TransferBotExamples { get => _explicitNullValueTransferBotExamples; set { _explicitNullValueTransferBotExamples = value; AdditionalData?.Remove("transferBotExamples"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transferBotExamples"); else _explicitNullProperties?.Remove("transferBotExamples"); } }
         private List<string> _explicitNullValueTransferBotExamples = default!;
 #endif
         /// <summary>Condition that triggers the transfer (required for Custom type)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TransferBotTriggerCondition { get => _explicitNullValueTransferBotTriggerCondition; set { _explicitNullValueTransferBotTriggerCondition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transferBotTriggerCondition"); else _explicitNullProperties?.Remove("transferBotTriggerCondition"); } }
+        public string? TransferBotTriggerCondition { get => _explicitNullValueTransferBotTriggerCondition; set { _explicitNullValueTransferBotTriggerCondition = value; AdditionalData?.Remove("transferBotTriggerCondition"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transferBotTriggerCondition"); else _explicitNullProperties?.Remove("transferBotTriggerCondition"); } }
         private string? _explicitNullValueTransferBotTriggerCondition = default!;
 #nullable restore
 #else
-        public string TransferBotTriggerCondition { get => _explicitNullValueTransferBotTriggerCondition; set { _explicitNullValueTransferBotTriggerCondition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transferBotTriggerCondition"); else _explicitNullProperties?.Remove("transferBotTriggerCondition"); } }
+        public string TransferBotTriggerCondition { get => _explicitNullValueTransferBotTriggerCondition; set { _explicitNullValueTransferBotTriggerCondition = value; AdditionalData?.Remove("transferBotTriggerCondition"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transferBotTriggerCondition"); else _explicitNullProperties?.Remove("transferBotTriggerCondition"); } }
         private string _explicitNullValueTransferBotTriggerCondition = default!;
 #endif
         /// <summary>Type of transfer - Default or Custom</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.TransferBotDtoTransferBotType? TransferBotType { get => _explicitNullValueTransferBotType; set { _explicitNullValueTransferBotType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transferBotType"); else _explicitNullProperties?.Remove("transferBotType"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.TransferBotDtoTransferBotType? TransferBotType { get => _explicitNullValueTransferBotType; set { _explicitNullValueTransferBotType = value; AdditionalData?.Remove("transferBotType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transferBotType"); else _explicitNullProperties?.Remove("transferBotType"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.TransferBotDtoTransferBotType? _explicitNullValueTransferBotType = default!;
         /// <summary>ID of the bot/agent to transfer to</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TransferToBot { get => _explicitNullValueTransferToBot; set { _explicitNullValueTransferToBot = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transferToBot"); else _explicitNullProperties?.Remove("transferToBot"); } }
+        public string? TransferToBot { get => _explicitNullValueTransferToBot; set { _explicitNullValueTransferToBot = value; AdditionalData?.Remove("transferToBot"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transferToBot"); else _explicitNullProperties?.Remove("transferToBot"); } }
         private string? _explicitNullValueTransferToBot = default!;
 #nullable restore
 #else
-        public string TransferToBot { get => _explicitNullValueTransferToBot; set { _explicitNullValueTransferToBot = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transferToBot"); else _explicitNullProperties?.Remove("transferToBot"); } }
+        public string TransferToBot { get => _explicitNullValueTransferToBot; set { _explicitNullValueTransferToBot = value; AdditionalData?.Remove("transferToBot"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transferToBot"); else _explicitNullProperties?.Remove("transferToBot"); } }
         private string _explicitNullValueTransferToBot = default!;
 #endif
         /// <summary>
@@ -90,7 +95,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
                 { "transferBotExamples", n => { TransferBotExamples = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "transferBotTriggerCondition", n => { TransferBotTriggerCondition = n.GetStringValue(); } },
-                { "transferBotType", n => { TransferBotType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.TransferBotDtoTransferBotType>(); } },
+                { "transferBotType", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.TransferBotDtoTransferBotType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTransferBotType = default; _explicitNullProperties?.Remove("transferBotType"); AdditionalData["transferBotType"] = unknown; } else { TransferBotType = parsed; AdditionalData.Remove("transferBotType"); } } },
                 { "transferToBot", n => { TransferToBot = n.GetStringValue(); } },
             };
         }

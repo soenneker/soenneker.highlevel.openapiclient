@@ -18,17 +18,19 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("interval") is { } nullNodeInterval && nullNodeInterval.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Interval = null;
-            if (parseNode.GetChildNode("intervalCount") is { } nullNodeIntervalCount && nullNodeIntervalCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntervalCount = null;
+            if (parseNode.GetChildNode("interval") is null) { _explicitNullValueInterval = default!; _explicitNullProperties?.Remove("interval"); }
+            else if (parseNode.GetChildNode("interval") is { } nullNodeInterval && nullNodeInterval.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Interval = null;
+            if (parseNode.GetChildNode("intervalCount") is null) { _explicitNullValueIntervalCount = default!; _explicitNullProperties?.Remove("intervalCount"); }
+            else if (parseNode.GetChildNode("intervalCount") is { } nullNodeIntervalCount && nullNodeIntervalCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntervalCount = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The interval at which the recurring event occurs.</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.RecurringDtoInterval? Interval { get => _explicitNullValueInterval; set { _explicitNullValueInterval = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interval"); else _explicitNullProperties?.Remove("interval"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.RecurringDtoInterval? Interval { get => _explicitNullValueInterval; set { _explicitNullValueInterval = value; AdditionalData?.Remove("interval"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interval"); else _explicitNullProperties?.Remove("interval"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.RecurringDtoInterval? _explicitNullValueInterval = default!;
         /// <summary>The number of intervals between each occurrence of the event.</summary>
-        public double? IntervalCount { get => _explicitNullValueIntervalCount; set { _explicitNullValueIntervalCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intervalCount"); else _explicitNullProperties?.Remove("intervalCount"); } }
+        public double? IntervalCount { get => _explicitNullValueIntervalCount; set { _explicitNullValueIntervalCount = value; AdditionalData?.Remove("intervalCount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intervalCount"); else _explicitNullProperties?.Remove("intervalCount"); } }
         private double? _explicitNullValueIntervalCount = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.DefaultPriceResponseDtoRecurring"/> and sets the default values.
@@ -55,7 +57,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "interval", n => { Interval = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.RecurringDtoInterval>(); } },
+                { "interval", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.RecurringDtoInterval>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueInterval = default; _explicitNullProperties?.Remove("interval"); AdditionalData["interval"] = unknown; } else { Interval = parsed; AdditionalData.Remove("interval"); } } },
                 { "intervalCount", n => { IntervalCount = n.GetDoubleValue(); } },
             };
         }

@@ -18,17 +18,19 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("lat") is { } nullNodeLat && nullNodeLat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Lat = null;
-            if (parseNode.GetChildNode("lng") is { } nullNodeLng && nullNodeLng.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Lng = null;
+            if (parseNode.GetChildNode("lat") is null) { _explicitNullValueLat = default!; _explicitNullProperties?.Remove("lat"); }
+            else if (parseNode.GetChildNode("lat") is { } nullNodeLat && nullNodeLat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Lat = null;
+            if (parseNode.GetChildNode("lng") is null) { _explicitNullValueLng = default!; _explicitNullProperties?.Remove("lng"); }
+            else if (parseNode.GetChildNode("lng") is { } nullNodeLng && nullNodeLng.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Lng = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Latitude</summary>
-        public double? Lat { get => _explicitNullValueLat; set { _explicitNullValueLat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lat"); else _explicitNullProperties?.Remove("lat"); } }
+        public double? Lat { get => _explicitNullValueLat; set { _explicitNullValueLat = value; AdditionalData?.Remove("lat"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lat"); else _explicitNullProperties?.Remove("lat"); } }
         private double? _explicitNullValueLat = default!;
         /// <summary>Longitude</summary>
-        public double? Lng { get => _explicitNullValueLng; set { _explicitNullValueLng = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lng"); else _explicitNullProperties?.Remove("lng"); } }
+        public double? Lng { get => _explicitNullValueLng; set { _explicitNullValueLng = value; AdditionalData?.Remove("lng"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lng"); else _explicitNullProperties?.Remove("lng"); } }
         private double? _explicitNullValueLng = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GeoViewportDtoNortheast"/> and sets the default values.

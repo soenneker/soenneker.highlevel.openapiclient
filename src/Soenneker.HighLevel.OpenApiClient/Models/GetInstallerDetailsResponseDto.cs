@@ -17,7 +17,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("installationDetails") is { } nullNodeInstallationDetails && nullNodeInstallationDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InstallationDetails = null;
+            if (parseNode.GetChildNode("installationDetails") is null) { _explicitNullValueInstallationDetails = default!; _explicitNullProperties?.Remove("installationDetails"); }
+            else if (parseNode.GetChildNode("installationDetails") is { } nullNodeInstallationDetails && nullNodeInstallationDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InstallationDetails = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Installation details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInstallerDetailsResponseDtoInstallationDetails? InstallationDetails { get => _explicitNullValueInstallationDetails; set { _explicitNullValueInstallationDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("installationDetails"); else _explicitNullProperties?.Remove("installationDetails"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInstallerDetailsResponseDtoInstallationDetails? InstallationDetails { get => _explicitNullValueInstallationDetails; set { _explicitNullValueInstallationDetails = value; AdditionalData?.Remove("installationDetails"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("installationDetails"); else _explicitNullProperties?.Remove("installationDetails"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.GetInstallerDetailsResponseDtoInstallationDetails? _explicitNullValueInstallationDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInstallerDetailsResponseDtoInstallationDetails InstallationDetails { get => _explicitNullValueInstallationDetails; set { _explicitNullValueInstallationDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("installationDetails"); else _explicitNullProperties?.Remove("installationDetails"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInstallerDetailsResponseDtoInstallationDetails InstallationDetails { get => _explicitNullValueInstallationDetails; set { _explicitNullValueInstallationDetails = value; AdditionalData?.Remove("installationDetails"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("installationDetails"); else _explicitNullProperties?.Remove("installationDetails"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.GetInstallerDetailsResponseDtoInstallationDetails _explicitNullValueInstallationDetails = default!;
 #endif
         /// <summary>

@@ -17,7 +17,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("pageId") is { } nullNodePageId && nullNodePageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PageId = null;
+            if (parseNode.GetChildNode("pageId") is null) { _explicitNullValuePageId = default!; _explicitNullProperties?.Remove("pageId"); }
+            else if (parseNode.GetChildNode("pageId") is { } nullNodePageId && nullNodePageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PageId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Facebook page identifier</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PageId { get => _explicitNullValuePageId; set { _explicitNullValuePageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pageId"); else _explicitNullProperties?.Remove("pageId"); } }
+        public string? PageId { get => _explicitNullValuePageId; set { _explicitNullValuePageId = value; AdditionalData?.Remove("pageId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pageId"); else _explicitNullProperties?.Remove("pageId"); } }
         private string? _explicitNullValuePageId = default!;
 #nullable restore
 #else
-        public string PageId { get => _explicitNullValuePageId; set { _explicitNullValuePageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pageId"); else _explicitNullProperties?.Remove("pageId"); } }
+        public string PageId { get => _explicitNullValuePageId; set { _explicitNullValuePageId = value; AdditionalData?.Remove("pageId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pageId"); else _explicitNullProperties?.Remove("pageId"); } }
         private string _explicitNullValuePageId = default!;
 #endif
         /// <summary>

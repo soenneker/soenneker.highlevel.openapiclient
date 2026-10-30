@@ -18,7 +18,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("localized") is { } nullNodeLocalized && nullNodeLocalized.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Localized = null;
+            if (parseNode.GetChildNode("localized") is null) { _explicitNullValueLocalized = default!; _explicitNullProperties?.Remove("localized"); }
+            else if (parseNode.GetChildNode("localized") is { } nullNodeLocalized && nullNodeLocalized.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Localized = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Locale-keyed string map</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoDescriptionLocalizedProperty? Localized { get => _explicitNullValueLocalized; set { _explicitNullValueLocalized = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("localized"); else _explicitNullProperties?.Remove("localized"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoDescriptionLocalizedProperty? Localized { get => _explicitNullValueLocalized; set { _explicitNullValueLocalized = value; AdditionalData?.Remove("localized"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("localized"); else _explicitNullProperties?.Remove("localized"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoDescriptionLocalizedProperty? _explicitNullValueLocalized = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoDescriptionLocalizedProperty Localized { get => _explicitNullValueLocalized; set { _explicitNullValueLocalized = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("localized"); else _explicitNullProperties?.Remove("localized"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoDescriptionLocalizedProperty Localized { get => _explicitNullValueLocalized; set { _explicitNullValueLocalized = value; AdditionalData?.Remove("localized"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("localized"); else _explicitNullProperties?.Remove("localized"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormContentDtoDescriptionLocalizedProperty _explicitNullValueLocalized = default!;
 #endif
         /// <summary>

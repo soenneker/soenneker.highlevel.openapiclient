@@ -17,36 +17,41 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("accountStatus") is { } nullNodeAccountStatus && nullNodeAccountStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountStatus = null;
-            if (parseNode.GetChildNode("isUnderGhl") is { } nullNodeIsUnderGhl && nullNodeIsUnderGhl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsUnderGhl = null;
-            if (parseNode.GetChildNode("numbers") is { } nullNodeNumbers && nullNodeNumbers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Numbers = null;
-            if (parseNode.GetChildNode("page") is { } nullNodePage && nullNodePage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Page = null;
-            if (parseNode.GetChildNode("pageSize") is { } nullNodePageSize && nullNodePageSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PageSize = null;
+            if (parseNode.GetChildNode("accountStatus") is null) { _explicitNullValueAccountStatus = default!; _explicitNullProperties?.Remove("accountStatus"); }
+            else if (parseNode.GetChildNode("accountStatus") is { } nullNodeAccountStatus && nullNodeAccountStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountStatus = null;
+            if (parseNode.GetChildNode("isUnderGhl") is null) { _explicitNullValueIsUnderGhl = default!; _explicitNullProperties?.Remove("isUnderGhl"); }
+            else if (parseNode.GetChildNode("isUnderGhl") is { } nullNodeIsUnderGhl && nullNodeIsUnderGhl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsUnderGhl = null;
+            if (parseNode.GetChildNode("numbers") is null) { _explicitNullValueNumbers = default!; _explicitNullProperties?.Remove("numbers"); }
+            else if (parseNode.GetChildNode("numbers") is { } nullNodeNumbers && nullNodeNumbers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Numbers = null;
+            if (parseNode.GetChildNode("page") is null) { _explicitNullValuePage = default!; _explicitNullProperties?.Remove("page"); }
+            else if (parseNode.GetChildNode("page") is { } nullNodePage && nullNodePage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Page = null;
+            if (parseNode.GetChildNode("pageSize") is null) { _explicitNullValuePageSize = default!; _explicitNullProperties?.Remove("pageSize"); }
+            else if (parseNode.GetChildNode("pageSize") is { } nullNodePageSize && nullNodePageSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PageSize = null;
         }
 
         /// <summary>Current status of the account</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ActiveNumbers200ResponseAccountStatus? AccountStatus { get => _explicitNullValueAccountStatus; set { _explicitNullValueAccountStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accountStatus"); else _explicitNullProperties?.Remove("accountStatus"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ActiveNumbers200ResponseAccountStatus? AccountStatus { get => _explicitNullValueAccountStatus; set { _explicitNullValueAccountStatus = value; AdditionalData?.Remove("accountStatus"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accountStatus"); else _explicitNullProperties?.Remove("accountStatus"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.ActiveNumbers200ResponseAccountStatus? _explicitNullValueAccountStatus = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether this account is manged by LeadconnectorHQ</summary>
-        public bool? IsUnderGhl { get => _explicitNullValueIsUnderGhl; set { _explicitNullValueIsUnderGhl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isUnderGhl"); else _explicitNullProperties?.Remove("isUnderGhl"); } }
+        public bool? IsUnderGhl { get => _explicitNullValueIsUnderGhl; set { _explicitNullValueIsUnderGhl = value; AdditionalData?.Remove("isUnderGhl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isUnderGhl"); else _explicitNullProperties?.Remove("isUnderGhl"); } }
         private bool? _explicitNullValueIsUnderGhl = default!;
         /// <summary>Array of phone number objects with detailed configuration</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDto>? Numbers { get => _explicitNullValueNumbers; set { _explicitNullValueNumbers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("numbers"); else _explicitNullProperties?.Remove("numbers"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDto>? Numbers { get => _explicitNullValueNumbers; set { _explicitNullValueNumbers = value; AdditionalData?.Remove("numbers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("numbers"); else _explicitNullProperties?.Remove("numbers"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDto>? _explicitNullValueNumbers = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDto> Numbers { get => _explicitNullValueNumbers; set { _explicitNullValueNumbers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("numbers"); else _explicitNullProperties?.Remove("numbers"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDto> Numbers { get => _explicitNullValueNumbers; set { _explicitNullValueNumbers = value; AdditionalData?.Remove("numbers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("numbers"); else _explicitNullProperties?.Remove("numbers"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDto> _explicitNullValueNumbers = default!;
 #endif
         /// <summary>Current page index (0-based)</summary>
-        public double? Page { get => _explicitNullValuePage; set { _explicitNullValuePage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page"); else _explicitNullProperties?.Remove("page"); } }
+        public double? Page { get => _explicitNullValuePage; set { _explicitNullValuePage = value; AdditionalData?.Remove("page"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page"); else _explicitNullProperties?.Remove("page"); } }
         private double? _explicitNullValuePage = default!;
         /// <summary>Number of items requested per page</summary>
-        public double? PageSize { get => _explicitNullValuePageSize; set { _explicitNullValuePageSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pageSize"); else _explicitNullProperties?.Remove("pageSize"); } }
+        public double? PageSize { get => _explicitNullValuePageSize; set { _explicitNullValuePageSize = value; AdditionalData?.Remove("pageSize"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pageSize"); else _explicitNullProperties?.Remove("pageSize"); } }
         private double? _explicitNullValuePageSize = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.ActiveNumbers200Response"/> and sets the default values.
@@ -73,7 +78,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "accountStatus", n => { AccountStatus = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ActiveNumbers200ResponseAccountStatus>(); } },
+                { "accountStatus", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ActiveNumbers200ResponseAccountStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAccountStatus = default; _explicitNullProperties?.Remove("accountStatus"); AdditionalData["accountStatus"] = unknown; } else { AccountStatus = parsed; AdditionalData.Remove("accountStatus"); } } },
                 { "isUnderGhl", n => { IsUnderGhl = n.GetBoolValue(); } },
                 { "numbers", n => { Numbers = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDto>(global::Soenneker.HighLevel.OpenApiClient.Models.DetailedPhoneNumberDto.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "page", n => { Page = n.GetDoubleValue(); } },

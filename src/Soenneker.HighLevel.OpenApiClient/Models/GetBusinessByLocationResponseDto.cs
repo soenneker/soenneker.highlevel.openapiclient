@@ -17,7 +17,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("businesses") is { } nullNodeBusinesses && nullNodeBusinesses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Businesses = null;
+            if (parseNode.GetChildNode("businesses") is null) { _explicitNullValueBusinesses = default!; _explicitNullProperties?.Remove("businesses"); }
+            else if (parseNode.GetChildNode("businesses") is { } nullNodeBusinesses && nullNodeBusinesses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Businesses = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Business Response</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.BusinessDto>? Businesses { get => _explicitNullValueBusinesses; set { _explicitNullValueBusinesses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("businesses"); else _explicitNullProperties?.Remove("businesses"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.BusinessDto>? Businesses { get => _explicitNullValueBusinesses; set { _explicitNullValueBusinesses = value; AdditionalData?.Remove("businesses"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("businesses"); else _explicitNullProperties?.Remove("businesses"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.BusinessDto>? _explicitNullValueBusinesses = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.BusinessDto> Businesses { get => _explicitNullValueBusinesses; set { _explicitNullValueBusinesses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("businesses"); else _explicitNullProperties?.Remove("businesses"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.BusinessDto> Businesses { get => _explicitNullValueBusinesses; set { _explicitNullValueBusinesses = value; AdditionalData?.Remove("businesses"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("businesses"); else _explicitNullProperties?.Remove("businesses"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.BusinessDto> _explicitNullValueBusinesses = default!;
 #endif
         /// <summary>

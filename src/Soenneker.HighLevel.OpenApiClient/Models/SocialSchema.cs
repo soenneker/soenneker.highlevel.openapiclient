@@ -17,17 +17,28 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("blogRss") is { } nullNodeBlogRss && nullNodeBlogRss.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlogRss = null;
-            if (parseNode.GetChildNode("facebookUrl") is { } nullNodeFacebookUrl && nullNodeFacebookUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FacebookUrl = null;
-            if (parseNode.GetChildNode("foursquare") is { } nullNodeFoursquare && nullNodeFoursquare.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Foursquare = null;
-            if (parseNode.GetChildNode("googlePlacesId") is { } nullNodeGooglePlacesId && nullNodeGooglePlacesId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GooglePlacesId = null;
-            if (parseNode.GetChildNode("googlePlus") is { } nullNodeGooglePlus && nullNodeGooglePlus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GooglePlus = null;
-            if (parseNode.GetChildNode("instagram") is { } nullNodeInstagram && nullNodeInstagram.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Instagram = null;
-            if (parseNode.GetChildNode("linkedIn") is { } nullNodeLinkedIn && nullNodeLinkedIn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LinkedIn = null;
-            if (parseNode.GetChildNode("pinterest") is { } nullNodePinterest && nullNodePinterest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pinterest = null;
-            if (parseNode.GetChildNode("twitter") is { } nullNodeTwitter && nullNodeTwitter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Twitter = null;
-            if (parseNode.GetChildNode("yelp") is { } nullNodeYelp && nullNodeYelp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Yelp = null;
-            if (parseNode.GetChildNode("youtube") is { } nullNodeYoutube && nullNodeYoutube.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Youtube = null;
+            if (parseNode.GetChildNode("blogRss") is null) { _explicitNullValueBlogRss = default!; _explicitNullProperties?.Remove("blogRss"); }
+            else if (parseNode.GetChildNode("blogRss") is { } nullNodeBlogRss && nullNodeBlogRss.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlogRss = null;
+            if (parseNode.GetChildNode("facebookUrl") is null) { _explicitNullValueFacebookUrl = default!; _explicitNullProperties?.Remove("facebookUrl"); }
+            else if (parseNode.GetChildNode("facebookUrl") is { } nullNodeFacebookUrl && nullNodeFacebookUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FacebookUrl = null;
+            if (parseNode.GetChildNode("foursquare") is null) { _explicitNullValueFoursquare = default!; _explicitNullProperties?.Remove("foursquare"); }
+            else if (parseNode.GetChildNode("foursquare") is { } nullNodeFoursquare && nullNodeFoursquare.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Foursquare = null;
+            if (parseNode.GetChildNode("googlePlacesId") is null) { _explicitNullValueGooglePlacesId = default!; _explicitNullProperties?.Remove("googlePlacesId"); }
+            else if (parseNode.GetChildNode("googlePlacesId") is { } nullNodeGooglePlacesId && nullNodeGooglePlacesId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GooglePlacesId = null;
+            if (parseNode.GetChildNode("googlePlus") is null) { _explicitNullValueGooglePlus = default!; _explicitNullProperties?.Remove("googlePlus"); }
+            else if (parseNode.GetChildNode("googlePlus") is { } nullNodeGooglePlus && nullNodeGooglePlus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GooglePlus = null;
+            if (parseNode.GetChildNode("instagram") is null) { _explicitNullValueInstagram = default!; _explicitNullProperties?.Remove("instagram"); }
+            else if (parseNode.GetChildNode("instagram") is { } nullNodeInstagram && nullNodeInstagram.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Instagram = null;
+            if (parseNode.GetChildNode("linkedIn") is null) { _explicitNullValueLinkedIn = default!; _explicitNullProperties?.Remove("linkedIn"); }
+            else if (parseNode.GetChildNode("linkedIn") is { } nullNodeLinkedIn && nullNodeLinkedIn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LinkedIn = null;
+            if (parseNode.GetChildNode("pinterest") is null) { _explicitNullValuePinterest = default!; _explicitNullProperties?.Remove("pinterest"); }
+            else if (parseNode.GetChildNode("pinterest") is { } nullNodePinterest && nullNodePinterest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pinterest = null;
+            if (parseNode.GetChildNode("twitter") is null) { _explicitNullValueTwitter = default!; _explicitNullProperties?.Remove("twitter"); }
+            else if (parseNode.GetChildNode("twitter") is { } nullNodeTwitter && nullNodeTwitter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Twitter = null;
+            if (parseNode.GetChildNode("yelp") is null) { _explicitNullValueYelp = default!; _explicitNullProperties?.Remove("yelp"); }
+            else if (parseNode.GetChildNode("yelp") is { } nullNodeYelp && nullNodeYelp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Yelp = null;
+            if (parseNode.GetChildNode("youtube") is null) { _explicitNullValueYoutube = default!; _explicitNullProperties?.Remove("youtube"); }
+            else if (parseNode.GetChildNode("youtube") is { } nullNodeYoutube && nullNodeYoutube.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Youtube = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -35,111 +46,111 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Instagram URL</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BlogRss { get => _explicitNullValueBlogRss; set { _explicitNullValueBlogRss = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blogRss"); else _explicitNullProperties?.Remove("blogRss"); } }
+        public string? BlogRss { get => _explicitNullValueBlogRss; set { _explicitNullValueBlogRss = value; AdditionalData?.Remove("blogRss"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blogRss"); else _explicitNullProperties?.Remove("blogRss"); } }
         private string? _explicitNullValueBlogRss = default!;
 #nullable restore
 #else
-        public string BlogRss { get => _explicitNullValueBlogRss; set { _explicitNullValueBlogRss = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blogRss"); else _explicitNullProperties?.Remove("blogRss"); } }
+        public string BlogRss { get => _explicitNullValueBlogRss; set { _explicitNullValueBlogRss = value; AdditionalData?.Remove("blogRss"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blogRss"); else _explicitNullProperties?.Remove("blogRss"); } }
         private string _explicitNullValueBlogRss = default!;
 #endif
         /// <summary>Facebook URL</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FacebookUrl { get => _explicitNullValueFacebookUrl; set { _explicitNullValueFacebookUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("facebookUrl"); else _explicitNullProperties?.Remove("facebookUrl"); } }
+        public string? FacebookUrl { get => _explicitNullValueFacebookUrl; set { _explicitNullValueFacebookUrl = value; AdditionalData?.Remove("facebookUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("facebookUrl"); else _explicitNullProperties?.Remove("facebookUrl"); } }
         private string? _explicitNullValueFacebookUrl = default!;
 #nullable restore
 #else
-        public string FacebookUrl { get => _explicitNullValueFacebookUrl; set { _explicitNullValueFacebookUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("facebookUrl"); else _explicitNullProperties?.Remove("facebookUrl"); } }
+        public string FacebookUrl { get => _explicitNullValueFacebookUrl; set { _explicitNullValueFacebookUrl = value; AdditionalData?.Remove("facebookUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("facebookUrl"); else _explicitNullProperties?.Remove("facebookUrl"); } }
         private string _explicitNullValueFacebookUrl = default!;
 #endif
         /// <summary>Foursquare URL</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Foursquare { get => _explicitNullValueFoursquare; set { _explicitNullValueFoursquare = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("foursquare"); else _explicitNullProperties?.Remove("foursquare"); } }
+        public string? Foursquare { get => _explicitNullValueFoursquare; set { _explicitNullValueFoursquare = value; AdditionalData?.Remove("foursquare"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("foursquare"); else _explicitNullProperties?.Remove("foursquare"); } }
         private string? _explicitNullValueFoursquare = default!;
 #nullable restore
 #else
-        public string Foursquare { get => _explicitNullValueFoursquare; set { _explicitNullValueFoursquare = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("foursquare"); else _explicitNullProperties?.Remove("foursquare"); } }
+        public string Foursquare { get => _explicitNullValueFoursquare; set { _explicitNullValueFoursquare = value; AdditionalData?.Remove("foursquare"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("foursquare"); else _explicitNullProperties?.Remove("foursquare"); } }
         private string _explicitNullValueFoursquare = default!;
 #endif
         /// <summary>Google Business Places ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GooglePlacesId { get => _explicitNullValueGooglePlacesId; set { _explicitNullValueGooglePlacesId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("googlePlacesId"); else _explicitNullProperties?.Remove("googlePlacesId"); } }
+        public string? GooglePlacesId { get => _explicitNullValueGooglePlacesId; set { _explicitNullValueGooglePlacesId = value; AdditionalData?.Remove("googlePlacesId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("googlePlacesId"); else _explicitNullProperties?.Remove("googlePlacesId"); } }
         private string? _explicitNullValueGooglePlacesId = default!;
 #nullable restore
 #else
-        public string GooglePlacesId { get => _explicitNullValueGooglePlacesId; set { _explicitNullValueGooglePlacesId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("googlePlacesId"); else _explicitNullProperties?.Remove("googlePlacesId"); } }
+        public string GooglePlacesId { get => _explicitNullValueGooglePlacesId; set { _explicitNullValueGooglePlacesId = value; AdditionalData?.Remove("googlePlacesId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("googlePlacesId"); else _explicitNullProperties?.Remove("googlePlacesId"); } }
         private string _explicitNullValueGooglePlacesId = default!;
 #endif
         /// <summary>Googleplus URL</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GooglePlus { get => _explicitNullValueGooglePlus; set { _explicitNullValueGooglePlus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("googlePlus"); else _explicitNullProperties?.Remove("googlePlus"); } }
+        public string? GooglePlus { get => _explicitNullValueGooglePlus; set { _explicitNullValueGooglePlus = value; AdditionalData?.Remove("googlePlus"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("googlePlus"); else _explicitNullProperties?.Remove("googlePlus"); } }
         private string? _explicitNullValueGooglePlus = default!;
 #nullable restore
 #else
-        public string GooglePlus { get => _explicitNullValueGooglePlus; set { _explicitNullValueGooglePlus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("googlePlus"); else _explicitNullProperties?.Remove("googlePlus"); } }
+        public string GooglePlus { get => _explicitNullValueGooglePlus; set { _explicitNullValueGooglePlus = value; AdditionalData?.Remove("googlePlus"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("googlePlus"); else _explicitNullProperties?.Remove("googlePlus"); } }
         private string _explicitNullValueGooglePlus = default!;
 #endif
         /// <summary>Instagram URL</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Instagram { get => _explicitNullValueInstagram; set { _explicitNullValueInstagram = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("instagram"); else _explicitNullProperties?.Remove("instagram"); } }
+        public string? Instagram { get => _explicitNullValueInstagram; set { _explicitNullValueInstagram = value; AdditionalData?.Remove("instagram"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("instagram"); else _explicitNullProperties?.Remove("instagram"); } }
         private string? _explicitNullValueInstagram = default!;
 #nullable restore
 #else
-        public string Instagram { get => _explicitNullValueInstagram; set { _explicitNullValueInstagram = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("instagram"); else _explicitNullProperties?.Remove("instagram"); } }
+        public string Instagram { get => _explicitNullValueInstagram; set { _explicitNullValueInstagram = value; AdditionalData?.Remove("instagram"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("instagram"); else _explicitNullProperties?.Remove("instagram"); } }
         private string _explicitNullValueInstagram = default!;
 #endif
         /// <summary>LinkedIn URL</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LinkedIn { get => _explicitNullValueLinkedIn; set { _explicitNullValueLinkedIn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("linkedIn"); else _explicitNullProperties?.Remove("linkedIn"); } }
+        public string? LinkedIn { get => _explicitNullValueLinkedIn; set { _explicitNullValueLinkedIn = value; AdditionalData?.Remove("linkedIn"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("linkedIn"); else _explicitNullProperties?.Remove("linkedIn"); } }
         private string? _explicitNullValueLinkedIn = default!;
 #nullable restore
 #else
-        public string LinkedIn { get => _explicitNullValueLinkedIn; set { _explicitNullValueLinkedIn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("linkedIn"); else _explicitNullProperties?.Remove("linkedIn"); } }
+        public string LinkedIn { get => _explicitNullValueLinkedIn; set { _explicitNullValueLinkedIn = value; AdditionalData?.Remove("linkedIn"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("linkedIn"); else _explicitNullProperties?.Remove("linkedIn"); } }
         private string _explicitNullValueLinkedIn = default!;
 #endif
         /// <summary>Instagram URL</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Pinterest { get => _explicitNullValuePinterest; set { _explicitNullValuePinterest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pinterest"); else _explicitNullProperties?.Remove("pinterest"); } }
+        public string? Pinterest { get => _explicitNullValuePinterest; set { _explicitNullValuePinterest = value; AdditionalData?.Remove("pinterest"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pinterest"); else _explicitNullProperties?.Remove("pinterest"); } }
         private string? _explicitNullValuePinterest = default!;
 #nullable restore
 #else
-        public string Pinterest { get => _explicitNullValuePinterest; set { _explicitNullValuePinterest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pinterest"); else _explicitNullProperties?.Remove("pinterest"); } }
+        public string Pinterest { get => _explicitNullValuePinterest; set { _explicitNullValuePinterest = value; AdditionalData?.Remove("pinterest"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pinterest"); else _explicitNullProperties?.Remove("pinterest"); } }
         private string _explicitNullValuePinterest = default!;
 #endif
         /// <summary>Twitter URL</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Twitter { get => _explicitNullValueTwitter; set { _explicitNullValueTwitter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twitter"); else _explicitNullProperties?.Remove("twitter"); } }
+        public string? Twitter { get => _explicitNullValueTwitter; set { _explicitNullValueTwitter = value; AdditionalData?.Remove("twitter"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twitter"); else _explicitNullProperties?.Remove("twitter"); } }
         private string? _explicitNullValueTwitter = default!;
 #nullable restore
 #else
-        public string Twitter { get => _explicitNullValueTwitter; set { _explicitNullValueTwitter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twitter"); else _explicitNullProperties?.Remove("twitter"); } }
+        public string Twitter { get => _explicitNullValueTwitter; set { _explicitNullValueTwitter = value; AdditionalData?.Remove("twitter"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twitter"); else _explicitNullProperties?.Remove("twitter"); } }
         private string _explicitNullValueTwitter = default!;
 #endif
         /// <summary>Yelp URL</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Yelp { get => _explicitNullValueYelp; set { _explicitNullValueYelp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("yelp"); else _explicitNullProperties?.Remove("yelp"); } }
+        public string? Yelp { get => _explicitNullValueYelp; set { _explicitNullValueYelp = value; AdditionalData?.Remove("yelp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("yelp"); else _explicitNullProperties?.Remove("yelp"); } }
         private string? _explicitNullValueYelp = default!;
 #nullable restore
 #else
-        public string Yelp { get => _explicitNullValueYelp; set { _explicitNullValueYelp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("yelp"); else _explicitNullProperties?.Remove("yelp"); } }
+        public string Yelp { get => _explicitNullValueYelp; set { _explicitNullValueYelp = value; AdditionalData?.Remove("yelp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("yelp"); else _explicitNullProperties?.Remove("yelp"); } }
         private string _explicitNullValueYelp = default!;
 #endif
         /// <summary>Instagram URL</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Youtube { get => _explicitNullValueYoutube; set { _explicitNullValueYoutube = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("youtube"); else _explicitNullProperties?.Remove("youtube"); } }
+        public string? Youtube { get => _explicitNullValueYoutube; set { _explicitNullValueYoutube = value; AdditionalData?.Remove("youtube"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("youtube"); else _explicitNullProperties?.Remove("youtube"); } }
         private string? _explicitNullValueYoutube = default!;
 #nullable restore
 #else
-        public string Youtube { get => _explicitNullValueYoutube; set { _explicitNullValueYoutube = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("youtube"); else _explicitNullProperties?.Remove("youtube"); } }
+        public string Youtube { get => _explicitNullValueYoutube; set { _explicitNullValueYoutube = value; AdditionalData?.Remove("youtube"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("youtube"); else _explicitNullProperties?.Remove("youtube"); } }
         private string _explicitNullValueYoutube = default!;
 #endif
         /// <summary>

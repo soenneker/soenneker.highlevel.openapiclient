@@ -17,9 +17,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("contactFieldId") is { } nullNodeContactFieldId && nullNodeContactFieldId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactFieldId = null;
-            if (parseNode.GetChildNode("contactUpdateExamples") is { } nullNodeContactUpdateExamples && nullNodeContactUpdateExamples.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactUpdateExamples = null;
-            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("contactFieldId") is null) { _explicitNullValueContactFieldId = default!; _explicitNullProperties?.Remove("contactFieldId"); }
+            else if (parseNode.GetChildNode("contactFieldId") is { } nullNodeContactFieldId && nullNodeContactFieldId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactFieldId = null;
+            if (parseNode.GetChildNode("contactUpdateExamples") is null) { _explicitNullValueContactUpdateExamples = default!; _explicitNullProperties?.Remove("contactUpdateExamples"); }
+            else if (parseNode.GetChildNode("contactUpdateExamples") is { } nullNodeContactUpdateExamples && nullNodeContactUpdateExamples.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactUpdateExamples = null;
+            if (parseNode.GetChildNode("description") is null) { _explicitNullValueDescription = default!; _explicitNullProperties?.Remove("description"); }
+            else if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>ID of the contact field in Contacts Table</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ContactFieldId { get => _explicitNullValueContactFieldId; set { _explicitNullValueContactFieldId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactFieldId"); else _explicitNullProperties?.Remove("contactFieldId"); } }
+        public string? ContactFieldId { get => _explicitNullValueContactFieldId; set { _explicitNullValueContactFieldId = value; AdditionalData?.Remove("contactFieldId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactFieldId"); else _explicitNullProperties?.Remove("contactFieldId"); } }
         private string? _explicitNullValueContactFieldId = default!;
 #nullable restore
 #else
-        public string ContactFieldId { get => _explicitNullValueContactFieldId; set { _explicitNullValueContactFieldId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactFieldId"); else _explicitNullProperties?.Remove("contactFieldId"); } }
+        public string ContactFieldId { get => _explicitNullValueContactFieldId; set { _explicitNullValueContactFieldId = value; AdditionalData?.Remove("contactFieldId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactFieldId"); else _explicitNullProperties?.Remove("contactFieldId"); } }
         private string _explicitNullValueContactFieldId = default!;
 #endif
         /// <summary>Contact update examples in Contacts Table. Not required when using standard fields, Monetory or Date Custom fields.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ContactUpdateExamples { get => _explicitNullValueContactUpdateExamples; set { _explicitNullValueContactUpdateExamples = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactUpdateExamples"); else _explicitNullProperties?.Remove("contactUpdateExamples"); } }
+        public List<string>? ContactUpdateExamples { get => _explicitNullValueContactUpdateExamples; set { _explicitNullValueContactUpdateExamples = value; AdditionalData?.Remove("contactUpdateExamples"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactUpdateExamples"); else _explicitNullProperties?.Remove("contactUpdateExamples"); } }
         private List<string>? _explicitNullValueContactUpdateExamples = default!;
 #nullable restore
 #else
-        public List<string> ContactUpdateExamples { get => _explicitNullValueContactUpdateExamples; set { _explicitNullValueContactUpdateExamples = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactUpdateExamples"); else _explicitNullProperties?.Remove("contactUpdateExamples"); } }
+        public List<string> ContactUpdateExamples { get => _explicitNullValueContactUpdateExamples; set { _explicitNullValueContactUpdateExamples = value; AdditionalData?.Remove("contactUpdateExamples"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactUpdateExamples"); else _explicitNullProperties?.Remove("contactUpdateExamples"); } }
         private List<string> _explicitNullValueContactUpdateExamples = default!;
 #endif
         /// <summary>Description of the contact field in Contacts Table</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>

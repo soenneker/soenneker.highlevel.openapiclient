@@ -17,8 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("live") is { } nullNodeLive && nullNodeLive.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Live = null;
-            if (parseNode.GetChildNode("test") is { } nullNodeTest && nullNodeTest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Test = null;
+            if (parseNode.GetChildNode("live") is null) { _explicitNullValueLive = default!; _explicitNullProperties?.Remove("live"); }
+            else if (parseNode.GetChildNode("live") is { } nullNodeLive && nullNodeLive.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Live = null;
+            if (parseNode.GetChildNode("test") is null) { _explicitNullValueTest = default!; _explicitNullProperties?.Remove("test"); }
+            else if (parseNode.GetChildNode("test") is { } nullNodeTest && nullNodeTest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Test = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Live config containing api-key and publishable key for live payments</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ConnectCustomProvidersConfigDtoLive? Live { get => _explicitNullValueLive; set { _explicitNullValueLive = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("live"); else _explicitNullProperties?.Remove("live"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ConnectCustomProvidersConfigDtoLive? Live { get => _explicitNullValueLive; set { _explicitNullValueLive = value; AdditionalData?.Remove("live"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("live"); else _explicitNullProperties?.Remove("live"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.ConnectCustomProvidersConfigDtoLive? _explicitNullValueLive = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ConnectCustomProvidersConfigDtoLive Live { get => _explicitNullValueLive; set { _explicitNullValueLive = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("live"); else _explicitNullProperties?.Remove("live"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ConnectCustomProvidersConfigDtoLive Live { get => _explicitNullValueLive; set { _explicitNullValueLive = value; AdditionalData?.Remove("live"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("live"); else _explicitNullProperties?.Remove("live"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.ConnectCustomProvidersConfigDtoLive _explicitNullValueLive = default!;
 #endif
         /// <summary>Test config containing api-key and publishable-key for test payments</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ConnectCustomProvidersConfigDtoTest? Test { get => _explicitNullValueTest; set { _explicitNullValueTest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test"); else _explicitNullProperties?.Remove("test"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ConnectCustomProvidersConfigDtoTest? Test { get => _explicitNullValueTest; set { _explicitNullValueTest = value; AdditionalData?.Remove("test"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test"); else _explicitNullProperties?.Remove("test"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.ConnectCustomProvidersConfigDtoTest? _explicitNullValueTest = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ConnectCustomProvidersConfigDtoTest Test { get => _explicitNullValueTest; set { _explicitNullValueTest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test"); else _explicitNullProperties?.Remove("test"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ConnectCustomProvidersConfigDtoTest Test { get => _explicitNullValueTest; set { _explicitNullValueTest = value; AdditionalData?.Remove("test"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test"); else _explicitNullProperties?.Remove("test"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.ConnectCustomProvidersConfigDtoTest _explicitNullValueTest = default!;
 #endif
         /// <summary>

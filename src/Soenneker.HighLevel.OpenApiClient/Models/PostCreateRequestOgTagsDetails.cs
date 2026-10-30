@@ -18,8 +18,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("metaImage") is { } nullNodeMetaImage && nullNodeMetaImage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MetaImage = null;
-            if (parseNode.GetChildNode("metaLink") is { } nullNodeMetaLink && nullNodeMetaLink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MetaLink = null;
+            if (parseNode.GetChildNode("metaImage") is null) { _explicitNullValueMetaImage = default!; _explicitNullProperties?.Remove("metaImage"); }
+            else if (parseNode.GetChildNode("metaImage") is { } nullNodeMetaImage && nullNodeMetaImage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MetaImage = null;
+            if (parseNode.GetChildNode("metaLink") is null) { _explicitNullValueMetaLink = default!; _explicitNullProperties?.Remove("metaLink"); }
+            else if (parseNode.GetChildNode("metaLink") is { } nullNodeMetaLink && nullNodeMetaLink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MetaLink = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Meta Image</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MetaImage { get => _explicitNullValueMetaImage; set { _explicitNullValueMetaImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metaImage"); else _explicitNullProperties?.Remove("metaImage"); } }
+        public string? MetaImage { get => _explicitNullValueMetaImage; set { _explicitNullValueMetaImage = value; AdditionalData?.Remove("metaImage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metaImage"); else _explicitNullProperties?.Remove("metaImage"); } }
         private string? _explicitNullValueMetaImage = default!;
 #nullable restore
 #else
-        public string MetaImage { get => _explicitNullValueMetaImage; set { _explicitNullValueMetaImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metaImage"); else _explicitNullProperties?.Remove("metaImage"); } }
+        public string MetaImage { get => _explicitNullValueMetaImage; set { _explicitNullValueMetaImage = value; AdditionalData?.Remove("metaImage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metaImage"); else _explicitNullProperties?.Remove("metaImage"); } }
         private string _explicitNullValueMetaImage = default!;
 #endif
         /// <summary>Meta Link</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MetaLink { get => _explicitNullValueMetaLink; set { _explicitNullValueMetaLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metaLink"); else _explicitNullProperties?.Remove("metaLink"); } }
+        public string? MetaLink { get => _explicitNullValueMetaLink; set { _explicitNullValueMetaLink = value; AdditionalData?.Remove("metaLink"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metaLink"); else _explicitNullProperties?.Remove("metaLink"); } }
         private string? _explicitNullValueMetaLink = default!;
 #nullable restore
 #else
-        public string MetaLink { get => _explicitNullValueMetaLink; set { _explicitNullValueMetaLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metaLink"); else _explicitNullProperties?.Remove("metaLink"); } }
+        public string MetaLink { get => _explicitNullValueMetaLink; set { _explicitNullValueMetaLink = value; AdditionalData?.Remove("metaLink"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metaLink"); else _explicitNullProperties?.Remove("metaLink"); } }
         private string _explicitNullValueMetaLink = default!;
 #endif
         /// <summary>

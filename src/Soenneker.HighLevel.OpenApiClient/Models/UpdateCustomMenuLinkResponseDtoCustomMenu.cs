@@ -18,96 +18,109 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("allowCamera") is { } nullNodeAllowCamera && nullNodeAllowCamera.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowCamera = null;
-            if (parseNode.GetChildNode("allowMicrophone") is { } nullNodeAllowMicrophone && nullNodeAllowMicrophone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowMicrophone = null;
-            if (parseNode.GetChildNode("icon") is { } nullNodeIcon && nullNodeIcon.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Icon = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("locations") is { } nullNodeLocations && nullNodeLocations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locations = null;
-            if (parseNode.GetChildNode("openMode") is { } nullNodeOpenMode && nullNodeOpenMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OpenMode = null;
-            if (parseNode.GetChildNode("order") is { } nullNodeOrder && nullNodeOrder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Order = null;
-            if (parseNode.GetChildNode("showOnCompany") is { } nullNodeShowOnCompany && nullNodeShowOnCompany.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShowOnCompany = null;
-            if (parseNode.GetChildNode("showOnLocation") is { } nullNodeShowOnLocation && nullNodeShowOnLocation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShowOnLocation = null;
-            if (parseNode.GetChildNode("showToAllLocations") is { } nullNodeShowToAllLocations && nullNodeShowToAllLocations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShowToAllLocations = null;
-            if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
-            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
-            if (parseNode.GetChildNode("userRole") is { } nullNodeUserRole && nullNodeUserRole.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserRole = null;
+            if (parseNode.GetChildNode("allowCamera") is null) { _explicitNullValueAllowCamera = default!; _explicitNullProperties?.Remove("allowCamera"); }
+            else if (parseNode.GetChildNode("allowCamera") is { } nullNodeAllowCamera && nullNodeAllowCamera.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowCamera = null;
+            if (parseNode.GetChildNode("allowMicrophone") is null) { _explicitNullValueAllowMicrophone = default!; _explicitNullProperties?.Remove("allowMicrophone"); }
+            else if (parseNode.GetChildNode("allowMicrophone") is { } nullNodeAllowMicrophone && nullNodeAllowMicrophone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowMicrophone = null;
+            if (parseNode.GetChildNode("icon") is null) { _explicitNullValueIcon = default!; _explicitNullProperties?.Remove("icon"); }
+            else if (parseNode.GetChildNode("icon") is { } nullNodeIcon && nullNodeIcon.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Icon = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("locations") is null) { _explicitNullValueLocations = default!; _explicitNullProperties?.Remove("locations"); }
+            else if (parseNode.GetChildNode("locations") is { } nullNodeLocations && nullNodeLocations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locations = null;
+            if (parseNode.GetChildNode("openMode") is null) { _explicitNullValueOpenMode = default!; _explicitNullProperties?.Remove("openMode"); }
+            else if (parseNode.GetChildNode("openMode") is { } nullNodeOpenMode && nullNodeOpenMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OpenMode = null;
+            if (parseNode.GetChildNode("order") is null) { _explicitNullValueOrder = default!; _explicitNullProperties?.Remove("order"); }
+            else if (parseNode.GetChildNode("order") is { } nullNodeOrder && nullNodeOrder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Order = null;
+            if (parseNode.GetChildNode("showOnCompany") is null) { _explicitNullValueShowOnCompany = default!; _explicitNullProperties?.Remove("showOnCompany"); }
+            else if (parseNode.GetChildNode("showOnCompany") is { } nullNodeShowOnCompany && nullNodeShowOnCompany.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShowOnCompany = null;
+            if (parseNode.GetChildNode("showOnLocation") is null) { _explicitNullValueShowOnLocation = default!; _explicitNullProperties?.Remove("showOnLocation"); }
+            else if (parseNode.GetChildNode("showOnLocation") is { } nullNodeShowOnLocation && nullNodeShowOnLocation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShowOnLocation = null;
+            if (parseNode.GetChildNode("showToAllLocations") is null) { _explicitNullValueShowToAllLocations = default!; _explicitNullProperties?.Remove("showToAllLocations"); }
+            else if (parseNode.GetChildNode("showToAllLocations") is { } nullNodeShowToAllLocations && nullNodeShowToAllLocations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShowToAllLocations = null;
+            if (parseNode.GetChildNode("title") is null) { _explicitNullValueTitle = default!; _explicitNullProperties?.Remove("title"); }
+            else if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
+            if (parseNode.GetChildNode("url") is null) { _explicitNullValueUrl = default!; _explicitNullProperties?.Remove("url"); }
+            else if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+            if (parseNode.GetChildNode("userRole") is null) { _explicitNullValueUserRole = default!; _explicitNullProperties?.Remove("userRole"); }
+            else if (parseNode.GetChildNode("userRole") is { } nullNodeUserRole && nullNodeUserRole.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserRole = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Indicates if camera access is allowed for this menu</summary>
-        public bool? AllowCamera { get => _explicitNullValueAllowCamera; set { _explicitNullValueAllowCamera = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowCamera"); else _explicitNullProperties?.Remove("allowCamera"); } }
+        public bool? AllowCamera { get => _explicitNullValueAllowCamera; set { _explicitNullValueAllowCamera = value; AdditionalData?.Remove("allowCamera"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowCamera"); else _explicitNullProperties?.Remove("allowCamera"); } }
         private bool? _explicitNullValueAllowCamera = default!;
         /// <summary>Indicates if microphone access is allowed for this menu</summary>
-        public bool? AllowMicrophone { get => _explicitNullValueAllowMicrophone; set { _explicitNullValueAllowMicrophone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowMicrophone"); else _explicitNullProperties?.Remove("allowMicrophone"); } }
+        public bool? AllowMicrophone { get => _explicitNullValueAllowMicrophone; set { _explicitNullValueAllowMicrophone = value; AdditionalData?.Remove("allowMicrophone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowMicrophone"); else _explicitNullProperties?.Remove("allowMicrophone"); } }
         private bool? _explicitNullValueAllowMicrophone = default!;
         /// <summary>Icon information for the menu item</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenuSchemaIcon? Icon { get => _explicitNullValueIcon; set { _explicitNullValueIcon = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("icon"); else _explicitNullProperties?.Remove("icon"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenuSchemaIcon? Icon { get => _explicitNullValueIcon; set { _explicitNullValueIcon = value; AdditionalData?.Remove("icon"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("icon"); else _explicitNullProperties?.Remove("icon"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenuSchemaIcon? _explicitNullValueIcon = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenuSchemaIcon Icon { get => _explicitNullValueIcon; set { _explicitNullValueIcon = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("icon"); else _explicitNullProperties?.Remove("icon"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenuSchemaIcon Icon { get => _explicitNullValueIcon; set { _explicitNullValueIcon = value; AdditionalData?.Remove("icon"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("icon"); else _explicitNullProperties?.Remove("icon"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenuSchemaIcon _explicitNullValueIcon = default!;
 #endif
         /// <summary>Unique identifier for the custom menu</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>List of sub-account IDs where the menu should be shown. This list is applicable only when showOnLocation is true and showToAllLocations is false</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Locations { get => _explicitNullValueLocations; set { _explicitNullValueLocations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locations"); else _explicitNullProperties?.Remove("locations"); } }
+        public List<string>? Locations { get => _explicitNullValueLocations; set { _explicitNullValueLocations = value; AdditionalData?.Remove("locations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locations"); else _explicitNullProperties?.Remove("locations"); } }
         private List<string>? _explicitNullValueLocations = default!;
 #nullable restore
 #else
-        public List<string> Locations { get => _explicitNullValueLocations; set { _explicitNullValueLocations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locations"); else _explicitNullProperties?.Remove("locations"); } }
+        public List<string> Locations { get => _explicitNullValueLocations; set { _explicitNullValueLocations = value; AdditionalData?.Remove("locations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locations"); else _explicitNullProperties?.Remove("locations"); } }
         private List<string> _explicitNullValueLocations = default!;
 #endif
         /// <summary>Mode for opening the menu link</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenuSchemaOpenMode? OpenMode { get => _explicitNullValueOpenMode; set { _explicitNullValueOpenMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("openMode"); else _explicitNullProperties?.Remove("openMode"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenuSchemaOpenMode? OpenMode { get => _explicitNullValueOpenMode; set { _explicitNullValueOpenMode = value; AdditionalData?.Remove("openMode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("openMode"); else _explicitNullProperties?.Remove("openMode"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenuSchemaOpenMode? _explicitNullValueOpenMode = default!;
         /// <summary>Order of the custom menu</summary>
-        public double? Order { get => _explicitNullValueOrder; set { _explicitNullValueOrder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order"); else _explicitNullProperties?.Remove("order"); } }
+        public double? Order { get => _explicitNullValueOrder; set { _explicitNullValueOrder = value; AdditionalData?.Remove("order"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order"); else _explicitNullProperties?.Remove("order"); } }
         private double? _explicitNullValueOrder = default!;
         /// <summary>Filter to show only agency-level menu links. When omitted, fetches both agency and sub-account menu links. Ignored if locationId is provided</summary>
-        public bool? ShowOnCompany { get => _explicitNullValueShowOnCompany; set { _explicitNullValueShowOnCompany = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("showOnCompany"); else _explicitNullProperties?.Remove("showOnCompany"); } }
+        public bool? ShowOnCompany { get => _explicitNullValueShowOnCompany; set { _explicitNullValueShowOnCompany = value; AdditionalData?.Remove("showOnCompany"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("showOnCompany"); else _explicitNullProperties?.Remove("showOnCompany"); } }
         private bool? _explicitNullValueShowOnCompany = default!;
         /// <summary>Whether the menu must be displayed for sub-accounts level</summary>
-        public bool? ShowOnLocation { get => _explicitNullValueShowOnLocation; set { _explicitNullValueShowOnLocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("showOnLocation"); else _explicitNullProperties?.Remove("showOnLocation"); } }
+        public bool? ShowOnLocation { get => _explicitNullValueShowOnLocation; set { _explicitNullValueShowOnLocation = value; AdditionalData?.Remove("showOnLocation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("showOnLocation"); else _explicitNullProperties?.Remove("showOnLocation"); } }
         private bool? _explicitNullValueShowOnLocation = default!;
         /// <summary>Whether the menu must be displayed to all sub-accounts</summary>
-        public bool? ShowToAllLocations { get => _explicitNullValueShowToAllLocations; set { _explicitNullValueShowToAllLocations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("showToAllLocations"); else _explicitNullProperties?.Remove("showToAllLocations"); } }
+        public bool? ShowToAllLocations { get => _explicitNullValueShowToAllLocations; set { _explicitNullValueShowToAllLocations = value; AdditionalData?.Remove("showToAllLocations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("showToAllLocations"); else _explicitNullProperties?.Remove("showToAllLocations"); } }
         private bool? _explicitNullValueShowToAllLocations = default!;
         /// <summary>Title of the custom menu</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; AdditionalData?.Remove("title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
         private string? _explicitNullValueTitle = default!;
 #nullable restore
 #else
-        public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; AdditionalData?.Remove("title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
         private string _explicitNullValueTitle = default!;
 #endif
         /// <summary>URL of the custom menu</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>Which user-roles should the menu be accessible to?</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenuSchemaUserRole? UserRole { get => _explicitNullValueUserRole; set { _explicitNullValueUserRole = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userRole"); else _explicitNullProperties?.Remove("userRole"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenuSchemaUserRole? UserRole { get => _explicitNullValueUserRole; set { _explicitNullValueUserRole = value; AdditionalData?.Remove("userRole"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userRole"); else _explicitNullProperties?.Remove("userRole"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenuSchemaUserRole? _explicitNullValueUserRole = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomMenuLinkResponseDtoCustomMenu"/> and sets the default values.
@@ -139,14 +152,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "icon", n => { Icon = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenuSchemaIcon>(global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenuSchemaIcon.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "locations", n => { Locations = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "openMode", n => { OpenMode = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenuSchemaOpenMode>(); } },
+                { "openMode", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenuSchemaOpenMode>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueOpenMode = default; _explicitNullProperties?.Remove("openMode"); AdditionalData["openMode"] = unknown; } else { OpenMode = parsed; AdditionalData.Remove("openMode"); } } },
                 { "order", n => { Order = n.GetDoubleValue(); } },
                 { "showOnCompany", n => { ShowOnCompany = n.GetBoolValue(); } },
                 { "showOnLocation", n => { ShowOnLocation = n.GetBoolValue(); } },
                 { "showToAllLocations", n => { ShowToAllLocations = n.GetBoolValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
-                { "userRole", n => { UserRole = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenuSchemaUserRole>(); } },
+                { "userRole", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenuSchemaUserRole>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueUserRole = default; _explicitNullProperties?.Remove("userRole"); AdditionalData["userRole"] = unknown; } else { UserRole = parsed; AdditionalData.Remove("userRole"); } } },
             };
         }
         /// <summary>

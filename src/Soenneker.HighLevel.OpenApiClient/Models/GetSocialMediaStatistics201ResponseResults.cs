@@ -18,12 +18,18 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("breakdowns") is { } nullNodeBreakdowns && nullNodeBreakdowns.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Breakdowns = null;
-            if (parseNode.GetChildNode("dayRange") is { } nullNodeDayRange && nullNodeDayRange.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DayRange = null;
-            if (parseNode.GetChildNode("demographics") is { } nullNodeDemographics && nullNodeDemographics.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Demographics = null;
-            if (parseNode.GetChildNode("platformTotals") is { } nullNodePlatformTotals && nullNodePlatformTotals.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlatformTotals = null;
-            if (parseNode.GetChildNode("postPerformance") is { } nullNodePostPerformance && nullNodePostPerformance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PostPerformance = null;
-            if (parseNode.GetChildNode("totals") is { } nullNodeTotals && nullNodeTotals.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Totals = null;
+            if (parseNode.GetChildNode("breakdowns") is null) { _explicitNullValueBreakdowns = default!; _explicitNullProperties?.Remove("breakdowns"); }
+            else if (parseNode.GetChildNode("breakdowns") is { } nullNodeBreakdowns && nullNodeBreakdowns.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Breakdowns = null;
+            if (parseNode.GetChildNode("dayRange") is null) { _explicitNullValueDayRange = default!; _explicitNullProperties?.Remove("dayRange"); }
+            else if (parseNode.GetChildNode("dayRange") is { } nullNodeDayRange && nullNodeDayRange.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DayRange = null;
+            if (parseNode.GetChildNode("demographics") is null) { _explicitNullValueDemographics = default!; _explicitNullProperties?.Remove("demographics"); }
+            else if (parseNode.GetChildNode("demographics") is { } nullNodeDemographics && nullNodeDemographics.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Demographics = null;
+            if (parseNode.GetChildNode("platformTotals") is null) { _explicitNullValuePlatformTotals = default!; _explicitNullProperties?.Remove("platformTotals"); }
+            else if (parseNode.GetChildNode("platformTotals") is { } nullNodePlatformTotals && nullNodePlatformTotals.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlatformTotals = null;
+            if (parseNode.GetChildNode("postPerformance") is null) { _explicitNullValuePostPerformance = default!; _explicitNullProperties?.Remove("postPerformance"); }
+            else if (parseNode.GetChildNode("postPerformance") is { } nullNodePostPerformance && nullNodePostPerformance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PostPerformance = null;
+            if (parseNode.GetChildNode("totals") is null) { _explicitNullValueTotals = default!; _explicitNullProperties?.Remove("totals"); }
+            else if (parseNode.GetChildNode("totals") is { } nullNodeTotals && nullNodeTotals.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Totals = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -31,61 +37,61 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Detailed breakdowns by metric and platform</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsBreakdowns? Breakdowns { get => _explicitNullValueBreakdowns; set { _explicitNullValueBreakdowns = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("breakdowns"); else _explicitNullProperties?.Remove("breakdowns"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsBreakdowns? Breakdowns { get => _explicitNullValueBreakdowns; set { _explicitNullValueBreakdowns = value; AdditionalData?.Remove("breakdowns"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("breakdowns"); else _explicitNullProperties?.Remove("breakdowns"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsBreakdowns? _explicitNullValueBreakdowns = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsBreakdowns Breakdowns { get => _explicitNullValueBreakdowns; set { _explicitNullValueBreakdowns = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("breakdowns"); else _explicitNullProperties?.Remove("breakdowns"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsBreakdowns Breakdowns { get => _explicitNullValueBreakdowns; set { _explicitNullValueBreakdowns = value; AdditionalData?.Remove("breakdowns"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("breakdowns"); else _explicitNullProperties?.Remove("breakdowns"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsBreakdowns _explicitNullValueBreakdowns = default!;
 #endif
         /// <summary>Array of day names for the analytics period</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? DayRange { get => _explicitNullValueDayRange; set { _explicitNullValueDayRange = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dayRange"); else _explicitNullProperties?.Remove("dayRange"); } }
+        public List<string>? DayRange { get => _explicitNullValueDayRange; set { _explicitNullValueDayRange = value; AdditionalData?.Remove("dayRange"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dayRange"); else _explicitNullProperties?.Remove("dayRange"); } }
         private List<string>? _explicitNullValueDayRange = default!;
 #nullable restore
 #else
-        public List<string> DayRange { get => _explicitNullValueDayRange; set { _explicitNullValueDayRange = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dayRange"); else _explicitNullProperties?.Remove("dayRange"); } }
+        public List<string> DayRange { get => _explicitNullValueDayRange; set { _explicitNullValueDayRange = value; AdditionalData?.Remove("dayRange"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dayRange"); else _explicitNullProperties?.Remove("dayRange"); } }
         private List<string> _explicitNullValueDayRange = default!;
 #endif
         /// <summary>Demographic data breakdown</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsDemographics? Demographics { get => _explicitNullValueDemographics; set { _explicitNullValueDemographics = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("demographics"); else _explicitNullProperties?.Remove("demographics"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsDemographics? Demographics { get => _explicitNullValueDemographics; set { _explicitNullValueDemographics = value; AdditionalData?.Remove("demographics"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("demographics"); else _explicitNullProperties?.Remove("demographics"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsDemographics? _explicitNullValueDemographics = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsDemographics Demographics { get => _explicitNullValueDemographics; set { _explicitNullValueDemographics = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("demographics"); else _explicitNullProperties?.Remove("demographics"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsDemographics Demographics { get => _explicitNullValueDemographics; set { _explicitNullValueDemographics = value; AdditionalData?.Remove("demographics"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("demographics"); else _explicitNullProperties?.Remove("demographics"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsDemographics _explicitNullValueDemographics = default!;
 #endif
         /// <summary>Platform-wise totals with time series data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsPlatformTotals? PlatformTotals { get => _explicitNullValuePlatformTotals; set { _explicitNullValuePlatformTotals = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platformTotals"); else _explicitNullProperties?.Remove("platformTotals"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsPlatformTotals? PlatformTotals { get => _explicitNullValuePlatformTotals; set { _explicitNullValuePlatformTotals = value; AdditionalData?.Remove("platformTotals"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platformTotals"); else _explicitNullProperties?.Remove("platformTotals"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsPlatformTotals? _explicitNullValuePlatformTotals = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsPlatformTotals PlatformTotals { get => _explicitNullValuePlatformTotals; set { _explicitNullValuePlatformTotals = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platformTotals"); else _explicitNullProperties?.Remove("platformTotals"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsPlatformTotals PlatformTotals { get => _explicitNullValuePlatformTotals; set { _explicitNullValuePlatformTotals = value; AdditionalData?.Remove("platformTotals"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platformTotals"); else _explicitNullProperties?.Remove("platformTotals"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsPlatformTotals _explicitNullValuePlatformTotals = default!;
 #endif
         /// <summary>Post performance metrics over time</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsPostPerformance? PostPerformance { get => _explicitNullValuePostPerformance; set { _explicitNullValuePostPerformance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("postPerformance"); else _explicitNullProperties?.Remove("postPerformance"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsPostPerformance? PostPerformance { get => _explicitNullValuePostPerformance; set { _explicitNullValuePostPerformance = value; AdditionalData?.Remove("postPerformance"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("postPerformance"); else _explicitNullProperties?.Remove("postPerformance"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsPostPerformance? _explicitNullValuePostPerformance = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsPostPerformance PostPerformance { get => _explicitNullValuePostPerformance; set { _explicitNullValuePostPerformance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("postPerformance"); else _explicitNullProperties?.Remove("postPerformance"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsPostPerformance PostPerformance { get => _explicitNullValuePostPerformance; set { _explicitNullValuePostPerformance = value; AdditionalData?.Remove("postPerformance"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("postPerformance"); else _explicitNullProperties?.Remove("postPerformance"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsPostPerformance _explicitNullValuePostPerformance = default!;
 #endif
         /// <summary>Aggregated metrics totals</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsTotals? Totals { get => _explicitNullValueTotals; set { _explicitNullValueTotals = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totals"); else _explicitNullProperties?.Remove("totals"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsTotals? Totals { get => _explicitNullValueTotals; set { _explicitNullValueTotals = value; AdditionalData?.Remove("totals"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totals"); else _explicitNullProperties?.Remove("totals"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsTotals? _explicitNullValueTotals = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsTotals Totals { get => _explicitNullValueTotals; set { _explicitNullValueTotals = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totals"); else _explicitNullProperties?.Remove("totals"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsTotals Totals { get => _explicitNullValueTotals; set { _explicitNullValueTotals = value; AdditionalData?.Remove("totals"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totals"); else _explicitNullProperties?.Remove("totals"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsTotals _explicitNullValueTotals = default!;
 #endif
         /// <summary>

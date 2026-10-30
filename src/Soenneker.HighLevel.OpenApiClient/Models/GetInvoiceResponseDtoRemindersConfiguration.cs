@@ -18,8 +18,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("reminderExecutionDetailsList") is { } nullNodeReminderExecutionDetailsList && nullNodeReminderExecutionDetailsList.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReminderExecutionDetailsList = null;
-            if (parseNode.GetChildNode("reminderSettings") is { } nullNodeReminderSettings && nullNodeReminderSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReminderSettings = null;
+            if (parseNode.GetChildNode("reminderExecutionDetailsList") is null) { _explicitNullValueReminderExecutionDetailsList = default!; _explicitNullProperties?.Remove("reminderExecutionDetailsList"); }
+            else if (parseNode.GetChildNode("reminderExecutionDetailsList") is { } nullNodeReminderExecutionDetailsList && nullNodeReminderExecutionDetailsList.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReminderExecutionDetailsList = null;
+            if (parseNode.GetChildNode("reminderSettings") is null) { _explicitNullValueReminderSettings = default!; _explicitNullProperties?.Remove("reminderSettings"); }
+            else if (parseNode.GetChildNode("reminderSettings") is { } nullNodeReminderSettings && nullNodeReminderSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReminderSettings = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>List of reminders</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceResponseDtoRemindersConfigurationReminderExecutionDetailsList? ReminderExecutionDetailsList { get => _explicitNullValueReminderExecutionDetailsList; set { _explicitNullValueReminderExecutionDetailsList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reminderExecutionDetailsList"); else _explicitNullProperties?.Remove("reminderExecutionDetailsList"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceResponseDtoRemindersConfigurationReminderExecutionDetailsList? ReminderExecutionDetailsList { get => _explicitNullValueReminderExecutionDetailsList; set { _explicitNullValueReminderExecutionDetailsList = value; AdditionalData?.Remove("reminderExecutionDetailsList"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reminderExecutionDetailsList"); else _explicitNullProperties?.Remove("reminderExecutionDetailsList"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceResponseDtoRemindersConfigurationReminderExecutionDetailsList? _explicitNullValueReminderExecutionDetailsList = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceResponseDtoRemindersConfigurationReminderExecutionDetailsList ReminderExecutionDetailsList { get => _explicitNullValueReminderExecutionDetailsList; set { _explicitNullValueReminderExecutionDetailsList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reminderExecutionDetailsList"); else _explicitNullProperties?.Remove("reminderExecutionDetailsList"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceResponseDtoRemindersConfigurationReminderExecutionDetailsList ReminderExecutionDetailsList { get => _explicitNullValueReminderExecutionDetailsList; set { _explicitNullValueReminderExecutionDetailsList = value; AdditionalData?.Remove("reminderExecutionDetailsList"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reminderExecutionDetailsList"); else _explicitNullProperties?.Remove("reminderExecutionDetailsList"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceResponseDtoRemindersConfigurationReminderExecutionDetailsList _explicitNullValueReminderExecutionDetailsList = default!;
 #endif
         /// <summary>Reminder settings</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.RemindersConfigurationDtoReminderSettings? ReminderSettings { get => _explicitNullValueReminderSettings; set { _explicitNullValueReminderSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reminderSettings"); else _explicitNullProperties?.Remove("reminderSettings"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.RemindersConfigurationDtoReminderSettings? ReminderSettings { get => _explicitNullValueReminderSettings; set { _explicitNullValueReminderSettings = value; AdditionalData?.Remove("reminderSettings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reminderSettings"); else _explicitNullProperties?.Remove("reminderSettings"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.RemindersConfigurationDtoReminderSettings? _explicitNullValueReminderSettings = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.RemindersConfigurationDtoReminderSettings ReminderSettings { get => _explicitNullValueReminderSettings; set { _explicitNullValueReminderSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reminderSettings"); else _explicitNullProperties?.Remove("reminderSettings"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.RemindersConfigurationDtoReminderSettings ReminderSettings { get => _explicitNullValueReminderSettings; set { _explicitNullValueReminderSettings = value; AdditionalData?.Remove("reminderSettings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reminderSettings"); else _explicitNullProperties?.Remove("reminderSettings"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.RemindersConfigurationDtoReminderSettings _explicitNullValueReminderSettings = default!;
 #endif
         /// <summary>

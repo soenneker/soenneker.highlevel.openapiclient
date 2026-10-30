@@ -120,7 +120,7 @@ namespace Soenneker.HighLevel.OpenApiClient.AdManager.AdPublishing.Google.Conver
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.AdManager.AdPublishing.Google.Conversions.ConversionsRequestBuilder.ConversionsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/ad-manager/ad-publishing/google/conversions?locationId={locationId}{&category*,conversionType*,endDate*,startDate*,type*}", PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve("{+baseurl}/ad-manager/ad-publishing/google/conversions?locationId={locationId}{&category*,conversionType*,endDate*,startDate*,type*}", RequestAdapter.BaseUrl, "https://services.leadconnectorhq.com", "/ad-manager/ad-publishing/google/conversions", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -141,7 +141,7 @@ namespace Soenneker.HighLevel.OpenApiClient.AdManager.AdPublishing.Google.Conver
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.PUT, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.PUT, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://services.leadconnectorhq.com", "/ad-manager/ad-publishing/google/conversions", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);

@@ -18,42 +18,47 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("admins") is { } nullNodeAdmins && nullNodeAdmins.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Admins = null;
-            if (parseNode.GetChildNode("allUsers") is { } nullNodeAllUsers && nullNodeAllUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllUsers = null;
-            if (parseNode.GetChildNode("contactAssignedUser") is { } nullNodeContactAssignedUser && nullNodeContactAssignedUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactAssignedUser = null;
-            if (parseNode.GetChildNode("customEmails") is { } nullNodeCustomEmails && nullNodeCustomEmails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomEmails = null;
-            if (parseNode.GetChildNode("specificUsers") is { } nullNodeSpecificUsers && nullNodeSpecificUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SpecificUsers = null;
+            if (parseNode.GetChildNode("admins") is null) { _explicitNullValueAdmins = default!; _explicitNullProperties?.Remove("admins"); }
+            else if (parseNode.GetChildNode("admins") is { } nullNodeAdmins && nullNodeAdmins.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Admins = null;
+            if (parseNode.GetChildNode("allUsers") is null) { _explicitNullValueAllUsers = default!; _explicitNullProperties?.Remove("allUsers"); }
+            else if (parseNode.GetChildNode("allUsers") is { } nullNodeAllUsers && nullNodeAllUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllUsers = null;
+            if (parseNode.GetChildNode("contactAssignedUser") is null) { _explicitNullValueContactAssignedUser = default!; _explicitNullProperties?.Remove("contactAssignedUser"); }
+            else if (parseNode.GetChildNode("contactAssignedUser") is { } nullNodeContactAssignedUser && nullNodeContactAssignedUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactAssignedUser = null;
+            if (parseNode.GetChildNode("customEmails") is null) { _explicitNullValueCustomEmails = default!; _explicitNullProperties?.Remove("customEmails"); }
+            else if (parseNode.GetChildNode("customEmails") is { } nullNodeCustomEmails && nullNodeCustomEmails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomEmails = null;
+            if (parseNode.GetChildNode("specificUsers") is null) { _explicitNullValueSpecificUsers = default!; _explicitNullProperties?.Remove("specificUsers"); }
+            else if (parseNode.GetChildNode("specificUsers") is { } nullNodeSpecificUsers && nullNodeSpecificUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SpecificUsers = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Enables post-call notifications to all admin users in the location. Default: true</summary>
-        public bool? Admins { get => _explicitNullValueAdmins; set { _explicitNullValueAdmins = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("admins"); else _explicitNullProperties?.Remove("admins"); } }
+        public bool? Admins { get => _explicitNullValueAdmins; set { _explicitNullValueAdmins = value; AdditionalData?.Remove("admins"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("admins"); else _explicitNullProperties?.Remove("admins"); } }
         private bool? _explicitNullValueAdmins = default!;
         /// <summary>Enables post-call notifications to all users in the location. Default: false</summary>
-        public bool? AllUsers { get => _explicitNullValueAllUsers; set { _explicitNullValueAllUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allUsers"); else _explicitNullProperties?.Remove("allUsers"); } }
+        public bool? AllUsers { get => _explicitNullValueAllUsers; set { _explicitNullValueAllUsers = value; AdditionalData?.Remove("allUsers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allUsers"); else _explicitNullProperties?.Remove("allUsers"); } }
         private bool? _explicitNullValueAllUsers = default!;
         /// <summary>Enables post-call notifications to the user assigned to the contact. Default: false</summary>
-        public bool? ContactAssignedUser { get => _explicitNullValueContactAssignedUser; set { _explicitNullValueContactAssignedUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactAssignedUser"); else _explicitNullProperties?.Remove("contactAssignedUser"); } }
+        public bool? ContactAssignedUser { get => _explicitNullValueContactAssignedUser; set { _explicitNullValueContactAssignedUser = value; AdditionalData?.Remove("contactAssignedUser"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactAssignedUser"); else _explicitNullProperties?.Remove("contactAssignedUser"); } }
         private bool? _explicitNullValueContactAssignedUser = default!;
         /// <summary>Array of custom email addresses to receive post-call notifications. Default: []</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? CustomEmails { get => _explicitNullValueCustomEmails; set { _explicitNullValueCustomEmails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customEmails"); else _explicitNullProperties?.Remove("customEmails"); } }
+        public List<string>? CustomEmails { get => _explicitNullValueCustomEmails; set { _explicitNullValueCustomEmails = value; AdditionalData?.Remove("customEmails"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customEmails"); else _explicitNullProperties?.Remove("customEmails"); } }
         private List<string>? _explicitNullValueCustomEmails = default!;
 #nullable restore
 #else
-        public List<string> CustomEmails { get => _explicitNullValueCustomEmails; set { _explicitNullValueCustomEmails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customEmails"); else _explicitNullProperties?.Remove("customEmails"); } }
+        public List<string> CustomEmails { get => _explicitNullValueCustomEmails; set { _explicitNullValueCustomEmails = value; AdditionalData?.Remove("customEmails"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customEmails"); else _explicitNullProperties?.Remove("customEmails"); } }
         private List<string> _explicitNullValueCustomEmails = default!;
 #endif
         /// <summary>Array of specific user IDs to receive post-call notifications. Default: []</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? SpecificUsers { get => _explicitNullValueSpecificUsers; set { _explicitNullValueSpecificUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("specificUsers"); else _explicitNullProperties?.Remove("specificUsers"); } }
+        public List<string>? SpecificUsers { get => _explicitNullValueSpecificUsers; set { _explicitNullValueSpecificUsers = value; AdditionalData?.Remove("specificUsers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("specificUsers"); else _explicitNullProperties?.Remove("specificUsers"); } }
         private List<string>? _explicitNullValueSpecificUsers = default!;
 #nullable restore
 #else
-        public List<string> SpecificUsers { get => _explicitNullValueSpecificUsers; set { _explicitNullValueSpecificUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("specificUsers"); else _explicitNullProperties?.Remove("specificUsers"); } }
+        public List<string> SpecificUsers { get => _explicitNullValueSpecificUsers; set { _explicitNullValueSpecificUsers = value; AdditionalData?.Remove("specificUsers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("specificUsers"); else _explicitNullProperties?.Remove("specificUsers"); } }
         private List<string> _explicitNullValueSpecificUsers = default!;
 #endif
         /// <summary>

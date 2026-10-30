@@ -17,11 +17,16 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("csvPath") is { } nullNodeCsvPath && nullNodeCsvPath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CsvPath = null;
-            if (parseNode.GetChildNode("isDynamic") is { } nullNodeIsDynamic && nullNodeIsDynamic.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsDynamic = null;
-            if (parseNode.GetChildNode("locationId") is { } nullNodeLocationId && nullNodeLocationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationId = null;
-            if (parseNode.GetChildNode("smartListIds") is { } nullNodeSmartListIds && nullNodeSmartListIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmartListIds = null;
-            if (parseNode.GetChildNode("userListId") is { } nullNodeUserListId && nullNodeUserListId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserListId = null;
+            if (parseNode.GetChildNode("csvPath") is null) { _explicitNullValueCsvPath = default!; _explicitNullProperties?.Remove("csvPath"); }
+            else if (parseNode.GetChildNode("csvPath") is { } nullNodeCsvPath && nullNodeCsvPath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CsvPath = null;
+            if (parseNode.GetChildNode("isDynamic") is null) { _explicitNullValueIsDynamic = default!; _explicitNullProperties?.Remove("isDynamic"); }
+            else if (parseNode.GetChildNode("isDynamic") is { } nullNodeIsDynamic && nullNodeIsDynamic.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsDynamic = null;
+            if (parseNode.GetChildNode("locationId") is null) { _explicitNullValueLocationId = default!; _explicitNullProperties?.Remove("locationId"); }
+            else if (parseNode.GetChildNode("locationId") is { } nullNodeLocationId && nullNodeLocationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationId = null;
+            if (parseNode.GetChildNode("smartListIds") is null) { _explicitNullValueSmartListIds = default!; _explicitNullProperties?.Remove("smartListIds"); }
+            else if (parseNode.GetChildNode("smartListIds") is { } nullNodeSmartListIds && nullNodeSmartListIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmartListIds = null;
+            if (parseNode.GetChildNode("userListId") is null) { _explicitNullValueUserListId = default!; _explicitNullProperties?.Remove("userListId"); }
+            else if (parseNode.GetChildNode("userListId") is { } nullNodeUserListId && nullNodeUserListId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserListId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,44 +34,44 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>CSV file path</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CsvPath { get => _explicitNullValueCsvPath; set { _explicitNullValueCsvPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("csvPath"); else _explicitNullProperties?.Remove("csvPath"); } }
+        public string? CsvPath { get => _explicitNullValueCsvPath; set { _explicitNullValueCsvPath = value; AdditionalData?.Remove("csvPath"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("csvPath"); else _explicitNullProperties?.Remove("csvPath"); } }
         private string? _explicitNullValueCsvPath = default!;
 #nullable restore
 #else
-        public string CsvPath { get => _explicitNullValueCsvPath; set { _explicitNullValueCsvPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("csvPath"); else _explicitNullProperties?.Remove("csvPath"); } }
+        public string CsvPath { get => _explicitNullValueCsvPath; set { _explicitNullValueCsvPath = value; AdditionalData?.Remove("csvPath"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("csvPath"); else _explicitNullProperties?.Remove("csvPath"); } }
         private string _explicitNullValueCsvPath = default!;
 #endif
         /// <summary>Dynamic list flag</summary>
-        public bool? IsDynamic { get => _explicitNullValueIsDynamic; set { _explicitNullValueIsDynamic = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isDynamic"); else _explicitNullProperties?.Remove("isDynamic"); } }
+        public bool? IsDynamic { get => _explicitNullValueIsDynamic; set { _explicitNullValueIsDynamic = value; AdditionalData?.Remove("isDynamic"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isDynamic"); else _explicitNullProperties?.Remove("isDynamic"); } }
         private bool? _explicitNullValueIsDynamic = default!;
         /// <summary>Location identifier</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
+        public string? LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; AdditionalData?.Remove("locationId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
         private string? _explicitNullValueLocationId = default!;
 #nullable restore
 #else
-        public string LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
+        public string LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; AdditionalData?.Remove("locationId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
         private string _explicitNullValueLocationId = default!;
 #endif
         /// <summary>Smart list IDs</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? SmartListIds { get => _explicitNullValueSmartListIds; set { _explicitNullValueSmartListIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smartListIds"); else _explicitNullProperties?.Remove("smartListIds"); } }
+        public List<string>? SmartListIds { get => _explicitNullValueSmartListIds; set { _explicitNullValueSmartListIds = value; AdditionalData?.Remove("smartListIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smartListIds"); else _explicitNullProperties?.Remove("smartListIds"); } }
         private List<string>? _explicitNullValueSmartListIds = default!;
 #nullable restore
 #else
-        public List<string> SmartListIds { get => _explicitNullValueSmartListIds; set { _explicitNullValueSmartListIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smartListIds"); else _explicitNullProperties?.Remove("smartListIds"); } }
+        public List<string> SmartListIds { get => _explicitNullValueSmartListIds; set { _explicitNullValueSmartListIds = value; AdditionalData?.Remove("smartListIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smartListIds"); else _explicitNullProperties?.Remove("smartListIds"); } }
         private List<string> _explicitNullValueSmartListIds = default!;
 #endif
         /// <summary>User list identifier</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserListId { get => _explicitNullValueUserListId; set { _explicitNullValueUserListId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userListId"); else _explicitNullProperties?.Remove("userListId"); } }
+        public string? UserListId { get => _explicitNullValueUserListId; set { _explicitNullValueUserListId = value; AdditionalData?.Remove("userListId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userListId"); else _explicitNullProperties?.Remove("userListId"); } }
         private string? _explicitNullValueUserListId = default!;
 #nullable restore
 #else
-        public string UserListId { get => _explicitNullValueUserListId; set { _explicitNullValueUserListId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userListId"); else _explicitNullProperties?.Remove("userListId"); } }
+        public string UserListId { get => _explicitNullValueUserListId; set { _explicitNullValueUserListId = value; AdditionalData?.Remove("userListId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userListId"); else _explicitNullProperties?.Remove("userListId"); } }
         private string _explicitNullValueUserListId = default!;
 #endif
         /// <summary>

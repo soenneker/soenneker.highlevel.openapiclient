@@ -18,23 +18,25 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("count") is { } nullNodeCount && nullNodeCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Count = null;
-            if (parseNode.GetChildNode("csvs") is { } nullNodeCsvs && nullNodeCsvs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Csvs = null;
+            if (parseNode.GetChildNode("count") is null) { _explicitNullValueCount = default!; _explicitNullProperties?.Remove("count"); }
+            else if (parseNode.GetChildNode("count") is { } nullNodeCount && nullNodeCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Count = null;
+            if (parseNode.GetChildNode("csvs") is null) { _explicitNullValueCsvs = default!; _explicitNullProperties?.Remove("csvs"); }
+            else if (parseNode.GetChildNode("csvs") is { } nullNodeCsvs && nullNodeCsvs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Csvs = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The count property</summary>
-        public double? Count { get => _explicitNullValueCount; set { _explicitNullValueCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("count"); else _explicitNullProperties?.Remove("count"); } }
+        public double? Count { get => _explicitNullValueCount; set { _explicitNullValueCount = value; AdditionalData?.Remove("count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("count"); else _explicitNullProperties?.Remove("count"); } }
         private double? _explicitNullValueCount = default!;
         /// <summary>CSV Data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetUploadStatusResponseSchemaCsvs? Csvs { get => _explicitNullValueCsvs; set { _explicitNullValueCsvs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("csvs"); else _explicitNullProperties?.Remove("csvs"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetUploadStatusResponseSchemaCsvs? Csvs { get => _explicitNullValueCsvs; set { _explicitNullValueCsvs = value; AdditionalData?.Remove("csvs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("csvs"); else _explicitNullProperties?.Remove("csvs"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.GetUploadStatusResponseSchemaCsvs? _explicitNullValueCsvs = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetUploadStatusResponseSchemaCsvs Csvs { get => _explicitNullValueCsvs; set { _explicitNullValueCsvs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("csvs"); else _explicitNullProperties?.Remove("csvs"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetUploadStatusResponseSchemaCsvs Csvs { get => _explicitNullValueCsvs; set { _explicitNullValueCsvs = value; AdditionalData?.Remove("csvs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("csvs"); else _explicitNullProperties?.Remove("csvs"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.GetUploadStatusResponseSchemaCsvs _explicitNullValueCsvs = default!;
 #endif
         /// <summary>

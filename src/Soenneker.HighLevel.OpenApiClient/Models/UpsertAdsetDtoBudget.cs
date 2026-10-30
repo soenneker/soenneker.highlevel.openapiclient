@@ -18,38 +18,42 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
-            if (parseNode.GetChildNode("budgetType") is { } nullNodeBudgetType && nullNodeBudgetType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BudgetType = null;
-            if (parseNode.GetChildNode("scheduleEndDate") is { } nullNodeScheduleEndDate && nullNodeScheduleEndDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduleEndDate = null;
-            if (parseNode.GetChildNode("scheduleStartDate") is { } nullNodeScheduleStartDate && nullNodeScheduleStartDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduleStartDate = null;
+            if (parseNode.GetChildNode("amount") is null) { _explicitNullValueAmount = default!; _explicitNullProperties?.Remove("amount"); }
+            else if (parseNode.GetChildNode("amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
+            if (parseNode.GetChildNode("budgetType") is null) { _explicitNullValueBudgetType = default!; _explicitNullProperties?.Remove("budgetType"); }
+            else if (parseNode.GetChildNode("budgetType") is { } nullNodeBudgetType && nullNodeBudgetType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BudgetType = null;
+            if (parseNode.GetChildNode("scheduleEndDate") is null) { _explicitNullValueScheduleEndDate = default!; _explicitNullProperties?.Remove("scheduleEndDate"); }
+            else if (parseNode.GetChildNode("scheduleEndDate") is { } nullNodeScheduleEndDate && nullNodeScheduleEndDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduleEndDate = null;
+            if (parseNode.GetChildNode("scheduleStartDate") is null) { _explicitNullValueScheduleStartDate = default!; _explicitNullProperties?.Remove("scheduleStartDate"); }
+            else if (parseNode.GetChildNode("scheduleStartDate") is { } nullNodeScheduleStartDate && nullNodeScheduleStartDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScheduleStartDate = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Budget amount</summary>
-        public double? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
+        public double? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; AdditionalData?.Remove("amount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amount"); else _explicitNullProperties?.Remove("amount"); } }
         private double? _explicitNullValueAmount = default!;
         /// <summary>Budget type</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.BudgetBudgetType? BudgetType { get => _explicitNullValueBudgetType; set { _explicitNullValueBudgetType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("budgetType"); else _explicitNullProperties?.Remove("budgetType"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.BudgetBudgetType? BudgetType { get => _explicitNullValueBudgetType; set { _explicitNullValueBudgetType = value; AdditionalData?.Remove("budgetType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("budgetType"); else _explicitNullProperties?.Remove("budgetType"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.BudgetBudgetType? _explicitNullValueBudgetType = default!;
         /// <summary>Schedule end date</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ScheduleEndDate { get => _explicitNullValueScheduleEndDate; set { _explicitNullValueScheduleEndDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduleEndDate"); else _explicitNullProperties?.Remove("scheduleEndDate"); } }
+        public string? ScheduleEndDate { get => _explicitNullValueScheduleEndDate; set { _explicitNullValueScheduleEndDate = value; AdditionalData?.Remove("scheduleEndDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduleEndDate"); else _explicitNullProperties?.Remove("scheduleEndDate"); } }
         private string? _explicitNullValueScheduleEndDate = default!;
 #nullable restore
 #else
-        public string ScheduleEndDate { get => _explicitNullValueScheduleEndDate; set { _explicitNullValueScheduleEndDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduleEndDate"); else _explicitNullProperties?.Remove("scheduleEndDate"); } }
+        public string ScheduleEndDate { get => _explicitNullValueScheduleEndDate; set { _explicitNullValueScheduleEndDate = value; AdditionalData?.Remove("scheduleEndDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduleEndDate"); else _explicitNullProperties?.Remove("scheduleEndDate"); } }
         private string _explicitNullValueScheduleEndDate = default!;
 #endif
         /// <summary>Schedule start date</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ScheduleStartDate { get => _explicitNullValueScheduleStartDate; set { _explicitNullValueScheduleStartDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduleStartDate"); else _explicitNullProperties?.Remove("scheduleStartDate"); } }
+        public string? ScheduleStartDate { get => _explicitNullValueScheduleStartDate; set { _explicitNullValueScheduleStartDate = value; AdditionalData?.Remove("scheduleStartDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduleStartDate"); else _explicitNullProperties?.Remove("scheduleStartDate"); } }
         private string? _explicitNullValueScheduleStartDate = default!;
 #nullable restore
 #else
-        public string ScheduleStartDate { get => _explicitNullValueScheduleStartDate; set { _explicitNullValueScheduleStartDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduleStartDate"); else _explicitNullProperties?.Remove("scheduleStartDate"); } }
+        public string ScheduleStartDate { get => _explicitNullValueScheduleStartDate; set { _explicitNullValueScheduleStartDate = value; AdditionalData?.Remove("scheduleStartDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduleStartDate"); else _explicitNullProperties?.Remove("scheduleStartDate"); } }
         private string _explicitNullValueScheduleStartDate = default!;
 #endif
         /// <summary>
@@ -78,7 +82,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "amount", n => { Amount = n.GetDoubleValue(); } },
-                { "budgetType", n => { BudgetType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.BudgetBudgetType>(); } },
+                { "budgetType", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.BudgetBudgetType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueBudgetType = default; _explicitNullProperties?.Remove("budgetType"); AdditionalData["budgetType"] = unknown; } else { BudgetType = parsed; AdditionalData.Remove("budgetType"); } } },
                 { "scheduleEndDate", n => { ScheduleEndDate = n.GetStringValue(); } },
                 { "scheduleStartDate", n => { ScheduleStartDate = n.GetStringValue(); } },
             };

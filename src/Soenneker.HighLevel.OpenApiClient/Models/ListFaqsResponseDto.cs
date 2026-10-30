@@ -17,38 +17,42 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("count") is { } nullNodeCount && nullNodeCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Count = null;
-            if (parseNode.GetChildNode("faqs") is { } nullNodeFaqs && nullNodeFaqs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Faqs = null;
-            if (parseNode.GetChildNode("hasMore") is { } nullNodeHasMore && nullNodeHasMore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasMore = null;
-            if (parseNode.GetChildNode("lastFaqId") is { } nullNodeLastFaqId && nullNodeLastFaqId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastFaqId = null;
+            if (parseNode.GetChildNode("count") is null) { _explicitNullValueCount = default!; _explicitNullProperties?.Remove("count"); }
+            else if (parseNode.GetChildNode("count") is { } nullNodeCount && nullNodeCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Count = null;
+            if (parseNode.GetChildNode("faqs") is null) { _explicitNullValueFaqs = default!; _explicitNullProperties?.Remove("faqs"); }
+            else if (parseNode.GetChildNode("faqs") is { } nullNodeFaqs && nullNodeFaqs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Faqs = null;
+            if (parseNode.GetChildNode("hasMore") is null) { _explicitNullValueHasMore = default!; _explicitNullProperties?.Remove("hasMore"); }
+            else if (parseNode.GetChildNode("hasMore") is { } nullNodeHasMore && nullNodeHasMore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasMore = null;
+            if (parseNode.GetChildNode("lastFaqId") is null) { _explicitNullValueLastFaqId = default!; _explicitNullProperties?.Remove("lastFaqId"); }
+            else if (parseNode.GetChildNode("lastFaqId") is { } nullNodeLastFaqId && nullNodeLastFaqId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastFaqId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Total count of all FAQs in the knowledge base</summary>
-        public double? Count { get => _explicitNullValueCount; set { _explicitNullValueCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("count"); else _explicitNullProperties?.Remove("count"); } }
+        public double? Count { get => _explicitNullValueCount; set { _explicitNullValueCount = value; AdditionalData?.Remove("count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("count"); else _explicitNullProperties?.Remove("count"); } }
         private double? _explicitNullValueCount = default!;
         /// <summary>Array of FAQ objects</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.FaqResponseDto>? Faqs { get => _explicitNullValueFaqs; set { _explicitNullValueFaqs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("faqs"); else _explicitNullProperties?.Remove("faqs"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.FaqResponseDto>? Faqs { get => _explicitNullValueFaqs; set { _explicitNullValueFaqs = value; AdditionalData?.Remove("faqs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("faqs"); else _explicitNullProperties?.Remove("faqs"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.FaqResponseDto>? _explicitNullValueFaqs = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.FaqResponseDto> Faqs { get => _explicitNullValueFaqs; set { _explicitNullValueFaqs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("faqs"); else _explicitNullProperties?.Remove("faqs"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.FaqResponseDto> Faqs { get => _explicitNullValueFaqs; set { _explicitNullValueFaqs = value; AdditionalData?.Remove("faqs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("faqs"); else _explicitNullProperties?.Remove("faqs"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.FaqResponseDto> _explicitNullValueFaqs = default!;
 #endif
         /// <summary>Whether there are more FAQs available</summary>
-        public bool? HasMore { get => _explicitNullValueHasMore; set { _explicitNullValueHasMore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hasMore"); else _explicitNullProperties?.Remove("hasMore"); } }
+        public bool? HasMore { get => _explicitNullValueHasMore; set { _explicitNullValueHasMore = value; AdditionalData?.Remove("hasMore"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hasMore"); else _explicitNullProperties?.Remove("hasMore"); } }
         private bool? _explicitNullValueHasMore = default!;
         /// <summary>Last FAQ ID for pagination (use as lastFaqId in next request)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LastFaqId { get => _explicitNullValueLastFaqId; set { _explicitNullValueLastFaqId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastFaqId"); else _explicitNullProperties?.Remove("lastFaqId"); } }
+        public string? LastFaqId { get => _explicitNullValueLastFaqId; set { _explicitNullValueLastFaqId = value; AdditionalData?.Remove("lastFaqId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastFaqId"); else _explicitNullProperties?.Remove("lastFaqId"); } }
         private string? _explicitNullValueLastFaqId = default!;
 #nullable restore
 #else
-        public string LastFaqId { get => _explicitNullValueLastFaqId; set { _explicitNullValueLastFaqId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastFaqId"); else _explicitNullProperties?.Remove("lastFaqId"); } }
+        public string LastFaqId { get => _explicitNullValueLastFaqId; set { _explicitNullValueLastFaqId = value; AdditionalData?.Remove("lastFaqId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastFaqId"); else _explicitNullProperties?.Remove("lastFaqId"); } }
         private string _explicitNullValueLastFaqId = default!;
 #endif
         /// <summary>

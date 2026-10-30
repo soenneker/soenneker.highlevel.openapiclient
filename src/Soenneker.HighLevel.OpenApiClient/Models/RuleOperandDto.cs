@@ -17,23 +17,25 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("lookbackWindowDays") is { } nullNodeLookbackWindowDays && nullNodeLookbackWindowDays.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LookbackWindowDays = null;
-            if (parseNode.GetChildNode("rule") is { } nullNodeRule && nullNodeRule.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Rule = null;
+            if (parseNode.GetChildNode("lookbackWindowDays") is null) { _explicitNullValueLookbackWindowDays = default!; _explicitNullProperties?.Remove("lookbackWindowDays"); }
+            else if (parseNode.GetChildNode("lookbackWindowDays") is { } nullNodeLookbackWindowDays && nullNodeLookbackWindowDays.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LookbackWindowDays = null;
+            if (parseNode.GetChildNode("rule") is null) { _explicitNullValueRule = default!; _explicitNullProperties?.Remove("rule"); }
+            else if (parseNode.GetChildNode("rule") is { } nullNodeRule && nullNodeRule.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Rule = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Lookback window in days</summary>
-        public double? LookbackWindowDays { get => _explicitNullValueLookbackWindowDays; set { _explicitNullValueLookbackWindowDays = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lookbackWindowDays"); else _explicitNullProperties?.Remove("lookbackWindowDays"); } }
+        public double? LookbackWindowDays { get => _explicitNullValueLookbackWindowDays; set { _explicitNullValueLookbackWindowDays = value; AdditionalData?.Remove("lookbackWindowDays"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lookbackWindowDays"); else _explicitNullProperties?.Remove("lookbackWindowDays"); } }
         private double? _explicitNullValueLookbackWindowDays = default!;
         /// <summary>Rule definition</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.RuleOperandDtoRule? Rule { get => _explicitNullValueRule; set { _explicitNullValueRule = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rule"); else _explicitNullProperties?.Remove("rule"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.RuleOperandDtoRule? Rule { get => _explicitNullValueRule; set { _explicitNullValueRule = value; AdditionalData?.Remove("rule"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rule"); else _explicitNullProperties?.Remove("rule"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.RuleOperandDtoRule? _explicitNullValueRule = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.RuleOperandDtoRule Rule { get => _explicitNullValueRule; set { _explicitNullValueRule = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rule"); else _explicitNullProperties?.Remove("rule"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.RuleOperandDtoRule Rule { get => _explicitNullValueRule; set { _explicitNullValueRule = value; AdditionalData?.Remove("rule"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rule"); else _explicitNullProperties?.Remove("rule"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.RuleOperandDtoRule _explicitNullValueRule = default!;
 #endif
         /// <summary>

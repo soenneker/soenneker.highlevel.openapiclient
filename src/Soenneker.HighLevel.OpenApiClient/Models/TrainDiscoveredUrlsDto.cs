@@ -17,10 +17,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("knowledgeBaseId") is { } nullNodeKnowledgeBaseId && nullNodeKnowledgeBaseId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) KnowledgeBaseId = null;
-            if (parseNode.GetChildNode("locationId") is { } nullNodeLocationId && nullNodeLocationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationId = null;
-            if (parseNode.GetChildNode("operationId") is { } nullNodeOperationId && nullNodeOperationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OperationId = null;
-            if (parseNode.GetChildNode("urlIds") is { } nullNodeUrlIds && nullNodeUrlIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UrlIds = null;
+            if (parseNode.GetChildNode("knowledgeBaseId") is null) { _explicitNullValueKnowledgeBaseId = default!; _explicitNullProperties?.Remove("knowledgeBaseId"); }
+            else if (parseNode.GetChildNode("knowledgeBaseId") is { } nullNodeKnowledgeBaseId && nullNodeKnowledgeBaseId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) KnowledgeBaseId = null;
+            if (parseNode.GetChildNode("locationId") is null) { _explicitNullValueLocationId = default!; _explicitNullProperties?.Remove("locationId"); }
+            else if (parseNode.GetChildNode("locationId") is { } nullNodeLocationId && nullNodeLocationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationId = null;
+            if (parseNode.GetChildNode("operationId") is null) { _explicitNullValueOperationId = default!; _explicitNullProperties?.Remove("operationId"); }
+            else if (parseNode.GetChildNode("operationId") is { } nullNodeOperationId && nullNodeOperationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OperationId = null;
+            if (parseNode.GetChildNode("urlIds") is null) { _explicitNullValueUrlIds = default!; _explicitNullProperties?.Remove("urlIds"); }
+            else if (parseNode.GetChildNode("urlIds") is { } nullNodeUrlIds && nullNodeUrlIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UrlIds = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,41 +32,41 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>knowledge base id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? KnowledgeBaseId { get => _explicitNullValueKnowledgeBaseId; set { _explicitNullValueKnowledgeBaseId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("knowledgeBaseId"); else _explicitNullProperties?.Remove("knowledgeBaseId"); } }
+        public string? KnowledgeBaseId { get => _explicitNullValueKnowledgeBaseId; set { _explicitNullValueKnowledgeBaseId = value; AdditionalData?.Remove("knowledgeBaseId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("knowledgeBaseId"); else _explicitNullProperties?.Remove("knowledgeBaseId"); } }
         private string? _explicitNullValueKnowledgeBaseId = default!;
 #nullable restore
 #else
-        public string KnowledgeBaseId { get => _explicitNullValueKnowledgeBaseId; set { _explicitNullValueKnowledgeBaseId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("knowledgeBaseId"); else _explicitNullProperties?.Remove("knowledgeBaseId"); } }
+        public string KnowledgeBaseId { get => _explicitNullValueKnowledgeBaseId; set { _explicitNullValueKnowledgeBaseId = value; AdditionalData?.Remove("knowledgeBaseId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("knowledgeBaseId"); else _explicitNullProperties?.Remove("knowledgeBaseId"); } }
         private string _explicitNullValueKnowledgeBaseId = default!;
 #endif
         /// <summary>Location ID as string</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
+        public string? LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; AdditionalData?.Remove("locationId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
         private string? _explicitNullValueLocationId = default!;
 #nullable restore
 #else
-        public string LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
+        public string LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; AdditionalData?.Remove("locationId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
         private string _explicitNullValueLocationId = default!;
 #endif
         /// <summary>operation id as string</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OperationId { get => _explicitNullValueOperationId; set { _explicitNullValueOperationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operationId"); else _explicitNullProperties?.Remove("operationId"); } }
+        public string? OperationId { get => _explicitNullValueOperationId; set { _explicitNullValueOperationId = value; AdditionalData?.Remove("operationId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operationId"); else _explicitNullProperties?.Remove("operationId"); } }
         private string? _explicitNullValueOperationId = default!;
 #nullable restore
 #else
-        public string OperationId { get => _explicitNullValueOperationId; set { _explicitNullValueOperationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operationId"); else _explicitNullProperties?.Remove("operationId"); } }
+        public string OperationId { get => _explicitNullValueOperationId; set { _explicitNullValueOperationId = value; AdditionalData?.Remove("operationId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operationId"); else _explicitNullProperties?.Remove("operationId"); } }
         private string _explicitNullValueOperationId = default!;
 #endif
         /// <summary>List of Object ids of the discovered urls</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? UrlIds { get => _explicitNullValueUrlIds; set { _explicitNullValueUrlIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("urlIds"); else _explicitNullProperties?.Remove("urlIds"); } }
+        public List<string>? UrlIds { get => _explicitNullValueUrlIds; set { _explicitNullValueUrlIds = value; AdditionalData?.Remove("urlIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("urlIds"); else _explicitNullProperties?.Remove("urlIds"); } }
         private List<string>? _explicitNullValueUrlIds = default!;
 #nullable restore
 #else
-        public List<string> UrlIds { get => _explicitNullValueUrlIds; set { _explicitNullValueUrlIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("urlIds"); else _explicitNullProperties?.Remove("urlIds"); } }
+        public List<string> UrlIds { get => _explicitNullValueUrlIds; set { _explicitNullValueUrlIds = value; AdditionalData?.Remove("urlIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("urlIds"); else _explicitNullProperties?.Remove("urlIds"); } }
         private List<string> _explicitNullValueUrlIds = default!;
 #endif
         /// <summary>

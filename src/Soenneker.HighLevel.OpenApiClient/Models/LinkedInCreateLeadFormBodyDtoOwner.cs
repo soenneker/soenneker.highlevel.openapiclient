@@ -18,7 +18,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("sponsoredAccount") is { } nullNodeSponsoredAccount && nullNodeSponsoredAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SponsoredAccount = null;
+            if (parseNode.GetChildNode("sponsoredAccount") is null) { _explicitNullValueSponsoredAccount = default!; _explicitNullProperties?.Remove("sponsoredAccount"); }
+            else if (parseNode.GetChildNode("sponsoredAccount") is { } nullNodeSponsoredAccount && nullNodeSponsoredAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SponsoredAccount = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Sponsored account URN</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SponsoredAccount { get => _explicitNullValueSponsoredAccount; set { _explicitNullValueSponsoredAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sponsoredAccount"); else _explicitNullProperties?.Remove("sponsoredAccount"); } }
+        public string? SponsoredAccount { get => _explicitNullValueSponsoredAccount; set { _explicitNullValueSponsoredAccount = value; AdditionalData?.Remove("sponsoredAccount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sponsoredAccount"); else _explicitNullProperties?.Remove("sponsoredAccount"); } }
         private string? _explicitNullValueSponsoredAccount = default!;
 #nullable restore
 #else
-        public string SponsoredAccount { get => _explicitNullValueSponsoredAccount; set { _explicitNullValueSponsoredAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sponsoredAccount"); else _explicitNullProperties?.Remove("sponsoredAccount"); } }
+        public string SponsoredAccount { get => _explicitNullValueSponsoredAccount; set { _explicitNullValueSponsoredAccount = value; AdditionalData?.Remove("sponsoredAccount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sponsoredAccount"); else _explicitNullProperties?.Remove("sponsoredAccount"); } }
         private string _explicitNullValueSponsoredAccount = default!;
 #endif
         /// <summary>

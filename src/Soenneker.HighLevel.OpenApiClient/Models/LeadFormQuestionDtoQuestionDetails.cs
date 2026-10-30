@@ -18,8 +18,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("multipleChoiceQuestionDetails") is { } nullNodeMultipleChoiceQuestionDetails && nullNodeMultipleChoiceQuestionDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MultipleChoiceQuestionDetails = null;
-            if (parseNode.GetChildNode("textQuestionDetails") is { } nullNodeTextQuestionDetails && nullNodeTextQuestionDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextQuestionDetails = null;
+            if (parseNode.GetChildNode("multipleChoiceQuestionDetails") is null) { _explicitNullValueMultipleChoiceQuestionDetails = default!; _explicitNullProperties?.Remove("multipleChoiceQuestionDetails"); }
+            else if (parseNode.GetChildNode("multipleChoiceQuestionDetails") is { } nullNodeMultipleChoiceQuestionDetails && nullNodeMultipleChoiceQuestionDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MultipleChoiceQuestionDetails = null;
+            if (parseNode.GetChildNode("textQuestionDetails") is null) { _explicitNullValueTextQuestionDetails = default!; _explicitNullProperties?.Remove("textQuestionDetails"); }
+            else if (parseNode.GetChildNode("textQuestionDetails") is { } nullNodeTextQuestionDetails && nullNodeTextQuestionDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextQuestionDetails = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Multiple choice question details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.QuestionDetailsDtoMultipleChoiceQuestionDetails? MultipleChoiceQuestionDetails { get => _explicitNullValueMultipleChoiceQuestionDetails; set { _explicitNullValueMultipleChoiceQuestionDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multipleChoiceQuestionDetails"); else _explicitNullProperties?.Remove("multipleChoiceQuestionDetails"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.QuestionDetailsDtoMultipleChoiceQuestionDetails? MultipleChoiceQuestionDetails { get => _explicitNullValueMultipleChoiceQuestionDetails; set { _explicitNullValueMultipleChoiceQuestionDetails = value; AdditionalData?.Remove("multipleChoiceQuestionDetails"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multipleChoiceQuestionDetails"); else _explicitNullProperties?.Remove("multipleChoiceQuestionDetails"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.QuestionDetailsDtoMultipleChoiceQuestionDetails? _explicitNullValueMultipleChoiceQuestionDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.QuestionDetailsDtoMultipleChoiceQuestionDetails MultipleChoiceQuestionDetails { get => _explicitNullValueMultipleChoiceQuestionDetails; set { _explicitNullValueMultipleChoiceQuestionDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multipleChoiceQuestionDetails"); else _explicitNullProperties?.Remove("multipleChoiceQuestionDetails"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.QuestionDetailsDtoMultipleChoiceQuestionDetails MultipleChoiceQuestionDetails { get => _explicitNullValueMultipleChoiceQuestionDetails; set { _explicitNullValueMultipleChoiceQuestionDetails = value; AdditionalData?.Remove("multipleChoiceQuestionDetails"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multipleChoiceQuestionDetails"); else _explicitNullProperties?.Remove("multipleChoiceQuestionDetails"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.QuestionDetailsDtoMultipleChoiceQuestionDetails _explicitNullValueMultipleChoiceQuestionDetails = default!;
 #endif
         /// <summary>Text question details (empty object for text questions)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormQuestionDtoQuestionDetailsTextQuestionDetailsProperty? TextQuestionDetails { get => _explicitNullValueTextQuestionDetails; set { _explicitNullValueTextQuestionDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("textQuestionDetails"); else _explicitNullProperties?.Remove("textQuestionDetails"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormQuestionDtoQuestionDetailsTextQuestionDetailsProperty? TextQuestionDetails { get => _explicitNullValueTextQuestionDetails; set { _explicitNullValueTextQuestionDetails = value; AdditionalData?.Remove("textQuestionDetails"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("textQuestionDetails"); else _explicitNullProperties?.Remove("textQuestionDetails"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormQuestionDtoQuestionDetailsTextQuestionDetailsProperty? _explicitNullValueTextQuestionDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormQuestionDtoQuestionDetailsTextQuestionDetailsProperty TextQuestionDetails { get => _explicitNullValueTextQuestionDetails; set { _explicitNullValueTextQuestionDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("textQuestionDetails"); else _explicitNullProperties?.Remove("textQuestionDetails"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormQuestionDtoQuestionDetailsTextQuestionDetailsProperty TextQuestionDetails { get => _explicitNullValueTextQuestionDetails; set { _explicitNullValueTextQuestionDetails = value; AdditionalData?.Remove("textQuestionDetails"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("textQuestionDetails"); else _explicitNullProperties?.Remove("textQuestionDetails"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormQuestionDtoQuestionDetailsTextQuestionDetailsProperty _explicitNullValueTextQuestionDetails = default!;
 #endif
         /// <summary>

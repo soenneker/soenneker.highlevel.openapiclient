@@ -17,7 +17,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("tagIds") is { } nullNodeTagIds && nullNodeTagIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TagIds = null;
+            if (parseNode.GetChildNode("tagIds") is null) { _explicitNullValueTagIds = default!; _explicitNullProperties?.Remove("tagIds"); }
+            else if (parseNode.GetChildNode("tagIds") is { } nullNodeTagIds && nullNodeTagIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TagIds = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Array of Tag Ids</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? TagIds { get => _explicitNullValueTagIds; set { _explicitNullValueTagIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tagIds"); else _explicitNullProperties?.Remove("tagIds"); } }
+        public List<string>? TagIds { get => _explicitNullValueTagIds; set { _explicitNullValueTagIds = value; AdditionalData?.Remove("tagIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tagIds"); else _explicitNullProperties?.Remove("tagIds"); } }
         private List<string>? _explicitNullValueTagIds = default!;
 #nullable restore
 #else
-        public List<string> TagIds { get => _explicitNullValueTagIds; set { _explicitNullValueTagIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tagIds"); else _explicitNullProperties?.Remove("tagIds"); } }
+        public List<string> TagIds { get => _explicitNullValueTagIds; set { _explicitNullValueTagIds = value; AdditionalData?.Remove("tagIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tagIds"); else _explicitNullProperties?.Remove("tagIds"); } }
         private List<string> _explicitNullValueTagIds = default!;
 #endif
         /// <summary>

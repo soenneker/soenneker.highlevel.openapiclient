@@ -17,25 +17,29 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("endHour") is { } nullNodeEndHour && nullNodeEndHour.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndHour = null;
-            if (parseNode.GetChildNode("endMinute") is { } nullNodeEndMinute && nullNodeEndMinute.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndMinute = null;
-            if (parseNode.GetChildNode("startHour") is { } nullNodeStartHour && nullNodeStartHour.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartHour = null;
-            if (parseNode.GetChildNode("startMinute") is { } nullNodeStartMinute && nullNodeStartMinute.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartMinute = null;
+            if (parseNode.GetChildNode("endHour") is null) { _explicitNullValueEndHour = default!; _explicitNullProperties?.Remove("endHour"); }
+            else if (parseNode.GetChildNode("endHour") is { } nullNodeEndHour && nullNodeEndHour.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndHour = null;
+            if (parseNode.GetChildNode("endMinute") is null) { _explicitNullValueEndMinute = default!; _explicitNullProperties?.Remove("endMinute"); }
+            else if (parseNode.GetChildNode("endMinute") is { } nullNodeEndMinute && nullNodeEndMinute.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndMinute = null;
+            if (parseNode.GetChildNode("startHour") is null) { _explicitNullValueStartHour = default!; _explicitNullProperties?.Remove("startHour"); }
+            else if (parseNode.GetChildNode("startHour") is { } nullNodeStartHour && nullNodeStartHour.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartHour = null;
+            if (parseNode.GetChildNode("startMinute") is null) { _explicitNullValueStartMinute = default!; _explicitNullProperties?.Remove("startMinute"); }
+            else if (parseNode.GetChildNode("startMinute") is { } nullNodeStartMinute && nullNodeStartMinute.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartMinute = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>End hour (24-hour format)</summary>
-        public double? EndHour { get => _explicitNullValueEndHour; set { _explicitNullValueEndHour = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endHour"); else _explicitNullProperties?.Remove("endHour"); } }
+        public double? EndHour { get => _explicitNullValueEndHour; set { _explicitNullValueEndHour = value; AdditionalData?.Remove("endHour"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endHour"); else _explicitNullProperties?.Remove("endHour"); } }
         private double? _explicitNullValueEndHour = default!;
         /// <summary>End minute</summary>
-        public double? EndMinute { get => _explicitNullValueEndMinute; set { _explicitNullValueEndMinute = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endMinute"); else _explicitNullProperties?.Remove("endMinute"); } }
+        public double? EndMinute { get => _explicitNullValueEndMinute; set { _explicitNullValueEndMinute = value; AdditionalData?.Remove("endMinute"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endMinute"); else _explicitNullProperties?.Remove("endMinute"); } }
         private double? _explicitNullValueEndMinute = default!;
         /// <summary>Start hour (24-hour format)</summary>
-        public double? StartHour { get => _explicitNullValueStartHour; set { _explicitNullValueStartHour = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startHour"); else _explicitNullProperties?.Remove("startHour"); } }
+        public double? StartHour { get => _explicitNullValueStartHour; set { _explicitNullValueStartHour = value; AdditionalData?.Remove("startHour"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startHour"); else _explicitNullProperties?.Remove("startHour"); } }
         private double? _explicitNullValueStartHour = default!;
         /// <summary>Start minute</summary>
-        public double? StartMinute { get => _explicitNullValueStartMinute; set { _explicitNullValueStartMinute = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startMinute"); else _explicitNullProperties?.Remove("startMinute"); } }
+        public double? StartMinute { get => _explicitNullValueStartMinute; set { _explicitNullValueStartMinute = value; AdditionalData?.Remove("startMinute"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startMinute"); else _explicitNullProperties?.Remove("startMinute"); } }
         private double? _explicitNullValueStartMinute = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.Interval"/> and sets the default values.

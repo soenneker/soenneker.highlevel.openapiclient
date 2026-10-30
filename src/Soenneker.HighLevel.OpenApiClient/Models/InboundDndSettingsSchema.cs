@@ -17,7 +17,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("all") is { } nullNodeAll && nullNodeAll.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) All = null;
+            if (parseNode.GetChildNode("all") is null) { _explicitNullValueAll = default!; _explicitNullProperties?.Remove("all"); }
+            else if (parseNode.GetChildNode("all") is { } nullNodeAll && nullNodeAll.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) All = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The all property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.InboundDndSettingSchema? All { get => _explicitNullValueAll; set { _explicitNullValueAll = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("all"); else _explicitNullProperties?.Remove("all"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.InboundDndSettingSchema? All { get => _explicitNullValueAll; set { _explicitNullValueAll = value; AdditionalData?.Remove("all"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("all"); else _explicitNullProperties?.Remove("all"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.InboundDndSettingSchema? _explicitNullValueAll = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.InboundDndSettingSchema All { get => _explicitNullValueAll; set { _explicitNullValueAll = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("all"); else _explicitNullProperties?.Remove("all"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.InboundDndSettingSchema All { get => _explicitNullValueAll; set { _explicitNullValueAll = value; AdditionalData?.Remove("all"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("all"); else _explicitNullProperties?.Remove("all"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.InboundDndSettingSchema _explicitNullValueAll = default!;
 #endif
         /// <summary>

@@ -18,28 +18,31 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("alwaysUseDefaultValue") is { } nullNodeAlwaysUseDefaultValue && nullNodeAlwaysUseDefaultValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AlwaysUseDefaultValue = null;
-            if (parseNode.GetChildNode("defaultCurrencyCode") is { } nullNodeDefaultCurrencyCode && nullNodeDefaultCurrencyCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultCurrencyCode = null;
-            if (parseNode.GetChildNode("defaultValue") is { } nullNodeDefaultValue && nullNodeDefaultValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultValue = null;
+            if (parseNode.GetChildNode("alwaysUseDefaultValue") is null) { _explicitNullValueAlwaysUseDefaultValue = default!; _explicitNullProperties?.Remove("alwaysUseDefaultValue"); }
+            else if (parseNode.GetChildNode("alwaysUseDefaultValue") is { } nullNodeAlwaysUseDefaultValue && nullNodeAlwaysUseDefaultValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AlwaysUseDefaultValue = null;
+            if (parseNode.GetChildNode("defaultCurrencyCode") is null) { _explicitNullValueDefaultCurrencyCode = default!; _explicitNullProperties?.Remove("defaultCurrencyCode"); }
+            else if (parseNode.GetChildNode("defaultCurrencyCode") is { } nullNodeDefaultCurrencyCode && nullNodeDefaultCurrencyCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultCurrencyCode = null;
+            if (parseNode.GetChildNode("defaultValue") is null) { _explicitNullValueDefaultValue = default!; _explicitNullProperties?.Remove("defaultValue"); }
+            else if (parseNode.GetChildNode("defaultValue") is { } nullNodeDefaultValue && nullNodeDefaultValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultValue = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>When true, always uses the default value even if a transaction-specific value is provided</summary>
-        public bool? AlwaysUseDefaultValue { get => _explicitNullValueAlwaysUseDefaultValue; set { _explicitNullValueAlwaysUseDefaultValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alwaysUseDefaultValue"); else _explicitNullProperties?.Remove("alwaysUseDefaultValue"); } }
+        public bool? AlwaysUseDefaultValue { get => _explicitNullValueAlwaysUseDefaultValue; set { _explicitNullValueAlwaysUseDefaultValue = value; AdditionalData?.Remove("alwaysUseDefaultValue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alwaysUseDefaultValue"); else _explicitNullProperties?.Remove("alwaysUseDefaultValue"); } }
         private bool? _explicitNullValueAlwaysUseDefaultValue = default!;
         /// <summary>ISO 4217 currency code for the default value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultCurrencyCode { get => _explicitNullValueDefaultCurrencyCode; set { _explicitNullValueDefaultCurrencyCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaultCurrencyCode"); else _explicitNullProperties?.Remove("defaultCurrencyCode"); } }
+        public string? DefaultCurrencyCode { get => _explicitNullValueDefaultCurrencyCode; set { _explicitNullValueDefaultCurrencyCode = value; AdditionalData?.Remove("defaultCurrencyCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaultCurrencyCode"); else _explicitNullProperties?.Remove("defaultCurrencyCode"); } }
         private string? _explicitNullValueDefaultCurrencyCode = default!;
 #nullable restore
 #else
-        public string DefaultCurrencyCode { get => _explicitNullValueDefaultCurrencyCode; set { _explicitNullValueDefaultCurrencyCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaultCurrencyCode"); else _explicitNullProperties?.Remove("defaultCurrencyCode"); } }
+        public string DefaultCurrencyCode { get => _explicitNullValueDefaultCurrencyCode; set { _explicitNullValueDefaultCurrencyCode = value; AdditionalData?.Remove("defaultCurrencyCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaultCurrencyCode"); else _explicitNullProperties?.Remove("defaultCurrencyCode"); } }
         private string _explicitNullValueDefaultCurrencyCode = default!;
 #endif
         /// <summary>Default monetary value assigned to each conversion</summary>
-        public double? DefaultValue { get => _explicitNullValueDefaultValue; set { _explicitNullValueDefaultValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaultValue"); else _explicitNullProperties?.Remove("defaultValue"); } }
+        public double? DefaultValue { get => _explicitNullValueDefaultValue; set { _explicitNullValueDefaultValue = value; AdditionalData?.Remove("defaultValue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaultValue"); else _explicitNullProperties?.Remove("defaultValue"); } }
         private double? _explicitNullValueDefaultValue = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpsertConversionDtoValueSettings"/> and sets the default values.

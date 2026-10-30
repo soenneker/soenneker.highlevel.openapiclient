@@ -18,15 +18,24 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("emailMessageId") is { } nullNodeEmailMessageId && nullNodeEmailMessageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailMessageId = null;
-            if (parseNode.GetChildNode("forwardWholeThread") is { } nullNodeForwardWholeThread && nullNodeForwardWholeThread.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ForwardWholeThread = null;
-            if (parseNode.GetChildNode("isForwarded") is { } nullNodeIsForwarded && nullNodeIsForwarded.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsForwarded = null;
-            if (parseNode.GetChildNode("messageId") is { } nullNodeMessageId && nullNodeMessageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessageId = null;
-            if (parseNode.GetChildNode("recipientContactId") is { } nullNodeRecipientContactId && nullNodeRecipientContactId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecipientContactId = null;
-            if (parseNode.GetChildNode("recipientConversationId") is { } nullNodeRecipientConversationId && nullNodeRecipientConversationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecipientConversationId = null;
-            if (parseNode.GetChildNode("sourceContactId") is { } nullNodeSourceContactId && nullNodeSourceContactId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceContactId = null;
-            if (parseNode.GetChildNode("sourceConversationId") is { } nullNodeSourceConversationId && nullNodeSourceConversationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceConversationId = null;
-            if (parseNode.GetChildNode("toEmail") is { } nullNodeToEmail && nullNodeToEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToEmail = null;
+            if (parseNode.GetChildNode("emailMessageId") is null) { _explicitNullValueEmailMessageId = default!; _explicitNullProperties?.Remove("emailMessageId"); }
+            else if (parseNode.GetChildNode("emailMessageId") is { } nullNodeEmailMessageId && nullNodeEmailMessageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailMessageId = null;
+            if (parseNode.GetChildNode("forwardWholeThread") is null) { _explicitNullValueForwardWholeThread = default!; _explicitNullProperties?.Remove("forwardWholeThread"); }
+            else if (parseNode.GetChildNode("forwardWholeThread") is { } nullNodeForwardWholeThread && nullNodeForwardWholeThread.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ForwardWholeThread = null;
+            if (parseNode.GetChildNode("isForwarded") is null) { _explicitNullValueIsForwarded = default!; _explicitNullProperties?.Remove("isForwarded"); }
+            else if (parseNode.GetChildNode("isForwarded") is { } nullNodeIsForwarded && nullNodeIsForwarded.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsForwarded = null;
+            if (parseNode.GetChildNode("messageId") is null) { _explicitNullValueMessageId = default!; _explicitNullProperties?.Remove("messageId"); }
+            else if (parseNode.GetChildNode("messageId") is { } nullNodeMessageId && nullNodeMessageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessageId = null;
+            if (parseNode.GetChildNode("recipientContactId") is null) { _explicitNullValueRecipientContactId = default!; _explicitNullProperties?.Remove("recipientContactId"); }
+            else if (parseNode.GetChildNode("recipientContactId") is { } nullNodeRecipientContactId && nullNodeRecipientContactId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecipientContactId = null;
+            if (parseNode.GetChildNode("recipientConversationId") is null) { _explicitNullValueRecipientConversationId = default!; _explicitNullProperties?.Remove("recipientConversationId"); }
+            else if (parseNode.GetChildNode("recipientConversationId") is { } nullNodeRecipientConversationId && nullNodeRecipientConversationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecipientConversationId = null;
+            if (parseNode.GetChildNode("sourceContactId") is null) { _explicitNullValueSourceContactId = default!; _explicitNullProperties?.Remove("sourceContactId"); }
+            else if (parseNode.GetChildNode("sourceContactId") is { } nullNodeSourceContactId && nullNodeSourceContactId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceContactId = null;
+            if (parseNode.GetChildNode("sourceConversationId") is null) { _explicitNullValueSourceConversationId = default!; _explicitNullProperties?.Remove("sourceConversationId"); }
+            else if (parseNode.GetChildNode("sourceConversationId") is { } nullNodeSourceConversationId && nullNodeSourceConversationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceConversationId = null;
+            if (parseNode.GetChildNode("toEmail") is null) { _explicitNullValueToEmail = default!; _explicitNullProperties?.Remove("toEmail"); }
+            else if (parseNode.GetChildNode("toEmail") is { } nullNodeToEmail && nullNodeToEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToEmail = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -34,77 +43,77 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Email Message ID of the specific email being forwarded (source) - Required for single email forward, ignored for thread forward</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmailMessageId { get => _explicitNullValueEmailMessageId; set { _explicitNullValueEmailMessageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailMessageId"); else _explicitNullProperties?.Remove("emailMessageId"); } }
+        public string? EmailMessageId { get => _explicitNullValueEmailMessageId; set { _explicitNullValueEmailMessageId = value; AdditionalData?.Remove("emailMessageId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailMessageId"); else _explicitNullProperties?.Remove("emailMessageId"); } }
         private string? _explicitNullValueEmailMessageId = default!;
 #nullable restore
 #else
-        public string EmailMessageId { get => _explicitNullValueEmailMessageId; set { _explicitNullValueEmailMessageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailMessageId"); else _explicitNullProperties?.Remove("emailMessageId"); } }
+        public string EmailMessageId { get => _explicitNullValueEmailMessageId; set { _explicitNullValueEmailMessageId = value; AdditionalData?.Remove("emailMessageId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailMessageId"); else _explicitNullProperties?.Remove("emailMessageId"); } }
         private string _explicitNullValueEmailMessageId = default!;
 #endif
         /// <summary>Specify if forwarding the whole thread or just a single email</summary>
-        public bool? ForwardWholeThread { get => _explicitNullValueForwardWholeThread; set { _explicitNullValueForwardWholeThread = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("forwardWholeThread"); else _explicitNullProperties?.Remove("forwardWholeThread"); } }
+        public bool? ForwardWholeThread { get => _explicitNullValueForwardWholeThread; set { _explicitNullValueForwardWholeThread = value; AdditionalData?.Remove("forwardWholeThread"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("forwardWholeThread"); else _explicitNullProperties?.Remove("forwardWholeThread"); } }
         private bool? _explicitNullValueForwardWholeThread = default!;
         /// <summary>Specify if this is a forwarded email</summary>
-        public bool? IsForwarded { get => _explicitNullValueIsForwarded; set { _explicitNullValueIsForwarded = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isForwarded"); else _explicitNullProperties?.Remove("isForwarded"); } }
+        public bool? IsForwarded { get => _explicitNullValueIsForwarded; set { _explicitNullValueIsForwarded = value; AdditionalData?.Remove("isForwarded"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isForwarded"); else _explicitNullProperties?.Remove("isForwarded"); } }
         private bool? _explicitNullValueIsForwarded = default!;
         /// <summary>Message ID of the email thread being forwarded (source) - REQUIRED for forwarding</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MessageId { get => _explicitNullValueMessageId; set { _explicitNullValueMessageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messageId"); else _explicitNullProperties?.Remove("messageId"); } }
+        public string? MessageId { get => _explicitNullValueMessageId; set { _explicitNullValueMessageId = value; AdditionalData?.Remove("messageId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messageId"); else _explicitNullProperties?.Remove("messageId"); } }
         private string? _explicitNullValueMessageId = default!;
 #nullable restore
 #else
-        public string MessageId { get => _explicitNullValueMessageId; set { _explicitNullValueMessageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messageId"); else _explicitNullProperties?.Remove("messageId"); } }
+        public string MessageId { get => _explicitNullValueMessageId; set { _explicitNullValueMessageId = value; AdditionalData?.Remove("messageId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messageId"); else _explicitNullProperties?.Remove("messageId"); } }
         private string _explicitNullValueMessageId = default!;
 #endif
         /// <summary>Contact ID of recipient when forwarding (destination)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RecipientContactId { get => _explicitNullValueRecipientContactId; set { _explicitNullValueRecipientContactId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipientContactId"); else _explicitNullProperties?.Remove("recipientContactId"); } }
+        public string? RecipientContactId { get => _explicitNullValueRecipientContactId; set { _explicitNullValueRecipientContactId = value; AdditionalData?.Remove("recipientContactId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipientContactId"); else _explicitNullProperties?.Remove("recipientContactId"); } }
         private string? _explicitNullValueRecipientContactId = default!;
 #nullable restore
 #else
-        public string RecipientContactId { get => _explicitNullValueRecipientContactId; set { _explicitNullValueRecipientContactId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipientContactId"); else _explicitNullProperties?.Remove("recipientContactId"); } }
+        public string RecipientContactId { get => _explicitNullValueRecipientContactId; set { _explicitNullValueRecipientContactId = value; AdditionalData?.Remove("recipientContactId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipientContactId"); else _explicitNullProperties?.Remove("recipientContactId"); } }
         private string _explicitNullValueRecipientContactId = default!;
 #endif
         /// <summary>Conversation ID of recipient when forwarding (destination)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RecipientConversationId { get => _explicitNullValueRecipientConversationId; set { _explicitNullValueRecipientConversationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipientConversationId"); else _explicitNullProperties?.Remove("recipientConversationId"); } }
+        public string? RecipientConversationId { get => _explicitNullValueRecipientConversationId; set { _explicitNullValueRecipientConversationId = value; AdditionalData?.Remove("recipientConversationId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipientConversationId"); else _explicitNullProperties?.Remove("recipientConversationId"); } }
         private string? _explicitNullValueRecipientConversationId = default!;
 #nullable restore
 #else
-        public string RecipientConversationId { get => _explicitNullValueRecipientConversationId; set { _explicitNullValueRecipientConversationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipientConversationId"); else _explicitNullProperties?.Remove("recipientConversationId"); } }
+        public string RecipientConversationId { get => _explicitNullValueRecipientConversationId; set { _explicitNullValueRecipientConversationId = value; AdditionalData?.Remove("recipientConversationId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipientConversationId"); else _explicitNullProperties?.Remove("recipientConversationId"); } }
         private string _explicitNullValueRecipientConversationId = default!;
 #endif
         /// <summary>Contact ID where the forwarded email originated from (source) - Auto-populated if not provided</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SourceContactId { get => _explicitNullValueSourceContactId; set { _explicitNullValueSourceContactId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceContactId"); else _explicitNullProperties?.Remove("sourceContactId"); } }
+        public string? SourceContactId { get => _explicitNullValueSourceContactId; set { _explicitNullValueSourceContactId = value; AdditionalData?.Remove("sourceContactId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceContactId"); else _explicitNullProperties?.Remove("sourceContactId"); } }
         private string? _explicitNullValueSourceContactId = default!;
 #nullable restore
 #else
-        public string SourceContactId { get => _explicitNullValueSourceContactId; set { _explicitNullValueSourceContactId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceContactId"); else _explicitNullProperties?.Remove("sourceContactId"); } }
+        public string SourceContactId { get => _explicitNullValueSourceContactId; set { _explicitNullValueSourceContactId = value; AdditionalData?.Remove("sourceContactId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceContactId"); else _explicitNullProperties?.Remove("sourceContactId"); } }
         private string _explicitNullValueSourceContactId = default!;
 #endif
         /// <summary>Conversation ID where the forwarded email originated from (source) - Auto-populated if not provided</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SourceConversationId { get => _explicitNullValueSourceConversationId; set { _explicitNullValueSourceConversationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceConversationId"); else _explicitNullProperties?.Remove("sourceConversationId"); } }
+        public string? SourceConversationId { get => _explicitNullValueSourceConversationId; set { _explicitNullValueSourceConversationId = value; AdditionalData?.Remove("sourceConversationId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceConversationId"); else _explicitNullProperties?.Remove("sourceConversationId"); } }
         private string? _explicitNullValueSourceConversationId = default!;
 #nullable restore
 #else
-        public string SourceConversationId { get => _explicitNullValueSourceConversationId; set { _explicitNullValueSourceConversationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceConversationId"); else _explicitNullProperties?.Remove("sourceConversationId"); } }
+        public string SourceConversationId { get => _explicitNullValueSourceConversationId; set { _explicitNullValueSourceConversationId = value; AdditionalData?.Remove("sourceConversationId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceConversationId"); else _explicitNullProperties?.Remove("sourceConversationId"); } }
         private string _explicitNullValueSourceConversationId = default!;
 #endif
         /// <summary>Email address to forward to (destination)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ToEmail { get => _explicitNullValueToEmail; set { _explicitNullValueToEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("toEmail"); else _explicitNullProperties?.Remove("toEmail"); } }
+        public string? ToEmail { get => _explicitNullValueToEmail; set { _explicitNullValueToEmail = value; AdditionalData?.Remove("toEmail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("toEmail"); else _explicitNullProperties?.Remove("toEmail"); } }
         private string? _explicitNullValueToEmail = default!;
 #nullable restore
 #else
-        public string ToEmail { get => _explicitNullValueToEmail; set { _explicitNullValueToEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("toEmail"); else _explicitNullProperties?.Remove("toEmail"); } }
+        public string ToEmail { get => _explicitNullValueToEmail; set { _explicitNullValueToEmail = value; AdditionalData?.Remove("toEmail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("toEmail"); else _explicitNullProperties?.Remove("toEmail"); } }
         private string _explicitNullValueToEmail = default!;
 #endif
         /// <summary>

@@ -18,7 +18,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("csv") is { } nullNodeCsv && nullNodeCsv.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Csv = null;
+            if (parseNode.GetChildNode("csv") is null) { _explicitNullValueCsv = default!; _explicitNullProperties?.Remove("csv"); }
+            else if (parseNode.GetChildNode("csv") is { } nullNodeCsv && nullNodeCsv.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Csv = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>CSV Data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CsvResponseSchemaCsv? Csv { get => _explicitNullValueCsv; set { _explicitNullValueCsv = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("csv"); else _explicitNullProperties?.Remove("csv"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CsvResponseSchemaCsv? Csv { get => _explicitNullValueCsv; set { _explicitNullValueCsv = value; AdditionalData?.Remove("csv"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("csv"); else _explicitNullProperties?.Remove("csv"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.CsvResponseSchemaCsv? _explicitNullValueCsv = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CsvResponseSchemaCsv Csv { get => _explicitNullValueCsv; set { _explicitNullValueCsv = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("csv"); else _explicitNullProperties?.Remove("csv"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CsvResponseSchemaCsv Csv { get => _explicitNullValueCsv; set { _explicitNullValueCsv = value; AdditionalData?.Remove("csv"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("csv"); else _explicitNullProperties?.Remove("csv"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.CsvResponseSchemaCsv _explicitNullValueCsv = default!;
 #endif
         /// <summary>

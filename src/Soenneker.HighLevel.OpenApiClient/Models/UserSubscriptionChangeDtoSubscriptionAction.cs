@@ -18,10 +18,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("subtype_id") is { } nullNodeSubtypeId && nullNodeSubtypeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubtypeId = null;
-            if (parseNode.GetChildNode("subtype_name") is { } nullNodeSubtypeName && nullNodeSubtypeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubtypeName = null;
-            if (parseNode.GetChildNode("subtype_status") is { } nullNodeSubtypeStatus && nullNodeSubtypeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubtypeStatus = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("subtype_id") is null) { _explicitNullValueSubtypeId = default!; _explicitNullProperties?.Remove("subtype_id"); }
+            else if (parseNode.GetChildNode("subtype_id") is { } nullNodeSubtypeId && nullNodeSubtypeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubtypeId = null;
+            if (parseNode.GetChildNode("subtype_name") is null) { _explicitNullValueSubtypeName = default!; _explicitNullProperties?.Remove("subtype_name"); }
+            else if (parseNode.GetChildNode("subtype_name") is { } nullNodeSubtypeName && nullNodeSubtypeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubtypeName = null;
+            if (parseNode.GetChildNode("subtype_status") is null) { _explicitNullValueSubtypeStatus = default!; _explicitNullProperties?.Remove("subtype_status"); }
+            else if (parseNode.GetChildNode("subtype_status") is { } nullNodeSubtypeStatus && nullNodeSubtypeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubtypeStatus = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,21 +33,21 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Custom subscription type ID (required for custom types)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SubtypeId { get => _explicitNullValueSubtypeId; set { _explicitNullValueSubtypeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subtype_id"); else _explicitNullProperties?.Remove("subtype_id"); } }
+        public string? SubtypeId { get => _explicitNullValueSubtypeId; set { _explicitNullValueSubtypeId = value; AdditionalData?.Remove("subtype_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subtype_id"); else _explicitNullProperties?.Remove("subtype_id"); } }
         private string? _explicitNullValueSubtypeId = default!;
 #nullable restore
 #else
-        public string SubtypeId { get => _explicitNullValueSubtypeId; set { _explicitNullValueSubtypeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subtype_id"); else _explicitNullProperties?.Remove("subtype_id"); } }
+        public string SubtypeId { get => _explicitNullValueSubtypeId; set { _explicitNullValueSubtypeId = value; AdditionalData?.Remove("subtype_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subtype_id"); else _explicitNullProperties?.Remove("subtype_id"); } }
         private string _explicitNullValueSubtypeId = default!;
 #endif
         /// <summary>Subscription type name (required for default types: &quot;One on One&quot;)</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.OneOnOneSubtypeName? SubtypeName { get => _explicitNullValueSubtypeName; set { _explicitNullValueSubtypeName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subtype_name"); else _explicitNullProperties?.Remove("subtype_name"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.OneOnOneSubtypeName? SubtypeName { get => _explicitNullValueSubtypeName; set { _explicitNullValueSubtypeName = value; AdditionalData?.Remove("subtype_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subtype_name"); else _explicitNullProperties?.Remove("subtype_name"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.OneOnOneSubtypeName? _explicitNullValueSubtypeName = default!;
         /// <summary>Subscription status</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SubscriptionActionDtoSubtypeStatus? SubtypeStatus { get => _explicitNullValueSubtypeStatus; set { _explicitNullValueSubtypeStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subtype_status"); else _explicitNullProperties?.Remove("subtype_status"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SubscriptionActionDtoSubtypeStatus? SubtypeStatus { get => _explicitNullValueSubtypeStatus; set { _explicitNullValueSubtypeStatus = value; AdditionalData?.Remove("subtype_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subtype_status"); else _explicitNullProperties?.Remove("subtype_status"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.SubscriptionActionDtoSubtypeStatus? _explicitNullValueSubtypeStatus = default!;
         /// <summary>Type of subscription action</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SubscriptionActionDtoType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SubscriptionActionDtoType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.SubscriptionActionDtoType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UserSubscriptionChangeDtoSubscriptionAction"/> and sets the default values.
@@ -71,9 +75,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "subtype_id", n => { SubtypeId = n.GetStringValue(); } },
-                { "subtype_name", n => { SubtypeName = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.OneOnOneSubtypeName>(); } },
-                { "subtype_status", n => { SubtypeStatus = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SubscriptionActionDtoSubtypeStatus>(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SubscriptionActionDtoType>(); } },
+                { "subtype_name", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.OneOnOneSubtypeName>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueSubtypeName = default; _explicitNullProperties?.Remove("subtype_name"); AdditionalData["subtype_name"] = unknown; } else { SubtypeName = parsed; AdditionalData.Remove("subtype_name"); } } },
+                { "subtype_status", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SubscriptionActionDtoSubtypeStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueSubtypeStatus = default; _explicitNullProperties?.Remove("subtype_status"); AdditionalData["subtype_status"] = unknown; } else { SubtypeStatus = parsed; AdditionalData.Remove("subtype_status"); } } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SubscriptionActionDtoType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
         }
         /// <summary>

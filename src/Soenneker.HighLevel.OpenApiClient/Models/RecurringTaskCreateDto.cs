@@ -17,12 +17,18 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("contactIds") is { } nullNodeContactIds && nullNodeContactIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactIds = null;
-            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
-            if (parseNode.GetChildNode("ignoreTaskCreation") is { } nullNodeIgnoreTaskCreation && nullNodeIgnoreTaskCreation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IgnoreTaskCreation = null;
-            if (parseNode.GetChildNode("owners") is { } nullNodeOwners && nullNodeOwners.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Owners = null;
-            if (parseNode.GetChildNode("rruleOptions") is { } nullNodeRruleOptions && nullNodeRruleOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RruleOptions = null;
-            if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
+            if (parseNode.GetChildNode("contactIds") is null) { _explicitNullValueContactIds = default!; _explicitNullProperties?.Remove("contactIds"); }
+            else if (parseNode.GetChildNode("contactIds") is { } nullNodeContactIds && nullNodeContactIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactIds = null;
+            if (parseNode.GetChildNode("description") is null) { _explicitNullValueDescription = default!; _explicitNullProperties?.Remove("description"); }
+            else if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("ignoreTaskCreation") is null) { _explicitNullValueIgnoreTaskCreation = default!; _explicitNullProperties?.Remove("ignoreTaskCreation"); }
+            else if (parseNode.GetChildNode("ignoreTaskCreation") is { } nullNodeIgnoreTaskCreation && nullNodeIgnoreTaskCreation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IgnoreTaskCreation = null;
+            if (parseNode.GetChildNode("owners") is null) { _explicitNullValueOwners = default!; _explicitNullProperties?.Remove("owners"); }
+            else if (parseNode.GetChildNode("owners") is { } nullNodeOwners && nullNodeOwners.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Owners = null;
+            if (parseNode.GetChildNode("rruleOptions") is null) { _explicitNullValueRruleOptions = default!; _explicitNullProperties?.Remove("rruleOptions"); }
+            else if (parseNode.GetChildNode("rruleOptions") is { } nullNodeRruleOptions && nullNodeRruleOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RruleOptions = null;
+            if (parseNode.GetChildNode("title") is null) { _explicitNullValueTitle = default!; _explicitNullProperties?.Remove("title"); }
+            else if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,54 +36,54 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Contact Id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ContactIds { get => _explicitNullValueContactIds; set { _explicitNullValueContactIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactIds"); else _explicitNullProperties?.Remove("contactIds"); } }
+        public List<string>? ContactIds { get => _explicitNullValueContactIds; set { _explicitNullValueContactIds = value; AdditionalData?.Remove("contactIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactIds"); else _explicitNullProperties?.Remove("contactIds"); } }
         private List<string>? _explicitNullValueContactIds = default!;
 #nullable restore
 #else
-        public List<string> ContactIds { get => _explicitNullValueContactIds; set { _explicitNullValueContactIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactIds"); else _explicitNullProperties?.Remove("contactIds"); } }
+        public List<string> ContactIds { get => _explicitNullValueContactIds; set { _explicitNullValueContactIds = value; AdditionalData?.Remove("contactIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactIds"); else _explicitNullProperties?.Remove("contactIds"); } }
         private List<string> _explicitNullValueContactIds = default!;
 #endif
         /// <summary>Description of the task</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>Create initial task or not</summary>
-        public bool? IgnoreTaskCreation { get => _explicitNullValueIgnoreTaskCreation; set { _explicitNullValueIgnoreTaskCreation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ignoreTaskCreation"); else _explicitNullProperties?.Remove("ignoreTaskCreation"); } }
+        public bool? IgnoreTaskCreation { get => _explicitNullValueIgnoreTaskCreation; set { _explicitNullValueIgnoreTaskCreation = value; AdditionalData?.Remove("ignoreTaskCreation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ignoreTaskCreation"); else _explicitNullProperties?.Remove("ignoreTaskCreation"); } }
         private bool? _explicitNullValueIgnoreTaskCreation = default!;
         /// <summary>Assigned To</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Owners { get => _explicitNullValueOwners; set { _explicitNullValueOwners = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owners"); else _explicitNullProperties?.Remove("owners"); } }
+        public List<string>? Owners { get => _explicitNullValueOwners; set { _explicitNullValueOwners = value; AdditionalData?.Remove("owners"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owners"); else _explicitNullProperties?.Remove("owners"); } }
         private List<string>? _explicitNullValueOwners = default!;
 #nullable restore
 #else
-        public List<string> Owners { get => _explicitNullValueOwners; set { _explicitNullValueOwners = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owners"); else _explicitNullProperties?.Remove("owners"); } }
+        public List<string> Owners { get => _explicitNullValueOwners; set { _explicitNullValueOwners = value; AdditionalData?.Remove("owners"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owners"); else _explicitNullProperties?.Remove("owners"); } }
         private List<string> _explicitNullValueOwners = default!;
 #endif
         /// <summary>Recurring rules</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.RecurringTaskCreateDtoRruleOptions? RruleOptions { get => _explicitNullValueRruleOptions; set { _explicitNullValueRruleOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rruleOptions"); else _explicitNullProperties?.Remove("rruleOptions"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.RecurringTaskCreateDtoRruleOptions? RruleOptions { get => _explicitNullValueRruleOptions; set { _explicitNullValueRruleOptions = value; AdditionalData?.Remove("rruleOptions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rruleOptions"); else _explicitNullProperties?.Remove("rruleOptions"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.RecurringTaskCreateDtoRruleOptions? _explicitNullValueRruleOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.RecurringTaskCreateDtoRruleOptions RruleOptions { get => _explicitNullValueRruleOptions; set { _explicitNullValueRruleOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rruleOptions"); else _explicitNullProperties?.Remove("rruleOptions"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.RecurringTaskCreateDtoRruleOptions RruleOptions { get => _explicitNullValueRruleOptions; set { _explicitNullValueRruleOptions = value; AdditionalData?.Remove("rruleOptions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rruleOptions"); else _explicitNullProperties?.Remove("rruleOptions"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.RecurringTaskCreateDtoRruleOptions _explicitNullValueRruleOptions = default!;
 #endif
         /// <summary>Name of the task</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; AdditionalData?.Remove("title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
         private string? _explicitNullValueTitle = default!;
 #nullable restore
 #else
-        public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; AdditionalData?.Remove("title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
         private string _explicitNullValueTitle = default!;
 #endif
         /// <summary>

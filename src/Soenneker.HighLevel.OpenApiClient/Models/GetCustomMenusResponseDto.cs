@@ -17,8 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("customMenus") is { } nullNodeCustomMenus && nullNodeCustomMenus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomMenus = null;
-            if (parseNode.GetChildNode("totalLinks") is { } nullNodeTotalLinks && nullNodeTotalLinks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalLinks = null;
+            if (parseNode.GetChildNode("customMenus") is null) { _explicitNullValueCustomMenus = default!; _explicitNullProperties?.Remove("customMenus"); }
+            else if (parseNode.GetChildNode("customMenus") is { } nullNodeCustomMenus && nullNodeCustomMenus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomMenus = null;
+            if (parseNode.GetChildNode("totalLinks") is null) { _explicitNullValueTotalLinks = default!; _explicitNullProperties?.Remove("totalLinks"); }
+            else if (parseNode.GetChildNode("totalLinks") is { } nullNodeTotalLinks && nullNodeTotalLinks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalLinks = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,15 +28,15 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Array of custom menu links</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenuSchema>? CustomMenus { get => _explicitNullValueCustomMenus; set { _explicitNullValueCustomMenus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customMenus"); else _explicitNullProperties?.Remove("customMenus"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenuSchema>? CustomMenus { get => _explicitNullValueCustomMenus; set { _explicitNullValueCustomMenus = value; AdditionalData?.Remove("customMenus"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customMenus"); else _explicitNullProperties?.Remove("customMenus"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenuSchema>? _explicitNullValueCustomMenus = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenuSchema> CustomMenus { get => _explicitNullValueCustomMenus; set { _explicitNullValueCustomMenus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customMenus"); else _explicitNullProperties?.Remove("customMenus"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenuSchema> CustomMenus { get => _explicitNullValueCustomMenus; set { _explicitNullValueCustomMenus = value; AdditionalData?.Remove("customMenus"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customMenus"); else _explicitNullProperties?.Remove("customMenus"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomMenuSchema> _explicitNullValueCustomMenus = default!;
 #endif
         /// <summary>Total number of custom menu records</summary>
-        public double? TotalLinks { get => _explicitNullValueTotalLinks; set { _explicitNullValueTotalLinks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalLinks"); else _explicitNullProperties?.Remove("totalLinks"); } }
+        public double? TotalLinks { get => _explicitNullValueTotalLinks; set { _explicitNullValueTotalLinks = value; AdditionalData?.Remove("totalLinks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalLinks"); else _explicitNullProperties?.Remove("totalLinks"); } }
         private double? _explicitNullValueTotalLinks = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GetCustomMenusResponseDto"/> and sets the default values.

@@ -17,54 +17,62 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("aiEnabledMessage") is { } nullNodeAiEnabledMessage && nullNodeAiEnabledMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AiEnabledMessage = null;
-            if (parseNode.GetChildNode("contactRequested") is { } nullNodeContactRequested && nullNodeContactRequested.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactRequested = null;
-            if (parseNode.GetChildNode("customMessage") is { } nullNodeCustomMessage && nullNodeCustomMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomMessage = null;
-            if (parseNode.GetChildNode("followupTime") is { } nullNodeFollowupTime && nullNodeFollowupTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FollowupTime = null;
-            if (parseNode.GetChildNode("followupTimeUnit") is { } nullNodeFollowupTimeUnit && nullNodeFollowupTimeUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FollowupTimeUnit = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("triggerWorkflow") is { } nullNodeTriggerWorkflow && nullNodeTriggerWorkflow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TriggerWorkflow = null;
-            if (parseNode.GetChildNode("workflowId") is { } nullNodeWorkflowId && nullNodeWorkflowId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowId = null;
+            if (parseNode.GetChildNode("aiEnabledMessage") is null) { _explicitNullValueAiEnabledMessage = default!; _explicitNullProperties?.Remove("aiEnabledMessage"); }
+            else if (parseNode.GetChildNode("aiEnabledMessage") is { } nullNodeAiEnabledMessage && nullNodeAiEnabledMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AiEnabledMessage = null;
+            if (parseNode.GetChildNode("contactRequested") is null) { _explicitNullValueContactRequested = default!; _explicitNullProperties?.Remove("contactRequested"); }
+            else if (parseNode.GetChildNode("contactRequested") is { } nullNodeContactRequested && nullNodeContactRequested.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContactRequested = null;
+            if (parseNode.GetChildNode("customMessage") is null) { _explicitNullValueCustomMessage = default!; _explicitNullProperties?.Remove("customMessage"); }
+            else if (parseNode.GetChildNode("customMessage") is { } nullNodeCustomMessage && nullNodeCustomMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomMessage = null;
+            if (parseNode.GetChildNode("followupTime") is null) { _explicitNullValueFollowupTime = default!; _explicitNullProperties?.Remove("followupTime"); }
+            else if (parseNode.GetChildNode("followupTime") is { } nullNodeFollowupTime && nullNodeFollowupTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FollowupTime = null;
+            if (parseNode.GetChildNode("followupTimeUnit") is null) { _explicitNullValueFollowupTimeUnit = default!; _explicitNullProperties?.Remove("followupTimeUnit"); }
+            else if (parseNode.GetChildNode("followupTimeUnit") is { } nullNodeFollowupTimeUnit && nullNodeFollowupTimeUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FollowupTimeUnit = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("triggerWorkflow") is null) { _explicitNullValueTriggerWorkflow = default!; _explicitNullProperties?.Remove("triggerWorkflow"); }
+            else if (parseNode.GetChildNode("triggerWorkflow") is { } nullNodeTriggerWorkflow && nullNodeTriggerWorkflow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TriggerWorkflow = null;
+            if (parseNode.GetChildNode("workflowId") is null) { _explicitNullValueWorkflowId = default!; _explicitNullProperties?.Remove("workflowId"); }
+            else if (parseNode.GetChildNode("workflowId") is { } nullNodeWorkflowId && nullNodeWorkflowId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether to use AI to generate the followup message</summary>
-        public bool? AiEnabledMessage { get => _explicitNullValueAiEnabledMessage; set { _explicitNullValueAiEnabledMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aiEnabledMessage"); else _explicitNullProperties?.Remove("aiEnabledMessage"); } }
+        public bool? AiEnabledMessage { get => _explicitNullValueAiEnabledMessage; set { _explicitNullValueAiEnabledMessage = value; AdditionalData?.Remove("aiEnabledMessage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aiEnabledMessage"); else _explicitNullProperties?.Remove("aiEnabledMessage"); } }
         private bool? _explicitNullValueAiEnabledMessage = default!;
         /// <summary>Whether contact was requested in this followup</summary>
-        public bool? ContactRequested { get => _explicitNullValueContactRequested; set { _explicitNullValueContactRequested = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactRequested"); else _explicitNullProperties?.Remove("contactRequested"); } }
+        public bool? ContactRequested { get => _explicitNullValueContactRequested; set { _explicitNullValueContactRequested = value; AdditionalData?.Remove("contactRequested"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contactRequested"); else _explicitNullProperties?.Remove("contactRequested"); } }
         private bool? _explicitNullValueContactRequested = default!;
         /// <summary>Custom message to send (when aiEnabledMessage is false)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomMessage { get => _explicitNullValueCustomMessage; set { _explicitNullValueCustomMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customMessage"); else _explicitNullProperties?.Remove("customMessage"); } }
+        public string? CustomMessage { get => _explicitNullValueCustomMessage; set { _explicitNullValueCustomMessage = value; AdditionalData?.Remove("customMessage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customMessage"); else _explicitNullProperties?.Remove("customMessage"); } }
         private string? _explicitNullValueCustomMessage = default!;
 #nullable restore
 #else
-        public string CustomMessage { get => _explicitNullValueCustomMessage; set { _explicitNullValueCustomMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customMessage"); else _explicitNullProperties?.Remove("customMessage"); } }
+        public string CustomMessage { get => _explicitNullValueCustomMessage; set { _explicitNullValueCustomMessage = value; AdditionalData?.Remove("customMessage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customMessage"); else _explicitNullProperties?.Remove("customMessage"); } }
         private string _explicitNullValueCustomMessage = default!;
 #endif
         /// <summary>Time duration before followup (max: 60 minutes, 24 hours, or 180 days depending on unit)</summary>
-        public double? FollowupTime { get => _explicitNullValueFollowupTime; set { _explicitNullValueFollowupTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("followupTime"); else _explicitNullProperties?.Remove("followupTime"); } }
+        public double? FollowupTime { get => _explicitNullValueFollowupTime; set { _explicitNullValueFollowupTime = value; AdditionalData?.Remove("followupTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("followupTime"); else _explicitNullProperties?.Remove("followupTime"); } }
         private double? _explicitNullValueFollowupTime = default!;
         /// <summary>Time unit for followup delay</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.FollowupSequenceFollowupTimeUnit? FollowupTimeUnit { get => _explicitNullValueFollowupTimeUnit; set { _explicitNullValueFollowupTimeUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("followupTimeUnit"); else _explicitNullProperties?.Remove("followupTimeUnit"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.FollowupSequenceFollowupTimeUnit? FollowupTimeUnit { get => _explicitNullValueFollowupTimeUnit; set { _explicitNullValueFollowupTimeUnit = value; AdditionalData?.Remove("followupTimeUnit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("followupTimeUnit"); else _explicitNullProperties?.Remove("followupTimeUnit"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.FollowupSequenceFollowupTimeUnit? _explicitNullValueFollowupTimeUnit = default!;
         /// <summary>Unique identifier for this followup step</summary>
-        public double? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public double? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private double? _explicitNullValueId = default!;
         /// <summary>Whether to trigger a workflow during this followup</summary>
-        public bool? TriggerWorkflow { get => _explicitNullValueTriggerWorkflow; set { _explicitNullValueTriggerWorkflow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggerWorkflow"); else _explicitNullProperties?.Remove("triggerWorkflow"); } }
+        public bool? TriggerWorkflow { get => _explicitNullValueTriggerWorkflow; set { _explicitNullValueTriggerWorkflow = value; AdditionalData?.Remove("triggerWorkflow"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggerWorkflow"); else _explicitNullProperties?.Remove("triggerWorkflow"); } }
         private bool? _explicitNullValueTriggerWorkflow = default!;
         /// <summary>Workflow ID to trigger (when triggerWorkflow is true)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WorkflowId { get => _explicitNullValueWorkflowId; set { _explicitNullValueWorkflowId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowId"); else _explicitNullProperties?.Remove("workflowId"); } }
+        public string? WorkflowId { get => _explicitNullValueWorkflowId; set { _explicitNullValueWorkflowId = value; AdditionalData?.Remove("workflowId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowId"); else _explicitNullProperties?.Remove("workflowId"); } }
         private string? _explicitNullValueWorkflowId = default!;
 #nullable restore
 #else
-        public string WorkflowId { get => _explicitNullValueWorkflowId; set { _explicitNullValueWorkflowId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowId"); else _explicitNullProperties?.Remove("workflowId"); } }
+        public string WorkflowId { get => _explicitNullValueWorkflowId; set { _explicitNullValueWorkflowId = value; AdditionalData?.Remove("workflowId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowId"); else _explicitNullProperties?.Remove("workflowId"); } }
         private string _explicitNullValueWorkflowId = default!;
 #endif
         /// <summary>
@@ -98,7 +106,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "contactRequested", n => { ContactRequested = n.GetBoolValue(); } },
                 { "customMessage", n => { CustomMessage = n.GetStringValue(); } },
                 { "followupTime", n => { FollowupTime = n.GetDoubleValue(); } },
-                { "followupTimeUnit", n => { FollowupTimeUnit = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.FollowupSequenceFollowupTimeUnit>(); } },
+                { "followupTimeUnit", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.FollowupSequenceFollowupTimeUnit>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueFollowupTimeUnit = default; _explicitNullProperties?.Remove("followupTimeUnit"); AdditionalData["followupTimeUnit"] = unknown; } else { FollowupTimeUnit = parsed; AdditionalData.Remove("followupTimeUnit"); } } },
                 { "id", n => { Id = n.GetDoubleValue(); } },
                 { "triggerWorkflow", n => { TriggerWorkflow = n.GetBoolValue(); } },
                 { "workflowId", n => { WorkflowId = n.GetStringValue(); } },

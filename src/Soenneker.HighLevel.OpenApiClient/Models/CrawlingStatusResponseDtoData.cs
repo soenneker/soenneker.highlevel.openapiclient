@@ -18,8 +18,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("aggregate") is { } nullNodeAggregate && nullNodeAggregate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Aggregate = null;
-            if (parseNode.GetChildNode("operationDetails") is { } nullNodeOperationDetails && nullNodeOperationDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OperationDetails = null;
+            if (parseNode.GetChildNode("aggregate") is null) { _explicitNullValueAggregate = default!; _explicitNullProperties?.Remove("aggregate"); }
+            else if (parseNode.GetChildNode("aggregate") is { } nullNodeAggregate && nullNodeAggregate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Aggregate = null;
+            if (parseNode.GetChildNode("operationDetails") is null) { _explicitNullValueOperationDetails = default!; _explicitNullProperties?.Remove("operationDetails"); }
+            else if (parseNode.GetChildNode("operationDetails") is { } nullNodeOperationDetails && nullNodeOperationDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OperationDetails = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Aggregated crawling results by status</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CrawlingAggregateDto>? Aggregate { get => _explicitNullValueAggregate; set { _explicitNullValueAggregate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aggregate"); else _explicitNullProperties?.Remove("aggregate"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CrawlingAggregateDto>? Aggregate { get => _explicitNullValueAggregate; set { _explicitNullValueAggregate = value; AdditionalData?.Remove("aggregate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aggregate"); else _explicitNullProperties?.Remove("aggregate"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.CrawlingAggregateDto>? _explicitNullValueAggregate = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CrawlingAggregateDto> Aggregate { get => _explicitNullValueAggregate; set { _explicitNullValueAggregate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aggregate"); else _explicitNullProperties?.Remove("aggregate"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CrawlingAggregateDto> Aggregate { get => _explicitNullValueAggregate; set { _explicitNullValueAggregate = value; AdditionalData?.Remove("aggregate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aggregate"); else _explicitNullProperties?.Remove("aggregate"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.CrawlingAggregateDto> _explicitNullValueAggregate = default!;
 #endif
         /// <summary>Detailed operation information</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CrawlingStatusDataDtoOperationDetails? OperationDetails { get => _explicitNullValueOperationDetails; set { _explicitNullValueOperationDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operationDetails"); else _explicitNullProperties?.Remove("operationDetails"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CrawlingStatusDataDtoOperationDetails? OperationDetails { get => _explicitNullValueOperationDetails; set { _explicitNullValueOperationDetails = value; AdditionalData?.Remove("operationDetails"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operationDetails"); else _explicitNullProperties?.Remove("operationDetails"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.CrawlingStatusDataDtoOperationDetails? _explicitNullValueOperationDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CrawlingStatusDataDtoOperationDetails OperationDetails { get => _explicitNullValueOperationDetails; set { _explicitNullValueOperationDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operationDetails"); else _explicitNullProperties?.Remove("operationDetails"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CrawlingStatusDataDtoOperationDetails OperationDetails { get => _explicitNullValueOperationDetails; set { _explicitNullValueOperationDetails = value; AdditionalData?.Remove("operationDetails"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operationDetails"); else _explicitNullProperties?.Remove("operationDetails"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.CrawlingStatusDataDtoOperationDetails _explicitNullValueOperationDetails = default!;
 #endif
         /// <summary>

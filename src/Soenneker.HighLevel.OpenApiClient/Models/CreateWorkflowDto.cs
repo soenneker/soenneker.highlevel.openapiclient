@@ -17,7 +17,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("eventStartTime") is { } nullNodeEventStartTime && nullNodeEventStartTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventStartTime = null;
+            if (parseNode.GetChildNode("eventStartTime") is null) { _explicitNullValueEventStartTime = default!; _explicitNullProperties?.Remove("eventStartTime"); }
+            else if (parseNode.GetChildNode("eventStartTime") is { } nullNodeEventStartTime && nullNodeEventStartTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventStartTime = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The eventStartTime property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EventStartTime { get => _explicitNullValueEventStartTime; set { _explicitNullValueEventStartTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eventStartTime"); else _explicitNullProperties?.Remove("eventStartTime"); } }
+        public string? EventStartTime { get => _explicitNullValueEventStartTime; set { _explicitNullValueEventStartTime = value; AdditionalData?.Remove("eventStartTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eventStartTime"); else _explicitNullProperties?.Remove("eventStartTime"); } }
         private string? _explicitNullValueEventStartTime = default!;
 #nullable restore
 #else
-        public string EventStartTime { get => _explicitNullValueEventStartTime; set { _explicitNullValueEventStartTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eventStartTime"); else _explicitNullProperties?.Remove("eventStartTime"); } }
+        public string EventStartTime { get => _explicitNullValueEventStartTime; set { _explicitNullValueEventStartTime = value; AdditionalData?.Remove("eventStartTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("eventStartTime"); else _explicitNullProperties?.Remove("eventStartTime"); } }
         private string _explicitNullValueEventStartTime = default!;
 #endif
         /// <summary>

@@ -17,18 +17,30 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("assignToUserId") is { } nullNodeAssignToUserId && nullNodeAssignToUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssignToUserId = null;
-            if (parseNode.GetChildNode("createTask") is { } nullNodeCreateTask && nullNodeCreateTask.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateTask = null;
-            if (parseNode.GetChildNode("enabled") is { } nullNodeEnabled && nullNodeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enabled = null;
-            if (parseNode.GetChildNode("examples") is { } nullNodeExamples && nullNodeExamples.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Examples = null;
-            if (parseNode.GetChildNode("finalMessage") is { } nullNodeFinalMessage && nullNodeFinalMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FinalMessage = null;
-            if (parseNode.GetChildNode("handoverType") is { } nullNodeHandoverType && nullNodeHandoverType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HandoverType = null;
-            if (parseNode.GetChildNode("reactivateEnabled") is { } nullNodeReactivateEnabled && nullNodeReactivateEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReactivateEnabled = null;
-            if (parseNode.GetChildNode("skipAssignToUser") is { } nullNodeSkipAssignToUser && nullNodeSkipAssignToUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SkipAssignToUser = null;
-            if (parseNode.GetChildNode("sleepTime") is { } nullNodeSleepTime && nullNodeSleepTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SleepTime = null;
-            if (parseNode.GetChildNode("sleepTimeUnit") is { } nullNodeSleepTimeUnit && nullNodeSleepTimeUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SleepTimeUnit = null;
-            if (parseNode.GetChildNode("tags") is { } nullNodeTags && nullNodeTags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tags = null;
-            if (parseNode.GetChildNode("triggerCondition") is { } nullNodeTriggerCondition && nullNodeTriggerCondition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TriggerCondition = null;
+            if (parseNode.GetChildNode("assignToUserId") is null) { _explicitNullValueAssignToUserId = default!; _explicitNullProperties?.Remove("assignToUserId"); }
+            else if (parseNode.GetChildNode("assignToUserId") is { } nullNodeAssignToUserId && nullNodeAssignToUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssignToUserId = null;
+            if (parseNode.GetChildNode("createTask") is null) { _explicitNullValueCreateTask = default!; _explicitNullProperties?.Remove("createTask"); }
+            else if (parseNode.GetChildNode("createTask") is { } nullNodeCreateTask && nullNodeCreateTask.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateTask = null;
+            if (parseNode.GetChildNode("enabled") is null) { _explicitNullValueEnabled = default!; _explicitNullProperties?.Remove("enabled"); }
+            else if (parseNode.GetChildNode("enabled") is { } nullNodeEnabled && nullNodeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enabled = null;
+            if (parseNode.GetChildNode("examples") is null) { _explicitNullValueExamples = default!; _explicitNullProperties?.Remove("examples"); }
+            else if (parseNode.GetChildNode("examples") is { } nullNodeExamples && nullNodeExamples.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Examples = null;
+            if (parseNode.GetChildNode("finalMessage") is null) { _explicitNullValueFinalMessage = default!; _explicitNullProperties?.Remove("finalMessage"); }
+            else if (parseNode.GetChildNode("finalMessage") is { } nullNodeFinalMessage && nullNodeFinalMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FinalMessage = null;
+            if (parseNode.GetChildNode("handoverType") is null) { _explicitNullValueHandoverType = default!; _explicitNullProperties?.Remove("handoverType"); }
+            else if (parseNode.GetChildNode("handoverType") is { } nullNodeHandoverType && nullNodeHandoverType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HandoverType = null;
+            if (parseNode.GetChildNode("reactivateEnabled") is null) { _explicitNullValueReactivateEnabled = default!; _explicitNullProperties?.Remove("reactivateEnabled"); }
+            else if (parseNode.GetChildNode("reactivateEnabled") is { } nullNodeReactivateEnabled && nullNodeReactivateEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReactivateEnabled = null;
+            if (parseNode.GetChildNode("skipAssignToUser") is null) { _explicitNullValueSkipAssignToUser = default!; _explicitNullProperties?.Remove("skipAssignToUser"); }
+            else if (parseNode.GetChildNode("skipAssignToUser") is { } nullNodeSkipAssignToUser && nullNodeSkipAssignToUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SkipAssignToUser = null;
+            if (parseNode.GetChildNode("sleepTime") is null) { _explicitNullValueSleepTime = default!; _explicitNullProperties?.Remove("sleepTime"); }
+            else if (parseNode.GetChildNode("sleepTime") is { } nullNodeSleepTime && nullNodeSleepTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SleepTime = null;
+            if (parseNode.GetChildNode("sleepTimeUnit") is null) { _explicitNullValueSleepTimeUnit = default!; _explicitNullProperties?.Remove("sleepTimeUnit"); }
+            else if (parseNode.GetChildNode("sleepTimeUnit") is { } nullNodeSleepTimeUnit && nullNodeSleepTimeUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SleepTimeUnit = null;
+            if (parseNode.GetChildNode("tags") is null) { _explicitNullValueTags = default!; _explicitNullProperties?.Remove("tags"); }
+            else if (parseNode.GetChildNode("tags") is { } nullNodeTags && nullNodeTags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tags = null;
+            if (parseNode.GetChildNode("triggerCondition") is null) { _explicitNullValueTriggerCondition = default!; _explicitNullProperties?.Remove("triggerCondition"); }
+            else if (parseNode.GetChildNode("triggerCondition") is { } nullNodeTriggerCondition && nullNodeTriggerCondition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TriggerCondition = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -36,72 +48,72 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>ID of the user to assign the conversation to</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AssignToUserId { get => _explicitNullValueAssignToUserId; set { _explicitNullValueAssignToUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assignToUserId"); else _explicitNullProperties?.Remove("assignToUserId"); } }
+        public string? AssignToUserId { get => _explicitNullValueAssignToUserId; set { _explicitNullValueAssignToUserId = value; AdditionalData?.Remove("assignToUserId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assignToUserId"); else _explicitNullProperties?.Remove("assignToUserId"); } }
         private string? _explicitNullValueAssignToUserId = default!;
 #nullable restore
 #else
-        public string AssignToUserId { get => _explicitNullValueAssignToUserId; set { _explicitNullValueAssignToUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assignToUserId"); else _explicitNullProperties?.Remove("assignToUserId"); } }
+        public string AssignToUserId { get => _explicitNullValueAssignToUserId; set { _explicitNullValueAssignToUserId = value; AdditionalData?.Remove("assignToUserId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assignToUserId"); else _explicitNullProperties?.Remove("assignToUserId"); } }
         private string _explicitNullValueAssignToUserId = default!;
 #endif
         /// <summary>Whether to create a task when handing over</summary>
-        public bool? CreateTask { get => _explicitNullValueCreateTask; set { _explicitNullValueCreateTask = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createTask"); else _explicitNullProperties?.Remove("createTask"); } }
+        public bool? CreateTask { get => _explicitNullValueCreateTask; set { _explicitNullValueCreateTask = value; AdditionalData?.Remove("createTask"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createTask"); else _explicitNullProperties?.Remove("createTask"); } }
         private bool? _explicitNullValueCreateTask = default!;
         /// <summary>Whether human handover action is enabled</summary>
-        public bool? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled"); else _explicitNullProperties?.Remove("enabled"); } }
+        public bool? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; AdditionalData?.Remove("enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled"); else _explicitNullProperties?.Remove("enabled"); } }
         private bool? _explicitNullValueEnabled = default!;
         /// <summary>Example phrases that trigger human handover (required when handoverType is custom or contactRequest)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Examples { get => _explicitNullValueExamples; set { _explicitNullValueExamples = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("examples"); else _explicitNullProperties?.Remove("examples"); } }
+        public List<string>? Examples { get => _explicitNullValueExamples; set { _explicitNullValueExamples = value; AdditionalData?.Remove("examples"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("examples"); else _explicitNullProperties?.Remove("examples"); } }
         private List<string>? _explicitNullValueExamples = default!;
 #nullable restore
 #else
-        public List<string> Examples { get => _explicitNullValueExamples; set { _explicitNullValueExamples = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("examples"); else _explicitNullProperties?.Remove("examples"); } }
+        public List<string> Examples { get => _explicitNullValueExamples; set { _explicitNullValueExamples = value; AdditionalData?.Remove("examples"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("examples"); else _explicitNullProperties?.Remove("examples"); } }
         private List<string> _explicitNullValueExamples = default!;
 #endif
         /// <summary>Final message sent when handing over to human</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FinalMessage { get => _explicitNullValueFinalMessage; set { _explicitNullValueFinalMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("finalMessage"); else _explicitNullProperties?.Remove("finalMessage"); } }
+        public string? FinalMessage { get => _explicitNullValueFinalMessage; set { _explicitNullValueFinalMessage = value; AdditionalData?.Remove("finalMessage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("finalMessage"); else _explicitNullProperties?.Remove("finalMessage"); } }
         private string? _explicitNullValueFinalMessage = default!;
 #nullable restore
 #else
-        public string FinalMessage { get => _explicitNullValueFinalMessage; set { _explicitNullValueFinalMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("finalMessage"); else _explicitNullProperties?.Remove("finalMessage"); } }
+        public string FinalMessage { get => _explicitNullValueFinalMessage; set { _explicitNullValueFinalMessage = value; AdditionalData?.Remove("finalMessage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("finalMessage"); else _explicitNullProperties?.Remove("finalMessage"); } }
         private string _explicitNullValueFinalMessage = default!;
 #endif
         /// <summary>Type of human handover detection</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.HumanHandOverDtoHandoverType? HandoverType { get => _explicitNullValueHandoverType; set { _explicitNullValueHandoverType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("handoverType"); else _explicitNullProperties?.Remove("handoverType"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.HumanHandOverDtoHandoverType? HandoverType { get => _explicitNullValueHandoverType; set { _explicitNullValueHandoverType = value; AdditionalData?.Remove("handoverType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("handoverType"); else _explicitNullProperties?.Remove("handoverType"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.HumanHandOverDtoHandoverType? _explicitNullValueHandoverType = default!;
         /// <summary>Whether the agent can be reactivated after handover</summary>
-        public bool? ReactivateEnabled { get => _explicitNullValueReactivateEnabled; set { _explicitNullValueReactivateEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reactivateEnabled"); else _explicitNullProperties?.Remove("reactivateEnabled"); } }
+        public bool? ReactivateEnabled { get => _explicitNullValueReactivateEnabled; set { _explicitNullValueReactivateEnabled = value; AdditionalData?.Remove("reactivateEnabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reactivateEnabled"); else _explicitNullProperties?.Remove("reactivateEnabled"); } }
         private bool? _explicitNullValueReactivateEnabled = default!;
         /// <summary>Whether to skip assigning to a specific user</summary>
-        public bool? SkipAssignToUser { get => _explicitNullValueSkipAssignToUser; set { _explicitNullValueSkipAssignToUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skipAssignToUser"); else _explicitNullProperties?.Remove("skipAssignToUser"); } }
+        public bool? SkipAssignToUser { get => _explicitNullValueSkipAssignToUser; set { _explicitNullValueSkipAssignToUser = value; AdditionalData?.Remove("skipAssignToUser"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skipAssignToUser"); else _explicitNullProperties?.Remove("skipAssignToUser"); } }
         private bool? _explicitNullValueSkipAssignToUser = default!;
         /// <summary>Time duration before reactivation (required when reactivateEnabled is true)</summary>
-        public double? SleepTime { get => _explicitNullValueSleepTime; set { _explicitNullValueSleepTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sleepTime"); else _explicitNullProperties?.Remove("sleepTime"); } }
+        public double? SleepTime { get => _explicitNullValueSleepTime; set { _explicitNullValueSleepTime = value; AdditionalData?.Remove("sleepTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sleepTime"); else _explicitNullProperties?.Remove("sleepTime"); } }
         private double? _explicitNullValueSleepTime = default!;
         /// <summary>Time unit for reactivation delay (required when reactivateEnabled is true)</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.HumanHandOverDtoSleepTimeUnit? SleepTimeUnit { get => _explicitNullValueSleepTimeUnit; set { _explicitNullValueSleepTimeUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sleepTimeUnit"); else _explicitNullProperties?.Remove("sleepTimeUnit"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.HumanHandOverDtoSleepTimeUnit? SleepTimeUnit { get => _explicitNullValueSleepTimeUnit; set { _explicitNullValueSleepTimeUnit = value; AdditionalData?.Remove("sleepTimeUnit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sleepTimeUnit"); else _explicitNullProperties?.Remove("sleepTimeUnit"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.HumanHandOverDtoSleepTimeUnit? _explicitNullValueSleepTimeUnit = default!;
         /// <summary>Tags to apply during handover</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Tags { get => _explicitNullValueTags; set { _explicitNullValueTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tags"); else _explicitNullProperties?.Remove("tags"); } }
+        public List<string>? Tags { get => _explicitNullValueTags; set { _explicitNullValueTags = value; AdditionalData?.Remove("tags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tags"); else _explicitNullProperties?.Remove("tags"); } }
         private List<string>? _explicitNullValueTags = default!;
 #nullable restore
 #else
-        public List<string> Tags { get => _explicitNullValueTags; set { _explicitNullValueTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tags"); else _explicitNullProperties?.Remove("tags"); } }
+        public List<string> Tags { get => _explicitNullValueTags; set { _explicitNullValueTags = value; AdditionalData?.Remove("tags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tags"); else _explicitNullProperties?.Remove("tags"); } }
         private List<string> _explicitNullValueTags = default!;
 #endif
         /// <summary>Condition that triggers human handover</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TriggerCondition { get => _explicitNullValueTriggerCondition; set { _explicitNullValueTriggerCondition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggerCondition"); else _explicitNullProperties?.Remove("triggerCondition"); } }
+        public string? TriggerCondition { get => _explicitNullValueTriggerCondition; set { _explicitNullValueTriggerCondition = value; AdditionalData?.Remove("triggerCondition"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggerCondition"); else _explicitNullProperties?.Remove("triggerCondition"); } }
         private string? _explicitNullValueTriggerCondition = default!;
 #nullable restore
 #else
-        public string TriggerCondition { get => _explicitNullValueTriggerCondition; set { _explicitNullValueTriggerCondition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggerCondition"); else _explicitNullProperties?.Remove("triggerCondition"); } }
+        public string TriggerCondition { get => _explicitNullValueTriggerCondition; set { _explicitNullValueTriggerCondition = value; AdditionalData?.Remove("triggerCondition"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggerCondition"); else _explicitNullProperties?.Remove("triggerCondition"); } }
         private string _explicitNullValueTriggerCondition = default!;
 #endif
         /// <summary>
@@ -134,11 +146,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "enabled", n => { Enabled = n.GetBoolValue(); } },
                 { "examples", n => { Examples = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "finalMessage", n => { FinalMessage = n.GetStringValue(); } },
-                { "handoverType", n => { HandoverType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.HumanHandOverDtoHandoverType>(); } },
+                { "handoverType", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.HumanHandOverDtoHandoverType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueHandoverType = default; _explicitNullProperties?.Remove("handoverType"); AdditionalData["handoverType"] = unknown; } else { HandoverType = parsed; AdditionalData.Remove("handoverType"); } } },
                 { "reactivateEnabled", n => { ReactivateEnabled = n.GetBoolValue(); } },
                 { "skipAssignToUser", n => { SkipAssignToUser = n.GetBoolValue(); } },
                 { "sleepTime", n => { SleepTime = n.GetDoubleValue(); } },
-                { "sleepTimeUnit", n => { SleepTimeUnit = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.HumanHandOverDtoSleepTimeUnit>(); } },
+                { "sleepTimeUnit", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.HumanHandOverDtoSleepTimeUnit>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueSleepTimeUnit = default; _explicitNullProperties?.Remove("sleepTimeUnit"); AdditionalData["sleepTimeUnit"] = unknown; } else { SleepTimeUnit = parsed; AdditionalData.Remove("sleepTimeUnit"); } } },
                 { "tags", n => { Tags = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "triggerCondition", n => { TriggerCondition = n.GetStringValue(); } },
             };

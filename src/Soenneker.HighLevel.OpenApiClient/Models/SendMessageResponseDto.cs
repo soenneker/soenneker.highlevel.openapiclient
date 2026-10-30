@@ -17,13 +17,20 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("conversationId") is { } nullNodeConversationId && nullNodeConversationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConversationId = null;
-            if (parseNode.GetChildNode("emailMessageId") is { } nullNodeEmailMessageId && nullNodeEmailMessageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailMessageId = null;
-            if (parseNode.GetChildNode("forwardData") is { } nullNodeForwardData && nullNodeForwardData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ForwardData = null;
-            if (parseNode.GetChildNode("messageId") is { } nullNodeMessageId && nullNodeMessageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessageId = null;
-            if (parseNode.GetChildNode("messageIds") is { } nullNodeMessageIds && nullNodeMessageIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessageIds = null;
-            if (parseNode.GetChildNode("msg") is { } nullNodeMsg && nullNodeMsg.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Msg = null;
-            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("conversationId") is null) { _explicitNullValueConversationId = default!; _explicitNullProperties?.Remove("conversationId"); }
+            else if (parseNode.GetChildNode("conversationId") is { } nullNodeConversationId && nullNodeConversationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConversationId = null;
+            if (parseNode.GetChildNode("emailMessageId") is null) { _explicitNullValueEmailMessageId = default!; _explicitNullProperties?.Remove("emailMessageId"); }
+            else if (parseNode.GetChildNode("emailMessageId") is { } nullNodeEmailMessageId && nullNodeEmailMessageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailMessageId = null;
+            if (parseNode.GetChildNode("forwardData") is null) { _explicitNullValueForwardData = default!; _explicitNullProperties?.Remove("forwardData"); }
+            else if (parseNode.GetChildNode("forwardData") is { } nullNodeForwardData && nullNodeForwardData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ForwardData = null;
+            if (parseNode.GetChildNode("messageId") is null) { _explicitNullValueMessageId = default!; _explicitNullProperties?.Remove("messageId"); }
+            else if (parseNode.GetChildNode("messageId") is { } nullNodeMessageId && nullNodeMessageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessageId = null;
+            if (parseNode.GetChildNode("messageIds") is null) { _explicitNullValueMessageIds = default!; _explicitNullProperties?.Remove("messageIds"); }
+            else if (parseNode.GetChildNode("messageIds") is { } nullNodeMessageIds && nullNodeMessageIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessageIds = null;
+            if (parseNode.GetChildNode("msg") is null) { _explicitNullValueMsg = default!; _explicitNullProperties?.Remove("msg"); }
+            else if (parseNode.GetChildNode("msg") is { } nullNodeMsg && nullNodeMsg.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Msg = null;
+            if (parseNode.GetChildNode("status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("status"); }
+            else if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -31,65 +38,65 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Conversation ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConversationId { get => _explicitNullValueConversationId; set { _explicitNullValueConversationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conversationId"); else _explicitNullProperties?.Remove("conversationId"); } }
+        public string? ConversationId { get => _explicitNullValueConversationId; set { _explicitNullValueConversationId = value; AdditionalData?.Remove("conversationId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conversationId"); else _explicitNullProperties?.Remove("conversationId"); } }
         private string? _explicitNullValueConversationId = default!;
 #nullable restore
 #else
-        public string ConversationId { get => _explicitNullValueConversationId; set { _explicitNullValueConversationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conversationId"); else _explicitNullProperties?.Remove("conversationId"); } }
+        public string ConversationId { get => _explicitNullValueConversationId; set { _explicitNullValueConversationId = value; AdditionalData?.Remove("conversationId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conversationId"); else _explicitNullProperties?.Remove("conversationId"); } }
         private string _explicitNullValueConversationId = default!;
 #endif
         /// <summary>This contains the email message id (only for Email type). Use this ID to send inbound replies to GHL to create a threaded email.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmailMessageId { get => _explicitNullValueEmailMessageId; set { _explicitNullValueEmailMessageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailMessageId"); else _explicitNullProperties?.Remove("emailMessageId"); } }
+        public string? EmailMessageId { get => _explicitNullValueEmailMessageId; set { _explicitNullValueEmailMessageId = value; AdditionalData?.Remove("emailMessageId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailMessageId"); else _explicitNullProperties?.Remove("emailMessageId"); } }
         private string? _explicitNullValueEmailMessageId = default!;
 #nullable restore
 #else
-        public string EmailMessageId { get => _explicitNullValueEmailMessageId; set { _explicitNullValueEmailMessageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailMessageId"); else _explicitNullProperties?.Remove("emailMessageId"); } }
+        public string EmailMessageId { get => _explicitNullValueEmailMessageId; set { _explicitNullValueEmailMessageId = value; AdditionalData?.Remove("emailMessageId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailMessageId"); else _explicitNullProperties?.Remove("emailMessageId"); } }
         private string _explicitNullValueEmailMessageId = default!;
 #endif
         /// <summary>Optional metadata for forwarded email</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageResponseDtoForwardData? ForwardData { get => _explicitNullValueForwardData; set { _explicitNullValueForwardData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("forwardData"); else _explicitNullProperties?.Remove("forwardData"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageResponseDtoForwardData? ForwardData { get => _explicitNullValueForwardData; set { _explicitNullValueForwardData = value; AdditionalData?.Remove("forwardData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("forwardData"); else _explicitNullProperties?.Remove("forwardData"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageResponseDtoForwardData? _explicitNullValueForwardData = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageResponseDtoForwardData ForwardData { get => _explicitNullValueForwardData; set { _explicitNullValueForwardData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("forwardData"); else _explicitNullProperties?.Remove("forwardData"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageResponseDtoForwardData ForwardData { get => _explicitNullValueForwardData; set { _explicitNullValueForwardData = value; AdditionalData?.Remove("forwardData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("forwardData"); else _explicitNullProperties?.Remove("forwardData"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageResponseDtoForwardData _explicitNullValueForwardData = default!;
 #endif
         /// <summary>This is the main Message ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MessageId { get => _explicitNullValueMessageId; set { _explicitNullValueMessageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messageId"); else _explicitNullProperties?.Remove("messageId"); } }
+        public string? MessageId { get => _explicitNullValueMessageId; set { _explicitNullValueMessageId = value; AdditionalData?.Remove("messageId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messageId"); else _explicitNullProperties?.Remove("messageId"); } }
         private string? _explicitNullValueMessageId = default!;
 #nullable restore
 #else
-        public string MessageId { get => _explicitNullValueMessageId; set { _explicitNullValueMessageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messageId"); else _explicitNullProperties?.Remove("messageId"); } }
+        public string MessageId { get => _explicitNullValueMessageId; set { _explicitNullValueMessageId = value; AdditionalData?.Remove("messageId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messageId"); else _explicitNullProperties?.Remove("messageId"); } }
         private string _explicitNullValueMessageId = default!;
 #endif
         /// <summary>When sending via the GMB channel, we will be returning list of `messageIds` instead of single `messageId`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? MessageIds { get => _explicitNullValueMessageIds; set { _explicitNullValueMessageIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messageIds"); else _explicitNullProperties?.Remove("messageIds"); } }
+        public List<string>? MessageIds { get => _explicitNullValueMessageIds; set { _explicitNullValueMessageIds = value; AdditionalData?.Remove("messageIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messageIds"); else _explicitNullProperties?.Remove("messageIds"); } }
         private List<string>? _explicitNullValueMessageIds = default!;
 #nullable restore
 #else
-        public List<string> MessageIds { get => _explicitNullValueMessageIds; set { _explicitNullValueMessageIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messageIds"); else _explicitNullProperties?.Remove("messageIds"); } }
+        public List<string> MessageIds { get => _explicitNullValueMessageIds; set { _explicitNullValueMessageIds = value; AdditionalData?.Remove("messageIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messageIds"); else _explicitNullProperties?.Remove("messageIds"); } }
         private List<string> _explicitNullValueMessageIds = default!;
 #endif
         /// <summary>Additional response message when sending a workflow message</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Msg { get => _explicitNullValueMsg; set { _explicitNullValueMsg = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("msg"); else _explicitNullProperties?.Remove("msg"); } }
+        public string? Msg { get => _explicitNullValueMsg; set { _explicitNullValueMsg = value; AdditionalData?.Remove("msg"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("msg"); else _explicitNullProperties?.Remove("msg"); } }
         private string? _explicitNullValueMsg = default!;
 #nullable restore
 #else
-        public string Msg { get => _explicitNullValueMsg; set { _explicitNullValueMsg = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("msg"); else _explicitNullProperties?.Remove("msg"); } }
+        public string Msg { get => _explicitNullValueMsg; set { _explicitNullValueMsg = value; AdditionalData?.Remove("msg"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("msg"); else _explicitNullProperties?.Remove("msg"); } }
         private string _explicitNullValueMsg = default!;
 #endif
         /// <summary>Message status</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageResponseDtoStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageResponseDtoStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageResponseDtoStatus? _explicitNullValueStatus = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageResponseDto"/> and sets the default values.
@@ -122,7 +129,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "messageId", n => { MessageId = n.GetStringValue(); } },
                 { "messageIds", n => { MessageIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "msg", n => { Msg = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageResponseDtoStatus>(); } },
+                { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendMessageResponseDtoStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
             };
         }
         /// <summary>

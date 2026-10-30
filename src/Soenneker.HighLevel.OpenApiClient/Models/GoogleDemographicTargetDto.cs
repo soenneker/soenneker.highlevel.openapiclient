@@ -17,8 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("enum") is { } nullNodeEnum && nullNodeEnum.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enum = null;
-            if (parseNode.GetChildNode("negative") is { } nullNodeNegative && nullNodeNegative.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Negative = null;
+            if (parseNode.GetChildNode("enum") is null) { _explicitNullValueEnum = default!; _explicitNullProperties?.Remove("enum"); }
+            else if (parseNode.GetChildNode("enum") is { } nullNodeEnum && nullNodeEnum.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enum = null;
+            if (parseNode.GetChildNode("negative") is null) { _explicitNullValueNegative = default!; _explicitNullProperties?.Remove("negative"); }
+            else if (parseNode.GetChildNode("negative") is { } nullNodeNegative && nullNodeNegative.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Negative = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,15 +28,15 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Demographic enum value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Enum { get => _explicitNullValueEnum; set { _explicitNullValueEnum = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enum"); else _explicitNullProperties?.Remove("enum"); } }
+        public string? Enum { get => _explicitNullValueEnum; set { _explicitNullValueEnum = value; AdditionalData?.Remove("enum"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enum"); else _explicitNullProperties?.Remove("enum"); } }
         private string? _explicitNullValueEnum = default!;
 #nullable restore
 #else
-        public string Enum { get => _explicitNullValueEnum; set { _explicitNullValueEnum = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enum"); else _explicitNullProperties?.Remove("enum"); } }
+        public string Enum { get => _explicitNullValueEnum; set { _explicitNullValueEnum = value; AdditionalData?.Remove("enum"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enum"); else _explicitNullProperties?.Remove("enum"); } }
         private string _explicitNullValueEnum = default!;
 #endif
         /// <summary>Whether this is a negative target</summary>
-        public bool? Negative { get => _explicitNullValueNegative; set { _explicitNullValueNegative = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("negative"); else _explicitNullProperties?.Remove("negative"); } }
+        public bool? Negative { get => _explicitNullValueNegative; set { _explicitNullValueNegative = value; AdditionalData?.Remove("negative"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("negative"); else _explicitNullProperties?.Remove("negative"); } }
         private bool? _explicitNullValueNegative = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GoogleDemographicTargetDto"/> and sets the default values.

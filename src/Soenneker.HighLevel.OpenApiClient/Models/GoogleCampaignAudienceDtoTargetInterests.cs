@@ -18,8 +18,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("affinity") is { } nullNodeAffinity && nullNodeAffinity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Affinity = null;
-            if (parseNode.GetChildNode("inMarket") is { } nullNodeInMarket && nullNodeInMarket.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InMarket = null;
+            if (parseNode.GetChildNode("affinity") is null) { _explicitNullValueAffinity = default!; _explicitNullProperties?.Remove("affinity"); }
+            else if (parseNode.GetChildNode("affinity") is { } nullNodeAffinity && nullNodeAffinity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Affinity = null;
+            if (parseNode.GetChildNode("inMarket") is null) { _explicitNullValueInMarket = default!; _explicitNullProperties?.Remove("inMarket"); }
+            else if (parseNode.GetChildNode("inMarket") is { } nullNodeInMarket && nullNodeInMarket.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InMarket = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Affinity audience IDs</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Affinity { get => _explicitNullValueAffinity; set { _explicitNullValueAffinity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("affinity"); else _explicitNullProperties?.Remove("affinity"); } }
+        public List<string>? Affinity { get => _explicitNullValueAffinity; set { _explicitNullValueAffinity = value; AdditionalData?.Remove("affinity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("affinity"); else _explicitNullProperties?.Remove("affinity"); } }
         private List<string>? _explicitNullValueAffinity = default!;
 #nullable restore
 #else
-        public List<string> Affinity { get => _explicitNullValueAffinity; set { _explicitNullValueAffinity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("affinity"); else _explicitNullProperties?.Remove("affinity"); } }
+        public List<string> Affinity { get => _explicitNullValueAffinity; set { _explicitNullValueAffinity = value; AdditionalData?.Remove("affinity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("affinity"); else _explicitNullProperties?.Remove("affinity"); } }
         private List<string> _explicitNullValueAffinity = default!;
 #endif
         /// <summary>In-market audience IDs</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? InMarket { get => _explicitNullValueInMarket; set { _explicitNullValueInMarket = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inMarket"); else _explicitNullProperties?.Remove("inMarket"); } }
+        public List<string>? InMarket { get => _explicitNullValueInMarket; set { _explicitNullValueInMarket = value; AdditionalData?.Remove("inMarket"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inMarket"); else _explicitNullProperties?.Remove("inMarket"); } }
         private List<string>? _explicitNullValueInMarket = default!;
 #nullable restore
 #else
-        public List<string> InMarket { get => _explicitNullValueInMarket; set { _explicitNullValueInMarket = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inMarket"); else _explicitNullProperties?.Remove("inMarket"); } }
+        public List<string> InMarket { get => _explicitNullValueInMarket; set { _explicitNullValueInMarket = value; AdditionalData?.Remove("inMarket"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inMarket"); else _explicitNullProperties?.Remove("inMarket"); } }
         private List<string> _explicitNullValueInMarket = default!;
 #endif
         /// <summary>

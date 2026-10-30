@@ -18,23 +18,25 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("callToActionLabel") is { } nullNodeCallToActionLabel && nullNodeCallToActionLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallToActionLabel = null;
-            if (parseNode.GetChildNode("callToActionTarget") is { } nullNodeCallToActionTarget && nullNodeCallToActionTarget.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallToActionTarget = null;
+            if (parseNode.GetChildNode("callToActionLabel") is null) { _explicitNullValueCallToActionLabel = default!; _explicitNullProperties?.Remove("callToActionLabel"); }
+            else if (parseNode.GetChildNode("callToActionLabel") is { } nullNodeCallToActionLabel && nullNodeCallToActionLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallToActionLabel = null;
+            if (parseNode.GetChildNode("callToActionTarget") is null) { _explicitNullValueCallToActionTarget = default!; _explicitNullProperties?.Remove("callToActionTarget"); }
+            else if (parseNode.GetChildNode("callToActionTarget") is { } nullNodeCallToActionTarget && nullNodeCallToActionTarget.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallToActionTarget = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Call to action label</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PostSubmissionCallToActionDtoCallToActionLabel? CallToActionLabel { get => _explicitNullValueCallToActionLabel; set { _explicitNullValueCallToActionLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callToActionLabel"); else _explicitNullProperties?.Remove("callToActionLabel"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PostSubmissionCallToActionDtoCallToActionLabel? CallToActionLabel { get => _explicitNullValueCallToActionLabel; set { _explicitNullValueCallToActionLabel = value; AdditionalData?.Remove("callToActionLabel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callToActionLabel"); else _explicitNullProperties?.Remove("callToActionLabel"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.PostSubmissionCallToActionDtoCallToActionLabel? _explicitNullValueCallToActionLabel = default!;
         /// <summary>Call to action target</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PostSubmissionCallToActionDtoCallToActionTarget? CallToActionTarget { get => _explicitNullValueCallToActionTarget; set { _explicitNullValueCallToActionTarget = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callToActionTarget"); else _explicitNullProperties?.Remove("callToActionTarget"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PostSubmissionCallToActionDtoCallToActionTarget? CallToActionTarget { get => _explicitNullValueCallToActionTarget; set { _explicitNullValueCallToActionTarget = value; AdditionalData?.Remove("callToActionTarget"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callToActionTarget"); else _explicitNullProperties?.Remove("callToActionTarget"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.PostSubmissionCallToActionDtoCallToActionTarget? _explicitNullValueCallToActionTarget = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PostSubmissionCallToActionDtoCallToActionTarget CallToActionTarget { get => _explicitNullValueCallToActionTarget; set { _explicitNullValueCallToActionTarget = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callToActionTarget"); else _explicitNullProperties?.Remove("callToActionTarget"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PostSubmissionCallToActionDtoCallToActionTarget CallToActionTarget { get => _explicitNullValueCallToActionTarget; set { _explicitNullValueCallToActionTarget = value; AdditionalData?.Remove("callToActionTarget"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callToActionTarget"); else _explicitNullProperties?.Remove("callToActionTarget"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.PostSubmissionCallToActionDtoCallToActionTarget _explicitNullValueCallToActionTarget = default!;
 #endif
         /// <summary>
@@ -62,7 +64,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "callToActionLabel", n => { CallToActionLabel = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostSubmissionCallToActionDtoCallToActionLabel>(); } },
+                { "callToActionLabel", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostSubmissionCallToActionDtoCallToActionLabel>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCallToActionLabel = default; _explicitNullProperties?.Remove("callToActionLabel"); AdditionalData["callToActionLabel"] = unknown; } else { CallToActionLabel = parsed; AdditionalData.Remove("callToActionLabel"); } } },
                 { "callToActionTarget", n => { CallToActionTarget = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostSubmissionCallToActionDtoCallToActionTarget>(global::Soenneker.HighLevel.OpenApiClient.Models.PostSubmissionCallToActionDtoCallToActionTarget.CreateFromDiscriminatorValue); } },
             };
         }

@@ -107,7 +107,7 @@ namespace Soenneker.HighLevel.OpenApiClient.AdManager.AdPublishing.Facebook.Pixe
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.AdManager.AdPublishing.Facebook.Pixels.PixelsRequestBuilder.PixelsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/ad-manager/ad-publishing/facebook/pixels?locationId={locationId}{&channel*,igUserId*,pageId*}", PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve("{+baseurl}/ad-manager/ad-publishing/facebook/pixels?locationId={locationId}{&channel*,igUserId*,pageId*}", RequestAdapter.BaseUrl, "https://services.leadconnectorhq.com", "/ad-manager/ad-publishing/facebook/pixels", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -128,7 +128,7 @@ namespace Soenneker.HighLevel.OpenApiClient.AdManager.AdPublishing.Facebook.Pixe
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.PUT, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.PUT, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://services.leadconnectorhq.com", "/ad-manager/ad-publishing/facebook/pixels", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);

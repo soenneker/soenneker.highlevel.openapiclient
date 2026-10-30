@@ -17,8 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("platforms") is { } nullNodePlatforms && nullNodePlatforms.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Platforms = null;
-            if (parseNode.GetChildNode("profileIds") is { } nullNodeProfileIds && nullNodeProfileIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProfileIds = null;
+            if (parseNode.GetChildNode("platforms") is null) { _explicitNullValuePlatforms = default!; _explicitNullProperties?.Remove("platforms"); }
+            else if (parseNode.GetChildNode("platforms") is { } nullNodePlatforms && nullNodePlatforms.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Platforms = null;
+            if (parseNode.GetChildNode("profileIds") is null) { _explicitNullValueProfileIds = default!; _explicitNullProperties?.Remove("profileIds"); }
+            else if (parseNode.GetChildNode("profileIds") is { } nullNodeProfileIds && nullNodeProfileIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProfileIds = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Array of social media platforms to filter analytics by. If not provided, all platforms will be included. NOTE: Linkedin (PAGE only) and Tiktok (BUSINESS only) are supported.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatisticsRequestPlatformsItem?>? Platforms { get => _explicitNullValuePlatforms; set { _explicitNullValuePlatforms = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platforms"); else _explicitNullProperties?.Remove("platforms"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatisticsRequestPlatformsItem?>? Platforms { get => _explicitNullValuePlatforms; set { _explicitNullValuePlatforms = value; AdditionalData?.Remove("platforms"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platforms"); else _explicitNullProperties?.Remove("platforms"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatisticsRequestPlatformsItem?>? _explicitNullValuePlatforms = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatisticsRequestPlatformsItem?> Platforms { get => _explicitNullValuePlatforms; set { _explicitNullValuePlatforms = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platforms"); else _explicitNullProperties?.Remove("platforms"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatisticsRequestPlatformsItem?> Platforms { get => _explicitNullValuePlatforms; set { _explicitNullValuePlatforms = value; AdditionalData?.Remove("platforms"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platforms"); else _explicitNullProperties?.Remove("platforms"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatisticsRequestPlatformsItem?> _explicitNullValuePlatforms = default!;
 #endif
         /// <summary>Array of connected social media account IDs to fetch analytics for. This can be found as &apos;profileId&apos; in /accounts api.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ProfileIds { get => _explicitNullValueProfileIds; set { _explicitNullValueProfileIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("profileIds"); else _explicitNullProperties?.Remove("profileIds"); } }
+        public List<string>? ProfileIds { get => _explicitNullValueProfileIds; set { _explicitNullValueProfileIds = value; AdditionalData?.Remove("profileIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("profileIds"); else _explicitNullProperties?.Remove("profileIds"); } }
         private List<string>? _explicitNullValueProfileIds = default!;
 #nullable restore
 #else
-        public List<string> ProfileIds { get => _explicitNullValueProfileIds; set { _explicitNullValueProfileIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("profileIds"); else _explicitNullProperties?.Remove("profileIds"); } }
+        public List<string> ProfileIds { get => _explicitNullValueProfileIds; set { _explicitNullValueProfileIds = value; AdditionalData?.Remove("profileIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("profileIds"); else _explicitNullProperties?.Remove("profileIds"); } }
         private List<string> _explicitNullValueProfileIds = default!;
 #endif
         /// <summary>

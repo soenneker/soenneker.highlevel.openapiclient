@@ -17,8 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("twilioMediaSids") is { } nullNodeTwilioMediaSids && nullNodeTwilioMediaSids.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TwilioMediaSids = null;
-            if (parseNode.GetChildNode("uploadedFiles") is { } nullNodeUploadedFiles && nullNodeUploadedFiles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UploadedFiles = null;
+            if (parseNode.GetChildNode("twilioMediaSids") is null) { _explicitNullValueTwilioMediaSids = default!; _explicitNullProperties?.Remove("twilioMediaSids"); }
+            else if (parseNode.GetChildNode("twilioMediaSids") is { } nullNodeTwilioMediaSids && nullNodeTwilioMediaSids.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TwilioMediaSids = null;
+            if (parseNode.GetChildNode("uploadedFiles") is null) { _explicitNullValueUploadedFiles = default!; _explicitNullProperties?.Remove("uploadedFiles"); }
+            else if (parseNode.GetChildNode("uploadedFiles") is { } nullNodeUploadedFiles && nullNodeUploadedFiles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UploadedFiles = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Twilio media SIDs for group SMS (when isGroupSms=true)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? TwilioMediaSids { get => _explicitNullValueTwilioMediaSids; set { _explicitNullValueTwilioMediaSids = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilioMediaSids"); else _explicitNullProperties?.Remove("twilioMediaSids"); } }
+        public List<string>? TwilioMediaSids { get => _explicitNullValueTwilioMediaSids; set { _explicitNullValueTwilioMediaSids = value; AdditionalData?.Remove("twilioMediaSids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilioMediaSids"); else _explicitNullProperties?.Remove("twilioMediaSids"); } }
         private List<string>? _explicitNullValueTwilioMediaSids = default!;
 #nullable restore
 #else
-        public List<string> TwilioMediaSids { get => _explicitNullValueTwilioMediaSids; set { _explicitNullValueTwilioMediaSids = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilioMediaSids"); else _explicitNullProperties?.Remove("twilioMediaSids"); } }
+        public List<string> TwilioMediaSids { get => _explicitNullValueTwilioMediaSids; set { _explicitNullValueTwilioMediaSids = value; AdditionalData?.Remove("twilioMediaSids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilioMediaSids"); else _explicitNullProperties?.Remove("twilioMediaSids"); } }
         private List<string> _explicitNullValueTwilioMediaSids = default!;
 #endif
         /// <summary>The uploadedFiles property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UploadFilesResponseDtoUploadedFilesProperty2? UploadedFiles { get => _explicitNullValueUploadedFiles; set { _explicitNullValueUploadedFiles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uploadedFiles"); else _explicitNullProperties?.Remove("uploadedFiles"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UploadFilesResponseDtoUploadedFilesProperty2? UploadedFiles { get => _explicitNullValueUploadedFiles; set { _explicitNullValueUploadedFiles = value; AdditionalData?.Remove("uploadedFiles"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uploadedFiles"); else _explicitNullProperties?.Remove("uploadedFiles"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.UploadFilesResponseDtoUploadedFilesProperty2? _explicitNullValueUploadedFiles = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UploadFilesResponseDtoUploadedFilesProperty2 UploadedFiles { get => _explicitNullValueUploadedFiles; set { _explicitNullValueUploadedFiles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uploadedFiles"); else _explicitNullProperties?.Remove("uploadedFiles"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UploadFilesResponseDtoUploadedFilesProperty2 UploadedFiles { get => _explicitNullValueUploadedFiles; set { _explicitNullValueUploadedFiles = value; AdditionalData?.Remove("uploadedFiles"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uploadedFiles"); else _explicitNullProperties?.Remove("uploadedFiles"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.UploadFilesResponseDtoUploadedFilesProperty2 _explicitNullValueUploadedFiles = default!;
 #endif
         /// <summary>

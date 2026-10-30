@@ -17,8 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("firstObjectLabel") is { } nullNodeFirstObjectLabel && nullNodeFirstObjectLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstObjectLabel = null;
-            if (parseNode.GetChildNode("secondObjectLabel") is { } nullNodeSecondObjectLabel && nullNodeSecondObjectLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecondObjectLabel = null;
+            if (parseNode.GetChildNode("firstObjectLabel") is null) { _explicitNullValueFirstObjectLabel = default!; _explicitNullProperties?.Remove("firstObjectLabel"); }
+            else if (parseNode.GetChildNode("firstObjectLabel") is { } nullNodeFirstObjectLabel && nullNodeFirstObjectLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstObjectLabel = null;
+            if (parseNode.GetChildNode("secondObjectLabel") is null) { _explicitNullValueSecondObjectLabel = default!; _explicitNullProperties?.Remove("secondObjectLabel"); }
+            else if (parseNode.GetChildNode("secondObjectLabel") is { } nullNodeSecondObjectLabel && nullNodeSecondObjectLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecondObjectLabel = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,22 +28,22 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The firstObjectLabel property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateAssociationReqDtoFirstObjectLabelProperty? FirstObjectLabel { get => _explicitNullValueFirstObjectLabel; set { _explicitNullValueFirstObjectLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("firstObjectLabel"); else _explicitNullProperties?.Remove("firstObjectLabel"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.UpdateAssociationReqDtoFirstObjectLabelProperty? _explicitNullValueFirstObjectLabel = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateAssociationReqDtoFirstObjectLabel? FirstObjectLabel { get => _explicitNullValueFirstObjectLabel; set { _explicitNullValueFirstObjectLabel = value; AdditionalData?.Remove("firstObjectLabel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("firstObjectLabel"); else _explicitNullProperties?.Remove("firstObjectLabel"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.UpdateAssociationReqDtoFirstObjectLabel? _explicitNullValueFirstObjectLabel = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateAssociationReqDtoFirstObjectLabelProperty FirstObjectLabel { get => _explicitNullValueFirstObjectLabel; set { _explicitNullValueFirstObjectLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("firstObjectLabel"); else _explicitNullProperties?.Remove("firstObjectLabel"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.UpdateAssociationReqDtoFirstObjectLabelProperty _explicitNullValueFirstObjectLabel = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateAssociationReqDtoFirstObjectLabel FirstObjectLabel { get => _explicitNullValueFirstObjectLabel; set { _explicitNullValueFirstObjectLabel = value; AdditionalData?.Remove("firstObjectLabel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("firstObjectLabel"); else _explicitNullProperties?.Remove("firstObjectLabel"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.UpdateAssociationReqDtoFirstObjectLabel _explicitNullValueFirstObjectLabel = default!;
 #endif
         /// <summary>The secondObjectLabel property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateAssociationReqDtoSecondObjectLabelProperty? SecondObjectLabel { get => _explicitNullValueSecondObjectLabel; set { _explicitNullValueSecondObjectLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondObjectLabel"); else _explicitNullProperties?.Remove("secondObjectLabel"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.UpdateAssociationReqDtoSecondObjectLabelProperty? _explicitNullValueSecondObjectLabel = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateAssociationReqDtoSecondObjectLabel? SecondObjectLabel { get => _explicitNullValueSecondObjectLabel; set { _explicitNullValueSecondObjectLabel = value; AdditionalData?.Remove("secondObjectLabel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondObjectLabel"); else _explicitNullProperties?.Remove("secondObjectLabel"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.UpdateAssociationReqDtoSecondObjectLabel? _explicitNullValueSecondObjectLabel = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateAssociationReqDtoSecondObjectLabelProperty SecondObjectLabel { get => _explicitNullValueSecondObjectLabel; set { _explicitNullValueSecondObjectLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondObjectLabel"); else _explicitNullProperties?.Remove("secondObjectLabel"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.UpdateAssociationReqDtoSecondObjectLabelProperty _explicitNullValueSecondObjectLabel = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateAssociationReqDtoSecondObjectLabel SecondObjectLabel { get => _explicitNullValueSecondObjectLabel; set { _explicitNullValueSecondObjectLabel = value; AdditionalData?.Remove("secondObjectLabel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondObjectLabel"); else _explicitNullProperties?.Remove("secondObjectLabel"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.UpdateAssociationReqDtoSecondObjectLabel _explicitNullValueSecondObjectLabel = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpdateAssociationReqDto"/> and sets the default values.
@@ -68,8 +70,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "firstObjectLabel", n => { FirstObjectLabel = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateAssociationReqDtoFirstObjectLabelProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateAssociationReqDtoFirstObjectLabelProperty.CreateFromDiscriminatorValue); } },
-                { "secondObjectLabel", n => { SecondObjectLabel = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateAssociationReqDtoSecondObjectLabelProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateAssociationReqDtoSecondObjectLabelProperty.CreateFromDiscriminatorValue); } },
+                { "firstObjectLabel", n => { FirstObjectLabel = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateAssociationReqDtoFirstObjectLabel>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateAssociationReqDtoFirstObjectLabel.CreateFromDiscriminatorValue); } },
+                { "secondObjectLabel", n => { SecondObjectLabel = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateAssociationReqDtoSecondObjectLabel>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateAssociationReqDtoSecondObjectLabel.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -79,8 +81,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateAssociationReqDtoFirstObjectLabelProperty>("firstObjectLabel", FirstObjectLabel);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateAssociationReqDtoSecondObjectLabelProperty>("secondObjectLabel", SecondObjectLabel);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateAssociationReqDtoFirstObjectLabel>("firstObjectLabel", FirstObjectLabel);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateAssociationReqDtoSecondObjectLabel>("secondObjectLabel", SecondObjectLabel);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

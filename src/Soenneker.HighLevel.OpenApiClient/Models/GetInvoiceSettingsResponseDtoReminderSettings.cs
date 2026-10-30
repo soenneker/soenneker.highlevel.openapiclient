@@ -18,8 +18,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("defaultEmailTemplateId") is { } nullNodeDefaultEmailTemplateId && nullNodeDefaultEmailTemplateId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultEmailTemplateId = null;
-            if (parseNode.GetChildNode("reminders") is { } nullNodeReminders && nullNodeReminders.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reminders = null;
+            if (parseNode.GetChildNode("defaultEmailTemplateId") is null) { _explicitNullValueDefaultEmailTemplateId = default!; _explicitNullProperties?.Remove("defaultEmailTemplateId"); }
+            else if (parseNode.GetChildNode("defaultEmailTemplateId") is { } nullNodeDefaultEmailTemplateId && nullNodeDefaultEmailTemplateId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultEmailTemplateId = null;
+            if (parseNode.GetChildNode("reminders") is null) { _explicitNullValueReminders = default!; _explicitNullProperties?.Remove("reminders"); }
+            else if (parseNode.GetChildNode("reminders") is { } nullNodeReminders && nullNodeReminders.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reminders = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>default template Id of reminder</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultEmailTemplateId { get => _explicitNullValueDefaultEmailTemplateId; set { _explicitNullValueDefaultEmailTemplateId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaultEmailTemplateId"); else _explicitNullProperties?.Remove("defaultEmailTemplateId"); } }
+        public string? DefaultEmailTemplateId { get => _explicitNullValueDefaultEmailTemplateId; set { _explicitNullValueDefaultEmailTemplateId = value; AdditionalData?.Remove("defaultEmailTemplateId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaultEmailTemplateId"); else _explicitNullProperties?.Remove("defaultEmailTemplateId"); } }
         private string? _explicitNullValueDefaultEmailTemplateId = default!;
 #nullable restore
 #else
-        public string DefaultEmailTemplateId { get => _explicitNullValueDefaultEmailTemplateId; set { _explicitNullValueDefaultEmailTemplateId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaultEmailTemplateId"); else _explicitNullProperties?.Remove("defaultEmailTemplateId"); } }
+        public string DefaultEmailTemplateId { get => _explicitNullValueDefaultEmailTemplateId; set { _explicitNullValueDefaultEmailTemplateId = value; AdditionalData?.Remove("defaultEmailTemplateId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaultEmailTemplateId"); else _explicitNullProperties?.Remove("defaultEmailTemplateId"); } }
         private string _explicitNullValueDefaultEmailTemplateId = default!;
 #endif
         /// <summary>List of reminders</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ReminderDto>? Reminders { get => _explicitNullValueReminders; set { _explicitNullValueReminders = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reminders"); else _explicitNullProperties?.Remove("reminders"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ReminderDto>? Reminders { get => _explicitNullValueReminders; set { _explicitNullValueReminders = value; AdditionalData?.Remove("reminders"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reminders"); else _explicitNullProperties?.Remove("reminders"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.ReminderDto>? _explicitNullValueReminders = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ReminderDto> Reminders { get => _explicitNullValueReminders; set { _explicitNullValueReminders = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reminders"); else _explicitNullProperties?.Remove("reminders"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ReminderDto> Reminders { get => _explicitNullValueReminders; set { _explicitNullValueReminders = value; AdditionalData?.Remove("reminders"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reminders"); else _explicitNullProperties?.Remove("reminders"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.ReminderDto> _explicitNullValueReminders = default!;
 #endif
         /// <summary>

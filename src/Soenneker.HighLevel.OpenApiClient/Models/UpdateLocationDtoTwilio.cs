@@ -18,8 +18,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("authToken") is { } nullNodeAuthToken && nullNodeAuthToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthToken = null;
-            if (parseNode.GetChildNode("sid") is { } nullNodeSid && nullNodeSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sid = null;
+            if (parseNode.GetChildNode("authToken") is null) { _explicitNullValueAuthToken = default!; _explicitNullProperties?.Remove("authToken"); }
+            else if (parseNode.GetChildNode("authToken") is { } nullNodeAuthToken && nullNodeAuthToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthToken = null;
+            if (parseNode.GetChildNode("sid") is null) { _explicitNullValueSid = default!; _explicitNullProperties?.Remove("sid"); }
+            else if (parseNode.GetChildNode("sid") is { } nullNodeSid && nullNodeSid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sid = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Auth token provided by Twilio</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AuthToken { get => _explicitNullValueAuthToken; set { _explicitNullValueAuthToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authToken"); else _explicitNullProperties?.Remove("authToken"); } }
+        public string? AuthToken { get => _explicitNullValueAuthToken; set { _explicitNullValueAuthToken = value; AdditionalData?.Remove("authToken"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authToken"); else _explicitNullProperties?.Remove("authToken"); } }
         private string? _explicitNullValueAuthToken = default!;
 #nullable restore
 #else
-        public string AuthToken { get => _explicitNullValueAuthToken; set { _explicitNullValueAuthToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authToken"); else _explicitNullProperties?.Remove("authToken"); } }
+        public string AuthToken { get => _explicitNullValueAuthToken; set { _explicitNullValueAuthToken = value; AdditionalData?.Remove("authToken"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authToken"); else _explicitNullProperties?.Remove("authToken"); } }
         private string _explicitNullValueAuthToken = default!;
 #endif
         /// <summary>SID provided by Twilio</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Sid { get => _explicitNullValueSid; set { _explicitNullValueSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sid"); else _explicitNullProperties?.Remove("sid"); } }
+        public string? Sid { get => _explicitNullValueSid; set { _explicitNullValueSid = value; AdditionalData?.Remove("sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sid"); else _explicitNullProperties?.Remove("sid"); } }
         private string? _explicitNullValueSid = default!;
 #nullable restore
 #else
-        public string Sid { get => _explicitNullValueSid; set { _explicitNullValueSid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sid"); else _explicitNullProperties?.Remove("sid"); } }
+        public string Sid { get => _explicitNullValueSid; set { _explicitNullValueSid = value; AdditionalData?.Remove("sid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sid"); else _explicitNullProperties?.Remove("sid"); } }
         private string _explicitNullValueSid = default!;
 #endif
         /// <summary>

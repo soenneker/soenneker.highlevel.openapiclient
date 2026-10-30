@@ -17,7 +17,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("authors") is { } nullNodeAuthors && nullNodeAuthors.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Authors = null;
+            if (parseNode.GetChildNode("authors") is null) { _explicitNullValueAuthors = default!; _explicitNullProperties?.Remove("authors"); }
+            else if (parseNode.GetChildNode("authors") is { } nullNodeAuthors && nullNodeAuthors.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Authors = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Array of authors</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.AuthorResponseDto>? Authors { get => _explicitNullValueAuthors; set { _explicitNullValueAuthors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authors"); else _explicitNullProperties?.Remove("authors"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.AuthorResponseDto>? Authors { get => _explicitNullValueAuthors; set { _explicitNullValueAuthors = value; AdditionalData?.Remove("authors"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authors"); else _explicitNullProperties?.Remove("authors"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.AuthorResponseDto>? _explicitNullValueAuthors = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.AuthorResponseDto> Authors { get => _explicitNullValueAuthors; set { _explicitNullValueAuthors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authors"); else _explicitNullProperties?.Remove("authors"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.AuthorResponseDto> Authors { get => _explicitNullValueAuthors; set { _explicitNullValueAuthors = value; AdditionalData?.Remove("authors"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authors"); else _explicitNullProperties?.Remove("authors"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.AuthorResponseDto> _explicitNullValueAuthors = default!;
 #endif
         /// <summary>

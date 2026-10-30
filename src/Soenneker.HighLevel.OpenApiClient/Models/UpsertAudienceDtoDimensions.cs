@@ -18,11 +18,16 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ageRanges") is { } nullNodeAgeRanges && nullNodeAgeRanges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgeRanges = null;
-            if (parseNode.GetChildNode("audienceSegments") is { } nullNodeAudienceSegments && nullNodeAudienceSegments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AudienceSegments = null;
-            if (parseNode.GetChildNode("genders") is { } nullNodeGenders && nullNodeGenders.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Genders = null;
-            if (parseNode.GetChildNode("isAgeUnknown") is { } nullNodeIsAgeUnknown && nullNodeIsAgeUnknown.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAgeUnknown = null;
-            if (parseNode.GetChildNode("parentalStatuses") is { } nullNodeParentalStatuses && nullNodeParentalStatuses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParentalStatuses = null;
+            if (parseNode.GetChildNode("ageRanges") is null) { _explicitNullValueAgeRanges = default!; _explicitNullProperties?.Remove("ageRanges"); }
+            else if (parseNode.GetChildNode("ageRanges") is { } nullNodeAgeRanges && nullNodeAgeRanges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgeRanges = null;
+            if (parseNode.GetChildNode("audienceSegments") is null) { _explicitNullValueAudienceSegments = default!; _explicitNullProperties?.Remove("audienceSegments"); }
+            else if (parseNode.GetChildNode("audienceSegments") is { } nullNodeAudienceSegments && nullNodeAudienceSegments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AudienceSegments = null;
+            if (parseNode.GetChildNode("genders") is null) { _explicitNullValueGenders = default!; _explicitNullProperties?.Remove("genders"); }
+            else if (parseNode.GetChildNode("genders") is { } nullNodeGenders && nullNodeGenders.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Genders = null;
+            if (parseNode.GetChildNode("isAgeUnknown") is null) { _explicitNullValueIsAgeUnknown = default!; _explicitNullProperties?.Remove("isAgeUnknown"); }
+            else if (parseNode.GetChildNode("isAgeUnknown") is { } nullNodeIsAgeUnknown && nullNodeIsAgeUnknown.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAgeUnknown = null;
+            if (parseNode.GetChildNode("parentalStatuses") is null) { _explicitNullValueParentalStatuses = default!; _explicitNullProperties?.Remove("parentalStatuses"); }
+            else if (parseNode.GetChildNode("parentalStatuses") is { } nullNodeParentalStatuses && nullNodeParentalStatuses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParentalStatuses = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,44 +35,44 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Age range filters</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AgeRanges { get => _explicitNullValueAgeRanges; set { _explicitNullValueAgeRanges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ageRanges"); else _explicitNullProperties?.Remove("ageRanges"); } }
+        public List<string>? AgeRanges { get => _explicitNullValueAgeRanges; set { _explicitNullValueAgeRanges = value; AdditionalData?.Remove("ageRanges"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ageRanges"); else _explicitNullProperties?.Remove("ageRanges"); } }
         private List<string>? _explicitNullValueAgeRanges = default!;
 #nullable restore
 #else
-        public List<string> AgeRanges { get => _explicitNullValueAgeRanges; set { _explicitNullValueAgeRanges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ageRanges"); else _explicitNullProperties?.Remove("ageRanges"); } }
+        public List<string> AgeRanges { get => _explicitNullValueAgeRanges; set { _explicitNullValueAgeRanges = value; AdditionalData?.Remove("ageRanges"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ageRanges"); else _explicitNullProperties?.Remove("ageRanges"); } }
         private List<string> _explicitNullValueAgeRanges = default!;
 #endif
         /// <summary>Audience segment references used for targeting</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AudienceDimensionDtoAudienceSegments? AudienceSegments { get => _explicitNullValueAudienceSegments; set { _explicitNullValueAudienceSegments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audienceSegments"); else _explicitNullProperties?.Remove("audienceSegments"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AudienceDimensionDtoAudienceSegments? AudienceSegments { get => _explicitNullValueAudienceSegments; set { _explicitNullValueAudienceSegments = value; AdditionalData?.Remove("audienceSegments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audienceSegments"); else _explicitNullProperties?.Remove("audienceSegments"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.AudienceDimensionDtoAudienceSegments? _explicitNullValueAudienceSegments = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AudienceDimensionDtoAudienceSegments AudienceSegments { get => _explicitNullValueAudienceSegments; set { _explicitNullValueAudienceSegments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audienceSegments"); else _explicitNullProperties?.Remove("audienceSegments"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AudienceDimensionDtoAudienceSegments AudienceSegments { get => _explicitNullValueAudienceSegments; set { _explicitNullValueAudienceSegments = value; AdditionalData?.Remove("audienceSegments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audienceSegments"); else _explicitNullProperties?.Remove("audienceSegments"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.AudienceDimensionDtoAudienceSegments _explicitNullValueAudienceSegments = default!;
 #endif
         /// <summary>Gender targets</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Genders { get => _explicitNullValueGenders; set { _explicitNullValueGenders = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("genders"); else _explicitNullProperties?.Remove("genders"); } }
+        public List<string>? Genders { get => _explicitNullValueGenders; set { _explicitNullValueGenders = value; AdditionalData?.Remove("genders"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("genders"); else _explicitNullProperties?.Remove("genders"); } }
         private List<string>? _explicitNullValueGenders = default!;
 #nullable restore
 #else
-        public List<string> Genders { get => _explicitNullValueGenders; set { _explicitNullValueGenders = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("genders"); else _explicitNullProperties?.Remove("genders"); } }
+        public List<string> Genders { get => _explicitNullValueGenders; set { _explicitNullValueGenders = value; AdditionalData?.Remove("genders"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("genders"); else _explicitNullProperties?.Remove("genders"); } }
         private List<string> _explicitNullValueGenders = default!;
 #endif
         /// <summary>Include unknown age</summary>
-        public bool? IsAgeUnknown { get => _explicitNullValueIsAgeUnknown; set { _explicitNullValueIsAgeUnknown = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isAgeUnknown"); else _explicitNullProperties?.Remove("isAgeUnknown"); } }
+        public bool? IsAgeUnknown { get => _explicitNullValueIsAgeUnknown; set { _explicitNullValueIsAgeUnknown = value; AdditionalData?.Remove("isAgeUnknown"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isAgeUnknown"); else _explicitNullProperties?.Remove("isAgeUnknown"); } }
         private bool? _explicitNullValueIsAgeUnknown = default!;
         /// <summary>Parental status targets</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ParentalStatuses { get => _explicitNullValueParentalStatuses; set { _explicitNullValueParentalStatuses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parentalStatuses"); else _explicitNullProperties?.Remove("parentalStatuses"); } }
+        public List<string>? ParentalStatuses { get => _explicitNullValueParentalStatuses; set { _explicitNullValueParentalStatuses = value; AdditionalData?.Remove("parentalStatuses"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parentalStatuses"); else _explicitNullProperties?.Remove("parentalStatuses"); } }
         private List<string>? _explicitNullValueParentalStatuses = default!;
 #nullable restore
 #else
-        public List<string> ParentalStatuses { get => _explicitNullValueParentalStatuses; set { _explicitNullValueParentalStatuses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parentalStatuses"); else _explicitNullProperties?.Remove("parentalStatuses"); } }
+        public List<string> ParentalStatuses { get => _explicitNullValueParentalStatuses; set { _explicitNullValueParentalStatuses = value; AdditionalData?.Remove("parentalStatuses"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parentalStatuses"); else _explicitNullProperties?.Remove("parentalStatuses"); } }
         private List<string> _explicitNullValueParentalStatuses = default!;
 #endif
         /// <summary>

@@ -17,9 +17,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("attrs") is { } nullNodeAttrs && nullNodeAttrs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Attrs = null;
-            if (parseNode.GetChildNode("elements") is { } nullNodeElements && nullNodeElements.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Elements = null;
-            if (parseNode.GetChildNode("templateSettings") is { } nullNodeTemplateSettings && nullNodeTemplateSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TemplateSettings = null;
+            if (parseNode.GetChildNode("attrs") is null) { _explicitNullValueAttrs = default!; _explicitNullProperties?.Remove("attrs"); }
+            else if (parseNode.GetChildNode("attrs") is { } nullNodeAttrs && nullNodeAttrs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Attrs = null;
+            if (parseNode.GetChildNode("elements") is null) { _explicitNullValueElements = default!; _explicitNullProperties?.Remove("elements"); }
+            else if (parseNode.GetChildNode("elements") is { } nullNodeElements && nullNodeElements.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Elements = null;
+            if (parseNode.GetChildNode("templateSettings") is null) { _explicitNullValueTemplateSettings = default!; _explicitNullProperties?.Remove("templateSettings"); }
+            else if (parseNode.GetChildNode("templateSettings") is { } nullNodeTemplateSettings && nullNodeTemplateSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TemplateSettings = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The attrs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDtoDndAttrsProperty? Attrs { get => _explicitNullValueAttrs; set { _explicitNullValueAttrs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attrs"); else _explicitNullProperties?.Remove("attrs"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDtoDndAttrsProperty? Attrs { get => _explicitNullValueAttrs; set { _explicitNullValueAttrs = value; AdditionalData?.Remove("attrs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attrs"); else _explicitNullProperties?.Remove("attrs"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDtoDndAttrsProperty? _explicitNullValueAttrs = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDtoDndAttrsProperty Attrs { get => _explicitNullValueAttrs; set { _explicitNullValueAttrs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attrs"); else _explicitNullProperties?.Remove("attrs"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDtoDndAttrsProperty Attrs { get => _explicitNullValueAttrs; set { _explicitNullValueAttrs = value; AdditionalData?.Remove("attrs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attrs"); else _explicitNullProperties?.Remove("attrs"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDtoDndAttrsProperty _explicitNullValueAttrs = default!;
 #endif
         /// <summary>The elements property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Elements { get => _explicitNullValueElements; set { _explicitNullValueElements = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("elements"); else _explicitNullProperties?.Remove("elements"); } }
+        public List<string>? Elements { get => _explicitNullValueElements; set { _explicitNullValueElements = value; AdditionalData?.Remove("elements"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("elements"); else _explicitNullProperties?.Remove("elements"); } }
         private List<string>? _explicitNullValueElements = default!;
 #nullable restore
 #else
-        public List<string> Elements { get => _explicitNullValueElements; set { _explicitNullValueElements = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("elements"); else _explicitNullProperties?.Remove("elements"); } }
+        public List<string> Elements { get => _explicitNullValueElements; set { _explicitNullValueElements = value; AdditionalData?.Remove("elements"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("elements"); else _explicitNullProperties?.Remove("elements"); } }
         private List<string> _explicitNullValueElements = default!;
 #endif
         /// <summary>The templateSettings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDtoDndTemplateSettingsProperty? TemplateSettings { get => _explicitNullValueTemplateSettings; set { _explicitNullValueTemplateSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("templateSettings"); else _explicitNullProperties?.Remove("templateSettings"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDtoDndTemplateSettingsProperty? TemplateSettings { get => _explicitNullValueTemplateSettings; set { _explicitNullValueTemplateSettings = value; AdditionalData?.Remove("templateSettings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("templateSettings"); else _explicitNullProperties?.Remove("templateSettings"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDtoDndTemplateSettingsProperty? _explicitNullValueTemplateSettings = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDtoDndTemplateSettingsProperty TemplateSettings { get => _explicitNullValueTemplateSettings; set { _explicitNullValueTemplateSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("templateSettings"); else _explicitNullProperties?.Remove("templateSettings"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDtoDndTemplateSettingsProperty TemplateSettings { get => _explicitNullValueTemplateSettings; set { _explicitNullValueTemplateSettings = value; AdditionalData?.Remove("templateSettings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("templateSettings"); else _explicitNullProperties?.Remove("templateSettings"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDtoDndTemplateSettingsProperty _explicitNullValueTemplateSettings = default!;
 #endif
         /// <summary>

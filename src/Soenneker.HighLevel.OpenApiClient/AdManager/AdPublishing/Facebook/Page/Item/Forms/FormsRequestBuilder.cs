@@ -106,7 +106,7 @@ namespace Soenneker.HighLevel.OpenApiClient.AdManager.AdPublishing.Facebook.Page
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.AdManager.AdPublishing.Facebook.Page.Item.Forms.FormsRequestBuilder.FormsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/ad-manager/ad-publishing/facebook/page/{pageId}/forms?locationId={locationId}", PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve("{+baseurl}/ad-manager/ad-publishing/facebook/page/{pageId}/forms?locationId={locationId}", RequestAdapter.BaseUrl, "https://services.leadconnectorhq.com", "/ad-manager/ad-publishing/facebook/page/{pageId}/forms", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -127,7 +127,7 @@ namespace Soenneker.HighLevel.OpenApiClient.AdManager.AdPublishing.Facebook.Page
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://services.leadconnectorhq.com", "/ad-manager/ad-publishing/facebook/page/{pageId}/forms", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);

@@ -17,9 +17,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("messageBody") is { } nullNodeMessageBody && nullNodeMessageBody.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessageBody = null;
-            if (parseNode.GetChildNode("triggerMessage") is { } nullNodeTriggerMessage && nullNodeTriggerMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TriggerMessage = null;
-            if (parseNode.GetChildNode("triggerPrompt") is { } nullNodeTriggerPrompt && nullNodeTriggerPrompt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TriggerPrompt = null;
+            if (parseNode.GetChildNode("messageBody") is null) { _explicitNullValueMessageBody = default!; _explicitNullProperties?.Remove("messageBody"); }
+            else if (parseNode.GetChildNode("messageBody") is { } nullNodeMessageBody && nullNodeMessageBody.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessageBody = null;
+            if (parseNode.GetChildNode("triggerMessage") is null) { _explicitNullValueTriggerMessage = default!; _explicitNullProperties?.Remove("triggerMessage"); }
+            else if (parseNode.GetChildNode("triggerMessage") is { } nullNodeTriggerMessage && nullNodeTriggerMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TriggerMessage = null;
+            if (parseNode.GetChildNode("triggerPrompt") is null) { _explicitNullValueTriggerPrompt = default!; _explicitNullProperties?.Remove("triggerPrompt"); }
+            else if (parseNode.GetChildNode("triggerPrompt") is { } nullNodeTriggerPrompt && nullNodeTriggerPrompt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TriggerPrompt = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>SMS message content to send</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MessageBody { get => _explicitNullValueMessageBody; set { _explicitNullValueMessageBody = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messageBody"); else _explicitNullProperties?.Remove("messageBody"); } }
+        public string? MessageBody { get => _explicitNullValueMessageBody; set { _explicitNullValueMessageBody = value; AdditionalData?.Remove("messageBody"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messageBody"); else _explicitNullProperties?.Remove("messageBody"); } }
         private string? _explicitNullValueMessageBody = default!;
 #nullable restore
 #else
-        public string MessageBody { get => _explicitNullValueMessageBody; set { _explicitNullValueMessageBody = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messageBody"); else _explicitNullProperties?.Remove("messageBody"); } }
+        public string MessageBody { get => _explicitNullValueMessageBody; set { _explicitNullValueMessageBody = value; AdditionalData?.Remove("messageBody"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("messageBody"); else _explicitNullProperties?.Remove("messageBody"); } }
         private string _explicitNullValueMessageBody = default!;
 #endif
         /// <summary>Message to tell the caller</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TriggerMessage { get => _explicitNullValueTriggerMessage; set { _explicitNullValueTriggerMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggerMessage"); else _explicitNullProperties?.Remove("triggerMessage"); } }
+        public string? TriggerMessage { get => _explicitNullValueTriggerMessage; set { _explicitNullValueTriggerMessage = value; AdditionalData?.Remove("triggerMessage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggerMessage"); else _explicitNullProperties?.Remove("triggerMessage"); } }
         private string? _explicitNullValueTriggerMessage = default!;
 #nullable restore
 #else
-        public string TriggerMessage { get => _explicitNullValueTriggerMessage; set { _explicitNullValueTriggerMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggerMessage"); else _explicitNullProperties?.Remove("triggerMessage"); } }
+        public string TriggerMessage { get => _explicitNullValueTriggerMessage; set { _explicitNullValueTriggerMessage = value; AdditionalData?.Remove("triggerMessage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggerMessage"); else _explicitNullProperties?.Remove("triggerMessage"); } }
         private string _explicitNullValueTriggerMessage = default!;
 #endif
         /// <summary>When to send the SMS</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TriggerPrompt { get => _explicitNullValueTriggerPrompt; set { _explicitNullValueTriggerPrompt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggerPrompt"); else _explicitNullProperties?.Remove("triggerPrompt"); } }
+        public string? TriggerPrompt { get => _explicitNullValueTriggerPrompt; set { _explicitNullValueTriggerPrompt = value; AdditionalData?.Remove("triggerPrompt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggerPrompt"); else _explicitNullProperties?.Remove("triggerPrompt"); } }
         private string? _explicitNullValueTriggerPrompt = default!;
 #nullable restore
 #else
-        public string TriggerPrompt { get => _explicitNullValueTriggerPrompt; set { _explicitNullValueTriggerPrompt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggerPrompt"); else _explicitNullProperties?.Remove("triggerPrompt"); } }
+        public string TriggerPrompt { get => _explicitNullValueTriggerPrompt; set { _explicitNullValueTriggerPrompt = value; AdditionalData?.Remove("triggerPrompt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggerPrompt"); else _explicitNullProperties?.Remove("triggerPrompt"); } }
         private string _explicitNullValueTriggerPrompt = default!;
 #endif
         /// <summary>

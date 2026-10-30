@@ -17,23 +17,25 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("dayOfTheWeek") is { } nullNodeDayOfTheWeek && nullNodeDayOfTheWeek.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DayOfTheWeek = null;
-            if (parseNode.GetChildNode("intervals") is { } nullNodeIntervals && nullNodeIntervals.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Intervals = null;
+            if (parseNode.GetChildNode("dayOfTheWeek") is null) { _explicitNullValueDayOfTheWeek = default!; _explicitNullProperties?.Remove("dayOfTheWeek"); }
+            else if (parseNode.GetChildNode("dayOfTheWeek") is { } nullNodeDayOfTheWeek && nullNodeDayOfTheWeek.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DayOfTheWeek = null;
+            if (parseNode.GetChildNode("intervals") is null) { _explicitNullValueIntervals = default!; _explicitNullProperties?.Remove("intervals"); }
+            else if (parseNode.GetChildNode("intervals") is { } nullNodeIntervals && nullNodeIntervals.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Intervals = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Day of the week for this working hours configuration (Monday=1 to Sunday=7)</summary>
-        public double? DayOfTheWeek { get => _explicitNullValueDayOfTheWeek; set { _explicitNullValueDayOfTheWeek = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dayOfTheWeek"); else _explicitNullProperties?.Remove("dayOfTheWeek"); } }
+        public double? DayOfTheWeek { get => _explicitNullValueDayOfTheWeek; set { _explicitNullValueDayOfTheWeek = value; AdditionalData?.Remove("dayOfTheWeek"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dayOfTheWeek"); else _explicitNullProperties?.Remove("dayOfTheWeek"); } }
         private double? _explicitNullValueDayOfTheWeek = default!;
         /// <summary>Array of time intervals when the agent is available on this day</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.IntervalDto>? Intervals { get => _explicitNullValueIntervals; set { _explicitNullValueIntervals = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intervals"); else _explicitNullProperties?.Remove("intervals"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.IntervalDto>? Intervals { get => _explicitNullValueIntervals; set { _explicitNullValueIntervals = value; AdditionalData?.Remove("intervals"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intervals"); else _explicitNullProperties?.Remove("intervals"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.IntervalDto>? _explicitNullValueIntervals = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.IntervalDto> Intervals { get => _explicitNullValueIntervals; set { _explicitNullValueIntervals = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intervals"); else _explicitNullProperties?.Remove("intervals"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.IntervalDto> Intervals { get => _explicitNullValueIntervals; set { _explicitNullValueIntervals = value; AdditionalData?.Remove("intervals"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intervals"); else _explicitNullProperties?.Remove("intervals"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.IntervalDto> _explicitNullValueIntervals = default!;
 #endif
         /// <summary>

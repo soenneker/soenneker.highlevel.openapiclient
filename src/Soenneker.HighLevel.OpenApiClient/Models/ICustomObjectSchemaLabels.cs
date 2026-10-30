@@ -18,8 +18,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("plural") is { } nullNodePlural && nullNodePlural.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Plural = null;
-            if (parseNode.GetChildNode("singular") is { } nullNodeSingular && nullNodeSingular.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Singular = null;
+            if (parseNode.GetChildNode("plural") is null) { _explicitNullValuePlural = default!; _explicitNullProperties?.Remove("plural"); }
+            else if (parseNode.GetChildNode("plural") is { } nullNodePlural && nullNodePlural.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Plural = null;
+            if (parseNode.GetChildNode("singular") is null) { _explicitNullValueSingular = default!; _explicitNullProperties?.Remove("singular"); }
+            else if (parseNode.GetChildNode("singular") is { } nullNodeSingular && nullNodeSingular.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Singular = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Plural name of the custom object</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Plural { get => _explicitNullValuePlural; set { _explicitNullValuePlural = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plural"); else _explicitNullProperties?.Remove("plural"); } }
+        public string? Plural { get => _explicitNullValuePlural; set { _explicitNullValuePlural = value; AdditionalData?.Remove("plural"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plural"); else _explicitNullProperties?.Remove("plural"); } }
         private string? _explicitNullValuePlural = default!;
 #nullable restore
 #else
-        public string Plural { get => _explicitNullValuePlural; set { _explicitNullValuePlural = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plural"); else _explicitNullProperties?.Remove("plural"); } }
+        public string Plural { get => _explicitNullValuePlural; set { _explicitNullValuePlural = value; AdditionalData?.Remove("plural"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plural"); else _explicitNullProperties?.Remove("plural"); } }
         private string _explicitNullValuePlural = default!;
 #endif
         /// <summary>Singular name of the custom object</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Singular { get => _explicitNullValueSingular; set { _explicitNullValueSingular = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("singular"); else _explicitNullProperties?.Remove("singular"); } }
+        public string? Singular { get => _explicitNullValueSingular; set { _explicitNullValueSingular = value; AdditionalData?.Remove("singular"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("singular"); else _explicitNullProperties?.Remove("singular"); } }
         private string? _explicitNullValueSingular = default!;
 #nullable restore
 #else
-        public string Singular { get => _explicitNullValueSingular; set { _explicitNullValueSingular = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("singular"); else _explicitNullProperties?.Remove("singular"); } }
+        public string Singular { get => _explicitNullValueSingular; set { _explicitNullValueSingular = value; AdditionalData?.Remove("singular"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("singular"); else _explicitNullProperties?.Remove("singular"); } }
         private string _explicitNullValueSingular = default!;
 #endif
         /// <summary>

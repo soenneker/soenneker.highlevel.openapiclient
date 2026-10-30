@@ -76,7 +76,7 @@ namespace Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Item.Accounts.Ite
         public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.SocialMediaPosting.Item.Accounts.Item.AccountsItemRequestBuilder.AccountsItemRequestBuilderDeleteQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.DELETE, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://services.leadconnectorhq.com", "/social-media-posting/{locationId}/accounts/{id}", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

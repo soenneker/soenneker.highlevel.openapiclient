@@ -17,18 +17,30 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("assignedTo") is { } nullNodeAssignedTo && nullNodeAssignedTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssignedTo = null;
-            if (parseNode.GetChildNode("followers") is { } nullNodeFollowers && nullNodeFollowers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Followers = null;
-            if (parseNode.GetChildNode("followersActionType") is { } nullNodeFollowersActionType && nullNodeFollowersActionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FollowersActionType = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("isRemoveAllFollowers") is { } nullNodeIsRemoveAllFollowers && nullNodeIsRemoveAllFollowers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsRemoveAllFollowers = null;
-            if (parseNode.GetChildNode("locationId") is { } nullNodeLocationId && nullNodeLocationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationId = null;
-            if (parseNode.GetChildNode("lostReasonId") is { } nullNodeLostReasonId && nullNodeLostReasonId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LostReasonId = null;
-            if (parseNode.GetChildNode("monetaryValue") is { } nullNodeMonetaryValue && nullNodeMonetaryValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonetaryValue = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("pipelineId") is { } nullNodePipelineId && nullNodePipelineId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PipelineId = null;
-            if (parseNode.GetChildNode("pipelineStageId") is { } nullNodePipelineStageId && nullNodePipelineStageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PipelineStageId = null;
-            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("assignedTo") is null) { _explicitNullValueAssignedTo = default!; _explicitNullProperties?.Remove("assignedTo"); }
+            else if (parseNode.GetChildNode("assignedTo") is { } nullNodeAssignedTo && nullNodeAssignedTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssignedTo = null;
+            if (parseNode.GetChildNode("followers") is null) { _explicitNullValueFollowers = default!; _explicitNullProperties?.Remove("followers"); }
+            else if (parseNode.GetChildNode("followers") is { } nullNodeFollowers && nullNodeFollowers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Followers = null;
+            if (parseNode.GetChildNode("followersActionType") is null) { _explicitNullValueFollowersActionType = default!; _explicitNullProperties?.Remove("followersActionType"); }
+            else if (parseNode.GetChildNode("followersActionType") is { } nullNodeFollowersActionType && nullNodeFollowersActionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FollowersActionType = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("isRemoveAllFollowers") is null) { _explicitNullValueIsRemoveAllFollowers = default!; _explicitNullProperties?.Remove("isRemoveAllFollowers"); }
+            else if (parseNode.GetChildNode("isRemoveAllFollowers") is { } nullNodeIsRemoveAllFollowers && nullNodeIsRemoveAllFollowers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsRemoveAllFollowers = null;
+            if (parseNode.GetChildNode("locationId") is null) { _explicitNullValueLocationId = default!; _explicitNullProperties?.Remove("locationId"); }
+            else if (parseNode.GetChildNode("locationId") is { } nullNodeLocationId && nullNodeLocationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationId = null;
+            if (parseNode.GetChildNode("lostReasonId") is null) { _explicitNullValueLostReasonId = default!; _explicitNullProperties?.Remove("lostReasonId"); }
+            else if (parseNode.GetChildNode("lostReasonId") is { } nullNodeLostReasonId && nullNodeLostReasonId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LostReasonId = null;
+            if (parseNode.GetChildNode("monetaryValue") is null) { _explicitNullValueMonetaryValue = default!; _explicitNullProperties?.Remove("monetaryValue"); }
+            else if (parseNode.GetChildNode("monetaryValue") is { } nullNodeMonetaryValue && nullNodeMonetaryValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonetaryValue = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("pipelineId") is null) { _explicitNullValuePipelineId = default!; _explicitNullProperties?.Remove("pipelineId"); }
+            else if (parseNode.GetChildNode("pipelineId") is { } nullNodePipelineId && nullNodePipelineId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PipelineId = null;
+            if (parseNode.GetChildNode("pipelineStageId") is null) { _explicitNullValuePipelineStageId = default!; _explicitNullProperties?.Remove("pipelineStageId"); }
+            else if (parseNode.GetChildNode("pipelineStageId") is { } nullNodePipelineStageId && nullNodePipelineStageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PipelineStageId = null;
+            if (parseNode.GetChildNode("status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("status"); }
+            else if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -36,101 +48,101 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The assignedTo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AssignedTo { get => _explicitNullValueAssignedTo; set { _explicitNullValueAssignedTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assignedTo"); else _explicitNullProperties?.Remove("assignedTo"); } }
+        public string? AssignedTo { get => _explicitNullValueAssignedTo; set { _explicitNullValueAssignedTo = value; AdditionalData?.Remove("assignedTo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assignedTo"); else _explicitNullProperties?.Remove("assignedTo"); } }
         private string? _explicitNullValueAssignedTo = default!;
 #nullable restore
 #else
-        public string AssignedTo { get => _explicitNullValueAssignedTo; set { _explicitNullValueAssignedTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assignedTo"); else _explicitNullProperties?.Remove("assignedTo"); } }
+        public string AssignedTo { get => _explicitNullValueAssignedTo; set { _explicitNullValueAssignedTo = value; AdditionalData?.Remove("assignedTo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assignedTo"); else _explicitNullProperties?.Remove("assignedTo"); } }
         private string _explicitNullValueAssignedTo = default!;
 #endif
         /// <summary>contactId</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Followers { get => _explicitNullValueFollowers; set { _explicitNullValueFollowers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("followers"); else _explicitNullProperties?.Remove("followers"); } }
+        public List<string>? Followers { get => _explicitNullValueFollowers; set { _explicitNullValueFollowers = value; AdditionalData?.Remove("followers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("followers"); else _explicitNullProperties?.Remove("followers"); } }
         private List<string>? _explicitNullValueFollowers = default!;
 #nullable restore
 #else
-        public List<string> Followers { get => _explicitNullValueFollowers; set { _explicitNullValueFollowers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("followers"); else _explicitNullProperties?.Remove("followers"); } }
+        public List<string> Followers { get => _explicitNullValueFollowers; set { _explicitNullValueFollowers = value; AdditionalData?.Remove("followers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("followers"); else _explicitNullProperties?.Remove("followers"); } }
         private List<string> _explicitNullValueFollowers = default!;
 #endif
         /// <summary>followers action type</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunityDtoFollowersActionType? FollowersActionType { get => _explicitNullValueFollowersActionType; set { _explicitNullValueFollowersActionType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("followersActionType"); else _explicitNullProperties?.Remove("followersActionType"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunityDtoFollowersActionType? FollowersActionType { get => _explicitNullValueFollowersActionType; set { _explicitNullValueFollowersActionType = value; AdditionalData?.Remove("followersActionType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("followersActionType"); else _explicitNullProperties?.Remove("followersActionType"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunityDtoFollowersActionType? _explicitNullValueFollowersActionType = default!;
         /// <summary>opportunityId</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>isRemoveAllFollowers</summary>
-        public bool? IsRemoveAllFollowers { get => _explicitNullValueIsRemoveAllFollowers; set { _explicitNullValueIsRemoveAllFollowers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isRemoveAllFollowers"); else _explicitNullProperties?.Remove("isRemoveAllFollowers"); } }
+        public bool? IsRemoveAllFollowers { get => _explicitNullValueIsRemoveAllFollowers; set { _explicitNullValueIsRemoveAllFollowers = value; AdditionalData?.Remove("isRemoveAllFollowers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isRemoveAllFollowers"); else _explicitNullProperties?.Remove("isRemoveAllFollowers"); } }
         private bool? _explicitNullValueIsRemoveAllFollowers = default!;
         /// <summary>locationId</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
+        public string? LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; AdditionalData?.Remove("locationId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
         private string? _explicitNullValueLocationId = default!;
 #nullable restore
 #else
-        public string LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
+        public string LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; AdditionalData?.Remove("locationId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
         private string _explicitNullValueLocationId = default!;
 #endif
         /// <summary>lost reason Id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LostReasonId { get => _explicitNullValueLostReasonId; set { _explicitNullValueLostReasonId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lostReasonId"); else _explicitNullProperties?.Remove("lostReasonId"); } }
+        public string? LostReasonId { get => _explicitNullValueLostReasonId; set { _explicitNullValueLostReasonId = value; AdditionalData?.Remove("lostReasonId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lostReasonId"); else _explicitNullProperties?.Remove("lostReasonId"); } }
         private string? _explicitNullValueLostReasonId = default!;
 #nullable restore
 #else
-        public string LostReasonId { get => _explicitNullValueLostReasonId; set { _explicitNullValueLostReasonId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lostReasonId"); else _explicitNullProperties?.Remove("lostReasonId"); } }
+        public string LostReasonId { get => _explicitNullValueLostReasonId; set { _explicitNullValueLostReasonId = value; AdditionalData?.Remove("lostReasonId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lostReasonId"); else _explicitNullProperties?.Remove("lostReasonId"); } }
         private string _explicitNullValueLostReasonId = default!;
 #endif
         /// <summary>The monetaryValue property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunityDtoMonetaryValueProperty? MonetaryValue { get => _explicitNullValueMonetaryValue; set { _explicitNullValueMonetaryValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("monetaryValue"); else _explicitNullProperties?.Remove("monetaryValue"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunityDtoMonetaryValueProperty? _explicitNullValueMonetaryValue = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunityDtoMonetaryValue? MonetaryValue { get => _explicitNullValueMonetaryValue; set { _explicitNullValueMonetaryValue = value; AdditionalData?.Remove("monetaryValue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("monetaryValue"); else _explicitNullProperties?.Remove("monetaryValue"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunityDtoMonetaryValue? _explicitNullValueMonetaryValue = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunityDtoMonetaryValueProperty MonetaryValue { get => _explicitNullValueMonetaryValue; set { _explicitNullValueMonetaryValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("monetaryValue"); else _explicitNullProperties?.Remove("monetaryValue"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunityDtoMonetaryValueProperty _explicitNullValueMonetaryValue = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunityDtoMonetaryValue MonetaryValue { get => _explicitNullValueMonetaryValue; set { _explicitNullValueMonetaryValue = value; AdditionalData?.Remove("monetaryValue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("monetaryValue"); else _explicitNullProperties?.Remove("monetaryValue"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunityDtoMonetaryValue _explicitNullValueMonetaryValue = default!;
 #endif
         /// <summary>name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>pipeline Id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PipelineId { get => _explicitNullValuePipelineId; set { _explicitNullValuePipelineId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipelineId"); else _explicitNullProperties?.Remove("pipelineId"); } }
+        public string? PipelineId { get => _explicitNullValuePipelineId; set { _explicitNullValuePipelineId = value; AdditionalData?.Remove("pipelineId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipelineId"); else _explicitNullProperties?.Remove("pipelineId"); } }
         private string? _explicitNullValuePipelineId = default!;
 #nullable restore
 #else
-        public string PipelineId { get => _explicitNullValuePipelineId; set { _explicitNullValuePipelineId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipelineId"); else _explicitNullProperties?.Remove("pipelineId"); } }
+        public string PipelineId { get => _explicitNullValuePipelineId; set { _explicitNullValuePipelineId = value; AdditionalData?.Remove("pipelineId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipelineId"); else _explicitNullProperties?.Remove("pipelineId"); } }
         private string _explicitNullValuePipelineId = default!;
 #endif
         /// <summary>The pipelineStageId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PipelineStageId { get => _explicitNullValuePipelineStageId; set { _explicitNullValuePipelineStageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipelineStageId"); else _explicitNullProperties?.Remove("pipelineStageId"); } }
+        public string? PipelineStageId { get => _explicitNullValuePipelineStageId; set { _explicitNullValuePipelineStageId = value; AdditionalData?.Remove("pipelineStageId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipelineStageId"); else _explicitNullProperties?.Remove("pipelineStageId"); } }
         private string? _explicitNullValuePipelineStageId = default!;
 #nullable restore
 #else
-        public string PipelineStageId { get => _explicitNullValuePipelineStageId; set { _explicitNullValuePipelineStageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipelineStageId"); else _explicitNullProperties?.Remove("pipelineStageId"); } }
+        public string PipelineStageId { get => _explicitNullValuePipelineStageId; set { _explicitNullValuePipelineStageId = value; AdditionalData?.Remove("pipelineStageId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipelineStageId"); else _explicitNullProperties?.Remove("pipelineStageId"); } }
         private string _explicitNullValuePipelineStageId = default!;
 #endif
         /// <summary>The status property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunityDtoStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunityDtoStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunityDtoStatus? _explicitNullValueStatus = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunityDto"/> and sets the default values.
@@ -159,16 +171,16 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             {
                 { "assignedTo", n => { AssignedTo = n.GetStringValue(); } },
                 { "followers", n => { Followers = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "followersActionType", n => { FollowersActionType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunityDtoFollowersActionType>(); } },
+                { "followersActionType", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunityDtoFollowersActionType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueFollowersActionType = default; _explicitNullProperties?.Remove("followersActionType"); AdditionalData["followersActionType"] = unknown; } else { FollowersActionType = parsed; AdditionalData.Remove("followersActionType"); } } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "isRemoveAllFollowers", n => { IsRemoveAllFollowers = n.GetBoolValue(); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
                 { "lostReasonId", n => { LostReasonId = n.GetStringValue(); } },
-                { "monetaryValue", n => { MonetaryValue = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunityDtoMonetaryValueProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunityDtoMonetaryValueProperty.CreateFromDiscriminatorValue); } },
+                { "monetaryValue", n => { MonetaryValue = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunityDtoMonetaryValue>(global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunityDtoMonetaryValue.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "pipelineId", n => { PipelineId = n.GetStringValue(); } },
                 { "pipelineStageId", n => { PipelineStageId = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunityDtoStatus>(); } },
+                { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunityDtoStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
             };
         }
         /// <summary>
@@ -185,7 +197,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteBoolValue("isRemoveAllFollowers", IsRemoveAllFollowers);
             writer.WriteStringValue("locationId", LocationId);
             writer.WriteStringValue("lostReasonId", LostReasonId);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunityDtoMonetaryValueProperty>("monetaryValue", MonetaryValue);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunityDtoMonetaryValue>("monetaryValue", MonetaryValue);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("pipelineId", PipelineId);
             writer.WriteStringValue("pipelineStageId", PipelineStageId);

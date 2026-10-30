@@ -17,10 +17,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("facetUrn") is { } nullNodeFacetUrn && nullNodeFacetUrn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FacetUrn = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("selectionType") is { } nullNodeSelectionType && nullNodeSelectionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SelectionType = null;
-            if (parseNode.GetChildNode("urn") is { } nullNodeUrn && nullNodeUrn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Urn = null;
+            if (parseNode.GetChildNode("facetUrn") is null) { _explicitNullValueFacetUrn = default!; _explicitNullProperties?.Remove("facetUrn"); }
+            else if (parseNode.GetChildNode("facetUrn") is { } nullNodeFacetUrn && nullNodeFacetUrn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FacetUrn = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("selectionType") is null) { _explicitNullValueSelectionType = default!; _explicitNullProperties?.Remove("selectionType"); }
+            else if (parseNode.GetChildNode("selectionType") is { } nullNodeSelectionType && nullNodeSelectionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SelectionType = null;
+            if (parseNode.GetChildNode("urn") is null) { _explicitNullValueUrn = default!; _explicitNullProperties?.Remove("urn"); }
+            else if (parseNode.GetChildNode("urn") is { } nullNodeUrn && nullNodeUrn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Urn = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,34 +32,34 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Facet URN</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FacetUrn { get => _explicitNullValueFacetUrn; set { _explicitNullValueFacetUrn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("facetUrn"); else _explicitNullProperties?.Remove("facetUrn"); } }
+        public string? FacetUrn { get => _explicitNullValueFacetUrn; set { _explicitNullValueFacetUrn = value; AdditionalData?.Remove("facetUrn"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("facetUrn"); else _explicitNullProperties?.Remove("facetUrn"); } }
         private string? _explicitNullValueFacetUrn = default!;
 #nullable restore
 #else
-        public string FacetUrn { get => _explicitNullValueFacetUrn; set { _explicitNullValueFacetUrn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("facetUrn"); else _explicitNullProperties?.Remove("facetUrn"); } }
+        public string FacetUrn { get => _explicitNullValueFacetUrn; set { _explicitNullValueFacetUrn = value; AdditionalData?.Remove("facetUrn"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("facetUrn"); else _explicitNullProperties?.Remove("facetUrn"); } }
         private string _explicitNullValueFacetUrn = default!;
 #endif
         /// <summary>Location display name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>Selection type</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GeoLocationDtoSelectionType? SelectionType { get => _explicitNullValueSelectionType; set { _explicitNullValueSelectionType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selectionType"); else _explicitNullProperties?.Remove("selectionType"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GeoLocationDtoSelectionType? SelectionType { get => _explicitNullValueSelectionType; set { _explicitNullValueSelectionType = value; AdditionalData?.Remove("selectionType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selectionType"); else _explicitNullProperties?.Remove("selectionType"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.GeoLocationDtoSelectionType? _explicitNullValueSelectionType = default!;
         /// <summary>Location URN</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Urn { get => _explicitNullValueUrn; set { _explicitNullValueUrn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("urn"); else _explicitNullProperties?.Remove("urn"); } }
+        public string? Urn { get => _explicitNullValueUrn; set { _explicitNullValueUrn = value; AdditionalData?.Remove("urn"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("urn"); else _explicitNullProperties?.Remove("urn"); } }
         private string? _explicitNullValueUrn = default!;
 #nullable restore
 #else
-        public string Urn { get => _explicitNullValueUrn; set { _explicitNullValueUrn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("urn"); else _explicitNullProperties?.Remove("urn"); } }
+        public string Urn { get => _explicitNullValueUrn; set { _explicitNullValueUrn = value; AdditionalData?.Remove("urn"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("urn"); else _explicitNullProperties?.Remove("urn"); } }
         private string _explicitNullValueUrn = default!;
 #endif
         /// <summary>
@@ -85,7 +89,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             {
                 { "facetUrn", n => { FacetUrn = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "selectionType", n => { SelectionType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GeoLocationDtoSelectionType>(); } },
+                { "selectionType", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GeoLocationDtoSelectionType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueSelectionType = default; _explicitNullProperties?.Remove("selectionType"); AdditionalData["selectionType"] = unknown; } else { SelectionType = parsed; AdditionalData.Remove("selectionType"); } } },
                 { "urn", n => { Urn = n.GetStringValue(); } },
             };
         }

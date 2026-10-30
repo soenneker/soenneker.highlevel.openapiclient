@@ -17,11 +17,16 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("address") is { } nullNodeAddress && nullNodeAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Address = null;
-            if (parseNode.GetChildNode("leadconnectorRecomendation") is { } nullNodeLeadconnectorRecomendation && nullNodeLeadconnectorRecomendation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LeadconnectorRecomendation = null;
-            if (parseNode.GetChildNode("reason") is { } nullNodeReason && nullNodeReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reason = null;
-            if (parseNode.GetChildNode("result") is { } nullNodeResult && nullNodeResult.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Result = null;
-            if (parseNode.GetChildNode("risk") is { } nullNodeRisk && nullNodeRisk.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Risk = null;
+            if (parseNode.GetChildNode("address") is null) { _explicitNullValueAddress = default!; _explicitNullProperties?.Remove("address"); }
+            else if (parseNode.GetChildNode("address") is { } nullNodeAddress && nullNodeAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Address = null;
+            if (parseNode.GetChildNode("leadconnectorRecomendation") is null) { _explicitNullValueLeadconnectorRecomendation = default!; _explicitNullProperties?.Remove("leadconnectorRecomendation"); }
+            else if (parseNode.GetChildNode("leadconnectorRecomendation") is { } nullNodeLeadconnectorRecomendation && nullNodeLeadconnectorRecomendation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LeadconnectorRecomendation = null;
+            if (parseNode.GetChildNode("reason") is null) { _explicitNullValueReason = default!; _explicitNullProperties?.Remove("reason"); }
+            else if (parseNode.GetChildNode("reason") is { } nullNodeReason && nullNodeReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reason = null;
+            if (parseNode.GetChildNode("result") is null) { _explicitNullValueResult = default!; _explicitNullProperties?.Remove("result"); }
+            else if (parseNode.GetChildNode("result") is { } nullNodeResult && nullNodeResult.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Result = null;
+            if (parseNode.GetChildNode("risk") is null) { _explicitNullValueRisk = default!; _explicitNullProperties?.Remove("risk"); }
+            else if (parseNode.GetChildNode("risk") is { } nullNodeRisk && nullNodeRisk.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Risk = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,38 +34,38 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Email address</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
+        public string? Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; AdditionalData?.Remove("address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
         private string? _explicitNullValueAddress = default!;
 #nullable restore
 #else
-        public string Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
+        public string Address { get => _explicitNullValueAddress; set { _explicitNullValueAddress = value; AdditionalData?.Remove("address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address"); else _explicitNullProperties?.Remove("address"); } }
         private string _explicitNullValueAddress = default!;
 #endif
         /// <summary>Lead Connector email verification recomendation</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.EmailVerifiedResponseDtoLeadconnectorRecomendation? LeadconnectorRecomendation { get => _explicitNullValueLeadconnectorRecomendation; set { _explicitNullValueLeadconnectorRecomendation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("leadconnectorRecomendation"); else _explicitNullProperties?.Remove("leadconnectorRecomendation"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.EmailVerifiedResponseDtoLeadconnectorRecomendation? LeadconnectorRecomendation { get => _explicitNullValueLeadconnectorRecomendation; set { _explicitNullValueLeadconnectorRecomendation = value; AdditionalData?.Remove("leadconnectorRecomendation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("leadconnectorRecomendation"); else _explicitNullProperties?.Remove("leadconnectorRecomendation"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.EmailVerifiedResponseDtoLeadconnectorRecomendation? _explicitNullValueLeadconnectorRecomendation = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.EmailVerifiedResponseDtoLeadconnectorRecomendation LeadconnectorRecomendation { get => _explicitNullValueLeadconnectorRecomendation; set { _explicitNullValueLeadconnectorRecomendation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("leadconnectorRecomendation"); else _explicitNullProperties?.Remove("leadconnectorRecomendation"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.EmailVerifiedResponseDtoLeadconnectorRecomendation LeadconnectorRecomendation { get => _explicitNullValueLeadconnectorRecomendation; set { _explicitNullValueLeadconnectorRecomendation = value; AdditionalData?.Remove("leadconnectorRecomendation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("leadconnectorRecomendation"); else _explicitNullProperties?.Remove("leadconnectorRecomendation"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.EmailVerifiedResponseDtoLeadconnectorRecomendation _explicitNullValueLeadconnectorRecomendation = default!;
 #endif
         /// <summary>Reason for email verification failure</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Reason { get => _explicitNullValueReason; set { _explicitNullValueReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reason"); else _explicitNullProperties?.Remove("reason"); } }
+        public List<string>? Reason { get => _explicitNullValueReason; set { _explicitNullValueReason = value; AdditionalData?.Remove("reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reason"); else _explicitNullProperties?.Remove("reason"); } }
         private List<string>? _explicitNullValueReason = default!;
 #nullable restore
 #else
-        public List<string> Reason { get => _explicitNullValueReason; set { _explicitNullValueReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reason"); else _explicitNullProperties?.Remove("reason"); } }
+        public List<string> Reason { get => _explicitNullValueReason; set { _explicitNullValueReason = value; AdditionalData?.Remove("reason"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reason"); else _explicitNullProperties?.Remove("reason"); } }
         private List<string> _explicitNullValueReason = default!;
 #endif
         /// <summary>Email verification result</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.EmailVerifiedResponseDtoResult? Result { get => _explicitNullValueResult; set { _explicitNullValueResult = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("result"); else _explicitNullProperties?.Remove("result"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.EmailVerifiedResponseDtoResult? Result { get => _explicitNullValueResult; set { _explicitNullValueResult = value; AdditionalData?.Remove("result"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("result"); else _explicitNullProperties?.Remove("result"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.EmailVerifiedResponseDtoResult? _explicitNullValueResult = default!;
         /// <summary>Risk level of email sending to bounce</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.EmailVerifiedResponseDtoRisk? Risk { get => _explicitNullValueRisk; set { _explicitNullValueRisk = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("risk"); else _explicitNullProperties?.Remove("risk"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.EmailVerifiedResponseDtoRisk? Risk { get => _explicitNullValueRisk; set { _explicitNullValueRisk = value; AdditionalData?.Remove("risk"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("risk"); else _explicitNullProperties?.Remove("risk"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.EmailVerifiedResponseDtoRisk? _explicitNullValueRisk = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.EmailVerifiedResponseDto"/> and sets the default values.
@@ -90,8 +95,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "address", n => { Address = n.GetStringValue(); } },
                 { "leadconnectorRecomendation", n => { LeadconnectorRecomendation = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EmailVerifiedResponseDtoLeadconnectorRecomendation>(global::Soenneker.HighLevel.OpenApiClient.Models.EmailVerifiedResponseDtoLeadconnectorRecomendation.CreateFromDiscriminatorValue); } },
                 { "reason", n => { Reason = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "result", n => { Result = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.EmailVerifiedResponseDtoResult>(); } },
-                { "risk", n => { Risk = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.EmailVerifiedResponseDtoRisk>(); } },
+                { "result", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.EmailVerifiedResponseDtoResult>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueResult = default; _explicitNullProperties?.Remove("result"); AdditionalData["result"] = unknown; } else { Result = parsed; AdditionalData.Remove("result"); } } },
+                { "risk", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.EmailVerifiedResponseDtoRisk>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueRisk = default; _explicitNullProperties?.Remove("risk"); AdditionalData["risk"] = unknown; } else { Risk = parsed; AdditionalData.Remove("risk"); } } },
             };
         }
         /// <summary>

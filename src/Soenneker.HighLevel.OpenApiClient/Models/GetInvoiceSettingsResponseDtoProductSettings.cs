@@ -18,17 +18,19 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("descriptionOptional") is { } nullNodeDescriptionOptional && nullNodeDescriptionOptional.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DescriptionOptional = null;
-            if (parseNode.GetChildNode("enableImportProductDescription") is { } nullNodeEnableImportProductDescription && nullNodeEnableImportProductDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableImportProductDescription = null;
+            if (parseNode.GetChildNode("descriptionOptional") is null) { _explicitNullValueDescriptionOptional = default!; _explicitNullProperties?.Remove("descriptionOptional"); }
+            else if (parseNode.GetChildNode("descriptionOptional") is { } nullNodeDescriptionOptional && nullNodeDescriptionOptional.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DescriptionOptional = null;
+            if (parseNode.GetChildNode("enableImportProductDescription") is null) { _explicitNullValueEnableImportProductDescription = default!; _explicitNullProperties?.Remove("enableImportProductDescription"); }
+            else if (parseNode.GetChildNode("enableImportProductDescription") is { } nullNodeEnableImportProductDescription && nullNodeEnableImportProductDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableImportProductDescription = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Flag indicating if the product description is optional or not</summary>
-        public bool? DescriptionOptional { get => _explicitNullValueDescriptionOptional; set { _explicitNullValueDescriptionOptional = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("descriptionOptional"); else _explicitNullProperties?.Remove("descriptionOptional"); } }
+        public bool? DescriptionOptional { get => _explicitNullValueDescriptionOptional; set { _explicitNullValueDescriptionOptional = value; AdditionalData?.Remove("descriptionOptional"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("descriptionOptional"); else _explicitNullProperties?.Remove("descriptionOptional"); } }
         private bool? _explicitNullValueDescriptionOptional = default!;
         /// <summary>Flag indicating if the product description import is enabled or not</summary>
-        public bool? EnableImportProductDescription { get => _explicitNullValueEnableImportProductDescription; set { _explicitNullValueEnableImportProductDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enableImportProductDescription"); else _explicitNullProperties?.Remove("enableImportProductDescription"); } }
+        public bool? EnableImportProductDescription { get => _explicitNullValueEnableImportProductDescription; set { _explicitNullValueEnableImportProductDescription = value; AdditionalData?.Remove("enableImportProductDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enableImportProductDescription"); else _explicitNullProperties?.Remove("enableImportProductDescription"); } }
         private bool? _explicitNullValueEnableImportProductDescription = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GetInvoiceSettingsResponseDtoProductSettings"/> and sets the default values.

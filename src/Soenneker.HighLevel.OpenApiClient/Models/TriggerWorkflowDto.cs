@@ -17,9 +17,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("triggerCondition") is { } nullNodeTriggerCondition && nullNodeTriggerCondition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TriggerCondition = null;
-            if (parseNode.GetChildNode("triggerMessage") is { } nullNodeTriggerMessage && nullNodeTriggerMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TriggerMessage = null;
-            if (parseNode.GetChildNode("workflowIds") is { } nullNodeWorkflowIds && nullNodeWorkflowIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowIds = null;
+            if (parseNode.GetChildNode("triggerCondition") is null) { _explicitNullValueTriggerCondition = default!; _explicitNullProperties?.Remove("triggerCondition"); }
+            else if (parseNode.GetChildNode("triggerCondition") is { } nullNodeTriggerCondition && nullNodeTriggerCondition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TriggerCondition = null;
+            if (parseNode.GetChildNode("triggerMessage") is null) { _explicitNullValueTriggerMessage = default!; _explicitNullProperties?.Remove("triggerMessage"); }
+            else if (parseNode.GetChildNode("triggerMessage") is { } nullNodeTriggerMessage && nullNodeTriggerMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TriggerMessage = null;
+            if (parseNode.GetChildNode("workflowIds") is null) { _explicitNullValueWorkflowIds = default!; _explicitNullProperties?.Remove("workflowIds"); }
+            else if (parseNode.GetChildNode("workflowIds") is { } nullNodeWorkflowIds && nullNodeWorkflowIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowIds = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Condition that triggers the workflow</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TriggerCondition { get => _explicitNullValueTriggerCondition; set { _explicitNullValueTriggerCondition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggerCondition"); else _explicitNullProperties?.Remove("triggerCondition"); } }
+        public string? TriggerCondition { get => _explicitNullValueTriggerCondition; set { _explicitNullValueTriggerCondition = value; AdditionalData?.Remove("triggerCondition"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggerCondition"); else _explicitNullProperties?.Remove("triggerCondition"); } }
         private string? _explicitNullValueTriggerCondition = default!;
 #nullable restore
 #else
-        public string TriggerCondition { get => _explicitNullValueTriggerCondition; set { _explicitNullValueTriggerCondition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggerCondition"); else _explicitNullProperties?.Remove("triggerCondition"); } }
+        public string TriggerCondition { get => _explicitNullValueTriggerCondition; set { _explicitNullValueTriggerCondition = value; AdditionalData?.Remove("triggerCondition"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggerCondition"); else _explicitNullProperties?.Remove("triggerCondition"); } }
         private string _explicitNullValueTriggerCondition = default!;
 #endif
         /// <summary>Optional message to send when triggering the workflow</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TriggerMessage { get => _explicitNullValueTriggerMessage; set { _explicitNullValueTriggerMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggerMessage"); else _explicitNullProperties?.Remove("triggerMessage"); } }
+        public string? TriggerMessage { get => _explicitNullValueTriggerMessage; set { _explicitNullValueTriggerMessage = value; AdditionalData?.Remove("triggerMessage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggerMessage"); else _explicitNullProperties?.Remove("triggerMessage"); } }
         private string? _explicitNullValueTriggerMessage = default!;
 #nullable restore
 #else
-        public string TriggerMessage { get => _explicitNullValueTriggerMessage; set { _explicitNullValueTriggerMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggerMessage"); else _explicitNullProperties?.Remove("triggerMessage"); } }
+        public string TriggerMessage { get => _explicitNullValueTriggerMessage; set { _explicitNullValueTriggerMessage = value; AdditionalData?.Remove("triggerMessage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggerMessage"); else _explicitNullProperties?.Remove("triggerMessage"); } }
         private string _explicitNullValueTriggerMessage = default!;
 #endif
         /// <summary>Array of workflow IDs to trigger</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? WorkflowIds { get => _explicitNullValueWorkflowIds; set { _explicitNullValueWorkflowIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowIds"); else _explicitNullProperties?.Remove("workflowIds"); } }
+        public List<string>? WorkflowIds { get => _explicitNullValueWorkflowIds; set { _explicitNullValueWorkflowIds = value; AdditionalData?.Remove("workflowIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowIds"); else _explicitNullProperties?.Remove("workflowIds"); } }
         private List<string>? _explicitNullValueWorkflowIds = default!;
 #nullable restore
 #else
-        public List<string> WorkflowIds { get => _explicitNullValueWorkflowIds; set { _explicitNullValueWorkflowIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowIds"); else _explicitNullProperties?.Remove("workflowIds"); } }
+        public List<string> WorkflowIds { get => _explicitNullValueWorkflowIds; set { _explicitNullValueWorkflowIds = value; AdditionalData?.Remove("workflowIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowIds"); else _explicitNullProperties?.Remove("workflowIds"); } }
         private List<string> _explicitNullValueWorkflowIds = default!;
 #endif
         /// <summary>

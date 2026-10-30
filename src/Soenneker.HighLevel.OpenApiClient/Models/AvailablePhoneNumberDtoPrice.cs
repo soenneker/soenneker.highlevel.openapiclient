@@ -18,9 +18,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("number_type") is { } nullNodeNumberType && nullNodeNumberType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumberType = null;
-            if (parseNode.GetChildNode("price") is { } nullNodePrice && nullNodePrice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Price = null;
-            if (parseNode.GetChildNode("price_unit") is { } nullNodePriceUnit && nullNodePriceUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PriceUnit = null;
+            if (parseNode.GetChildNode("number_type") is null) { _explicitNullValueNumberType = default!; _explicitNullProperties?.Remove("number_type"); }
+            else if (parseNode.GetChildNode("number_type") is { } nullNodeNumberType && nullNodeNumberType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumberType = null;
+            if (parseNode.GetChildNode("price") is null) { _explicitNullValuePrice = default!; _explicitNullProperties?.Remove("price"); }
+            else if (parseNode.GetChildNode("price") is { } nullNodePrice && nullNodePrice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Price = null;
+            if (parseNode.GetChildNode("price_unit") is null) { _explicitNullValuePriceUnit = default!; _explicitNullProperties?.Remove("price_unit"); }
+            else if (parseNode.GetChildNode("price_unit") is { } nullNodePriceUnit && nullNodePriceUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PriceUnit = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,24 +31,24 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Type of number for billing purposes</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NumberType { get => _explicitNullValueNumberType; set { _explicitNullValueNumberType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("number_type"); else _explicitNullProperties?.Remove("number_type"); } }
+        public string? NumberType { get => _explicitNullValueNumberType; set { _explicitNullValueNumberType = value; AdditionalData?.Remove("number_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("number_type"); else _explicitNullProperties?.Remove("number_type"); } }
         private string? _explicitNullValueNumberType = default!;
 #nullable restore
 #else
-        public string NumberType { get => _explicitNullValueNumberType; set { _explicitNullValueNumberType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("number_type"); else _explicitNullProperties?.Remove("number_type"); } }
+        public string NumberType { get => _explicitNullValueNumberType; set { _explicitNullValueNumberType = value; AdditionalData?.Remove("number_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("number_type"); else _explicitNullProperties?.Remove("number_type"); } }
         private string _explicitNullValueNumberType = default!;
 #endif
         /// <summary>Monthly price for this number</summary>
-        public double? Price { get => _explicitNullValuePrice; set { _explicitNullValuePrice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("price"); else _explicitNullProperties?.Remove("price"); } }
+        public double? Price { get => _explicitNullValuePrice; set { _explicitNullValuePrice = value; AdditionalData?.Remove("price"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("price"); else _explicitNullProperties?.Remove("price"); } }
         private double? _explicitNullValuePrice = default!;
         /// <summary>Currency unit for the price</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PriceUnit { get => _explicitNullValuePriceUnit; set { _explicitNullValuePriceUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("price_unit"); else _explicitNullProperties?.Remove("price_unit"); } }
+        public string? PriceUnit { get => _explicitNullValuePriceUnit; set { _explicitNullValuePriceUnit = value; AdditionalData?.Remove("price_unit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("price_unit"); else _explicitNullProperties?.Remove("price_unit"); } }
         private string? _explicitNullValuePriceUnit = default!;
 #nullable restore
 #else
-        public string PriceUnit { get => _explicitNullValuePriceUnit; set { _explicitNullValuePriceUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("price_unit"); else _explicitNullProperties?.Remove("price_unit"); } }
+        public string PriceUnit { get => _explicitNullValuePriceUnit; set { _explicitNullValuePriceUnit = value; AdditionalData?.Remove("price_unit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("price_unit"); else _explicitNullProperties?.Remove("price_unit"); } }
         private string _explicitNullValuePriceUnit = default!;
 #endif
         /// <summary>

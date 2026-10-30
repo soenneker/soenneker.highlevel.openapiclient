@@ -17,56 +17,61 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("actionParameters") is { } nullNodeActionParameters && nullNodeActionParameters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionParameters = null;
-            if (parseNode.GetChildNode("actionType") is { } nullNodeActionType && nullNodeActionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionType = null;
-            if (parseNode.GetChildNode("agentId") is { } nullNodeAgentId && nullNodeAgentId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgentId = null;
-            if (parseNode.GetChildNode("locationId") is { } nullNodeLocationId && nullNodeLocationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationId = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("actionParameters") is null) { _explicitNullValueActionParameters = default!; _explicitNullProperties?.Remove("actionParameters"); }
+            else if (parseNode.GetChildNode("actionParameters") is { } nullNodeActionParameters && nullNodeActionParameters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionParameters = null;
+            if (parseNode.GetChildNode("actionType") is null) { _explicitNullValueActionType = default!; _explicitNullProperties?.Remove("actionType"); }
+            else if (parseNode.GetChildNode("actionType") is { } nullNodeActionType && nullNodeActionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionType = null;
+            if (parseNode.GetChildNode("agentId") is null) { _explicitNullValueAgentId = default!; _explicitNullProperties?.Remove("agentId"); }
+            else if (parseNode.GetChildNode("agentId") is { } nullNodeAgentId && nullNodeAgentId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgentId = null;
+            if (parseNode.GetChildNode("locationId") is null) { _explicitNullValueLocationId = default!; _explicitNullProperties?.Remove("locationId"); }
+            else if (parseNode.GetChildNode("locationId") is { } nullNodeLocationId && nullNodeLocationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationId = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
         }
 
         /// <summary>Action parameters - structure varies by actionType</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateSingleActionDtoActionParameters? ActionParameters { get => _explicitNullValueActionParameters; set { _explicitNullValueActionParameters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionParameters"); else _explicitNullProperties?.Remove("actionParameters"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.CreateSingleActionDtoActionParameters? _explicitNullValueActionParameters = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AgentActionResponseDtoActionParameters? ActionParameters { get => _explicitNullValueActionParameters; set { _explicitNullValueActionParameters = value; AdditionalData?.Remove("actionParameters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionParameters"); else _explicitNullProperties?.Remove("actionParameters"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.AgentActionResponseDtoActionParameters? _explicitNullValueActionParameters = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateSingleActionDtoActionParameters ActionParameters { get => _explicitNullValueActionParameters; set { _explicitNullValueActionParameters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionParameters"); else _explicitNullProperties?.Remove("actionParameters"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.CreateSingleActionDtoActionParameters _explicitNullValueActionParameters = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AgentActionResponseDtoActionParameters ActionParameters { get => _explicitNullValueActionParameters; set { _explicitNullValueActionParameters = value; AdditionalData?.Remove("actionParameters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionParameters"); else _explicitNullProperties?.Remove("actionParameters"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.AgentActionResponseDtoActionParameters _explicitNullValueActionParameters = default!;
 #endif
         /// <summary>Type of action</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateSingleActionDtoActionType? ActionType { get => _explicitNullValueActionType; set { _explicitNullValueActionType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionType"); else _explicitNullProperties?.Remove("actionType"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateSingleActionDtoActionType? ActionType { get => _explicitNullValueActionType; set { _explicitNullValueActionType = value; AdditionalData?.Remove("actionType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionType"); else _explicitNullProperties?.Remove("actionType"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.CreateSingleActionDtoActionType? _explicitNullValueActionType = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Agent ID to attach the action to</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AgentId { get => _explicitNullValueAgentId; set { _explicitNullValueAgentId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agentId"); else _explicitNullProperties?.Remove("agentId"); } }
+        public string? AgentId { get => _explicitNullValueAgentId; set { _explicitNullValueAgentId = value; AdditionalData?.Remove("agentId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agentId"); else _explicitNullProperties?.Remove("agentId"); } }
         private string? _explicitNullValueAgentId = default!;
 #nullable restore
 #else
-        public string AgentId { get => _explicitNullValueAgentId; set { _explicitNullValueAgentId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agentId"); else _explicitNullProperties?.Remove("agentId"); } }
+        public string AgentId { get => _explicitNullValueAgentId; set { _explicitNullValueAgentId = value; AdditionalData?.Remove("agentId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agentId"); else _explicitNullProperties?.Remove("agentId"); } }
         private string _explicitNullValueAgentId = default!;
 #endif
         /// <summary>Location ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
+        public string? LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; AdditionalData?.Remove("locationId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
         private string? _explicitNullValueLocationId = default!;
 #nullable restore
 #else
-        public string LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
+        public string LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; AdditionalData?.Remove("locationId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
         private string _explicitNullValueLocationId = default!;
 #endif
         /// <summary>Human-readable name for this action</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>
@@ -94,8 +99,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "actionParameters", n => { ActionParameters = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateSingleActionDtoActionParameters>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateSingleActionDtoActionParameters.CreateFromDiscriminatorValue); } },
-                { "actionType", n => { ActionType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateSingleActionDtoActionType>(); } },
+                { "actionParameters", n => { ActionParameters = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AgentActionResponseDtoActionParameters>(global::Soenneker.HighLevel.OpenApiClient.Models.AgentActionResponseDtoActionParameters.CreateFromDiscriminatorValue); } },
+                { "actionType", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateSingleActionDtoActionType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueActionType = default; _explicitNullProperties?.Remove("actionType"); AdditionalData["actionType"] = unknown; } else { ActionType = parsed; AdditionalData.Remove("actionType"); } } },
                 { "agentId", n => { AgentId = n.GetStringValue(); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
@@ -108,7 +113,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateSingleActionDtoActionParameters>("actionParameters", ActionParameters);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AgentActionResponseDtoActionParameters>("actionParameters", ActionParameters);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateSingleActionDtoActionType>("actionType", ActionType);
             writer.WriteStringValue("agentId", AgentId);
             writer.WriteStringValue("locationId", LocationId);

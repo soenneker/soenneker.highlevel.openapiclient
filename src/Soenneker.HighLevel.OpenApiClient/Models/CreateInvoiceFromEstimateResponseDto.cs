@@ -17,8 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("estimate") is { } nullNodeEstimate && nullNodeEstimate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Estimate = null;
-            if (parseNode.GetChildNode("invoice") is { } nullNodeInvoice && nullNodeInvoice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Invoice = null;
+            if (parseNode.GetChildNode("estimate") is null) { _explicitNullValueEstimate = default!; _explicitNullProperties?.Remove("estimate"); }
+            else if (parseNode.GetChildNode("estimate") is { } nullNodeEstimate && nullNodeEstimate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Estimate = null;
+            if (parseNode.GetChildNode("invoice") is null) { _explicitNullValueInvoice = default!; _explicitNullProperties?.Remove("invoice"); }
+            else if (parseNode.GetChildNode("invoice") is { } nullNodeInvoice && nullNodeInvoice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Invoice = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Estimate details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceFromEstimateResponseDtoEstimate? Estimate { get => _explicitNullValueEstimate; set { _explicitNullValueEstimate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("estimate"); else _explicitNullProperties?.Remove("estimate"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceFromEstimateResponseDtoEstimate? Estimate { get => _explicitNullValueEstimate; set { _explicitNullValueEstimate = value; AdditionalData?.Remove("estimate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("estimate"); else _explicitNullProperties?.Remove("estimate"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceFromEstimateResponseDtoEstimate? _explicitNullValueEstimate = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceFromEstimateResponseDtoEstimate Estimate { get => _explicitNullValueEstimate; set { _explicitNullValueEstimate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("estimate"); else _explicitNullProperties?.Remove("estimate"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceFromEstimateResponseDtoEstimate Estimate { get => _explicitNullValueEstimate; set { _explicitNullValueEstimate = value; AdditionalData?.Remove("estimate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("estimate"); else _explicitNullProperties?.Remove("estimate"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceFromEstimateResponseDtoEstimate _explicitNullValueEstimate = default!;
 #endif
         /// <summary>Invoice details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceFromEstimateResponseDtoInvoice? Invoice { get => _explicitNullValueInvoice; set { _explicitNullValueInvoice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice"); else _explicitNullProperties?.Remove("invoice"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceFromEstimateResponseDtoInvoice? Invoice { get => _explicitNullValueInvoice; set { _explicitNullValueInvoice = value; AdditionalData?.Remove("invoice"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice"); else _explicitNullProperties?.Remove("invoice"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceFromEstimateResponseDtoInvoice? _explicitNullValueInvoice = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceFromEstimateResponseDtoInvoice Invoice { get => _explicitNullValueInvoice; set { _explicitNullValueInvoice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice"); else _explicitNullProperties?.Remove("invoice"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceFromEstimateResponseDtoInvoice Invoice { get => _explicitNullValueInvoice; set { _explicitNullValueInvoice = value; AdditionalData?.Remove("invoice"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invoice"); else _explicitNullProperties?.Remove("invoice"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.CreateInvoiceFromEstimateResponseDtoInvoice _explicitNullValueInvoice = default!;
 #endif
         /// <summary>

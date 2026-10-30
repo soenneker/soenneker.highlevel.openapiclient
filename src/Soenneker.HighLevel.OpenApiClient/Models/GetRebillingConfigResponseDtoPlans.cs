@@ -18,8 +18,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("subscription") is { } nullNodeSubscription && nullNodeSubscription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Subscription = null;
-            if (parseNode.GetChildNode("usage") is { } nullNodeUsage && nullNodeUsage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Usage = null;
+            if (parseNode.GetChildNode("subscription") is null) { _explicitNullValueSubscription = default!; _explicitNullProperties?.Remove("subscription"); }
+            else if (parseNode.GetChildNode("subscription") is { } nullNodeSubscription && nullNodeSubscription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Subscription = null;
+            if (parseNode.GetChildNode("usage") is null) { _explicitNullValueUsage = default!; _explicitNullProperties?.Remove("usage"); }
+            else if (parseNode.GetChildNode("usage") is { } nullNodeUsage && nullNodeUsage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Usage = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Subscription plans</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.SubscriptionPlanDto>? Subscription { get => _explicitNullValueSubscription; set { _explicitNullValueSubscription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription"); else _explicitNullProperties?.Remove("subscription"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.SubscriptionPlanDto>? Subscription { get => _explicitNullValueSubscription; set { _explicitNullValueSubscription = value; AdditionalData?.Remove("subscription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription"); else _explicitNullProperties?.Remove("subscription"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.SubscriptionPlanDto>? _explicitNullValueSubscription = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.SubscriptionPlanDto> Subscription { get => _explicitNullValueSubscription; set { _explicitNullValueSubscription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription"); else _explicitNullProperties?.Remove("subscription"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.SubscriptionPlanDto> Subscription { get => _explicitNullValueSubscription; set { _explicitNullValueSubscription = value; AdditionalData?.Remove("subscription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription"); else _explicitNullProperties?.Remove("subscription"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.SubscriptionPlanDto> _explicitNullValueSubscription = default!;
 #endif
         /// <summary>Usage-based plans</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UsagePlanDto>? Usage { get => _explicitNullValueUsage; set { _explicitNullValueUsage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usage"); else _explicitNullProperties?.Remove("usage"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UsagePlanDto>? Usage { get => _explicitNullValueUsage; set { _explicitNullValueUsage = value; AdditionalData?.Remove("usage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usage"); else _explicitNullProperties?.Remove("usage"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.UsagePlanDto>? _explicitNullValueUsage = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UsagePlanDto> Usage { get => _explicitNullValueUsage; set { _explicitNullValueUsage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usage"); else _explicitNullProperties?.Remove("usage"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UsagePlanDto> Usage { get => _explicitNullValueUsage; set { _explicitNullValueUsage = value; AdditionalData?.Remove("usage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usage"); else _explicitNullProperties?.Remove("usage"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.UsagePlanDto> _explicitNullValueUsage = default!;
 #endif
         /// <summary>

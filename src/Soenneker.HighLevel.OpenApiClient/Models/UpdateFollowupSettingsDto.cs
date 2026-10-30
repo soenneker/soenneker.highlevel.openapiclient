@@ -17,18 +17,20 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("actionIds") is { } nullNodeActionIds && nullNodeActionIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionIds = null;
-            if (parseNode.GetChildNode("followupSettings") is { } nullNodeFollowupSettings && nullNodeFollowupSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FollowupSettings = null;
+            if (parseNode.GetChildNode("actionIds") is null) { _explicitNullValueActionIds = default!; _explicitNullProperties?.Remove("actionIds"); }
+            else if (parseNode.GetChildNode("actionIds") is { } nullNodeActionIds && nullNodeActionIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionIds = null;
+            if (parseNode.GetChildNode("followupSettings") is null) { _explicitNullValueFollowupSettings = default!; _explicitNullProperties?.Remove("followupSettings"); }
+            else if (parseNode.GetChildNode("followupSettings") is { } nullNodeFollowupSettings && nullNodeFollowupSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FollowupSettings = null;
         }
 
         /// <summary>The actionIds property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ActionIds { get => _explicitNullValueActionIds; set { _explicitNullValueActionIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionIds"); else _explicitNullProperties?.Remove("actionIds"); } }
+        public List<string>? ActionIds { get => _explicitNullValueActionIds; set { _explicitNullValueActionIds = value; AdditionalData?.Remove("actionIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionIds"); else _explicitNullProperties?.Remove("actionIds"); } }
         private List<string>? _explicitNullValueActionIds = default!;
 #nullable restore
 #else
-        public List<string> ActionIds { get => _explicitNullValueActionIds; set { _explicitNullValueActionIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionIds"); else _explicitNullProperties?.Remove("actionIds"); } }
+        public List<string> ActionIds { get => _explicitNullValueActionIds; set { _explicitNullValueActionIds = value; AdditionalData?.Remove("actionIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionIds"); else _explicitNullProperties?.Remove("actionIds"); } }
         private List<string> _explicitNullValueActionIds = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -36,11 +38,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The followupSettings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.FollowupSettings? FollowupSettings { get => _explicitNullValueFollowupSettings; set { _explicitNullValueFollowupSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("followupSettings"); else _explicitNullProperties?.Remove("followupSettings"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.FollowupSettings? FollowupSettings { get => _explicitNullValueFollowupSettings; set { _explicitNullValueFollowupSettings = value; AdditionalData?.Remove("followupSettings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("followupSettings"); else _explicitNullProperties?.Remove("followupSettings"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.FollowupSettings? _explicitNullValueFollowupSettings = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.FollowupSettings FollowupSettings { get => _explicitNullValueFollowupSettings; set { _explicitNullValueFollowupSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("followupSettings"); else _explicitNullProperties?.Remove("followupSettings"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.FollowupSettings FollowupSettings { get => _explicitNullValueFollowupSettings; set { _explicitNullValueFollowupSettings = value; AdditionalData?.Remove("followupSettings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("followupSettings"); else _explicitNullProperties?.Remove("followupSettings"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.FollowupSettings _explicitNullValueFollowupSettings = default!;
 #endif
         /// <summary>

@@ -17,7 +17,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("calendar") is { } nullNodeCalendar && nullNodeCalendar.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Calendar = null;
+            if (parseNode.GetChildNode("calendar") is null) { _explicitNullValueCalendar = default!; _explicitNullProperties?.Remove("calendar"); }
+            else if (parseNode.GetChildNode("calendar") is { } nullNodeCalendar && nullNodeCalendar.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Calendar = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The calendar property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CalendarDto? Calendar { get => _explicitNullValueCalendar; set { _explicitNullValueCalendar = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calendar"); else _explicitNullProperties?.Remove("calendar"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CalendarDto? Calendar { get => _explicitNullValueCalendar; set { _explicitNullValueCalendar = value; AdditionalData?.Remove("calendar"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calendar"); else _explicitNullProperties?.Remove("calendar"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.CalendarDto? _explicitNullValueCalendar = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CalendarDto Calendar { get => _explicitNullValueCalendar; set { _explicitNullValueCalendar = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calendar"); else _explicitNullProperties?.Remove("calendar"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CalendarDto Calendar { get => _explicitNullValueCalendar; set { _explicitNullValueCalendar = value; AdditionalData?.Remove("calendar"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calendar"); else _explicitNullProperties?.Remove("calendar"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.CalendarDto _explicitNullValueCalendar = default!;
 #endif
         /// <summary>

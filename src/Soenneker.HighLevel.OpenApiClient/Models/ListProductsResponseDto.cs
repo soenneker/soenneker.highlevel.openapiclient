@@ -17,8 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("products") is { } nullNodeProducts && nullNodeProducts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Products = null;
-            if (parseNode.GetChildNode("total") is { } nullNodeTotal && nullNodeTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Total = null;
+            if (parseNode.GetChildNode("products") is null) { _explicitNullValueProducts = default!; _explicitNullProperties?.Remove("products"); }
+            else if (parseNode.GetChildNode("products") is { } nullNodeProducts && nullNodeProducts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Products = null;
+            if (parseNode.GetChildNode("total") is null) { _explicitNullValueTotal = default!; _explicitNullProperties?.Remove("total"); }
+            else if (parseNode.GetChildNode("total") is { } nullNodeTotal && nullNodeTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Total = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>An array of products</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ProductsDefaultProductResponseDto>? Products { get => _explicitNullValueProducts; set { _explicitNullValueProducts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("products"); else _explicitNullProperties?.Remove("products"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ProductsDefaultProductResponseDto>? Products { get => _explicitNullValueProducts; set { _explicitNullValueProducts = value; AdditionalData?.Remove("products"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("products"); else _explicitNullProperties?.Remove("products"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.ProductsDefaultProductResponseDto>? _explicitNullValueProducts = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ProductsDefaultProductResponseDto> Products { get => _explicitNullValueProducts; set { _explicitNullValueProducts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("products"); else _explicitNullProperties?.Remove("products"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ProductsDefaultProductResponseDto> Products { get => _explicitNullValueProducts; set { _explicitNullValueProducts = value; AdditionalData?.Remove("products"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("products"); else _explicitNullProperties?.Remove("products"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.ProductsDefaultProductResponseDto> _explicitNullValueProducts = default!;
 #endif
         /// <summary>list products status</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ListProductsStats>? Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total"); else _explicitNullProperties?.Remove("total"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ListProductsStats>? Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; AdditionalData?.Remove("total"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total"); else _explicitNullProperties?.Remove("total"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.ListProductsStats>? _explicitNullValueTotal = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ListProductsStats> Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total"); else _explicitNullProperties?.Remove("total"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ListProductsStats> Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; AdditionalData?.Remove("total"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total"); else _explicitNullProperties?.Remove("total"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.ListProductsStats> _explicitNullValueTotal = default!;
 #endif
         /// <summary>

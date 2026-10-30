@@ -17,45 +17,49 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("actionParameters") is { } nullNodeActionParameters && nullNodeActionParameters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionParameters = null;
-            if (parseNode.GetChildNode("actionType") is { } nullNodeActionType && nullNodeActionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionType = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("actionParameters") is null) { _explicitNullValueActionParameters = default!; _explicitNullProperties?.Remove("actionParameters"); }
+            else if (parseNode.GetChildNode("actionParameters") is { } nullNodeActionParameters && nullNodeActionParameters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionParameters = null;
+            if (parseNode.GetChildNode("actionType") is null) { _explicitNullValueActionType = default!; _explicitNullProperties?.Remove("actionType"); }
+            else if (parseNode.GetChildNode("actionType") is { } nullNodeActionType && nullNodeActionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionType = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
         }
 
         /// <summary>Action parameters - structure varies by actionType</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetActionResponseDtoActionParameters? ActionParameters { get => _explicitNullValueActionParameters; set { _explicitNullValueActionParameters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionParameters"); else _explicitNullProperties?.Remove("actionParameters"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.GetActionResponseDtoActionParameters? _explicitNullValueActionParameters = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AgentActionResponseDtoActionParameters? ActionParameters { get => _explicitNullValueActionParameters; set { _explicitNullValueActionParameters = value; AdditionalData?.Remove("actionParameters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionParameters"); else _explicitNullProperties?.Remove("actionParameters"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.AgentActionResponseDtoActionParameters? _explicitNullValueActionParameters = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetActionResponseDtoActionParameters ActionParameters { get => _explicitNullValueActionParameters; set { _explicitNullValueActionParameters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionParameters"); else _explicitNullProperties?.Remove("actionParameters"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.GetActionResponseDtoActionParameters _explicitNullValueActionParameters = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AgentActionResponseDtoActionParameters ActionParameters { get => _explicitNullValueActionParameters; set { _explicitNullValueActionParameters = value; AdditionalData?.Remove("actionParameters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionParameters"); else _explicitNullProperties?.Remove("actionParameters"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.AgentActionResponseDtoActionParameters _explicitNullValueActionParameters = default!;
 #endif
         /// <summary>Type of action</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetActionResponseDtoActionType? ActionType { get => _explicitNullValueActionType; set { _explicitNullValueActionType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionType"); else _explicitNullProperties?.Remove("actionType"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetActionResponseDtoActionType? ActionType { get => _explicitNullValueActionType; set { _explicitNullValueActionType = value; AdditionalData?.Remove("actionType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionType"); else _explicitNullProperties?.Remove("actionType"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.GetActionResponseDtoActionType? _explicitNullValueActionType = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Unique identifier for the action</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>Human-readable name for this action</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>
@@ -83,8 +87,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "actionParameters", n => { ActionParameters = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetActionResponseDtoActionParameters>(global::Soenneker.HighLevel.OpenApiClient.Models.GetActionResponseDtoActionParameters.CreateFromDiscriminatorValue); } },
-                { "actionType", n => { ActionType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetActionResponseDtoActionType>(); } },
+                { "actionParameters", n => { ActionParameters = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AgentActionResponseDtoActionParameters>(global::Soenneker.HighLevel.OpenApiClient.Models.AgentActionResponseDtoActionParameters.CreateFromDiscriminatorValue); } },
+                { "actionType", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetActionResponseDtoActionType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueActionType = default; _explicitNullProperties?.Remove("actionType"); AdditionalData["actionType"] = unknown; } else { ActionType = parsed; AdditionalData.Remove("actionType"); } } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
             };
@@ -96,7 +100,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetActionResponseDtoActionParameters>("actionParameters", ActionParameters);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AgentActionResponseDtoActionParameters>("actionParameters", ActionParameters);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetActionResponseDtoActionType>("actionType", ActionType);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("name", Name);

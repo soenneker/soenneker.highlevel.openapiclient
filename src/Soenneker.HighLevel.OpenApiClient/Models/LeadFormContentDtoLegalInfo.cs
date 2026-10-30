@@ -18,9 +18,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("consents") is { } nullNodeConsents && nullNodeConsents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Consents = null;
-            if (parseNode.GetChildNode("legalDisclaimer") is { } nullNodeLegalDisclaimer && nullNodeLegalDisclaimer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LegalDisclaimer = null;
-            if (parseNode.GetChildNode("privacyPolicyUrl") is { } nullNodePrivacyPolicyUrl && nullNodePrivacyPolicyUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrivacyPolicyUrl = null;
+            if (parseNode.GetChildNode("consents") is null) { _explicitNullValueConsents = default!; _explicitNullProperties?.Remove("consents"); }
+            else if (parseNode.GetChildNode("consents") is { } nullNodeConsents && nullNodeConsents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Consents = null;
+            if (parseNode.GetChildNode("legalDisclaimer") is null) { _explicitNullValueLegalDisclaimer = default!; _explicitNullProperties?.Remove("legalDisclaimer"); }
+            else if (parseNode.GetChildNode("legalDisclaimer") is { } nullNodeLegalDisclaimer && nullNodeLegalDisclaimer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LegalDisclaimer = null;
+            if (parseNode.GetChildNode("privacyPolicyUrl") is null) { _explicitNullValuePrivacyPolicyUrl = default!; _explicitNullProperties?.Remove("privacyPolicyUrl"); }
+            else if (parseNode.GetChildNode("privacyPolicyUrl") is { } nullNodePrivacyPolicyUrl && nullNodePrivacyPolicyUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrivacyPolicyUrl = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Consent entries</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ConsentDto>? Consents { get => _explicitNullValueConsents; set { _explicitNullValueConsents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("consents"); else _explicitNullProperties?.Remove("consents"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ConsentDto>? Consents { get => _explicitNullValueConsents; set { _explicitNullValueConsents = value; AdditionalData?.Remove("consents"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("consents"); else _explicitNullProperties?.Remove("consents"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.ConsentDto>? _explicitNullValueConsents = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ConsentDto> Consents { get => _explicitNullValueConsents; set { _explicitNullValueConsents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("consents"); else _explicitNullProperties?.Remove("consents"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ConsentDto> Consents { get => _explicitNullValueConsents; set { _explicitNullValueConsents = value; AdditionalData?.Remove("consents"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("consents"); else _explicitNullProperties?.Remove("consents"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.ConsentDto> _explicitNullValueConsents = default!;
 #endif
         /// <summary>Legal disclaimer text</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LegalInfoDtoLegalDisclaimer? LegalDisclaimer { get => _explicitNullValueLegalDisclaimer; set { _explicitNullValueLegalDisclaimer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("legalDisclaimer"); else _explicitNullProperties?.Remove("legalDisclaimer"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LegalInfoDtoLegalDisclaimer? LegalDisclaimer { get => _explicitNullValueLegalDisclaimer; set { _explicitNullValueLegalDisclaimer = value; AdditionalData?.Remove("legalDisclaimer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("legalDisclaimer"); else _explicitNullProperties?.Remove("legalDisclaimer"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.LegalInfoDtoLegalDisclaimer? _explicitNullValueLegalDisclaimer = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LegalInfoDtoLegalDisclaimer LegalDisclaimer { get => _explicitNullValueLegalDisclaimer; set { _explicitNullValueLegalDisclaimer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("legalDisclaimer"); else _explicitNullProperties?.Remove("legalDisclaimer"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LegalInfoDtoLegalDisclaimer LegalDisclaimer { get => _explicitNullValueLegalDisclaimer; set { _explicitNullValueLegalDisclaimer = value; AdditionalData?.Remove("legalDisclaimer"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("legalDisclaimer"); else _explicitNullProperties?.Remove("legalDisclaimer"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.LegalInfoDtoLegalDisclaimer _explicitNullValueLegalDisclaimer = default!;
 #endif
         /// <summary>Privacy policy URL</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrivacyPolicyUrl { get => _explicitNullValuePrivacyPolicyUrl; set { _explicitNullValuePrivacyPolicyUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("privacyPolicyUrl"); else _explicitNullProperties?.Remove("privacyPolicyUrl"); } }
+        public string? PrivacyPolicyUrl { get => _explicitNullValuePrivacyPolicyUrl; set { _explicitNullValuePrivacyPolicyUrl = value; AdditionalData?.Remove("privacyPolicyUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("privacyPolicyUrl"); else _explicitNullProperties?.Remove("privacyPolicyUrl"); } }
         private string? _explicitNullValuePrivacyPolicyUrl = default!;
 #nullable restore
 #else
-        public string PrivacyPolicyUrl { get => _explicitNullValuePrivacyPolicyUrl; set { _explicitNullValuePrivacyPolicyUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("privacyPolicyUrl"); else _explicitNullProperties?.Remove("privacyPolicyUrl"); } }
+        public string PrivacyPolicyUrl { get => _explicitNullValuePrivacyPolicyUrl; set { _explicitNullValuePrivacyPolicyUrl = value; AdditionalData?.Remove("privacyPolicyUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("privacyPolicyUrl"); else _explicitNullProperties?.Remove("privacyPolicyUrl"); } }
         private string _explicitNullValuePrivacyPolicyUrl = default!;
 #endif
         /// <summary>

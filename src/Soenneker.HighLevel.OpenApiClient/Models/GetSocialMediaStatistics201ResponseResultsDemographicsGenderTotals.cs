@@ -17,9 +17,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("female") is { } nullNodeFemale && nullNodeFemale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Female = null;
-            if (parseNode.GetChildNode("male") is { } nullNodeMale && nullNodeMale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Male = null;
-            if (parseNode.GetChildNode("unknown") is { } nullNodeUnknown && nullNodeUnknown.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Unknown = null;
+            if (parseNode.GetChildNode("female") is null) { _explicitNullValueFemale = default!; _explicitNullProperties?.Remove("female"); }
+            else if (parseNode.GetChildNode("female") is { } nullNodeFemale && nullNodeFemale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Female = null;
+            if (parseNode.GetChildNode("male") is null) { _explicitNullValueMale = default!; _explicitNullProperties?.Remove("male"); }
+            else if (parseNode.GetChildNode("male") is { } nullNodeMale && nullNodeMale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Male = null;
+            if (parseNode.GetChildNode("unknown") is null) { _explicitNullValueUnknown = default!; _explicitNullProperties?.Remove("unknown"); }
+            else if (parseNode.GetChildNode("unknown") is { } nullNodeUnknown && nullNodeUnknown.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Unknown = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The female property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsDemographicsGenderTotalsFemale? Female { get => _explicitNullValueFemale; set { _explicitNullValueFemale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("female"); else _explicitNullProperties?.Remove("female"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsDemographicsGenderTotalsFemale? Female { get => _explicitNullValueFemale; set { _explicitNullValueFemale = value; AdditionalData?.Remove("female"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("female"); else _explicitNullProperties?.Remove("female"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsDemographicsGenderTotalsFemale? _explicitNullValueFemale = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsDemographicsGenderTotalsFemale Female { get => _explicitNullValueFemale; set { _explicitNullValueFemale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("female"); else _explicitNullProperties?.Remove("female"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsDemographicsGenderTotalsFemale Female { get => _explicitNullValueFemale; set { _explicitNullValueFemale = value; AdditionalData?.Remove("female"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("female"); else _explicitNullProperties?.Remove("female"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsDemographicsGenderTotalsFemale _explicitNullValueFemale = default!;
 #endif
         /// <summary>The male property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsDemographicsGenderTotalsMale? Male { get => _explicitNullValueMale; set { _explicitNullValueMale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("male"); else _explicitNullProperties?.Remove("male"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsDemographicsGenderTotalsMale? Male { get => _explicitNullValueMale; set { _explicitNullValueMale = value; AdditionalData?.Remove("male"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("male"); else _explicitNullProperties?.Remove("male"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsDemographicsGenderTotalsMale? _explicitNullValueMale = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsDemographicsGenderTotalsMale Male { get => _explicitNullValueMale; set { _explicitNullValueMale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("male"); else _explicitNullProperties?.Remove("male"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsDemographicsGenderTotalsMale Male { get => _explicitNullValueMale; set { _explicitNullValueMale = value; AdditionalData?.Remove("male"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("male"); else _explicitNullProperties?.Remove("male"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsDemographicsGenderTotalsMale _explicitNullValueMale = default!;
 #endif
         /// <summary>The unknown property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsDemographicsGenderTotalsUnknown? Unknown { get => _explicitNullValueUnknown; set { _explicitNullValueUnknown = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unknown"); else _explicitNullProperties?.Remove("unknown"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsDemographicsGenderTotalsUnknown? Unknown { get => _explicitNullValueUnknown; set { _explicitNullValueUnknown = value; AdditionalData?.Remove("unknown"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unknown"); else _explicitNullProperties?.Remove("unknown"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsDemographicsGenderTotalsUnknown? _explicitNullValueUnknown = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsDemographicsGenderTotalsUnknown Unknown { get => _explicitNullValueUnknown; set { _explicitNullValueUnknown = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unknown"); else _explicitNullProperties?.Remove("unknown"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsDemographicsGenderTotalsUnknown Unknown { get => _explicitNullValueUnknown; set { _explicitNullValueUnknown = value; AdditionalData?.Remove("unknown"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unknown"); else _explicitNullProperties?.Remove("unknown"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.GetSocialMediaStatistics201ResponseResultsDemographicsGenderTotalsUnknown _explicitNullValueUnknown = default!;
 #endif
         /// <summary>

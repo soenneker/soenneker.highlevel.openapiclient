@@ -17,49 +17,54 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("expiresAt") is { } nullNodeExpiresAt && nullNodeExpiresAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpiresAt = null;
-            if (parseNode.GetChildNode("filePath") is { } nullNodeFilePath && nullNodeFilePath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FilePath = null;
-            if (parseNode.GetChildNode("maxFileSize") is { } nullNodeMaxFileSize && nullNodeMaxFileSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxFileSize = null;
-            if (parseNode.GetChildNode("uploadId") is { } nullNodeUploadId && nullNodeUploadId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UploadId = null;
-            if (parseNode.GetChildNode("uploadUrl") is { } nullNodeUploadUrl && nullNodeUploadUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UploadUrl = null;
+            if (parseNode.GetChildNode("expiresAt") is null) { _explicitNullValueExpiresAt = default!; _explicitNullProperties?.Remove("expiresAt"); }
+            else if (parseNode.GetChildNode("expiresAt") is { } nullNodeExpiresAt && nullNodeExpiresAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpiresAt = null;
+            if (parseNode.GetChildNode("filePath") is null) { _explicitNullValueFilePath = default!; _explicitNullProperties?.Remove("filePath"); }
+            else if (parseNode.GetChildNode("filePath") is { } nullNodeFilePath && nullNodeFilePath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FilePath = null;
+            if (parseNode.GetChildNode("maxFileSize") is null) { _explicitNullValueMaxFileSize = default!; _explicitNullProperties?.Remove("maxFileSize"); }
+            else if (parseNode.GetChildNode("maxFileSize") is { } nullNodeMaxFileSize && nullNodeMaxFileSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxFileSize = null;
+            if (parseNode.GetChildNode("uploadId") is null) { _explicitNullValueUploadId = default!; _explicitNullProperties?.Remove("uploadId"); }
+            else if (parseNode.GetChildNode("uploadId") is { } nullNodeUploadId && nullNodeUploadId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UploadId = null;
+            if (parseNode.GetChildNode("uploadUrl") is null) { _explicitNullValueUploadUrl = default!; _explicitNullProperties?.Remove("uploadUrl"); }
+            else if (parseNode.GetChildNode("uploadUrl") is { } nullNodeUploadUrl && nullNodeUploadUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UploadUrl = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>URL expiration timestamp (Unix milliseconds)</summary>
-        public double? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expiresAt"); else _explicitNullProperties?.Remove("expiresAt"); } }
+        public double? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; AdditionalData?.Remove("expiresAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expiresAt"); else _explicitNullProperties?.Remove("expiresAt"); } }
         private double? _explicitNullValueExpiresAt = default!;
         /// <summary>File path in GCS bucket (needed for confirmation endpoint)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FilePath { get => _explicitNullValueFilePath; set { _explicitNullValueFilePath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filePath"); else _explicitNullProperties?.Remove("filePath"); } }
+        public string? FilePath { get => _explicitNullValueFilePath; set { _explicitNullValueFilePath = value; AdditionalData?.Remove("filePath"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filePath"); else _explicitNullProperties?.Remove("filePath"); } }
         private string? _explicitNullValueFilePath = default!;
 #nullable restore
 #else
-        public string FilePath { get => _explicitNullValueFilePath; set { _explicitNullValueFilePath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filePath"); else _explicitNullProperties?.Remove("filePath"); } }
+        public string FilePath { get => _explicitNullValueFilePath; set { _explicitNullValueFilePath = value; AdditionalData?.Remove("filePath"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filePath"); else _explicitNullProperties?.Remove("filePath"); } }
         private string _explicitNullValueFilePath = default!;
 #endif
         /// <summary>Maximum allowed file size in bytes</summary>
-        public double? MaxFileSize { get => _explicitNullValueMaxFileSize; set { _explicitNullValueMaxFileSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxFileSize"); else _explicitNullProperties?.Remove("maxFileSize"); } }
+        public double? MaxFileSize { get => _explicitNullValueMaxFileSize; set { _explicitNullValueMaxFileSize = value; AdditionalData?.Remove("maxFileSize"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxFileSize"); else _explicitNullProperties?.Remove("maxFileSize"); } }
         private double? _explicitNullValueMaxFileSize = default!;
         /// <summary>Unique upload ID for tracking and completing the upload</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UploadId { get => _explicitNullValueUploadId; set { _explicitNullValueUploadId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uploadId"); else _explicitNullProperties?.Remove("uploadId"); } }
+        public string? UploadId { get => _explicitNullValueUploadId; set { _explicitNullValueUploadId = value; AdditionalData?.Remove("uploadId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uploadId"); else _explicitNullProperties?.Remove("uploadId"); } }
         private string? _explicitNullValueUploadId = default!;
 #nullable restore
 #else
-        public string UploadId { get => _explicitNullValueUploadId; set { _explicitNullValueUploadId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uploadId"); else _explicitNullProperties?.Remove("uploadId"); } }
+        public string UploadId { get => _explicitNullValueUploadId; set { _explicitNullValueUploadId = value; AdditionalData?.Remove("uploadId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uploadId"); else _explicitNullProperties?.Remove("uploadId"); } }
         private string _explicitNullValueUploadId = default!;
 #endif
         /// <summary>Signed URL for direct upload to GCS. Use PUT request with file content.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UploadUrl { get => _explicitNullValueUploadUrl; set { _explicitNullValueUploadUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uploadUrl"); else _explicitNullProperties?.Remove("uploadUrl"); } }
+        public string? UploadUrl { get => _explicitNullValueUploadUrl; set { _explicitNullValueUploadUrl = value; AdditionalData?.Remove("uploadUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uploadUrl"); else _explicitNullProperties?.Remove("uploadUrl"); } }
         private string? _explicitNullValueUploadUrl = default!;
 #nullable restore
 #else
-        public string UploadUrl { get => _explicitNullValueUploadUrl; set { _explicitNullValueUploadUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uploadUrl"); else _explicitNullProperties?.Remove("uploadUrl"); } }
+        public string UploadUrl { get => _explicitNullValueUploadUrl; set { _explicitNullValueUploadUrl = value; AdditionalData?.Remove("uploadUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uploadUrl"); else _explicitNullProperties?.Remove("uploadUrl"); } }
         private string _explicitNullValueUploadUrl = default!;
 #endif
         /// <summary>

@@ -17,28 +17,31 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("errorCount") is { } nullNodeErrorCount && nullNodeErrorCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorCount = null;
-            if (parseNode.GetChildNode("responses") is { } nullNodeResponses && nullNodeResponses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Responses = null;
-            if (parseNode.GetChildNode("succeded") is { } nullNodeSucceded && nullNodeSucceded.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Succeded = null;
+            if (parseNode.GetChildNode("errorCount") is null) { _explicitNullValueErrorCount = default!; _explicitNullProperties?.Remove("errorCount"); }
+            else if (parseNode.GetChildNode("errorCount") is { } nullNodeErrorCount && nullNodeErrorCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorCount = null;
+            if (parseNode.GetChildNode("responses") is null) { _explicitNullValueResponses = default!; _explicitNullProperties?.Remove("responses"); }
+            else if (parseNode.GetChildNode("responses") is { } nullNodeResponses && nullNodeResponses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Responses = null;
+            if (parseNode.GetChildNode("succeded") is null) { _explicitNullValueSucceded = default!; _explicitNullProperties?.Remove("succeded"); }
+            else if (parseNode.GetChildNode("succeded") is { } nullNodeSucceded && nullNodeSucceded.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Succeded = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Number of errors encountered during the operation</summary>
-        public double? ErrorCount { get => _explicitNullValueErrorCount; set { _explicitNullValueErrorCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errorCount"); else _explicitNullProperties?.Remove("errorCount"); } }
+        public double? ErrorCount { get => _explicitNullValueErrorCount; set { _explicitNullValueErrorCount = value; AdditionalData?.Remove("errorCount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errorCount"); else _explicitNullProperties?.Remove("errorCount"); } }
         private double? _explicitNullValueErrorCount = default!;
         /// <summary>Responses for each contact processed</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Responses { get => _explicitNullValueResponses; set { _explicitNullValueResponses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("responses"); else _explicitNullProperties?.Remove("responses"); } }
+        public List<string>? Responses { get => _explicitNullValueResponses; set { _explicitNullValueResponses = value; AdditionalData?.Remove("responses"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("responses"); else _explicitNullProperties?.Remove("responses"); } }
         private List<string>? _explicitNullValueResponses = default!;
 #nullable restore
 #else
-        public List<string> Responses { get => _explicitNullValueResponses; set { _explicitNullValueResponses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("responses"); else _explicitNullProperties?.Remove("responses"); } }
+        public List<string> Responses { get => _explicitNullValueResponses; set { _explicitNullValueResponses = value; AdditionalData?.Remove("responses"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("responses"); else _explicitNullProperties?.Remove("responses"); } }
         private List<string> _explicitNullValueResponses = default!;
 #endif
         /// <summary>Indicates if the operation was successful</summary>
-        public bool? Succeded { get => _explicitNullValueSucceded; set { _explicitNullValueSucceded = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("succeded"); else _explicitNullProperties?.Remove("succeded"); } }
+        public bool? Succeded { get => _explicitNullValueSucceded; set { _explicitNullValueSucceded = value; AdditionalData?.Remove("succeded"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("succeded"); else _explicitNullProperties?.Remove("succeded"); } }
         private bool? _explicitNullValueSucceded = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpdateTagsResponseDto"/> and sets the default values.

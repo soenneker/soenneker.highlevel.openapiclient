@@ -17,12 +17,18 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("hex") is { } nullNodeHex && nullNodeHex.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Hex = null;
-            if (parseNode.GetChildNode("hexa") is { } nullNodeHexa && nullNodeHexa.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Hexa = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("label") is { } nullNodeLabel && nullNodeLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Label = null;
-            if (parseNode.GetChildNode("rgb") is { } nullNodeRgb && nullNodeRgb.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Rgb = null;
-            if (parseNode.GetChildNode("rgba") is { } nullNodeRgba && nullNodeRgba.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Rgba = null;
+            if (parseNode.GetChildNode("hex") is null) { _explicitNullValueHex = default!; _explicitNullProperties?.Remove("hex"); }
+            else if (parseNode.GetChildNode("hex") is { } nullNodeHex && nullNodeHex.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Hex = null;
+            if (parseNode.GetChildNode("hexa") is null) { _explicitNullValueHexa = default!; _explicitNullProperties?.Remove("hexa"); }
+            else if (parseNode.GetChildNode("hexa") is { } nullNodeHexa && nullNodeHexa.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Hexa = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("label") is null) { _explicitNullValueLabel = default!; _explicitNullProperties?.Remove("label"); }
+            else if (parseNode.GetChildNode("label") is { } nullNodeLabel && nullNodeLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Label = null;
+            if (parseNode.GetChildNode("rgb") is null) { _explicitNullValueRgb = default!; _explicitNullProperties?.Remove("rgb"); }
+            else if (parseNode.GetChildNode("rgb") is { } nullNodeRgb && nullNodeRgb.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Rgb = null;
+            if (parseNode.GetChildNode("rgba") is null) { _explicitNullValueRgba = default!; _explicitNullProperties?.Remove("rgba"); }
+            else if (parseNode.GetChildNode("rgba") is { } nullNodeRgba && nullNodeRgba.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Rgba = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,61 +36,61 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Color in HEX format</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Hex { get => _explicitNullValueHex; set { _explicitNullValueHex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hex"); else _explicitNullProperties?.Remove("hex"); } }
+        public string? Hex { get => _explicitNullValueHex; set { _explicitNullValueHex = value; AdditionalData?.Remove("hex"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hex"); else _explicitNullProperties?.Remove("hex"); } }
         private string? _explicitNullValueHex = default!;
 #nullable restore
 #else
-        public string Hex { get => _explicitNullValueHex; set { _explicitNullValueHex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hex"); else _explicitNullProperties?.Remove("hex"); } }
+        public string Hex { get => _explicitNullValueHex; set { _explicitNullValueHex = value; AdditionalData?.Remove("hex"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hex"); else _explicitNullProperties?.Remove("hex"); } }
         private string _explicitNullValueHex = default!;
 #endif
         /// <summary>Color in HEXA format (with alpha)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Hexa { get => _explicitNullValueHexa; set { _explicitNullValueHexa = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hexa"); else _explicitNullProperties?.Remove("hexa"); } }
+        public string? Hexa { get => _explicitNullValueHexa; set { _explicitNullValueHexa = value; AdditionalData?.Remove("hexa"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hexa"); else _explicitNullProperties?.Remove("hexa"); } }
         private string? _explicitNullValueHexa = default!;
 #nullable restore
 #else
-        public string Hexa { get => _explicitNullValueHexa; set { _explicitNullValueHexa = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hexa"); else _explicitNullProperties?.Remove("hexa"); } }
+        public string Hexa { get => _explicitNullValueHexa; set { _explicitNullValueHexa = value; AdditionalData?.Remove("hexa"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hexa"); else _explicitNullProperties?.Remove("hexa"); } }
         private string _explicitNullValueHexa = default!;
 #endif
         /// <summary>Unique identifier for the color</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>Display label for the color</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
+        public string? Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; AdditionalData?.Remove("label"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
         private string? _explicitNullValueLabel = default!;
 #nullable restore
 #else
-        public string Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
+        public string Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; AdditionalData?.Remove("label"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
         private string _explicitNullValueLabel = default!;
 #endif
         /// <summary>Color in RGB format</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Rgb { get => _explicitNullValueRgb; set { _explicitNullValueRgb = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rgb"); else _explicitNullProperties?.Remove("rgb"); } }
+        public string? Rgb { get => _explicitNullValueRgb; set { _explicitNullValueRgb = value; AdditionalData?.Remove("rgb"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rgb"); else _explicitNullProperties?.Remove("rgb"); } }
         private string? _explicitNullValueRgb = default!;
 #nullable restore
 #else
-        public string Rgb { get => _explicitNullValueRgb; set { _explicitNullValueRgb = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rgb"); else _explicitNullProperties?.Remove("rgb"); } }
+        public string Rgb { get => _explicitNullValueRgb; set { _explicitNullValueRgb = value; AdditionalData?.Remove("rgb"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rgb"); else _explicitNullProperties?.Remove("rgb"); } }
         private string _explicitNullValueRgb = default!;
 #endif
         /// <summary>Color in RGBA format</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Rgba { get => _explicitNullValueRgba; set { _explicitNullValueRgba = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rgba"); else _explicitNullProperties?.Remove("rgba"); } }
+        public string? Rgba { get => _explicitNullValueRgba; set { _explicitNullValueRgba = value; AdditionalData?.Remove("rgba"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rgba"); else _explicitNullProperties?.Remove("rgba"); } }
         private string? _explicitNullValueRgba = default!;
 #nullable restore
 #else
-        public string Rgba { get => _explicitNullValueRgba; set { _explicitNullValueRgba = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rgba"); else _explicitNullProperties?.Remove("rgba"); } }
+        public string Rgba { get => _explicitNullValueRgba; set { _explicitNullValueRgba = value; AdditionalData?.Remove("rgba"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rgba"); else _explicitNullProperties?.Remove("rgba"); } }
         private string _explicitNullValueRgba = default!;
 #endif
         /// <summary>

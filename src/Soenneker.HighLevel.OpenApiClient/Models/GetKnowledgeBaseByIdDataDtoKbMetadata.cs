@@ -18,33 +18,39 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("faqs") is { } nullNodeFaqs && nullNodeFaqs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Faqs = null;
-            if (parseNode.GetChildNode("files") is { } nullNodeFiles && nullNodeFiles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Files = null;
-            if (parseNode.GetChildNode("richText") is { } nullNodeRichText && nullNodeRichText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RichText = null;
-            if (parseNode.GetChildNode("tables") is { } nullNodeTables && nullNodeTables.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tables = null;
-            if (parseNode.GetChildNode("urls") is { } nullNodeUrls && nullNodeUrls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Urls = null;
-            if (parseNode.GetChildNode("webSearches") is { } nullNodeWebSearches && nullNodeWebSearches.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebSearches = null;
+            if (parseNode.GetChildNode("faqs") is null) { _explicitNullValueFaqs = default!; _explicitNullProperties?.Remove("faqs"); }
+            else if (parseNode.GetChildNode("faqs") is { } nullNodeFaqs && nullNodeFaqs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Faqs = null;
+            if (parseNode.GetChildNode("files") is null) { _explicitNullValueFiles = default!; _explicitNullProperties?.Remove("files"); }
+            else if (parseNode.GetChildNode("files") is { } nullNodeFiles && nullNodeFiles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Files = null;
+            if (parseNode.GetChildNode("richText") is null) { _explicitNullValueRichText = default!; _explicitNullProperties?.Remove("richText"); }
+            else if (parseNode.GetChildNode("richText") is { } nullNodeRichText && nullNodeRichText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RichText = null;
+            if (parseNode.GetChildNode("tables") is null) { _explicitNullValueTables = default!; _explicitNullProperties?.Remove("tables"); }
+            else if (parseNode.GetChildNode("tables") is { } nullNodeTables && nullNodeTables.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tables = null;
+            if (parseNode.GetChildNode("urls") is null) { _explicitNullValueUrls = default!; _explicitNullProperties?.Remove("urls"); }
+            else if (parseNode.GetChildNode("urls") is { } nullNodeUrls && nullNodeUrls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Urls = null;
+            if (parseNode.GetChildNode("webSearches") is null) { _explicitNullValueWebSearches = default!; _explicitNullProperties?.Remove("webSearches"); }
+            else if (parseNode.GetChildNode("webSearches") is { } nullNodeWebSearches && nullNodeWebSearches.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebSearches = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Number of FAQs in the knowledge base</summary>
-        public double? Faqs { get => _explicitNullValueFaqs; set { _explicitNullValueFaqs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("faqs"); else _explicitNullProperties?.Remove("faqs"); } }
+        public double? Faqs { get => _explicitNullValueFaqs; set { _explicitNullValueFaqs = value; AdditionalData?.Remove("faqs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("faqs"); else _explicitNullProperties?.Remove("faqs"); } }
         private double? _explicitNullValueFaqs = default!;
         /// <summary>Number of files in the knowledge base</summary>
-        public double? Files { get => _explicitNullValueFiles; set { _explicitNullValueFiles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("files"); else _explicitNullProperties?.Remove("files"); } }
+        public double? Files { get => _explicitNullValueFiles; set { _explicitNullValueFiles = value; AdditionalData?.Remove("files"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("files"); else _explicitNullProperties?.Remove("files"); } }
         private double? _explicitNullValueFiles = default!;
         /// <summary>Number of rich text documents in the knowledge base</summary>
-        public double? RichText { get => _explicitNullValueRichText; set { _explicitNullValueRichText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("richText"); else _explicitNullProperties?.Remove("richText"); } }
+        public double? RichText { get => _explicitNullValueRichText; set { _explicitNullValueRichText = value; AdditionalData?.Remove("richText"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("richText"); else _explicitNullProperties?.Remove("richText"); } }
         private double? _explicitNullValueRichText = default!;
         /// <summary>Number of tables in the knowledge base</summary>
-        public double? Tables { get => _explicitNullValueTables; set { _explicitNullValueTables = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tables"); else _explicitNullProperties?.Remove("tables"); } }
+        public double? Tables { get => _explicitNullValueTables; set { _explicitNullValueTables = value; AdditionalData?.Remove("tables"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tables"); else _explicitNullProperties?.Remove("tables"); } }
         private double? _explicitNullValueTables = default!;
         /// <summary>Number of URLs in the knowledge base</summary>
-        public double? Urls { get => _explicitNullValueUrls; set { _explicitNullValueUrls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("urls"); else _explicitNullProperties?.Remove("urls"); } }
+        public double? Urls { get => _explicitNullValueUrls; set { _explicitNullValueUrls = value; AdditionalData?.Remove("urls"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("urls"); else _explicitNullProperties?.Remove("urls"); } }
         private double? _explicitNullValueUrls = default!;
         /// <summary>Number of web searche configs in the knowledge base</summary>
-        public double? WebSearches { get => _explicitNullValueWebSearches; set { _explicitNullValueWebSearches = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webSearches"); else _explicitNullProperties?.Remove("webSearches"); } }
+        public double? WebSearches { get => _explicitNullValueWebSearches; set { _explicitNullValueWebSearches = value; AdditionalData?.Remove("webSearches"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webSearches"); else _explicitNullProperties?.Remove("webSearches"); } }
         private double? _explicitNullValueWebSearches = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GetKnowledgeBaseByIdDataDtoKbMetadata"/> and sets the default values.

@@ -17,21 +17,24 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("excludedFromStore") is { } nullNodeExcludedFromStore && nullNodeExcludedFromStore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExcludedFromStore = null;
-            if (parseNode.GetChildNode("includedInStore") is { } nullNodeIncludedInStore && nullNodeIncludedInStore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncludedInStore = null;
-            if (parseNode.GetChildNode("totalProducts") is { } nullNodeTotalProducts && nullNodeTotalProducts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalProducts = null;
+            if (parseNode.GetChildNode("excludedFromStore") is null) { _explicitNullValueExcludedFromStore = default!; _explicitNullProperties?.Remove("excludedFromStore"); }
+            else if (parseNode.GetChildNode("excludedFromStore") is { } nullNodeExcludedFromStore && nullNodeExcludedFromStore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExcludedFromStore = null;
+            if (parseNode.GetChildNode("includedInStore") is null) { _explicitNullValueIncludedInStore = default!; _explicitNullProperties?.Remove("includedInStore"); }
+            else if (parseNode.GetChildNode("includedInStore") is { } nullNodeIncludedInStore && nullNodeIncludedInStore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncludedInStore = null;
+            if (parseNode.GetChildNode("totalProducts") is null) { _explicitNullValueTotalProducts = default!; _explicitNullProperties?.Remove("totalProducts"); }
+            else if (parseNode.GetChildNode("totalProducts") is { } nullNodeTotalProducts && nullNodeTotalProducts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalProducts = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Number of products excluded from the store</summary>
-        public double? ExcludedFromStore { get => _explicitNullValueExcludedFromStore; set { _explicitNullValueExcludedFromStore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("excludedFromStore"); else _explicitNullProperties?.Remove("excludedFromStore"); } }
+        public double? ExcludedFromStore { get => _explicitNullValueExcludedFromStore; set { _explicitNullValueExcludedFromStore = value; AdditionalData?.Remove("excludedFromStore"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("excludedFromStore"); else _explicitNullProperties?.Remove("excludedFromStore"); } }
         private double? _explicitNullValueExcludedFromStore = default!;
         /// <summary>Number of products included in the store</summary>
-        public double? IncludedInStore { get => _explicitNullValueIncludedInStore; set { _explicitNullValueIncludedInStore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("includedInStore"); else _explicitNullProperties?.Remove("includedInStore"); } }
+        public double? IncludedInStore { get => _explicitNullValueIncludedInStore; set { _explicitNullValueIncludedInStore = value; AdditionalData?.Remove("includedInStore"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("includedInStore"); else _explicitNullProperties?.Remove("includedInStore"); } }
         private double? _explicitNullValueIncludedInStore = default!;
         /// <summary>Total number of products</summary>
-        public double? TotalProducts { get => _explicitNullValueTotalProducts; set { _explicitNullValueTotalProducts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalProducts"); else _explicitNullProperties?.Remove("totalProducts"); } }
+        public double? TotalProducts { get => _explicitNullValueTotalProducts; set { _explicitNullValueTotalProducts = value; AdditionalData?.Remove("totalProducts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalProducts"); else _explicitNullProperties?.Remove("totalProducts"); } }
         private double? _explicitNullValueTotalProducts = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GetProductStatsResponseDto"/> and sets the default values.

@@ -17,7 +17,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("recurringTask") is { } nullNodeRecurringTask && nullNodeRecurringTask.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecurringTask = null;
+            if (parseNode.GetChildNode("recurringTask") is null) { _explicitNullValueRecurringTask = default!; _explicitNullProperties?.Remove("recurringTask"); }
+            else if (parseNode.GetChildNode("recurringTask") is { } nullNodeRecurringTask && nullNodeRecurringTask.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecurringTask = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Recurring Tasks</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.RecurringTaskSingleResponseDtoRecurringTask? RecurringTask { get => _explicitNullValueRecurringTask; set { _explicitNullValueRecurringTask = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurringTask"); else _explicitNullProperties?.Remove("recurringTask"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.RecurringTaskSingleResponseDtoRecurringTask? RecurringTask { get => _explicitNullValueRecurringTask; set { _explicitNullValueRecurringTask = value; AdditionalData?.Remove("recurringTask"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurringTask"); else _explicitNullProperties?.Remove("recurringTask"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.RecurringTaskSingleResponseDtoRecurringTask? _explicitNullValueRecurringTask = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.RecurringTaskSingleResponseDtoRecurringTask RecurringTask { get => _explicitNullValueRecurringTask; set { _explicitNullValueRecurringTask = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurringTask"); else _explicitNullProperties?.Remove("recurringTask"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.RecurringTaskSingleResponseDtoRecurringTask RecurringTask { get => _explicitNullValueRecurringTask; set { _explicitNullValueRecurringTask = value; AdditionalData?.Remove("recurringTask"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurringTask"); else _explicitNullProperties?.Remove("recurringTask"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.RecurringTaskSingleResponseDtoRecurringTask _explicitNullValueRecurringTask = default!;
 #endif
         /// <summary>

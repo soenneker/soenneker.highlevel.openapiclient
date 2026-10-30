@@ -17,23 +17,25 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("stringRuleItem") is { } nullNodeStringRuleItem && nullNodeStringRuleItem.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StringRuleItem = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("stringRuleItem") is null) { _explicitNullValueStringRuleItem = default!; _explicitNullProperties?.Remove("stringRuleItem"); }
+            else if (parseNode.GetChildNode("stringRuleItem") is { } nullNodeStringRuleItem && nullNodeStringRuleItem.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StringRuleItem = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Rule item name</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.RuleItemDtoName? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.RuleItemDtoName? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.RuleItemDtoName? _explicitNullValueName = default!;
         /// <summary>String rule item condition</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.RuleItemDtoStringRuleItem? StringRuleItem { get => _explicitNullValueStringRuleItem; set { _explicitNullValueStringRuleItem = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stringRuleItem"); else _explicitNullProperties?.Remove("stringRuleItem"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.RuleItemDtoStringRuleItem? StringRuleItem { get => _explicitNullValueStringRuleItem; set { _explicitNullValueStringRuleItem = value; AdditionalData?.Remove("stringRuleItem"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stringRuleItem"); else _explicitNullProperties?.Remove("stringRuleItem"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.RuleItemDtoStringRuleItem? _explicitNullValueStringRuleItem = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.RuleItemDtoStringRuleItem StringRuleItem { get => _explicitNullValueStringRuleItem; set { _explicitNullValueStringRuleItem = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stringRuleItem"); else _explicitNullProperties?.Remove("stringRuleItem"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.RuleItemDtoStringRuleItem StringRuleItem { get => _explicitNullValueStringRuleItem; set { _explicitNullValueStringRuleItem = value; AdditionalData?.Remove("stringRuleItem"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stringRuleItem"); else _explicitNullProperties?.Remove("stringRuleItem"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.RuleItemDtoStringRuleItem _explicitNullValueStringRuleItem = default!;
 #endif
         /// <summary>
@@ -61,7 +63,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "name", n => { Name = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.RuleItemDtoName>(); } },
+                { "name", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.RuleItemDtoName>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueName = default; _explicitNullProperties?.Remove("name"); AdditionalData["name"] = unknown; } else { Name = parsed; AdditionalData.Remove("name"); } } },
                 { "stringRuleItem", n => { StringRuleItem = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.RuleItemDtoStringRuleItem>(global::Soenneker.HighLevel.OpenApiClient.Models.RuleItemDtoStringRuleItem.CreateFromDiscriminatorValue); } },
             };
         }

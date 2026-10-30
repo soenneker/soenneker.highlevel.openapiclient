@@ -17,7 +17,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("business") is { } nullNodeBusiness && nullNodeBusiness.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Business = null;
+            if (parseNode.GetChildNode("business") is null) { _explicitNullValueBusiness = default!; _explicitNullProperties?.Remove("business"); }
+            else if (parseNode.GetChildNode("business") is { } nullNodeBusiness && nullNodeBusiness.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Business = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Business Response</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetBusinessByIdResponseDtoBusiness? Business { get => _explicitNullValueBusiness; set { _explicitNullValueBusiness = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business"); else _explicitNullProperties?.Remove("business"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetBusinessByIdResponseDtoBusiness? Business { get => _explicitNullValueBusiness; set { _explicitNullValueBusiness = value; AdditionalData?.Remove("business"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business"); else _explicitNullProperties?.Remove("business"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.GetBusinessByIdResponseDtoBusiness? _explicitNullValueBusiness = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetBusinessByIdResponseDtoBusiness Business { get => _explicitNullValueBusiness; set { _explicitNullValueBusiness = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business"); else _explicitNullProperties?.Remove("business"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetBusinessByIdResponseDtoBusiness Business { get => _explicitNullValueBusiness; set { _explicitNullValueBusiness = value; AdditionalData?.Remove("business"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("business"); else _explicitNullProperties?.Remove("business"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.GetBusinessByIdResponseDtoBusiness _explicitNullValueBusiness = default!;
 #endif
         /// <summary>

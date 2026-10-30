@@ -17,8 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("daysOfTheWeek") is { } nullNodeDaysOfTheWeek && nullNodeDaysOfTheWeek.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DaysOfTheWeek = null;
-            if (parseNode.GetChildNode("hours") is { } nullNodeHours && nullNodeHours.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Hours = null;
+            if (parseNode.GetChildNode("daysOfTheWeek") is null) { _explicitNullValueDaysOfTheWeek = default!; _explicitNullProperties?.Remove("daysOfTheWeek"); }
+            else if (parseNode.GetChildNode("daysOfTheWeek") is { } nullNodeDaysOfTheWeek && nullNodeDaysOfTheWeek.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DaysOfTheWeek = null;
+            if (parseNode.GetChildNode("hours") is null) { _explicitNullValueHours = default!; _explicitNullProperties?.Remove("hours"); }
+            else if (parseNode.GetChildNode("hours") is { } nullNodeHours && nullNodeHours.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Hours = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The daysOfTheWeek property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<double?>? DaysOfTheWeek { get => _explicitNullValueDaysOfTheWeek; set { _explicitNullValueDaysOfTheWeek = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("daysOfTheWeek"); else _explicitNullProperties?.Remove("daysOfTheWeek"); } }
+        public List<double?>? DaysOfTheWeek { get => _explicitNullValueDaysOfTheWeek; set { _explicitNullValueDaysOfTheWeek = value; AdditionalData?.Remove("daysOfTheWeek"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("daysOfTheWeek"); else _explicitNullProperties?.Remove("daysOfTheWeek"); } }
         private List<double?>? _explicitNullValueDaysOfTheWeek = default!;
 #nullable restore
 #else
-        public List<double?> DaysOfTheWeek { get => _explicitNullValueDaysOfTheWeek; set { _explicitNullValueDaysOfTheWeek = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("daysOfTheWeek"); else _explicitNullProperties?.Remove("daysOfTheWeek"); } }
+        public List<double?> DaysOfTheWeek { get => _explicitNullValueDaysOfTheWeek; set { _explicitNullValueDaysOfTheWeek = value; AdditionalData?.Remove("daysOfTheWeek"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("daysOfTheWeek"); else _explicitNullProperties?.Remove("daysOfTheWeek"); } }
         private List<double?> _explicitNullValueDaysOfTheWeek = default!;
 #endif
         /// <summary>The hours property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.Hour>? Hours { get => _explicitNullValueHours; set { _explicitNullValueHours = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hours"); else _explicitNullProperties?.Remove("hours"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.Hour>? Hours { get => _explicitNullValueHours; set { _explicitNullValueHours = value; AdditionalData?.Remove("hours"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hours"); else _explicitNullProperties?.Remove("hours"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.Hour>? _explicitNullValueHours = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.Hour> Hours { get => _explicitNullValueHours; set { _explicitNullValueHours = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hours"); else _explicitNullProperties?.Remove("hours"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.Hour> Hours { get => _explicitNullValueHours; set { _explicitNullValueHours = value; AdditionalData?.Remove("hours"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hours"); else _explicitNullProperties?.Remove("hours"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.Hour> _explicitNullValueHours = default!;
 #endif
         /// <summary>

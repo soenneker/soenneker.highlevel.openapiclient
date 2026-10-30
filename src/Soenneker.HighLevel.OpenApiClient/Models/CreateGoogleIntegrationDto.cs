@@ -17,19 +17,22 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("adAccountId") is { } nullNodeAdAccountId && nullNodeAdAccountId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdAccountId = null;
-            if (parseNode.GetChildNode("locationId") is { } nullNodeLocationId && nullNodeLocationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationId = null;
-            if (parseNode.GetChildNode("mccId") is { } nullNodeMccId && nullNodeMccId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MccId = null;
+            if (parseNode.GetChildNode("adAccountId") is null) { _explicitNullValueAdAccountId = default!; _explicitNullProperties?.Remove("adAccountId"); }
+            else if (parseNode.GetChildNode("adAccountId") is { } nullNodeAdAccountId && nullNodeAdAccountId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdAccountId = null;
+            if (parseNode.GetChildNode("locationId") is null) { _explicitNullValueLocationId = default!; _explicitNullProperties?.Remove("locationId"); }
+            else if (parseNode.GetChildNode("locationId") is { } nullNodeLocationId && nullNodeLocationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationId = null;
+            if (parseNode.GetChildNode("mccId") is null) { _explicitNullValueMccId = default!; _explicitNullProperties?.Remove("mccId"); }
+            else if (parseNode.GetChildNode("mccId") is { } nullNodeMccId && nullNodeMccId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MccId = null;
         }
 
         /// <summary>Ad account identifier</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AdAccountId { get => _explicitNullValueAdAccountId; set { _explicitNullValueAdAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adAccountId"); else _explicitNullProperties?.Remove("adAccountId"); } }
+        public string? AdAccountId { get => _explicitNullValueAdAccountId; set { _explicitNullValueAdAccountId = value; AdditionalData?.Remove("adAccountId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adAccountId"); else _explicitNullProperties?.Remove("adAccountId"); } }
         private string? _explicitNullValueAdAccountId = default!;
 #nullable restore
 #else
-        public string AdAccountId { get => _explicitNullValueAdAccountId; set { _explicitNullValueAdAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adAccountId"); else _explicitNullProperties?.Remove("adAccountId"); } }
+        public string AdAccountId { get => _explicitNullValueAdAccountId; set { _explicitNullValueAdAccountId = value; AdditionalData?.Remove("adAccountId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adAccountId"); else _explicitNullProperties?.Remove("adAccountId"); } }
         private string _explicitNullValueAdAccountId = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -37,21 +40,21 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Location identifier</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
+        public string? LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; AdditionalData?.Remove("locationId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
         private string? _explicitNullValueLocationId = default!;
 #nullable restore
 #else
-        public string LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
+        public string LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; AdditionalData?.Remove("locationId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
         private string _explicitNullValueLocationId = default!;
 #endif
         /// <summary>MCC identifier</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MccId { get => _explicitNullValueMccId; set { _explicitNullValueMccId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mccId"); else _explicitNullProperties?.Remove("mccId"); } }
+        public string? MccId { get => _explicitNullValueMccId; set { _explicitNullValueMccId = value; AdditionalData?.Remove("mccId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mccId"); else _explicitNullProperties?.Remove("mccId"); } }
         private string? _explicitNullValueMccId = default!;
 #nullable restore
 #else
-        public string MccId { get => _explicitNullValueMccId; set { _explicitNullValueMccId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mccId"); else _explicitNullProperties?.Remove("mccId"); } }
+        public string MccId { get => _explicitNullValueMccId; set { _explicitNullValueMccId = value; AdditionalData?.Remove("mccId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mccId"); else _explicitNullProperties?.Remove("mccId"); } }
         private string _explicitNullValueMccId = default!;
 #endif
         /// <summary>

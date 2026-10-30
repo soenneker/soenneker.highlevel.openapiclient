@@ -17,10 +17,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("app") is { } nullNodeApp && nullNodeApp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) App = null;
-            if (parseNode.GetChildNode("keyword") is { } nullNodeKeyword && nullNodeKeyword.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Keyword = null;
-            if (parseNode.GetChildNode("memberType") is { } nullNodeMemberType && nullNodeMemberType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MemberType = null;
-            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+            if (parseNode.GetChildNode("app") is null) { _explicitNullValueApp = default!; _explicitNullProperties?.Remove("app"); }
+            else if (parseNode.GetChildNode("app") is { } nullNodeApp && nullNodeApp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) App = null;
+            if (parseNode.GetChildNode("keyword") is null) { _explicitNullValueKeyword = default!; _explicitNullProperties?.Remove("keyword"); }
+            else if (parseNode.GetChildNode("keyword") is { } nullNodeKeyword && nullNodeKeyword.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Keyword = null;
+            if (parseNode.GetChildNode("memberType") is null) { _explicitNullValueMemberType = default!; _explicitNullProperties?.Remove("memberType"); }
+            else if (parseNode.GetChildNode("memberType") is { } nullNodeMemberType && nullNodeMemberType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MemberType = null;
+            if (parseNode.GetChildNode("url") is null) { _explicitNullValueUrl = default!; _explicitNullProperties?.Remove("url"); }
+            else if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,34 +32,34 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>App identifier</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? App { get => _explicitNullValueApp; set { _explicitNullValueApp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app"); else _explicitNullProperties?.Remove("app"); } }
+        public string? App { get => _explicitNullValueApp; set { _explicitNullValueApp = value; AdditionalData?.Remove("app"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app"); else _explicitNullProperties?.Remove("app"); } }
         private string? _explicitNullValueApp = default!;
 #nullable restore
 #else
-        public string App { get => _explicitNullValueApp; set { _explicitNullValueApp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app"); else _explicitNullProperties?.Remove("app"); } }
+        public string App { get => _explicitNullValueApp; set { _explicitNullValueApp = value; AdditionalData?.Remove("app"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app"); else _explicitNullProperties?.Remove("app"); } }
         private string _explicitNullValueApp = default!;
 #endif
         /// <summary>Keyword value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Keyword { get => _explicitNullValueKeyword; set { _explicitNullValueKeyword = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("keyword"); else _explicitNullProperties?.Remove("keyword"); } }
+        public string? Keyword { get => _explicitNullValueKeyword; set { _explicitNullValueKeyword = value; AdditionalData?.Remove("keyword"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("keyword"); else _explicitNullProperties?.Remove("keyword"); } }
         private string? _explicitNullValueKeyword = default!;
 #nullable restore
 #else
-        public string Keyword { get => _explicitNullValueKeyword; set { _explicitNullValueKeyword = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("keyword"); else _explicitNullProperties?.Remove("keyword"); } }
+        public string Keyword { get => _explicitNullValueKeyword; set { _explicitNullValueKeyword = value; AdditionalData?.Remove("keyword"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("keyword"); else _explicitNullProperties?.Remove("keyword"); } }
         private string _explicitNullValueKeyword = default!;
 #endif
         /// <summary>Member type</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.MemberDtoMemberType? MemberType { get => _explicitNullValueMemberType; set { _explicitNullValueMemberType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("memberType"); else _explicitNullProperties?.Remove("memberType"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.MemberDtoMemberType? MemberType { get => _explicitNullValueMemberType; set { _explicitNullValueMemberType = value; AdditionalData?.Remove("memberType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("memberType"); else _explicitNullProperties?.Remove("memberType"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.MemberDtoMemberType? _explicitNullValueMemberType = default!;
         /// <summary>URL value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>
@@ -85,7 +89,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             {
                 { "app", n => { App = n.GetStringValue(); } },
                 { "keyword", n => { Keyword = n.GetStringValue(); } },
-                { "memberType", n => { MemberType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.MemberDtoMemberType>(); } },
+                { "memberType", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.MemberDtoMemberType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueMemberType = default; _explicitNullProperties?.Remove("memberType"); AdditionalData["memberType"] = unknown; } else { MemberType = parsed; AdditionalData.Remove("memberType"); } } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
         }

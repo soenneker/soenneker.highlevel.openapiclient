@@ -17,25 +17,29 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("closeHour") is { } nullNodeCloseHour && nullNodeCloseHour.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CloseHour = null;
-            if (parseNode.GetChildNode("closeMinute") is { } nullNodeCloseMinute && nullNodeCloseMinute.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CloseMinute = null;
-            if (parseNode.GetChildNode("openHour") is { } nullNodeOpenHour && nullNodeOpenHour.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OpenHour = null;
-            if (parseNode.GetChildNode("openMinute") is { } nullNodeOpenMinute && nullNodeOpenMinute.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OpenMinute = null;
+            if (parseNode.GetChildNode("closeHour") is null) { _explicitNullValueCloseHour = default!; _explicitNullProperties?.Remove("closeHour"); }
+            else if (parseNode.GetChildNode("closeHour") is { } nullNodeCloseHour && nullNodeCloseHour.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CloseHour = null;
+            if (parseNode.GetChildNode("closeMinute") is null) { _explicitNullValueCloseMinute = default!; _explicitNullProperties?.Remove("closeMinute"); }
+            else if (parseNode.GetChildNode("closeMinute") is { } nullNodeCloseMinute && nullNodeCloseMinute.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CloseMinute = null;
+            if (parseNode.GetChildNode("openHour") is null) { _explicitNullValueOpenHour = default!; _explicitNullProperties?.Remove("openHour"); }
+            else if (parseNode.GetChildNode("openHour") is { } nullNodeOpenHour && nullNodeOpenHour.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OpenHour = null;
+            if (parseNode.GetChildNode("openMinute") is null) { _explicitNullValueOpenMinute = default!; _explicitNullProperties?.Remove("openMinute"); }
+            else if (parseNode.GetChildNode("openMinute") is { } nullNodeOpenMinute && nullNodeOpenMinute.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OpenMinute = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The closeHour property</summary>
-        public double? CloseHour { get => _explicitNullValueCloseHour; set { _explicitNullValueCloseHour = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("closeHour"); else _explicitNullProperties?.Remove("closeHour"); } }
+        public double? CloseHour { get => _explicitNullValueCloseHour; set { _explicitNullValueCloseHour = value; AdditionalData?.Remove("closeHour"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("closeHour"); else _explicitNullProperties?.Remove("closeHour"); } }
         private double? _explicitNullValueCloseHour = default!;
         /// <summary>The closeMinute property</summary>
-        public double? CloseMinute { get => _explicitNullValueCloseMinute; set { _explicitNullValueCloseMinute = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("closeMinute"); else _explicitNullProperties?.Remove("closeMinute"); } }
+        public double? CloseMinute { get => _explicitNullValueCloseMinute; set { _explicitNullValueCloseMinute = value; AdditionalData?.Remove("closeMinute"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("closeMinute"); else _explicitNullProperties?.Remove("closeMinute"); } }
         private double? _explicitNullValueCloseMinute = default!;
         /// <summary>The openHour property</summary>
-        public double? OpenHour { get => _explicitNullValueOpenHour; set { _explicitNullValueOpenHour = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("openHour"); else _explicitNullProperties?.Remove("openHour"); } }
+        public double? OpenHour { get => _explicitNullValueOpenHour; set { _explicitNullValueOpenHour = value; AdditionalData?.Remove("openHour"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("openHour"); else _explicitNullProperties?.Remove("openHour"); } }
         private double? _explicitNullValueOpenHour = default!;
         /// <summary>The openMinute property</summary>
-        public double? OpenMinute { get => _explicitNullValueOpenMinute; set { _explicitNullValueOpenMinute = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("openMinute"); else _explicitNullProperties?.Remove("openMinute"); } }
+        public double? OpenMinute { get => _explicitNullValueOpenMinute; set { _explicitNullValueOpenMinute = value; AdditionalData?.Remove("openMinute"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("openMinute"); else _explicitNullProperties?.Remove("openMinute"); } }
         private double? _explicitNullValueOpenMinute = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.Hour"/> and sets the default values.

@@ -17,7 +17,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("youtubeVideoId") is { } nullNodeYoutubeVideoId && nullNodeYoutubeVideoId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) YoutubeVideoId = null;
+            if (parseNode.GetChildNode("youtubeVideoId") is null) { _explicitNullValueYoutubeVideoId = default!; _explicitNullProperties?.Remove("youtubeVideoId"); }
+            else if (parseNode.GetChildNode("youtubeVideoId") is { } nullNodeYoutubeVideoId && nullNodeYoutubeVideoId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) YoutubeVideoId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>YouTube video ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? YoutubeVideoId { get => _explicitNullValueYoutubeVideoId; set { _explicitNullValueYoutubeVideoId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("youtubeVideoId"); else _explicitNullProperties?.Remove("youtubeVideoId"); } }
+        public string? YoutubeVideoId { get => _explicitNullValueYoutubeVideoId; set { _explicitNullValueYoutubeVideoId = value; AdditionalData?.Remove("youtubeVideoId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("youtubeVideoId"); else _explicitNullProperties?.Remove("youtubeVideoId"); } }
         private string? _explicitNullValueYoutubeVideoId = default!;
 #nullable restore
 #else
-        public string YoutubeVideoId { get => _explicitNullValueYoutubeVideoId; set { _explicitNullValueYoutubeVideoId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("youtubeVideoId"); else _explicitNullProperties?.Remove("youtubeVideoId"); } }
+        public string YoutubeVideoId { get => _explicitNullValueYoutubeVideoId; set { _explicitNullValueYoutubeVideoId = value; AdditionalData?.Remove("youtubeVideoId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("youtubeVideoId"); else _explicitNullProperties?.Remove("youtubeVideoId"); } }
         private string _explicitNullValueYoutubeVideoId = default!;
 #endif
         /// <summary>

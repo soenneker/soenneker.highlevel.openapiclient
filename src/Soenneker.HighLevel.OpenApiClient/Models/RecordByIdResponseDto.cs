@@ -17,7 +17,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("record") is { } nullNodeRecord && nullNodeRecord.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Record = null;
+            if (parseNode.GetChildNode("record") is null) { _explicitNullValueRecord = default!; _explicitNullProperties?.Remove("record"); }
+            else if (parseNode.GetChildNode("record") is { } nullNodeRecord && nullNodeRecord.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Record = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The record property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.IRecordSchema? Record { get => _explicitNullValueRecord; set { _explicitNullValueRecord = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("record"); else _explicitNullProperties?.Remove("record"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.IRecordSchema? Record { get => _explicitNullValueRecord; set { _explicitNullValueRecord = value; AdditionalData?.Remove("record"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("record"); else _explicitNullProperties?.Remove("record"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.IRecordSchema? _explicitNullValueRecord = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.IRecordSchema Record { get => _explicitNullValueRecord; set { _explicitNullValueRecord = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("record"); else _explicitNullProperties?.Remove("record"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.IRecordSchema Record { get => _explicitNullValueRecord; set { _explicitNullValueRecord = value; AdditionalData?.Remove("record"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("record"); else _explicitNullProperties?.Remove("record"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.IRecordSchema _explicitNullValueRecord = default!;
 #endif
         /// <summary>

@@ -95,7 +95,7 @@ namespace Soenneker.HighLevel.OpenApiClient.AdManager.AdPublishing.Facebook.Page
         public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.AdManager.AdPublishing.Facebook.Page.PageRequestBuilder.PageRequestBuilderDeleteQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.DELETE, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://services.leadconnectorhq.com", "/ad-manager/ad-publishing/facebook/page", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

@@ -18,8 +18,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("negatives") is { } nullNodeNegatives && nullNodeNegatives.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Negatives = null;
-            if (parseNode.GetChildNode("positives") is { } nullNodePositives && nullNodePositives.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Positives = null;
+            if (parseNode.GetChildNode("negatives") is null) { _explicitNullValueNegatives = default!; _explicitNullProperties?.Remove("negatives"); }
+            else if (parseNode.GetChildNode("negatives") is { } nullNodeNegatives && nullNodeNegatives.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Negatives = null;
+            if (parseNode.GetChildNode("positives") is null) { _explicitNullValuePositives = default!; _explicitNullProperties?.Remove("positives"); }
+            else if (parseNode.GetChildNode("positives") is { } nullNodePositives && nullNodePositives.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Positives = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Negative keywords</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleKeywordItemDto>? Negatives { get => _explicitNullValueNegatives; set { _explicitNullValueNegatives = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("negatives"); else _explicitNullProperties?.Remove("negatives"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleKeywordItemDto>? Negatives { get => _explicitNullValueNegatives; set { _explicitNullValueNegatives = value; AdditionalData?.Remove("negatives"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("negatives"); else _explicitNullProperties?.Remove("negatives"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleKeywordItemDto>? _explicitNullValueNegatives = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleKeywordItemDto> Negatives { get => _explicitNullValueNegatives; set { _explicitNullValueNegatives = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("negatives"); else _explicitNullProperties?.Remove("negatives"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleKeywordItemDto> Negatives { get => _explicitNullValueNegatives; set { _explicitNullValueNegatives = value; AdditionalData?.Remove("negatives"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("negatives"); else _explicitNullProperties?.Remove("negatives"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleKeywordItemDto> _explicitNullValueNegatives = default!;
 #endif
         /// <summary>Positive keywords</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleKeywordItemDto>? Positives { get => _explicitNullValuePositives; set { _explicitNullValuePositives = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("positives"); else _explicitNullProperties?.Remove("positives"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleKeywordItemDto>? Positives { get => _explicitNullValuePositives; set { _explicitNullValuePositives = value; AdditionalData?.Remove("positives"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("positives"); else _explicitNullProperties?.Remove("positives"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleKeywordItemDto>? _explicitNullValuePositives = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleKeywordItemDto> Positives { get => _explicitNullValuePositives; set { _explicitNullValuePositives = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("positives"); else _explicitNullProperties?.Remove("positives"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleKeywordItemDto> Positives { get => _explicitNullValuePositives; set { _explicitNullValuePositives = value; AdditionalData?.Remove("positives"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("positives"); else _explicitNullProperties?.Remove("positives"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleKeywordItemDto> _explicitNullValuePositives = default!;
 #endif
         /// <summary>

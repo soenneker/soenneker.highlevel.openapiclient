@@ -18,13 +18,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("isEmailValid") is { } nullNodeIsEmailValid && nullNodeIsEmailValid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsEmailValid = null;
+            if (parseNode.GetChildNode("isEmailValid") is null) { _explicitNullValueIsEmailValid = default!; _explicitNullProperties?.Remove("isEmailValid"); }
+            else if (parseNode.GetChildNode("isEmailValid") is { } nullNodeIsEmailValid && nullNodeIsEmailValid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsEmailValid = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Email verification status</summary>
-        public bool? IsEmailValid { get => _explicitNullValueIsEmailValid; set { _explicitNullValueIsEmailValid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isEmailValid"); else _explicitNullProperties?.Remove("isEmailValid"); } }
+        public bool? IsEmailValid { get => _explicitNullValueIsEmailValid; set { _explicitNullValueIsEmailValid = value; AdditionalData?.Remove("isEmailValid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isEmailValid"); else _explicitNullProperties?.Remove("isEmailValid"); } }
         private bool? _explicitNullValueIsEmailValid = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.EmailVerifiedResponseDtoLeadconnectorRecomendation"/> and sets the default values.

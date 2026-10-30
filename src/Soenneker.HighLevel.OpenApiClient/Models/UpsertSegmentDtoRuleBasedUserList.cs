@@ -18,8 +18,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("flexibleRuleUserList") is { } nullNodeFlexibleRuleUserList && nullNodeFlexibleRuleUserList.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FlexibleRuleUserList = null;
-            if (parseNode.GetChildNode("prepopulationStatus") is { } nullNodePrepopulationStatus && nullNodePrepopulationStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrepopulationStatus = null;
+            if (parseNode.GetChildNode("flexibleRuleUserList") is null) { _explicitNullValueFlexibleRuleUserList = default!; _explicitNullProperties?.Remove("flexibleRuleUserList"); }
+            else if (parseNode.GetChildNode("flexibleRuleUserList") is { } nullNodeFlexibleRuleUserList && nullNodeFlexibleRuleUserList.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FlexibleRuleUserList = null;
+            if (parseNode.GetChildNode("prepopulationStatus") is null) { _explicitNullValuePrepopulationStatus = default!; _explicitNullProperties?.Remove("prepopulationStatus"); }
+            else if (parseNode.GetChildNode("prepopulationStatus") is { } nullNodePrepopulationStatus && nullNodePrepopulationStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrepopulationStatus = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,15 +29,15 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Flexible rule user list configuration</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.RuleBasedUserListDtoFlexibleRuleUserList? FlexibleRuleUserList { get => _explicitNullValueFlexibleRuleUserList; set { _explicitNullValueFlexibleRuleUserList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flexibleRuleUserList"); else _explicitNullProperties?.Remove("flexibleRuleUserList"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.RuleBasedUserListDtoFlexibleRuleUserList? FlexibleRuleUserList { get => _explicitNullValueFlexibleRuleUserList; set { _explicitNullValueFlexibleRuleUserList = value; AdditionalData?.Remove("flexibleRuleUserList"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flexibleRuleUserList"); else _explicitNullProperties?.Remove("flexibleRuleUserList"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.RuleBasedUserListDtoFlexibleRuleUserList? _explicitNullValueFlexibleRuleUserList = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.RuleBasedUserListDtoFlexibleRuleUserList FlexibleRuleUserList { get => _explicitNullValueFlexibleRuleUserList; set { _explicitNullValueFlexibleRuleUserList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flexibleRuleUserList"); else _explicitNullProperties?.Remove("flexibleRuleUserList"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.RuleBasedUserListDtoFlexibleRuleUserList FlexibleRuleUserList { get => _explicitNullValueFlexibleRuleUserList; set { _explicitNullValueFlexibleRuleUserList = value; AdditionalData?.Remove("flexibleRuleUserList"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flexibleRuleUserList"); else _explicitNullProperties?.Remove("flexibleRuleUserList"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.RuleBasedUserListDtoFlexibleRuleUserList _explicitNullValueFlexibleRuleUserList = default!;
 #endif
         /// <summary>Prepopulation status</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.RequestedPrepopulationStatus? PrepopulationStatus { get => _explicitNullValuePrepopulationStatus; set { _explicitNullValuePrepopulationStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prepopulationStatus"); else _explicitNullProperties?.Remove("prepopulationStatus"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.RequestedPrepopulationStatus? PrepopulationStatus { get => _explicitNullValuePrepopulationStatus; set { _explicitNullValuePrepopulationStatus = value; AdditionalData?.Remove("prepopulationStatus"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prepopulationStatus"); else _explicitNullProperties?.Remove("prepopulationStatus"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.RequestedPrepopulationStatus? _explicitNullValuePrepopulationStatus = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpsertSegmentDtoRuleBasedUserList"/> and sets the default values.
@@ -63,7 +65,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "flexibleRuleUserList", n => { FlexibleRuleUserList = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.RuleBasedUserListDtoFlexibleRuleUserList>(global::Soenneker.HighLevel.OpenApiClient.Models.RuleBasedUserListDtoFlexibleRuleUserList.CreateFromDiscriminatorValue); } },
-                { "prepopulationStatus", n => { PrepopulationStatus = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.RequestedPrepopulationStatus>(); } },
+                { "prepopulationStatus", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.RequestedPrepopulationStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePrepopulationStatus = default; _explicitNullProperties?.Remove("prepopulationStatus"); AdditionalData["prepopulationStatus"] = unknown; } else { PrepopulationStatus = parsed; AdditionalData.Remove("prepopulationStatus"); } } },
             };
         }
         /// <summary>

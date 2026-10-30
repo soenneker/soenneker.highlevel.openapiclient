@@ -17,10 +17,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("feedback") is { } nullNodeFeedback && nullNodeFeedback.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Feedback = null;
-            if (parseNode.GetChildNode("locationId") is { } nullNodeLocationId && nullNodeLocationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationId = null;
-            if (parseNode.GetChildNode("starred") is { } nullNodeStarred && nullNodeStarred.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Starred = null;
-            if (parseNode.GetChildNode("unreadCount") is { } nullNodeUnreadCount && nullNodeUnreadCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnreadCount = null;
+            if (parseNode.GetChildNode("feedback") is null) { _explicitNullValueFeedback = default!; _explicitNullProperties?.Remove("feedback"); }
+            else if (parseNode.GetChildNode("feedback") is { } nullNodeFeedback && nullNodeFeedback.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Feedback = null;
+            if (parseNode.GetChildNode("locationId") is null) { _explicitNullValueLocationId = default!; _explicitNullProperties?.Remove("locationId"); }
+            else if (parseNode.GetChildNode("locationId") is { } nullNodeLocationId && nullNodeLocationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationId = null;
+            if (parseNode.GetChildNode("starred") is null) { _explicitNullValueStarred = default!; _explicitNullProperties?.Remove("starred"); }
+            else if (parseNode.GetChildNode("starred") is { } nullNodeStarred && nullNodeStarred.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Starred = null;
+            if (parseNode.GetChildNode("unreadCount") is null) { _explicitNullValueUnreadCount = default!; _explicitNullProperties?.Remove("unreadCount"); }
+            else if (parseNode.GetChildNode("unreadCount") is { } nullNodeUnreadCount && nullNodeUnreadCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnreadCount = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,28 +32,28 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The feedback property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateConversationDtoFeedbackProperty2? Feedback { get => _explicitNullValueFeedback; set { _explicitNullValueFeedback = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("feedback"); else _explicitNullProperties?.Remove("feedback"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateConversationDtoFeedbackProperty2? Feedback { get => _explicitNullValueFeedback; set { _explicitNullValueFeedback = value; AdditionalData?.Remove("feedback"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("feedback"); else _explicitNullProperties?.Remove("feedback"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.UpdateConversationDtoFeedbackProperty2? _explicitNullValueFeedback = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateConversationDtoFeedbackProperty2 Feedback { get => _explicitNullValueFeedback; set { _explicitNullValueFeedback = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("feedback"); else _explicitNullProperties?.Remove("feedback"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateConversationDtoFeedbackProperty2 Feedback { get => _explicitNullValueFeedback; set { _explicitNullValueFeedback = value; AdditionalData?.Remove("feedback"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("feedback"); else _explicitNullProperties?.Remove("feedback"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.UpdateConversationDtoFeedbackProperty2 _explicitNullValueFeedback = default!;
 #endif
         /// <summary>Location ID as string</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
+        public string? LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; AdditionalData?.Remove("locationId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
         private string? _explicitNullValueLocationId = default!;
 #nullable restore
 #else
-        public string LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
+        public string LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; AdditionalData?.Remove("locationId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
         private string _explicitNullValueLocationId = default!;
 #endif
         /// <summary>Starred status of the conversation.</summary>
-        public bool? Starred { get => _explicitNullValueStarred; set { _explicitNullValueStarred = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("starred"); else _explicitNullProperties?.Remove("starred"); } }
+        public bool? Starred { get => _explicitNullValueStarred; set { _explicitNullValueStarred = value; AdditionalData?.Remove("starred"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("starred"); else _explicitNullProperties?.Remove("starred"); } }
         private bool? _explicitNullValueStarred = default!;
         /// <summary>Count of unread messages in the conversation</summary>
-        public double? UnreadCount { get => _explicitNullValueUnreadCount; set { _explicitNullValueUnreadCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unreadCount"); else _explicitNullProperties?.Remove("unreadCount"); } }
+        public double? UnreadCount { get => _explicitNullValueUnreadCount; set { _explicitNullValueUnreadCount = value; AdditionalData?.Remove("unreadCount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unreadCount"); else _explicitNullProperties?.Remove("unreadCount"); } }
         private double? _explicitNullValueUnreadCount = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpdateConversationDto"/> and sets the default values.

@@ -17,10 +17,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("predefinedField") is { } nullNodePredefinedField && nullNodePredefinedField.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PredefinedField = null;
-            if (parseNode.GetChildNode("question") is { } nullNodeQuestion && nullNodeQuestion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Question = null;
-            if (parseNode.GetChildNode("questionDetails") is { } nullNodeQuestionDetails && nullNodeQuestionDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QuestionDetails = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("predefinedField") is null) { _explicitNullValuePredefinedField = default!; _explicitNullProperties?.Remove("predefinedField"); }
+            else if (parseNode.GetChildNode("predefinedField") is { } nullNodePredefinedField && nullNodePredefinedField.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PredefinedField = null;
+            if (parseNode.GetChildNode("question") is null) { _explicitNullValueQuestion = default!; _explicitNullProperties?.Remove("question"); }
+            else if (parseNode.GetChildNode("question") is { } nullNodeQuestion && nullNodeQuestion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Question = null;
+            if (parseNode.GetChildNode("questionDetails") is null) { _explicitNullValueQuestionDetails = default!; _explicitNullProperties?.Remove("questionDetails"); }
+            else if (parseNode.GetChildNode("questionDetails") is { } nullNodeQuestionDetails && nullNodeQuestionDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QuestionDetails = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,41 +32,41 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Question field name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>Predefined field identifier</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PredefinedField { get => _explicitNullValuePredefinedField; set { _explicitNullValuePredefinedField = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("predefinedField"); else _explicitNullProperties?.Remove("predefinedField"); } }
+        public string? PredefinedField { get => _explicitNullValuePredefinedField; set { _explicitNullValuePredefinedField = value; AdditionalData?.Remove("predefinedField"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("predefinedField"); else _explicitNullProperties?.Remove("predefinedField"); } }
         private string? _explicitNullValuePredefinedField = default!;
 #nullable restore
 #else
-        public string PredefinedField { get => _explicitNullValuePredefinedField; set { _explicitNullValuePredefinedField = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("predefinedField"); else _explicitNullProperties?.Remove("predefinedField"); } }
+        public string PredefinedField { get => _explicitNullValuePredefinedField; set { _explicitNullValuePredefinedField = value; AdditionalData?.Remove("predefinedField"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("predefinedField"); else _explicitNullProperties?.Remove("predefinedField"); } }
         private string _explicitNullValuePredefinedField = default!;
 #endif
         /// <summary>Question text</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormQuestionDtoQuestion? Question { get => _explicitNullValueQuestion; set { _explicitNullValueQuestion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("question"); else _explicitNullProperties?.Remove("question"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormQuestionDtoQuestion? Question { get => _explicitNullValueQuestion; set { _explicitNullValueQuestion = value; AdditionalData?.Remove("question"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("question"); else _explicitNullProperties?.Remove("question"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormQuestionDtoQuestion? _explicitNullValueQuestion = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormQuestionDtoQuestion Question { get => _explicitNullValueQuestion; set { _explicitNullValueQuestion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("question"); else _explicitNullProperties?.Remove("question"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormQuestionDtoQuestion Question { get => _explicitNullValueQuestion; set { _explicitNullValueQuestion = value; AdditionalData?.Remove("question"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("question"); else _explicitNullProperties?.Remove("question"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormQuestionDtoQuestion _explicitNullValueQuestion = default!;
 #endif
         /// <summary>Question type details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormQuestionDtoQuestionDetails? QuestionDetails { get => _explicitNullValueQuestionDetails; set { _explicitNullValueQuestionDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("questionDetails"); else _explicitNullProperties?.Remove("questionDetails"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormQuestionDtoQuestionDetails? QuestionDetails { get => _explicitNullValueQuestionDetails; set { _explicitNullValueQuestionDetails = value; AdditionalData?.Remove("questionDetails"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("questionDetails"); else _explicitNullProperties?.Remove("questionDetails"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormQuestionDtoQuestionDetails? _explicitNullValueQuestionDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormQuestionDtoQuestionDetails QuestionDetails { get => _explicitNullValueQuestionDetails; set { _explicitNullValueQuestionDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("questionDetails"); else _explicitNullProperties?.Remove("questionDetails"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormQuestionDtoQuestionDetails QuestionDetails { get => _explicitNullValueQuestionDetails; set { _explicitNullValueQuestionDetails = value; AdditionalData?.Remove("questionDetails"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("questionDetails"); else _explicitNullProperties?.Remove("questionDetails"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.LeadFormQuestionDtoQuestionDetails _explicitNullValueQuestionDetails = default!;
 #endif
         /// <summary>

@@ -18,7 +18,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("landingPageUrl") is { } nullNodeLandingPageUrl && nullNodeLandingPageUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LandingPageUrl = null;
+            if (parseNode.GetChildNode("landingPageUrl") is null) { _explicitNullValueLandingPageUrl = default!; _explicitNullProperties?.Remove("landingPageUrl"); }
+            else if (parseNode.GetChildNode("landingPageUrl") is { } nullNodeLandingPageUrl && nullNodeLandingPageUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LandingPageUrl = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Landing page URL</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LandingPageUrl { get => _explicitNullValueLandingPageUrl; set { _explicitNullValueLandingPageUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("landingPageUrl"); else _explicitNullProperties?.Remove("landingPageUrl"); } }
+        public string? LandingPageUrl { get => _explicitNullValueLandingPageUrl; set { _explicitNullValueLandingPageUrl = value; AdditionalData?.Remove("landingPageUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("landingPageUrl"); else _explicitNullProperties?.Remove("landingPageUrl"); } }
         private string? _explicitNullValueLandingPageUrl = default!;
 #nullable restore
 #else
-        public string LandingPageUrl { get => _explicitNullValueLandingPageUrl; set { _explicitNullValueLandingPageUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("landingPageUrl"); else _explicitNullProperties?.Remove("landingPageUrl"); } }
+        public string LandingPageUrl { get => _explicitNullValueLandingPageUrl; set { _explicitNullValueLandingPageUrl = value; AdditionalData?.Remove("landingPageUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("landingPageUrl"); else _explicitNullProperties?.Remove("landingPageUrl"); } }
         private string _explicitNullValueLandingPageUrl = default!;
 #endif
         /// <summary>

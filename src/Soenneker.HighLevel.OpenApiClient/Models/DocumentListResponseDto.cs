@@ -17,10 +17,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("documents") is { } nullNodeDocuments && nullNodeDocuments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Documents = null;
-            if (parseNode.GetChildNode("total") is { } nullNodeTotal && nullNodeTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Total = null;
-            if (parseNode.GetChildNode("whiteLabelBaseUrl") is { } nullNodeWhiteLabelBaseUrl && nullNodeWhiteLabelBaseUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WhiteLabelBaseUrl = null;
-            if (parseNode.GetChildNode("whiteLabelBaseUrlForInvoice") is { } nullNodeWhiteLabelBaseUrlForInvoice && nullNodeWhiteLabelBaseUrlForInvoice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WhiteLabelBaseUrlForInvoice = null;
+            if (parseNode.GetChildNode("documents") is null) { _explicitNullValueDocuments = default!; _explicitNullProperties?.Remove("documents"); }
+            else if (parseNode.GetChildNode("documents") is { } nullNodeDocuments && nullNodeDocuments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Documents = null;
+            if (parseNode.GetChildNode("total") is null) { _explicitNullValueTotal = default!; _explicitNullProperties?.Remove("total"); }
+            else if (parseNode.GetChildNode("total") is { } nullNodeTotal && nullNodeTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Total = null;
+            if (parseNode.GetChildNode("whiteLabelBaseUrl") is null) { _explicitNullValueWhiteLabelBaseUrl = default!; _explicitNullProperties?.Remove("whiteLabelBaseUrl"); }
+            else if (parseNode.GetChildNode("whiteLabelBaseUrl") is { } nullNodeWhiteLabelBaseUrl && nullNodeWhiteLabelBaseUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WhiteLabelBaseUrl = null;
+            if (parseNode.GetChildNode("whiteLabelBaseUrlForInvoice") is null) { _explicitNullValueWhiteLabelBaseUrlForInvoice = default!; _explicitNullProperties?.Remove("whiteLabelBaseUrlForInvoice"); }
+            else if (parseNode.GetChildNode("whiteLabelBaseUrlForInvoice") is { } nullNodeWhiteLabelBaseUrlForInvoice && nullNodeWhiteLabelBaseUrlForInvoice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WhiteLabelBaseUrlForInvoice = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,21 +32,21 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>List of documents</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.DocumentDto>? Documents { get => _explicitNullValueDocuments; set { _explicitNullValueDocuments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("documents"); else _explicitNullProperties?.Remove("documents"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.DocumentDto>? Documents { get => _explicitNullValueDocuments; set { _explicitNullValueDocuments = value; AdditionalData?.Remove("documents"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("documents"); else _explicitNullProperties?.Remove("documents"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.DocumentDto>? _explicitNullValueDocuments = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.DocumentDto> Documents { get => _explicitNullValueDocuments; set { _explicitNullValueDocuments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("documents"); else _explicitNullProperties?.Remove("documents"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.DocumentDto> Documents { get => _explicitNullValueDocuments; set { _explicitNullValueDocuments = value; AdditionalData?.Remove("documents"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("documents"); else _explicitNullProperties?.Remove("documents"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.DocumentDto> _explicitNullValueDocuments = default!;
 #endif
         /// <summary>Total records available</summary>
-        public double? Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total"); else _explicitNullProperties?.Remove("total"); } }
+        public double? Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; AdditionalData?.Remove("total"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total"); else _explicitNullProperties?.Remove("total"); } }
         private double? _explicitNullValueTotal = default!;
         /// <summary>WhiteLabel url for document</summary>
-        public double? WhiteLabelBaseUrl { get => _explicitNullValueWhiteLabelBaseUrl; set { _explicitNullValueWhiteLabelBaseUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whiteLabelBaseUrl"); else _explicitNullProperties?.Remove("whiteLabelBaseUrl"); } }
+        public double? WhiteLabelBaseUrl { get => _explicitNullValueWhiteLabelBaseUrl; set { _explicitNullValueWhiteLabelBaseUrl = value; AdditionalData?.Remove("whiteLabelBaseUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whiteLabelBaseUrl"); else _explicitNullProperties?.Remove("whiteLabelBaseUrl"); } }
         private double? _explicitNullValueWhiteLabelBaseUrl = default!;
         /// <summary>WhiteLabel url for invoice</summary>
-        public double? WhiteLabelBaseUrlForInvoice { get => _explicitNullValueWhiteLabelBaseUrlForInvoice; set { _explicitNullValueWhiteLabelBaseUrlForInvoice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whiteLabelBaseUrlForInvoice"); else _explicitNullProperties?.Remove("whiteLabelBaseUrlForInvoice"); } }
+        public double? WhiteLabelBaseUrlForInvoice { get => _explicitNullValueWhiteLabelBaseUrlForInvoice; set { _explicitNullValueWhiteLabelBaseUrlForInvoice = value; AdditionalData?.Remove("whiteLabelBaseUrlForInvoice"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whiteLabelBaseUrlForInvoice"); else _explicitNullProperties?.Remove("whiteLabelBaseUrlForInvoice"); } }
         private double? _explicitNullValueWhiteLabelBaseUrlForInvoice = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.DocumentListResponseDto"/> and sets the default values.

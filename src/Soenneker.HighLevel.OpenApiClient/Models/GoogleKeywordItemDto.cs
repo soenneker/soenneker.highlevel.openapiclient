@@ -17,8 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("keyword") is { } nullNodeKeyword && nullNodeKeyword.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Keyword = null;
-            if (parseNode.GetChildNode("matchType") is { } nullNodeMatchType && nullNodeMatchType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MatchType = null;
+            if (parseNode.GetChildNode("keyword") is null) { _explicitNullValueKeyword = default!; _explicitNullProperties?.Remove("keyword"); }
+            else if (parseNode.GetChildNode("keyword") is { } nullNodeKeyword && nullNodeKeyword.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Keyword = null;
+            if (parseNode.GetChildNode("matchType") is null) { _explicitNullValueMatchType = default!; _explicitNullProperties?.Remove("matchType"); }
+            else if (parseNode.GetChildNode("matchType") is { } nullNodeMatchType && nullNodeMatchType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MatchType = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Keyword text</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Keyword { get => _explicitNullValueKeyword; set { _explicitNullValueKeyword = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("keyword"); else _explicitNullProperties?.Remove("keyword"); } }
+        public string? Keyword { get => _explicitNullValueKeyword; set { _explicitNullValueKeyword = value; AdditionalData?.Remove("keyword"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("keyword"); else _explicitNullProperties?.Remove("keyword"); } }
         private string? _explicitNullValueKeyword = default!;
 #nullable restore
 #else
-        public string Keyword { get => _explicitNullValueKeyword; set { _explicitNullValueKeyword = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("keyword"); else _explicitNullProperties?.Remove("keyword"); } }
+        public string Keyword { get => _explicitNullValueKeyword; set { _explicitNullValueKeyword = value; AdditionalData?.Remove("keyword"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("keyword"); else _explicitNullProperties?.Remove("keyword"); } }
         private string _explicitNullValueKeyword = default!;
 #endif
         /// <summary>Match type (BROAD, PHRASE, EXACT)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MatchType { get => _explicitNullValueMatchType; set { _explicitNullValueMatchType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("matchType"); else _explicitNullProperties?.Remove("matchType"); } }
+        public string? MatchType { get => _explicitNullValueMatchType; set { _explicitNullValueMatchType = value; AdditionalData?.Remove("matchType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("matchType"); else _explicitNullProperties?.Remove("matchType"); } }
         private string? _explicitNullValueMatchType = default!;
 #nullable restore
 #else
-        public string MatchType { get => _explicitNullValueMatchType; set { _explicitNullValueMatchType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("matchType"); else _explicitNullProperties?.Remove("matchType"); } }
+        public string MatchType { get => _explicitNullValueMatchType; set { _explicitNullValueMatchType = value; AdditionalData?.Remove("matchType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("matchType"); else _explicitNullProperties?.Remove("matchType"); } }
         private string _explicitNullValueMatchType = default!;
 #endif
         /// <summary>

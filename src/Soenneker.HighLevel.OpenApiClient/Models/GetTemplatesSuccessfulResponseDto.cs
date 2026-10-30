@@ -17,8 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("templates") is { } nullNodeTemplates && nullNodeTemplates.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Templates = null;
-            if (parseNode.GetChildNode("totalCount") is { } nullNodeTotalCount && nullNodeTotalCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalCount = null;
+            if (parseNode.GetChildNode("templates") is null) { _explicitNullValueTemplates = default!; _explicitNullProperties?.Remove("templates"); }
+            else if (parseNode.GetChildNode("templates") is { } nullNodeTemplates && nullNodeTemplates.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Templates = null;
+            if (parseNode.GetChildNode("totalCount") is null) { _explicitNullValueTotalCount = default!; _explicitNullProperties?.Remove("totalCount"); }
+            else if (parseNode.GetChildNode("totalCount") is { } nullNodeTotalCount && nullNodeTotalCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalCount = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,15 +28,15 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The templates property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GetTemplatesSuccessfulResponseDtoTemplatesItem>? Templates { get => _explicitNullValueTemplates; set { _explicitNullValueTemplates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("templates"); else _explicitNullProperties?.Remove("templates"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GetTemplatesSuccessfulResponseDtoTemplatesItem>? Templates { get => _explicitNullValueTemplates; set { _explicitNullValueTemplates = value; AdditionalData?.Remove("templates"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("templates"); else _explicitNullProperties?.Remove("templates"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.GetTemplatesSuccessfulResponseDtoTemplatesItem>? _explicitNullValueTemplates = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GetTemplatesSuccessfulResponseDtoTemplatesItem> Templates { get => _explicitNullValueTemplates; set { _explicitNullValueTemplates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("templates"); else _explicitNullProperties?.Remove("templates"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GetTemplatesSuccessfulResponseDtoTemplatesItem> Templates { get => _explicitNullValueTemplates; set { _explicitNullValueTemplates = value; AdditionalData?.Remove("templates"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("templates"); else _explicitNullProperties?.Remove("templates"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.GetTemplatesSuccessfulResponseDtoTemplatesItem> _explicitNullValueTemplates = default!;
 #endif
         /// <summary>The totalCount property</summary>
-        public double? TotalCount { get => _explicitNullValueTotalCount; set { _explicitNullValueTotalCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalCount"); else _explicitNullProperties?.Remove("totalCount"); } }
+        public double? TotalCount { get => _explicitNullValueTotalCount; set { _explicitNullValueTotalCount = value; AdditionalData?.Remove("totalCount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalCount"); else _explicitNullProperties?.Remove("totalCount"); } }
         private double? _explicitNullValueTotalCount = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GetTemplatesSuccessfulResponseDto"/> and sets the default values.

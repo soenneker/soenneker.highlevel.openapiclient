@@ -17,25 +17,29 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("bookingOption") is { } nullNodeBookingOption && nullNodeBookingOption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BookingOption = null;
-            if (parseNode.GetChildNode("bookingOverlapDefaultStatus") is { } nullNodeBookingOverlapDefaultStatus && nullNodeBookingOverlapDefaultStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BookingOverlapDefaultStatus = null;
-            if (parseNode.GetChildNode("count") is { } nullNodeCount && nullNodeCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Count = null;
-            if (parseNode.GetChildNode("freq") is { } nullNodeFreq && nullNodeFreq.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Freq = null;
+            if (parseNode.GetChildNode("bookingOption") is null) { _explicitNullValueBookingOption = default!; _explicitNullProperties?.Remove("bookingOption"); }
+            else if (parseNode.GetChildNode("bookingOption") is { } nullNodeBookingOption && nullNodeBookingOption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BookingOption = null;
+            if (parseNode.GetChildNode("bookingOverlapDefaultStatus") is null) { _explicitNullValueBookingOverlapDefaultStatus = default!; _explicitNullProperties?.Remove("bookingOverlapDefaultStatus"); }
+            else if (parseNode.GetChildNode("bookingOverlapDefaultStatus") is { } nullNodeBookingOverlapDefaultStatus && nullNodeBookingOverlapDefaultStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BookingOverlapDefaultStatus = null;
+            if (parseNode.GetChildNode("count") is null) { _explicitNullValueCount = default!; _explicitNullProperties?.Remove("count"); }
+            else if (parseNode.GetChildNode("count") is { } nullNodeCount && nullNodeCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Count = null;
+            if (parseNode.GetChildNode("freq") is null) { _explicitNullValueFreq = default!; _explicitNullProperties?.Remove("freq"); }
+            else if (parseNode.GetChildNode("freq") is { } nullNodeFreq && nullNodeFreq.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Freq = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>This setting contols what to do incase a recurring slot is unavailable</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.RecurringBookingOption? BookingOption { get => _explicitNullValueBookingOption; set { _explicitNullValueBookingOption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bookingOption"); else _explicitNullProperties?.Remove("bookingOption"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.RecurringBookingOption? BookingOption { get => _explicitNullValueBookingOption; set { _explicitNullValueBookingOption = value; AdditionalData?.Remove("bookingOption"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bookingOption"); else _explicitNullProperties?.Remove("bookingOption"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.RecurringBookingOption? _explicitNullValueBookingOption = default!;
         /// <summary>This setting contols what to do incase a recurring slot is unavailable</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.RecurringBookingOverlapDefaultStatus? BookingOverlapDefaultStatus { get => _explicitNullValueBookingOverlapDefaultStatus; set { _explicitNullValueBookingOverlapDefaultStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bookingOverlapDefaultStatus"); else _explicitNullProperties?.Remove("bookingOverlapDefaultStatus"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.RecurringBookingOverlapDefaultStatus? BookingOverlapDefaultStatus { get => _explicitNullValueBookingOverlapDefaultStatus; set { _explicitNullValueBookingOverlapDefaultStatus = value; AdditionalData?.Remove("bookingOverlapDefaultStatus"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bookingOverlapDefaultStatus"); else _explicitNullProperties?.Remove("bookingOverlapDefaultStatus"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.RecurringBookingOverlapDefaultStatus? _explicitNullValueBookingOverlapDefaultStatus = default!;
         /// <summary>Number of recurrences</summary>
-        public double? Count { get => _explicitNullValueCount; set { _explicitNullValueCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("count"); else _explicitNullProperties?.Remove("count"); } }
+        public double? Count { get => _explicitNullValueCount; set { _explicitNullValueCount = value; AdditionalData?.Remove("count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("count"); else _explicitNullProperties?.Remove("count"); } }
         private double? _explicitNullValueCount = default!;
         /// <summary>The freq property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.RecurringFreq? Freq { get => _explicitNullValueFreq; set { _explicitNullValueFreq = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("freq"); else _explicitNullProperties?.Remove("freq"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.RecurringFreq? Freq { get => _explicitNullValueFreq; set { _explicitNullValueFreq = value; AdditionalData?.Remove("freq"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("freq"); else _explicitNullProperties?.Remove("freq"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.RecurringFreq? _explicitNullValueFreq = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.Recurring"/> and sets the default values.
@@ -62,10 +66,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "bookingOption", n => { BookingOption = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.RecurringBookingOption>(); } },
-                { "bookingOverlapDefaultStatus", n => { BookingOverlapDefaultStatus = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.RecurringBookingOverlapDefaultStatus>(); } },
+                { "bookingOption", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.RecurringBookingOption>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueBookingOption = default; _explicitNullProperties?.Remove("bookingOption"); AdditionalData["bookingOption"] = unknown; } else { BookingOption = parsed; AdditionalData.Remove("bookingOption"); } } },
+                { "bookingOverlapDefaultStatus", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.RecurringBookingOverlapDefaultStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueBookingOverlapDefaultStatus = default; _explicitNullProperties?.Remove("bookingOverlapDefaultStatus"); AdditionalData["bookingOverlapDefaultStatus"] = unknown; } else { BookingOverlapDefaultStatus = parsed; AdditionalData.Remove("bookingOverlapDefaultStatus"); } } },
                 { "count", n => { Count = n.GetDoubleValue(); } },
-                { "freq", n => { Freq = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.RecurringFreq>(); } },
+                { "freq", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.RecurringFreq>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueFreq = default; _explicitNullProperties?.Remove("freq"); AdditionalData["freq"] = unknown; } else { Freq = parsed; AdditionalData.Remove("freq"); } } },
             };
         }
         /// <summary>

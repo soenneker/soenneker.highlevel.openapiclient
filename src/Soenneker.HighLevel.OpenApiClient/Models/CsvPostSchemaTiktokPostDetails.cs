@@ -18,44 +18,51 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("enableComment") is { } nullNodeEnableComment && nullNodeEnableComment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableComment = null;
-            if (parseNode.GetChildNode("enableDuet") is { } nullNodeEnableDuet && nullNodeEnableDuet.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableDuet = null;
-            if (parseNode.GetChildNode("enableStitch") is { } nullNodeEnableStitch && nullNodeEnableStitch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableStitch = null;
-            if (parseNode.GetChildNode("privacyLevel") is { } nullNodePrivacyLevel && nullNodePrivacyLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrivacyLevel = null;
-            if (parseNode.GetChildNode("promoteOtherBrand") is { } nullNodePromoteOtherBrand && nullNodePromoteOtherBrand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PromoteOtherBrand = null;
-            if (parseNode.GetChildNode("promoteYourBrand") is { } nullNodePromoteYourBrand && nullNodePromoteYourBrand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PromoteYourBrand = null;
-            if (parseNode.GetChildNode("videoDisclosure") is { } nullNodeVideoDisclosure && nullNodeVideoDisclosure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VideoDisclosure = null;
+            if (parseNode.GetChildNode("enableComment") is null) { _explicitNullValueEnableComment = default!; _explicitNullProperties?.Remove("enableComment"); }
+            else if (parseNode.GetChildNode("enableComment") is { } nullNodeEnableComment && nullNodeEnableComment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableComment = null;
+            if (parseNode.GetChildNode("enableDuet") is null) { _explicitNullValueEnableDuet = default!; _explicitNullProperties?.Remove("enableDuet"); }
+            else if (parseNode.GetChildNode("enableDuet") is { } nullNodeEnableDuet && nullNodeEnableDuet.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableDuet = null;
+            if (parseNode.GetChildNode("enableStitch") is null) { _explicitNullValueEnableStitch = default!; _explicitNullProperties?.Remove("enableStitch"); }
+            else if (parseNode.GetChildNode("enableStitch") is { } nullNodeEnableStitch && nullNodeEnableStitch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableStitch = null;
+            if (parseNode.GetChildNode("privacyLevel") is null) { _explicitNullValuePrivacyLevel = default!; _explicitNullProperties?.Remove("privacyLevel"); }
+            else if (parseNode.GetChildNode("privacyLevel") is { } nullNodePrivacyLevel && nullNodePrivacyLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrivacyLevel = null;
+            if (parseNode.GetChildNode("promoteOtherBrand") is null) { _explicitNullValuePromoteOtherBrand = default!; _explicitNullProperties?.Remove("promoteOtherBrand"); }
+            else if (parseNode.GetChildNode("promoteOtherBrand") is { } nullNodePromoteOtherBrand && nullNodePromoteOtherBrand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PromoteOtherBrand = null;
+            if (parseNode.GetChildNode("promoteYourBrand") is null) { _explicitNullValuePromoteYourBrand = default!; _explicitNullProperties?.Remove("promoteYourBrand"); }
+            else if (parseNode.GetChildNode("promoteYourBrand") is { } nullNodePromoteYourBrand && nullNodePromoteYourBrand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PromoteYourBrand = null;
+            if (parseNode.GetChildNode("videoDisclosure") is null) { _explicitNullValueVideoDisclosure = default!; _explicitNullProperties?.Remove("videoDisclosure"); }
+            else if (parseNode.GetChildNode("videoDisclosure") is { } nullNodeVideoDisclosure && nullNodeVideoDisclosure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VideoDisclosure = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>enable comment</summary>
-        public bool? EnableComment { get => _explicitNullValueEnableComment; set { _explicitNullValueEnableComment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enableComment"); else _explicitNullProperties?.Remove("enableComment"); } }
+        public bool? EnableComment { get => _explicitNullValueEnableComment; set { _explicitNullValueEnableComment = value; AdditionalData?.Remove("enableComment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enableComment"); else _explicitNullProperties?.Remove("enableComment"); } }
         private bool? _explicitNullValueEnableComment = default!;
         /// <summary>enable duet</summary>
-        public bool? EnableDuet { get => _explicitNullValueEnableDuet; set { _explicitNullValueEnableDuet = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enableDuet"); else _explicitNullProperties?.Remove("enableDuet"); } }
+        public bool? EnableDuet { get => _explicitNullValueEnableDuet; set { _explicitNullValueEnableDuet = value; AdditionalData?.Remove("enableDuet"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enableDuet"); else _explicitNullProperties?.Remove("enableDuet"); } }
         private bool? _explicitNullValueEnableDuet = default!;
         /// <summary>enable stitch</summary>
-        public bool? EnableStitch { get => _explicitNullValueEnableStitch; set { _explicitNullValueEnableStitch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enableStitch"); else _explicitNullProperties?.Remove("enableStitch"); } }
+        public bool? EnableStitch { get => _explicitNullValueEnableStitch; set { _explicitNullValueEnableStitch = value; AdditionalData?.Remove("enableStitch"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enableStitch"); else _explicitNullProperties?.Remove("enableStitch"); } }
         private bool? _explicitNullValueEnableStitch = default!;
         /// <summary>privacy level is an enum and must be one of the following values: PUBLIC_TO_EVERYONE, MUTUAL_FOLLOW_FRIENDS, SELF_ONLY</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaTiktokPostDetailsPrivacyLevel? PrivacyLevel { get => _explicitNullValuePrivacyLevel; set { _explicitNullValuePrivacyLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("privacyLevel"); else _explicitNullProperties?.Remove("privacyLevel"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaTiktokPostDetailsPrivacyLevel? _explicitNullValuePrivacyLevel = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoTiktokPostDetailsPrivacyLevel? PrivacyLevel { get => _explicitNullValuePrivacyLevel; set { _explicitNullValuePrivacyLevel = value; AdditionalData?.Remove("privacyLevel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("privacyLevel"); else _explicitNullProperties?.Remove("privacyLevel"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoTiktokPostDetailsPrivacyLevel? _explicitNullValuePrivacyLevel = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaTiktokPostDetailsPrivacyLevel PrivacyLevel { get => _explicitNullValuePrivacyLevel; set { _explicitNullValuePrivacyLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("privacyLevel"); else _explicitNullProperties?.Remove("privacyLevel"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaTiktokPostDetailsPrivacyLevel _explicitNullValuePrivacyLevel = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoTiktokPostDetailsPrivacyLevel PrivacyLevel { get => _explicitNullValuePrivacyLevel; set { _explicitNullValuePrivacyLevel = value; AdditionalData?.Remove("privacyLevel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("privacyLevel"); else _explicitNullProperties?.Remove("privacyLevel"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoTiktokPostDetailsPrivacyLevel _explicitNullValuePrivacyLevel = default!;
 #endif
         /// <summary>promote other brand</summary>
-        public bool? PromoteOtherBrand { get => _explicitNullValuePromoteOtherBrand; set { _explicitNullValuePromoteOtherBrand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("promoteOtherBrand"); else _explicitNullProperties?.Remove("promoteOtherBrand"); } }
+        public bool? PromoteOtherBrand { get => _explicitNullValuePromoteOtherBrand; set { _explicitNullValuePromoteOtherBrand = value; AdditionalData?.Remove("promoteOtherBrand"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("promoteOtherBrand"); else _explicitNullProperties?.Remove("promoteOtherBrand"); } }
         private bool? _explicitNullValuePromoteOtherBrand = default!;
         /// <summary>promote your brand</summary>
-        public bool? PromoteYourBrand { get => _explicitNullValuePromoteYourBrand; set { _explicitNullValuePromoteYourBrand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("promoteYourBrand"); else _explicitNullProperties?.Remove("promoteYourBrand"); } }
+        public bool? PromoteYourBrand { get => _explicitNullValuePromoteYourBrand; set { _explicitNullValuePromoteYourBrand = value; AdditionalData?.Remove("promoteYourBrand"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("promoteYourBrand"); else _explicitNullProperties?.Remove("promoteYourBrand"); } }
         private bool? _explicitNullValuePromoteYourBrand = default!;
         /// <summary>video disclosure</summary>
-        public bool? VideoDisclosure { get => _explicitNullValueVideoDisclosure; set { _explicitNullValueVideoDisclosure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("videoDisclosure"); else _explicitNullProperties?.Remove("videoDisclosure"); } }
+        public bool? VideoDisclosure { get => _explicitNullValueVideoDisclosure; set { _explicitNullValueVideoDisclosure = value; AdditionalData?.Remove("videoDisclosure"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("videoDisclosure"); else _explicitNullProperties?.Remove("videoDisclosure"); } }
         private bool? _explicitNullValueVideoDisclosure = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaTiktokPostDetails"/> and sets the default values.
@@ -85,7 +92,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "enableComment", n => { EnableComment = n.GetBoolValue(); } },
                 { "enableDuet", n => { EnableDuet = n.GetBoolValue(); } },
                 { "enableStitch", n => { EnableStitch = n.GetBoolValue(); } },
-                { "privacyLevel", n => { PrivacyLevel = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaTiktokPostDetailsPrivacyLevel>(global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaTiktokPostDetailsPrivacyLevel.CreateFromDiscriminatorValue); } },
+                { "privacyLevel", n => { PrivacyLevel = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoTiktokPostDetailsPrivacyLevel>(global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoTiktokPostDetailsPrivacyLevel.CreateFromDiscriminatorValue); } },
                 { "promoteOtherBrand", n => { PromoteOtherBrand = n.GetBoolValue(); } },
                 { "promoteYourBrand", n => { PromoteYourBrand = n.GetBoolValue(); } },
                 { "videoDisclosure", n => { VideoDisclosure = n.GetBoolValue(); } },
@@ -101,7 +108,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteBoolValue("enableComment", EnableComment);
             writer.WriteBoolValue("enableDuet", EnableDuet);
             writer.WriteBoolValue("enableStitch", EnableStitch);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CsvPostSchemaTiktokPostDetailsPrivacyLevel>("privacyLevel", PrivacyLevel);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoTiktokPostDetailsPrivacyLevel>("privacyLevel", PrivacyLevel);
             writer.WriteBoolValue("promoteOtherBrand", PromoteOtherBrand);
             writer.WriteBoolValue("promoteYourBrand", PromoteYourBrand);
             writer.WriteBoolValue("videoDisclosure", VideoDisclosure);

@@ -17,8 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("bsb_number") is { } nullNodeBsbNumber && nullNodeBsbNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BsbNumber = null;
-            if (parseNode.GetChildNode("last4") is { } nullNodeLast4 && nullNodeLast4.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Last4 = null;
+            if (parseNode.GetChildNode("bsb_number") is null) { _explicitNullValueBsbNumber = default!; _explicitNullProperties?.Remove("bsb_number"); }
+            else if (parseNode.GetChildNode("bsb_number") is { } nullNodeBsbNumber && nullNodeBsbNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BsbNumber = null;
+            if (parseNode.GetChildNode("last4") is null) { _explicitNullValueLast4 = default!; _explicitNullProperties?.Remove("last4"); }
+            else if (parseNode.GetChildNode("last4") is { } nullNodeLast4 && nullNodeLast4.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Last4 = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The bsb_number property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BsbNumber { get => _explicitNullValueBsbNumber; set { _explicitNullValueBsbNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bsb_number"); else _explicitNullProperties?.Remove("bsb_number"); } }
+        public string? BsbNumber { get => _explicitNullValueBsbNumber; set { _explicitNullValueBsbNumber = value; AdditionalData?.Remove("bsb_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bsb_number"); else _explicitNullProperties?.Remove("bsb_number"); } }
         private string? _explicitNullValueBsbNumber = default!;
 #nullable restore
 #else
-        public string BsbNumber { get => _explicitNullValueBsbNumber; set { _explicitNullValueBsbNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bsb_number"); else _explicitNullProperties?.Remove("bsb_number"); } }
+        public string BsbNumber { get => _explicitNullValueBsbNumber; set { _explicitNullValueBsbNumber = value; AdditionalData?.Remove("bsb_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bsb_number"); else _explicitNullProperties?.Remove("bsb_number"); } }
         private string _explicitNullValueBsbNumber = default!;
 #endif
         /// <summary>The last4 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Last4 { get => _explicitNullValueLast4; set { _explicitNullValueLast4 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last4"); else _explicitNullProperties?.Remove("last4"); } }
+        public string? Last4 { get => _explicitNullValueLast4; set { _explicitNullValueLast4 = value; AdditionalData?.Remove("last4"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last4"); else _explicitNullProperties?.Remove("last4"); } }
         private string? _explicitNullValueLast4 = default!;
 #nullable restore
 #else
-        public string Last4 { get => _explicitNullValueLast4; set { _explicitNullValueLast4 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last4"); else _explicitNullProperties?.Remove("last4"); } }
+        public string Last4 { get => _explicitNullValueLast4; set { _explicitNullValueLast4 = value; AdditionalData?.Remove("last4"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last4"); else _explicitNullProperties?.Remove("last4"); } }
         private string _explicitNullValueLast4 = default!;
 #endif
         /// <summary>

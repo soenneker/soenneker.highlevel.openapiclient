@@ -17,8 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("fingerprintId") is { } nullNodeFingerprintId && nullNodeFingerprintId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FingerprintId = null;
-            if (parseNode.GetChildNode("numbers") is { } nullNodeNumbers && nullNodeNumbers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Numbers = null;
+            if (parseNode.GetChildNode("fingerprintId") is null) { _explicitNullValueFingerprintId = default!; _explicitNullProperties?.Remove("fingerprintId"); }
+            else if (parseNode.GetChildNode("fingerprintId") is { } nullNodeFingerprintId && nullNodeFingerprintId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FingerprintId = null;
+            if (parseNode.GetChildNode("numbers") is null) { _explicitNullValueNumbers = default!; _explicitNullProperties?.Remove("numbers"); }
+            else if (parseNode.GetChildNode("numbers") is { } nullNodeNumbers && nullNodeNumbers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Numbers = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Unique fingerprint ID for this search result, required when purchasing one of the returned numbers</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FingerprintId { get => _explicitNullValueFingerprintId; set { _explicitNullValueFingerprintId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fingerprintId"); else _explicitNullProperties?.Remove("fingerprintId"); } }
+        public string? FingerprintId { get => _explicitNullValueFingerprintId; set { _explicitNullValueFingerprintId = value; AdditionalData?.Remove("fingerprintId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fingerprintId"); else _explicitNullProperties?.Remove("fingerprintId"); } }
         private string? _explicitNullValueFingerprintId = default!;
 #nullable restore
 #else
-        public string FingerprintId { get => _explicitNullValueFingerprintId; set { _explicitNullValueFingerprintId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fingerprintId"); else _explicitNullProperties?.Remove("fingerprintId"); } }
+        public string FingerprintId { get => _explicitNullValueFingerprintId; set { _explicitNullValueFingerprintId = value; AdditionalData?.Remove("fingerprintId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fingerprintId"); else _explicitNullProperties?.Remove("fingerprintId"); } }
         private string _explicitNullValueFingerprintId = default!;
 #endif
         /// <summary>List of available phone numbers matching the search criteria</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.AvailablePhoneNumberDto>? Numbers { get => _explicitNullValueNumbers; set { _explicitNullValueNumbers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("numbers"); else _explicitNullProperties?.Remove("numbers"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.AvailablePhoneNumberDto>? Numbers { get => _explicitNullValueNumbers; set { _explicitNullValueNumbers = value; AdditionalData?.Remove("numbers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("numbers"); else _explicitNullProperties?.Remove("numbers"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.AvailablePhoneNumberDto>? _explicitNullValueNumbers = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.AvailablePhoneNumberDto> Numbers { get => _explicitNullValueNumbers; set { _explicitNullValueNumbers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("numbers"); else _explicitNullProperties?.Remove("numbers"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.AvailablePhoneNumberDto> Numbers { get => _explicitNullValueNumbers; set { _explicitNullValueNumbers = value; AdditionalData?.Remove("numbers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("numbers"); else _explicitNullProperties?.Remove("numbers"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.AvailablePhoneNumberDto> _explicitNullValueNumbers = default!;
 #endif
         /// <summary>

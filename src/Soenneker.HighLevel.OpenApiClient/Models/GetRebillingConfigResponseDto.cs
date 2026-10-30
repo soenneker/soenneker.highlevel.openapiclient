@@ -17,7 +17,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("plans") is { } nullNodePlans && nullNodePlans.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Plans = null;
+            if (parseNode.GetChildNode("plans") is null) { _explicitNullValuePlans = default!; _explicitNullProperties?.Remove("plans"); }
+            else if (parseNode.GetChildNode("plans") is { } nullNodePlans && nullNodePlans.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Plans = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The rebilling plans configuration</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetRebillingConfigResponseDtoPlans? Plans { get => _explicitNullValuePlans; set { _explicitNullValuePlans = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plans"); else _explicitNullProperties?.Remove("plans"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetRebillingConfigResponseDtoPlans? Plans { get => _explicitNullValuePlans; set { _explicitNullValuePlans = value; AdditionalData?.Remove("plans"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plans"); else _explicitNullProperties?.Remove("plans"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.GetRebillingConfigResponseDtoPlans? _explicitNullValuePlans = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetRebillingConfigResponseDtoPlans Plans { get => _explicitNullValuePlans; set { _explicitNullValuePlans = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plans"); else _explicitNullProperties?.Remove("plans"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetRebillingConfigResponseDtoPlans Plans { get => _explicitNullValuePlans; set { _explicitNullValuePlans = value; AdditionalData?.Remove("plans"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plans"); else _explicitNullProperties?.Remove("plans"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.GetRebillingConfigResponseDtoPlans _explicitNullValuePlans = default!;
 #endif
         /// <summary>

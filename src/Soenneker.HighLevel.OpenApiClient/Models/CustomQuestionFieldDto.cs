@@ -17,8 +17,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("customQuestionText") is { } nullNodeCustomQuestionText && nullNodeCustomQuestionText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomQuestionText = null;
-            if (parseNode.GetChildNode("singleChoiceAnswers") is { } nullNodeSingleChoiceAnswers && nullNodeSingleChoiceAnswers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SingleChoiceAnswers = null;
+            if (parseNode.GetChildNode("customQuestionText") is null) { _explicitNullValueCustomQuestionText = default!; _explicitNullProperties?.Remove("customQuestionText"); }
+            else if (parseNode.GetChildNode("customQuestionText") is { } nullNodeCustomQuestionText && nullNodeCustomQuestionText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomQuestionText = null;
+            if (parseNode.GetChildNode("singleChoiceAnswers") is null) { _explicitNullValueSingleChoiceAnswers = default!; _explicitNullProperties?.Remove("singleChoiceAnswers"); }
+            else if (parseNode.GetChildNode("singleChoiceAnswers") is { } nullNodeSingleChoiceAnswers && nullNodeSingleChoiceAnswers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SingleChoiceAnswers = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Custom question text shown to the user</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomQuestionText { get => _explicitNullValueCustomQuestionText; set { _explicitNullValueCustomQuestionText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customQuestionText"); else _explicitNullProperties?.Remove("customQuestionText"); } }
+        public string? CustomQuestionText { get => _explicitNullValueCustomQuestionText; set { _explicitNullValueCustomQuestionText = value; AdditionalData?.Remove("customQuestionText"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customQuestionText"); else _explicitNullProperties?.Remove("customQuestionText"); } }
         private string? _explicitNullValueCustomQuestionText = default!;
 #nullable restore
 #else
-        public string CustomQuestionText { get => _explicitNullValueCustomQuestionText; set { _explicitNullValueCustomQuestionText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customQuestionText"); else _explicitNullProperties?.Remove("customQuestionText"); } }
+        public string CustomQuestionText { get => _explicitNullValueCustomQuestionText; set { _explicitNullValueCustomQuestionText = value; AdditionalData?.Remove("customQuestionText"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customQuestionText"); else _explicitNullProperties?.Remove("customQuestionText"); } }
         private string _explicitNullValueCustomQuestionText = default!;
 #endif
         /// <summary>Answer choices for the custom question</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? SingleChoiceAnswers { get => _explicitNullValueSingleChoiceAnswers; set { _explicitNullValueSingleChoiceAnswers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("singleChoiceAnswers"); else _explicitNullProperties?.Remove("singleChoiceAnswers"); } }
+        public List<string>? SingleChoiceAnswers { get => _explicitNullValueSingleChoiceAnswers; set { _explicitNullValueSingleChoiceAnswers = value; AdditionalData?.Remove("singleChoiceAnswers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("singleChoiceAnswers"); else _explicitNullProperties?.Remove("singleChoiceAnswers"); } }
         private List<string>? _explicitNullValueSingleChoiceAnswers = default!;
 #nullable restore
 #else
-        public List<string> SingleChoiceAnswers { get => _explicitNullValueSingleChoiceAnswers; set { _explicitNullValueSingleChoiceAnswers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("singleChoiceAnswers"); else _explicitNullProperties?.Remove("singleChoiceAnswers"); } }
+        public List<string> SingleChoiceAnswers { get => _explicitNullValueSingleChoiceAnswers; set { _explicitNullValueSingleChoiceAnswers = value; AdditionalData?.Remove("singleChoiceAnswers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("singleChoiceAnswers"); else _explicitNullProperties?.Remove("singleChoiceAnswers"); } }
         private List<string> _explicitNullValueSingleChoiceAnswers = default!;
 #endif
         /// <summary>

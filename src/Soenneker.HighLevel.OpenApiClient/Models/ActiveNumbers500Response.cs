@@ -18,18 +18,20 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("accountStatus") is { } nullNodeAccountStatus && nullNodeAccountStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountStatus = null;
-            if (parseNode.GetChildNode("msg") is { } nullNodeMsg && nullNodeMsg.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Msg = null;
+            if (parseNode.GetChildNode("accountStatus") is null) { _explicitNullValueAccountStatus = default!; _explicitNullProperties?.Remove("accountStatus"); }
+            else if (parseNode.GetChildNode("accountStatus") is { } nullNodeAccountStatus && nullNodeAccountStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountStatus = null;
+            if (parseNode.GetChildNode("msg") is null) { _explicitNullValueMsg = default!; _explicitNullProperties?.Remove("msg"); }
+            else if (parseNode.GetChildNode("msg") is { } nullNodeMsg && nullNodeMsg.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Msg = null;
         }
 
         /// <summary>Account status when error occurs</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountStatus { get => _explicitNullValueAccountStatus; set { _explicitNullValueAccountStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accountStatus"); else _explicitNullProperties?.Remove("accountStatus"); } }
+        public string? AccountStatus { get => _explicitNullValueAccountStatus; set { _explicitNullValueAccountStatus = value; AdditionalData?.Remove("accountStatus"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accountStatus"); else _explicitNullProperties?.Remove("accountStatus"); } }
         private string? _explicitNullValueAccountStatus = default!;
 #nullable restore
 #else
-        public string AccountStatus { get => _explicitNullValueAccountStatus; set { _explicitNullValueAccountStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accountStatus"); else _explicitNullProperties?.Remove("accountStatus"); } }
+        public string AccountStatus { get => _explicitNullValueAccountStatus; set { _explicitNullValueAccountStatus = value; AdditionalData?.Remove("accountStatus"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accountStatus"); else _explicitNullProperties?.Remove("accountStatus"); } }
         private string _explicitNullValueAccountStatus = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -39,11 +41,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The msg property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Msg { get => _explicitNullValueMsg; set { _explicitNullValueMsg = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("msg"); else _explicitNullProperties?.Remove("msg"); } }
+        public string? Msg { get => _explicitNullValueMsg; set { _explicitNullValueMsg = value; AdditionalData?.Remove("msg"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("msg"); else _explicitNullProperties?.Remove("msg"); } }
         private string? _explicitNullValueMsg = default!;
 #nullable restore
 #else
-        public string Msg { get => _explicitNullValueMsg; set { _explicitNullValueMsg = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("msg"); else _explicitNullProperties?.Remove("msg"); } }
+        public string Msg { get => _explicitNullValueMsg; set { _explicitNullValueMsg = value; AdditionalData?.Remove("msg"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("msg"); else _explicitNullProperties?.Remove("msg"); } }
         private string _explicitNullValueMsg = default!;
 #endif
         /// <summary>

@@ -18,23 +18,25 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("tipsEnabled") is { } nullNodeTipsEnabled && nullNodeTipsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TipsEnabled = null;
-            if (parseNode.GetChildNode("tipsPercentage") is { } nullNodeTipsPercentage && nullNodeTipsPercentage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TipsPercentage = null;
+            if (parseNode.GetChildNode("tipsEnabled") is null) { _explicitNullValueTipsEnabled = default!; _explicitNullProperties?.Remove("tipsEnabled"); }
+            else if (parseNode.GetChildNode("tipsEnabled") is { } nullNodeTipsEnabled && nullNodeTipsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TipsEnabled = null;
+            if (parseNode.GetChildNode("tipsPercentage") is null) { _explicitNullValueTipsPercentage = default!; _explicitNullProperties?.Remove("tipsPercentage"); }
+            else if (parseNode.GetChildNode("tipsPercentage") is { } nullNodeTipsPercentage && nullNodeTipsPercentage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TipsPercentage = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Tips enabled status</summary>
-        public bool? TipsEnabled { get => _explicitNullValueTipsEnabled; set { _explicitNullValueTipsEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tipsEnabled"); else _explicitNullProperties?.Remove("tipsEnabled"); } }
+        public bool? TipsEnabled { get => _explicitNullValueTipsEnabled; set { _explicitNullValueTipsEnabled = value; AdditionalData?.Remove("tipsEnabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tipsEnabled"); else _explicitNullProperties?.Remove("tipsEnabled"); } }
         private bool? _explicitNullValueTipsEnabled = default!;
         /// <summary>Percentage of tips allowed</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? TipsPercentage { get => _explicitNullValueTipsPercentage; set { _explicitNullValueTipsPercentage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tipsPercentage"); else _explicitNullProperties?.Remove("tipsPercentage"); } }
+        public List<string>? TipsPercentage { get => _explicitNullValueTipsPercentage; set { _explicitNullValueTipsPercentage = value; AdditionalData?.Remove("tipsPercentage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tipsPercentage"); else _explicitNullProperties?.Remove("tipsPercentage"); } }
         private List<string>? _explicitNullValueTipsPercentage = default!;
 #nullable restore
 #else
-        public List<string> TipsPercentage { get => _explicitNullValueTipsPercentage; set { _explicitNullValueTipsPercentage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tipsPercentage"); else _explicitNullProperties?.Remove("tipsPercentage"); } }
+        public List<string> TipsPercentage { get => _explicitNullValueTipsPercentage; set { _explicitNullValueTipsPercentage = value; AdditionalData?.Remove("tipsPercentage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tipsPercentage"); else _explicitNullProperties?.Remove("tipsPercentage"); } }
         private List<string> _explicitNullValueTipsPercentage = default!;
 #endif
         /// <summary>

@@ -17,7 +17,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("customValue") is { } nullNodeCustomValue && nullNodeCustomValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomValue = null;
+            if (parseNode.GetChildNode("customValue") is null) { _explicitNullValueCustomValue = default!; _explicitNullProperties?.Remove("customValue"); }
+            else if (parseNode.GetChildNode("customValue") is { } nullNodeCustomValue && nullNodeCustomValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomValue = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The customValue property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomValueSchema? CustomValue { get => _explicitNullValueCustomValue; set { _explicitNullValueCustomValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customValue"); else _explicitNullProperties?.Remove("customValue"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomValueSchema? CustomValue { get => _explicitNullValueCustomValue; set { _explicitNullValueCustomValue = value; AdditionalData?.Remove("customValue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customValue"); else _explicitNullProperties?.Remove("customValue"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.CustomValueSchema? _explicitNullValueCustomValue = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomValueSchema CustomValue { get => _explicitNullValueCustomValue; set { _explicitNullValueCustomValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customValue"); else _explicitNullProperties?.Remove("customValue"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomValueSchema CustomValue { get => _explicitNullValueCustomValue; set { _explicitNullValueCustomValue = value; AdditionalData?.Remove("customValue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customValue"); else _explicitNullProperties?.Remove("customValue"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.CustomValueSchema _explicitNullValueCustomValue = default!;
 #endif
         /// <summary>

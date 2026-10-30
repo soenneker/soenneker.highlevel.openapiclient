@@ -17,9 +17,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("long_name") is { } nullNodeLongName && nullNodeLongName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LongName = null;
-            if (parseNode.GetChildNode("short_name") is { } nullNodeShortName && nullNodeShortName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShortName = null;
-            if (parseNode.GetChildNode("types") is { } nullNodeTypes && nullNodeTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Types = null;
+            if (parseNode.GetChildNode("long_name") is null) { _explicitNullValueLongName = default!; _explicitNullProperties?.Remove("long_name"); }
+            else if (parseNode.GetChildNode("long_name") is { } nullNodeLongName && nullNodeLongName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LongName = null;
+            if (parseNode.GetChildNode("short_name") is null) { _explicitNullValueShortName = default!; _explicitNullProperties?.Remove("short_name"); }
+            else if (parseNode.GetChildNode("short_name") is { } nullNodeShortName && nullNodeShortName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShortName = null;
+            if (parseNode.GetChildNode("types") is null) { _explicitNullValueTypes = default!; _explicitNullProperties?.Remove("types"); }
+            else if (parseNode.GetChildNode("types") is { } nullNodeTypes && nullNodeTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Types = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Full name of the address component</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LongName { get => _explicitNullValueLongName; set { _explicitNullValueLongName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("long_name"); else _explicitNullProperties?.Remove("long_name"); } }
+        public string? LongName { get => _explicitNullValueLongName; set { _explicitNullValueLongName = value; AdditionalData?.Remove("long_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("long_name"); else _explicitNullProperties?.Remove("long_name"); } }
         private string? _explicitNullValueLongName = default!;
 #nullable restore
 #else
-        public string LongName { get => _explicitNullValueLongName; set { _explicitNullValueLongName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("long_name"); else _explicitNullProperties?.Remove("long_name"); } }
+        public string LongName { get => _explicitNullValueLongName; set { _explicitNullValueLongName = value; AdditionalData?.Remove("long_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("long_name"); else _explicitNullProperties?.Remove("long_name"); } }
         private string _explicitNullValueLongName = default!;
 #endif
         /// <summary>Abbreviated name of the address component</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShortName { get => _explicitNullValueShortName; set { _explicitNullValueShortName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("short_name"); else _explicitNullProperties?.Remove("short_name"); } }
+        public string? ShortName { get => _explicitNullValueShortName; set { _explicitNullValueShortName = value; AdditionalData?.Remove("short_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("short_name"); else _explicitNullProperties?.Remove("short_name"); } }
         private string? _explicitNullValueShortName = default!;
 #nullable restore
 #else
-        public string ShortName { get => _explicitNullValueShortName; set { _explicitNullValueShortName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("short_name"); else _explicitNullProperties?.Remove("short_name"); } }
+        public string ShortName { get => _explicitNullValueShortName; set { _explicitNullValueShortName = value; AdditionalData?.Remove("short_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("short_name"); else _explicitNullProperties?.Remove("short_name"); } }
         private string _explicitNullValueShortName = default!;
 #endif
         /// <summary>Address component types</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Types { get => _explicitNullValueTypes; set { _explicitNullValueTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("types"); else _explicitNullProperties?.Remove("types"); } }
+        public List<string>? Types { get => _explicitNullValueTypes; set { _explicitNullValueTypes = value; AdditionalData?.Remove("types"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("types"); else _explicitNullProperties?.Remove("types"); } }
         private List<string>? _explicitNullValueTypes = default!;
 #nullable restore
 #else
-        public List<string> Types { get => _explicitNullValueTypes; set { _explicitNullValueTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("types"); else _explicitNullProperties?.Remove("types"); } }
+        public List<string> Types { get => _explicitNullValueTypes; set { _explicitNullValueTypes = value; AdditionalData?.Remove("types"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("types"); else _explicitNullProperties?.Remove("types"); } }
         private List<string> _explicitNullValueTypes = default!;
 #endif
         /// <summary>

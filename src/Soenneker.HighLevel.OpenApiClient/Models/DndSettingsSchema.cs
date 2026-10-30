@@ -17,12 +17,18 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Call") is { } nullNodeCall && nullNodeCall.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Call = null;
-            if (parseNode.GetChildNode("Email") is { } nullNodeEmail && nullNodeEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Email = null;
-            if (parseNode.GetChildNode("FB") is { } nullNodeFB && nullNodeFB.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FB = null;
-            if (parseNode.GetChildNode("GMB") is { } nullNodeGMB && nullNodeGMB.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GMB = null;
-            if (parseNode.GetChildNode("SMS") is { } nullNodeSMS && nullNodeSMS.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SMS = null;
-            if (parseNode.GetChildNode("WhatsApp") is { } nullNodeWhatsApp && nullNodeWhatsApp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WhatsApp = null;
+            if (parseNode.GetChildNode("Call") is null) { _explicitNullValueCall = default!; _explicitNullProperties?.Remove("Call"); }
+            else if (parseNode.GetChildNode("Call") is { } nullNodeCall && nullNodeCall.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Call = null;
+            if (parseNode.GetChildNode("Email") is null) { _explicitNullValueEmail = default!; _explicitNullProperties?.Remove("Email"); }
+            else if (parseNode.GetChildNode("Email") is { } nullNodeEmail && nullNodeEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Email = null;
+            if (parseNode.GetChildNode("FB") is null) { _explicitNullValueFB = default!; _explicitNullProperties?.Remove("FB"); }
+            else if (parseNode.GetChildNode("FB") is { } nullNodeFB && nullNodeFB.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FB = null;
+            if (parseNode.GetChildNode("GMB") is null) { _explicitNullValueGMB = default!; _explicitNullProperties?.Remove("GMB"); }
+            else if (parseNode.GetChildNode("GMB") is { } nullNodeGMB && nullNodeGMB.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GMB = null;
+            if (parseNode.GetChildNode("SMS") is null) { _explicitNullValueSMS = default!; _explicitNullProperties?.Remove("SMS"); }
+            else if (parseNode.GetChildNode("SMS") is { } nullNodeSMS && nullNodeSMS.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SMS = null;
+            if (parseNode.GetChildNode("WhatsApp") is null) { _explicitNullValueWhatsApp = default!; _explicitNullProperties?.Remove("WhatsApp"); }
+            else if (parseNode.GetChildNode("WhatsApp") is { } nullNodeWhatsApp && nullNodeWhatsApp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WhatsApp = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,61 +36,61 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The Call property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DndSettingSchema? Call { get => _explicitNullValueCall; set { _explicitNullValueCall = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Call"); else _explicitNullProperties?.Remove("Call"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DndSettingSchema? Call { get => _explicitNullValueCall; set { _explicitNullValueCall = value; AdditionalData?.Remove("Call"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Call"); else _explicitNullProperties?.Remove("Call"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.DndSettingSchema? _explicitNullValueCall = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DndSettingSchema Call { get => _explicitNullValueCall; set { _explicitNullValueCall = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Call"); else _explicitNullProperties?.Remove("Call"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DndSettingSchema Call { get => _explicitNullValueCall; set { _explicitNullValueCall = value; AdditionalData?.Remove("Call"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Call"); else _explicitNullProperties?.Remove("Call"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.DndSettingSchema _explicitNullValueCall = default!;
 #endif
         /// <summary>The Email property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DndSettingSchema? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Email"); else _explicitNullProperties?.Remove("Email"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DndSettingSchema? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; AdditionalData?.Remove("Email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Email"); else _explicitNullProperties?.Remove("Email"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.DndSettingSchema? _explicitNullValueEmail = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DndSettingSchema Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Email"); else _explicitNullProperties?.Remove("Email"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DndSettingSchema Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; AdditionalData?.Remove("Email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Email"); else _explicitNullProperties?.Remove("Email"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.DndSettingSchema _explicitNullValueEmail = default!;
 #endif
         /// <summary>The FB property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DndSettingSchema? FB { get => _explicitNullValueFB; set { _explicitNullValueFB = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FB"); else _explicitNullProperties?.Remove("FB"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DndSettingSchema? FB { get => _explicitNullValueFB; set { _explicitNullValueFB = value; AdditionalData?.Remove("FB"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FB"); else _explicitNullProperties?.Remove("FB"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.DndSettingSchema? _explicitNullValueFB = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DndSettingSchema FB { get => _explicitNullValueFB; set { _explicitNullValueFB = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FB"); else _explicitNullProperties?.Remove("FB"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DndSettingSchema FB { get => _explicitNullValueFB; set { _explicitNullValueFB = value; AdditionalData?.Remove("FB"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FB"); else _explicitNullProperties?.Remove("FB"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.DndSettingSchema _explicitNullValueFB = default!;
 #endif
         /// <summary>The GMB property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DndSettingSchema? GMB { get => _explicitNullValueGMB; set { _explicitNullValueGMB = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("GMB"); else _explicitNullProperties?.Remove("GMB"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DndSettingSchema? GMB { get => _explicitNullValueGMB; set { _explicitNullValueGMB = value; AdditionalData?.Remove("GMB"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("GMB"); else _explicitNullProperties?.Remove("GMB"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.DndSettingSchema? _explicitNullValueGMB = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DndSettingSchema GMB { get => _explicitNullValueGMB; set { _explicitNullValueGMB = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("GMB"); else _explicitNullProperties?.Remove("GMB"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DndSettingSchema GMB { get => _explicitNullValueGMB; set { _explicitNullValueGMB = value; AdditionalData?.Remove("GMB"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("GMB"); else _explicitNullProperties?.Remove("GMB"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.DndSettingSchema _explicitNullValueGMB = default!;
 #endif
         /// <summary>The SMS property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DndSettingSchema? SMS { get => _explicitNullValueSMS; set { _explicitNullValueSMS = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SMS"); else _explicitNullProperties?.Remove("SMS"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DndSettingSchema? SMS { get => _explicitNullValueSMS; set { _explicitNullValueSMS = value; AdditionalData?.Remove("SMS"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SMS"); else _explicitNullProperties?.Remove("SMS"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.DndSettingSchema? _explicitNullValueSMS = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DndSettingSchema SMS { get => _explicitNullValueSMS; set { _explicitNullValueSMS = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SMS"); else _explicitNullProperties?.Remove("SMS"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DndSettingSchema SMS { get => _explicitNullValueSMS; set { _explicitNullValueSMS = value; AdditionalData?.Remove("SMS"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SMS"); else _explicitNullProperties?.Remove("SMS"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.DndSettingSchema _explicitNullValueSMS = default!;
 #endif
         /// <summary>The WhatsApp property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DndSettingSchema? WhatsApp { get => _explicitNullValueWhatsApp; set { _explicitNullValueWhatsApp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WhatsApp"); else _explicitNullProperties?.Remove("WhatsApp"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DndSettingSchema? WhatsApp { get => _explicitNullValueWhatsApp; set { _explicitNullValueWhatsApp = value; AdditionalData?.Remove("WhatsApp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WhatsApp"); else _explicitNullProperties?.Remove("WhatsApp"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.DndSettingSchema? _explicitNullValueWhatsApp = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DndSettingSchema WhatsApp { get => _explicitNullValueWhatsApp; set { _explicitNullValueWhatsApp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WhatsApp"); else _explicitNullProperties?.Remove("WhatsApp"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.DndSettingSchema WhatsApp { get => _explicitNullValueWhatsApp; set { _explicitNullValueWhatsApp = value; AdditionalData?.Remove("WhatsApp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WhatsApp"); else _explicitNullProperties?.Remove("WhatsApp"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.DndSettingSchema _explicitNullValueWhatsApp = default!;
 #endif
         /// <summary>

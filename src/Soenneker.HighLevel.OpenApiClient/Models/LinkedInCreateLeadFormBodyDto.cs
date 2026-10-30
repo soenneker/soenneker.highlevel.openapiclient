@@ -17,12 +17,18 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("content") is { } nullNodeContent && nullNodeContent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Content = null;
-            if (parseNode.GetChildNode("creationLocale") is { } nullNodeCreationLocale && nullNodeCreationLocale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreationLocale = null;
-            if (parseNode.GetChildNode("hiddenFields") is { } nullNodeHiddenFields && nullNodeHiddenFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HiddenFields = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("owner") is { } nullNodeOwner && nullNodeOwner.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Owner = null;
-            if (parseNode.GetChildNode("state") is { } nullNodeState && nullNodeState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) State = null;
+            if (parseNode.GetChildNode("content") is null) { _explicitNullValueContent = default!; _explicitNullProperties?.Remove("content"); }
+            else if (parseNode.GetChildNode("content") is { } nullNodeContent && nullNodeContent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Content = null;
+            if (parseNode.GetChildNode("creationLocale") is null) { _explicitNullValueCreationLocale = default!; _explicitNullProperties?.Remove("creationLocale"); }
+            else if (parseNode.GetChildNode("creationLocale") is { } nullNodeCreationLocale && nullNodeCreationLocale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreationLocale = null;
+            if (parseNode.GetChildNode("hiddenFields") is null) { _explicitNullValueHiddenFields = default!; _explicitNullProperties?.Remove("hiddenFields"); }
+            else if (parseNode.GetChildNode("hiddenFields") is { } nullNodeHiddenFields && nullNodeHiddenFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HiddenFields = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("owner") is null) { _explicitNullValueOwner = default!; _explicitNullProperties?.Remove("owner"); }
+            else if (parseNode.GetChildNode("owner") is { } nullNodeOwner && nullNodeOwner.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Owner = null;
+            if (parseNode.GetChildNode("state") is null) { _explicitNullValueState = default!; _explicitNullProperties?.Remove("state"); }
+            else if (parseNode.GetChildNode("state") is { } nullNodeState && nullNodeState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) State = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,55 +36,55 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Form content</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDtoContent? Content { get => _explicitNullValueContent; set { _explicitNullValueContent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content"); else _explicitNullProperties?.Remove("content"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDtoContent? Content { get => _explicitNullValueContent; set { _explicitNullValueContent = value; AdditionalData?.Remove("content"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content"); else _explicitNullProperties?.Remove("content"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDtoContent? _explicitNullValueContent = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDtoContent Content { get => _explicitNullValueContent; set { _explicitNullValueContent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content"); else _explicitNullProperties?.Remove("content"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDtoContent Content { get => _explicitNullValueContent; set { _explicitNullValueContent = value; AdditionalData?.Remove("content"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content"); else _explicitNullProperties?.Remove("content"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDtoContent _explicitNullValueContent = default!;
 #endif
         /// <summary>Creation locale</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDtoCreationLocale? CreationLocale { get => _explicitNullValueCreationLocale; set { _explicitNullValueCreationLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("creationLocale"); else _explicitNullProperties?.Remove("creationLocale"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDtoCreationLocale? CreationLocale { get => _explicitNullValueCreationLocale; set { _explicitNullValueCreationLocale = value; AdditionalData?.Remove("creationLocale"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("creationLocale"); else _explicitNullProperties?.Remove("creationLocale"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDtoCreationLocale? _explicitNullValueCreationLocale = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDtoCreationLocale CreationLocale { get => _explicitNullValueCreationLocale; set { _explicitNullValueCreationLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("creationLocale"); else _explicitNullProperties?.Remove("creationLocale"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDtoCreationLocale CreationLocale { get => _explicitNullValueCreationLocale; set { _explicitNullValueCreationLocale = value; AdditionalData?.Remove("creationLocale"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("creationLocale"); else _explicitNullProperties?.Remove("creationLocale"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDtoCreationLocale _explicitNullValueCreationLocale = default!;
 #endif
         /// <summary>Hidden fields</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.HiddenFieldDto>? HiddenFields { get => _explicitNullValueHiddenFields; set { _explicitNullValueHiddenFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hiddenFields"); else _explicitNullProperties?.Remove("hiddenFields"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.HiddenFieldDto>? HiddenFields { get => _explicitNullValueHiddenFields; set { _explicitNullValueHiddenFields = value; AdditionalData?.Remove("hiddenFields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hiddenFields"); else _explicitNullProperties?.Remove("hiddenFields"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.HiddenFieldDto>? _explicitNullValueHiddenFields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.HiddenFieldDto> HiddenFields { get => _explicitNullValueHiddenFields; set { _explicitNullValueHiddenFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hiddenFields"); else _explicitNullProperties?.Remove("hiddenFields"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.HiddenFieldDto> HiddenFields { get => _explicitNullValueHiddenFields; set { _explicitNullValueHiddenFields = value; AdditionalData?.Remove("hiddenFields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hiddenFields"); else _explicitNullProperties?.Remove("hiddenFields"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.HiddenFieldDto> _explicitNullValueHiddenFields = default!;
 #endif
         /// <summary>Form name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>Form owner</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDtoOwner? Owner { get => _explicitNullValueOwner; set { _explicitNullValueOwner = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner"); else _explicitNullProperties?.Remove("owner"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDtoOwner? Owner { get => _explicitNullValueOwner; set { _explicitNullValueOwner = value; AdditionalData?.Remove("owner"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner"); else _explicitNullProperties?.Remove("owner"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDtoOwner? _explicitNullValueOwner = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDtoOwner Owner { get => _explicitNullValueOwner; set { _explicitNullValueOwner = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner"); else _explicitNullProperties?.Remove("owner"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDtoOwner Owner { get => _explicitNullValueOwner; set { _explicitNullValueOwner = value; AdditionalData?.Remove("owner"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner"); else _explicitNullProperties?.Remove("owner"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDtoOwner _explicitNullValueOwner = default!;
 #endif
         /// <summary>Form state</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PublishedState? State { get => _explicitNullValueState; set { _explicitNullValueState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state"); else _explicitNullProperties?.Remove("state"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PublishedState? State { get => _explicitNullValueState; set { _explicitNullValueState = value; AdditionalData?.Remove("state"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state"); else _explicitNullProperties?.Remove("state"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.PublishedState? _explicitNullValueState = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDto"/> and sets the default values.
@@ -110,7 +116,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "hiddenFields", n => { HiddenFields = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.HiddenFieldDto>(global::Soenneker.HighLevel.OpenApiClient.Models.HiddenFieldDto.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "owner", n => { Owner = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDtoOwner>(global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInCreateLeadFormBodyDtoOwner.CreateFromDiscriminatorValue); } },
-                { "state", n => { State = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PublishedState>(); } },
+                { "state", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PublishedState>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueState = default; _explicitNullProperties?.Remove("state"); AdditionalData["state"] = unknown; } else { State = parsed; AdditionalData.Remove("state"); } } },
             };
         }
         /// <summary>

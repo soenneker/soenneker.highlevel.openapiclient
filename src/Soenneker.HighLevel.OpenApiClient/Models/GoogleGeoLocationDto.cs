@@ -17,19 +17,32 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("address_components") is { } nullNodeAddressComponents && nullNodeAddressComponents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressComponents = null;
-            if (parseNode.GetChildNode("country_name") is { } nullNodeCountryName && nullNodeCountryName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CountryName = null;
-            if (parseNode.GetChildNode("formatted_address") is { } nullNodeFormattedAddress && nullNodeFormattedAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FormattedAddress = null;
-            if (parseNode.GetChildNode("geometry") is { } nullNodeGeometry && nullNodeGeometry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Geometry = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("key") is { } nullNodeKey && nullNodeKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Key = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("place_id") is { } nullNodePlaceId && nullNodePlaceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlaceId = null;
-            if (parseNode.GetChildNode("radius") is { } nullNodeRadius && nullNodeRadius.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Radius = null;
-            if (parseNode.GetChildNode("radiusUnit") is { } nullNodeRadiusUnit && nullNodeRadiusUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RadiusUnit = null;
-            if (parseNode.GetChildNode("resourceName") is { } nullNodeResourceName && nullNodeResourceName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResourceName = null;
-            if (parseNode.GetChildNode("selectionType") is { } nullNodeSelectionType && nullNodeSelectionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SelectionType = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("address_components") is null) { _explicitNullValueAddressComponents = default!; _explicitNullProperties?.Remove("address_components"); }
+            else if (parseNode.GetChildNode("address_components") is { } nullNodeAddressComponents && nullNodeAddressComponents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddressComponents = null;
+            if (parseNode.GetChildNode("country_name") is null) { _explicitNullValueCountryName = default!; _explicitNullProperties?.Remove("country_name"); }
+            else if (parseNode.GetChildNode("country_name") is { } nullNodeCountryName && nullNodeCountryName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CountryName = null;
+            if (parseNode.GetChildNode("formatted_address") is null) { _explicitNullValueFormattedAddress = default!; _explicitNullProperties?.Remove("formatted_address"); }
+            else if (parseNode.GetChildNode("formatted_address") is { } nullNodeFormattedAddress && nullNodeFormattedAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FormattedAddress = null;
+            if (parseNode.GetChildNode("geometry") is null) { _explicitNullValueGeometry = default!; _explicitNullProperties?.Remove("geometry"); }
+            else if (parseNode.GetChildNode("geometry") is { } nullNodeGeometry && nullNodeGeometry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Geometry = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("key") is null) { _explicitNullValueKey = default!; _explicitNullProperties?.Remove("key"); }
+            else if (parseNode.GetChildNode("key") is { } nullNodeKey && nullNodeKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Key = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("place_id") is null) { _explicitNullValuePlaceId = default!; _explicitNullProperties?.Remove("place_id"); }
+            else if (parseNode.GetChildNode("place_id") is { } nullNodePlaceId && nullNodePlaceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlaceId = null;
+            if (parseNode.GetChildNode("radius") is null) { _explicitNullValueRadius = default!; _explicitNullProperties?.Remove("radius"); }
+            else if (parseNode.GetChildNode("radius") is { } nullNodeRadius && nullNodeRadius.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Radius = null;
+            if (parseNode.GetChildNode("radiusUnit") is null) { _explicitNullValueRadiusUnit = default!; _explicitNullProperties?.Remove("radiusUnit"); }
+            else if (parseNode.GetChildNode("radiusUnit") is { } nullNodeRadiusUnit && nullNodeRadiusUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RadiusUnit = null;
+            if (parseNode.GetChildNode("resourceName") is null) { _explicitNullValueResourceName = default!; _explicitNullProperties?.Remove("resourceName"); }
+            else if (parseNode.GetChildNode("resourceName") is { } nullNodeResourceName && nullNodeResourceName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResourceName = null;
+            if (parseNode.GetChildNode("selectionType") is null) { _explicitNullValueSelectionType = default!; _explicitNullProperties?.Remove("selectionType"); }
+            else if (parseNode.GetChildNode("selectionType") is { } nullNodeSelectionType && nullNodeSelectionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SelectionType = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -37,110 +50,110 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Address components from Google Geocoding API</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GeoAddressComponentDto>? AddressComponents { get => _explicitNullValueAddressComponents; set { _explicitNullValueAddressComponents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_components"); else _explicitNullProperties?.Remove("address_components"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GeoAddressComponentDto>? AddressComponents { get => _explicitNullValueAddressComponents; set { _explicitNullValueAddressComponents = value; AdditionalData?.Remove("address_components"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_components"); else _explicitNullProperties?.Remove("address_components"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.GeoAddressComponentDto>? _explicitNullValueAddressComponents = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GeoAddressComponentDto> AddressComponents { get => _explicitNullValueAddressComponents; set { _explicitNullValueAddressComponents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_components"); else _explicitNullProperties?.Remove("address_components"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.GeoAddressComponentDto> AddressComponents { get => _explicitNullValueAddressComponents; set { _explicitNullValueAddressComponents = value; AdditionalData?.Remove("address_components"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("address_components"); else _explicitNullProperties?.Remove("address_components"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.GeoAddressComponentDto> _explicitNullValueAddressComponents = default!;
 #endif
         /// <summary>Country name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CountryName { get => _explicitNullValueCountryName; set { _explicitNullValueCountryName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("country_name"); else _explicitNullProperties?.Remove("country_name"); } }
+        public string? CountryName { get => _explicitNullValueCountryName; set { _explicitNullValueCountryName = value; AdditionalData?.Remove("country_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("country_name"); else _explicitNullProperties?.Remove("country_name"); } }
         private string? _explicitNullValueCountryName = default!;
 #nullable restore
 #else
-        public string CountryName { get => _explicitNullValueCountryName; set { _explicitNullValueCountryName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("country_name"); else _explicitNullProperties?.Remove("country_name"); } }
+        public string CountryName { get => _explicitNullValueCountryName; set { _explicitNullValueCountryName = value; AdditionalData?.Remove("country_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("country_name"); else _explicitNullProperties?.Remove("country_name"); } }
         private string _explicitNullValueCountryName = default!;
 #endif
         /// <summary>Full formatted address string</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FormattedAddress { get => _explicitNullValueFormattedAddress; set { _explicitNullValueFormattedAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("formatted_address"); else _explicitNullProperties?.Remove("formatted_address"); } }
+        public string? FormattedAddress { get => _explicitNullValueFormattedAddress; set { _explicitNullValueFormattedAddress = value; AdditionalData?.Remove("formatted_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("formatted_address"); else _explicitNullProperties?.Remove("formatted_address"); } }
         private string? _explicitNullValueFormattedAddress = default!;
 #nullable restore
 #else
-        public string FormattedAddress { get => _explicitNullValueFormattedAddress; set { _explicitNullValueFormattedAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("formatted_address"); else _explicitNullProperties?.Remove("formatted_address"); } }
+        public string FormattedAddress { get => _explicitNullValueFormattedAddress; set { _explicitNullValueFormattedAddress = value; AdditionalData?.Remove("formatted_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("formatted_address"); else _explicitNullProperties?.Remove("formatted_address"); } }
         private string _explicitNullValueFormattedAddress = default!;
 #endif
         /// <summary>Geometry data from Google Geocoding API</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GoogleGeoLocationDtoGeometry? Geometry { get => _explicitNullValueGeometry; set { _explicitNullValueGeometry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("geometry"); else _explicitNullProperties?.Remove("geometry"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GoogleGeoLocationDtoGeometry? Geometry { get => _explicitNullValueGeometry; set { _explicitNullValueGeometry = value; AdditionalData?.Remove("geometry"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("geometry"); else _explicitNullProperties?.Remove("geometry"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.GoogleGeoLocationDtoGeometry? _explicitNullValueGeometry = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GoogleGeoLocationDtoGeometry Geometry { get => _explicitNullValueGeometry; set { _explicitNullValueGeometry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("geometry"); else _explicitNullProperties?.Remove("geometry"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GoogleGeoLocationDtoGeometry Geometry { get => _explicitNullValueGeometry; set { _explicitNullValueGeometry = value; AdditionalData?.Remove("geometry"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("geometry"); else _explicitNullProperties?.Remove("geometry"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.GoogleGeoLocationDtoGeometry _explicitNullValueGeometry = default!;
 #endif
         /// <summary>Location identifier (place_id)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>Geo target constant resource name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Key { get => _explicitNullValueKey; set { _explicitNullValueKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("key"); else _explicitNullProperties?.Remove("key"); } }
+        public string? Key { get => _explicitNullValueKey; set { _explicitNullValueKey = value; AdditionalData?.Remove("key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("key"); else _explicitNullProperties?.Remove("key"); } }
         private string? _explicitNullValueKey = default!;
 #nullable restore
 #else
-        public string Key { get => _explicitNullValueKey; set { _explicitNullValueKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("key"); else _explicitNullProperties?.Remove("key"); } }
+        public string Key { get => _explicitNullValueKey; set { _explicitNullValueKey = value; AdditionalData?.Remove("key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("key"); else _explicitNullProperties?.Remove("key"); } }
         private string _explicitNullValueKey = default!;
 #endif
         /// <summary>Location display name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>Google place ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PlaceId { get => _explicitNullValuePlaceId; set { _explicitNullValuePlaceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("place_id"); else _explicitNullProperties?.Remove("place_id"); } }
+        public string? PlaceId { get => _explicitNullValuePlaceId; set { _explicitNullValuePlaceId = value; AdditionalData?.Remove("place_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("place_id"); else _explicitNullProperties?.Remove("place_id"); } }
         private string? _explicitNullValuePlaceId = default!;
 #nullable restore
 #else
-        public string PlaceId { get => _explicitNullValuePlaceId; set { _explicitNullValuePlaceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("place_id"); else _explicitNullProperties?.Remove("place_id"); } }
+        public string PlaceId { get => _explicitNullValuePlaceId; set { _explicitNullValuePlaceId = value; AdditionalData?.Remove("place_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("place_id"); else _explicitNullProperties?.Remove("place_id"); } }
         private string _explicitNullValuePlaceId = default!;
 #endif
         /// <summary>Radius for proximity targeting</summary>
-        public double? Radius { get => _explicitNullValueRadius; set { _explicitNullValueRadius = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("radius"); else _explicitNullProperties?.Remove("radius"); } }
+        public double? Radius { get => _explicitNullValueRadius; set { _explicitNullValueRadius = value; AdditionalData?.Remove("radius"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("radius"); else _explicitNullProperties?.Remove("radius"); } }
         private double? _explicitNullValueRadius = default!;
         /// <summary>Radius unit</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GoogleGeoLocationDtoRadiusUnit? RadiusUnit { get => _explicitNullValueRadiusUnit; set { _explicitNullValueRadiusUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("radiusUnit"); else _explicitNullProperties?.Remove("radiusUnit"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GoogleGeoLocationDtoRadiusUnit? RadiusUnit { get => _explicitNullValueRadiusUnit; set { _explicitNullValueRadiusUnit = value; AdditionalData?.Remove("radiusUnit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("radiusUnit"); else _explicitNullProperties?.Remove("radiusUnit"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.GoogleGeoLocationDtoRadiusUnit? _explicitNullValueRadiusUnit = default!;
         /// <summary>Google Ads resource name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ResourceName { get => _explicitNullValueResourceName; set { _explicitNullValueResourceName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resourceName"); else _explicitNullProperties?.Remove("resourceName"); } }
+        public string? ResourceName { get => _explicitNullValueResourceName; set { _explicitNullValueResourceName = value; AdditionalData?.Remove("resourceName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resourceName"); else _explicitNullProperties?.Remove("resourceName"); } }
         private string? _explicitNullValueResourceName = default!;
 #nullable restore
 #else
-        public string ResourceName { get => _explicitNullValueResourceName; set { _explicitNullValueResourceName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resourceName"); else _explicitNullProperties?.Remove("resourceName"); } }
+        public string ResourceName { get => _explicitNullValueResourceName; set { _explicitNullValueResourceName = value; AdditionalData?.Remove("resourceName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resourceName"); else _explicitNullProperties?.Remove("resourceName"); } }
         private string _explicitNullValueResourceName = default!;
 #endif
         /// <summary>Include or exclude this location</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GoogleGeoLocationDtoSelectionType? SelectionType { get => _explicitNullValueSelectionType; set { _explicitNullValueSelectionType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selectionType"); else _explicitNullProperties?.Remove("selectionType"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GoogleGeoLocationDtoSelectionType? SelectionType { get => _explicitNullValueSelectionType; set { _explicitNullValueSelectionType = value; AdditionalData?.Remove("selectionType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selectionType"); else _explicitNullProperties?.Remove("selectionType"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.GoogleGeoLocationDtoSelectionType? _explicitNullValueSelectionType = default!;
         /// <summary>Location type (city, region, country, address, etc.)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private string? _explicitNullValueType = default!;
 #nullable restore
 #else
-        public string Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public string Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private string _explicitNullValueType = default!;
 #endif
         /// <summary>
@@ -177,9 +190,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "place_id", n => { PlaceId = n.GetStringValue(); } },
                 { "radius", n => { Radius = n.GetDoubleValue(); } },
-                { "radiusUnit", n => { RadiusUnit = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleGeoLocationDtoRadiusUnit>(); } },
+                { "radiusUnit", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleGeoLocationDtoRadiusUnit>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueRadiusUnit = default; _explicitNullProperties?.Remove("radiusUnit"); AdditionalData["radiusUnit"] = unknown; } else { RadiusUnit = parsed; AdditionalData.Remove("radiusUnit"); } } },
                 { "resourceName", n => { ResourceName = n.GetStringValue(); } },
-                { "selectionType", n => { SelectionType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleGeoLocationDtoSelectionType>(); } },
+                { "selectionType", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleGeoLocationDtoSelectionType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueSelectionType = default; _explicitNullProperties?.Remove("selectionType"); AdditionalData["selectionType"] = unknown; } else { SelectionType = parsed; AdditionalData.Remove("selectionType"); } } },
                 { "type", n => { Type = n.GetStringValue(); } },
             };
         }

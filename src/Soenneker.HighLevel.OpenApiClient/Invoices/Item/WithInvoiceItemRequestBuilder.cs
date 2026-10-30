@@ -160,7 +160,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Invoices.Item
         public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Invoices.Item.WithInvoiceItemRequestBuilder.WithInvoiceItemRequestBuilderDeleteQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.DELETE, "{+baseurl}/invoices/{invoiceId}?altId={altId}&altType={altType}", PathParameters);
+            var requestInfo = new RequestInformation(Method.DELETE, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve("{+baseurl}/invoices/{invoiceId}?altId={altId}&altType={altType}", RequestAdapter.BaseUrl, "https://services.leadconnectorhq.com", "/invoices/{invoiceId}", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -179,7 +179,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Invoices.Item
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Invoices.Item.WithInvoiceItemRequestBuilder.WithInvoiceItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/invoices/{invoiceId}?altId={altId}&altType={altType}", PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve("{+baseurl}/invoices/{invoiceId}?altId={altId}&altType={altType}", RequestAdapter.BaseUrl, "https://services.leadconnectorhq.com", "/invoices/{invoiceId}", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -200,7 +200,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Invoices.Item
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.PUT, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.PUT, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://services.leadconnectorhq.com", "/invoices/{invoiceId}", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);

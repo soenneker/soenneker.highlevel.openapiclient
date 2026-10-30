@@ -17,49 +17,54 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("hearWhisperMessage") is { } nullNodeHearWhisperMessage && nullNodeHearWhisperMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HearWhisperMessage = null;
-            if (parseNode.GetChildNode("transferToType") is { } nullNodeTransferToType && nullNodeTransferToType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransferToType = null;
-            if (parseNode.GetChildNode("transferToValue") is { } nullNodeTransferToValue && nullNodeTransferToValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransferToValue = null;
-            if (parseNode.GetChildNode("triggerMessage") is { } nullNodeTriggerMessage && nullNodeTriggerMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TriggerMessage = null;
-            if (parseNode.GetChildNode("triggerPrompt") is { } nullNodeTriggerPrompt && nullNodeTriggerPrompt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TriggerPrompt = null;
+            if (parseNode.GetChildNode("hearWhisperMessage") is null) { _explicitNullValueHearWhisperMessage = default!; _explicitNullProperties?.Remove("hearWhisperMessage"); }
+            else if (parseNode.GetChildNode("hearWhisperMessage") is { } nullNodeHearWhisperMessage && nullNodeHearWhisperMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HearWhisperMessage = null;
+            if (parseNode.GetChildNode("transferToType") is null) { _explicitNullValueTransferToType = default!; _explicitNullProperties?.Remove("transferToType"); }
+            else if (parseNode.GetChildNode("transferToType") is { } nullNodeTransferToType && nullNodeTransferToType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransferToType = null;
+            if (parseNode.GetChildNode("transferToValue") is null) { _explicitNullValueTransferToValue = default!; _explicitNullProperties?.Remove("transferToValue"); }
+            else if (parseNode.GetChildNode("transferToValue") is { } nullNodeTransferToValue && nullNodeTransferToValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransferToValue = null;
+            if (parseNode.GetChildNode("triggerMessage") is null) { _explicitNullValueTriggerMessage = default!; _explicitNullProperties?.Remove("triggerMessage"); }
+            else if (parseNode.GetChildNode("triggerMessage") is { } nullNodeTriggerMessage && nullNodeTriggerMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TriggerMessage = null;
+            if (parseNode.GetChildNode("triggerPrompt") is null) { _explicitNullValueTriggerPrompt = default!; _explicitNullProperties?.Remove("triggerPrompt"); }
+            else if (parseNode.GetChildNode("triggerPrompt") is { } nullNodeTriggerPrompt && nullNodeTriggerPrompt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TriggerPrompt = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether to play whisper message to the receiving party</summary>
-        public bool? HearWhisperMessage { get => _explicitNullValueHearWhisperMessage; set { _explicitNullValueHearWhisperMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hearWhisperMessage"); else _explicitNullProperties?.Remove("hearWhisperMessage"); } }
+        public bool? HearWhisperMessage { get => _explicitNullValueHearWhisperMessage; set { _explicitNullValueHearWhisperMessage = value; AdditionalData?.Remove("hearWhisperMessage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hearWhisperMessage"); else _explicitNullProperties?.Remove("hearWhisperMessage"); } }
         private bool? _explicitNullValueHearWhisperMessage = default!;
         /// <summary>Type of transfer destination (currently only &quot;number&quot; is supported)</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.NumberTransferToType? TransferToType { get => _explicitNullValueTransferToType; set { _explicitNullValueTransferToType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transferToType"); else _explicitNullProperties?.Remove("transferToType"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.NumberTransferToType? TransferToType { get => _explicitNullValueTransferToType; set { _explicitNullValueTransferToType = value; AdditionalData?.Remove("transferToType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transferToType"); else _explicitNullProperties?.Remove("transferToType"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.NumberTransferToType? _explicitNullValueTransferToType = default!;
         /// <summary>Phone number to transfer to. Must start with +, include country code, contain only numbers, and be 11-16 characters long (e.g., +12345678901).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TransferToValue { get => _explicitNullValueTransferToValue; set { _explicitNullValueTransferToValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transferToValue"); else _explicitNullProperties?.Remove("transferToValue"); } }
+        public string? TransferToValue { get => _explicitNullValueTransferToValue; set { _explicitNullValueTransferToValue = value; AdditionalData?.Remove("transferToValue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transferToValue"); else _explicitNullProperties?.Remove("transferToValue"); } }
         private string? _explicitNullValueTransferToValue = default!;
 #nullable restore
 #else
-        public string TransferToValue { get => _explicitNullValueTransferToValue; set { _explicitNullValueTransferToValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transferToValue"); else _explicitNullProperties?.Remove("transferToValue"); } }
+        public string TransferToValue { get => _explicitNullValueTransferToValue; set { _explicitNullValueTransferToValue = value; AdditionalData?.Remove("transferToValue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transferToValue"); else _explicitNullProperties?.Remove("transferToValue"); } }
         private string _explicitNullValueTransferToValue = default!;
 #endif
         /// <summary>Message to tell the caller before transferring</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TriggerMessage { get => _explicitNullValueTriggerMessage; set { _explicitNullValueTriggerMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggerMessage"); else _explicitNullProperties?.Remove("triggerMessage"); } }
+        public string? TriggerMessage { get => _explicitNullValueTriggerMessage; set { _explicitNullValueTriggerMessage = value; AdditionalData?.Remove("triggerMessage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggerMessage"); else _explicitNullProperties?.Remove("triggerMessage"); } }
         private string? _explicitNullValueTriggerMessage = default!;
 #nullable restore
 #else
-        public string TriggerMessage { get => _explicitNullValueTriggerMessage; set { _explicitNullValueTriggerMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggerMessage"); else _explicitNullProperties?.Remove("triggerMessage"); } }
+        public string TriggerMessage { get => _explicitNullValueTriggerMessage; set { _explicitNullValueTriggerMessage = value; AdditionalData?.Remove("triggerMessage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggerMessage"); else _explicitNullProperties?.Remove("triggerMessage"); } }
         private string _explicitNullValueTriggerMessage = default!;
 #endif
         /// <summary>When to trigger this action during the call</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TriggerPrompt { get => _explicitNullValueTriggerPrompt; set { _explicitNullValueTriggerPrompt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggerPrompt"); else _explicitNullProperties?.Remove("triggerPrompt"); } }
+        public string? TriggerPrompt { get => _explicitNullValueTriggerPrompt; set { _explicitNullValueTriggerPrompt = value; AdditionalData?.Remove("triggerPrompt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggerPrompt"); else _explicitNullProperties?.Remove("triggerPrompt"); } }
         private string? _explicitNullValueTriggerPrompt = default!;
 #nullable restore
 #else
-        public string TriggerPrompt { get => _explicitNullValueTriggerPrompt; set { _explicitNullValueTriggerPrompt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggerPrompt"); else _explicitNullProperties?.Remove("triggerPrompt"); } }
+        public string TriggerPrompt { get => _explicitNullValueTriggerPrompt; set { _explicitNullValueTriggerPrompt = value; AdditionalData?.Remove("triggerPrompt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggerPrompt"); else _explicitNullProperties?.Remove("triggerPrompt"); } }
         private string _explicitNullValueTriggerPrompt = default!;
 #endif
         /// <summary>
@@ -88,7 +93,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "hearWhisperMessage", n => { HearWhisperMessage = n.GetBoolValue(); } },
-                { "transferToType", n => { TransferToType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.NumberTransferToType>(); } },
+                { "transferToType", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.NumberTransferToType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTransferToType = default; _explicitNullProperties?.Remove("transferToType"); AdditionalData["transferToType"] = unknown; } else { TransferToType = parsed; AdditionalData.Remove("transferToType"); } } },
                 { "transferToValue", n => { TransferToValue = n.GetStringValue(); } },
                 { "triggerMessage", n => { TriggerMessage = n.GetStringValue(); } },
                 { "triggerPrompt", n => { TriggerPrompt = n.GetStringValue(); } },

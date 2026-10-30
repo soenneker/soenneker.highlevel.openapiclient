@@ -17,17 +17,19 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("operationType") is { } nullNodeOperationType && nullNodeOperationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OperationType = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("operationType") is null) { _explicitNullValueOperationType = default!; _explicitNullProperties?.Remove("operationType"); }
+            else if (parseNode.GetChildNode("operationType") is { } nullNodeOperationType && nullNodeOperationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OperationType = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Update operation</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInUpdateAdStatusBodyDtoOperationType? OperationType { get => _explicitNullValueOperationType; set { _explicitNullValueOperationType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operationType"); else _explicitNullProperties?.Remove("operationType"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInUpdateAdStatusBodyDtoOperationType? OperationType { get => _explicitNullValueOperationType; set { _explicitNullValueOperationType = value; AdditionalData?.Remove("operationType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operationType"); else _explicitNullProperties?.Remove("operationType"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInUpdateAdStatusBodyDtoOperationType? _explicitNullValueOperationType = default!;
         /// <summary>Ad object type</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInUpdateAdStatusBodyDtoType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInUpdateAdStatusBodyDtoType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInUpdateAdStatusBodyDtoType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInUpdateAdStatusBodyDto"/> and sets the default values.
@@ -54,8 +56,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "operationType", n => { OperationType = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInUpdateAdStatusBodyDtoOperationType>(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInUpdateAdStatusBodyDtoType>(); } },
+                { "operationType", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInUpdateAdStatusBodyDtoOperationType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueOperationType = default; _explicitNullProperties?.Remove("operationType"); AdditionalData["operationType"] = unknown; } else { OperationType = parsed; AdditionalData.Remove("operationType"); } } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInUpdateAdStatusBodyDtoType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
         }
         /// <summary>

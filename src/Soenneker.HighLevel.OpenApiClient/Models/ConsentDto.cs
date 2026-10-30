@@ -17,28 +17,31 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("checkRequired") is { } nullNodeCheckRequired && nullNodeCheckRequired.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CheckRequired = null;
-            if (parseNode.GetChildNode("consent") is { } nullNodeConsent && nullNodeConsent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Consent = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("checkRequired") is null) { _explicitNullValueCheckRequired = default!; _explicitNullProperties?.Remove("checkRequired"); }
+            else if (parseNode.GetChildNode("checkRequired") is { } nullNodeCheckRequired && nullNodeCheckRequired.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CheckRequired = null;
+            if (parseNode.GetChildNode("consent") is null) { _explicitNullValueConsent = default!; _explicitNullProperties?.Remove("consent"); }
+            else if (parseNode.GetChildNode("consent") is { } nullNodeConsent && nullNodeConsent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Consent = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether consent checkbox is required</summary>
-        public bool? CheckRequired { get => _explicitNullValueCheckRequired; set { _explicitNullValueCheckRequired = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checkRequired"); else _explicitNullProperties?.Remove("checkRequired"); } }
+        public bool? CheckRequired { get => _explicitNullValueCheckRequired; set { _explicitNullValueCheckRequired = value; AdditionalData?.Remove("checkRequired"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checkRequired"); else _explicitNullProperties?.Remove("checkRequired"); } }
         private bool? _explicitNullValueCheckRequired = default!;
         /// <summary>Consent text</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ConsentDtoConsent? Consent { get => _explicitNullValueConsent; set { _explicitNullValueConsent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("consent"); else _explicitNullProperties?.Remove("consent"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ConsentDtoConsent? Consent { get => _explicitNullValueConsent; set { _explicitNullValueConsent = value; AdditionalData?.Remove("consent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("consent"); else _explicitNullProperties?.Remove("consent"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.ConsentDtoConsent? _explicitNullValueConsent = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ConsentDtoConsent Consent { get => _explicitNullValueConsent; set { _explicitNullValueConsent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("consent"); else _explicitNullProperties?.Remove("consent"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ConsentDtoConsent Consent { get => _explicitNullValueConsent; set { _explicitNullValueConsent = value; AdditionalData?.Remove("consent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("consent"); else _explicitNullProperties?.Remove("consent"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.ConsentDtoConsent _explicitNullValueConsent = default!;
 #endif
         /// <summary>Consent identifier</summary>
-        public double? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public double? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private double? _explicitNullValueId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.ConsentDto"/> and sets the default values.

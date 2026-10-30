@@ -17,28 +17,40 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("actionId") is { } nullNodeActionId && nullNodeActionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionId = null;
-            if (parseNode.GetChildNode("calendarId") is { } nullNodeCalendarId && nullNodeCalendarId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CalendarId = null;
-            if (parseNode.GetChildNode("cancelEnabled") is { } nullNodeCancelEnabled && nullNodeCancelEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CancelEnabled = null;
-            if (parseNode.GetChildNode("onlySendLink") is { } nullNodeOnlySendLink && nullNodeOnlySendLink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OnlySendLink = null;
-            if (parseNode.GetChildNode("rescheduleEnabled") is { } nullNodeRescheduleEnabled && nullNodeRescheduleEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RescheduleEnabled = null;
-            if (parseNode.GetChildNode("sleepAfterBooking") is { } nullNodeSleepAfterBooking && nullNodeSleepAfterBooking.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SleepAfterBooking = null;
-            if (parseNode.GetChildNode("sleepTime") is { } nullNodeSleepTime && nullNodeSleepTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SleepTime = null;
-            if (parseNode.GetChildNode("sleepTimeUnit") is { } nullNodeSleepTimeUnit && nullNodeSleepTimeUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SleepTimeUnit = null;
-            if (parseNode.GetChildNode("transferAgent") is { } nullNodeTransferAgent && nullNodeTransferAgent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransferAgent = null;
-            if (parseNode.GetChildNode("transferBot") is { } nullNodeTransferBot && nullNodeTransferBot.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransferBot = null;
-            if (parseNode.GetChildNode("triggerWorkflow") is { } nullNodeTriggerWorkflow && nullNodeTriggerWorkflow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TriggerWorkflow = null;
-            if (parseNode.GetChildNode("workflowIds") is { } nullNodeWorkflowIds && nullNodeWorkflowIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowIds = null;
+            if (parseNode.GetChildNode("actionId") is null) { _explicitNullValueActionId = default!; _explicitNullProperties?.Remove("actionId"); }
+            else if (parseNode.GetChildNode("actionId") is { } nullNodeActionId && nullNodeActionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionId = null;
+            if (parseNode.GetChildNode("calendarId") is null) { _explicitNullValueCalendarId = default!; _explicitNullProperties?.Remove("calendarId"); }
+            else if (parseNode.GetChildNode("calendarId") is { } nullNodeCalendarId && nullNodeCalendarId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CalendarId = null;
+            if (parseNode.GetChildNode("cancelEnabled") is null) { _explicitNullValueCancelEnabled = default!; _explicitNullProperties?.Remove("cancelEnabled"); }
+            else if (parseNode.GetChildNode("cancelEnabled") is { } nullNodeCancelEnabled && nullNodeCancelEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CancelEnabled = null;
+            if (parseNode.GetChildNode("onlySendLink") is null) { _explicitNullValueOnlySendLink = default!; _explicitNullProperties?.Remove("onlySendLink"); }
+            else if (parseNode.GetChildNode("onlySendLink") is { } nullNodeOnlySendLink && nullNodeOnlySendLink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OnlySendLink = null;
+            if (parseNode.GetChildNode("rescheduleEnabled") is null) { _explicitNullValueRescheduleEnabled = default!; _explicitNullProperties?.Remove("rescheduleEnabled"); }
+            else if (parseNode.GetChildNode("rescheduleEnabled") is { } nullNodeRescheduleEnabled && nullNodeRescheduleEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RescheduleEnabled = null;
+            if (parseNode.GetChildNode("sleepAfterBooking") is null) { _explicitNullValueSleepAfterBooking = default!; _explicitNullProperties?.Remove("sleepAfterBooking"); }
+            else if (parseNode.GetChildNode("sleepAfterBooking") is { } nullNodeSleepAfterBooking && nullNodeSleepAfterBooking.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SleepAfterBooking = null;
+            if (parseNode.GetChildNode("sleepTime") is null) { _explicitNullValueSleepTime = default!; _explicitNullProperties?.Remove("sleepTime"); }
+            else if (parseNode.GetChildNode("sleepTime") is { } nullNodeSleepTime && nullNodeSleepTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SleepTime = null;
+            if (parseNode.GetChildNode("sleepTimeUnit") is null) { _explicitNullValueSleepTimeUnit = default!; _explicitNullProperties?.Remove("sleepTimeUnit"); }
+            else if (parseNode.GetChildNode("sleepTimeUnit") is { } nullNodeSleepTimeUnit && nullNodeSleepTimeUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SleepTimeUnit = null;
+            if (parseNode.GetChildNode("transferAgent") is null) { _explicitNullValueTransferAgent = default!; _explicitNullProperties?.Remove("transferAgent"); }
+            else if (parseNode.GetChildNode("transferAgent") is { } nullNodeTransferAgent && nullNodeTransferAgent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransferAgent = null;
+            if (parseNode.GetChildNode("transferBot") is null) { _explicitNullValueTransferBot = default!; _explicitNullProperties?.Remove("transferBot"); }
+            else if (parseNode.GetChildNode("transferBot") is { } nullNodeTransferBot && nullNodeTransferBot.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransferBot = null;
+            if (parseNode.GetChildNode("triggerWorkflow") is null) { _explicitNullValueTriggerWorkflow = default!; _explicitNullProperties?.Remove("triggerWorkflow"); }
+            else if (parseNode.GetChildNode("triggerWorkflow") is { } nullNodeTriggerWorkflow && nullNodeTriggerWorkflow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TriggerWorkflow = null;
+            if (parseNode.GetChildNode("workflowIds") is null) { _explicitNullValueWorkflowIds = default!; _explicitNullProperties?.Remove("workflowIds"); }
+            else if (parseNode.GetChildNode("workflowIds") is { } nullNodeWorkflowIds && nullNodeWorkflowIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowIds = null;
         }
 
         /// <summary>Optional action ID reference</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ActionId { get => _explicitNullValueActionId; set { _explicitNullValueActionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionId"); else _explicitNullProperties?.Remove("actionId"); } }
+        public string? ActionId { get => _explicitNullValueActionId; set { _explicitNullValueActionId = value; AdditionalData?.Remove("actionId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionId"); else _explicitNullProperties?.Remove("actionId"); } }
         private string? _explicitNullValueActionId = default!;
 #nullable restore
 #else
-        public string ActionId { get => _explicitNullValueActionId; set { _explicitNullValueActionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionId"); else _explicitNullProperties?.Remove("actionId"); } }
+        public string ActionId { get => _explicitNullValueActionId; set { _explicitNullValueActionId = value; AdditionalData?.Remove("actionId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionId"); else _explicitNullProperties?.Remove("actionId"); } }
         private string _explicitNullValueActionId = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -46,55 +58,55 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Calendar ID for appointment booking</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CalendarId { get => _explicitNullValueCalendarId; set { _explicitNullValueCalendarId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calendarId"); else _explicitNullProperties?.Remove("calendarId"); } }
+        public string? CalendarId { get => _explicitNullValueCalendarId; set { _explicitNullValueCalendarId = value; AdditionalData?.Remove("calendarId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calendarId"); else _explicitNullProperties?.Remove("calendarId"); } }
         private string? _explicitNullValueCalendarId = default!;
 #nullable restore
 #else
-        public string CalendarId { get => _explicitNullValueCalendarId; set { _explicitNullValueCalendarId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calendarId"); else _explicitNullProperties?.Remove("calendarId"); } }
+        public string CalendarId { get => _explicitNullValueCalendarId; set { _explicitNullValueCalendarId = value; AdditionalData?.Remove("calendarId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calendarId"); else _explicitNullProperties?.Remove("calendarId"); } }
         private string _explicitNullValueCalendarId = default!;
 #endif
         /// <summary>Whether to allow appointment cancellation (cannot be true when onlySendLink is true)</summary>
-        public bool? CancelEnabled { get => _explicitNullValueCancelEnabled; set { _explicitNullValueCancelEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancelEnabled"); else _explicitNullProperties?.Remove("cancelEnabled"); } }
+        public bool? CancelEnabled { get => _explicitNullValueCancelEnabled; set { _explicitNullValueCancelEnabled = value; AdditionalData?.Remove("cancelEnabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancelEnabled"); else _explicitNullProperties?.Remove("cancelEnabled"); } }
         private bool? _explicitNullValueCancelEnabled = default!;
         /// <summary>If true, only sends the appointment link without booking</summary>
-        public bool? OnlySendLink { get => _explicitNullValueOnlySendLink; set { _explicitNullValueOnlySendLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("onlySendLink"); else _explicitNullProperties?.Remove("onlySendLink"); } }
+        public bool? OnlySendLink { get => _explicitNullValueOnlySendLink; set { _explicitNullValueOnlySendLink = value; AdditionalData?.Remove("onlySendLink"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("onlySendLink"); else _explicitNullProperties?.Remove("onlySendLink"); } }
         private bool? _explicitNullValueOnlySendLink = default!;
         /// <summary>Whether to allow appointment rescheduling (cannot be true when onlySendLink is true)</summary>
-        public bool? RescheduleEnabled { get => _explicitNullValueRescheduleEnabled; set { _explicitNullValueRescheduleEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rescheduleEnabled"); else _explicitNullProperties?.Remove("rescheduleEnabled"); } }
+        public bool? RescheduleEnabled { get => _explicitNullValueRescheduleEnabled; set { _explicitNullValueRescheduleEnabled = value; AdditionalData?.Remove("rescheduleEnabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rescheduleEnabled"); else _explicitNullProperties?.Remove("rescheduleEnabled"); } }
         private bool? _explicitNullValueRescheduleEnabled = default!;
         /// <summary>Whether to put the agent to sleep after booking (cannot be true when onlySendLink is true)</summary>
-        public bool? SleepAfterBooking { get => _explicitNullValueSleepAfterBooking; set { _explicitNullValueSleepAfterBooking = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sleepAfterBooking"); else _explicitNullProperties?.Remove("sleepAfterBooking"); } }
+        public bool? SleepAfterBooking { get => _explicitNullValueSleepAfterBooking; set { _explicitNullValueSleepAfterBooking = value; AdditionalData?.Remove("sleepAfterBooking"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sleepAfterBooking"); else _explicitNullProperties?.Remove("sleepAfterBooking"); } }
         private bool? _explicitNullValueSleepAfterBooking = default!;
         /// <summary>Sleep duration (required when sleepAfterBooking is true)</summary>
-        public double? SleepTime { get => _explicitNullValueSleepTime; set { _explicitNullValueSleepTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sleepTime"); else _explicitNullProperties?.Remove("sleepTime"); } }
+        public double? SleepTime { get => _explicitNullValueSleepTime; set { _explicitNullValueSleepTime = value; AdditionalData?.Remove("sleepTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sleepTime"); else _explicitNullProperties?.Remove("sleepTime"); } }
         private double? _explicitNullValueSleepTime = default!;
         /// <summary>Unit for sleep time (required when sleepAfterBooking is true)</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentBookingDtoSleepTimeUnit? SleepTimeUnit { get => _explicitNullValueSleepTimeUnit; set { _explicitNullValueSleepTimeUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sleepTimeUnit"); else _explicitNullProperties?.Remove("sleepTimeUnit"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentBookingDtoSleepTimeUnit? SleepTimeUnit { get => _explicitNullValueSleepTimeUnit; set { _explicitNullValueSleepTimeUnit = value; AdditionalData?.Remove("sleepTimeUnit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sleepTimeUnit"); else _explicitNullProperties?.Remove("sleepTimeUnit"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentBookingDtoSleepTimeUnit? _explicitNullValueSleepTimeUnit = default!;
         /// <summary>Agent ID to transfer to (required when transferBot is true)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TransferAgent { get => _explicitNullValueTransferAgent; set { _explicitNullValueTransferAgent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transferAgent"); else _explicitNullProperties?.Remove("transferAgent"); } }
+        public string? TransferAgent { get => _explicitNullValueTransferAgent; set { _explicitNullValueTransferAgent = value; AdditionalData?.Remove("transferAgent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transferAgent"); else _explicitNullProperties?.Remove("transferAgent"); } }
         private string? _explicitNullValueTransferAgent = default!;
 #nullable restore
 #else
-        public string TransferAgent { get => _explicitNullValueTransferAgent; set { _explicitNullValueTransferAgent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transferAgent"); else _explicitNullProperties?.Remove("transferAgent"); } }
+        public string TransferAgent { get => _explicitNullValueTransferAgent; set { _explicitNullValueTransferAgent = value; AdditionalData?.Remove("transferAgent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transferAgent"); else _explicitNullProperties?.Remove("transferAgent"); } }
         private string _explicitNullValueTransferAgent = default!;
 #endif
         /// <summary>Whether to transfer to another agent after booking (cannot be true when onlySendLink is true)</summary>
-        public bool? TransferBot { get => _explicitNullValueTransferBot; set { _explicitNullValueTransferBot = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transferBot"); else _explicitNullProperties?.Remove("transferBot"); } }
+        public bool? TransferBot { get => _explicitNullValueTransferBot; set { _explicitNullValueTransferBot = value; AdditionalData?.Remove("transferBot"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transferBot"); else _explicitNullProperties?.Remove("transferBot"); } }
         private bool? _explicitNullValueTransferBot = default!;
         /// <summary>Whether to trigger a workflow after booking (cannot be true when onlySendLink is true)</summary>
-        public bool? TriggerWorkflow { get => _explicitNullValueTriggerWorkflow; set { _explicitNullValueTriggerWorkflow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggerWorkflow"); else _explicitNullProperties?.Remove("triggerWorkflow"); } }
+        public bool? TriggerWorkflow { get => _explicitNullValueTriggerWorkflow; set { _explicitNullValueTriggerWorkflow = value; AdditionalData?.Remove("triggerWorkflow"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggerWorkflow"); else _explicitNullProperties?.Remove("triggerWorkflow"); } }
         private bool? _explicitNullValueTriggerWorkflow = default!;
         /// <summary>Workflow IDs to trigger after booking (required when triggerWorkflow is true)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? WorkflowIds { get => _explicitNullValueWorkflowIds; set { _explicitNullValueWorkflowIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowIds"); else _explicitNullProperties?.Remove("workflowIds"); } }
+        public List<string>? WorkflowIds { get => _explicitNullValueWorkflowIds; set { _explicitNullValueWorkflowIds = value; AdditionalData?.Remove("workflowIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowIds"); else _explicitNullProperties?.Remove("workflowIds"); } }
         private List<string>? _explicitNullValueWorkflowIds = default!;
 #nullable restore
 #else
-        public List<string> WorkflowIds { get => _explicitNullValueWorkflowIds; set { _explicitNullValueWorkflowIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowIds"); else _explicitNullProperties?.Remove("workflowIds"); } }
+        public List<string> WorkflowIds { get => _explicitNullValueWorkflowIds; set { _explicitNullValueWorkflowIds = value; AdditionalData?.Remove("workflowIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowIds"); else _explicitNullProperties?.Remove("workflowIds"); } }
         private List<string> _explicitNullValueWorkflowIds = default!;
 #endif
         /// <summary>
@@ -131,7 +143,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "rescheduleEnabled", n => { RescheduleEnabled = n.GetBoolValue(); } },
                 { "sleepAfterBooking", n => { SleepAfterBooking = n.GetBoolValue(); } },
                 { "sleepTime", n => { SleepTime = n.GetDoubleValue(); } },
-                { "sleepTimeUnit", n => { SleepTimeUnit = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentBookingDtoSleepTimeUnit>(); } },
+                { "sleepTimeUnit", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentBookingDtoSleepTimeUnit>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueSleepTimeUnit = default; _explicitNullProperties?.Remove("sleepTimeUnit"); AdditionalData["sleepTimeUnit"] = unknown; } else { SleepTimeUnit = parsed; AdditionalData.Remove("sleepTimeUnit"); } } },
                 { "transferAgent", n => { TransferAgent = n.GetStringValue(); } },
                 { "transferBot", n => { TransferBot = n.GetBoolValue(); } },
                 { "triggerWorkflow", n => { TriggerWorkflow = n.GetBoolValue(); } },

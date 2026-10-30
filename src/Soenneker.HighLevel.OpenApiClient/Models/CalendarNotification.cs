@@ -17,12 +17,18 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("selectedUsers") is { } nullNodeSelectedUsers && nullNodeSelectedUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SelectedUsers = null;
-            if (parseNode.GetChildNode("shouldSendToContact") is { } nullNodeShouldSendToContact && nullNodeShouldSendToContact.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShouldSendToContact = null;
-            if (parseNode.GetChildNode("shouldSendToGuest") is { } nullNodeShouldSendToGuest && nullNodeShouldSendToGuest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShouldSendToGuest = null;
-            if (parseNode.GetChildNode("shouldSendToSelectedUsers") is { } nullNodeShouldSendToSelectedUsers && nullNodeShouldSendToSelectedUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShouldSendToSelectedUsers = null;
-            if (parseNode.GetChildNode("shouldSendToUser") is { } nullNodeShouldSendToUser && nullNodeShouldSendToUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShouldSendToUser = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("selectedUsers") is null) { _explicitNullValueSelectedUsers = default!; _explicitNullProperties?.Remove("selectedUsers"); }
+            else if (parseNode.GetChildNode("selectedUsers") is { } nullNodeSelectedUsers && nullNodeSelectedUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SelectedUsers = null;
+            if (parseNode.GetChildNode("shouldSendToContact") is null) { _explicitNullValueShouldSendToContact = default!; _explicitNullProperties?.Remove("shouldSendToContact"); }
+            else if (parseNode.GetChildNode("shouldSendToContact") is { } nullNodeShouldSendToContact && nullNodeShouldSendToContact.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShouldSendToContact = null;
+            if (parseNode.GetChildNode("shouldSendToGuest") is null) { _explicitNullValueShouldSendToGuest = default!; _explicitNullProperties?.Remove("shouldSendToGuest"); }
+            else if (parseNode.GetChildNode("shouldSendToGuest") is { } nullNodeShouldSendToGuest && nullNodeShouldSendToGuest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShouldSendToGuest = null;
+            if (parseNode.GetChildNode("shouldSendToSelectedUsers") is null) { _explicitNullValueShouldSendToSelectedUsers = default!; _explicitNullProperties?.Remove("shouldSendToSelectedUsers"); }
+            else if (parseNode.GetChildNode("shouldSendToSelectedUsers") is { } nullNodeShouldSendToSelectedUsers && nullNodeShouldSendToSelectedUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShouldSendToSelectedUsers = null;
+            if (parseNode.GetChildNode("shouldSendToUser") is null) { _explicitNullValueShouldSendToUser = default!; _explicitNullProperties?.Remove("shouldSendToUser"); }
+            else if (parseNode.GetChildNode("shouldSendToUser") is { } nullNodeShouldSendToUser && nullNodeShouldSendToUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShouldSendToUser = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,27 +36,27 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Comma separated emails</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SelectedUsers { get => _explicitNullValueSelectedUsers; set { _explicitNullValueSelectedUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selectedUsers"); else _explicitNullProperties?.Remove("selectedUsers"); } }
+        public string? SelectedUsers { get => _explicitNullValueSelectedUsers; set { _explicitNullValueSelectedUsers = value; AdditionalData?.Remove("selectedUsers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selectedUsers"); else _explicitNullProperties?.Remove("selectedUsers"); } }
         private string? _explicitNullValueSelectedUsers = default!;
 #nullable restore
 #else
-        public string SelectedUsers { get => _explicitNullValueSelectedUsers; set { _explicitNullValueSelectedUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selectedUsers"); else _explicitNullProperties?.Remove("selectedUsers"); } }
+        public string SelectedUsers { get => _explicitNullValueSelectedUsers; set { _explicitNullValueSelectedUsers = value; AdditionalData?.Remove("selectedUsers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selectedUsers"); else _explicitNullProperties?.Remove("selectedUsers"); } }
         private string _explicitNullValueSelectedUsers = default!;
 #endif
         /// <summary>The shouldSendToContact property</summary>
-        public bool? ShouldSendToContact { get => _explicitNullValueShouldSendToContact; set { _explicitNullValueShouldSendToContact = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shouldSendToContact"); else _explicitNullProperties?.Remove("shouldSendToContact"); } }
+        public bool? ShouldSendToContact { get => _explicitNullValueShouldSendToContact; set { _explicitNullValueShouldSendToContact = value; AdditionalData?.Remove("shouldSendToContact"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shouldSendToContact"); else _explicitNullProperties?.Remove("shouldSendToContact"); } }
         private bool? _explicitNullValueShouldSendToContact = default!;
         /// <summary>The shouldSendToGuest property</summary>
-        public bool? ShouldSendToGuest { get => _explicitNullValueShouldSendToGuest; set { _explicitNullValueShouldSendToGuest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shouldSendToGuest"); else _explicitNullProperties?.Remove("shouldSendToGuest"); } }
+        public bool? ShouldSendToGuest { get => _explicitNullValueShouldSendToGuest; set { _explicitNullValueShouldSendToGuest = value; AdditionalData?.Remove("shouldSendToGuest"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shouldSendToGuest"); else _explicitNullProperties?.Remove("shouldSendToGuest"); } }
         private bool? _explicitNullValueShouldSendToGuest = default!;
         /// <summary>The shouldSendToSelectedUsers property</summary>
-        public bool? ShouldSendToSelectedUsers { get => _explicitNullValueShouldSendToSelectedUsers; set { _explicitNullValueShouldSendToSelectedUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shouldSendToSelectedUsers"); else _explicitNullProperties?.Remove("shouldSendToSelectedUsers"); } }
+        public bool? ShouldSendToSelectedUsers { get => _explicitNullValueShouldSendToSelectedUsers; set { _explicitNullValueShouldSendToSelectedUsers = value; AdditionalData?.Remove("shouldSendToSelectedUsers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shouldSendToSelectedUsers"); else _explicitNullProperties?.Remove("shouldSendToSelectedUsers"); } }
         private bool? _explicitNullValueShouldSendToSelectedUsers = default!;
         /// <summary>The shouldSendToUser property</summary>
-        public bool? ShouldSendToUser { get => _explicitNullValueShouldSendToUser; set { _explicitNullValueShouldSendToUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shouldSendToUser"); else _explicitNullProperties?.Remove("shouldSendToUser"); } }
+        public bool? ShouldSendToUser { get => _explicitNullValueShouldSendToUser; set { _explicitNullValueShouldSendToUser = value; AdditionalData?.Remove("shouldSendToUser"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shouldSendToUser"); else _explicitNullProperties?.Remove("shouldSendToUser"); } }
         private bool? _explicitNullValueShouldSendToUser = default!;
         /// <summary>Calendar Notification</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.EmailType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.EmailType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.EmailType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CalendarNotification"/> and sets the default values.
@@ -82,7 +88,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "shouldSendToGuest", n => { ShouldSendToGuest = n.GetBoolValue(); } },
                 { "shouldSendToSelectedUsers", n => { ShouldSendToSelectedUsers = n.GetBoolValue(); } },
                 { "shouldSendToUser", n => { ShouldSendToUser = n.GetBoolValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.EmailType>(); } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.EmailType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
         }
         /// <summary>

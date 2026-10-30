@@ -17,7 +17,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("customMenu") is { } nullNodeCustomMenu && nullNodeCustomMenu.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomMenu = null;
+            if (parseNode.GetChildNode("customMenu") is null) { _explicitNullValueCustomMenu = default!; _explicitNullProperties?.Remove("customMenu"); }
+            else if (parseNode.GetChildNode("customMenu") is { } nullNodeCustomMenu && nullNodeCustomMenu.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomMenu = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Single Custom menu link object</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSingleCustomMenusSuccessfulResponseDtoCustomMenu? CustomMenu { get => _explicitNullValueCustomMenu; set { _explicitNullValueCustomMenu = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customMenu"); else _explicitNullProperties?.Remove("customMenu"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSingleCustomMenusSuccessfulResponseDtoCustomMenu? CustomMenu { get => _explicitNullValueCustomMenu; set { _explicitNullValueCustomMenu = value; AdditionalData?.Remove("customMenu"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customMenu"); else _explicitNullProperties?.Remove("customMenu"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.GetSingleCustomMenusSuccessfulResponseDtoCustomMenu? _explicitNullValueCustomMenu = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSingleCustomMenusSuccessfulResponseDtoCustomMenu CustomMenu { get => _explicitNullValueCustomMenu; set { _explicitNullValueCustomMenu = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customMenu"); else _explicitNullProperties?.Remove("customMenu"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetSingleCustomMenusSuccessfulResponseDtoCustomMenu CustomMenu { get => _explicitNullValueCustomMenu; set { _explicitNullValueCustomMenu = value; AdditionalData?.Remove("customMenu"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customMenu"); else _explicitNullProperties?.Remove("customMenu"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.GetSingleCustomMenusSuccessfulResponseDtoCustomMenu _explicitNullValueCustomMenu = default!;
 #endif
         /// <summary>

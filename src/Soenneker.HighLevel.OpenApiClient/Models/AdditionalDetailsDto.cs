@@ -17,25 +17,29 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("calendarEvents") is { } nullNodeCalendarEvents && nullNodeCalendarEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CalendarEvents = null;
-            if (parseNode.GetChildNode("notes") is { } nullNodeNotes && nullNodeNotes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Notes = null;
-            if (parseNode.GetChildNode("tasks") is { } nullNodeTasks && nullNodeTasks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tasks = null;
-            if (parseNode.GetChildNode("unReadConversations") is { } nullNodeUnReadConversations && nullNodeUnReadConversations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnReadConversations = null;
+            if (parseNode.GetChildNode("calendarEvents") is null) { _explicitNullValueCalendarEvents = default!; _explicitNullProperties?.Remove("calendarEvents"); }
+            else if (parseNode.GetChildNode("calendarEvents") is { } nullNodeCalendarEvents && nullNodeCalendarEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CalendarEvents = null;
+            if (parseNode.GetChildNode("notes") is null) { _explicitNullValueNotes = default!; _explicitNullProperties?.Remove("notes"); }
+            else if (parseNode.GetChildNode("notes") is { } nullNodeNotes && nullNodeNotes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Notes = null;
+            if (parseNode.GetChildNode("tasks") is null) { _explicitNullValueTasks = default!; _explicitNullProperties?.Remove("tasks"); }
+            else if (parseNode.GetChildNode("tasks") is { } nullNodeTasks && nullNodeTasks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tasks = null;
+            if (parseNode.GetChildNode("unReadConversations") is null) { _explicitNullValueUnReadConversations = default!; _explicitNullProperties?.Remove("unReadConversations"); }
+            else if (parseNode.GetChildNode("unReadConversations") is { } nullNodeUnReadConversations && nullNodeUnReadConversations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnReadConversations = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The calendarEvents property</summary>
-        public bool? CalendarEvents { get => _explicitNullValueCalendarEvents; set { _explicitNullValueCalendarEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calendarEvents"); else _explicitNullProperties?.Remove("calendarEvents"); } }
+        public bool? CalendarEvents { get => _explicitNullValueCalendarEvents; set { _explicitNullValueCalendarEvents = value; AdditionalData?.Remove("calendarEvents"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calendarEvents"); else _explicitNullProperties?.Remove("calendarEvents"); } }
         private bool? _explicitNullValueCalendarEvents = default!;
         /// <summary>The notes property</summary>
-        public bool? Notes { get => _explicitNullValueNotes; set { _explicitNullValueNotes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notes"); else _explicitNullProperties?.Remove("notes"); } }
+        public bool? Notes { get => _explicitNullValueNotes; set { _explicitNullValueNotes = value; AdditionalData?.Remove("notes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notes"); else _explicitNullProperties?.Remove("notes"); } }
         private bool? _explicitNullValueNotes = default!;
         /// <summary>The tasks property</summary>
-        public bool? Tasks { get => _explicitNullValueTasks; set { _explicitNullValueTasks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tasks"); else _explicitNullProperties?.Remove("tasks"); } }
+        public bool? Tasks { get => _explicitNullValueTasks; set { _explicitNullValueTasks = value; AdditionalData?.Remove("tasks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tasks"); else _explicitNullProperties?.Remove("tasks"); } }
         private bool? _explicitNullValueTasks = default!;
         /// <summary>The unReadConversations property</summary>
-        public bool? UnReadConversations { get => _explicitNullValueUnReadConversations; set { _explicitNullValueUnReadConversations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unReadConversations"); else _explicitNullProperties?.Remove("unReadConversations"); } }
+        public bool? UnReadConversations { get => _explicitNullValueUnReadConversations; set { _explicitNullValueUnReadConversations = value; AdditionalData?.Remove("unReadConversations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unReadConversations"); else _explicitNullProperties?.Remove("unReadConversations"); } }
         private bool? _explicitNullValueUnReadConversations = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.AdditionalDetailsDto"/> and sets the default values.

@@ -17,7 +17,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("blogs") is { } nullNodeBlogs && nullNodeBlogs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Blogs = null;
+            if (parseNode.GetChildNode("blogs") is null) { _explicitNullValueBlogs = default!; _explicitNullProperties?.Remove("blogs"); }
+            else if (parseNode.GetChildNode("blogs") is { } nullNodeBlogs && nullNodeBlogs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Blogs = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Object containing response data of blog posts</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.BlogPostResponseDto>? Blogs { get => _explicitNullValueBlogs; set { _explicitNullValueBlogs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blogs"); else _explicitNullProperties?.Remove("blogs"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.BlogPostResponseDto>? Blogs { get => _explicitNullValueBlogs; set { _explicitNullValueBlogs = value; AdditionalData?.Remove("blogs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blogs"); else _explicitNullProperties?.Remove("blogs"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.BlogPostResponseDto>? _explicitNullValueBlogs = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.BlogPostResponseDto> Blogs { get => _explicitNullValueBlogs; set { _explicitNullValueBlogs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blogs"); else _explicitNullProperties?.Remove("blogs"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.BlogPostResponseDto> Blogs { get => _explicitNullValueBlogs; set { _explicitNullValueBlogs = value; AdditionalData?.Remove("blogs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blogs"); else _explicitNullProperties?.Remove("blogs"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.BlogPostResponseDto> _explicitNullValueBlogs = default!;
 #endif
         /// <summary>

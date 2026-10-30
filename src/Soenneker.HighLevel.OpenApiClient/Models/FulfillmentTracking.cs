@@ -17,9 +17,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("shippingCarrier") is { } nullNodeShippingCarrier && nullNodeShippingCarrier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingCarrier = null;
-            if (parseNode.GetChildNode("trackingNumber") is { } nullNodeTrackingNumber && nullNodeTrackingNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackingNumber = null;
-            if (parseNode.GetChildNode("trackingUrl") is { } nullNodeTrackingUrl && nullNodeTrackingUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackingUrl = null;
+            if (parseNode.GetChildNode("shippingCarrier") is null) { _explicitNullValueShippingCarrier = default!; _explicitNullProperties?.Remove("shippingCarrier"); }
+            else if (parseNode.GetChildNode("shippingCarrier") is { } nullNodeShippingCarrier && nullNodeShippingCarrier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShippingCarrier = null;
+            if (parseNode.GetChildNode("trackingNumber") is null) { _explicitNullValueTrackingNumber = default!; _explicitNullProperties?.Remove("trackingNumber"); }
+            else if (parseNode.GetChildNode("trackingNumber") is { } nullNodeTrackingNumber && nullNodeTrackingNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackingNumber = null;
+            if (parseNode.GetChildNode("trackingUrl") is null) { _explicitNullValueTrackingUrl = default!; _explicitNullProperties?.Remove("trackingUrl"); }
+            else if (parseNode.GetChildNode("trackingUrl") is { } nullNodeTrackingUrl && nullNodeTrackingUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrackingUrl = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Shipping carrier name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShippingCarrier { get => _explicitNullValueShippingCarrier; set { _explicitNullValueShippingCarrier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shippingCarrier"); else _explicitNullProperties?.Remove("shippingCarrier"); } }
+        public string? ShippingCarrier { get => _explicitNullValueShippingCarrier; set { _explicitNullValueShippingCarrier = value; AdditionalData?.Remove("shippingCarrier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shippingCarrier"); else _explicitNullProperties?.Remove("shippingCarrier"); } }
         private string? _explicitNullValueShippingCarrier = default!;
 #nullable restore
 #else
-        public string ShippingCarrier { get => _explicitNullValueShippingCarrier; set { _explicitNullValueShippingCarrier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shippingCarrier"); else _explicitNullProperties?.Remove("shippingCarrier"); } }
+        public string ShippingCarrier { get => _explicitNullValueShippingCarrier; set { _explicitNullValueShippingCarrier = value; AdditionalData?.Remove("shippingCarrier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shippingCarrier"); else _explicitNullProperties?.Remove("shippingCarrier"); } }
         private string _explicitNullValueShippingCarrier = default!;
 #endif
         /// <summary>Tracking number provided by the shipping carrier</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TrackingNumber { get => _explicitNullValueTrackingNumber; set { _explicitNullValueTrackingNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trackingNumber"); else _explicitNullProperties?.Remove("trackingNumber"); } }
+        public string? TrackingNumber { get => _explicitNullValueTrackingNumber; set { _explicitNullValueTrackingNumber = value; AdditionalData?.Remove("trackingNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trackingNumber"); else _explicitNullProperties?.Remove("trackingNumber"); } }
         private string? _explicitNullValueTrackingNumber = default!;
 #nullable restore
 #else
-        public string TrackingNumber { get => _explicitNullValueTrackingNumber; set { _explicitNullValueTrackingNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trackingNumber"); else _explicitNullProperties?.Remove("trackingNumber"); } }
+        public string TrackingNumber { get => _explicitNullValueTrackingNumber; set { _explicitNullValueTrackingNumber = value; AdditionalData?.Remove("trackingNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trackingNumber"); else _explicitNullProperties?.Remove("trackingNumber"); } }
         private string _explicitNullValueTrackingNumber = default!;
 #endif
         /// <summary>Tracking URL</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TrackingUrl { get => _explicitNullValueTrackingUrl; set { _explicitNullValueTrackingUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trackingUrl"); else _explicitNullProperties?.Remove("trackingUrl"); } }
+        public string? TrackingUrl { get => _explicitNullValueTrackingUrl; set { _explicitNullValueTrackingUrl = value; AdditionalData?.Remove("trackingUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trackingUrl"); else _explicitNullProperties?.Remove("trackingUrl"); } }
         private string? _explicitNullValueTrackingUrl = default!;
 #nullable restore
 #else
-        public string TrackingUrl { get => _explicitNullValueTrackingUrl; set { _explicitNullValueTrackingUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trackingUrl"); else _explicitNullProperties?.Remove("trackingUrl"); } }
+        public string TrackingUrl { get => _explicitNullValueTrackingUrl; set { _explicitNullValueTrackingUrl = value; AdditionalData?.Remove("trackingUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trackingUrl"); else _explicitNullProperties?.Remove("trackingUrl"); } }
         private string _explicitNullValueTrackingUrl = default!;
 #endif
         /// <summary>

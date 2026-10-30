@@ -17,13 +17,20 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ccRecipients") is { } nullNodeCcRecipients && nullNodeCcRecipients.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CcRecipients = null;
-            if (parseNode.GetChildNode("documentId") is { } nullNodeDocumentId && nullNodeDocumentId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DocumentId = null;
-            if (parseNode.GetChildNode("documentName") is { } nullNodeDocumentName && nullNodeDocumentName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DocumentName = null;
-            if (parseNode.GetChildNode("locationId") is { } nullNodeLocationId && nullNodeLocationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationId = null;
-            if (parseNode.GetChildNode("medium") is { } nullNodeMedium && nullNodeMedium.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Medium = null;
-            if (parseNode.GetChildNode("notificationSettings") is { } nullNodeNotificationSettings && nullNodeNotificationSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationSettings = null;
-            if (parseNode.GetChildNode("sentBy") is { } nullNodeSentBy && nullNodeSentBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SentBy = null;
+            if (parseNode.GetChildNode("ccRecipients") is null) { _explicitNullValueCcRecipients = default!; _explicitNullProperties?.Remove("ccRecipients"); }
+            else if (parseNode.GetChildNode("ccRecipients") is { } nullNodeCcRecipients && nullNodeCcRecipients.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CcRecipients = null;
+            if (parseNode.GetChildNode("documentId") is null) { _explicitNullValueDocumentId = default!; _explicitNullProperties?.Remove("documentId"); }
+            else if (parseNode.GetChildNode("documentId") is { } nullNodeDocumentId && nullNodeDocumentId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DocumentId = null;
+            if (parseNode.GetChildNode("documentName") is null) { _explicitNullValueDocumentName = default!; _explicitNullProperties?.Remove("documentName"); }
+            else if (parseNode.GetChildNode("documentName") is { } nullNodeDocumentName && nullNodeDocumentName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DocumentName = null;
+            if (parseNode.GetChildNode("locationId") is null) { _explicitNullValueLocationId = default!; _explicitNullProperties?.Remove("locationId"); }
+            else if (parseNode.GetChildNode("locationId") is { } nullNodeLocationId && nullNodeLocationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationId = null;
+            if (parseNode.GetChildNode("medium") is null) { _explicitNullValueMedium = default!; _explicitNullProperties?.Remove("medium"); }
+            else if (parseNode.GetChildNode("medium") is { } nullNodeMedium && nullNodeMedium.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Medium = null;
+            if (parseNode.GetChildNode("notificationSettings") is null) { _explicitNullValueNotificationSettings = default!; _explicitNullProperties?.Remove("notificationSettings"); }
+            else if (parseNode.GetChildNode("notificationSettings") is { } nullNodeNotificationSettings && nullNodeNotificationSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationSettings = null;
+            if (parseNode.GetChildNode("sentBy") is null) { _explicitNullValueSentBy = default!; _explicitNullProperties?.Remove("sentBy"); }
+            else if (parseNode.GetChildNode("sentBy") is { } nullNodeSentBy && nullNodeSentBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SentBy = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -31,64 +38,64 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>CC Recipient</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CcRecipientItem>? CcRecipients { get => _explicitNullValueCcRecipients; set { _explicitNullValueCcRecipients = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ccRecipients"); else _explicitNullProperties?.Remove("ccRecipients"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CcRecipientItem>? CcRecipients { get => _explicitNullValueCcRecipients; set { _explicitNullValueCcRecipients = value; AdditionalData?.Remove("ccRecipients"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ccRecipients"); else _explicitNullProperties?.Remove("ccRecipients"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.CcRecipientItem>? _explicitNullValueCcRecipients = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CcRecipientItem> CcRecipients { get => _explicitNullValueCcRecipients; set { _explicitNullValueCcRecipients = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ccRecipients"); else _explicitNullProperties?.Remove("ccRecipients"); } }
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CcRecipientItem> CcRecipients { get => _explicitNullValueCcRecipients; set { _explicitNullValueCcRecipients = value; AdditionalData?.Remove("ccRecipients"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ccRecipients"); else _explicitNullProperties?.Remove("ccRecipients"); } }
         private List<global::Soenneker.HighLevel.OpenApiClient.Models.CcRecipientItem> _explicitNullValueCcRecipients = default!;
 #endif
         /// <summary>Document Id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DocumentId { get => _explicitNullValueDocumentId; set { _explicitNullValueDocumentId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("documentId"); else _explicitNullProperties?.Remove("documentId"); } }
+        public string? DocumentId { get => _explicitNullValueDocumentId; set { _explicitNullValueDocumentId = value; AdditionalData?.Remove("documentId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("documentId"); else _explicitNullProperties?.Remove("documentId"); } }
         private string? _explicitNullValueDocumentId = default!;
 #nullable restore
 #else
-        public string DocumentId { get => _explicitNullValueDocumentId; set { _explicitNullValueDocumentId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("documentId"); else _explicitNullProperties?.Remove("documentId"); } }
+        public string DocumentId { get => _explicitNullValueDocumentId; set { _explicitNullValueDocumentId = value; AdditionalData?.Remove("documentId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("documentId"); else _explicitNullProperties?.Remove("documentId"); } }
         private string _explicitNullValueDocumentId = default!;
 #endif
         /// <summary>Document Name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DocumentName { get => _explicitNullValueDocumentName; set { _explicitNullValueDocumentName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("documentName"); else _explicitNullProperties?.Remove("documentName"); } }
+        public string? DocumentName { get => _explicitNullValueDocumentName; set { _explicitNullValueDocumentName = value; AdditionalData?.Remove("documentName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("documentName"); else _explicitNullProperties?.Remove("documentName"); } }
         private string? _explicitNullValueDocumentName = default!;
 #nullable restore
 #else
-        public string DocumentName { get => _explicitNullValueDocumentName; set { _explicitNullValueDocumentName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("documentName"); else _explicitNullProperties?.Remove("documentName"); } }
+        public string DocumentName { get => _explicitNullValueDocumentName; set { _explicitNullValueDocumentName = value; AdditionalData?.Remove("documentName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("documentName"); else _explicitNullProperties?.Remove("documentName"); } }
         private string _explicitNullValueDocumentName = default!;
 #endif
         /// <summary>Location Id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
+        public string? LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; AdditionalData?.Remove("locationId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
         private string? _explicitNullValueLocationId = default!;
 #nullable restore
 #else
-        public string LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
+        public string LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; AdditionalData?.Remove("locationId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
         private string _explicitNullValueLocationId = default!;
 #endif
         /// <summary>Medium to be used for sending the document</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SendDocumentDtoMedium? Medium { get => _explicitNullValueMedium; set { _explicitNullValueMedium = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("medium"); else _explicitNullProperties?.Remove("medium"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SendDocumentDtoMedium? Medium { get => _explicitNullValueMedium; set { _explicitNullValueMedium = value; AdditionalData?.Remove("medium"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("medium"); else _explicitNullProperties?.Remove("medium"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.SendDocumentDtoMedium? _explicitNullValueMedium = default!;
         /// <summary>The notificationSettings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SendDocumentDtoNotificationSettings? NotificationSettings { get => _explicitNullValueNotificationSettings; set { _explicitNullValueNotificationSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notificationSettings"); else _explicitNullProperties?.Remove("notificationSettings"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SendDocumentDtoNotificationSettings? NotificationSettings { get => _explicitNullValueNotificationSettings; set { _explicitNullValueNotificationSettings = value; AdditionalData?.Remove("notificationSettings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notificationSettings"); else _explicitNullProperties?.Remove("notificationSettings"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.SendDocumentDtoNotificationSettings? _explicitNullValueNotificationSettings = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SendDocumentDtoNotificationSettings NotificationSettings { get => _explicitNullValueNotificationSettings; set { _explicitNullValueNotificationSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notificationSettings"); else _explicitNullProperties?.Remove("notificationSettings"); } }
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SendDocumentDtoNotificationSettings NotificationSettings { get => _explicitNullValueNotificationSettings; set { _explicitNullValueNotificationSettings = value; AdditionalData?.Remove("notificationSettings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notificationSettings"); else _explicitNullProperties?.Remove("notificationSettings"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.SendDocumentDtoNotificationSettings _explicitNullValueNotificationSettings = default!;
 #endif
         /// <summary>Sent ByUser Id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SentBy { get => _explicitNullValueSentBy; set { _explicitNullValueSentBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sentBy"); else _explicitNullProperties?.Remove("sentBy"); } }
+        public string? SentBy { get => _explicitNullValueSentBy; set { _explicitNullValueSentBy = value; AdditionalData?.Remove("sentBy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sentBy"); else _explicitNullProperties?.Remove("sentBy"); } }
         private string? _explicitNullValueSentBy = default!;
 #nullable restore
 #else
-        public string SentBy { get => _explicitNullValueSentBy; set { _explicitNullValueSentBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sentBy"); else _explicitNullProperties?.Remove("sentBy"); } }
+        public string SentBy { get => _explicitNullValueSentBy; set { _explicitNullValueSentBy = value; AdditionalData?.Remove("sentBy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sentBy"); else _explicitNullProperties?.Remove("sentBy"); } }
         private string _explicitNullValueSentBy = default!;
 #endif
         /// <summary>
@@ -120,7 +127,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "documentId", n => { DocumentId = n.GetStringValue(); } },
                 { "documentName", n => { DocumentName = n.GetStringValue(); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
-                { "medium", n => { Medium = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendDocumentDtoMedium>(); } },
+                { "medium", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendDocumentDtoMedium>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueMedium = default; _explicitNullProperties?.Remove("medium"); AdditionalData["medium"] = unknown; } else { Medium = parsed; AdditionalData.Remove("medium"); } } },
                 { "notificationSettings", n => { NotificationSettings = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendDocumentDtoNotificationSettings>(global::Soenneker.HighLevel.OpenApiClient.Models.SendDocumentDtoNotificationSettings.CreateFromDiscriminatorValue); } },
                 { "sentBy", n => { SentBy = n.GetStringValue(); } },
             };
