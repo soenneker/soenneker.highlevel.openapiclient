@@ -105,7 +105,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Associations.Relations.Item
         public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Associations.Relations.Item.WithRecordItemRequestBuilder.WithRecordItemRequestBuilderDeleteQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.DELETE, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://services.leadconnectorhq.com", "/associations/relations/{recordId}", PathParameters.ContainsKey("request-raw-url")), PathParameters);
+            var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -124,7 +124,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Associations.Relations.Item
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Associations.Relations.Item.WithRecordItemRequestBuilder.WithRecordItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve("{+baseurl}/associations/relations/{recordId}?limit={limit}&locationId={locationId}&skip={skip}{&associationIds*}", RequestAdapter.BaseUrl, "https://services.leadconnectorhq.com", "/associations/relations/{recordId}", PathParameters.ContainsKey("request-raw-url")), PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/associations/relations/{recordId}?limit={limit}&locationId={locationId}&skip={skip}{&associationIds*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

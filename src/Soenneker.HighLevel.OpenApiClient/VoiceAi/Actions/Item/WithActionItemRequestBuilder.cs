@@ -135,7 +135,7 @@ namespace Soenneker.HighLevel.OpenApiClient.VoiceAi.Actions.Item
         public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.VoiceAi.Actions.Item.WithActionItemRequestBuilder.WithActionItemRequestBuilderDeleteQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.DELETE, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve("{+baseurl}/voice-ai/actions/{actionId}?agentId={agentId}&locationId={locationId}", RequestAdapter.BaseUrl, "https://services.leadconnectorhq.com", "/voice-ai/actions/{actionId}", PathParameters.ContainsKey("request-raw-url")), PathParameters);
+            var requestInfo = new RequestInformation(Method.DELETE, "{+baseurl}/voice-ai/actions/{actionId}?agentId={agentId}&locationId={locationId}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -154,7 +154,7 @@ namespace Soenneker.HighLevel.OpenApiClient.VoiceAi.Actions.Item
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.VoiceAi.Actions.Item.WithActionItemRequestBuilder.WithActionItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve("{+baseurl}/voice-ai/actions/{actionId}?locationId={locationId}", RequestAdapter.BaseUrl, "https://services.leadconnectorhq.com", "/voice-ai/actions/{actionId}", PathParameters.ContainsKey("request-raw-url")), PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/voice-ai/actions/{actionId}?locationId={locationId}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -175,7 +175,7 @@ namespace Soenneker.HighLevel.OpenApiClient.VoiceAi.Actions.Item
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.PUT, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://services.leadconnectorhq.com", "/voice-ai/actions/{actionId}", PathParameters.ContainsKey("request-raw-url")), PathParameters);
+            var requestInfo = new RequestInformation(Method.PUT, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);

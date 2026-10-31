@@ -108,7 +108,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Opportunities.Search
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Opportunities.Search.SearchRequestBuilder.SearchRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve("{+baseurl}/opportunities/search?location_id={location_id}{&assigned_to*,campaignId*,contact_id*,country*,date*,endDate*,getCalendarEvents*,getNotes*,getTasks*,id*,limit*,order*,page*,pipeline_id*,pipeline_stage_id*,q*,startAfter*,startAfterId*,status*}", RequestAdapter.BaseUrl, "https://services.leadconnectorhq.com", "/opportunities/search", PathParameters.ContainsKey("request-raw-url")), PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/opportunities/search?location_id={location_id}{&assigned_to*,campaignId*,contact_id*,country*,date*,endDate*,getCalendarEvents*,getNotes*,getTasks*,id*,limit*,order*,page*,pipeline_id*,pipeline_stage_id*,q*,startAfter*,startAfterId*,status*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -129,7 +129,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Opportunities.Search
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://services.leadconnectorhq.com", "/opportunities/search", PathParameters.ContainsKey("request-raw-url")), PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);

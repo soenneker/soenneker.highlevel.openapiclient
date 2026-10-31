@@ -142,7 +142,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Store.ShippingZone.Item
         public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Store.ShippingZone.Item.WithShippingZoneItemRequestBuilder.WithShippingZoneItemRequestBuilderDeleteQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.DELETE, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve("{+baseurl}/store/shipping-zone/{shippingZoneId}?altId={altId}&altType={altType}", RequestAdapter.BaseUrl, "https://services.leadconnectorhq.com", "/store/shipping-zone/{shippingZoneId}", PathParameters.ContainsKey("request-raw-url")), PathParameters);
+            var requestInfo = new RequestInformation(Method.DELETE, "{+baseurl}/store/shipping-zone/{shippingZoneId}?altId={altId}&altType={altType}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -161,7 +161,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Store.ShippingZone.Item
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.HighLevel.OpenApiClient.Store.ShippingZone.Item.WithShippingZoneItemRequestBuilder.WithShippingZoneItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve("{+baseurl}/store/shipping-zone/{shippingZoneId}?altId={altId}&altType={altType}{&withShippingRate*}", RequestAdapter.BaseUrl, "https://services.leadconnectorhq.com", "/store/shipping-zone/{shippingZoneId}", PathParameters.ContainsKey("request-raw-url")), PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/store/shipping-zone/{shippingZoneId}?altId={altId}&altType={altType}{&withShippingRate*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -182,7 +182,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Store.ShippingZone.Item
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.PUT, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://services.leadconnectorhq.com", "/store/shipping-zone/{shippingZoneId}", PathParameters.ContainsKey("request-raw-url")), PathParameters);
+            var requestInfo = new RequestInformation(Method.PUT, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
