@@ -207,12 +207,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Payout metadata</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PayoutListItemResponseDtoPaidMetaProperty2? PaidMeta { get => _explicitNullValuePaidMeta; set { _explicitNullValuePaidMeta = value; AdditionalData?.Remove("paidMeta"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paidMeta"); else _explicitNullProperties?.Remove("paidMeta"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.PayoutListItemResponseDtoPaidMetaProperty2? _explicitNullValuePaidMeta = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PayoutListItemResponseDtoPaidMeta? PaidMeta { get => _explicitNullValuePaidMeta; set { _explicitNullValuePaidMeta = value; AdditionalData?.Remove("paidMeta"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paidMeta"); else _explicitNullProperties?.Remove("paidMeta"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.PayoutListItemResponseDtoPaidMeta? _explicitNullValuePaidMeta = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PayoutListItemResponseDtoPaidMetaProperty2 PaidMeta { get => _explicitNullValuePaidMeta; set { _explicitNullValuePaidMeta = value; AdditionalData?.Remove("paidMeta"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paidMeta"); else _explicitNullProperties?.Remove("paidMeta"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.PayoutListItemResponseDtoPaidMetaProperty2 _explicitNullValuePaidMeta = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PayoutListItemResponseDtoPaidMeta PaidMeta { get => _explicitNullValuePaidMeta; set { _explicitNullValuePaidMeta = value; AdditionalData?.Remove("paidMeta"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paidMeta"); else _explicitNullProperties?.Remove("paidMeta"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.PayoutListItemResponseDtoPaidMeta _explicitNullValuePaidMeta = default!;
 #endif
         /// <summary>Payout paid method</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -305,7 +305,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "isMigrated", n => { IsMigrated = n.GetBoolValue(); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
                 { "paidAt", n => { PaidAt = n.GetStringValue(); } },
-                { "paidMeta", n => { PaidMeta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PayoutListItemResponseDtoPaidMetaProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.PayoutListItemResponseDtoPaidMetaProperty2.CreateFromDiscriminatorValue); } },
+                { "paidMeta", n => { PaidMeta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PayoutListItemResponseDtoPaidMeta>(global::Soenneker.HighLevel.OpenApiClient.Models.PayoutListItemResponseDtoPaidMeta.CreateFromDiscriminatorValue); } },
                 { "paidMethod", n => { PaidMethod = n.GetStringValue(); } },
                 { "payoutMethod", n => { PayoutMethod = n.GetStringValue(); } },
                 { "payoutMonth", n => { PayoutMonth = n.GetStringValue(); } },
@@ -336,7 +336,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteBoolValue("isMigrated", IsMigrated);
             writer.WriteStringValue("locationId", LocationId);
             writer.WriteStringValue("paidAt", PaidAt);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PayoutListItemResponseDtoPaidMetaProperty2>("paidMeta", PaidMeta);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PayoutListItemResponseDtoPaidMeta>("paidMeta", PaidMeta);
             writer.WriteStringValue("paidMethod", PaidMethod);
             writer.WriteStringValue("payoutMethod", PayoutMethod);
             writer.WriteStringValue("payoutMonth", PayoutMonth);

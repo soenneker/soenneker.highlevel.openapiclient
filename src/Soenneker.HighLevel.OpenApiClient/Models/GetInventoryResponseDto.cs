@@ -38,12 +38,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Total count of inventory items</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInventoryResponseDtoTotalProperty2? Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; AdditionalData?.Remove("total"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total"); else _explicitNullProperties?.Remove("total"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.GetInventoryResponseDtoTotalProperty2? _explicitNullValueTotal = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInventoryResponseDtoTotal? Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; AdditionalData?.Remove("total"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total"); else _explicitNullProperties?.Remove("total"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GetInventoryResponseDtoTotal? _explicitNullValueTotal = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInventoryResponseDtoTotalProperty2 Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; AdditionalData?.Remove("total"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total"); else _explicitNullProperties?.Remove("total"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.GetInventoryResponseDtoTotalProperty2 _explicitNullValueTotal = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetInventoryResponseDtoTotal Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; AdditionalData?.Remove("total"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total"); else _explicitNullProperties?.Remove("total"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GetInventoryResponseDtoTotal _explicitNullValueTotal = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GetInventoryResponseDto"/> and sets the default values.
@@ -71,7 +71,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "inventory", n => { Inventory = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.InventoryItemDto>(global::Soenneker.HighLevel.OpenApiClient.Models.InventoryItemDto.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "total", n => { Total = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetInventoryResponseDtoTotalProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.GetInventoryResponseDtoTotalProperty2.CreateFromDiscriminatorValue); } },
+                { "total", n => { Total = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetInventoryResponseDtoTotal>(global::Soenneker.HighLevel.OpenApiClient.Models.GetInventoryResponseDtoTotal.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -82,7 +82,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.InventoryItemDto>("inventory", Inventory);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetInventoryResponseDtoTotalProperty2>("total", Total);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetInventoryResponseDtoTotal>("total", Total);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

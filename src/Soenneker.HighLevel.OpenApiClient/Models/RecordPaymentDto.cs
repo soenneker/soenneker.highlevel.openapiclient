@@ -60,22 +60,22 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The card property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCardDto? Card { get => _explicitNullValueCard; set { _explicitNullValueCard = value; AdditionalData?.Remove("card"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card"); else _explicitNullProperties?.Remove("card"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCardDto? _explicitNullValueCard = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CardDto? Card { get => _explicitNullValueCard; set { _explicitNullValueCard = value; AdditionalData?.Remove("card"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card"); else _explicitNullProperties?.Remove("card"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CardDto? _explicitNullValueCard = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCardDto Card { get => _explicitNullValueCard; set { _explicitNullValueCard = value; AdditionalData?.Remove("card"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card"); else _explicitNullProperties?.Remove("card"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCardDto _explicitNullValueCard = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CardDto Card { get => _explicitNullValueCard; set { _explicitNullValueCard = value; AdditionalData?.Remove("card"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("card"); else _explicitNullProperties?.Remove("card"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CardDto _explicitNullValueCard = default!;
 #endif
         /// <summary>The cheque property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesChequeDto? Cheque { get => _explicitNullValueCheque; set { _explicitNullValueCheque = value; AdditionalData?.Remove("cheque"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cheque"); else _explicitNullProperties?.Remove("cheque"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesChequeDto? _explicitNullValueCheque = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ChequeDto? Cheque { get => _explicitNullValueCheque; set { _explicitNullValueCheque = value; AdditionalData?.Remove("cheque"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cheque"); else _explicitNullProperties?.Remove("cheque"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.ChequeDto? _explicitNullValueCheque = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesChequeDto Cheque { get => _explicitNullValueCheque; set { _explicitNullValueCheque = value; AdditionalData?.Remove("cheque"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cheque"); else _explicitNullProperties?.Remove("cheque"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesChequeDto _explicitNullValueCheque = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ChequeDto Cheque { get => _explicitNullValueCheque; set { _explicitNullValueCheque = value; AdditionalData?.Remove("cheque"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cheque"); else _explicitNullProperties?.Remove("cheque"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.ChequeDto _explicitNullValueCheque = default!;
 #endif
         /// <summary>Updated At to be recorded against the invoice.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -90,12 +90,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The meta property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.RecordPaymentDtoMetaProperty2? Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; AdditionalData?.Remove("meta"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.RecordPaymentDtoMetaProperty2? _explicitNullValueMeta = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.RecordPaymentDtoMeta? Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; AdditionalData?.Remove("meta"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.RecordPaymentDtoMeta? _explicitNullValueMeta = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.RecordPaymentDtoMetaProperty2 Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; AdditionalData?.Remove("meta"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.RecordPaymentDtoMetaProperty2 _explicitNullValueMeta = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.RecordPaymentDtoMeta Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; AdditionalData?.Remove("meta"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.RecordPaymentDtoMeta _explicitNullValueMeta = default!;
 #endif
         /// <summary>manual payment method</summary>
         public global::Soenneker.HighLevel.OpenApiClient.Models.RecordPaymentDtoMode? Mode { get => _explicitNullValueMode; set { _explicitNullValueMode = value; AdditionalData?.Remove("mode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mode"); else _explicitNullProperties?.Remove("mode"); } }
@@ -148,10 +148,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "altId", n => { AltId = n.GetStringValue(); } },
                 { "altType", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesLocationAltType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAltType = default; _explicitNullProperties?.Remove("altType"); AdditionalData["altType"] = unknown; } else { AltType = parsed; AdditionalData.Remove("altType"); } } },
                 { "amount", n => { Amount = n.GetDoubleValue(); } },
-                { "card", n => { Card = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCardDto>(global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCardDto.CreateFromDiscriminatorValue); } },
-                { "cheque", n => { Cheque = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesChequeDto>(global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesChequeDto.CreateFromDiscriminatorValue); } },
+                { "card", n => { Card = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CardDto>(global::Soenneker.HighLevel.OpenApiClient.Models.CardDto.CreateFromDiscriminatorValue); } },
+                { "cheque", n => { Cheque = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ChequeDto>(global::Soenneker.HighLevel.OpenApiClient.Models.ChequeDto.CreateFromDiscriminatorValue); } },
                 { "fulfilledAt", n => { FulfilledAt = n.GetStringValue(); } },
-                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.RecordPaymentDtoMetaProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.RecordPaymentDtoMetaProperty2.CreateFromDiscriminatorValue); } },
+                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.RecordPaymentDtoMeta>(global::Soenneker.HighLevel.OpenApiClient.Models.RecordPaymentDtoMeta.CreateFromDiscriminatorValue); } },
                 { "mode", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.RecordPaymentDtoMode>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueMode = default; _explicitNullProperties?.Remove("mode"); AdditionalData["mode"] = unknown; } else { Mode = parsed; AdditionalData.Remove("mode"); } } },
                 { "notes", n => { Notes = n.GetStringValue(); } },
                 { "paymentScheduleIds", n => { PaymentScheduleIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -167,10 +167,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("altId", AltId);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesLocationAltType>("altType", AltType);
             writer.WriteDoubleValue("amount", Amount);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCardDto>("card", Card);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesChequeDto>("cheque", Cheque);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CardDto>("card", Card);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ChequeDto>("cheque", Cheque);
             writer.WriteStringValue("fulfilledAt", FulfilledAt);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.RecordPaymentDtoMetaProperty2>("meta", Meta);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.RecordPaymentDtoMeta>("meta", Meta);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.RecordPaymentDtoMode>("mode", Mode);
             writer.WriteStringValue("notes", Notes);
             writer.WriteCollectionOfPrimitiveValues<string>("paymentScheduleIds", PaymentScheduleIds);

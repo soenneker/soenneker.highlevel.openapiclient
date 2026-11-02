@@ -130,12 +130,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The birth date of the contact. Supported formats: YYYY/MM/DD, MM/DD/YYYY, YYYY-MM-DD, MM-DD-YYYY, YYYY.MM.DD, MM.DD.YYYY, YYYY_MM_DD, MM_DD_YYYY</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateContactDtoDateOfBirthProperty2? DateOfBirth { get => _explicitNullValueDateOfBirth; set { _explicitNullValueDateOfBirth = value; AdditionalData?.Remove("dateOfBirth"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dateOfBirth"); else _explicitNullProperties?.Remove("dateOfBirth"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.CreateContactDtoDateOfBirthProperty2? _explicitNullValueDateOfBirth = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateContactDtoDateOfBirth? DateOfBirth { get => _explicitNullValueDateOfBirth; set { _explicitNullValueDateOfBirth = value; AdditionalData?.Remove("dateOfBirth"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dateOfBirth"); else _explicitNullProperties?.Remove("dateOfBirth"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CreateContactDtoDateOfBirth? _explicitNullValueDateOfBirth = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateContactDtoDateOfBirthProperty2 DateOfBirth { get => _explicitNullValueDateOfBirth; set { _explicitNullValueDateOfBirth = value; AdditionalData?.Remove("dateOfBirth"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dateOfBirth"); else _explicitNullProperties?.Remove("dateOfBirth"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.CreateContactDtoDateOfBirthProperty2 _explicitNullValueDateOfBirth = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateContactDtoDateOfBirth DateOfBirth { get => _explicitNullValueDateOfBirth; set { _explicitNullValueDateOfBirth = value; AdditionalData?.Remove("dateOfBirth"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dateOfBirth"); else _explicitNullProperties?.Remove("dateOfBirth"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CreateContactDtoDateOfBirth _explicitNullValueDateOfBirth = default!;
 #endif
         /// <summary>The dnd property</summary>
         public bool? Dnd { get => _explicitNullValueDnd; set { _explicitNullValueDnd = value; AdditionalData?.Remove("dnd"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dnd"); else _explicitNullProperties?.Remove("dnd"); } }
@@ -321,7 +321,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "companyName", n => { CompanyName = n.GetStringValue(); } },
                 { "country", n => { Country = n.GetStringValue(); } },
                 { "customFields", n => { CustomFields = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CreateContactDtoCustomFieldsItem>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateContactDtoCustomFieldsItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "dateOfBirth", n => { DateOfBirth = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateContactDtoDateOfBirthProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateContactDtoDateOfBirthProperty2.CreateFromDiscriminatorValue); } },
+                { "dateOfBirth", n => { DateOfBirth = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateContactDtoDateOfBirth>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateContactDtoDateOfBirth.CreateFromDiscriminatorValue); } },
                 { "dnd", n => { Dnd = n.GetBoolValue(); } },
                 { "dndSettings", n => { DndSettings = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DndSettingsSchema>(global::Soenneker.HighLevel.OpenApiClient.Models.DndSettingsSchema.CreateFromDiscriminatorValue); } },
                 { "email", n => { Email = n.GetStringValue(); } },
@@ -353,7 +353,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("companyName", CompanyName);
             writer.WriteStringValue("country", Country);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CreateContactDtoCustomFieldsItem>("customFields", CustomFields);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateContactDtoDateOfBirthProperty2>("dateOfBirth", DateOfBirth);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateContactDtoDateOfBirth>("dateOfBirth", DateOfBirth);
             writer.WriteBoolValue("dnd", Dnd);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DndSettingsSchema>("dndSettings", DndSettings);
             writer.WriteStringValue("email", Email);

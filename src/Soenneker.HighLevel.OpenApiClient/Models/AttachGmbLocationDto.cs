@@ -28,12 +28,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The account property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AttachGmbLocationDtoAccountProperty2? Account { get => _explicitNullValueAccount; set { _explicitNullValueAccount = value; AdditionalData?.Remove("account"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account"); else _explicitNullProperties?.Remove("account"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.AttachGmbLocationDtoAccountProperty2? _explicitNullValueAccount = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AttachGmbLocationDtoAccount? Account { get => _explicitNullValueAccount; set { _explicitNullValueAccount = value; AdditionalData?.Remove("account"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account"); else _explicitNullProperties?.Remove("account"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.AttachGmbLocationDtoAccount? _explicitNullValueAccount = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AttachGmbLocationDtoAccountProperty2 Account { get => _explicitNullValueAccount; set { _explicitNullValueAccount = value; AdditionalData?.Remove("account"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account"); else _explicitNullProperties?.Remove("account"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.AttachGmbLocationDtoAccountProperty2 _explicitNullValueAccount = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AttachGmbLocationDtoAccount Account { get => _explicitNullValueAccount; set { _explicitNullValueAccount = value; AdditionalData?.Remove("account"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account"); else _explicitNullProperties?.Remove("account"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.AttachGmbLocationDtoAccount _explicitNullValueAccount = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -50,12 +50,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The location property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AttachGmbLocationDtoLocationProperty2? Location { get => _explicitNullValueLocation; set { _explicitNullValueLocation = value; AdditionalData?.Remove("location"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("location"); else _explicitNullProperties?.Remove("location"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.AttachGmbLocationDtoLocationProperty2? _explicitNullValueLocation = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AttachGmbLocationDtoLocation? Location { get => _explicitNullValueLocation; set { _explicitNullValueLocation = value; AdditionalData?.Remove("location"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("location"); else _explicitNullProperties?.Remove("location"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.AttachGmbLocationDtoLocation? _explicitNullValueLocation = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AttachGmbLocationDtoLocationProperty2 Location { get => _explicitNullValueLocation; set { _explicitNullValueLocation = value; AdditionalData?.Remove("location"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("location"); else _explicitNullProperties?.Remove("location"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.AttachGmbLocationDtoLocationProperty2 _explicitNullValueLocation = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AttachGmbLocationDtoLocation Location { get => _explicitNullValueLocation; set { _explicitNullValueLocation = value; AdditionalData?.Remove("location"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("location"); else _explicitNullProperties?.Remove("location"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.AttachGmbLocationDtoLocation _explicitNullValueLocation = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.AttachGmbLocationDto"/> and sets the default values.
@@ -82,9 +82,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "account", n => { Account = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AttachGmbLocationDtoAccountProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.AttachGmbLocationDtoAccountProperty2.CreateFromDiscriminatorValue); } },
+                { "account", n => { Account = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AttachGmbLocationDtoAccount>(global::Soenneker.HighLevel.OpenApiClient.Models.AttachGmbLocationDtoAccount.CreateFromDiscriminatorValue); } },
                 { "companyId", n => { CompanyId = n.GetStringValue(); } },
-                { "location", n => { Location = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AttachGmbLocationDtoLocationProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.AttachGmbLocationDtoLocationProperty2.CreateFromDiscriminatorValue); } },
+                { "location", n => { Location = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AttachGmbLocationDtoLocation>(global::Soenneker.HighLevel.OpenApiClient.Models.AttachGmbLocationDtoLocation.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -94,9 +94,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AttachGmbLocationDtoAccountProperty2>("account", Account);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AttachGmbLocationDtoAccount>("account", Account);
             writer.WriteStringValue("companyId", CompanyId);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AttachGmbLocationDtoLocationProperty2>("location", Location);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AttachGmbLocationDtoLocation>("location", Location);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

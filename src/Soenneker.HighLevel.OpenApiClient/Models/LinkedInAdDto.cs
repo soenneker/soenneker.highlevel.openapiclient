@@ -186,12 +186,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The meta property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInAdDtoMetaProperty2? Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; AdditionalData?.Remove("meta"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInAdDtoMetaProperty2? _explicitNullValueMeta = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInAdDtoMeta? Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; AdditionalData?.Remove("meta"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInAdDtoMeta? _explicitNullValueMeta = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInAdDtoMetaProperty2 Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; AdditionalData?.Remove("meta"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInAdDtoMetaProperty2 _explicitNullValueMeta = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInAdDtoMeta Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; AdditionalData?.Remove("meta"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInAdDtoMeta _explicitNullValueMeta = default!;
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -244,7 +244,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "introductoryText", n => { IntroductoryText = n.GetStringValue(); } },
                 { "linkedInError", n => { LinkedInError = n.GetStringValue(); } },
                 { "media", n => { Media = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInMediaDto>(global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInMediaDto.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInAdDtoMetaProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInAdDtoMetaProperty2.CreateFromDiscriminatorValue); } },
+                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInAdDtoMeta>(global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInAdDtoMeta.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "publishingStatus", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInAdDtoPublishingStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePublishingStatus = default; _explicitNullProperties?.Remove("publishingStatus"); AdditionalData["publishingStatus"] = unknown; } else { PublishingStatus = parsed; AdditionalData.Remove("publishingStatus"); } } },
             };
@@ -269,7 +269,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("introductoryText", IntroductoryText);
             writer.WriteStringValue("linkedInError", LinkedInError);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInMediaDto>("media", Media);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInAdDtoMetaProperty2>("meta", Meta);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInAdDtoMeta>("meta", Meta);
             writer.WriteStringValue("name", Name);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LinkedInAdDtoPublishingStatus>("publishingStatus", PublishingStatus);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

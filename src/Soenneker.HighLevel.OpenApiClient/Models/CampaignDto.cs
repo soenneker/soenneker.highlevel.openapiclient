@@ -88,12 +88,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Advanced options</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CampaignDtoAdvancedOptionsProperty2? AdvancedOptions { get => _explicitNullValueAdvancedOptions; set { _explicitNullValueAdvancedOptions = value; AdditionalData?.Remove("advancedOptions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("advancedOptions"); else _explicitNullProperties?.Remove("advancedOptions"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.CampaignDtoAdvancedOptionsProperty2? _explicitNullValueAdvancedOptions = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CampaignDtoAdvancedOptions? AdvancedOptions { get => _explicitNullValueAdvancedOptions; set { _explicitNullValueAdvancedOptions = value; AdditionalData?.Remove("advancedOptions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("advancedOptions"); else _explicitNullProperties?.Remove("advancedOptions"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CampaignDtoAdvancedOptions? _explicitNullValueAdvancedOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CampaignDtoAdvancedOptionsProperty2 AdvancedOptions { get => _explicitNullValueAdvancedOptions; set { _explicitNullValueAdvancedOptions = value; AdditionalData?.Remove("advancedOptions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("advancedOptions"); else _explicitNullProperties?.Remove("advancedOptions"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.CampaignDtoAdvancedOptionsProperty2 _explicitNullValueAdvancedOptions = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CampaignDtoAdvancedOptions AdvancedOptions { get => _explicitNullValueAdvancedOptions; set { _explicitNullValueAdvancedOptions = value; AdditionalData?.Remove("advancedOptions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("advancedOptions"); else _explicitNullProperties?.Remove("advancedOptions"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CampaignDtoAdvancedOptions _explicitNullValueAdvancedOptions = default!;
 #endif
         /// <summary>Channel sub type</summary>
         public global::Soenneker.HighLevel.OpenApiClient.Models.DemandGenAdvertisingChannelSubType? AdvertisingChannelSubType { get => _explicitNullValueAdvertisingChannelSubType; set { _explicitNullValueAdvertisingChannelSubType = value; AdditionalData?.Remove("advertisingChannelSubType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("advertisingChannelSubType"); else _explicitNullProperties?.Remove("advertisingChannelSubType"); } }
@@ -263,7 +263,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             {
                 { "adGroups", n => { AdGroups = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdGroupDto>(global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdGroupDto.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "adSchedule", n => { AdSchedule = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdScheduleDto>(global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdScheduleDto.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "advancedOptions", n => { AdvancedOptions = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CampaignDtoAdvancedOptionsProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.CampaignDtoAdvancedOptionsProperty2.CreateFromDiscriminatorValue); } },
+                { "advancedOptions", n => { AdvancedOptions = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CampaignDtoAdvancedOptions>(global::Soenneker.HighLevel.OpenApiClient.Models.CampaignDtoAdvancedOptions.CreateFromDiscriminatorValue); } },
                 { "advertisingChannelSubType", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.DemandGenAdvertisingChannelSubType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAdvertisingChannelSubType = default; _explicitNullProperties?.Remove("advertisingChannelSubType"); AdditionalData["advertisingChannelSubType"] = unknown; } else { AdvertisingChannelSubType = parsed; AdditionalData.Remove("advertisingChannelSubType"); } } },
                 { "advertisingChannelType", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CampaignDtoAdvertisingChannelType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAdvertisingChannelType = default; _explicitNullProperties?.Remove("advertisingChannelType"); AdditionalData["advertisingChannelType"] = unknown; } else { AdvertisingChannelType = parsed; AdditionalData.Remove("advertisingChannelType"); } } },
                 { "assets", n => { Assets = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CampaignDtoAssets>(global::Soenneker.HighLevel.OpenApiClient.Models.CampaignDtoAssets.CreateFromDiscriminatorValue); } },
@@ -294,7 +294,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdGroupDto>("adGroups", AdGroups);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleAdScheduleDto>("adSchedule", AdSchedule);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CampaignDtoAdvancedOptionsProperty2>("advancedOptions", AdvancedOptions);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CampaignDtoAdvancedOptions>("advancedOptions", AdvancedOptions);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.DemandGenAdvertisingChannelSubType>("advertisingChannelSubType", AdvertisingChannelSubType);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CampaignDtoAdvertisingChannelType>("advertisingChannelType", AdvertisingChannelType);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CampaignDtoAssets>("assets", Assets);

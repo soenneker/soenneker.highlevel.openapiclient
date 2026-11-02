@@ -33,12 +33,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The funnels property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.FunnelListResponseDtoFunnelsProperty2? Funnels { get => _explicitNullValueFunnels; set { _explicitNullValueFunnels = value; AdditionalData?.Remove("funnels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("funnels"); else _explicitNullProperties?.Remove("funnels"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.FunnelListResponseDtoFunnelsProperty2? _explicitNullValueFunnels = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.FunnelListResponseDtoFunnels? Funnels { get => _explicitNullValueFunnels; set { _explicitNullValueFunnels = value; AdditionalData?.Remove("funnels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("funnels"); else _explicitNullProperties?.Remove("funnels"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.FunnelListResponseDtoFunnels? _explicitNullValueFunnels = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.FunnelListResponseDtoFunnelsProperty2 Funnels { get => _explicitNullValueFunnels; set { _explicitNullValueFunnels = value; AdditionalData?.Remove("funnels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("funnels"); else _explicitNullProperties?.Remove("funnels"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.FunnelListResponseDtoFunnelsProperty2 _explicitNullValueFunnels = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.FunnelListResponseDtoFunnels Funnels { get => _explicitNullValueFunnels; set { _explicitNullValueFunnels = value; AdditionalData?.Remove("funnels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("funnels"); else _explicitNullProperties?.Remove("funnels"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.FunnelListResponseDtoFunnels _explicitNullValueFunnels = default!;
 #endif
         /// <summary>The traceId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -76,7 +76,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "count", n => { Count = n.GetDoubleValue(); } },
-                { "funnels", n => { Funnels = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.FunnelListResponseDtoFunnelsProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.FunnelListResponseDtoFunnelsProperty2.CreateFromDiscriminatorValue); } },
+                { "funnels", n => { Funnels = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.FunnelListResponseDtoFunnels>(global::Soenneker.HighLevel.OpenApiClient.Models.FunnelListResponseDtoFunnels.CreateFromDiscriminatorValue); } },
                 { "traceId", n => { TraceId = n.GetStringValue(); } },
             };
         }
@@ -88,7 +88,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDoubleValue("count", Count);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.FunnelListResponseDtoFunnelsProperty2>("funnels", Funnels);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.FunnelListResponseDtoFunnels>("funnels", Funnels);
             writer.WriteStringValue("traceId", TraceId);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

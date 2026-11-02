@@ -204,12 +204,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The reseller property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationByIdSchemaResellerProperty2? Reseller { get => _explicitNullValueReseller; set { _explicitNullValueReseller = value; AdditionalData?.Remove("reseller"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reseller"); else _explicitNullProperties?.Remove("reseller"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationByIdSchemaResellerProperty2? _explicitNullValueReseller = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationByIdSchemaReseller? Reseller { get => _explicitNullValueReseller; set { _explicitNullValueReseller = value; AdditionalData?.Remove("reseller"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reseller"); else _explicitNullProperties?.Remove("reseller"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationByIdSchemaReseller? _explicitNullValueReseller = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationByIdSchemaResellerProperty2 Reseller { get => _explicitNullValueReseller; set { _explicitNullValueReseller = value; AdditionalData?.Remove("reseller"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reseller"); else _explicitNullProperties?.Remove("reseller"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationByIdSchemaResellerProperty2 _explicitNullValueReseller = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationByIdSchemaReseller Reseller { get => _explicitNullValueReseller; set { _explicitNullValueReseller = value; AdditionalData?.Remove("reseller"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reseller"); else _explicitNullProperties?.Remove("reseller"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationByIdSchemaReseller _explicitNullValueReseller = default!;
 #endif
         /// <summary>The settings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -300,7 +300,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "phone", n => { Phone = n.GetStringValue(); } },
                 { "postalCode", n => { PostalCode = n.GetStringValue(); } },
-                { "reseller", n => { Reseller = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationByIdSchemaResellerProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationByIdSchemaResellerProperty2.CreateFromDiscriminatorValue); } },
+                { "reseller", n => { Reseller = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationByIdSchemaReseller>(global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationByIdSchemaReseller.CreateFromDiscriminatorValue); } },
                 { "settings", n => { Settings = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SettingsSchema>(global::Soenneker.HighLevel.OpenApiClient.Models.SettingsSchema.CreateFromDiscriminatorValue); } },
                 { "social", n => { Social = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SocialSchema>(global::Soenneker.HighLevel.OpenApiClient.Models.SocialSchema.CreateFromDiscriminatorValue); } },
                 { "state", n => { State = n.GetStringValue(); } },
@@ -329,7 +329,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("phone", Phone);
             writer.WriteStringValue("postalCode", PostalCode);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationByIdSchemaResellerProperty2>("reseller", Reseller);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetLocationByIdSchemaReseller>("reseller", Reseller);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SettingsSchema>("settings", Settings);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SocialSchema>("social", Social);
             writer.WriteStringValue("state", State);

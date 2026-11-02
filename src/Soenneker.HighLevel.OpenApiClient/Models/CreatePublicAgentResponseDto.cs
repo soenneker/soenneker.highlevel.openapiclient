@@ -32,12 +32,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Created agent data with metadata</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentResponseDtoAgentProperty2? Agent { get => _explicitNullValueAgent; set { _explicitNullValueAgent = value; AdditionalData?.Remove("agent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agent"); else _explicitNullProperties?.Remove("agent"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentResponseDtoAgentProperty2? _explicitNullValueAgent = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentResponseDtoAgent? Agent { get => _explicitNullValueAgent; set { _explicitNullValueAgent = value; AdditionalData?.Remove("agent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agent"); else _explicitNullProperties?.Remove("agent"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentResponseDtoAgent? _explicitNullValueAgent = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentResponseDtoAgentProperty2 Agent { get => _explicitNullValueAgent; set { _explicitNullValueAgent = value; AdditionalData?.Remove("agent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agent"); else _explicitNullProperties?.Remove("agent"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentResponseDtoAgentProperty2 _explicitNullValueAgent = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentResponseDtoAgent Agent { get => _explicitNullValueAgent; set { _explicitNullValueAgent = value; AdditionalData?.Remove("agent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agent"); else _explicitNullProperties?.Remove("agent"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentResponseDtoAgent _explicitNullValueAgent = default!;
 #endif
         /// <summary>Response message</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -87,7 +87,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "agent", n => { Agent = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentResponseDtoAgentProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentResponseDtoAgentProperty2.CreateFromDiscriminatorValue); } },
+                { "agent", n => { Agent = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentResponseDtoAgent>(global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentResponseDtoAgent.CreateFromDiscriminatorValue); } },
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "success", n => { Success = n.GetBoolValue(); } },
                 { "versions", n => { Versions = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
@@ -100,7 +100,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentResponseDtoAgentProperty2>("agent", Agent);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePublicAgentResponseDtoAgent>("agent", Agent);
             writer.WriteStringValue("message", Message);
             writer.WriteBoolValue("success", Success);
             writer.WriteObjectValue<UntypedNode>("versions", Versions);

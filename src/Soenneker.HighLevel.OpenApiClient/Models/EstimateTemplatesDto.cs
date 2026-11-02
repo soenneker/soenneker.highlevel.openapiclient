@@ -135,12 +135,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Meta data for the estimate</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDtoMetaProperty2? Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; AdditionalData?.Remove("meta"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDtoMetaProperty2? _explicitNullValueMeta = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDtoMeta? Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; AdditionalData?.Remove("meta"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDtoMeta? _explicitNullValueMeta = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDtoMetaProperty2 Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; AdditionalData?.Remove("meta"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDtoMetaProperty2 _explicitNullValueMeta = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDtoMeta Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; AdditionalData?.Remove("meta"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDtoMeta _explicitNullValueMeta = default!;
 #endif
         /// <summary>miscellaneous charges for the estimate</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -230,7 +230,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "estimateNumberPrefix", n => { EstimateNumberPrefix = n.GetStringValue(); } },
                 { "items", n => { Items = n.GetCollectionOfObjectValues<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "liveMode", n => { LiveMode = n.GetBoolValue(); } },
-                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDtoMetaProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDtoMetaProperty2.CreateFromDiscriminatorValue); } },
+                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDtoMeta>(global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDtoMeta.CreateFromDiscriminatorValue); } },
                 { "miscellaneousCharges", n => { MiscellaneousCharges = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDtoMiscellaneousCharges>(global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDtoMiscellaneousCharges.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "sendEstimateDetails", n => { SendEstimateDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDtoSendEstimateDetails>(global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDtoSendEstimateDetails.CreateFromDiscriminatorValue); } },
@@ -255,7 +255,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("estimateNumberPrefix", EstimateNumberPrefix);
             writer.WriteCollectionOfPrimitiveValues<UntypedNode>("items", Items);
             writer.WriteBoolValue("liveMode", LiveMode);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDtoMetaProperty2>("meta", Meta);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDtoMeta>("meta", Meta);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDtoMiscellaneousCharges>("miscellaneousCharges", MiscellaneousCharges);
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateTemplatesDtoSendEstimateDetails>("sendEstimateDetails", SendEstimateDetails);

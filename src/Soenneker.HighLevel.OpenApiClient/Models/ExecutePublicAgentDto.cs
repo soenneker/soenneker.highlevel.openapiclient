@@ -68,12 +68,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Input variables to pass to the agent. These should match the input variables defined in the agent configuration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentDtoInputVariablesProperty2? InputVariables { get => _explicitNullValueInputVariables; set { _explicitNullValueInputVariables = value; AdditionalData?.Remove("inputVariables"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputVariables"); else _explicitNullProperties?.Remove("inputVariables"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentDtoInputVariablesProperty2? _explicitNullValueInputVariables = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentDtoInputVariables? InputVariables { get => _explicitNullValueInputVariables; set { _explicitNullValueInputVariables = value; AdditionalData?.Remove("inputVariables"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputVariables"); else _explicitNullProperties?.Remove("inputVariables"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentDtoInputVariables? _explicitNullValueInputVariables = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentDtoInputVariablesProperty2 InputVariables { get => _explicitNullValueInputVariables; set { _explicitNullValueInputVariables = value; AdditionalData?.Remove("inputVariables"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputVariables"); else _explicitNullProperties?.Remove("inputVariables"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentDtoInputVariablesProperty2 _explicitNullValueInputVariables = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentDtoInputVariables InputVariables { get => _explicitNullValueInputVariables; set { _explicitNullValueInputVariables = value; AdditionalData?.Remove("inputVariables"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputVariables"); else _explicitNullProperties?.Remove("inputVariables"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentDtoInputVariables _explicitNullValueInputVariables = default!;
 #endif
         /// <summary>Location ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -133,7 +133,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "attachments", n => { Attachments = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.PublicAttachmentSchema>(global::Soenneker.HighLevel.OpenApiClient.Models.PublicAttachmentSchema.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "contactId", n => { ContactId = n.GetStringValue(); } },
                 { "executionId", n => { ExecutionId = n.GetStringValue(); } },
-                { "inputVariables", n => { InputVariables = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentDtoInputVariablesProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentDtoInputVariablesProperty2.CreateFromDiscriminatorValue); } },
+                { "inputVariables", n => { InputVariables = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentDtoInputVariables>(global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentDtoInputVariables.CreateFromDiscriminatorValue); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "versionId", n => { VersionId = n.GetStringValue(); } },
@@ -149,7 +149,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.PublicAttachmentSchema>("attachments", Attachments);
             writer.WriteStringValue("contactId", ContactId);
             writer.WriteStringValue("executionId", ExecutionId);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentDtoInputVariablesProperty2>("inputVariables", InputVariables);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ExecutePublicAgentDtoInputVariables>("inputVariables", InputVariables);
             writer.WriteStringValue("locationId", LocationId);
             writer.WriteStringValue("message", Message);
             writer.WriteStringValue("versionId", VersionId);

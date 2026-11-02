@@ -146,12 +146,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Created by audit info</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.OAuthAffiliateListItemResponseDtoCreatedByProperty2? CreatedBy { get => _explicitNullValueCreatedBy; set { _explicitNullValueCreatedBy = value; AdditionalData?.Remove("createdBy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createdBy"); else _explicitNullProperties?.Remove("createdBy"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.OAuthAffiliateListItemResponseDtoCreatedByProperty2? _explicitNullValueCreatedBy = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.OAuthAffiliateListItemResponseDtoCreatedBy? CreatedBy { get => _explicitNullValueCreatedBy; set { _explicitNullValueCreatedBy = value; AdditionalData?.Remove("createdBy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createdBy"); else _explicitNullProperties?.Remove("createdBy"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.OAuthAffiliateListItemResponseDtoCreatedBy? _explicitNullValueCreatedBy = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.OAuthAffiliateListItemResponseDtoCreatedByProperty2 CreatedBy { get => _explicitNullValueCreatedBy; set { _explicitNullValueCreatedBy = value; AdditionalData?.Remove("createdBy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createdBy"); else _explicitNullProperties?.Remove("createdBy"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.OAuthAffiliateListItemResponseDtoCreatedByProperty2 _explicitNullValueCreatedBy = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.OAuthAffiliateListItemResponseDtoCreatedBy CreatedBy { get => _explicitNullValueCreatedBy; set { _explicitNullValueCreatedBy = value; AdditionalData?.Remove("createdBy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createdBy"); else _explicitNullProperties?.Remove("createdBy"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.OAuthAffiliateListItemResponseDtoCreatedBy _explicitNullValueCreatedBy = default!;
 #endif
         /// <summary>Currency code</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -235,12 +235,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Last updated by audit info</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.OAuthAffiliateListItemResponseDtoLastUpdatedByProperty2? LastUpdatedBy { get => _explicitNullValueLastUpdatedBy; set { _explicitNullValueLastUpdatedBy = value; AdditionalData?.Remove("lastUpdatedBy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastUpdatedBy"); else _explicitNullProperties?.Remove("lastUpdatedBy"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.OAuthAffiliateListItemResponseDtoLastUpdatedByProperty2? _explicitNullValueLastUpdatedBy = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.OAuthAffiliateListItemResponseDtoLastUpdatedBy? LastUpdatedBy { get => _explicitNullValueLastUpdatedBy; set { _explicitNullValueLastUpdatedBy = value; AdditionalData?.Remove("lastUpdatedBy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastUpdatedBy"); else _explicitNullProperties?.Remove("lastUpdatedBy"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.OAuthAffiliateListItemResponseDtoLastUpdatedBy? _explicitNullValueLastUpdatedBy = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.OAuthAffiliateListItemResponseDtoLastUpdatedByProperty2 LastUpdatedBy { get => _explicitNullValueLastUpdatedBy; set { _explicitNullValueLastUpdatedBy = value; AdditionalData?.Remove("lastUpdatedBy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastUpdatedBy"); else _explicitNullProperties?.Remove("lastUpdatedBy"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.OAuthAffiliateListItemResponseDtoLastUpdatedByProperty2 _explicitNullValueLastUpdatedBy = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.OAuthAffiliateListItemResponseDtoLastUpdatedBy LastUpdatedBy { get => _explicitNullValueLastUpdatedBy; set { _explicitNullValueLastUpdatedBy = value; AdditionalData?.Remove("lastUpdatedBy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastUpdatedBy"); else _explicitNullProperties?.Remove("lastUpdatedBy"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.OAuthAffiliateListItemResponseDtoLastUpdatedBy _explicitNullValueLastUpdatedBy = default!;
 #endif
         /// <summary>Lead count</summary>
         public double? Lead { get => _explicitNullValueLead; set { _explicitNullValueLead = value; AdditionalData?.Remove("lead"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lead"); else _explicitNullProperties?.Remove("lead"); } }
@@ -386,7 +386,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "clickCount", n => { ClickCount = n.GetDoubleValue(); } },
                 { "contactId", n => { ContactId = n.GetStringValue(); } },
                 { "createdAt", n => { CreatedAt = n.GetStringValue(); } },
-                { "createdBy", n => { CreatedBy = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.OAuthAffiliateListItemResponseDtoCreatedByProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.OAuthAffiliateListItemResponseDtoCreatedByProperty2.CreateFromDiscriminatorValue); } },
+                { "createdBy", n => { CreatedBy = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.OAuthAffiliateListItemResponseDtoCreatedBy>(global::Soenneker.HighLevel.OpenApiClient.Models.OAuthAffiliateListItemResponseDtoCreatedBy.CreateFromDiscriminatorValue); } },
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "customer", n => { Customer = n.GetDoubleValue(); } },
                 { "deleted", n => { Deleted = n.GetBoolValue(); } },
@@ -397,7 +397,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "_id", n => { Id = n.GetStringValue(); } },
                 { "instagramUrl", n => { InstagramUrl = n.GetStringValue(); } },
                 { "lastName", n => { LastName = n.GetStringValue(); } },
-                { "lastUpdatedBy", n => { LastUpdatedBy = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.OAuthAffiliateListItemResponseDtoLastUpdatedByProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.OAuthAffiliateListItemResponseDtoLastUpdatedByProperty2.CreateFromDiscriminatorValue); } },
+                { "lastUpdatedBy", n => { LastUpdatedBy = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.OAuthAffiliateListItemResponseDtoLastUpdatedBy>(global::Soenneker.HighLevel.OpenApiClient.Models.OAuthAffiliateListItemResponseDtoLastUpdatedBy.CreateFromDiscriminatorValue); } },
                 { "lead", n => { Lead = n.GetDoubleValue(); } },
                 { "linkedInUrl", n => { LinkedInUrl = n.GetStringValue(); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
@@ -428,7 +428,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteDoubleValue("clickCount", ClickCount);
             writer.WriteStringValue("contactId", ContactId);
             writer.WriteStringValue("createdAt", CreatedAt);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.OAuthAffiliateListItemResponseDtoCreatedByProperty2>("createdBy", CreatedBy);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.OAuthAffiliateListItemResponseDtoCreatedBy>("createdBy", CreatedBy);
             writer.WriteStringValue("currency", Currency);
             writer.WriteDoubleValue("customer", Customer);
             writer.WriteBoolValue("deleted", Deleted);
@@ -439,7 +439,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("_id", Id);
             writer.WriteStringValue("instagramUrl", InstagramUrl);
             writer.WriteStringValue("lastName", LastName);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.OAuthAffiliateListItemResponseDtoLastUpdatedByProperty2>("lastUpdatedBy", LastUpdatedBy);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.OAuthAffiliateListItemResponseDtoLastUpdatedBy>("lastUpdatedBy", LastUpdatedBy);
             writer.WriteDoubleValue("lead", Lead);
             writer.WriteStringValue("linkedInUrl", LinkedInUrl);
             writer.WriteStringValue("locationId", LocationId);

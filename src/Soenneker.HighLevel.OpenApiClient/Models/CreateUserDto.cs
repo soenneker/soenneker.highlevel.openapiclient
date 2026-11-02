@@ -177,12 +177,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Per-location inbound Twilio number in E.164 format, keyed by location id (Call and Voicemail Inbound Number for direct Twilio, not LC Phone). Replacement semantics: if you send twilioPhone in the request body, the stored map is replaced entirely with this object (not merged). Any location id omitted from the object is removed from the saved map. Omit the twilioPhone property entirely to leave existing numbers unchanged. Send an empty object {} to clear all per-location numbers. To clear a single location only, set that location id to an empty string &quot;&quot;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateUserDtoTwilioPhoneProperty2? TwilioPhone { get => _explicitNullValueTwilioPhone; set { _explicitNullValueTwilioPhone = value; AdditionalData?.Remove("twilioPhone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilioPhone"); else _explicitNullProperties?.Remove("twilioPhone"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.CreateUserDtoTwilioPhoneProperty2? _explicitNullValueTwilioPhone = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateUserDtoTwilioPhone? TwilioPhone { get => _explicitNullValueTwilioPhone; set { _explicitNullValueTwilioPhone = value; AdditionalData?.Remove("twilioPhone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilioPhone"); else _explicitNullProperties?.Remove("twilioPhone"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CreateUserDtoTwilioPhone? _explicitNullValueTwilioPhone = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateUserDtoTwilioPhoneProperty2 TwilioPhone { get => _explicitNullValueTwilioPhone; set { _explicitNullValueTwilioPhone = value; AdditionalData?.Remove("twilioPhone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilioPhone"); else _explicitNullProperties?.Remove("twilioPhone"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.CreateUserDtoTwilioPhoneProperty2 _explicitNullValueTwilioPhone = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateUserDtoTwilioPhone TwilioPhone { get => _explicitNullValueTwilioPhone; set { _explicitNullValueTwilioPhone = value; AdditionalData?.Remove("twilioPhone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twilioPhone"); else _explicitNullProperties?.Remove("twilioPhone"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CreateUserDtoTwilioPhone _explicitNullValueTwilioPhone = default!;
 #endif
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -232,7 +232,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "role", n => { Role = n.GetStringValue(); } },
                 { "scopes", n => { Scopes = n.GetCollectionOfEnumValues<global::Soenneker.HighLevel.OpenApiClient.Models.CreateUserDtoScopesItem>()?.AsList(); } },
                 { "scopesAssignedToOnly", n => { ScopesAssignedToOnly = n.GetCollectionOfEnumValues<global::Soenneker.HighLevel.OpenApiClient.Models.CreateUserDtoScopesAssignedToOnlyItem>()?.AsList(); } },
-                { "twilioPhone", n => { TwilioPhone = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateUserDtoTwilioPhoneProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateUserDtoTwilioPhoneProperty2.CreateFromDiscriminatorValue); } },
+                { "twilioPhone", n => { TwilioPhone = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateUserDtoTwilioPhone>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateUserDtoTwilioPhone.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
             };
         }
@@ -256,7 +256,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("role", Role);
             writer.WriteCollectionOfEnumValues<global::Soenneker.HighLevel.OpenApiClient.Models.CreateUserDtoScopesItem>("scopes", Scopes);
             writer.WriteCollectionOfEnumValues<global::Soenneker.HighLevel.OpenApiClient.Models.CreateUserDtoScopesAssignedToOnlyItem>("scopesAssignedToOnly", ScopesAssignedToOnly);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateUserDtoTwilioPhoneProperty2>("twilioPhone", TwilioPhone);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateUserDtoTwilioPhone>("twilioPhone", TwilioPhone);
             writer.WriteStringValue("type", Type);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

@@ -65,12 +65,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The meta property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetAccountSchemaMetaProperty2? Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; AdditionalData?.Remove("meta"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.GetAccountSchemaMetaProperty2? _explicitNullValueMeta = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetAccountSchemaMeta? Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; AdditionalData?.Remove("meta"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GetAccountSchemaMeta? _explicitNullValueMeta = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetAccountSchemaMetaProperty2 Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; AdditionalData?.Remove("meta"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.GetAccountSchemaMetaProperty2 _explicitNullValueMeta = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetAccountSchemaMeta Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; AdditionalData?.Remove("meta"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GetAccountSchemaMeta _explicitNullValueMeta = default!;
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -150,7 +150,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "expire", n => { Expire = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "isExpired", n => { IsExpired = n.GetBoolValue(); } },
-                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetAccountSchemaMetaProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.GetAccountSchemaMetaProperty2.CreateFromDiscriminatorValue); } },
+                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetAccountSchemaMeta>(global::Soenneker.HighLevel.OpenApiClient.Models.GetAccountSchemaMeta.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "oauthId", n => { OauthId = n.GetStringValue(); } },
                 { "platform", n => { Platform = n.GetStringValue(); } },
@@ -168,7 +168,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("expire", Expire);
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("isExpired", IsExpired);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetAccountSchemaMetaProperty2>("meta", Meta);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetAccountSchemaMeta>("meta", Meta);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("oauthId", OauthId);
             writer.WriteStringValue("platform", Platform);

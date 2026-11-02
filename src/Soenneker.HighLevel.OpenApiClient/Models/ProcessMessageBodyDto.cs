@@ -121,12 +121,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Message direction, if required can be set manually, default is outbound</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ProcessMessageBodyDtoDirectionProperty2? Direction { get => _explicitNullValueDirection; set { _explicitNullValueDirection = value; AdditionalData?.Remove("direction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("direction"); else _explicitNullProperties?.Remove("direction"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.ProcessMessageBodyDtoDirectionProperty2? _explicitNullValueDirection = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ProcessMessageBodyDtoDirection? Direction { get => _explicitNullValueDirection; set { _explicitNullValueDirection = value; AdditionalData?.Remove("direction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("direction"); else _explicitNullProperties?.Remove("direction"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.ProcessMessageBodyDtoDirection? _explicitNullValueDirection = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ProcessMessageBodyDtoDirectionProperty2 Direction { get => _explicitNullValueDirection; set { _explicitNullValueDirection = value; AdditionalData?.Remove("direction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("direction"); else _explicitNullProperties?.Remove("direction"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.ProcessMessageBodyDtoDirectionProperty2 _explicitNullValueDirection = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ProcessMessageBodyDtoDirection Direction { get => _explicitNullValueDirection; set { _explicitNullValueDirection = value; AdditionalData?.Remove("direction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("direction"); else _explicitNullProperties?.Remove("direction"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.ProcessMessageBodyDtoDirection _explicitNullValueDirection = default!;
 #endif
         /// <summary>List of email address to BCC</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -243,7 +243,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "conversationId", n => { ConversationId = n.GetStringValue(); } },
                 { "conversationProviderId", n => { ConversationProviderId = n.GetStringValue(); } },
                 { "date", n => { Date = n.GetDateTimeOffsetValue(); } },
-                { "direction", n => { Direction = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProcessMessageBodyDtoDirectionProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.ProcessMessageBodyDtoDirectionProperty2.CreateFromDiscriminatorValue); } },
+                { "direction", n => { Direction = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProcessMessageBodyDtoDirection>(global::Soenneker.HighLevel.OpenApiClient.Models.ProcessMessageBodyDtoDirection.CreateFromDiscriminatorValue); } },
                 { "emailBcc", n => { EmailBcc = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "emailCc", n => { EmailCc = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "emailFrom", n => { EmailFrom = n.GetStringValue(); } },
@@ -269,7 +269,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("conversationId", ConversationId);
             writer.WriteStringValue("conversationProviderId", ConversationProviderId);
             writer.WriteDateTimeOffsetValue("date", Date);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProcessMessageBodyDtoDirectionProperty2>("direction", Direction);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProcessMessageBodyDtoDirection>("direction", Direction);
             writer.WriteCollectionOfPrimitiveValues<string>("emailBcc", EmailBcc);
             writer.WriteCollectionOfPrimitiveValues<string>("emailCc", EmailCc);
             writer.WriteStringValue("emailFrom", EmailFrom);

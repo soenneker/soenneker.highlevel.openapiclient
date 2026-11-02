@@ -102,12 +102,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Basic auth credentials as key/value pairs (supported when type is basic). Keys are validated against the app version externalAuthConfig.fields.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.MigrateConnectionDtoBasicCredentialsProperty2? BasicCredentials { get => _explicitNullValueBasicCredentials; set { _explicitNullValueBasicCredentials = value; AdditionalData?.Remove("basicCredentials"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("basicCredentials"); else _explicitNullProperties?.Remove("basicCredentials"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.MigrateConnectionDtoBasicCredentialsProperty2? _explicitNullValueBasicCredentials = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.MigrateConnectionDtoBasicCredentials? BasicCredentials { get => _explicitNullValueBasicCredentials; set { _explicitNullValueBasicCredentials = value; AdditionalData?.Remove("basicCredentials"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("basicCredentials"); else _explicitNullProperties?.Remove("basicCredentials"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.MigrateConnectionDtoBasicCredentials? _explicitNullValueBasicCredentials = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.MigrateConnectionDtoBasicCredentialsProperty2 BasicCredentials { get => _explicitNullValueBasicCredentials; set { _explicitNullValueBasicCredentials = value; AdditionalData?.Remove("basicCredentials"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("basicCredentials"); else _explicitNullProperties?.Remove("basicCredentials"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.MigrateConnectionDtoBasicCredentialsProperty2 _explicitNullValueBasicCredentials = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.MigrateConnectionDtoBasicCredentials BasicCredentials { get => _explicitNullValueBasicCredentials; set { _explicitNullValueBasicCredentials = value; AdditionalData?.Remove("basicCredentials"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("basicCredentials"); else _explicitNullProperties?.Remove("basicCredentials"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.MigrateConnectionDtoBasicCredentials _explicitNullValueBasicCredentials = default!;
 #endif
         /// <summary>Display name for the connection (optional, defaults to accountId)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -191,7 +191,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "apiKey", n => { ApiKey = n.GetStringValue(); } },
                 { "appId", n => { AppId = n.GetStringValue(); } },
                 { "appVersionId", n => { AppVersionId = n.GetStringValue(); } },
-                { "basicCredentials", n => { BasicCredentials = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.MigrateConnectionDtoBasicCredentialsProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.MigrateConnectionDtoBasicCredentialsProperty2.CreateFromDiscriminatorValue); } },
+                { "basicCredentials", n => { BasicCredentials = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.MigrateConnectionDtoBasicCredentials>(global::Soenneker.HighLevel.OpenApiClient.Models.MigrateConnectionDtoBasicCredentials.CreateFromDiscriminatorValue); } },
                 { "displayName", n => { DisplayName = n.GetStringValue(); } },
                 { "expiryAt", n => { ExpiryAt = n.GetDoubleValue(); } },
                 { "expiryIn", n => { ExpiryIn = n.GetDoubleValue(); } },
@@ -214,7 +214,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("apiKey", ApiKey);
             writer.WriteStringValue("appId", AppId);
             writer.WriteStringValue("appVersionId", AppVersionId);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.MigrateConnectionDtoBasicCredentialsProperty2>("basicCredentials", BasicCredentials);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.MigrateConnectionDtoBasicCredentials>("basicCredentials", BasicCredentials);
             writer.WriteStringValue("displayName", DisplayName);
             writer.WriteDoubleValue("expiryAt", ExpiryAt);
             writer.WriteDoubleValue("expiryIn", ExpiryIn);

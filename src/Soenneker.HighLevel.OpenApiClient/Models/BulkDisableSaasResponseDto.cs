@@ -26,12 +26,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Response data from the bulk disable SaaS operation</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.BulkDisableSaasResponseDtoDataProperty2? Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.BulkDisableSaasResponseDtoDataProperty2? _explicitNullValueData = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.BulkDisableSaasResponseDtoData? Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.BulkDisableSaasResponseDtoData? _explicitNullValueData = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.BulkDisableSaasResponseDtoDataProperty2 Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.BulkDisableSaasResponseDtoDataProperty2 _explicitNullValueData = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.BulkDisableSaasResponseDtoData Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.BulkDisableSaasResponseDtoData _explicitNullValueData = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.BulkDisableSaasResponseDto"/> and sets the default values.
@@ -58,7 +58,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "data", n => { Data = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BulkDisableSaasResponseDtoDataProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.BulkDisableSaasResponseDtoDataProperty2.CreateFromDiscriminatorValue); } },
+                { "data", n => { Data = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BulkDisableSaasResponseDtoData>(global::Soenneker.HighLevel.OpenApiClient.Models.BulkDisableSaasResponseDtoData.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -68,7 +68,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BulkDisableSaasResponseDtoDataProperty2>("data", Data);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BulkDisableSaasResponseDtoData>("data", Data);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

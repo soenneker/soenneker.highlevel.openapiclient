@@ -30,12 +30,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The aggregations property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PostSearchSuccessfulResponseDtoAggregationsProperty2? Aggregations { get => _explicitNullValueAggregations; set { _explicitNullValueAggregations = value; AdditionalData?.Remove("aggregations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aggregations"); else _explicitNullProperties?.Remove("aggregations"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.PostSearchSuccessfulResponseDtoAggregationsProperty2? _explicitNullValueAggregations = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PostSearchSuccessfulResponseDtoAggregations? Aggregations { get => _explicitNullValueAggregations; set { _explicitNullValueAggregations = value; AdditionalData?.Remove("aggregations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aggregations"); else _explicitNullProperties?.Remove("aggregations"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.PostSearchSuccessfulResponseDtoAggregations? _explicitNullValueAggregations = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PostSearchSuccessfulResponseDtoAggregationsProperty2 Aggregations { get => _explicitNullValueAggregations; set { _explicitNullValueAggregations = value; AdditionalData?.Remove("aggregations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aggregations"); else _explicitNullProperties?.Remove("aggregations"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.PostSearchSuccessfulResponseDtoAggregationsProperty2 _explicitNullValueAggregations = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PostSearchSuccessfulResponseDtoAggregations Aggregations { get => _explicitNullValueAggregations; set { _explicitNullValueAggregations = value; AdditionalData?.Remove("aggregations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aggregations"); else _explicitNullProperties?.Remove("aggregations"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.PostSearchSuccessfulResponseDtoAggregations _explicitNullValueAggregations = default!;
 #endif
         /// <summary>The opportunities property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -75,7 +75,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "aggregations", n => { Aggregations = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostSearchSuccessfulResponseDtoAggregationsProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.PostSearchSuccessfulResponseDtoAggregationsProperty2.CreateFromDiscriminatorValue); } },
+                { "aggregations", n => { Aggregations = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostSearchSuccessfulResponseDtoAggregations>(global::Soenneker.HighLevel.OpenApiClient.Models.PostSearchSuccessfulResponseDtoAggregations.CreateFromDiscriminatorValue); } },
                 { "opportunities", n => { Opportunities = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.SearchOpportunitiesResponseSchema>(global::Soenneker.HighLevel.OpenApiClient.Models.SearchOpportunitiesResponseSchema.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "total", n => { Total = n.GetDoubleValue(); } },
             };
@@ -87,7 +87,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostSearchSuccessfulResponseDtoAggregationsProperty2>("aggregations", Aggregations);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostSearchSuccessfulResponseDtoAggregations>("aggregations", Aggregations);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.SearchOpportunitiesResponseSchema>("opportunities", Opportunities);
             writer.WriteDoubleValue("total", Total);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

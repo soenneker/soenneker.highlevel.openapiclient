@@ -30,12 +30,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Updated agent or version data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentResponseDtoDataProperty2? Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentResponseDtoDataProperty2? _explicitNullValueData = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentResponseDtoData? Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentResponseDtoData? _explicitNullValueData = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentResponseDtoDataProperty2 Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentResponseDtoDataProperty2 _explicitNullValueData = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentResponseDtoData Data { get => _explicitNullValueData; set { _explicitNullValueData = value; AdditionalData?.Remove("data"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data"); else _explicitNullProperties?.Remove("data"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentResponseDtoData _explicitNullValueData = default!;
 #endif
         /// <summary>Response message</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -75,7 +75,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "data", n => { Data = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentResponseDtoDataProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentResponseDtoDataProperty2.CreateFromDiscriminatorValue); } },
+                { "data", n => { Data = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentResponseDtoData>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentResponseDtoData.CreateFromDiscriminatorValue); } },
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "success", n => { Success = n.GetBoolValue(); } },
             };
@@ -87,7 +87,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentResponseDtoDataProperty2>("data", Data);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdatePublicAgentResponseDtoData>("data", Data);
             writer.WriteStringValue("message", Message);
             writer.WriteBoolValue("success", Success);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

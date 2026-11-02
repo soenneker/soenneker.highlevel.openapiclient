@@ -409,12 +409,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Saas Settings</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetCompanyByIdSchemaSaasSettingsProperty2? SaasSettings { get => _explicitNullValueSaasSettings; set { _explicitNullValueSaasSettings = value; AdditionalData?.Remove("saasSettings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("saasSettings"); else _explicitNullProperties?.Remove("saasSettings"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.GetCompanyByIdSchemaSaasSettingsProperty2? _explicitNullValueSaasSettings = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetCompanyByIdSchemaSaasSettings? SaasSettings { get => _explicitNullValueSaasSettings; set { _explicitNullValueSaasSettings = value; AdditionalData?.Remove("saasSettings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("saasSettings"); else _explicitNullProperties?.Remove("saasSettings"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GetCompanyByIdSchemaSaasSettings? _explicitNullValueSaasSettings = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetCompanyByIdSchemaSaasSettingsProperty2 SaasSettings { get => _explicitNullValueSaasSettings; set { _explicitNullValueSaasSettings = value; AdditionalData?.Remove("saasSettings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("saasSettings"); else _explicitNullProperties?.Remove("saasSettings"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.GetCompanyByIdSchemaSaasSettingsProperty2 _explicitNullValueSaasSettings = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetCompanyByIdSchemaSaasSettings SaasSettings { get => _explicitNullValueSaasSettings; set { _explicitNullValueSaasSettings = value; AdditionalData?.Remove("saasSettings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("saasSettings"); else _explicitNullProperties?.Remove("saasSettings"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GetCompanyByIdSchemaSaasSettings _explicitNullValueSaasSettings = default!;
 #endif
         /// <summary>The spareDomain property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -597,7 +597,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "privacyPolicyVersion", n => { PrivacyPolicyVersion = n.GetStringValue(); } },
                 { "referralId", n => { ReferralId = n.GetStringValue(); } },
                 { "relationshipNumber", n => { RelationshipNumber = n.GetStringValue(); } },
-                { "saasSettings", n => { SaasSettings = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetCompanyByIdSchemaSaasSettingsProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.GetCompanyByIdSchemaSaasSettingsProperty2.CreateFromDiscriminatorValue); } },
+                { "saasSettings", n => { SaasSettings = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetCompanyByIdSchemaSaasSettings>(global::Soenneker.HighLevel.OpenApiClient.Models.GetCompanyByIdSchemaSaasSettings.CreateFromDiscriminatorValue); } },
                 { "spareDomain", n => { SpareDomain = n.GetStringValue(); } },
                 { "state", n => { State = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
@@ -657,7 +657,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("privacyPolicyVersion", PrivacyPolicyVersion);
             writer.WriteStringValue("referralId", ReferralId);
             writer.WriteStringValue("relationshipNumber", RelationshipNumber);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetCompanyByIdSchemaSaasSettingsProperty2>("saasSettings", SaasSettings);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetCompanyByIdSchemaSaasSettings>("saasSettings", SaasSettings);
             writer.WriteStringValue("spareDomain", SpareDomain);
             writer.WriteStringValue("state", State);
             writer.WriteStringValue("status", Status);

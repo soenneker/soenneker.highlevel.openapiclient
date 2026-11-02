@@ -249,12 +249,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Additional metadata associated with the estimate</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoMetaProperty2? Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; AdditionalData?.Remove("meta"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoMetaProperty2? _explicitNullValueMeta = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoMeta? Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; AdditionalData?.Remove("meta"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoMeta? _explicitNullValueMeta = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoMetaProperty2 Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; AdditionalData?.Remove("meta"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoMetaProperty2 _explicitNullValueMeta = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoMeta Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; AdditionalData?.Remove("meta"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoMeta _explicitNullValueMeta = default!;
 #endif
         /// <summary>Name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -385,7 +385,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "items", n => { Items = n.GetCollectionOfObjectValues<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "lastVisitedAt", n => { LastVisitedAt = n.GetDateTimeOffsetValue(); } },
                 { "liveMode", n => { LiveMode = n.GetBoolValue(); } },
-                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoMetaProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoMetaProperty2.CreateFromDiscriminatorValue); } },
+                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoMeta>(global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoMeta.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "sentBy", n => { SentBy = n.GetStringValue(); } },
                 { "sentTo", n => { SentTo = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoSentToProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoSentToProperty.CreateFromDiscriminatorValue); } },
@@ -428,7 +428,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<UntypedNode>("items", Items);
             writer.WriteDateTimeOffsetValue("lastVisitedAt", LastVisitedAt);
             writer.WriteBoolValue("liveMode", LiveMode);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoMetaProperty2>("meta", Meta);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoMeta>("meta", Meta);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("sentBy", SentBy);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.EstimateResponseDtoSentToProperty>("sentTo", SentTo);

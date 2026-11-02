@@ -30,12 +30,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The emailData property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoicesResponseDtoEmailDataProperty2? EmailData { get => _explicitNullValueEmailData; set { _explicitNullValueEmailData = value; AdditionalData?.Remove("emailData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailData"); else _explicitNullProperties?.Remove("emailData"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoicesResponseDtoEmailDataProperty2? _explicitNullValueEmailData = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoicesResponseDtoEmailData? EmailData { get => _explicitNullValueEmailData; set { _explicitNullValueEmailData = value; AdditionalData?.Remove("emailData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailData"); else _explicitNullProperties?.Remove("emailData"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoicesResponseDtoEmailData? _explicitNullValueEmailData = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoicesResponseDtoEmailDataProperty2 EmailData { get => _explicitNullValueEmailData; set { _explicitNullValueEmailData = value; AdditionalData?.Remove("emailData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailData"); else _explicitNullProperties?.Remove("emailData"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoicesResponseDtoEmailDataProperty2 _explicitNullValueEmailData = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoicesResponseDtoEmailData EmailData { get => _explicitNullValueEmailData; set { _explicitNullValueEmailData = value; AdditionalData?.Remove("emailData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailData"); else _explicitNullProperties?.Remove("emailData"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoicesResponseDtoEmailData _explicitNullValueEmailData = default!;
 #endif
         /// <summary>The invoice property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -50,12 +50,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The smsData property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoicesResponseDtoSmsDataProperty2? SmsData { get => _explicitNullValueSmsData; set { _explicitNullValueSmsData = value; AdditionalData?.Remove("smsData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smsData"); else _explicitNullProperties?.Remove("smsData"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoicesResponseDtoSmsDataProperty2? _explicitNullValueSmsData = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoicesResponseDtoSmsData? SmsData { get => _explicitNullValueSmsData; set { _explicitNullValueSmsData = value; AdditionalData?.Remove("smsData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smsData"); else _explicitNullProperties?.Remove("smsData"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoicesResponseDtoSmsData? _explicitNullValueSmsData = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoicesResponseDtoSmsDataProperty2 SmsData { get => _explicitNullValueSmsData; set { _explicitNullValueSmsData = value; AdditionalData?.Remove("smsData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smsData"); else _explicitNullProperties?.Remove("smsData"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoicesResponseDtoSmsDataProperty2 _explicitNullValueSmsData = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoicesResponseDtoSmsData SmsData { get => _explicitNullValueSmsData; set { _explicitNullValueSmsData = value; AdditionalData?.Remove("smsData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("smsData"); else _explicitNullProperties?.Remove("smsData"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoicesResponseDtoSmsData _explicitNullValueSmsData = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoicesResponseDto"/> and sets the default values.
@@ -82,9 +82,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "emailData", n => { EmailData = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoicesResponseDtoEmailDataProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoicesResponseDtoEmailDataProperty2.CreateFromDiscriminatorValue); } },
+                { "emailData", n => { EmailData = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoicesResponseDtoEmailData>(global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoicesResponseDtoEmailData.CreateFromDiscriminatorValue); } },
                 { "invoice", n => { Invoice = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DefaultInvoiceResponseDto>(global::Soenneker.HighLevel.OpenApiClient.Models.DefaultInvoiceResponseDto.CreateFromDiscriminatorValue); } },
-                { "smsData", n => { SmsData = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoicesResponseDtoSmsDataProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoicesResponseDtoSmsDataProperty2.CreateFromDiscriminatorValue); } },
+                { "smsData", n => { SmsData = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoicesResponseDtoSmsData>(global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoicesResponseDtoSmsData.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -94,9 +94,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoicesResponseDtoEmailDataProperty2>("emailData", EmailData);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoicesResponseDtoEmailData>("emailData", EmailData);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DefaultInvoiceResponseDto>("invoice", Invoice);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoicesResponseDtoSmsDataProperty2>("smsData", SmsData);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SendInvoicesResponseDtoSmsData>("smsData", SmsData);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

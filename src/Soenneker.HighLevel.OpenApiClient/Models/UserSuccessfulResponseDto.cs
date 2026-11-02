@@ -98,12 +98,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>LC Phone Inbound Phone Numbers</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UserSuccessfulResponseDtoLcPhoneProperty2? LcPhone { get => _explicitNullValueLcPhone; set { _explicitNullValueLcPhone = value; AdditionalData?.Remove("lcPhone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lcPhone"); else _explicitNullProperties?.Remove("lcPhone"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.UserSuccessfulResponseDtoLcPhoneProperty2? _explicitNullValueLcPhone = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UserSuccessfulResponseDtoLcPhone? LcPhone { get => _explicitNullValueLcPhone; set { _explicitNullValueLcPhone = value; AdditionalData?.Remove("lcPhone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lcPhone"); else _explicitNullProperties?.Remove("lcPhone"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.UserSuccessfulResponseDtoLcPhone? _explicitNullValueLcPhone = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UserSuccessfulResponseDtoLcPhoneProperty2 LcPhone { get => _explicitNullValueLcPhone; set { _explicitNullValueLcPhone = value; AdditionalData?.Remove("lcPhone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lcPhone"); else _explicitNullProperties?.Remove("lcPhone"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.UserSuccessfulResponseDtoLcPhoneProperty2 _explicitNullValueLcPhone = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UserSuccessfulResponseDtoLcPhone LcPhone { get => _explicitNullValueLcPhone; set { _explicitNullValueLcPhone = value; AdditionalData?.Remove("lcPhone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lcPhone"); else _explicitNullProperties?.Remove("lcPhone"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.UserSuccessfulResponseDtoLcPhone _explicitNullValueLcPhone = default!;
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -181,7 +181,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "firstName", n => { FirstName = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "lastName", n => { LastName = n.GetStringValue(); } },
-                { "lcPhone", n => { LcPhone = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UserSuccessfulResponseDtoLcPhoneProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.UserSuccessfulResponseDtoLcPhoneProperty2.CreateFromDiscriminatorValue); } },
+                { "lcPhone", n => { LcPhone = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UserSuccessfulResponseDtoLcPhone>(global::Soenneker.HighLevel.OpenApiClient.Models.UserSuccessfulResponseDtoLcPhone.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "permissions", n => { Permissions = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PermissionsDto>(global::Soenneker.HighLevel.OpenApiClient.Models.PermissionsDto.CreateFromDiscriminatorValue); } },
                 { "phone", n => { Phone = n.GetStringValue(); } },
@@ -202,7 +202,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("firstName", FirstName);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("lastName", LastName);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UserSuccessfulResponseDtoLcPhoneProperty2>("lcPhone", LcPhone);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UserSuccessfulResponseDtoLcPhone>("lcPhone", LcPhone);
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PermissionsDto>("permissions", Permissions);
             writer.WriteStringValue("phone", Phone);

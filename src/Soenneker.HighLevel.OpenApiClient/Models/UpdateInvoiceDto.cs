@@ -281,12 +281,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The xeroDetails property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoXeroDetailsProperty2? XeroDetails { get => _explicitNullValueXeroDetails; set { _explicitNullValueXeroDetails = value; AdditionalData?.Remove("xeroDetails"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("xeroDetails"); else _explicitNullProperties?.Remove("xeroDetails"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoXeroDetailsProperty2? _explicitNullValueXeroDetails = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoXeroDetails? XeroDetails { get => _explicitNullValueXeroDetails; set { _explicitNullValueXeroDetails = value; AdditionalData?.Remove("xeroDetails"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("xeroDetails"); else _explicitNullProperties?.Remove("xeroDetails"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoXeroDetails? _explicitNullValueXeroDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoXeroDetailsProperty2 XeroDetails { get => _explicitNullValueXeroDetails; set { _explicitNullValueXeroDetails = value; AdditionalData?.Remove("xeroDetails"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("xeroDetails"); else _explicitNullProperties?.Remove("xeroDetails"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoXeroDetailsProperty2 _explicitNullValueXeroDetails = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoXeroDetails XeroDetails { get => _explicitNullValueXeroDetails; set { _explicitNullValueXeroDetails = value; AdditionalData?.Remove("xeroDetails"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("xeroDetails"); else _explicitNullProperties?.Remove("xeroDetails"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoXeroDetails _explicitNullValueXeroDetails = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDto"/> and sets the default values.
@@ -336,7 +336,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "termsNotes", n => { TermsNotes = n.GetStringValue(); } },
                 { "tipsConfiguration", n => { TipsConfiguration = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoTipsConfiguration>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoTipsConfiguration.CreateFromDiscriminatorValue); } },
                 { "title", n => { Title = n.GetStringValue(); } },
-                { "xeroDetails", n => { XeroDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoXeroDetailsProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoXeroDetailsProperty2.CreateFromDiscriminatorValue); } },
+                { "xeroDetails", n => { XeroDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoXeroDetails>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoXeroDetails.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -369,7 +369,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("termsNotes", TermsNotes);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoTipsConfiguration>("tipsConfiguration", TipsConfiguration);
             writer.WriteStringValue("title", Title);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoXeroDetailsProperty2>("xeroDetails", XeroDetails);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateInvoiceDtoXeroDetails>("xeroDetails", XeroDetails);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

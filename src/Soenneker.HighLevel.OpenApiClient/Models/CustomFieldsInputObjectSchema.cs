@@ -30,12 +30,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The field_value property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputObjectSchemaFieldValueProperty2? FieldValue { get => _explicitNullValueFieldValue; set { _explicitNullValueFieldValue = value; AdditionalData?.Remove("field_value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("field_value"); else _explicitNullProperties?.Remove("field_value"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputObjectSchemaFieldValueProperty2? _explicitNullValueFieldValue = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputObjectSchemaFieldValue? FieldValue { get => _explicitNullValueFieldValue; set { _explicitNullValueFieldValue = value; AdditionalData?.Remove("field_value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("field_value"); else _explicitNullProperties?.Remove("field_value"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputObjectSchemaFieldValue? _explicitNullValueFieldValue = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputObjectSchemaFieldValueProperty2 FieldValue { get => _explicitNullValueFieldValue; set { _explicitNullValueFieldValue = value; AdditionalData?.Remove("field_value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("field_value"); else _explicitNullProperties?.Remove("field_value"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputObjectSchemaFieldValueProperty2 _explicitNullValueFieldValue = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputObjectSchemaFieldValue FieldValue { get => _explicitNullValueFieldValue; set { _explicitNullValueFieldValue = value; AdditionalData?.Remove("field_value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("field_value"); else _explicitNullProperties?.Remove("field_value"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputObjectSchemaFieldValue _explicitNullValueFieldValue = default!;
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -82,7 +82,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "field_value", n => { FieldValue = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputObjectSchemaFieldValueProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputObjectSchemaFieldValueProperty2.CreateFromDiscriminatorValue); } },
+                { "field_value", n => { FieldValue = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputObjectSchemaFieldValue>(global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputObjectSchemaFieldValue.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "key", n => { Key = n.GetStringValue(); } },
             };
@@ -94,7 +94,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputObjectSchemaFieldValueProperty2>("field_value", FieldValue);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsInputObjectSchemaFieldValue>("field_value", FieldValue);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("key", Key);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

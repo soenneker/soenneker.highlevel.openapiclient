@@ -38,12 +38,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Uploaded files</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.FileUploadResponseDtoUploadedFilesProperty2? UploadedFiles { get => _explicitNullValueUploadedFiles; set { _explicitNullValueUploadedFiles = value; AdditionalData?.Remove("uploadedFiles"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uploadedFiles"); else _explicitNullProperties?.Remove("uploadedFiles"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.FileUploadResponseDtoUploadedFilesProperty2? _explicitNullValueUploadedFiles = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.FileUploadResponseDtoUploadedFiles? UploadedFiles { get => _explicitNullValueUploadedFiles; set { _explicitNullValueUploadedFiles = value; AdditionalData?.Remove("uploadedFiles"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uploadedFiles"); else _explicitNullProperties?.Remove("uploadedFiles"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.FileUploadResponseDtoUploadedFiles? _explicitNullValueUploadedFiles = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.FileUploadResponseDtoUploadedFilesProperty2 UploadedFiles { get => _explicitNullValueUploadedFiles; set { _explicitNullValueUploadedFiles = value; AdditionalData?.Remove("uploadedFiles"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uploadedFiles"); else _explicitNullProperties?.Remove("uploadedFiles"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.FileUploadResponseDtoUploadedFilesProperty2 _explicitNullValueUploadedFiles = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.FileUploadResponseDtoUploadedFiles UploadedFiles { get => _explicitNullValueUploadedFiles; set { _explicitNullValueUploadedFiles = value; AdditionalData?.Remove("uploadedFiles"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uploadedFiles"); else _explicitNullProperties?.Remove("uploadedFiles"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.FileUploadResponseDtoUploadedFiles _explicitNullValueUploadedFiles = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.FileUploadResponseDto"/> and sets the default values.
@@ -71,7 +71,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "meta", n => { Meta = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "uploadedFiles", n => { UploadedFiles = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.FileUploadResponseDtoUploadedFilesProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.FileUploadResponseDtoUploadedFilesProperty2.CreateFromDiscriminatorValue); } },
+                { "uploadedFiles", n => { UploadedFiles = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.FileUploadResponseDtoUploadedFiles>(global::Soenneker.HighLevel.OpenApiClient.Models.FileUploadResponseDtoUploadedFiles.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -82,7 +82,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("meta", Meta);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.FileUploadResponseDtoUploadedFilesProperty2>("uploadedFiles", UploadedFiles);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.FileUploadResponseDtoUploadedFiles>("uploadedFiles", UploadedFiles);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

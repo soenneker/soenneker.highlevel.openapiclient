@@ -32,12 +32,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The feedback property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateConversationDtoFeedbackProperty2? Feedback { get => _explicitNullValueFeedback; set { _explicitNullValueFeedback = value; AdditionalData?.Remove("feedback"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("feedback"); else _explicitNullProperties?.Remove("feedback"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.UpdateConversationDtoFeedbackProperty2? _explicitNullValueFeedback = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateConversationDtoFeedback? Feedback { get => _explicitNullValueFeedback; set { _explicitNullValueFeedback = value; AdditionalData?.Remove("feedback"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("feedback"); else _explicitNullProperties?.Remove("feedback"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.UpdateConversationDtoFeedback? _explicitNullValueFeedback = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateConversationDtoFeedbackProperty2 Feedback { get => _explicitNullValueFeedback; set { _explicitNullValueFeedback = value; AdditionalData?.Remove("feedback"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("feedback"); else _explicitNullProperties?.Remove("feedback"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.UpdateConversationDtoFeedbackProperty2 _explicitNullValueFeedback = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateConversationDtoFeedback Feedback { get => _explicitNullValueFeedback; set { _explicitNullValueFeedback = value; AdditionalData?.Remove("feedback"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("feedback"); else _explicitNullProperties?.Remove("feedback"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.UpdateConversationDtoFeedback _explicitNullValueFeedback = default!;
 #endif
         /// <summary>Location ID as string</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -80,7 +80,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "feedback", n => { Feedback = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateConversationDtoFeedbackProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateConversationDtoFeedbackProperty2.CreateFromDiscriminatorValue); } },
+                { "feedback", n => { Feedback = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateConversationDtoFeedback>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateConversationDtoFeedback.CreateFromDiscriminatorValue); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
                 { "starred", n => { Starred = n.GetBoolValue(); } },
                 { "unreadCount", n => { UnreadCount = n.GetDoubleValue(); } },
@@ -93,7 +93,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateConversationDtoFeedbackProperty2>("feedback", Feedback);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateConversationDtoFeedback>("feedback", Feedback);
             writer.WriteStringValue("locationId", LocationId);
             writer.WriteBoolValue("starred", Starred);
             writer.WriteDoubleValue("unreadCount", UnreadCount);

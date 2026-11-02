@@ -81,12 +81,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Meta data to be recorded with the transaction</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyMetaProperty2? Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; AdditionalData?.Remove("meta"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyMetaProperty2? _explicitNullValueMeta = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyMeta? Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; AdditionalData?.Remove("meta"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyMeta? _explicitNullValueMeta = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyMetaProperty2 Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; AdditionalData?.Remove("meta"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyMetaProperty2 _explicitNullValueMeta = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyMeta Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; AdditionalData?.Remove("meta"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyMeta _explicitNullValueMeta = default!;
 #endif
         /// <summary>manual payment method</summary>
         public global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyMode? Mode { get => _explicitNullValueMode; set { _explicitNullValueMode = value; AdditionalData?.Remove("mode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mode"); else _explicitNullProperties?.Remove("mode"); } }
@@ -132,7 +132,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "card", n => { Card = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyCard>(global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyCard.CreateFromDiscriminatorValue); } },
                 { "cheque", n => { Cheque = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyCheque>(global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyCheque.CreateFromDiscriminatorValue); } },
                 { "isPartialPayment", n => { IsPartialPayment = n.GetBoolValue(); } },
-                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyMetaProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyMetaProperty2.CreateFromDiscriminatorValue); } },
+                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyMeta>(global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyMeta.CreateFromDiscriminatorValue); } },
                 { "mode", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyMode>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueMode = default; _explicitNullProperties?.Remove("mode"); AdditionalData["mode"] = unknown; } else { Mode = parsed; AdditionalData.Remove("mode"); } } },
                 { "notes", n => { Notes = n.GetStringValue(); } },
             };
@@ -150,7 +150,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyCard>("card", Card);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyCheque>("cheque", Cheque);
             writer.WriteBoolValue("isPartialPayment", IsPartialPayment);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyMetaProperty2>("meta", Meta);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyMeta>("meta", Meta);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PostRecordOrderPaymentBodyMode>("mode", Mode);
             writer.WriteStringValue("notes", Notes);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

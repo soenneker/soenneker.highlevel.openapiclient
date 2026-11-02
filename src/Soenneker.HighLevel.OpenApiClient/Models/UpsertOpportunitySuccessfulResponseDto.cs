@@ -31,12 +31,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Updated / New Opportunity</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunitySuccessfulResponseDtoOpportunityProperty2? Opportunity { get => _explicitNullValueOpportunity; set { _explicitNullValueOpportunity = value; AdditionalData?.Remove("opportunity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opportunity"); else _explicitNullProperties?.Remove("opportunity"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunitySuccessfulResponseDtoOpportunityProperty2? _explicitNullValueOpportunity = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunitySuccessfulResponseDtoOpportunity? Opportunity { get => _explicitNullValueOpportunity; set { _explicitNullValueOpportunity = value; AdditionalData?.Remove("opportunity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opportunity"); else _explicitNullProperties?.Remove("opportunity"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunitySuccessfulResponseDtoOpportunity? _explicitNullValueOpportunity = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunitySuccessfulResponseDtoOpportunityProperty2 Opportunity { get => _explicitNullValueOpportunity; set { _explicitNullValueOpportunity = value; AdditionalData?.Remove("opportunity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opportunity"); else _explicitNullProperties?.Remove("opportunity"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunitySuccessfulResponseDtoOpportunityProperty2 _explicitNullValueOpportunity = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunitySuccessfulResponseDtoOpportunity Opportunity { get => _explicitNullValueOpportunity; set { _explicitNullValueOpportunity = value; AdditionalData?.Remove("opportunity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opportunity"); else _explicitNullProperties?.Remove("opportunity"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunitySuccessfulResponseDtoOpportunity _explicitNullValueOpportunity = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunitySuccessfulResponseDto"/> and sets the default values.
@@ -64,7 +64,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "new", n => { New = n.GetBoolValue(); } },
-                { "opportunity", n => { Opportunity = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunitySuccessfulResponseDtoOpportunityProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunitySuccessfulResponseDtoOpportunityProperty2.CreateFromDiscriminatorValue); } },
+                { "opportunity", n => { Opportunity = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunitySuccessfulResponseDtoOpportunity>(global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunitySuccessfulResponseDtoOpportunity.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -75,7 +75,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("new", New);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunitySuccessfulResponseDtoOpportunityProperty2>("opportunity", Opportunity);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpsertOpportunitySuccessfulResponseDtoOpportunity>("opportunity", Opportunity);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

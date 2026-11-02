@@ -133,12 +133,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The meta property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignDtoMetaProperty2? Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; AdditionalData?.Remove("meta"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignDtoMetaProperty2? _explicitNullValueMeta = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignDtoMeta? Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; AdditionalData?.Remove("meta"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignDtoMeta? _explicitNullValueMeta = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignDtoMetaProperty2 Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; AdditionalData?.Remove("meta"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignDtoMetaProperty2 _explicitNullValueMeta = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignDtoMeta Meta { get => _explicitNullValueMeta; set { _explicitNullValueMeta = value; AdditionalData?.Remove("meta"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("meta"); else _explicitNullProperties?.Remove("meta"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignDtoMeta _explicitNullValueMeta = default!;
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -197,7 +197,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "linkedInError", n => { LinkedInError = n.GetStringValue(); } },
                 { "locale", n => { Locale = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignDtoLocale>(global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignDtoLocale.CreateFromDiscriminatorValue); } },
                 { "mediaType", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignDtoMediaType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueMediaType = default; _explicitNullProperties?.Remove("mediaType"); AdditionalData["mediaType"] = unknown; } else { MediaType = parsed; AdditionalData.Remove("mediaType"); } } },
-                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignDtoMetaProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignDtoMetaProperty2.CreateFromDiscriminatorValue); } },
+                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignDtoMeta>(global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignDtoMeta.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "publishingStatus", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignDtoPublishingStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePublishingStatus = default; _explicitNullProperties?.Remove("publishingStatus"); AdditionalData["publishingStatus"] = unknown; } else { PublishingStatus = parsed; AdditionalData.Remove("publishingStatus"); } } },
                 { "unitCost", n => { UnitCost = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignDtoUnitCost>(global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignDtoUnitCost.CreateFromDiscriminatorValue); } },
@@ -219,7 +219,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("linkedInError", LinkedInError);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignDtoLocale>("locale", Locale);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignDtoMediaType>("mediaType", MediaType);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignDtoMetaProperty2>("meta", Meta);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignDtoMeta>("meta", Meta);
             writer.WriteStringValue("name", Name);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignDtoPublishingStatus>("publishingStatus", PublishingStatus);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignDtoUnitCost>("unitCost", UnitCost);

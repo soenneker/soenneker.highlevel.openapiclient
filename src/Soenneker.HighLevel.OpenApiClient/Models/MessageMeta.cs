@@ -43,12 +43,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>meta will contain email, for message type 3 (email). messageIds is list of all email message ids under the message thread</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.MessageMetaEmailProperty2? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; AdditionalData?.Remove("email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.MessageMetaEmailProperty2? _explicitNullValueEmail = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.MessageMetaEmail? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; AdditionalData?.Remove("email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.MessageMetaEmail? _explicitNullValueEmail = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.MessageMetaEmailProperty2 Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; AdditionalData?.Remove("email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.MessageMetaEmailProperty2 _explicitNullValueEmail = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.MessageMetaEmail Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; AdditionalData?.Remove("email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.MessageMetaEmail _explicitNullValueEmail = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.MessageMeta"/> and sets the default values.
@@ -77,7 +77,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             {
                 { "callDuration", n => { CallDuration = n.GetStringValue(); } },
                 { "callStatus", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.MessageMetaCallStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCallStatus = default; _explicitNullProperties?.Remove("callStatus"); AdditionalData["callStatus"] = unknown; } else { CallStatus = parsed; AdditionalData.Remove("callStatus"); } } },
-                { "email", n => { Email = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.MessageMetaEmailProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.MessageMetaEmailProperty2.CreateFromDiscriminatorValue); } },
+                { "email", n => { Email = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.MessageMetaEmail>(global::Soenneker.HighLevel.OpenApiClient.Models.MessageMetaEmail.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -89,7 +89,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("callDuration", CallDuration);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.MessageMetaCallStatus>("callStatus", CallStatus);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.MessageMetaEmailProperty2>("email", Email);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.MessageMetaEmail>("email", Email);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

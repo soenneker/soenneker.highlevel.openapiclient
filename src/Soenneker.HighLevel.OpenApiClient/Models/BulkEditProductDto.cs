@@ -115,22 +115,22 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Product label</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditProductDtoLabelProperty2? Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; AdditionalData?.Remove("label"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditProductDtoLabelProperty2? _explicitNullValueLabel = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditProductDtoLabel? Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; AdditionalData?.Remove("label"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditProductDtoLabel? _explicitNullValueLabel = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditProductDtoLabelProperty2 Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; AdditionalData?.Remove("label"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditProductDtoLabelProperty2 _explicitNullValueLabel = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditProductDtoLabel Label { get => _explicitNullValueLabel; set { _explicitNullValueLabel = value; AdditionalData?.Remove("label"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label"); else _explicitNullProperties?.Remove("label"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditProductDtoLabel _explicitNullValueLabel = default!;
 #endif
         /// <summary>Product media</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditProductDtoMediasItemProperty2>? Medias { get => _explicitNullValueMedias; set { _explicitNullValueMedias = value; AdditionalData?.Remove("medias"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("medias"); else _explicitNullProperties?.Remove("medias"); } }
-        private List<global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditProductDtoMediasItemProperty2>? _explicitNullValueMedias = default!;
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditProductDtoMediasItem>? Medias { get => _explicitNullValueMedias; set { _explicitNullValueMedias = value; AdditionalData?.Remove("medias"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("medias"); else _explicitNullProperties?.Remove("medias"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditProductDtoMediasItem>? _explicitNullValueMedias = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditProductDtoMediasItemProperty2> Medias { get => _explicitNullValueMedias; set { _explicitNullValueMedias = value; AdditionalData?.Remove("medias"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("medias"); else _explicitNullProperties?.Remove("medias"); } }
-        private List<global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditProductDtoMediasItemProperty2> _explicitNullValueMedias = default!;
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditProductDtoMediasItem> Medias { get => _explicitNullValueMedias; set { _explicitNullValueMedias = value; AdditionalData?.Remove("medias"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("medias"); else _explicitNullProperties?.Remove("medias"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditProductDtoMediasItem> _explicitNullValueMedias = default!;
 #endif
         /// <summary>Product name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -175,12 +175,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Product taxes</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditProductDtoTaxesItemProperty2>? Taxes { get => _explicitNullValueTaxes; set { _explicitNullValueTaxes = value; AdditionalData?.Remove("taxes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taxes"); else _explicitNullProperties?.Remove("taxes"); } }
-        private List<global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditProductDtoTaxesItemProperty2>? _explicitNullValueTaxes = default!;
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditProductDtoTaxesItem>? Taxes { get => _explicitNullValueTaxes; set { _explicitNullValueTaxes = value; AdditionalData?.Remove("taxes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taxes"); else _explicitNullProperties?.Remove("taxes"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditProductDtoTaxesItem>? _explicitNullValueTaxes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditProductDtoTaxesItemProperty2> Taxes { get => _explicitNullValueTaxes; set { _explicitNullValueTaxes = value; AdditionalData?.Remove("taxes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taxes"); else _explicitNullProperties?.Remove("taxes"); } }
-        private List<global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditProductDtoTaxesItemProperty2> _explicitNullValueTaxes = default!;
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditProductDtoTaxesItem> Taxes { get => _explicitNullValueTaxes; set { _explicitNullValueTaxes = value; AdditionalData?.Remove("taxes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taxes"); else _explicitNullProperties?.Remove("taxes"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditProductDtoTaxesItem> _explicitNullValueTaxes = default!;
 #endif
         /// <summary>Tax inclusive pricing</summary>
         public bool? TaxInclusive { get => _explicitNullValueTaxInclusive; set { _explicitNullValueTaxInclusive = value; AdditionalData?.Remove("taxInclusive"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("taxInclusive"); else _explicitNullProperties?.Remove("taxInclusive"); } }
@@ -218,14 +218,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "image", n => { Image = n.GetStringValue(); } },
                 { "isLabelEnabled", n => { IsLabelEnabled = n.GetBoolValue(); } },
                 { "isTaxesEnabled", n => { IsTaxesEnabled = n.GetBoolValue(); } },
-                { "label", n => { Label = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditProductDtoLabelProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditProductDtoLabelProperty2.CreateFromDiscriminatorValue); } },
-                { "medias", n => { Medias = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditProductDtoMediasItemProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditProductDtoMediasItemProperty2.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "label", n => { Label = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditProductDtoLabel>(global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditProductDtoLabel.CreateFromDiscriminatorValue); } },
+                { "medias", n => { Medias = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditProductDtoMediasItem>(global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditProductDtoMediasItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "prices", n => { Prices = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditPriceDto>(global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditPriceDto.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "seo", n => { Seo = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditProductDtoSeo>(global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditProductDtoSeo.CreateFromDiscriminatorValue); } },
                 { "slug", n => { Slug = n.GetStringValue(); } },
                 { "taxInclusive", n => { TaxInclusive = n.GetBoolValue(); } },
-                { "taxes", n => { Taxes = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditProductDtoTaxesItemProperty2>(global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditProductDtoTaxesItemProperty2.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "taxes", n => { Taxes = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditProductDtoTaxesItem>(global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditProductDtoTaxesItem.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -243,13 +243,13 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("image", Image);
             writer.WriteBoolValue("isLabelEnabled", IsLabelEnabled);
             writer.WriteBoolValue("isTaxesEnabled", IsTaxesEnabled);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditProductDtoLabelProperty2>("label", Label);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditProductDtoMediasItemProperty2>("medias", Medias);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditProductDtoLabel>("label", Label);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditProductDtoMediasItem>("medias", Medias);
             writer.WriteStringValue("name", Name);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditPriceDto>("prices", Prices);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditProductDtoSeo>("seo", Seo);
             writer.WriteStringValue("slug", Slug);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditProductDtoTaxesItemProperty2>("taxes", Taxes);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.BulkEditProductDtoTaxesItem>("taxes", Taxes);
             writer.WriteBoolValue("taxInclusive", TaxInclusive);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
