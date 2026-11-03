@@ -2,7 +2,7 @@
   "descriptionHash": "3B016F32B4E5E6614AD4DB69698A208D8F52A3EB9847D826429D35FAEC1B264320D9190992F3D89C827C9E9EE1482394B9983232478031107D0F49CC04094123",
   "descriptionLocation": "../../apps/fixed.json",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.37.0",
+  "kiotaVersion": "1.38.0",
   "clientClassName": "HighLevelOpenApiClient",
   "typeAccessModifier": "Public",
   "clientNamespaceName": "Soenneker.HighLevel.OpenApiClient",
