@@ -41,7 +41,7 @@ namespace Soenneker.HighLevel.OpenApiClient.ConversationAi.Agents.Item.Actions.I
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.ConversationAiCommonSchemasBadRequestDto">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.ConversationAiCommonSchemasUnauthorizedDto">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnprocessableDto">When receiving a 422 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.ConversationAiCommonSchemasUnprocessableDto">When receiving a 422 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.DeleteActionResponseDto?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -56,7 +56,7 @@ namespace Soenneker.HighLevel.OpenApiClient.ConversationAi.Agents.Item.Actions.I
             {
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.ConversationAiCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.ConversationAiCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
-                { "422", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
+                { "422", global::Soenneker.HighLevel.OpenApiClient.Models.ConversationAiCommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
                 { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
@@ -70,7 +70,7 @@ namespace Soenneker.HighLevel.OpenApiClient.ConversationAi.Agents.Item.Actions.I
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.ConversationAiCommonSchemasBadRequestDto">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.ConversationAiCommonSchemasUnauthorizedDto">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnprocessableDto">When receiving a 422 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.ConversationAiCommonSchemasUnprocessableDto">When receiving a 422 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.FetchActionDetailsResponseDto?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -85,7 +85,7 @@ namespace Soenneker.HighLevel.OpenApiClient.ConversationAi.Agents.Item.Actions.I
             {
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.ConversationAiCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.ConversationAiCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
-                { "422", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
+                { "422", global::Soenneker.HighLevel.OpenApiClient.Models.ConversationAiCommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
                 { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
@@ -94,20 +94,20 @@ namespace Soenneker.HighLevel.OpenApiClient.ConversationAi.Agents.Item.Actions.I
         /// <summary>
         /// Updates an existing action&apos;s configuration. This includes modifying the action name, description, trigger conditions, and behavior settings.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpdateActionResponseDto"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.ConversationAiUpdateActionResponseDto"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.ConversationAiCommonSchemasBadRequestDto">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.ConversationAiCommonSchemasUnauthorizedDto">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnprocessableDto">When receiving a 422 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.ConversationAiCommonSchemasUnprocessableDto">When receiving a 422 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateActionResponseDto?> PutAsync(global::Soenneker.HighLevel.OpenApiClient.Models.CreateActionDto body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.ConversationAiUpdateActionResponseDto?> PutAsync(global::Soenneker.HighLevel.OpenApiClient.Models.CreateActionDto body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateActionResponseDto> PutAsync(global::Soenneker.HighLevel.OpenApiClient.Models.CreateActionDto body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.ConversationAiUpdateActionResponseDto> PutAsync(global::Soenneker.HighLevel.OpenApiClient.Models.CreateActionDto body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -116,11 +116,11 @@ namespace Soenneker.HighLevel.OpenApiClient.ConversationAi.Agents.Item.Actions.I
             {
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.ConversationAiCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.ConversationAiCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
-                { "422", global::Soenneker.HighLevel.OpenApiClient.Models.CommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
+                { "422", global::Soenneker.HighLevel.OpenApiClient.Models.ConversationAiCommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
                 { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateActionResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.UpdateActionResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.ConversationAiUpdateActionResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.ConversationAiUpdateActionResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Permanently deletes an action. This will remove the action from all associated agents and cannot be undone.

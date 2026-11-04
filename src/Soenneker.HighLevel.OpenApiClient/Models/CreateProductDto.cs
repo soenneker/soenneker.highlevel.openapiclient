@@ -195,12 +195,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>An array of variants for the product.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ProductsProductVariantDto>? Variants { get => _explicitNullValueVariants; set { _explicitNullValueVariants = value; AdditionalData?.Remove("variants"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variants"); else _explicitNullProperties?.Remove("variants"); } }
-        private List<global::Soenneker.HighLevel.OpenApiClient.Models.ProductsProductVariantDto>? _explicitNullValueVariants = default!;
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ProductVariantDto>? Variants { get => _explicitNullValueVariants; set { _explicitNullValueVariants = value; AdditionalData?.Remove("variants"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variants"); else _explicitNullProperties?.Remove("variants"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.ProductVariantDto>? _explicitNullValueVariants = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ProductsProductVariantDto> Variants { get => _explicitNullValueVariants; set { _explicitNullValueVariants = value; AdditionalData?.Remove("variants"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variants"); else _explicitNullProperties?.Remove("variants"); } }
-        private List<global::Soenneker.HighLevel.OpenApiClient.Models.ProductsProductVariantDto> _explicitNullValueVariants = default!;
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ProductVariantDto> Variants { get => _explicitNullValueVariants; set { _explicitNullValueVariants = value; AdditionalData?.Remove("variants"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variants"); else _explicitNullProperties?.Remove("variants"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.ProductVariantDto> _explicitNullValueVariants = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CreateProductDto"/> and sets the default values.
@@ -247,7 +247,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "statementDescriptor", n => { StatementDescriptor = n.GetStringValue(); } },
                 { "taxInclusive", n => { TaxInclusive = n.GetBoolValue(); } },
                 { "taxes", n => { Taxes = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "variants", n => { Variants = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ProductsProductVariantDto>(global::Soenneker.HighLevel.OpenApiClient.Models.ProductsProductVariantDto.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "variants", n => { Variants = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ProductVariantDto>(global::Soenneker.HighLevel.OpenApiClient.Models.ProductVariantDto.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -274,7 +274,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("statementDescriptor", StatementDescriptor);
             writer.WriteCollectionOfPrimitiveValues<string>("taxes", Taxes);
             writer.WriteBoolValue("taxInclusive", TaxInclusive);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ProductsProductVariantDto>("variants", Variants);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ProductVariantDto>("variants", Variants);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -27,11 +27,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Source subtype of order</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.StoreOrderSourceSubType? SubType { get => _explicitNullValueSubType; set { _explicitNullValueSubType = value; AdditionalData?.Remove("subType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subType"); else _explicitNullProperties?.Remove("subType"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.StoreOrderSourceSubType? _explicitNullValueSubType = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.OrderSourceSubType? SubType { get => _explicitNullValueSubType; set { _explicitNullValueSubType = value; AdditionalData?.Remove("subType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subType"); else _explicitNullProperties?.Remove("subType"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.OrderSourceSubType? _explicitNullValueSubType = default!;
         /// <summary>Source of order</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.StoreOrderSourceType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.StoreOrderSourceType? _explicitNullValueType = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.OrderSourceType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.OrderSourceType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GetAvailableShippingRatesSource"/> and sets the default values.
         /// </summary>
@@ -57,8 +57,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "subType", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.StoreOrderSourceSubType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueSubType = default; _explicitNullProperties?.Remove("subType"); AdditionalData["subType"] = unknown; } else { SubType = parsed; AdditionalData.Remove("subType"); } } },
-                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.StoreOrderSourceType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
+                { "subType", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.OrderSourceSubType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueSubType = default; _explicitNullProperties?.Remove("subType"); AdditionalData["subType"] = unknown; } else { SubType = parsed; AdditionalData.Remove("subType"); } } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.OrderSourceType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
         }
         /// <summary>
@@ -68,8 +68,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.StoreOrderSourceSubType>("subType", SubType);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.StoreOrderSourceType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.OrderSourceSubType>("subType", SubType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.OrderSourceType>("type", Type);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

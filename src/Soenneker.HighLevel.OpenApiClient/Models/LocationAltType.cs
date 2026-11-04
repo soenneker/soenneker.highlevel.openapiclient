@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HighLevel.OpenApiClient.Models
 {
-    /// <summary>Type of entity that owns the folder</summary>
+    /// <summary>Alt Type</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum LocationAltType
     {

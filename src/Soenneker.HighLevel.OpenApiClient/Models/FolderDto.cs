@@ -64,8 +64,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         private string _explicitNullValueAltId = default!;
 #endif
         /// <summary>Type of entity that owns the folder</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get => _explicitNullValueAltType; set { _explicitNullValueAltType = value; AdditionalData?.Remove("altType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("altType"); else _explicitNullProperties?.Remove("altType"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? _explicitNullValueAltType = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.MediasLocationAltType? AltType { get => _explicitNullValueAltType; set { _explicitNullValueAltType = value; AdditionalData?.Remove("altType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("altType"); else _explicitNullProperties?.Remove("altType"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.MediasLocationAltType? _explicitNullValueAltType = default!;
         /// <summary>Whether this is a system-generated application folder</summary>
         public bool? AppFolder { get => _explicitNullValueAppFolder; set { _explicitNullValueAppFolder = value; AdditionalData?.Remove("appFolder"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("appFolder"); else _explicitNullProperties?.Remove("appFolder"); } }
         private bool? _explicitNullValueAppFolder = default!;
@@ -183,7 +183,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "altId", n => { AltId = n.GetStringValue(); } },
-                { "altType", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAltType = default; _explicitNullProperties?.Remove("altType"); AdditionalData["altType"] = unknown; } else { AltType = parsed; AdditionalData.Remove("altType"); } } },
+                { "altType", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.MediasLocationAltType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAltType = default; _explicitNullProperties?.Remove("altType"); AdditionalData["altType"] = unknown; } else { AltType = parsed; AdditionalData.Remove("altType"); } } },
                 { "appFolder", n => { AppFolder = n.GetBoolValue(); } },
                 { "category", n => { Category = n.GetStringValue(); } },
                 { "deleted", n => { Deleted = n.GetBoolValue(); } },
@@ -208,7 +208,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("altId", AltId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType>("altType", AltType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.MediasLocationAltType>("altType", AltType);
             writer.WriteBoolValue("appFolder", AppFolder);
             writer.WriteStringValue("category", Category);
             writer.WriteBoolValue("deleted", Deleted);

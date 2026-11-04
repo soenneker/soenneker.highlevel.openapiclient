@@ -63,11 +63,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>The subType property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.OrderSourceSubType? SubType { get => _explicitNullValueSubType; set { _explicitNullValueSubType = value; AdditionalData?.Remove("subType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subType"); else _explicitNullProperties?.Remove("subType"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.OrderSourceSubType? _explicitNullValueSubType = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsOrderSourceSubType? SubType { get => _explicitNullValueSubType; set { _explicitNullValueSubType = value; AdditionalData?.Remove("subType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subType"); else _explicitNullProperties?.Remove("subType"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsOrderSourceSubType? _explicitNullValueSubType = default!;
         /// <summary>The type property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.OrderSourceType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.OrderSourceType? _explicitNullValueType = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsOrderSourceType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsOrderSourceType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaEntitySource"/> and sets the default values.
         /// </summary>
@@ -96,8 +96,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaEntitySourceMetaProperty>(global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaEntitySourceMetaProperty.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "subType", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.OrderSourceSubType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueSubType = default; _explicitNullProperties?.Remove("subType"); AdditionalData["subType"] = unknown; } else { SubType = parsed; AdditionalData.Remove("subType"); } } },
-                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.OrderSourceType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
+                { "subType", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsOrderSourceSubType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueSubType = default; _explicitNullProperties?.Remove("subType"); AdditionalData["subType"] = unknown; } else { SubType = parsed; AdditionalData.Remove("subType"); } } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsOrderSourceType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
         }
         /// <summary>
@@ -110,8 +110,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetSubscriptionResponseSchemaEntitySourceMetaProperty>("meta", Meta);
             writer.WriteStringValue("name", Name);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.OrderSourceSubType>("subType", SubType);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.OrderSourceType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsOrderSourceSubType>("subType", SubType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsOrderSourceType>("type", Type);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

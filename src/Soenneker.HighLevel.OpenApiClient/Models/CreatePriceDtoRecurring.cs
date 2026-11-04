@@ -27,8 +27,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The interval at which the recurring event occurs.</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ProductsRecurringDtoInterval? Interval { get => _explicitNullValueInterval; set { _explicitNullValueInterval = value; AdditionalData?.Remove("interval"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interval"); else _explicitNullProperties?.Remove("interval"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.ProductsRecurringDtoInterval? _explicitNullValueInterval = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.RecurringDtoInterval? Interval { get => _explicitNullValueInterval; set { _explicitNullValueInterval = value; AdditionalData?.Remove("interval"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interval"); else _explicitNullProperties?.Remove("interval"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.RecurringDtoInterval? _explicitNullValueInterval = default!;
         /// <summary>The number of intervals between each occurrence of the event.</summary>
         public double? IntervalCount { get => _explicitNullValueIntervalCount; set { _explicitNullValueIntervalCount = value; AdditionalData?.Remove("intervalCount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intervalCount"); else _explicitNullProperties?.Remove("intervalCount"); } }
         private double? _explicitNullValueIntervalCount = default!;
@@ -57,7 +57,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "interval", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProductsRecurringDtoInterval>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueInterval = default; _explicitNullProperties?.Remove("interval"); AdditionalData["interval"] = unknown; } else { Interval = parsed; AdditionalData.Remove("interval"); } } },
+                { "interval", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.RecurringDtoInterval>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueInterval = default; _explicitNullProperties?.Remove("interval"); AdditionalData["interval"] = unknown; } else { Interval = parsed; AdditionalData.Remove("interval"); } } },
                 { "intervalCount", n => { IntervalCount = n.GetDoubleValue(); } },
             };
         }
@@ -68,7 +68,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ProductsRecurringDtoInterval>("interval", Interval);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.RecurringDtoInterval>("interval", Interval);
             writer.WriteDoubleValue("intervalCount", IntervalCount);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

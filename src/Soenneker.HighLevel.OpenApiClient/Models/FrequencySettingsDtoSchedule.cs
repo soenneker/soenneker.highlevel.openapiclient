@@ -39,12 +39,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The rrule property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCustomRRuleOptionsDto? Rrule { get => _explicitNullValueRrule; set { _explicitNullValueRrule = value; AdditionalData?.Remove("rrule"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rrule"); else _explicitNullProperties?.Remove("rrule"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCustomRRuleOptionsDto? _explicitNullValueRrule = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomRRuleOptionsDto? Rrule { get => _explicitNullValueRrule; set { _explicitNullValueRrule = value; AdditionalData?.Remove("rrule"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rrule"); else _explicitNullProperties?.Remove("rrule"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CustomRRuleOptionsDto? _explicitNullValueRrule = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCustomRRuleOptionsDto Rrule { get => _explicitNullValueRrule; set { _explicitNullValueRrule = value; AdditionalData?.Remove("rrule"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rrule"); else _explicitNullProperties?.Remove("rrule"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCustomRRuleOptionsDto _explicitNullValueRrule = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomRRuleOptionsDto Rrule { get => _explicitNullValueRrule; set { _explicitNullValueRrule = value; AdditionalData?.Remove("rrule"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rrule"); else _explicitNullProperties?.Remove("rrule"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CustomRRuleOptionsDto _explicitNullValueRrule = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.FrequencySettingsDtoSchedule"/> and sets the default values.
@@ -72,7 +72,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "executeAt", n => { ExecuteAt = n.GetStringValue(); } },
-                { "rrule", n => { Rrule = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCustomRRuleOptionsDto>(global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCustomRRuleOptionsDto.CreateFromDiscriminatorValue); } },
+                { "rrule", n => { Rrule = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomRRuleOptionsDto>(global::Soenneker.HighLevel.OpenApiClient.Models.CustomRRuleOptionsDto.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -83,7 +83,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("executeAt", ExecuteAt);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCustomRRuleOptionsDto>("rrule", Rrule);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomRRuleOptionsDto>("rrule", Rrule);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

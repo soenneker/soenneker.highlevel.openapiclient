@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.HighLevel.OpenApiClient.Models
 {
+    /// <summary>Source subtype of order</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum OrderSourceSubType
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "one_step_order_form")]
         #pragma warning disable CS1591
@@ -75,14 +74,6 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         [EnumMember(Value = "qr_code")]
         #pragma warning disable CS1591
         QrCode,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "saas_one_time")]
-        #pragma warning disable CS1591
-        SaasOneTime,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "saas_subscription")]
-        #pragma warning disable CS1591
-        SaasSubscription,
         #pragma warning restore CS1591
     }
 }

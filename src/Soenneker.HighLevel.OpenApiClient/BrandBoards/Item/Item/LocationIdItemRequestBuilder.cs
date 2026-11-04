@@ -41,8 +41,8 @@ namespace Soenneker.HighLevel.OpenApiClient.BrandBoards.Item.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.BrandBoardsCommonSchemasBadRequestDto">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.BrandBoardsCommonSchemasUnauthorizedDto">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.BrandBoardsInvalidLocationDto">When receiving a 403 status code</exception>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.BrandBoardsNotFoundDto">When receiving a 404 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.InvalidLocationDto">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.NotFoundDto">When receiving a 404 status code</exception>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.BrandBoardsCommonSchemasUnprocessableDto">When receiving a 422 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -58,8 +58,8 @@ namespace Soenneker.HighLevel.OpenApiClient.BrandBoards.Item.Item
             {
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.BrandBoardsCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.BrandBoardsCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.HighLevel.OpenApiClient.Models.BrandBoardsInvalidLocationDto.CreateFromDiscriminatorValue },
-                { "404", global::Soenneker.HighLevel.OpenApiClient.Models.BrandBoardsNotFoundDto.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.HighLevel.OpenApiClient.Models.InvalidLocationDto.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.HighLevel.OpenApiClient.Models.NotFoundDto.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.BrandBoardsCommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
                 { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
@@ -74,8 +74,8 @@ namespace Soenneker.HighLevel.OpenApiClient.BrandBoards.Item.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.BrandBoardsCommonSchemasBadRequestDto">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.BrandBoardsCommonSchemasUnauthorizedDto">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.BrandBoardsInvalidLocationDto">When receiving a 403 status code</exception>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.BrandBoardsNotFoundDto">When receiving a 404 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.InvalidLocationDto">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.NotFoundDto">When receiving a 404 status code</exception>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.BrandBoardsCommonSchemasUnprocessableDto">When receiving a 422 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -91,8 +91,8 @@ namespace Soenneker.HighLevel.OpenApiClient.BrandBoards.Item.Item
             {
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.BrandBoardsCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.BrandBoardsCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.HighLevel.OpenApiClient.Models.BrandBoardsInvalidLocationDto.CreateFromDiscriminatorValue },
-                { "404", global::Soenneker.HighLevel.OpenApiClient.Models.BrandBoardsNotFoundDto.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.HighLevel.OpenApiClient.Models.InvalidLocationDto.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.HighLevel.OpenApiClient.Models.NotFoundDto.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.BrandBoardsCommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
                 { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
@@ -108,8 +108,8 @@ namespace Soenneker.HighLevel.OpenApiClient.BrandBoards.Item.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.BrandBoardsCommonSchemasBadRequestDto">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.BrandBoardsCommonSchemasUnauthorizedDto">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.BrandBoardsInvalidLocationDto">When receiving a 403 status code</exception>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.BrandBoardsNotFoundDto">When receiving a 404 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.InvalidLocationDto">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.NotFoundDto">When receiving a 404 status code</exception>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.BrandBoardsCommonSchemasUnprocessableDto">When receiving a 422 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -126,8 +126,8 @@ namespace Soenneker.HighLevel.OpenApiClient.BrandBoards.Item.Item
             {
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.BrandBoardsCommonSchemasBadRequestDto.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.HighLevel.OpenApiClient.Models.BrandBoardsCommonSchemasUnauthorizedDto.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.HighLevel.OpenApiClient.Models.BrandBoardsInvalidLocationDto.CreateFromDiscriminatorValue },
-                { "404", global::Soenneker.HighLevel.OpenApiClient.Models.BrandBoardsNotFoundDto.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.HighLevel.OpenApiClient.Models.InvalidLocationDto.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.HighLevel.OpenApiClient.Models.NotFoundDto.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.HighLevel.OpenApiClient.Models.BrandBoardsCommonSchemasUnprocessableDto.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
                 { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },

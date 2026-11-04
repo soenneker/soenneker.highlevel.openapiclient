@@ -104,12 +104,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>An array of membership offers associated with the price.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.MembershipOfferDto>? MembershipOffers { get => _explicitNullValueMembershipOffers; set { _explicitNullValueMembershipOffers = value; AdditionalData?.Remove("membershipOffers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("membershipOffers"); else _explicitNullProperties?.Remove("membershipOffers"); } }
-        private List<global::Soenneker.HighLevel.OpenApiClient.Models.MembershipOfferDto>? _explicitNullValueMembershipOffers = default!;
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsMembershipOfferDto>? MembershipOffers { get => _explicitNullValueMembershipOffers; set { _explicitNullValueMembershipOffers = value; AdditionalData?.Remove("membershipOffers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("membershipOffers"); else _explicitNullProperties?.Remove("membershipOffers"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsMembershipOfferDto>? _explicitNullValueMembershipOffers = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.MembershipOfferDto> MembershipOffers { get => _explicitNullValueMembershipOffers; set { _explicitNullValueMembershipOffers = value; AdditionalData?.Remove("membershipOffers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("membershipOffers"); else _explicitNullProperties?.Remove("membershipOffers"); } }
-        private List<global::Soenneker.HighLevel.OpenApiClient.Models.MembershipOfferDto> _explicitNullValueMembershipOffers = default!;
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsMembershipOfferDto> MembershipOffers { get => _explicitNullValueMembershipOffers; set { _explicitNullValueMembershipOffers = value; AdditionalData?.Remove("membershipOffers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("membershipOffers"); else _explicitNullProperties?.Remove("membershipOffers"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsMembershipOfferDto> _explicitNullValueMembershipOffers = default!;
 #endif
         /// <summary>The name of the price.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -134,19 +134,19 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The recurring details of the price (if type is recurring).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DefaultPriceResponseDtoRecurring? Recurring { get => _explicitNullValueRecurring; set { _explicitNullValueRecurring = value; AdditionalData?.Remove("recurring"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurring"); else _explicitNullProperties?.Remove("recurring"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.DefaultPriceResponseDtoRecurring? _explicitNullValueRecurring = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsDefaultPriceResponseDtoRecurring? Recurring { get => _explicitNullValueRecurring; set { _explicitNullValueRecurring = value; AdditionalData?.Remove("recurring"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurring"); else _explicitNullProperties?.Remove("recurring"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsDefaultPriceResponseDtoRecurring? _explicitNullValueRecurring = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DefaultPriceResponseDtoRecurring Recurring { get => _explicitNullValueRecurring; set { _explicitNullValueRecurring = value; AdditionalData?.Remove("recurring"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurring"); else _explicitNullProperties?.Remove("recurring"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.DefaultPriceResponseDtoRecurring _explicitNullValueRecurring = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsDefaultPriceResponseDtoRecurring Recurring { get => _explicitNullValueRecurring; set { _explicitNullValueRecurring = value; AdditionalData?.Remove("recurring"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recurring"); else _explicitNullProperties?.Remove("recurring"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsDefaultPriceResponseDtoRecurring _explicitNullValueRecurring = default!;
 #endif
         /// <summary>Indicates whether inventory tracking is enabled.</summary>
         public bool? TrackInventory { get => _explicitNullValueTrackInventory; set { _explicitNullValueTrackInventory = value; AdditionalData?.Remove("trackInventory"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trackInventory"); else _explicitNullProperties?.Remove("trackInventory"); } }
         private bool? _explicitNullValueTrackInventory = default!;
         /// <summary>The type of the price (e.g., one_time).</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.DefaultPriceResponseDtoType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.DefaultPriceResponseDtoType? _explicitNullValueType = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsDefaultPriceResponseDtoType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsDefaultPriceResponseDtoType? _explicitNullValueType = default!;
         /// <summary>The last update timestamp of the price.</summary>
         public DateTimeOffset? UpdatedAt { get => _explicitNullValueUpdatedAt; set { _explicitNullValueUpdatedAt = value; AdditionalData?.Remove("updatedAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updatedAt"); else _explicitNullProperties?.Remove("updatedAt"); } }
         private DateTimeOffset? _explicitNullValueUpdatedAt = default!;
@@ -203,12 +203,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "currency", n => { Currency = n.GetStringValue(); } },
                 { "_id", n => { Id = n.GetStringValue(); } },
                 { "locationId", n => { LocationId = n.GetStringValue(); } },
-                { "membershipOffers", n => { MembershipOffers = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.MembershipOfferDto>(global::Soenneker.HighLevel.OpenApiClient.Models.MembershipOfferDto.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "membershipOffers", n => { MembershipOffers = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsMembershipOfferDto>(global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsMembershipOfferDto.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "product", n => { Product = n.GetStringValue(); } },
-                { "recurring", n => { Recurring = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DefaultPriceResponseDtoRecurring>(global::Soenneker.HighLevel.OpenApiClient.Models.DefaultPriceResponseDtoRecurring.CreateFromDiscriminatorValue); } },
+                { "recurring", n => { Recurring = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsDefaultPriceResponseDtoRecurring>(global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsDefaultPriceResponseDtoRecurring.CreateFromDiscriminatorValue); } },
                 { "trackInventory", n => { TrackInventory = n.GetBoolValue(); } },
-                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.DefaultPriceResponseDtoType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsDefaultPriceResponseDtoType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
                 { "userId", n => { UserId = n.GetStringValue(); } },
                 { "variantOptionIds", n => { VariantOptionIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -229,12 +229,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteStringValue("currency", Currency);
             writer.WriteStringValue("_id", Id);
             writer.WriteStringValue("locationId", LocationId);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.MembershipOfferDto>("membershipOffers", MembershipOffers);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsMembershipOfferDto>("membershipOffers", MembershipOffers);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("product", Product);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.DefaultPriceResponseDtoRecurring>("recurring", Recurring);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsDefaultPriceResponseDtoRecurring>("recurring", Recurring);
             writer.WriteBoolValue("trackInventory", TrackInventory);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.DefaultPriceResponseDtoType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsDefaultPriceResponseDtoType>("type", Type);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
             writer.WriteStringValue("userId", UserId);
             writer.WriteCollectionOfPrimitiveValues<string>("variantOptionIds", VariantOptionIds);
