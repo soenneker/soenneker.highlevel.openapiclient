@@ -64,7 +64,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "bookingOption", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.RecurringBookingOption>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueBookingOption = default; _explicitNullProperties?.Remove("bookingOption"); AdditionalData["bookingOption"] = unknown; } else { BookingOption = parsed; AdditionalData.Remove("bookingOption"); } } },
                 { "bookingOverlapDefaultStatus", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.RecurringBookingOverlapDefaultStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueBookingOverlapDefaultStatus = default; _explicitNullProperties?.Remove("bookingOverlapDefaultStatus"); AdditionalData["bookingOverlapDefaultStatus"] = unknown; } else { BookingOverlapDefaultStatus = parsed; AdditionalData.Remove("bookingOverlapDefaultStatus"); } } },

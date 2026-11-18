@@ -92,7 +92,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "apiDetails", n => { ApiDetails = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParametersApiDetails>(global::Soenneker.HighLevel.OpenApiClient.Models.CustomActionParametersApiDetails.CreateFromDiscriminatorValue); } },
                 { "selectedPaths", n => { SelectedPaths = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },

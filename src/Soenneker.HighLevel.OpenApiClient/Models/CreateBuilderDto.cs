@@ -160,7 +160,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(12)
             {
                 { "builderVersion", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateBuilderDtoBuilderVersion>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueBuilderVersion = default; _explicitNullProperties?.Remove("builderVersion"); AdditionalData["builderVersion"] = unknown; } else { BuilderVersion = parsed; AdditionalData.Remove("builderVersion"); } } },
                 { "importProvider", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateBuilderDtoImportProvider>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueImportProvider = default; _explicitNullProperties?.Remove("importProvider"); AdditionalData["importProvider"] = unknown; } else { ImportProvider = parsed; AdditionalData.Remove("importProvider"); } } },

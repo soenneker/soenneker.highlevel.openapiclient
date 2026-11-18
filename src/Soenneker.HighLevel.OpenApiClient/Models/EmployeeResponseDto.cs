@@ -203,7 +203,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(19)
             {
                 { "actions", n => { Actions = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ActionsIdDto>(global::Soenneker.HighLevel.OpenApiClient.Models.ActionsIdDto.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "autoPilotMaxMessages", n => { AutoPilotMaxMessages = n.GetDoubleValue(); } },

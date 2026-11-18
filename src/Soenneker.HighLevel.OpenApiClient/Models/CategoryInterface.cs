@@ -97,7 +97,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "posts", n => { Posts = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.PostInterface>(global::Soenneker.HighLevel.OpenApiClient.Models.PostInterface.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "subCategories", n => { SubCategories = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.SubCategoryInterface>(global::Soenneker.HighLevel.OpenApiClient.Models.SubCategoryInterface.CreateFromDiscriminatorValue)?.AsList(); } },

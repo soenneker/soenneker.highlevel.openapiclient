@@ -116,7 +116,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(6)
             {
                 { "firstObjectKey", n => { FirstObjectKey = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoFirstObjectKey>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoFirstObjectKey.CreateFromDiscriminatorValue); } },
                 { "firstObjectLabel", n => { FirstObjectLabel = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoFirstObjectLabel>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoFirstObjectLabel.CreateFromDiscriminatorValue); } },

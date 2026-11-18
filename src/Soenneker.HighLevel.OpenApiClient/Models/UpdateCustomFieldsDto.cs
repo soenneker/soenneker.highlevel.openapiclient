@@ -119,7 +119,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(8)
             {
                 { "acceptedFormats", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomFieldsDtoAcceptedFormats>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAcceptedFormats = default; _explicitNullProperties?.Remove("acceptedFormats"); AdditionalData["acceptedFormats"] = unknown; } else { AcceptedFormats = parsed; AdditionalData.Remove("acceptedFormats"); } } },
                 { "description", n => { Description = n.GetStringValue(); } },

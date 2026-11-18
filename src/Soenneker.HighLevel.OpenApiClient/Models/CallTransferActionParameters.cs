@@ -90,7 +90,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "hearWhisperMessage", n => { HearWhisperMessage = n.GetBoolValue(); } },
                 { "transferToType", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.NumberTransferToType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTransferToType = default; _explicitNullProperties?.Remove("transferToType"); AdditionalData["transferToType"] = unknown; } else { TransferToType = parsed; AdditionalData.Remove("transferToType"); } } },

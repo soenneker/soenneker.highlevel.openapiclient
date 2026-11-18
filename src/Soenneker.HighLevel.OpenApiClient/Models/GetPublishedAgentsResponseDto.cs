@@ -85,7 +85,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "agents", n => { Agents = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.GetPublishedAgentsResponseDtoAgentsItem>(global::Soenneker.HighLevel.OpenApiClient.Models.GetPublishedAgentsResponseDtoAgentsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "message", n => { Message = n.GetStringValue(); } },

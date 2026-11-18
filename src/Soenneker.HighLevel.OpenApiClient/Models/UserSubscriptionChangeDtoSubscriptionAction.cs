@@ -72,7 +72,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "subtype_id", n => { SubtypeId = n.GetStringValue(); } },
                 { "subtype_name", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.OneOnOneSubtypeName>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueSubtypeName = default; _explicitNullProperties?.Remove("subtype_name"); AdditionalData["subtype_name"] = unknown; } else { SubtypeName = parsed; AdditionalData.Remove("subtype_name"); } } },

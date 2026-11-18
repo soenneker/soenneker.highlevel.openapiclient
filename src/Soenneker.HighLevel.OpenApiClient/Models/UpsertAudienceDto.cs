@@ -104,7 +104,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "dimensions", n => { Dimensions = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpsertAudienceDtoDimensions>(global::Soenneker.HighLevel.OpenApiClient.Models.UpsertAudienceDtoDimensions.CreateFromDiscriminatorValue); } },
                 { "exclusionDimension", n => { ExclusionDimension = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpsertAudienceDtoExclusionDimension>(global::Soenneker.HighLevel.OpenApiClient.Models.UpsertAudienceDtoExclusionDimension.CreateFromDiscriminatorValue); } },

@@ -193,7 +193,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(13)
             {
                 { "audience", n => { Audience = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpsertAdsetDtoAudience>(global::Soenneker.HighLevel.OpenApiClient.Models.UpsertAdsetDtoAudience.CreateFromDiscriminatorValue); } },
                 { "budget", n => { Budget = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpsertAdsetDtoBudget>(global::Soenneker.HighLevel.OpenApiClient.Models.UpsertAdsetDtoBudget.CreateFromDiscriminatorValue); } },

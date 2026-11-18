@@ -172,7 +172,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(13)
             {
                 { "adBudgetOptimization", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.AdCampaignGroupDataDtoAdBudgetOptimization>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAdBudgetOptimization = default; _explicitNullProperties?.Remove("adBudgetOptimization"); AdditionalData["adBudgetOptimization"] = unknown; } else { AdBudgetOptimization = parsed; AdditionalData.Remove("adBudgetOptimization"); } } },
                 { "adCampaignGroupId", n => { AdCampaignGroupId = n.GetStringValue(); } },

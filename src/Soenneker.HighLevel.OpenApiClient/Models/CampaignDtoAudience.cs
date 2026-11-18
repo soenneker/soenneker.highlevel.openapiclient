@@ -117,7 +117,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(6)
             {
                 { "ageRange", n => { AgeRange = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleDemographicTargetDto>(global::Soenneker.HighLevel.OpenApiClient.Models.GoogleDemographicTargetDto.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "gender", n => { Gender = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.GoogleDemographicTargetDto>(global::Soenneker.HighLevel.OpenApiClient.Models.GoogleDemographicTargetDto.CreateFromDiscriminatorValue)?.AsList(); } },

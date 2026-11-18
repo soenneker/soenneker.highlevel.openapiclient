@@ -78,7 +78,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "date", n => { Date = n.GetStringValue(); } },
                 { "day", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ScheduleRuleDtoDay>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDay = default; _explicitNullProperties?.Remove("day"); AdditionalData["day"] = unknown; } else { Day = parsed; AdditionalData.Remove("day"); } } },

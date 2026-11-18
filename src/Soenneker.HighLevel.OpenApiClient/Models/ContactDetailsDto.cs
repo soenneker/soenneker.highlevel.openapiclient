@@ -140,7 +140,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(8)
             {
                 { "additionalEmails", n => { AdditionalEmails = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.AdditionalEmailsDto>(global::Soenneker.HighLevel.OpenApiClient.Models.AdditionalEmailsDto.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "address", n => { Address = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.AddressDto>(global::Soenneker.HighLevel.OpenApiClient.Models.AddressDto.CreateFromDiscriminatorValue); } },

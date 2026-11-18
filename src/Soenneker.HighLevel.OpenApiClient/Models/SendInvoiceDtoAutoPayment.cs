@@ -170,7 +170,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(11)
             {
                 { "bacsDirectDebit", n => { BacsDirectDebit = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BacsDirectDebitDto>(global::Soenneker.HighLevel.OpenApiClient.Models.BacsDirectDebitDto.CreateFromDiscriminatorValue); } },
                 { "becsDirectDebit", n => { BecsDirectDebit = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.BecsDirectDebitDto>(global::Soenneker.HighLevel.OpenApiClient.Models.BecsDirectDebitDto.CreateFromDiscriminatorValue); } },

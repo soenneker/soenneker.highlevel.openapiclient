@@ -126,7 +126,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(8)
             {
                 { "dnd", n => { Dnd = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDtoDnd>(global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDtoDnd.CreateFromDiscriminatorValue); } },
                 { "editorType", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.SaveBuilderDataDtoEditorType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueEditorType = default; _explicitNullProperties?.Remove("editorType"); AdditionalData["editorType"] = unknown; } else { EditorType = parsed; AdditionalData.Remove("editorType"); } } },

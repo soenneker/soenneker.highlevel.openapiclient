@@ -183,7 +183,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(15)
             {
                 { "address", n => { Address = n.GetStringValue(); } },
                 { "appointmentStatus", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.AppointmentEditSchemaAppointmentStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAppointmentStatus = default; _explicitNullProperties?.Remove("appointmentStatus"); AdditionalData["appointmentStatus"] = unknown; } else { AppointmentStatus = parsed; AdditionalData.Remove("appointmentStatus"); } } },

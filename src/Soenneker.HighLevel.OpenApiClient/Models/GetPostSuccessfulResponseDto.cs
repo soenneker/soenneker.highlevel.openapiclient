@@ -140,7 +140,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(8)
             {
                 { "associationType", n => { AssociationType = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoAssociationType>(global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoAssociationType.CreateFromDiscriminatorValue); } },
                 { "firstObjectKey", n => { FirstObjectKey = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoFirstObjectKey>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoFirstObjectKey.CreateFromDiscriminatorValue); } },

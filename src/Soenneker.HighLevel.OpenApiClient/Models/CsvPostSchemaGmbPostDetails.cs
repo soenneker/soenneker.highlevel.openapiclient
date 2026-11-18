@@ -165,7 +165,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(10)
             {
                 { "actionType", n => { ActionType = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoGmbPostDetailsActionType>(global::Soenneker.HighLevel.OpenApiClient.Models.CreatePostDtoGmbPostDetailsActionType.CreateFromDiscriminatorValue); } },
                 { "couponCode", n => { CouponCode = n.GetStringValue(); } },
