@@ -17,21 +17,21 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("field") is null) { _explicitNullValueField = default!; _explicitNullProperties?.Remove("field"); }
-            else if (parseNode.GetChildNode("field") is { } nullNodeField && nullNodeField.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Field = null;
+            if (parseNode.GetChildNode("customField") is null) { _explicitNullValueCustomField = default!; _explicitNullProperties?.Remove("customField"); }
+            else if (parseNode.GetChildNode("customField") is { } nullNodeCustomField && nullNodeCustomField.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomField = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The field property</summary>
+        /// <summary>The customField property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ICustomField? Field { get => _explicitNullValueField; set { _explicitNullValueField = value; AdditionalData?.Remove("field"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("field"); else _explicitNullProperties?.Remove("field"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.ICustomField? _explicitNullValueField = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LocationsCustomFieldSchema? CustomField { get => _explicitNullValueCustomField; set { _explicitNullValueCustomField = value; AdditionalData?.Remove("customField"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customField"); else _explicitNullProperties?.Remove("customField"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.LocationsCustomFieldSchema? _explicitNullValueCustomField = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ICustomField Field { get => _explicitNullValueField; set { _explicitNullValueField = value; AdditionalData?.Remove("field"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("field"); else _explicitNullProperties?.Remove("field"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.ICustomField _explicitNullValueField = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LocationsCustomFieldSchema CustomField { get => _explicitNullValueCustomField; set { _explicitNullValueCustomField = value; AdditionalData?.Remove("customField"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customField"); else _explicitNullProperties?.Remove("customField"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.LocationsCustomFieldSchema _explicitNullValueCustomField = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldSuccessfulResponseDto"/> and sets the default values.
@@ -58,7 +58,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "field", n => { Field = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ICustomField>(global::Soenneker.HighLevel.OpenApiClient.Models.ICustomField.CreateFromDiscriminatorValue); } },
+                { "customField", n => { CustomField = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.LocationsCustomFieldSchema>(global::Soenneker.HighLevel.OpenApiClient.Models.LocationsCustomFieldSchema.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -68,7 +68,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ICustomField>("field", Field);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.LocationsCustomFieldSchema>("customField", CustomField);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -36,7 +36,7 @@ namespace Soenneker.HighLevel.OpenApiClient.CustomFields
         /// <summary>
         /// &lt;div&gt;                  &lt;p&gt; Create Custom Field &lt;/p&gt;                   &lt;div&gt;                    &lt;span style= &quot;display: inline-block;                                width: 25px; height: 25px;                                background-color: yellow;                                color: black;                                font-weight: bold;                                font-size: 24px;                                text-align: center;                                line-height: 22px;                                border: 2px solid black;                                border-radius: 10%;                                margin-right: 10px;&quot;&gt;                                !                      &lt;/span&gt;                      &lt;span&gt;                        &lt;strong&gt;                        Only supports Custom Objects and Company (Business) today. Will be extended to other Standard Objects in the future.                        &lt;/strong&gt;                      &lt;/span&gt;                  &lt;/div&gt;                &lt;/div&gt;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldSuccessfulResponseDto"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsCustomFieldSuccessfulResponseDto"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -44,11 +44,11 @@ namespace Soenneker.HighLevel.OpenApiClient.CustomFields
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsCommonSchemasUnauthorizedDto">When receiving a 401 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldSuccessfulResponseDto?> PostAsync(global::Soenneker.HighLevel.OpenApiClient.Models.CreateCustomFieldsDto body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsCustomFieldSuccessfulResponseDto?> PostAsync(global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsCreateCustomFieldsDto body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldSuccessfulResponseDto> PostAsync(global::Soenneker.HighLevel.OpenApiClient.Models.CreateCustomFieldsDto body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsCustomFieldSuccessfulResponseDto> PostAsync(global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsCreateCustomFieldsDto body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -60,7 +60,7 @@ namespace Soenneker.HighLevel.OpenApiClient.CustomFields
                 { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
                 { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldSuccessfulResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldSuccessfulResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsCustomFieldSuccessfulResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsCustomFieldSuccessfulResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &lt;div&gt;                  &lt;p&gt; Create Custom Field &lt;/p&gt;                   &lt;div&gt;                    &lt;span style= &quot;display: inline-block;                                width: 25px; height: 25px;                                background-color: yellow;                                color: black;                                font-weight: bold;                                font-size: 24px;                                text-align: center;                                line-height: 22px;                                border: 2px solid black;                                border-radius: 10%;                                margin-right: 10px;&quot;&gt;                                !                      &lt;/span&gt;                      &lt;span&gt;                        &lt;strong&gt;                        Only supports Custom Objects and Company (Business) today. Will be extended to other Standard Objects in the future.                        &lt;/strong&gt;                      &lt;/span&gt;                  &lt;/div&gt;                &lt;/div&gt;
@@ -70,11 +70,11 @@ namespace Soenneker.HighLevel.OpenApiClient.CustomFields
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HighLevel.OpenApiClient.Models.CreateCustomFieldsDto body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsCreateCustomFieldsDto body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HighLevel.OpenApiClient.Models.CreateCustomFieldsDto body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsCreateCustomFieldsDto body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

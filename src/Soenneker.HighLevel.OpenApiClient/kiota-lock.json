@@ -1,8 +1,8 @@
 {
-  "descriptionHash": "2EEE1D3640984ADF2D25A961EA753E0F1D81A74464BCED16E42CE3DEB37B8512C27C40B4E8FD31ACD5010716D86E9AFA3BC51FE804084B595A08D1B0552F3B03",
+  "descriptionHash": "DF166E368422734CEEF4D91AB549427DA6D12E7E1AAA3CFC9E3C5F2D26492ED68260D3B9537A379ED5F99CB970EBAE745D17A7E393BB67C350A95BA5E3029E1F",
   "descriptionLocation": "../../apps/fixed.json",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.38.0",
+  "kiotaVersion": "1.39.0",
   "clientClassName": "HighLevelOpenApiClient",
   "typeAccessModifier": "Public",
   "clientNamespaceName": "Soenneker.HighLevel.OpenApiClient",

@@ -17,106 +17,44 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("associationType") is null) { _explicitNullValueAssociationType = default!; _explicitNullProperties?.Remove("associationType"); }
-            else if (parseNode.GetChildNode("associationType") is { } nullNodeAssociationType && nullNodeAssociationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssociationType = null;
-            if (parseNode.GetChildNode("firstObjectKey") is null) { _explicitNullValueFirstObjectKey = default!; _explicitNullProperties?.Remove("firstObjectKey"); }
-            else if (parseNode.GetChildNode("firstObjectKey") is { } nullNodeFirstObjectKey && nullNodeFirstObjectKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstObjectKey = null;
-            if (parseNode.GetChildNode("firstObjectLabel") is null) { _explicitNullValueFirstObjectLabel = default!; _explicitNullProperties?.Remove("firstObjectLabel"); }
-            else if (parseNode.GetChildNode("firstObjectLabel") is { } nullNodeFirstObjectLabel && nullNodeFirstObjectLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstObjectLabel = null;
-            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
-            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("key") is null) { _explicitNullValueKey = default!; _explicitNullProperties?.Remove("key"); }
-            else if (parseNode.GetChildNode("key") is { } nullNodeKey && nullNodeKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Key = null;
-            if (parseNode.GetChildNode("locationId") is null) { _explicitNullValueLocationId = default!; _explicitNullProperties?.Remove("locationId"); }
-            else if (parseNode.GetChildNode("locationId") is { } nullNodeLocationId && nullNodeLocationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationId = null;
-            if (parseNode.GetChildNode("secondObjectKey") is null) { _explicitNullValueSecondObjectKey = default!; _explicitNullProperties?.Remove("secondObjectKey"); }
-            else if (parseNode.GetChildNode("secondObjectKey") is { } nullNodeSecondObjectKey && nullNodeSecondObjectKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecondObjectKey = null;
-            if (parseNode.GetChildNode("secondObjectLabel") is null) { _explicitNullValueSecondObjectLabel = default!; _explicitNullProperties?.Remove("secondObjectLabel"); }
-            else if (parseNode.GetChildNode("secondObjectLabel") is { } nullNodeSecondObjectLabel && nullNodeSecondObjectLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecondObjectLabel = null;
+            if (parseNode.GetChildNode("message") is null) { _explicitNullValueMessage = default!; _explicitNullProperties?.Remove("message"); }
+            else if (parseNode.GetChildNode("message") is { } nullNodeMessage && nullNodeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Message = null;
+            if (parseNode.GetChildNode("results") is null) { _explicitNullValueResults = default!; _explicitNullProperties?.Remove("results"); }
+            else if (parseNode.GetChildNode("results") is { } nullNodeResults && nullNodeResults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Results = null;
+            if (parseNode.GetChildNode("statusCode") is null) { _explicitNullValueStatusCode = default!; _explicitNullProperties?.Remove("statusCode"); }
+            else if (parseNode.GetChildNode("statusCode") is { } nullNodeStatusCode && nullNodeStatusCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusCode = null;
+            if (parseNode.GetChildNode("success") is null) { _explicitNullValueSuccess = default!; _explicitNullProperties?.Remove("success"); }
+            else if (parseNode.GetChildNode("success") is { } nullNodeSuccess && nullNodeSuccess.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Success = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Association Type can be USER_DEFINED or SYSTEM_DEFINED</summary>
+        /// <summary>Message</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoAssociationType? AssociationType { get => _explicitNullValueAssociationType; set { _explicitNullValueAssociationType = value; AdditionalData?.Remove("associationType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("associationType"); else _explicitNullProperties?.Remove("associationType"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoAssociationType? _explicitNullValueAssociationType = default!;
+        public string? Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; AdditionalData?.Remove("message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        private string? _explicitNullValueMessage = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoAssociationType AssociationType { get => _explicitNullValueAssociationType; set { _explicitNullValueAssociationType = value; AdditionalData?.Remove("associationType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("associationType"); else _explicitNullProperties?.Remove("associationType"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoAssociationType _explicitNullValueAssociationType = default!;
+        public string Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; AdditionalData?.Remove("message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        private string _explicitNullValueMessage = default!;
 #endif
-        /// <summary>First Objects Key</summary>
+        /// <summary>Requested Results</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoFirstObjectKey? FirstObjectKey { get => _explicitNullValueFirstObjectKey; set { _explicitNullValueFirstObjectKey = value; AdditionalData?.Remove("firstObjectKey"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("firstObjectKey"); else _explicitNullProperties?.Remove("firstObjectKey"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoFirstObjectKey? _explicitNullValueFirstObjectKey = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoResults? Results { get => _explicitNullValueResults; set { _explicitNullValueResults = value; AdditionalData?.Remove("results"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("results"); else _explicitNullProperties?.Remove("results"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoResults? _explicitNullValueResults = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoFirstObjectKey FirstObjectKey { get => _explicitNullValueFirstObjectKey; set { _explicitNullValueFirstObjectKey = value; AdditionalData?.Remove("firstObjectKey"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("firstObjectKey"); else _explicitNullProperties?.Remove("firstObjectKey"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoFirstObjectKey _explicitNullValueFirstObjectKey = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoResults Results { get => _explicitNullValueResults; set { _explicitNullValueResults = value; AdditionalData?.Remove("results"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("results"); else _explicitNullProperties?.Remove("results"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoResults _explicitNullValueResults = default!;
 #endif
-        /// <summary>First Objects Association Label (custom_objects.children)</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoFirstObjectLabel? FirstObjectLabel { get => _explicitNullValueFirstObjectLabel; set { _explicitNullValueFirstObjectLabel = value; AdditionalData?.Remove("firstObjectLabel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("firstObjectLabel"); else _explicitNullProperties?.Remove("firstObjectLabel"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoFirstObjectLabel? _explicitNullValueFirstObjectLabel = default!;
-#nullable restore
-#else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoFirstObjectLabel FirstObjectLabel { get => _explicitNullValueFirstObjectLabel; set { _explicitNullValueFirstObjectLabel = value; AdditionalData?.Remove("firstObjectLabel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("firstObjectLabel"); else _explicitNullProperties?.Remove("firstObjectLabel"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoFirstObjectLabel _explicitNullValueFirstObjectLabel = default!;
-#endif
-        /// <summary>The id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
-        private string? _explicitNullValueId = default!;
-#nullable restore
-#else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
-        private string _explicitNullValueId = default!;
-#endif
-        /// <summary>First Objects Association Label (custom_objects.children)</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Key { get => _explicitNullValueKey; set { _explicitNullValueKey = value; AdditionalData?.Remove("key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("key"); else _explicitNullProperties?.Remove("key"); } }
-        private string? _explicitNullValueKey = default!;
-#nullable restore
-#else
-        public string Key { get => _explicitNullValueKey; set { _explicitNullValueKey = value; AdditionalData?.Remove("key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("key"); else _explicitNullProperties?.Remove("key"); } }
-        private string _explicitNullValueKey = default!;
-#endif
-        /// <summary>The locationId property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; AdditionalData?.Remove("locationId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
-        private string? _explicitNullValueLocationId = default!;
-#nullable restore
-#else
-        public string LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; AdditionalData?.Remove("locationId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
-        private string _explicitNullValueLocationId = default!;
-#endif
-        /// <summary>Second Objects Key</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoSecondObjectKey? SecondObjectKey { get => _explicitNullValueSecondObjectKey; set { _explicitNullValueSecondObjectKey = value; AdditionalData?.Remove("secondObjectKey"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondObjectKey"); else _explicitNullProperties?.Remove("secondObjectKey"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoSecondObjectKey? _explicitNullValueSecondObjectKey = default!;
-#nullable restore
-#else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoSecondObjectKey SecondObjectKey { get => _explicitNullValueSecondObjectKey; set { _explicitNullValueSecondObjectKey = value; AdditionalData?.Remove("secondObjectKey"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondObjectKey"); else _explicitNullProperties?.Remove("secondObjectKey"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoSecondObjectKey _explicitNullValueSecondObjectKey = default!;
-#endif
-        /// <summary>Second Object Association Label (contact)</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoSecondObjectLabel? SecondObjectLabel { get => _explicitNullValueSecondObjectLabel; set { _explicitNullValueSecondObjectLabel = value; AdditionalData?.Remove("secondObjectLabel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondObjectLabel"); else _explicitNullProperties?.Remove("secondObjectLabel"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoSecondObjectLabel? _explicitNullValueSecondObjectLabel = default!;
-#nullable restore
-#else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoSecondObjectLabel SecondObjectLabel { get => _explicitNullValueSecondObjectLabel; set { _explicitNullValueSecondObjectLabel = value; AdditionalData?.Remove("secondObjectLabel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondObjectLabel"); else _explicitNullProperties?.Remove("secondObjectLabel"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoSecondObjectLabel _explicitNullValueSecondObjectLabel = default!;
-#endif
+        /// <summary>Status Code</summary>
+        public double? StatusCode { get => _explicitNullValueStatusCode; set { _explicitNullValueStatusCode = value; AdditionalData?.Remove("statusCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusCode"); else _explicitNullProperties?.Remove("statusCode"); } }
+        private double? _explicitNullValueStatusCode = default!;
+        /// <summary>Success or Failure</summary>
+        public bool? Success { get => _explicitNullValueSuccess; set { _explicitNullValueSuccess = value; AdditionalData?.Remove("success"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("success"); else _explicitNullProperties?.Remove("success"); } }
+        private bool? _explicitNullValueSuccess = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDto"/> and sets the default values.
         /// </summary>
@@ -140,16 +78,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(8)
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
-                { "associationType", n => { AssociationType = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoAssociationType>(global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoAssociationType.CreateFromDiscriminatorValue); } },
-                { "firstObjectKey", n => { FirstObjectKey = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoFirstObjectKey>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoFirstObjectKey.CreateFromDiscriminatorValue); } },
-                { "firstObjectLabel", n => { FirstObjectLabel = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoFirstObjectLabel>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoFirstObjectLabel.CreateFromDiscriminatorValue); } },
-                { "id", n => { Id = n.GetStringValue(); } },
-                { "key", n => { Key = n.GetStringValue(); } },
-                { "locationId", n => { LocationId = n.GetStringValue(); } },
-                { "secondObjectKey", n => { SecondObjectKey = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoSecondObjectKey>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoSecondObjectKey.CreateFromDiscriminatorValue); } },
-                { "secondObjectLabel", n => { SecondObjectLabel = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoSecondObjectLabel>(global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoSecondObjectLabel.CreateFromDiscriminatorValue); } },
+                { "message", n => { Message = n.GetStringValue(); } },
+                { "results", n => { Results = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoResults>(global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoResults.CreateFromDiscriminatorValue); } },
+                { "statusCode", n => { StatusCode = n.GetDoubleValue(); } },
+                { "success", n => { Success = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -159,14 +93,10 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoAssociationType>("associationType", AssociationType);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoFirstObjectKey>("firstObjectKey", FirstObjectKey);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoFirstObjectLabel>("firstObjectLabel", FirstObjectLabel);
-            writer.WriteStringValue("id", Id);
-            writer.WriteStringValue("key", Key);
-            writer.WriteStringValue("locationId", LocationId);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoSecondObjectKey>("secondObjectKey", SecondObjectKey);
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CreateAssociationReqDtoSecondObjectLabel>("secondObjectLabel", SecondObjectLabel);
+            writer.WriteStringValue("message", Message);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetPostSuccessfulResponseDtoResults>("results", Results);
+            writer.WriteDoubleValue("statusCode", StatusCode);
+            writer.WriteBoolValue("success", Success);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

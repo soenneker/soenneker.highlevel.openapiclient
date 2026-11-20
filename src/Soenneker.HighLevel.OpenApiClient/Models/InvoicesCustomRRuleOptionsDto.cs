@@ -9,7 +9,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class PaymentsCustomRRuleOptionsDto : IAdditionalDataHolder, IParsable
+    public partial class InvoicesCustomRRuleOptionsDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
         // Track explicitly assigned nulls separately from absent properties.
@@ -29,6 +29,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             else if (parseNode.GetChildNode("endDate") is { } nullNodeEndDate && nullNodeEndDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndDate = null;
             if (parseNode.GetChildNode("endTime") is null) { _explicitNullValueEndTime = default!; _explicitNullProperties?.Remove("endTime"); }
             else if (parseNode.GetChildNode("endTime") is { } nullNodeEndTime && nullNodeEndTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndTime = null;
+            if (parseNode.GetChildNode("endType") is null) { _explicitNullValueEndType = default!; _explicitNullProperties?.Remove("endType"); }
+            else if (parseNode.GetChildNode("endType") is { } nullNodeEndType && nullNodeEndType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndType = null;
             if (parseNode.GetChildNode("interval") is null) { _explicitNullValueInterval = default!; _explicitNullProperties?.Remove("interval"); }
             else if (parseNode.GetChildNode("interval") is { } nullNodeInterval && nullNodeInterval.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Interval = null;
             if (parseNode.GetChildNode("intervalType") is null) { _explicitNullValueIntervalType = default!; _explicitNullProperties?.Remove("intervalType"); }
@@ -41,6 +43,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             else if (parseNode.GetChildNode("startDate") is { } nullNodeStartDate && nullNodeStartDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartDate = null;
             if (parseNode.GetChildNode("startTime") is null) { _explicitNullValueStartTime = default!; _explicitNullProperties?.Remove("startTime"); }
             else if (parseNode.GetChildNode("startTime") is { } nullNodeStartTime && nullNodeStartTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartTime = null;
+            if (parseNode.GetChildNode("useStartAsPrimaryUserAccepted") is null) { _explicitNullValueUseStartAsPrimaryUserAccepted = default!; _explicitNullProperties?.Remove("useStartAsPrimaryUserAccepted"); }
+            else if (parseNode.GetChildNode("useStartAsPrimaryUserAccepted") is { } nullNodeUseStartAsPrimaryUserAccepted && nullNodeUseStartAsPrimaryUserAccepted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UseStartAsPrimaryUserAccepted = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -52,8 +56,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public double? DayOfMonth { get => _explicitNullValueDayOfMonth; set { _explicitNullValueDayOfMonth = value; AdditionalData?.Remove("dayOfMonth"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dayOfMonth"); else _explicitNullProperties?.Remove("dayOfMonth"); } }
         private double? _explicitNullValueDayOfMonth = default!;
         /// <summary>The dayOfWeek property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsCustomRRuleOptionsDtoDayOfWeek? DayOfWeek { get => _explicitNullValueDayOfWeek; set { _explicitNullValueDayOfWeek = value; AdditionalData?.Remove("dayOfWeek"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dayOfWeek"); else _explicitNullProperties?.Remove("dayOfWeek"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsCustomRRuleOptionsDtoDayOfWeek? _explicitNullValueDayOfWeek = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCustomRRuleOptionsDtoDayOfWeek? DayOfWeek { get => _explicitNullValueDayOfWeek; set { _explicitNullValueDayOfWeek = value; AdditionalData?.Remove("dayOfWeek"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dayOfWeek"); else _explicitNullProperties?.Remove("dayOfWeek"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCustomRRuleOptionsDtoDayOfWeek? _explicitNullValueDayOfWeek = default!;
         /// <summary>Execute task number of days before</summary>
         public double? DaysBefore { get => _explicitNullValueDaysBefore; set { _explicitNullValueDaysBefore = value; AdditionalData?.Remove("daysBefore"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("daysBefore"); else _explicitNullProperties?.Remove("daysBefore"); } }
         private double? _explicitNullValueDaysBefore = default!;
@@ -77,15 +81,25 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string EndTime { get => _explicitNullValueEndTime; set { _explicitNullValueEndTime = value; AdditionalData?.Remove("endTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endTime"); else _explicitNullProperties?.Remove("endTime"); } }
         private string _explicitNullValueEndTime = default!;
 #endif
+        /// <summary>End type like after, by, count</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? EndType { get => _explicitNullValueEndType; set { _explicitNullValueEndType = value; AdditionalData?.Remove("endType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endType"); else _explicitNullProperties?.Remove("endType"); } }
+        private string? _explicitNullValueEndType = default!;
+#nullable restore
+#else
+        public string EndType { get => _explicitNullValueEndType; set { _explicitNullValueEndType = value; AdditionalData?.Remove("endType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endType"); else _explicitNullProperties?.Remove("endType"); } }
+        private string _explicitNullValueEndType = default!;
+#endif
         /// <summary>The interval property</summary>
         public double? Interval { get => _explicitNullValueInterval; set { _explicitNullValueInterval = value; AdditionalData?.Remove("interval"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("interval"); else _explicitNullProperties?.Remove("interval"); } }
         private double? _explicitNullValueInterval = default!;
         /// <summary>The intervalType property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsCustomRRuleOptionsDtoIntervalType? IntervalType { get => _explicitNullValueIntervalType; set { _explicitNullValueIntervalType = value; AdditionalData?.Remove("intervalType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intervalType"); else _explicitNullProperties?.Remove("intervalType"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsCustomRRuleOptionsDtoIntervalType? _explicitNullValueIntervalType = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCustomRRuleOptionsDtoIntervalType? IntervalType { get => _explicitNullValueIntervalType; set { _explicitNullValueIntervalType = value; AdditionalData?.Remove("intervalType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intervalType"); else _explicitNullProperties?.Remove("intervalType"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCustomRRuleOptionsDtoIntervalType? _explicitNullValueIntervalType = default!;
         /// <summary>The monthOfYear property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsCustomRRuleOptionsDtoMonthOfYear? MonthOfYear { get => _explicitNullValueMonthOfYear; set { _explicitNullValueMonthOfYear = value; AdditionalData?.Remove("monthOfYear"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("monthOfYear"); else _explicitNullProperties?.Remove("monthOfYear"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsCustomRRuleOptionsDtoMonthOfYear? _explicitNullValueMonthOfYear = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCustomRRuleOptionsDtoMonthOfYear? MonthOfYear { get => _explicitNullValueMonthOfYear; set { _explicitNullValueMonthOfYear = value; AdditionalData?.Remove("monthOfYear"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("monthOfYear"); else _explicitNullProperties?.Remove("monthOfYear"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCustomRRuleOptionsDtoMonthOfYear? _explicitNullValueMonthOfYear = default!;
         /// <summary>-1, 1, 2, 3, 4</summary>
         public double? NumOfWeek { get => _explicitNullValueNumOfWeek; set { _explicitNullValueNumOfWeek = value; AdditionalData?.Remove("numOfWeek"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("numOfWeek"); else _explicitNullProperties?.Remove("numOfWeek"); } }
         private double? _explicitNullValueNumOfWeek = default!;
@@ -109,22 +123,25 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string StartTime { get => _explicitNullValueStartTime; set { _explicitNullValueStartTime = value; AdditionalData?.Remove("startTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startTime"); else _explicitNullProperties?.Remove("startTime"); } }
         private string _explicitNullValueStartTime = default!;
 #endif
+        /// <summary>Start as primary user accepted date</summary>
+        public bool? UseStartAsPrimaryUserAccepted { get => _explicitNullValueUseStartAsPrimaryUserAccepted; set { _explicitNullValueUseStartAsPrimaryUserAccepted = value; AdditionalData?.Remove("useStartAsPrimaryUserAccepted"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("useStartAsPrimaryUserAccepted"); else _explicitNullProperties?.Remove("useStartAsPrimaryUserAccepted"); } }
+        private bool? _explicitNullValueUseStartAsPrimaryUserAccepted = default!;
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsCustomRRuleOptionsDto"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCustomRRuleOptionsDto"/> and sets the default values.
         /// </summary>
-        public PaymentsCustomRRuleOptionsDto()
+        public InvoicesCustomRRuleOptionsDto()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsCustomRRuleOptionsDto"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCustomRRuleOptionsDto"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsCustomRRuleOptionsDto CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCustomRRuleOptionsDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsCustomRRuleOptionsDto(), parseNode);
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCustomRRuleOptionsDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -132,20 +149,22 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(12)
+            return new Dictionary<string, Action<IParseNode>>(14)
             {
                 { "count", n => { Count = n.GetDoubleValue(); } },
                 { "dayOfMonth", n => { DayOfMonth = n.GetDoubleValue(); } },
-                { "dayOfWeek", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsCustomRRuleOptionsDtoDayOfWeek>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDayOfWeek = default; _explicitNullProperties?.Remove("dayOfWeek"); AdditionalData["dayOfWeek"] = unknown; } else { DayOfWeek = parsed; AdditionalData.Remove("dayOfWeek"); } } },
+                { "dayOfWeek", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCustomRRuleOptionsDtoDayOfWeek>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDayOfWeek = default; _explicitNullProperties?.Remove("dayOfWeek"); AdditionalData["dayOfWeek"] = unknown; } else { DayOfWeek = parsed; AdditionalData.Remove("dayOfWeek"); } } },
                 { "daysBefore", n => { DaysBefore = n.GetDoubleValue(); } },
                 { "endDate", n => { EndDate = n.GetStringValue(); } },
                 { "endTime", n => { EndTime = n.GetStringValue(); } },
+                { "endType", n => { EndType = n.GetStringValue(); } },
                 { "interval", n => { Interval = n.GetDoubleValue(); } },
-                { "intervalType", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsCustomRRuleOptionsDtoIntervalType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueIntervalType = default; _explicitNullProperties?.Remove("intervalType"); AdditionalData["intervalType"] = unknown; } else { IntervalType = parsed; AdditionalData.Remove("intervalType"); } } },
-                { "monthOfYear", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsCustomRRuleOptionsDtoMonthOfYear>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueMonthOfYear = default; _explicitNullProperties?.Remove("monthOfYear"); AdditionalData["monthOfYear"] = unknown; } else { MonthOfYear = parsed; AdditionalData.Remove("monthOfYear"); } } },
+                { "intervalType", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCustomRRuleOptionsDtoIntervalType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueIntervalType = default; _explicitNullProperties?.Remove("intervalType"); AdditionalData["intervalType"] = unknown; } else { IntervalType = parsed; AdditionalData.Remove("intervalType"); } } },
+                { "monthOfYear", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCustomRRuleOptionsDtoMonthOfYear>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueMonthOfYear = default; _explicitNullProperties?.Remove("monthOfYear"); AdditionalData["monthOfYear"] = unknown; } else { MonthOfYear = parsed; AdditionalData.Remove("monthOfYear"); } } },
                 { "numOfWeek", n => { NumOfWeek = n.GetDoubleValue(); } },
                 { "startDate", n => { StartDate = n.GetStringValue(); } },
                 { "startTime", n => { StartTime = n.GetStringValue(); } },
+                { "useStartAsPrimaryUserAccepted", n => { UseStartAsPrimaryUserAccepted = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -157,16 +176,18 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDoubleValue("count", Count);
             writer.WriteDoubleValue("dayOfMonth", DayOfMonth);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsCustomRRuleOptionsDtoDayOfWeek>("dayOfWeek", DayOfWeek);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCustomRRuleOptionsDtoDayOfWeek>("dayOfWeek", DayOfWeek);
             writer.WriteDoubleValue("daysBefore", DaysBefore);
             writer.WriteStringValue("endDate", EndDate);
             writer.WriteStringValue("endTime", EndTime);
+            writer.WriteStringValue("endType", EndType);
             writer.WriteDoubleValue("interval", Interval);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsCustomRRuleOptionsDtoIntervalType>("intervalType", IntervalType);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsCustomRRuleOptionsDtoMonthOfYear>("monthOfYear", MonthOfYear);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCustomRRuleOptionsDtoIntervalType>("intervalType", IntervalType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.InvoicesCustomRRuleOptionsDtoMonthOfYear>("monthOfYear", MonthOfYear);
             writer.WriteDoubleValue("numOfWeek", NumOfWeek);
             writer.WriteStringValue("startDate", StartDate);
             writer.WriteStringValue("startTime", StartTime);
+            writer.WriteBoolValue("useStartAsPrimaryUserAccepted", UseStartAsPrimaryUserAccepted);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -9,7 +9,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class ObjectsICustomField : IAdditionalDataHolder, IParsable
+    public partial class CustomFieldsICustomField : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
         // Track explicitly assigned nulls separately from absent properties.
@@ -52,16 +52,16 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         }
 
         /// <summary>Allowed file formats for uploads. Options include: .pdf, .docx, .doc, .jpg, .jpeg, .png, .gif, .csv, .xlsx, .xls, all</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ObjectsICustomFieldAcceptedFormats? AcceptedFormats { get => _explicitNullValueAcceptedFormats; set { _explicitNullValueAcceptedFormats = value; AdditionalData?.Remove("acceptedFormats"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acceptedFormats"); else _explicitNullProperties?.Remove("acceptedFormats"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.ObjectsICustomFieldAcceptedFormats? _explicitNullValueAcceptedFormats = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsICustomFieldAcceptedFormats? AcceptedFormats { get => _explicitNullValueAcceptedFormats; set { _explicitNullValueAcceptedFormats = value; AdditionalData?.Remove("acceptedFormats"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acceptedFormats"); else _explicitNullProperties?.Remove("acceptedFormats"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsICustomFieldAcceptedFormats? _explicitNullValueAcceptedFormats = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Determines if users can add a custom option value different from the predefined options in records for RADIO type fields. A custom value added in one record does not automatically become an option and will not appear as an option for other records.</summary>
         public bool? AllowCustomOption { get => _explicitNullValueAllowCustomOption; set { _explicitNullValueAllowCustomOption = value; AdditionalData?.Remove("allowCustomOption"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowCustomOption"); else _explicitNullProperties?.Remove("allowCustomOption"); } }
         private bool? _explicitNullValueAllowCustomOption = default!;
         /// <summary>Type of field that you are trying to create</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.ObjectsICustomFieldDataType? DataType { get => _explicitNullValueDataType; set { _explicitNullValueDataType = value; AdditionalData?.Remove("dataType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dataType"); else _explicitNullProperties?.Remove("dataType"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.ObjectsICustomFieldDataType? _explicitNullValueDataType = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsICustomFieldDataType? DataType { get => _explicitNullValueDataType; set { _explicitNullValueDataType = value; AdditionalData?.Remove("dataType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dataType"); else _explicitNullProperties?.Remove("dataType"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsICustomFieldDataType? _explicitNullValueDataType = default!;
         /// <summary>Date and time when the object was added</summary>
         public DateTimeOffset? DateAdded { get => _explicitNullValueDateAdded; set { _explicitNullValueDateAdded = value; AdditionalData?.Remove("dateAdded"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dateAdded"); else _explicitNullProperties?.Remove("dateAdded"); } }
         private DateTimeOffset? _explicitNullValueDateAdded = default!;
@@ -134,12 +134,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Options for the field (Optional, valid only for SINGLE_OPTIONS, MULTIPLE_OPTIONS, RADIO, CHECKBOX, TEXTBOX_LIST type)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ObjectsOptionDto>? Options { get => _explicitNullValueOptions; set { _explicitNullValueOptions = value; AdditionalData?.Remove("options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("options"); else _explicitNullProperties?.Remove("options"); } }
-        private List<global::Soenneker.HighLevel.OpenApiClient.Models.ObjectsOptionDto>? _explicitNullValueOptions = default!;
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsOptionDto>? Options { get => _explicitNullValueOptions; set { _explicitNullValueOptions = value; AdditionalData?.Remove("options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("options"); else _explicitNullProperties?.Remove("options"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsOptionDto>? _explicitNullValueOptions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ObjectsOptionDto> Options { get => _explicitNullValueOptions; set { _explicitNullValueOptions = value; AdditionalData?.Remove("options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("options"); else _explicitNullProperties?.Remove("options"); } }
-        private List<global::Soenneker.HighLevel.OpenApiClient.Models.ObjectsOptionDto> _explicitNullValueOptions = default!;
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsOptionDto> Options { get => _explicitNullValueOptions; set { _explicitNullValueOptions = value; AdditionalData?.Remove("options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("options"); else _explicitNullProperties?.Remove("options"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsOptionDto> _explicitNullValueOptions = default!;
 #endif
         /// <summary>ID of the parent folder</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -165,21 +165,21 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public bool? ShowInForms { get => _explicitNullValueShowInForms; set { _explicitNullValueShowInForms = value; AdditionalData?.Remove("showInForms"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("showInForms"); else _explicitNullProperties?.Remove("showInForms"); } }
         private bool? _explicitNullValueShowInForms = default!;
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.ObjectsICustomField"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsICustomField"/> and sets the default values.
         /// </summary>
-        public ObjectsICustomField()
+        public CustomFieldsICustomField()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.ObjectsICustomField"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsICustomField"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.HighLevel.OpenApiClient.Models.ObjectsICustomField CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsICustomField CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.ObjectsICustomField(), parseNode);
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsICustomField(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -189,9 +189,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>(16)
             {
-                { "acceptedFormats", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ObjectsICustomFieldAcceptedFormats>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAcceptedFormats = default; _explicitNullProperties?.Remove("acceptedFormats"); AdditionalData["acceptedFormats"] = unknown; } else { AcceptedFormats = parsed; AdditionalData.Remove("acceptedFormats"); } } },
+                { "acceptedFormats", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsICustomFieldAcceptedFormats>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAcceptedFormats = default; _explicitNullProperties?.Remove("acceptedFormats"); AdditionalData["acceptedFormats"] = unknown; } else { AcceptedFormats = parsed; AdditionalData.Remove("acceptedFormats"); } } },
                 { "allowCustomOption", n => { AllowCustomOption = n.GetBoolValue(); } },
-                { "dataType", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ObjectsICustomFieldDataType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDataType = default; _explicitNullProperties?.Remove("dataType"); AdditionalData["dataType"] = unknown; } else { DataType = parsed; AdditionalData.Remove("dataType"); } } },
+                { "dataType", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsICustomFieldDataType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDataType = default; _explicitNullProperties?.Remove("dataType"); AdditionalData["dataType"] = unknown; } else { DataType = parsed; AdditionalData.Remove("dataType"); } } },
                 { "dateAdded", n => { DateAdded = n.GetDateTimeOffsetValue(); } },
                 { "dateUpdated", n => { DateUpdated = n.GetDateTimeOffsetValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
@@ -201,7 +201,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
                 { "maxFileLimit", n => { MaxFileLimit = n.GetDoubleValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "objectKey", n => { ObjectKey = n.GetStringValue(); } },
-                { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ObjectsOptionDto>(global::Soenneker.HighLevel.OpenApiClient.Models.ObjectsOptionDto.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsOptionDto>(global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsOptionDto.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "parentId", n => { ParentId = n.GetStringValue(); } },
                 { "placeholder", n => { Placeholder = n.GetStringValue(); } },
                 { "showInForms", n => { ShowInForms = n.GetBoolValue(); } },
@@ -214,9 +214,9 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ObjectsICustomFieldAcceptedFormats>("acceptedFormats", AcceptedFormats);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsICustomFieldAcceptedFormats>("acceptedFormats", AcceptedFormats);
             writer.WriteBoolValue("allowCustomOption", AllowCustomOption);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.ObjectsICustomFieldDataType>("dataType", DataType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsICustomFieldDataType>("dataType", DataType);
             writer.WriteDateTimeOffsetValue("dateAdded", DateAdded);
             writer.WriteDateTimeOffsetValue("dateUpdated", DateUpdated);
             writer.WriteStringValue("description", Description);
@@ -226,7 +226,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             writer.WriteDoubleValue("maxFileLimit", MaxFileLimit);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("objectKey", ObjectKey);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ObjectsOptionDto>("options", Options);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsOptionDto>("options", Options);
             writer.WriteStringValue("parentId", ParentId);
             writer.WriteStringValue("placeholder", Placeholder);
             writer.WriteBoolValue("showInForms", ShowInForms);
