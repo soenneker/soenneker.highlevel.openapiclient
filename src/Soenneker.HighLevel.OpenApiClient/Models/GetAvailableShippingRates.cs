@@ -64,8 +64,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         private string _explicitNullValueAltId = default!;
 #endif
         /// <summary>The altType property</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.StoreLocationAltType? AltType { get => _explicitNullValueAltType; set { _explicitNullValueAltType = value; AdditionalData?.Remove("altType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("altType"); else _explicitNullProperties?.Remove("altType"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.StoreLocationAltType? _explicitNullValueAltType = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get => _explicitNullValueAltType; set { _explicitNullValueAltType = value; AdditionalData?.Remove("altType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("altType"); else _explicitNullProperties?.Remove("altType"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? _explicitNullValueAltType = default!;
         /// <summary>it will not calculate the order amount form backend if it is true</summary>
         public global::Soenneker.HighLevel.OpenApiClient.Models.GetAvailableShippingRatesAmountAvailable? AmountAvailable { get => _explicitNullValueAmountAvailable; set { _explicitNullValueAmountAvailable = value; AdditionalData?.Remove("amountAvailable"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amountAvailable"); else _explicitNullProperties?.Remove("amountAvailable"); } }
         private global::Soenneker.HighLevel.OpenApiClient.Models.GetAvailableShippingRatesAmountAvailable? _explicitNullValueAmountAvailable = default!;
@@ -138,7 +138,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             {
                 { "address", n => { Address = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetAvailableShippingRatesAddress>(global::Soenneker.HighLevel.OpenApiClient.Models.GetAvailableShippingRatesAddress.CreateFromDiscriminatorValue); } },
                 { "altId", n => { AltId = n.GetStringValue(); } },
-                { "altType", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.StoreLocationAltType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAltType = default; _explicitNullProperties?.Remove("altType"); AdditionalData["altType"] = unknown; } else { AltType = parsed; AdditionalData.Remove("altType"); } } },
+                { "altType", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAltType = default; _explicitNullProperties?.Remove("altType"); AdditionalData["altType"] = unknown; } else { AltType = parsed; AdditionalData.Remove("altType"); } } },
                 { "amountAvailable", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetAvailableShippingRatesAmountAvailable>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAmountAvailable = default; _explicitNullProperties?.Remove("amountAvailable"); AdditionalData["amountAvailable"] = unknown; } else { AmountAvailable = parsed; AdditionalData.Remove("amountAvailable"); } } },
                 { "country", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetAvailableShippingRatesCountry>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCountry = default; _explicitNullProperties?.Remove("country"); AdditionalData["country"] = unknown; } else { Country = parsed; AdditionalData.Remove("country"); } } },
                 { "couponCode", n => { CouponCode = n.GetStringValue(); } },
@@ -158,7 +158,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetAvailableShippingRatesAddress>("address", Address);
             writer.WriteStringValue("altId", AltId);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.StoreLocationAltType>("altType", AltType);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType>("altType", AltType);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetAvailableShippingRatesAmountAvailable>("amountAvailable", AmountAvailable);
             writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.GetAvailableShippingRatesCountry>("country", Country);
             writer.WriteStringValue("couponCode", CouponCode);

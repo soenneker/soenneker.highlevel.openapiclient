@@ -180,7 +180,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Store.ShippingZone
 #endif
             #pragma warning disable CS1591
             [QueryParameter("altType")]
-            public global::Soenneker.HighLevel.OpenApiClient.Models.StoreLocationAltType? AltType { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
             #pragma warning restore CS1591
             /// <summary>The maximum number of items to be included in a single page of results</summary>
             [QueryParameter("limit")]

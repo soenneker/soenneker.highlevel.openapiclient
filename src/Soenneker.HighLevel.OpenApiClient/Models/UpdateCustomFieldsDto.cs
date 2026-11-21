@@ -17,46 +17,53 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("acceptedFormat") is null) { _explicitNullValueAcceptedFormat = default!; _explicitNullProperties?.Remove("acceptedFormat"); }
-            else if (parseNode.GetChildNode("acceptedFormat") is { } nullNodeAcceptedFormat && nullNodeAcceptedFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcceptedFormat = null;
-            if (parseNode.GetChildNode("isMultipleFile") is null) { _explicitNullValueIsMultipleFile = default!; _explicitNullProperties?.Remove("isMultipleFile"); }
-            else if (parseNode.GetChildNode("isMultipleFile") is { } nullNodeIsMultipleFile && nullNodeIsMultipleFile.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsMultipleFile = null;
-            if (parseNode.GetChildNode("maxNumberOfFiles") is null) { _explicitNullValueMaxNumberOfFiles = default!; _explicitNullProperties?.Remove("maxNumberOfFiles"); }
-            else if (parseNode.GetChildNode("maxNumberOfFiles") is { } nullNodeMaxNumberOfFiles && nullNodeMaxNumberOfFiles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxNumberOfFiles = null;
-            if (parseNode.GetChildNode("model") is null) { _explicitNullValueModel = default!; _explicitNullProperties?.Remove("model"); }
-            else if (parseNode.GetChildNode("model") is { } nullNodeModel && nullNodeModel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Model = null;
+            if (parseNode.GetChildNode("acceptedFormats") is null) { _explicitNullValueAcceptedFormats = default!; _explicitNullProperties?.Remove("acceptedFormats"); }
+            else if (parseNode.GetChildNode("acceptedFormats") is { } nullNodeAcceptedFormats && nullNodeAcceptedFormats.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AcceptedFormats = null;
+            if (parseNode.GetChildNode("description") is null) { _explicitNullValueDescription = default!; _explicitNullProperties?.Remove("description"); }
+            else if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("locationId") is null) { _explicitNullValueLocationId = default!; _explicitNullProperties?.Remove("locationId"); }
+            else if (parseNode.GetChildNode("locationId") is { } nullNodeLocationId && nullNodeLocationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocationId = null;
+            if (parseNode.GetChildNode("maxFileLimit") is null) { _explicitNullValueMaxFileLimit = default!; _explicitNullProperties?.Remove("maxFileLimit"); }
+            else if (parseNode.GetChildNode("maxFileLimit") is { } nullNodeMaxFileLimit && nullNodeMaxFileLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxFileLimit = null;
             if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
             else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("options") is null) { _explicitNullValueOptions = default!; _explicitNullProperties?.Remove("options"); }
+            else if (parseNode.GetChildNode("options") is { } nullNodeOptions && nullNodeOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Options = null;
             if (parseNode.GetChildNode("placeholder") is null) { _explicitNullValuePlaceholder = default!; _explicitNullProperties?.Remove("placeholder"); }
             else if (parseNode.GetChildNode("placeholder") is { } nullNodePlaceholder && nullNodePlaceholder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Placeholder = null;
-            if (parseNode.GetChildNode("position") is null) { _explicitNullValuePosition = default!; _explicitNullProperties?.Remove("position"); }
-            else if (parseNode.GetChildNode("position") is { } nullNodePosition && nullNodePosition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Position = null;
-            if (parseNode.GetChildNode("textBoxListOptions") is null) { _explicitNullValueTextBoxListOptions = default!; _explicitNullProperties?.Remove("textBoxListOptions"); }
-            else if (parseNode.GetChildNode("textBoxListOptions") is { } nullNodeTextBoxListOptions && nullNodeTextBoxListOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextBoxListOptions = null;
+            if (parseNode.GetChildNode("showInForms") is null) { _explicitNullValueShowInForms = default!; _explicitNullProperties?.Remove("showInForms"); }
+            else if (parseNode.GetChildNode("showInForms") is { } nullNodeShowInForms && nullNodeShowInForms.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShowInForms = null;
         }
 
-        /// <summary>The acceptedFormat property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public List<string>? AcceptedFormat { get => _explicitNullValueAcceptedFormat; set { _explicitNullValueAcceptedFormat = value; AdditionalData?.Remove("acceptedFormat"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acceptedFormat"); else _explicitNullProperties?.Remove("acceptedFormat"); } }
-        private List<string>? _explicitNullValueAcceptedFormat = default!;
-#nullable restore
-#else
-        public List<string> AcceptedFormat { get => _explicitNullValueAcceptedFormat; set { _explicitNullValueAcceptedFormat = value; AdditionalData?.Remove("acceptedFormat"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acceptedFormat"); else _explicitNullProperties?.Remove("acceptedFormat"); } }
-        private List<string> _explicitNullValueAcceptedFormat = default!;
-#endif
+        /// <summary>Allowed file formats for uploads. Options include: .pdf, .docx, .doc, .jpg, .jpeg, .png, .gif, .csv, .xlsx, .xls, all</summary>
+        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomFieldsDtoAcceptedFormats? AcceptedFormats { get => _explicitNullValueAcceptedFormats; set { _explicitNullValueAcceptedFormats = value; AdditionalData?.Remove("acceptedFormats"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("acceptedFormats"); else _explicitNullProperties?.Remove("acceptedFormats"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomFieldsDtoAcceptedFormats? _explicitNullValueAcceptedFormats = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The isMultipleFile property</summary>
-        public bool? IsMultipleFile { get => _explicitNullValueIsMultipleFile; set { _explicitNullValueIsMultipleFile = value; AdditionalData?.Remove("isMultipleFile"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isMultipleFile"); else _explicitNullProperties?.Remove("isMultipleFile"); } }
-        private bool? _explicitNullValueIsMultipleFile = default!;
-        /// <summary>The maxNumberOfFiles property</summary>
-        public double? MaxNumberOfFiles { get => _explicitNullValueMaxNumberOfFiles; set { _explicitNullValueMaxNumberOfFiles = value; AdditionalData?.Remove("maxNumberOfFiles"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxNumberOfFiles"); else _explicitNullProperties?.Remove("maxNumberOfFiles"); } }
-        private double? _explicitNullValueMaxNumberOfFiles = default!;
-        /// <summary>Model of the custom field you want to update</summary>
-        public global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomFieldsDtoModel? Model { get => _explicitNullValueModel; set { _explicitNullValueModel = value; AdditionalData?.Remove("model"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("model"); else _explicitNullProperties?.Remove("model"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomFieldsDtoModel? _explicitNullValueModel = default!;
-        /// <summary>The name property</summary>
+        /// <summary>Description of the field</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
+#nullable restore
+#else
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
+#endif
+        /// <summary>Location Id</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; AdditionalData?.Remove("locationId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
+        private string? _explicitNullValueLocationId = default!;
+#nullable restore
+#else
+        public string LocationId { get => _explicitNullValueLocationId; set { _explicitNullValueLocationId = value; AdditionalData?.Remove("locationId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locationId"); else _explicitNullProperties?.Remove("locationId"); } }
+        private string _explicitNullValueLocationId = default!;
+#endif
+        /// <summary>Maximum file limit for uploads. Applicable only for fields with a data type of FILE_UPLOAD.</summary>
+        public double? MaxFileLimit { get => _explicitNullValueMaxFileLimit; set { _explicitNullValueMaxFileLimit = value; AdditionalData?.Remove("maxFileLimit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxFileLimit"); else _explicitNullProperties?.Remove("maxFileLimit"); } }
+        private double? _explicitNullValueMaxFileLimit = default!;
+        /// <summary>Field name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
@@ -66,7 +73,17 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
-        /// <summary>The placeholder property</summary>
+        /// <summary>Options for the field. Important: Providing options will completely replace the existing options array. You must include all existing options alongside any new options you wish to add. Removal of options is not supported through this update. Applicable only for SINGLE_OPTIONS, MULTIPLE_OPTIONS, RADIO, CHECKBOX, TEXTBOX_LIST types.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsOptionDto>? Options { get => _explicitNullValueOptions; set { _explicitNullValueOptions = value; AdditionalData?.Remove("options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("options"); else _explicitNullProperties?.Remove("options"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsOptionDto>? _explicitNullValueOptions = default!;
+#nullable restore
+#else
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsOptionDto> Options { get => _explicitNullValueOptions; set { _explicitNullValueOptions = value; AdditionalData?.Remove("options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("options"); else _explicitNullProperties?.Remove("options"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsOptionDto> _explicitNullValueOptions = default!;
+#endif
+        /// <summary>Placeholder text for the field</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Placeholder { get => _explicitNullValuePlaceholder; set { _explicitNullValuePlaceholder = value; AdditionalData?.Remove("placeholder"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("placeholder"); else _explicitNullProperties?.Remove("placeholder"); } }
@@ -76,26 +93,15 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public string Placeholder { get => _explicitNullValuePlaceholder; set { _explicitNullValuePlaceholder = value; AdditionalData?.Remove("placeholder"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("placeholder"); else _explicitNullProperties?.Remove("placeholder"); } }
         private string _explicitNullValuePlaceholder = default!;
 #endif
-        /// <summary>The position property</summary>
-        public double? Position { get => _explicitNullValuePosition; set { _explicitNullValuePosition = value; AdditionalData?.Remove("position"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("position"); else _explicitNullProperties?.Remove("position"); } }
-        private double? _explicitNullValuePosition = default!;
-        /// <summary>The textBoxListOptions property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomFieldsDtoTextBoxListOptionsItem>? TextBoxListOptions { get => _explicitNullValueTextBoxListOptions; set { _explicitNullValueTextBoxListOptions = value; AdditionalData?.Remove("textBoxListOptions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("textBoxListOptions"); else _explicitNullProperties?.Remove("textBoxListOptions"); } }
-        private List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomFieldsDtoTextBoxListOptionsItem>? _explicitNullValueTextBoxListOptions = default!;
-#nullable restore
-#else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomFieldsDtoTextBoxListOptionsItem> TextBoxListOptions { get => _explicitNullValueTextBoxListOptions; set { _explicitNullValueTextBoxListOptions = value; AdditionalData?.Remove("textBoxListOptions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("textBoxListOptions"); else _explicitNullProperties?.Remove("textBoxListOptions"); } }
-        private List<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomFieldsDtoTextBoxListOptionsItem> _explicitNullValueTextBoxListOptions = default!;
-#endif
+        /// <summary>Whether the field should be shown in forms</summary>
+        public bool? ShowInForms { get => _explicitNullValueShowInForms; set { _explicitNullValueShowInForms = value; AdditionalData?.Remove("showInForms"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("showInForms"); else _explicitNullProperties?.Remove("showInForms"); } }
+        private bool? _explicitNullValueShowInForms = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomFieldsDto"/> and sets the default values.
         /// </summary>
         public UpdateCustomFieldsDto()
         {
             AdditionalData = new Dictionary<string, object>();
-            Position = 0;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -115,14 +121,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>(8)
             {
-                { "acceptedFormat", n => { AcceptedFormat = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "isMultipleFile", n => { IsMultipleFile = n.GetBoolValue(); } },
-                { "maxNumberOfFiles", n => { MaxNumberOfFiles = n.GetDoubleValue(); } },
-                { "model", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomFieldsDtoModel>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueModel = default; _explicitNullProperties?.Remove("model"); AdditionalData["model"] = unknown; } else { Model = parsed; AdditionalData.Remove("model"); } } },
+                { "acceptedFormats", n => { var parsed = n.GetEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomFieldsDtoAcceptedFormats>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAcceptedFormats = default; _explicitNullProperties?.Remove("acceptedFormats"); AdditionalData["acceptedFormats"] = unknown; } else { AcceptedFormats = parsed; AdditionalData.Remove("acceptedFormats"); } } },
+                { "description", n => { Description = n.GetStringValue(); } },
+                { "locationId", n => { LocationId = n.GetStringValue(); } },
+                { "maxFileLimit", n => { MaxFileLimit = n.GetDoubleValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
+                { "options", n => { Options = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsOptionDto>(global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsOptionDto.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "placeholder", n => { Placeholder = n.GetStringValue(); } },
-                { "position", n => { Position = n.GetDoubleValue(); } },
-                { "textBoxListOptions", n => { TextBoxListOptions = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomFieldsDtoTextBoxListOptionsItem>(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomFieldsDtoTextBoxListOptionsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "showInForms", n => { ShowInForms = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -132,14 +138,14 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfPrimitiveValues<string>("acceptedFormat", AcceptedFormat);
-            writer.WriteBoolValue("isMultipleFile", IsMultipleFile);
-            writer.WriteDoubleValue("maxNumberOfFiles", MaxNumberOfFiles);
-            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomFieldsDtoModel>("model", Model);
+            writer.WriteEnumValue<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomFieldsDtoAcceptedFormats>("acceptedFormats", AcceptedFormats);
+            writer.WriteStringValue("description", Description);
+            writer.WriteStringValue("locationId", LocationId);
+            writer.WriteDoubleValue("maxFileLimit", MaxFileLimit);
             writer.WriteStringValue("name", Name);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsOptionDto>("options", Options);
             writer.WriteStringValue("placeholder", Placeholder);
-            writer.WriteDoubleValue("position", Position);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomFieldsDtoTextBoxListOptionsItem>("textBoxListOptions", TextBoxListOptions);
+            writer.WriteBoolValue("showInForms", ShowInForms);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

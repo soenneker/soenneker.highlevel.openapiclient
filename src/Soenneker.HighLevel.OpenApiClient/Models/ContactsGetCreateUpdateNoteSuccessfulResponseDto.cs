@@ -9,7 +9,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class CalendarsGetCreateUpdateNoteSuccessfulResponseDto : IAdditionalDataHolder, IParsable
+    public partial class ContactsGetCreateUpdateNoteSuccessfulResponseDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
         // Track explicitly assigned nulls separately from absent properties.
@@ -26,29 +26,29 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The note property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CalendarsGetNoteSchema? Note { get => _explicitNullValueNote; set { _explicitNullValueNote = value; AdditionalData?.Remove("note"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("note"); else _explicitNullProperties?.Remove("note"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.CalendarsGetNoteSchema? _explicitNullValueNote = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ContactsGetNoteSchema? Note { get => _explicitNullValueNote; set { _explicitNullValueNote = value; AdditionalData?.Remove("note"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("note"); else _explicitNullProperties?.Remove("note"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.ContactsGetNoteSchema? _explicitNullValueNote = default!;
 #nullable restore
 #else
-        public global::Soenneker.HighLevel.OpenApiClient.Models.CalendarsGetNoteSchema Note { get => _explicitNullValueNote; set { _explicitNullValueNote = value; AdditionalData?.Remove("note"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("note"); else _explicitNullProperties?.Remove("note"); } }
-        private global::Soenneker.HighLevel.OpenApiClient.Models.CalendarsGetNoteSchema _explicitNullValueNote = default!;
+        public global::Soenneker.HighLevel.OpenApiClient.Models.ContactsGetNoteSchema Note { get => _explicitNullValueNote; set { _explicitNullValueNote = value; AdditionalData?.Remove("note"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("note"); else _explicitNullProperties?.Remove("note"); } }
+        private global::Soenneker.HighLevel.OpenApiClient.Models.ContactsGetNoteSchema _explicitNullValueNote = default!;
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CalendarsGetCreateUpdateNoteSuccessfulResponseDto"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.ContactsGetCreateUpdateNoteSuccessfulResponseDto"/> and sets the default values.
         /// </summary>
-        public CalendarsGetCreateUpdateNoteSuccessfulResponseDto()
+        public ContactsGetCreateUpdateNoteSuccessfulResponseDto()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CalendarsGetCreateUpdateNoteSuccessfulResponseDto"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.ContactsGetCreateUpdateNoteSuccessfulResponseDto"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.HighLevel.OpenApiClient.Models.CalendarsGetCreateUpdateNoteSuccessfulResponseDto CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.HighLevel.OpenApiClient.Models.ContactsGetCreateUpdateNoteSuccessfulResponseDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.CalendarsGetCreateUpdateNoteSuccessfulResponseDto(), parseNode);
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.ContactsGetCreateUpdateNoteSuccessfulResponseDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -58,7 +58,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "note", n => { Note = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CalendarsGetNoteSchema>(global::Soenneker.HighLevel.OpenApiClient.Models.CalendarsGetNoteSchema.CreateFromDiscriminatorValue); } },
+                { "note", n => { Note = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ContactsGetNoteSchema>(global::Soenneker.HighLevel.OpenApiClient.Models.ContactsGetNoteSchema.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -68,7 +68,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.CalendarsGetNoteSchema>("note", Note);
+            writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ContactsGetNoteSchema>("note", Note);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

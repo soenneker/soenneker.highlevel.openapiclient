@@ -209,7 +209,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Store.ShippingZone.Item.ShippingRate
 #endif
             #pragma warning disable CS1591
             [QueryParameter("altType")]
-            public global::Soenneker.HighLevel.OpenApiClient.Models.StoreLocationAltType? AltType { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
             #pragma warning restore CS1591
         }
         /// <summary>
@@ -230,7 +230,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Store.ShippingZone.Item.ShippingRate
 #endif
             #pragma warning disable CS1591
             [QueryParameter("altType")]
-            public global::Soenneker.HighLevel.OpenApiClient.Models.StoreLocationAltType? AltType { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
             #pragma warning restore CS1591
         }
     }

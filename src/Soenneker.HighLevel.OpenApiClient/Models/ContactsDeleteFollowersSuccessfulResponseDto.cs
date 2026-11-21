@@ -9,7 +9,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class OpportunitiesDeleteFollowersSuccessfulResponseDto : IAdditionalDataHolder, IParsable
+    public partial class ContactsDeleteFollowersSuccessfulResponseDto : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
         // Track explicitly assigned nulls separately from absent properties.
@@ -46,21 +46,21 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         private List<string> _explicitNullValueFollowersRemoved = default!;
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.OpportunitiesDeleteFollowersSuccessfulResponseDto"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.ContactsDeleteFollowersSuccessfulResponseDto"/> and sets the default values.
         /// </summary>
-        public OpportunitiesDeleteFollowersSuccessfulResponseDto()
+        public ContactsDeleteFollowersSuccessfulResponseDto()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.OpportunitiesDeleteFollowersSuccessfulResponseDto"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.ContactsDeleteFollowersSuccessfulResponseDto"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.HighLevel.OpenApiClient.Models.OpportunitiesDeleteFollowersSuccessfulResponseDto CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.HighLevel.OpenApiClient.Models.ContactsDeleteFollowersSuccessfulResponseDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.OpportunitiesDeleteFollowersSuccessfulResponseDto(), parseNode);
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HighLevel.OpenApiClient.Models.ContactsDeleteFollowersSuccessfulResponseDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model

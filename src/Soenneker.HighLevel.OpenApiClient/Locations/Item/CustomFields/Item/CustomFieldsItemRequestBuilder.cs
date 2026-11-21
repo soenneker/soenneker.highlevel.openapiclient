@@ -65,7 +65,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Locations.Item.CustomFields.Item
         /// <summary>
         /// Get Custom Field
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldSuccessfulResponseDto"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.LocationsCustomFieldSuccessfulResponseDto"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.LocationsCommonSchemasBadRequestDto">When receiving a 400 status code</exception>
@@ -73,11 +73,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Locations.Item.CustomFields.Item
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.LocationsCommonSchemasUnprocessableDto">When receiving a 422 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldSuccessfulResponseDto?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.LocationsCustomFieldSuccessfulResponseDto?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldSuccessfulResponseDto> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.LocationsCustomFieldSuccessfulResponseDto> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -89,12 +89,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Locations.Item.CustomFields.Item
                 { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
                 { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldSuccessfulResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldSuccessfulResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.LocationsCustomFieldSuccessfulResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.LocationsCustomFieldSuccessfulResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Update Custom Field
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldSuccessfulResponseDto"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.LocationsCustomFieldSuccessfulResponseDto"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -103,11 +103,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Locations.Item.CustomFields.Item
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.LocationsCommonSchemasUnprocessableDto">When receiving a 422 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldSuccessfulResponseDto?> PutAsync(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomFieldsDto body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.LocationsCustomFieldSuccessfulResponseDto?> PutAsync(global::Soenneker.HighLevel.OpenApiClient.Models.LocationsUpdateCustomFieldsDto body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldSuccessfulResponseDto> PutAsync(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomFieldsDto body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HighLevel.OpenApiClient.Models.LocationsCustomFieldSuccessfulResponseDto> PutAsync(global::Soenneker.HighLevel.OpenApiClient.Models.LocationsUpdateCustomFieldsDto body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -120,7 +120,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Locations.Item.CustomFields.Item
                 { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
                 { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldSuccessfulResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldSuccessfulResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HighLevel.OpenApiClient.Models.LocationsCustomFieldSuccessfulResponseDto>(requestInfo, global::Soenneker.HighLevel.OpenApiClient.Models.LocationsCustomFieldSuccessfulResponseDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Delete Custom Field
@@ -168,11 +168,11 @@ namespace Soenneker.HighLevel.OpenApiClient.Locations.Item.CustomFields.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPutRequestInformation(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomFieldsDto body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPutRequestInformation(global::Soenneker.HighLevel.OpenApiClient.Models.LocationsUpdateCustomFieldsDto body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPutRequestInformation(global::Soenneker.HighLevel.OpenApiClient.Models.UpdateCustomFieldsDto body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPutRequestInformation(global::Soenneker.HighLevel.OpenApiClient.Models.LocationsUpdateCustomFieldsDto body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
