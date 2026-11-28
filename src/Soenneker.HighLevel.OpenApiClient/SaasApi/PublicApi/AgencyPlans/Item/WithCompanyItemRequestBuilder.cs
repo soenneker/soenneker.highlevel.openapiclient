@@ -40,7 +40,7 @@ namespace Soenneker.HighLevel.OpenApiClient.SaasApi.PublicApi.AgencyPlans.Item
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.SaasApiBadRequestDto">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.UnauthorizedDto">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.SaasApiUnauthorizedDto">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.ResourceNotFoundDto">When receiving a 404 status code</exception>
         /// <exception cref="global::Soenneker.HighLevel.OpenApiClient.Models.SaasApiInternalServerErrorDto">When receiving a 500 status code</exception>
         [Obsolete("")]
@@ -57,7 +57,7 @@ namespace Soenneker.HighLevel.OpenApiClient.SaasApi.PublicApi.AgencyPlans.Item
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "400", global::Soenneker.HighLevel.OpenApiClient.Models.SaasApiBadRequestDto.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.HighLevel.OpenApiClient.Models.UnauthorizedDto.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.HighLevel.OpenApiClient.Models.SaasApiUnauthorizedDto.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.HighLevel.OpenApiClient.Models.ResourceNotFoundDto.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.HighLevel.OpenApiClient.Models.SaasApiInternalServerErrorDto.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },

@@ -104,7 +104,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Payments.Coupon.List
 #endif
             /// <summary>Alt Type</summary>
             [QueryParameter("altType")]
-            public global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsLocationAltType? AltType { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
             /// <summary>Maximum number of coupons to return</summary>
             [QueryParameter("limit")]
             public double? Limit { get; set; }

@@ -108,7 +108,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Payments.Subscriptions.Item
 #endif
             /// <summary>AltType is the type of identifier.</summary>
             [QueryParameter("altType")]
-            public global::Soenneker.HighLevel.OpenApiClient.Models.PaymentsLocationAltType? AltType { get; set; }
+            public global::Soenneker.HighLevel.OpenApiClient.Models.LocationAltType? AltType { get; set; }
         }
     }
 }

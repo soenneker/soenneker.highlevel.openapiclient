@@ -28,22 +28,22 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>Custom Fields for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsICustomField>? Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; AdditionalData?.Remove("fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
-        private List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsICustomField>? _explicitNullValueFields = default!;
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ICustomField>? Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; AdditionalData?.Remove("fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.ICustomField>? _explicitNullValueFields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsICustomField> Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; AdditionalData?.Remove("fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
-        private List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsICustomField> _explicitNullValueFields = default!;
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ICustomField> Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; AdditionalData?.Remove("fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.ICustomField> _explicitNullValueFields = default!;
 #endif
         /// <summary>Custom Fields folder for the object.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsICustomField>? Folders { get => _explicitNullValueFolders; set { _explicitNullValueFolders = value; AdditionalData?.Remove("folders"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("folders"); else _explicitNullProperties?.Remove("folders"); } }
-        private List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsICustomField>? _explicitNullValueFolders = default!;
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ICustomField>? Folders { get => _explicitNullValueFolders; set { _explicitNullValueFolders = value; AdditionalData?.Remove("folders"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("folders"); else _explicitNullProperties?.Remove("folders"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.ICustomField>? _explicitNullValueFolders = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsICustomField> Folders { get => _explicitNullValueFolders; set { _explicitNullValueFolders = value; AdditionalData?.Remove("folders"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("folders"); else _explicitNullProperties?.Remove("folders"); } }
-        private List<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsICustomField> _explicitNullValueFolders = default!;
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ICustomField> Folders { get => _explicitNullValueFolders; set { _explicitNullValueFolders = value; AdditionalData?.Remove("folders"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("folders"); else _explicitNullProperties?.Remove("folders"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.ICustomField> _explicitNullValueFolders = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsResponseDto"/> and sets the default values.
@@ -70,8 +70,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "fields", n => { Fields = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsICustomField>(global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsICustomField.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "folders", n => { Folders = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsICustomField>(global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsICustomField.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "fields", n => { Fields = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ICustomField>(global::Soenneker.HighLevel.OpenApiClient.Models.ICustomField.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "folders", n => { Folders = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ICustomField>(global::Soenneker.HighLevel.OpenApiClient.Models.ICustomField.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -81,8 +81,8 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsICustomField>("fields", Fields);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.CustomFieldsICustomField>("folders", Folders);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ICustomField>("fields", Fields);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ICustomField>("folders", Folders);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

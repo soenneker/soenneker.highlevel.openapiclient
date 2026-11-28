@@ -33,12 +33,12 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         /// <summary>The fields property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ICustomField>? Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; AdditionalData?.Remove("fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
-        private List<global::Soenneker.HighLevel.OpenApiClient.Models.ICustomField>? _explicitNullValueFields = default!;
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ObjectsICustomField>? Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; AdditionalData?.Remove("fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.ObjectsICustomField>? _explicitNullValueFields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ICustomField> Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; AdditionalData?.Remove("fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
-        private List<global::Soenneker.HighLevel.OpenApiClient.Models.ICustomField> _explicitNullValueFields = default!;
+        public List<global::Soenneker.HighLevel.OpenApiClient.Models.ObjectsICustomField> Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; AdditionalData?.Remove("fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
+        private List<global::Soenneker.HighLevel.OpenApiClient.Models.ObjectsICustomField> _explicitNullValueFields = default!;
 #endif
         /// <summary>The object property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -76,7 +76,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "cache", n => { Cache = n.GetBoolValue(); } },
-                { "fields", n => { Fields = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ICustomField>(global::Soenneker.HighLevel.OpenApiClient.Models.ICustomField.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "fields", n => { Fields = n.GetCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ObjectsICustomField>(global::Soenneker.HighLevel.OpenApiClient.Models.ObjectsICustomField.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "object", n => { Object = n.GetObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ICustomObjectSchema>(global::Soenneker.HighLevel.OpenApiClient.Models.ICustomObjectSchema.CreateFromDiscriminatorValue); } },
             };
         }
@@ -88,7 +88,7 @@ namespace Soenneker.HighLevel.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("cache", Cache);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ICustomField>("fields", Fields);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HighLevel.OpenApiClient.Models.ObjectsICustomField>("fields", Fields);
             writer.WriteObjectValue<global::Soenneker.HighLevel.OpenApiClient.Models.ICustomObjectSchema>("object", Object);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
